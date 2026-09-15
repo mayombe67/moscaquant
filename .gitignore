@@ -1,0 +1,31 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+
+# MaleCNS / generated neural data
+data/
+*.feather
+*.npz
+*.npy
+
+# Runtime
+logs/
+runs/
+telemetry/
+*.parquet
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
