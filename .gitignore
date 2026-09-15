@@ -22,7 +22,7 @@ data/
 # Runtime
 logs/
 runs/
-telemetry/
+runtime/
 *.parquet
 
 # IDE / OS
