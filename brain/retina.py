@@ -176,3 +176,67 @@ def infer_r1_r6_retina(
             dtype=np.int32,
         ),
     )
+
+
+def save_retinal_map(
+    path: Path,
+    assignments: list[RetinalAssignment],
+    unplaced: np.ndarray,
+) -> None:
+    """Save a deterministic, versioned MQ-001 retinal map."""
+
+    ordered = sorted(
+        assignments,
+        key=lambda p: p.neuron_index,
+    )
+
+    neuron_index = np.asarray(
+        [p.neuron_index for p in ordered],
+        dtype=np.int32,
+    )
+
+    body_id = np.asarray(
+        [p.body_id for p in ordered],
+        dtype=np.int64,
+    )
+
+    partner_body_id = np.asarray(
+        [p.partner_body_id for p in ordered],
+        dtype=np.int64,
+    )
+
+    eye = np.asarray(
+        [0 if p.eye == "L" else 1 for p in ordered],
+        dtype=np.int8,
+    )
+
+    h1 = np.asarray(
+        [p.h1 for p in ordered],
+        dtype=np.int16,
+    )
+
+    h2 = np.asarray(
+        [p.h2 for p in ordered],
+        dtype=np.int16,
+    )
+
+    weight = np.asarray(
+        [p.weight for p in ordered],
+        dtype=np.float32,
+    )
+
+    np.savez(
+        path,
+        version=np.asarray("retinal-map-v1"),
+        neuron_index=neuron_index,
+        body_id=body_id,
+        partner_body_id=partner_body_id,
+        eye=eye,
+        h1=h1,
+        h2=h2,
+        inference_weight=weight,
+        unplaced_neuron_index=np.asarray(
+            sorted(int(x) for x in unplaced),
+            dtype=np.int32,
+        ),
+    )
