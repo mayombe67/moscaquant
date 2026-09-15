@@ -272,9 +272,18 @@ class MarketVisionSpatialEncoder:
             feature_row[VOLUME_DEVIATION]
         )
 
-        spread_value = abs(
-            float(feature_row[SPREAD])
-        )
+        # Unsigned raw feature represented as a causal
+        # deviation in [-1, 1]:
+        #
+        # -1 = unusually low
+        #  0 = near recent baseline
+        # +1 = unusually high
+        #
+        # Convert monotonically to [0, 1] rather than using abs(),
+        # which would collapse low and high deviations together.
+        spread_value = (
+            float(feature_row[SPREAD]) + 1.0
+        ) / 2.0
 
         imbalance_value = float(
             feature_row[
