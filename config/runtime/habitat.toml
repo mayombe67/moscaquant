@@ -1,0 +1,10 @@
+[runtime]
+name = "habitat"
+edge_batch_rows = 1000000
+max_memory_gb = 6
+workers = 2
+device = "cpu"
+
+[paths]
+data_dir = "~/moscaquant-data"
+scratch_dir = "~/moscaquant-data/cache"

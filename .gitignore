@@ -22,7 +22,7 @@ data/
 # Runtime
 logs/
 runs/
-runtime/
+/runtime/
 *.parquet
 
 # IDE / OS

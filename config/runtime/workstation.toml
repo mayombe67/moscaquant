@@ -1,0 +1,10 @@
+[runtime]
+name = "workstation"
+edge_batch_rows = 4000000
+max_memory_gb = 12
+workers = 4
+device = "cpu"
+
+[paths]
+data_dir = "~/moscaquant-data"
+scratch_dir = "~/moscaquant-data/cache"

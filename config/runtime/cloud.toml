@@ -1,0 +1,10 @@
+[runtime]
+name = "cloud"
+edge_batch_rows = 8000000
+max_memory_gb = 24
+workers = 8
+device = "cpu"
+
+[paths]
+data_dir = "~/moscaquant-data"
+scratch_dir = "~/moscaquant-data/cache"

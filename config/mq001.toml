@@ -1,0 +1,20 @@
+[subject]
+id = "MQ-001"
+dataset = "MaleCNS v1.0"
+baseline = "baseline-v1"
+
+[population]
+retention_rule = "superclass_present"
+ordering = "bodyId_ascending"
+expected_neurons = 166700
+expected_connections = 25582938
+
+[transmitters]
+inhibitory = ["gaba", "glutamate", "histamine"]
+unknown_sign = 1.0
+
+[connectome]
+weight_dtype = "float32"
+index_dtype = "int32"
+normalization = "absolute_incoming"
+orientation = "post_pre"

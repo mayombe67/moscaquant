@@ -8,10 +8,9 @@ from pathlib import Path
 
 import numpy as np
 import pyarrow.feather as feather
+import argparse
 
-
-EXPECTED_NEURONS = 166_700
-INHIBITORY = ("gaba", "glutamate", "histamine")
+from config.loader import load_runtime, load_subject
 
 
 def sha256(path: Path) -> str:
@@ -22,7 +21,14 @@ def sha256(path: Path) -> str:
     return digest.hexdigest()
 
 
-def build_neuron_index(raw: Path, processed: Path) -> None:
+def build_neuron_index(
+    raw: Path,
+    processed: Path,
+    subject: dict,
+) -> None:
+    expected_neurons = subject["population"]["expected_neurons"]
+    inhibitory_labels = tuple(subject["transmitters"]["inhibitory"])
+    unknown_sign = float(subject["transmitters"]["unknown_sign"])
     processed.mkdir(parents=True, exist_ok=True)
 
     ann_path = raw / "body-annotations-male-cns-v1.0-minconf-0.5.feather"
@@ -45,9 +51,9 @@ def build_neuron_index(raw: Path, processed: Path) -> None:
 
     ids = retained["bodyId"].to_numpy(dtype=np.int64)
 
-    if len(ids) != EXPECTED_NEURONS:
+    if len(ids) != expected_neurons:
         raise RuntimeError(
-            f"Expected {EXPECTED_NEURONS:,} neurons, found {len(ids):,}"
+            f"Expected {expected_neurons:,} neurons, found {len(ids):,}"
         )
 
     if not np.all(ids[:-1] < ids[1:]):
@@ -69,13 +75,13 @@ def build_neuron_index(raw: Path, processed: Path) -> None:
     lower = labels.str.lower()
 
     inhibitory = np.zeros(len(ids), dtype=bool)
-    for transmitter in INHIBITORY:
+    for transmitter in inhibitory_labels:
         inhibitory |= lower.str.contains(
             transmitter,
             regex=False,
         ).to_numpy()
 
-    sign = np.where(inhibitory, -1.0, 1.0).astype(np.float32)
+    sign = np.where(inhibitory, -1.0, unknown_sign).astype(np.float32)
 
     ids_path = processed / "neuron_ids.npy"
     sign_path = processed / "transmitter_sign.npy"
@@ -89,7 +95,7 @@ def build_neuron_index(raw: Path, processed: Path) -> None:
         "retention_rule": "superclass != null and superclass != empty",
         "ordering": "bodyId ascending",
         "neuron_count": int(len(ids)),
-        "inhibitory_consensus_labels": list(INHIBITORY),
+        "inhibitory_consensus_labels": list(inhibitory_labels),
         "unknown_transmitter_sign": "excitatory (+1) for baseline-v1",
         "artifacts": {
             "neuron_ids.npy": sha256(ids_path),
@@ -117,6 +123,33 @@ def build_neuron_index(raw: Path, processed: Path) -> None:
     print(f"Saved: {provenance_path}")
 
 
+def main() -> None:
+    parser = argparse.ArgumentParser(
+        description="Build deterministic MoscaQuant MaleCNS artifacts."
+    )
+    parser.add_argument(
+        "--runtime",
+        default="habitat",
+        help="Runtime profile from config/runtime/<name>.toml",
+    )
+    args = parser.parse_args()
+
+    subject = load_subject("mq001")
+    runtime = load_runtime(args.runtime)
+
+    data = runtime["paths"]["data_dir"]
+
+    print(f"Subject: {subject['subject']['id']}")
+    print(f"Baseline: {subject['subject']['baseline']}")
+    print(f"Runtime: {runtime['runtime']['name']}")
+    print()
+
+    build_neuron_index(
+        data / "raw",
+        data / "processed",
+        subject,
+    )
+
+
 if __name__ == "__main__":
-    data = Path.home() / "moscaquant-data"
-    build_neuron_index(data / "raw", data / "processed")
+    main()
