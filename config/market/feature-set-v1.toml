@@ -1,0 +1,21 @@
+[feature_set]
+id = "market-feature-set-v1"
+version = 1
+
+[assets]
+symbols = ["BTC", "ETH", "SOL", "XRP", "HBAR", "DOGE"]
+
+[features]
+names = [
+    "return",
+    "momentum",
+    "volume_deviation",
+    "realized_volatility",
+    "spread",
+    "order_book_imbalance",
+    "return_sign_entropy",
+]
+
+[principles]
+descriptive_only = true
+contains_trade_signal = false
