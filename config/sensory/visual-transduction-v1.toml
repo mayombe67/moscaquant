@@ -1,0 +1,29 @@
+[transduction]
+id = "visual-transduction-v1"
+version = 1
+relay_artifact = "visual-relay-map-v1.npz"
+relay_artifact_sha256 = "a3df2746ec69d10a2739a05f3ec55c4bd5f15b10b9a6167aee41c15a647e3478"
+
+release_gain = 0.9981738484618123
+
+[calibration]
+method = "neutral_passive_threshold_crossing"
+frame_count = 192
+passive_unscaled_peak = 1.0018294924686735
+peak_frame = 148
+peak_neuron_index = 64217
+peak_body_id = 84860
+peak_type = "Lai"
+
+lif_threshold = 1.0
+lif_dt_ms = 1.0
+lif_tau_ms = 20.0
+
+[principles]
+neutral_only = true
+market_ab_tuning = false
+pnl_tuning = false
+decoder_tuning = false
+structural_connectome_unchanged = true
+transmitter_signs_unchanged = true
+sensory_gain_unchanged = true
