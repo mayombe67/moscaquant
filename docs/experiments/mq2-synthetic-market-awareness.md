@@ -193,3 +193,42 @@ controls, especially:
 ## Status
 
 `MQ-2 SYNTHETIC MARKET AWARENESS PASS`
+
+## Follow-up: Downstream Propagation Control
+
+Subsequent topology and downstream-propagation controls showed that the
+original A/B result measured reproducibly distinct activity at the sensory
+photoreceptor layer, but did not demonstrate propagation through the
+downstream connectome.
+
+For both synthetic conditions, every observed spike occurred in the mapped
+R1-R6 retinal population.
+
+Observed downstream spikes:
+
+`0`
+
+The frozen signed connectome produced exclusively inhibitory first-hop
+R1-R6 synaptic drive during the probe:
+
+- downstream positive synaptic events: `0`
+- downstream negative synaptic events: `4711`
+- strongest positive first-hop drive: `0.0`
+- strongest negative first-hop drive: `-0.9777778387069702`
+- maximum downstream membrane voltage: `0.0`
+- minimum downstream membrane voltage: `-1.8007479906082153`
+- LIF firing threshold: `+1.0`
+
+Therefore the original MQ-2 result is retained as a valid sensory
+discrimination and deterministic-replay result, but it is not evidence of
+whole-connectome market discrimination.
+
+### Revised Supported Claim
+
+Distinct deterministic synthetic market histories produce reproducibly
+distinguishable activity in the frozen Market Vision / R1-R6 sensory layer.
+
+Whether that information can propagate into downstream MaleCNS circuitry
+requires an additional visual-transduction model.
+
+This limitation motivated MQ-2.1.

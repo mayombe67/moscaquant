@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import argparse
 import hashlib
 from pathlib import Path
 
@@ -462,11 +463,21 @@ def summarize(result):
 
 
 def main():
-    connectome_path = Path(
-        "/home/wil/moscaquant-data/"
-        "processed/"
-        "connectome-baseline-v1.npz"
+    parser = argparse.ArgumentParser()
+
+    parser.add_argument(
+        "--connectome",
+        type=Path,
+        default=Path(
+            "/home/wil/moscaquant-data/"
+            "processed/"
+            "connectome-baseline-v1.npz"
+        ),
     )
+
+    args = parser.parse_args()
+
+    connectome_path = args.connectome
 
     territory_path = Path(
         "/home/wil/moscaquant-data/"

@@ -13,6 +13,18 @@ Implement reproducible neural dynamics.
 ## MQ-2 — BLOOMBERG TERMINAL FOR INSECTS
 Feed BTC, ETH, SOL, XRP, HBAR, and DOGE market features into the sensory encoder.
 
+## MQ-2.1 — VISUAL TRANSDUCTION
+Restore the missing first-hop visual handoff discovered during MQ-2 controls.
+
+Preserve the frozen MaleCNS connectome, transmitter signs, Market Vision encoder,
+and sensory gain while adding the minimum modeled graded visual dynamics needed
+for R1-R6 information to propagate through the dominant L1/L2/L3/Lai relay.
+
+MQ-2.1 parameters must be frozen without using A/B market discrimination.
+
+MQ-3 remains blocked until deterministic activity propagates beyond the retinal
+population and survives the required controls.
+
 ## MQ-3 — EMPLOYEE HAS OPINIONS
 Decode autonomous BUY / HOLD / SELL decisions without broker execution.
 
