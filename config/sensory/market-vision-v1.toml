@@ -1,0 +1,69 @@
+[encoder]
+id = "market-vision-v1"
+version = 1
+retinal_map = "retinal-map-v1"
+descriptive_only = true
+contains_trade_signal = false
+
+[assets]
+territory_order = [
+    "BTC",
+    "ETH",
+    "SOL",
+    "XRP",
+    "HBAR",
+    "DOGE",
+]
+
+[territories]
+scheme = "deterministic_2x3_receptor_balanced_grid"
+count = 6
+whole_columns_only = true
+ticker_agnostic = true
+first_axis = "h1"
+first_parts = 2
+second_axis = "h2"
+second_parts = 3
+expected_bilateral_receptor_loads = [540, 542, 540, 539, 541, 539]
+expected_max_delta = 3
+
+[features.return]
+property = "horizontal_displacement"
+signed = true
+
+[features.momentum]
+property = "horizontal_motion_persistence"
+signed = true
+
+[features.volume_deviation]
+property = "vertical_displacement"
+signed = true
+
+[features.realized_volatility]
+property = "temporal_pulse_rate"
+signed = false
+
+[features.spread]
+property = "spatial_diffusion"
+signed = false
+
+[features.order_book_imbalance]
+property = "local_horizontal_displacement"
+signed = true
+
+[features.return_sign_entropy]
+property = "temporal_irregularity"
+signed = false
+
+[experimental_sequence]
+conditions = [
+    "territory_only",
+    "return",
+    "momentum",
+    "volume_deviation",
+    "realized_volatility",
+    "spread",
+    "order_book_imbalance",
+    "return_sign_entropy",
+    "all_features",
+]
