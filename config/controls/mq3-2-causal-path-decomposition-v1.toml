@@ -1,0 +1,49 @@
+[experiment]
+id = "mq3-2-causal-path-decomposition-v1"
+phase = "MQ-3.2"
+purpose = "activity-supported causal path decomposition"
+
+[condition]
+primary = "A"
+market_semantics = false
+pnl_used = false
+
+[sources]
+types = ["Tm2", "Tm4"]
+selection_basis = "frozen MQ-3.2 annotation-defined graded population"
+
+[targets]
+channel = "DN-C1"
+selection_basis = "observed MQ-3.2 Condition A responders"
+model_indices = [92, 656, 317, 137122, 126002, 55, 129, 51, 1273]
+
+[path_search]
+time_unrolled = true
+max_hops = 4
+positive_edges_only = true
+presynaptic_activity_must_be_positive = true
+search_first_positive_frame = true
+search_peak_frame = true
+
+[reporting]
+max_paths_per_target_frame = 50
+ranking = "bottleneck_instantaneous_contribution"
+record_edge_weight = true
+record_presynaptic_activity = true
+record_instantaneous_contribution = true
+record_path_weight_product = true
+record_bottleneck_contribution = true
+
+[controls]
+structural_connectome_unchanged = true
+sensory_gain_unchanged = true
+visual_release_gain_unchanged = true
+retinal_transduction_unchanged = true
+graded_population_unchanged = true
+dn_consensus_unchanged = true
+financial_semantics_used = false
+
+[interpretation]
+structural_path_alone_is_insufficient = true
+activity_supported_path_required = true
+causal_candidate_not_interventional_proof = true
