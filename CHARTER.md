@@ -1260,6 +1260,156 @@ Financial semantics remain:
 
 **NOT ASSIGNED**
 
+## MQ-5 Evidence State Through MQ-5.6
+
+This section records the durable scientific state reached before MQ-5.7.
+
+It does not replace the individual preregistrations or result artifacts.
+
+### Generalized intervention evidence
+
+Across the 13 frozen MQ-3 causal edges:
+
+- 13 / 13 retained monotonic dose-response behavior,
+- 12 / 12 edges with prospectively valid matched controls showed a larger
+  causal-source intervention effect than the matched non-causal control,
+- 3 / 13 causal-frame interventions exceeded the nearby timing control,
+- 10 / 13 nearby timing controls produced equal or larger effect magnitude,
+- 7 / 13 full source-silencing interventions delayed first downstream
+  response.
+
+The timing result must not be rewritten as single-frame temporal
+exclusivity.
+
+The supported interpretation is that the frozen causal frames identify
+causal onset or evidence points within broader active causal windows.
+
+### Multi-hop pathway evidence
+
+The frozen pathway:
+
+`56393 → 68045 → 1273`
+
+retained dose-dependent propagation through the intermediate node.
+
+Attenuating the upstream source reduced the intermediate state and then the
+downstream response.
+
+Attenuating the intermediate node independently reduced the downstream
+response.
+
+This supports causal propagation within the frozen simulation model.
+
+It does not establish equivalent biological propagation in a living fly.
+
+### Convergence evidence
+
+The frozen convergence systems:
+
+- `44274 + 55925 → 55`
+- `55548 + 87441 → 51`
+- `92657 + 93484 → 129`
+
+all retained:
+
+- independent contribution from each frozen input,
+- combined perturbation exceeding either individual perturbation,
+- monotonic combined dose response.
+
+No statistical synergy, antagonism, subadditivity, or superadditivity label
+is assigned without a separately preregistered interaction test.
+
+Responder 51 remains subject to its documented extremely-small numerical
+scale.
+
+### Sensory-normalization robustness
+
+CONF-004A replaced the original causal rolling mean / standard-deviation
+normalizer with a causal rolling median / MAD normalizer while holding the
+remaining scientific configuration fixed.
+
+The alternative representation materially changed sensory and network
+activity.
+
+Nevertheless:
+
+- 13 / 13 frozen causal sources remained engaged,
+- 12 / 12 frozen matched controls remained engaged,
+- generalized single-node results retained the same categorical pattern,
+- the two-hop pathway retained its qualitative and quantitative structure,
+- all three convergence systems retained their qualitative structure.
+
+Median Encoder-B / Encoder-A absolute full-silencing effect ratio across the
+generalized edge set was approximately:
+
+`1.00007`
+
+This supports robustness to the tested normalization alternative.
+
+It does not establish general sensory-encoding independence.
+
+### Independent-runtime replication
+
+MQ-5.6 reproduced selected accepted causal findings through a separately
+implemented full-network reference runtime.
+
+The independent runtime did not inherit from or call:
+
+- the production visual-transduction runtime,
+- the production physiology-constrained runtime,
+- the MQ-5 intervention runtime.
+
+Before outcome generation, numerical comparison tolerances were frozen as:
+
+- absolute tolerance: `1e-12`
+- relative tolerance: `1e-6`
+- small-value threshold: `1e-12`
+
+Selected replication targets were:
+
+- direct edge: `43417 → 656`
+- pathway: `56393 → 68045 → 1273`
+- convergence: `44274 + 55925 → 55`
+
+All predefined replication gates passed:
+
+- frozen artifacts unchanged,
+- direct numeric replication,
+- pathway numeric replication,
+- convergence numeric replication,
+- convergence combined-dose monotonicity,
+- convergence combined effect exceeding either single input.
+
+This materially reduces concern that the selected MQ-5 findings are artifacts
+of one neural-runtime implementation.
+
+It remains replication within the same frozen mathematical model.
+
+### Current claim boundary
+
+The following wording is supported:
+
+> Selected causal effects are reproducible within the frozen MoscaQuant
+> simulation model across the production runtime, a tested alternative
+> normalization scheme, and an independently implemented full-network
+> reference runtime.
+
+The following wording is not supported:
+
+- MoscaQuant has established biological causality in living Drosophila.
+- The findings are independent of all sensory encodings.
+- The validated responder ensemble represents all descending neurons.
+- MaleCNS topology has been established as uniquely responsible relative to
+  all appropriate null-model families.
+- The neural findings have demonstrated predictive trading value.
+- The neural findings have demonstrated profitability.
+
+Financial semantics remain:
+
+**NOT ASSIGNED**
+
+---
+
 ## Panopticon Public Experiment and Entertainment Layer
 
 MoscaQuant is simultaneously:

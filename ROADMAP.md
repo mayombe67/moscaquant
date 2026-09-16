@@ -224,7 +224,39 @@ MQ-5 must not:
 
 ### Current phase chain
 
-`MQ-1 → MQ-2 → MQ-3 → MQ-4 COMPLETE → MQ-5 PLANNING`
+`MQ-1 → MQ-2 → MQ-3 → MQ-4 COMPLETE → MQ-5.6 COMPLETE → MQ-5.7 ACTIVE`
+
+MQ-5 status:
+
+- MQ-5.1 — Experimental Protocol: COMPLETE
+- MQ-5.2 — Intervention Harness: COMPLETE
+- MQ-5.3 — Single-Node Perturbation: COMPLETE
+- MQ-5.4 — Pathway Perturbation: COMPLETE
+- MQ-5.5 — Sham and Specificity Tests: COMPLETE
+- CONF-004A — Robust Normalization Hardening: COMPLETE
+- MQ-5.6 — Replication and Stability: COMPLETE
+- MQ-5.7 — Neuroscope Intervention Replay: NEXT / ACTIVE
+- MQ-5.8 — MQ-5 Acceptance: PENDING
+
+Key evidence accumulated through MQ-5.6:
+
+- 13 / 13 frozen causal edges retained monotonic dose response
+- 12 / 12 eligible causal interventions exceeded frozen matched controls
+- timing results supported broader active causal windows rather than
+  single-frame temporal exclusivity
+- the frozen `56393 → 68045 → 1273` two-hop pathway propagated intervention
+  effects through the intermediate node
+- all three frozen convergence systems retained combined-input contribution
+- CONF-004A reproduced the principal MQ-5 findings under causal median/MAD
+  normalization
+- MQ-5.6 independently reproduced selected direct-edge, pathway, and
+  convergence findings using a separately implemented full-network runtime
+
+The current evidence supports simulated causal structure within the frozen
+MoscaQuant model.
+
+It does not establish biological causality, financial usefulness, or general
+encoding independence.
 
 **Financial semantics: NOT ASSIGNED**
 
