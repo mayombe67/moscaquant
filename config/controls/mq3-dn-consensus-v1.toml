@@ -1,0 +1,29 @@
+[consensus]
+id = "mq3-dn-consensus-v1"
+population = "mq3-descending-readout-v1"
+cluster_count = 3
+
+[views]
+internal = "signed_directional_dn_connectivity"
+upstream = "signed_non_dn_input_connectivity"
+
+[rule]
+matching = "maximum_overlap"
+assignment = "intersection_after_optimal_label_matching"
+discordant = "unassigned"
+
+[validation]
+observed_ari = 0.6832358238805133
+matched_neurons = 1191
+total_neurons = 1314
+matched_fraction = 0.906392694063927
+permutation_count = 10000
+permutation_seed = 20260916
+null_exceedances = 0
+empirical_p_plus_one = 0.00009999000099990002
+
+[principles]
+market_response_used = false
+financial_semantics_used = false
+pnl_used = false
+discordant_neurons_forced = false
