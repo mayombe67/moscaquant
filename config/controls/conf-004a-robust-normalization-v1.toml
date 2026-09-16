@@ -1,0 +1,57 @@
+[experiment]
+id = "conf-004a-robust-normalization-v1"
+classification = "methodological-hardening"
+condition = "A"
+
+[encoder_a]
+normalizer = "CausalNormalizer"
+location = "rolling_mean"
+scale = "rolling_standard_deviation"
+bounded_transform = "tanh"
+window_size = 64
+min_history = 8
+
+[encoder_b]
+normalizer = "RobustCausalNormalizer"
+location = "rolling_median"
+scale = "rolling_median_absolute_deviation"
+mad_consistency_factor = 1.4826
+bounded_transform = "tanh"
+window_size = 64
+min_history = 8
+epsilon = 1e-8
+
+[held_constant]
+market_features = true
+market_observations = true
+retinal_territories = true
+temporal_encoder = true
+sensory_gain = true
+connectome = true
+physiology = true
+intervention_runtime = true
+causal_nodes = true
+causal_targets = true
+matched_control_identities = true
+outcome_metrics = true
+
+[engagement]
+require_positive_effective_activity = true
+preserve_original_causal_frame = true
+allow_posthoc_frame_reselection = false
+inactive_classification = "NOT_ENGAGED_AT_FROZEN_FRAME"
+
+[interventions]
+attenuation_levels = [0.25, 0.50, 0.75, 1.0]
+
+[controls]
+baseline = true
+zero_effect_sham = true
+frozen_matched_controls_only = true
+allow_control_replacement = false
+deterministic_replicate = true
+require_frozen_artifact_invariance = true
+
+[scope]
+biological_causality_claim = false
+financial_semantics_used = false
