@@ -1,0 +1,23 @@
+[ensemble]
+id = "shuffled-mosca-ensemble-v1"
+control = "shuffled-mosca-v2"
+seed_start = 20260916
+seed_count = 20
+
+[experiment]
+condition = "A"
+release_gain = 0.9981738484618123
+
+[metrics]
+relay_only_peak = true
+l2_l3_only_peak = true
+actual_wider_peak = true
+closest_threshold_gap = true
+
+[principles]
+retinal_interface_preserved = true
+r1_r6_relay_interface_preserved = true
+transmitter_sign_preserved = true
+biological_parameters_unchanged = true
+market_condition_independent_shuffle = true
+no_seed_selection_after_results = true
