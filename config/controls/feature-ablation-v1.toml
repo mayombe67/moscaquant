@@ -1,0 +1,52 @@
+[control]
+id = "feature-ablation-v1"
+version = 1
+
+[experiment]
+conditions = ["A", "B"]
+release_gain = 0.9981738484618123
+ablation_stage = "post_normalization"
+ablation_value = 0.0
+experiment_count = 15
+
+[features]
+order = [
+  "return",
+  "momentum",
+  "volume_deviation",
+  "realized_volatility",
+  "spread",
+  "order_book_imbalance",
+  "return_sign_entropy",
+]
+
+[design]
+baseline = true
+leave_one_out = true
+single_feature_isolation = true
+
+[metrics]
+retinal_spikes = true
+relay_spikes = true
+l1_spikes = true
+l2_spikes = true
+l3_spikes = true
+lai_spikes = true
+excitatory_relay_spikes = true
+wider_spikes = true
+relay_only_peak = true
+l2_l3_only_peak = true
+actual_wider_peak = true
+closest_threshold_gap = true
+
+[principles]
+synthetic_histories_unchanged = true
+feature_calculations_unchanged = true
+causal_normalizers_unchanged = true
+territory_mapping_unchanged = true
+sensory_gain_unchanged = true
+release_gain_unchanged = true
+connectome_unchanged = true
+ablation_after_normalization = true
+no_ablation_selection_after_results = true
+all_precommitted_ablations_must_run = true
