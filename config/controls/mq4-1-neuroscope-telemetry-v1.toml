@@ -1,0 +1,49 @@
+[experiment]
+id = "mq4-1-neuroscope-telemetry-v1"
+phase = "MQ-4.1"
+purpose = "read-only replay telemetry for Neuroscope"
+
+[source]
+checkpoint = "mq-3.2"
+runtime = "physiology-constrained MQ-3.2"
+condition = "A"
+
+[principles]
+read_only = true
+simulation_feedback = false
+runtime_parameter_changes = false
+connectome_changes = false
+sensory_gain_changes = false
+release_gain_changes = false
+financial_semantics_used = false
+
+[frames]
+expected = 192
+capture_before_step_activity = true
+capture_after_step_voltage = true
+zero_based = true
+
+[populations]
+retina = true
+visual_relay = true
+graded_visual = true
+dn_consensus = true
+mq3_responders = true
+
+[telemetry]
+sparse_activity = true
+sparse_voltage = true
+record_spikes = true
+record_effective_activity = true
+record_dn_channels = true
+record_responder_voltage = true
+record_market_features = true
+
+[storage]
+format = "npz+json"
+schema_version = "mq4-neuroscope-telemetry-v1"
+lossless = true
+
+[interpretation]
+visualization_only = true
+telemetry_must_not_change_model = true
