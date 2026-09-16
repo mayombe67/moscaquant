@@ -174,3 +174,65 @@ functional graded-neuron identity, intervention-frame activity matching,
 causal exclusion, and the previously frozen activity tolerance.
 
 No matched-control intervention outcome has been observed.
+
+## Candidate-landscape audit
+
+After Amendment 3 also produced zero eligible candidates, candidate
+availability was audited without performing any matched-control
+intervention.
+
+At frame 145:
+
+- frozen graded population: 5,490 neurons
+- graded neurons with positive effective activity: 9
+- graded neurons within the frozen 0.25x to 4.0x activity window: 1
+
+Subtype distribution:
+
+- Tm2: 1,766 total, 2 active, 1 within activity window
+- Tm3: 2,054 total, 0 active, 0 within activity window
+- Tm4: 1,670 total, 7 active, 0 within activity window
+
+The only graded neuron within the activity-matching window was:
+
+`43417`
+
+Properties:
+
+- type: Tm2
+- effective activity at frame 145: `0.37755101919174194`
+- activity ratio relative to source: `1.0`
+- in-degree: `74`
+- out-degree: `128`
+- frozen causal node: yes
+- direct structural edge to neuron 656: yes
+
+After excluding the source neuron itself, zero candidates remain.
+
+## Final matched-control decision
+
+Result:
+
+**NO SCIENTIFICALLY VALID MATCHED NODE AVAILABLE AT FRAME 145**
+
+No further matching-rule amendments will be made for this showcase.
+
+The activity range will not be widened further and biological class
+constraints will not be removed merely to force a control to exist.
+
+The inability to construct a matched non-causal node control is retained
+as part of the experimental record.
+
+This does not invalidate the baseline, sham, attenuation, timing-shift,
+reproducibility, or frozen-artifact controls.
+
+It does mean that this showcase does not provide a matched non-causal
+node comparison.
+
+MQ-5.1 allowed such a control where a scientifically valid matched node
+could be selected without using intervention outcomes.
+
+For `43417 -> 656` at frame 145, that condition cannot be satisfied.
+
+No matched-node intervention outcome was observed during the selection
+process.

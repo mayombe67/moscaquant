@@ -145,3 +145,30 @@ Proceed to the remaining MQ-5.2 validation requirements:
 3. generalized intervention harness across the frozen causal set
 
 No MQ-5.1 hypothesis or threshold was changed after observing this result.
+
+## Matched non-causal control availability
+
+A matched non-causal node control was prospectively attempted.
+
+Three frozen selection specifications were tested before any matched-node
+intervention outcome was observed.
+
+All produced zero eligible candidates.
+
+A subsequent descriptive candidate-landscape audit found:
+
+- 5,490 frozen graded neurons
+- 9 graded neurons active at frame 145
+- only 1 graded neuron within the frozen 0.25x to 4.0x source-activity
+  window
+
+That neuron was the causal source neuron 43417 itself.
+
+Therefore:
+
+**NO SCIENTIFICALLY VALID MATCHED NODE CONTROL WAS AVAILABLE**
+
+No additional criteria were relaxed after this audit.
+
+The matched-node control requirement is recorded as infeasible for this
+specific showcase rather than replaced with a post-hoc favorable control.
