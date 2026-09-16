@@ -90,9 +90,27 @@ Financial semantics remain:
 
 ## CONF-004 — Sensory encoding dependence
 
-Status: `OPEN`
+Status: `OPEN — PARTIALLY MITIGATED`
 
 Market-to-sensory encoding is an experimental design choice.
+
+Evidence to date:
+
+- CONF-004A showed that the principal MQ-5 causal findings survived
+  replacement of causal rolling mean/std normalization with causal
+  rolling median/MAD normalization.
+- Generalized single-node, pathway, and convergence findings retained
+  their qualitative structure.
+- This mitigates dependence on the normalization choice specifically.
+
+Remaining untested encoding components include:
+
+- retinal territory assignment
+- temporal motion encoding
+- volatility-dependent cadence
+- entropy-dependent temporal jitter
+- sensory gain
+- broader representation changes
 
 Observed pathways may depend on the chosen encoding rather than represent
 a general property of the connectome.
