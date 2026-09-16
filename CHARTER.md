@@ -871,8 +871,8 @@ YOLO & HODL LLC
 MOSCAQUANT
 
 SUBJECT ................. MQ-001
-CURRENT PHASE ........... MQ-0
-MISSION ................. ACQUIRE SUBJECT
+CURRENT PHASE ........... MQ-3
+MISSION ................. EMPLOYEE HAS OPINIONS
 
 BROKER .................. NONE
 TRADING AUTHORITY ....... NONE
@@ -884,6 +884,6 @@ CONTAINMENT ............. ACTIVE
 
 NEXT OBJECTIVE:
 
-LOAD THE CONNECTOME.
+DEFINE AND VALIDATE THE FINANCIAL DECISION READOUT.
 
 Past performance does not guarantee future sugar cubes.

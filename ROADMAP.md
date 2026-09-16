@@ -2,7 +2,7 @@
 
 **Owner:** YOLO & HODL LLC  
 **Subject:** MQ-001  
-**Current Phase:** MQ-0 — ACQUIRE SUBJECT
+**Current Phase:** MQ-3 — EMPLOYEE HAS OPINIONS
 
 ## MQ-0 — ACQUIRE SUBJECT
 Load and validate MaleCNS. Build sparse connectivity, identify initial populations, inject controlled stimulus, observe propagation, and record telemetry.
@@ -13,17 +13,32 @@ Implement reproducible neural dynamics.
 ## MQ-2 — BLOOMBERG TERMINAL FOR INSECTS
 Feed BTC, ETH, SOL, XRP, HBAR, and DOGE market features into the sensory encoder.
 
-## MQ-2.1 — VISUAL TRANSDUCTION
-Restore the missing first-hop visual handoff discovered during MQ-2 controls.
+## MQ-2.1 — VISUAL TRANSDUCTION — COMPLETE
 
-Preserve the frozen MaleCNS connectome, transmitter signs, Market Vision encoder,
-and sensory gain while adding the minimum modeled graded visual dynamics needed
-for R1-R6 information to propagate through the dominant L1/L2/L3/Lai relay.
+Restored the experimentally identified missing first-hop visual handoff while
+preserving the frozen MaleCNS connectome, transmitter signs, Market Vision
+encoder, and sensory gain.
 
-MQ-2.1 parameters must be frozen without using A/B market discrimination.
+MQ-2.1 established reproducible market-conditioned propagation beyond the
+artificial retinal population into biological visual-relay circuitry.
 
-MQ-3 remains blocked until deterministic activity propagates beyond the retinal
-population and survives the required controls.
+Completed controls include:
+
+- deterministic A/A replay;
+- neutral replay;
+- A/B discrimination;
+- relay and wider-network attribution;
+- matched interface-preserving shuffled topology;
+- topology-divergence analysis;
+- 20-seed shuffled topology ensemble;
+- independent 100-seed replication;
+- balanced ticker-to-retinal-territory permutations;
+- first-order feature ablations;
+- exhaustive 128-subset feature control.
+
+MQ-2.1 parameters and results are frozen for this experimental line.
+
+MQ-3 is unblocked.
 
 ## MQ-3 — EMPLOYEE HAS OPINIONS
 Decode autonomous BUY / HOLD / SELL decisions without broker execution.
