@@ -523,3 +523,18 @@ invariants.
 The purpose of this control is to test whether biological topology contributes
 structure beyond the already demonstrated sensory and visual-transduction
 response.
+
+## Post-Implementation Results
+
+The frozen MQ-2.1 runtime subsequently demonstrated deterministic
+market-condition-dependent propagation beyond the artificial retinal
+population, including excitatory L2 relay activity and subthreshold
+relay-derived current in the wider connectome.
+
+Matched biological-topology controls and the precommitted shuffled ensemble
+are recorded separately in:
+
+`docs/experiments/mq2-1-topology-controls.md`
+
+The absence of wider-connectome spikes remains part of the experimental
+record.
