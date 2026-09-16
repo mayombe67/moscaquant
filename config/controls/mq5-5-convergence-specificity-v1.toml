@@ -1,0 +1,60 @@
+[experiment]
+id = "mq5-5-convergence-specificity-v1"
+phase = "MQ-5.5"
+classification = "confirmatory"
+condition = "A"
+
+[systems.model_55]
+target = 55
+input_a = 44274
+input_b = 55925
+causal_frame_a = 146
+causal_frame_b = 146
+
+[systems.model_51]
+target = 51
+input_a = 55548
+input_b = 87441
+causal_frame_a = 149
+causal_frame_b = 149
+
+[systems.model_129]
+target = 129
+input_a = 92657
+input_b = 93484
+causal_frame_a = 148
+causal_frame_b = 148
+
+[interventions]
+attenuation_levels = [0.25, 0.50, 0.75, 1.0]
+
+[controls]
+baseline = true
+zero_effect_sham = true
+require_exact_baseline_sham_identity = true
+require_frozen_artifacts_unchanged = true
+deterministic_full_silencing_replicate = true
+
+[measurements]
+record_input_effective_activity = true
+record_target_voltage = true
+record_target_spikes = true
+record_first_positive_frame = true
+record_peak_voltage = true
+record_peak_frame = true
+record_integrated_positive_voltage = true
+record_positive_frame_count = true
+
+[comparisons]
+compare_single_a = true
+compare_single_b = true
+compare_combined_ab = true
+compute_descriptive_additive_reference = true
+
+[interpretation]
+require_combined_exceeds_each_single_for_combined_dominance = true
+claim_statistical_synergy = false
+claim_statistical_subadditivity = false
+claim_equal_input_strength = false
+biological_causality_claim = false
+financial_semantics_used = false
