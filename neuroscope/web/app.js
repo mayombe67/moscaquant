@@ -100,6 +100,7 @@
     replayTimer: null,
 
     trace: null,
+    responderEnsemble: false,
 
     animationFrame: null,
   };
@@ -222,6 +223,7 @@
     calculateSceneBounds();
     updateHud();
     updateFrameSummary();
+    updateResponderEnsemble();
   }
 
   function normalizeNode(raw, index) {
@@ -576,8 +578,14 @@
 
     let visible = state.nodes;
 
-    if (state.showRespondersOnly) {
-      visible = visible.filter((n) => n.responder);
+    if (
+      state.showRespondersOnly ||
+      state.responderEnsemble
+    ) {
+      visible =
+        visible.filter(
+          (n) => n.responder
+        );
     }
 
     visible = visible.filter((n) => {
@@ -688,6 +696,7 @@
     }
 
     updateFrameSummary();
+    updateResponderEnsemble();
     requestDraw();
   }
 
@@ -1826,6 +1835,43 @@
         <div id="frame-summary" class="ns-frame-summary"></div>
       </div>
 
+      <div
+        class="ns-panel-title"
+        style="margin-top:18px"
+      >
+        RESPONDER ENSEMBLE
+      </div>
+
+      <button
+        id="toggle-responder-ensemble"
+        class="ns-button ns-ensemble-button"
+        type="button"
+      >
+        ISOLATE 9 RESPONDERS
+      </button>
+
+      <div
+        id="responder-ensemble-list"
+        class="ns-responder-list"
+      ></div>
+
+      <div class="ns-responder-plot-wrap">
+        <div class="ns-responder-plot-title">
+          ENSEMBLE ACTIVITY · 192 FRAMES
+        </div>
+
+        <canvas
+          id="responder-plot"
+          class="ns-responder-plot"
+          width="260"
+          height="150"
+        ></canvas>
+
+        <div class="ns-responder-plot-hint">
+          click timeline to jump
+        </div>
+      </div>
+
       <button id="reset-camera" class="ns-button">
         RESET CAMERA
       </button>
@@ -1932,6 +1978,30 @@
     });
 
     document
+      .getElementById(
+        "responder-plot"
+      )
+      ?.addEventListener(
+        "click",
+        responderPlotClick
+      );
+
+    document
+      .getElementById(
+        "toggle-responder-ensemble"
+      )
+      ?.addEventListener(
+        "click",
+        () => {
+          state.responderEnsemble =
+            !state.responderEnsemble;
+
+          updateResponderEnsemble();
+          requestDraw();
+        }
+      );
+
+    document
       .getElementById("reset-camera")
       .addEventListener("click", resetCamera);
   }
@@ -1956,6 +2026,554 @@
         <span>${label}</span>
       </label>
     `;
+  }
+
+  function responderSeries() {
+    const frames =
+      state.payload?.frames || [];
+
+    const modelIndices =
+      state.payload?.responderModelIndices || [];
+
+    return modelIndices.map(
+      (modelIndex, responderIndex) => ({
+        modelIndex:
+          Number(modelIndex),
+
+        values:
+          frames.map(
+            (frame) =>
+              Number(
+                frame.responders?.[
+                  responderIndex
+                ] ?? 0
+              )
+          ),
+      })
+    );
+  }
+
+  function drawResponderPlot() {
+    const canvas =
+      document.getElementById(
+        "responder-plot"
+      );
+
+    if (!canvas) return;
+
+    const ctx =
+      canvas.getContext("2d");
+
+    const cssWidth =
+      canvas.clientWidth || 260;
+
+    const cssHeight =
+      canvas.clientHeight || 150;
+
+    const dpr =
+      Math.min(
+        window.devicePixelRatio || 1,
+        2
+      );
+
+    canvas.width =
+      Math.max(
+        1,
+        Math.round(cssWidth * dpr)
+      );
+
+    canvas.height =
+      Math.max(
+        1,
+        Math.round(cssHeight * dpr)
+      );
+
+    ctx.setTransform(
+      dpr,
+      0,
+      0,
+      dpr,
+      0,
+      0
+    );
+
+    ctx.clearRect(
+      0,
+      0,
+      cssWidth,
+      cssHeight
+    );
+
+    ctx.fillStyle = "#090d13";
+    ctx.fillRect(
+      0,
+      0,
+      cssWidth,
+      cssHeight
+    );
+
+    const pad = {
+      left: 28,
+      right: 8,
+      top: 10,
+      bottom: 20,
+    };
+
+    const plotWidth =
+      cssWidth -
+      pad.left -
+      pad.right;
+
+    const plotHeight =
+      cssHeight -
+      pad.top -
+      pad.bottom;
+
+    const series =
+      responderSeries();
+
+    const frameCount =
+      state.payload?.frames?.length || 1;
+
+    let maxAbs = 0;
+
+    for (const item of series) {
+      for (const value of item.values) {
+        maxAbs =
+          Math.max(
+            maxAbs,
+            Math.abs(value)
+          );
+      }
+    }
+
+    maxAbs =
+      maxAbs || 1;
+
+    ctx.strokeStyle = "#202936";
+    ctx.lineWidth = 1;
+    ctx.globalAlpha = 0.7;
+
+    for (let i = 0; i <= 4; i++) {
+      const y =
+        pad.top +
+        (plotHeight * i) / 4;
+
+      ctx.beginPath();
+      ctx.moveTo(
+        pad.left,
+        y
+      );
+
+      ctx.lineTo(
+        pad.left + plotWidth,
+        y
+      );
+
+      ctx.stroke();
+    }
+
+    ctx.globalAlpha = 1;
+
+    const colors = [
+      "#ffb84d",
+      "#64e9ff",
+      "#7ef29a",
+      "#d7c4ff",
+      "#ff7fa2",
+      "#f4e06d",
+      "#78a8ff",
+      "#ff8f66",
+      "#b68cff",
+    ];
+
+    series.forEach(
+      (item, seriesIndex) => {
+        const values =
+          item.values;
+
+        if (!values.length) return;
+
+        ctx.beginPath();
+
+        values.forEach(
+          (value, frameIndex) => {
+            const x =
+              pad.left +
+              (
+                frameIndex /
+                Math.max(
+                  1,
+                  frameCount - 1
+                )
+              ) *
+              plotWidth;
+
+            const normalized =
+              Math.abs(value) /
+              maxAbs;
+
+            const y =
+              pad.top +
+              plotHeight -
+              normalized *
+              plotHeight;
+
+            if (frameIndex === 0) {
+              ctx.moveTo(
+                x,
+                y
+              );
+            } else {
+              ctx.lineTo(
+                x,
+                y
+              );
+            }
+          }
+        );
+
+        ctx.strokeStyle =
+          colors[
+            seriesIndex %
+            colors.length
+          ];
+
+        ctx.globalAlpha = 0.82;
+        ctx.lineWidth =
+          item.modelIndex ===
+          Number(
+            state.selected?.raw?.i
+          )
+            ? 2.4
+            : 1.1;
+
+        ctx.stroke();
+      }
+    );
+
+    ctx.globalAlpha = 1;
+
+    const cursorX =
+      pad.left +
+      (
+        state.currentFrame /
+        Math.max(
+          1,
+          frameCount - 1
+        )
+      ) *
+      plotWidth;
+
+    ctx.strokeStyle = "#ffffff";
+    ctx.lineWidth = 1;
+    ctx.globalAlpha = 0.9;
+
+    ctx.beginPath();
+    ctx.moveTo(
+      cursorX,
+      pad.top
+    );
+
+    ctx.lineTo(
+      cursorX,
+      pad.top + plotHeight
+    );
+
+    ctx.stroke();
+
+    ctx.globalAlpha = 1;
+
+    ctx.fillStyle = "#667281";
+    ctx.font = "8px monospace";
+
+    ctx.fillText(
+      "0",
+      pad.left,
+      cssHeight - 5
+    );
+
+    const endLabel =
+      String(frameCount - 1);
+
+    const endWidth =
+      ctx.measureText(
+        endLabel
+      ).width;
+
+    ctx.fillText(
+      endLabel,
+      pad.left +
+        plotWidth -
+        endWidth,
+      cssHeight - 5
+    );
+
+    ctx.fillStyle = "#aeb9c6";
+
+    const cursorLabel =
+      `F${state.currentFrame}`;
+
+    ctx.fillText(
+      cursorLabel,
+      Math.max(
+        pad.left,
+        Math.min(
+          pad.left +
+            plotWidth -
+            24,
+          cursorX + 3
+        )
+      ),
+      pad.top + 9
+    );
+  }
+
+  function responderPlotClick(event) {
+    const canvas =
+      event.currentTarget;
+
+    const rect =
+      canvas.getBoundingClientRect();
+
+    const padLeft = 28;
+    const padRight = 8;
+
+    const plotWidth =
+      rect.width -
+      padLeft -
+      padRight;
+
+    const x =
+      event.clientX -
+      rect.left -
+      padLeft;
+
+    const ratio =
+      clamp(
+        x /
+        Math.max(
+          1,
+          plotWidth
+        ),
+        0,
+        1
+      );
+
+    const frameCount =
+      state.payload?.frames?.length || 1;
+
+    const frame =
+      Math.round(
+        ratio *
+        Math.max(
+          0,
+          frameCount - 1
+        )
+      );
+
+    stopReplay();
+    setReplayFrame(frame);
+  }
+
+  function responderStats() {
+    const modelIndices =
+      state.payload?.responderModelIndices || [];
+
+    const frames =
+      state.payload?.frames || [];
+
+    return modelIndices.map(
+      (modelIndex, responderIndex) => {
+        let peakFrame = 0;
+        let peakValue = 0;
+
+        for (
+          let frameIndex = 0;
+          frameIndex < frames.length;
+          frameIndex++
+        ) {
+          const value =
+            Number(
+              frames[frameIndex]
+                ?.responders
+                ?.[responderIndex] ?? 0
+            );
+
+          if (
+            Math.abs(value) >
+            Math.abs(peakValue)
+          ) {
+            peakValue = value;
+            peakFrame = frameIndex;
+          }
+        }
+
+        const currentValue =
+          Number(
+            frames[state.currentFrame]
+              ?.responders
+              ?.[responderIndex] ?? 0
+          );
+
+        const incoming =
+          state.edges.filter(
+            (edge) =>
+              Number(
+                edge.raw?.postModel
+              ) === Number(modelIndex)
+          );
+
+        return {
+          modelIndex:
+            Number(modelIndex),
+
+          responderIndex,
+
+          peakFrame,
+          peakValue,
+          currentValue,
+
+          incomingCount:
+            incoming.length,
+        };
+      }
+    );
+  }
+
+  function selectModelIndex(modelIndex) {
+    const node =
+      state.nodes.find(
+        (candidate) =>
+          Number(
+            candidate.raw?.i ??
+            candidate.index
+          ) === Number(modelIndex)
+      );
+
+    if (!node) return;
+
+    state.selected = node;
+
+    renderSelection();
+    drawResponderPlot();
+    requestDraw();
+  }
+
+  function jumpResponderPeak(
+    modelIndex,
+    peakFrame
+  ) {
+    stopReplay();
+
+    setReplayFrame(
+      Number(peakFrame)
+    );
+
+    selectModelIndex(
+      Number(modelIndex)
+    );
+  }
+
+  function updateResponderEnsemble() {
+    const container =
+      document.getElementById(
+        "responder-ensemble-list"
+      );
+
+    const button =
+      document.getElementById(
+        "toggle-responder-ensemble"
+      );
+
+    if (button) {
+      button.textContent =
+        state.responderEnsemble
+          ? "SHOW ALL NEURONS"
+          : "ISOLATE 9 RESPONDERS";
+
+      button.classList.toggle(
+        "active",
+        state.responderEnsemble
+      );
+    }
+
+    drawResponderPlot();
+
+    if (!container) return;
+
+    const stats =
+      responderStats();
+
+    container.innerHTML =
+      stats.map((item) => `
+        <div
+          class="ns-responder-row"
+          data-model="${item.modelIndex}"
+        >
+          <div class="ns-responder-model">
+            <strong>
+              ${item.modelIndex}
+            </strong>
+
+            <span>
+              inputs ${item.incomingCount}
+            </span>
+          </div>
+
+          <div class="ns-responder-values">
+            <span>
+              now
+              ${item.currentValue.toExponential(2)}
+            </span>
+
+            <span>
+              peak
+              ${item.peakValue.toExponential(2)}
+            </span>
+          </div>
+
+          <button
+            class="ns-responder-jump"
+            type="button"
+            data-model="${item.modelIndex}"
+            data-frame="${item.peakFrame}"
+          >
+            F${item.peakFrame}
+          </button>
+        </div>
+      `).join("");
+
+    container
+      .querySelectorAll(
+        ".ns-responder-jump"
+      )
+      .forEach((button) => {
+        button.addEventListener(
+          "click",
+          () => {
+            jumpResponderPeak(
+              button.dataset.model,
+              button.dataset.frame
+            );
+          }
+        );
+      });
+
+    container
+      .querySelectorAll(
+        ".ns-responder-row"
+      )
+      .forEach((row) => {
+        row.addEventListener(
+          "dblclick",
+          () => {
+            selectModelIndex(
+              row.dataset.model
+            );
+          }
+        );
+      });
   }
 
   function updateFrameSummary() {
@@ -2808,6 +3426,100 @@
         margin: 0;
         color: #b5bfcc;
         overflow-wrap: anywhere;
+      }
+
+      .ns-ensemble-button.active {
+        border-color: #ffb84d;
+        color: #ffd28a;
+        background: #21170c;
+      }
+
+      .ns-responder-list {
+        margin: 8px 0 10px;
+      }
+
+      .ns-responder-plot-wrap {
+        margin-bottom: 14px;
+        padding: 7px;
+        border: 1px solid #242d39;
+        background: #0b1016;
+      }
+
+      .ns-responder-plot-title {
+        margin-bottom: 6px;
+        color: #7f8996;
+        font-family: monospace;
+        font-size: 8px;
+        letter-spacing: .08em;
+      }
+
+      .ns-responder-plot {
+        display: block;
+        width: 100%;
+        height: 150px;
+        cursor: crosshair;
+      }
+
+      .ns-responder-plot-hint {
+        margin-top: 4px;
+        text-align: right;
+        color: #545f6c;
+        font-family: monospace;
+        font-size: 7px;
+      }
+
+      .ns-responder-row {
+        display: grid;
+        grid-template-columns:
+          74px 1fr 42px;
+        gap: 6px;
+        align-items: center;
+        margin: 4px 0;
+        padding: 6px;
+        border: 1px solid #242d39;
+        background: #0d1219;
+        font-family: monospace;
+        font-size: 8px;
+      }
+
+      .ns-responder-row:hover {
+        border-color: #514269;
+      }
+
+      .ns-responder-model strong {
+        display: block;
+        color: #ffb84d;
+        font-size: 10px;
+      }
+
+      .ns-responder-model span {
+        color: #677281;
+      }
+
+      .ns-responder-values {
+        min-width: 0;
+        color: #8994a3;
+      }
+
+      .ns-responder-values span {
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .ns-responder-jump {
+        min-height: 27px;
+        border: 1px solid #3b4655;
+        background: #131923;
+        color: #b9a5ff;
+        font-family: monospace;
+        font-size: 8px;
+        cursor: pointer;
+      }
+
+      .ns-responder-jump:hover {
+        border-color: #8b5cf6;
       }
 
       .ns-button {
