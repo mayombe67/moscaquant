@@ -1,0 +1,15 @@
+[control]
+id = "shuffled-mosca-v1"
+version = 1
+seed = 20260915
+method = "presynaptic_identity_permutation"
+preserve_transmitter_sign = true
+preserve_postsynaptic_rows = true
+preserve_row_weight_multisets = true
+preserve_edge_count = true
+preserve_global_outdegree_distribution = true
+
+[principles]
+ticker_agnostic = true
+market_response_tuning = false
+pnl_tuning = false

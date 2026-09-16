@@ -1,0 +1,14 @@
+[coupling]
+id = "mq001-market-coupling-v1"
+version = 1
+frame_count = 16
+sensory_gain = 12.626497881530927
+calibration = "passive_threshold_crossing"
+lif_threshold = 1.0
+lif_dt_ms = 1.0
+lif_tau_ms = 20.0
+
+[principles]
+derived_without_market_response_tuning = true
+derived_without_pnl = true
+derived_without_behavior_decoder = true

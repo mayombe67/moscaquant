@@ -1,0 +1,39 @@
+[control]
+id = "feature-subsets-v2"
+version = 2
+
+[experiment]
+conditions = ["A", "B"]
+release_gain = 0.9981738484618123
+ablation_stage = "post_normalization"
+ablation_value = 0.0
+subset_count = 128
+
+[features]
+order = [
+  "return",
+  "momentum",
+  "volume_deviation",
+  "realized_volatility",
+  "spread",
+  "order_book_imbalance",
+  "return_sign_entropy",
+]
+
+[design]
+complete_power_set = true
+include_empty_set = true
+include_full_set = true
+
+[principles]
+synthetic_histories_unchanged = true
+feature_calculations_unchanged = true
+causal_normalizers_unchanged = true
+territory_mapping_unchanged = true
+sensory_gain_unchanged = true
+release_gain_unchanged = true
+connectome_unchanged = true
+ablation_after_normalization = true
+all_128_subsets_must_run = true
+no_early_stopping = true
+no_subset_selection_after_results = true

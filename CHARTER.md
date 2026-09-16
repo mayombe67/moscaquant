@@ -706,6 +706,19 @@ MQ-2 — BLOOMBERG TERMINAL FOR INSECTS
 
 Introduce live crypto market features and sensory encoding.
 
+MQ-2.1 — VISUAL TRANSDUCTION
+
+Restore the experimentally identified missing first-hop visual handoff.
+
+Preserve the frozen biological connectome and transmitter signs while adding
+the minimum modeled graded visual dynamics required for R1-R6 information to
+propagate through the dominant L1/L2/L3/Lai relay.
+
+MQ-2.1 parameters must be frozen independently of A/B market discrimination.
+
+MQ-3 remains blocked until reproducible neural activity propagates beyond the
+retinal population and required controls are repeated.
+
 MQ-3 — EMPLOYEE HAS OPINIONS
 
 Produce autonomous BUY / HOLD / SELL decisions.
@@ -748,6 +761,12 @@ Conduct comparative experiments against controls and benchmarks.
 
 25. Go / No-Go Gates
 
+MQ-3 cannot begin until market-driven activity propagates reproducibly beyond
+the artificial retinal population into downstream connectome circuitry.
+
+MQ-2.1 visual-transduction parameters must be frozen without reference to A/B
+market discrimination, trading behavior, P&L, or a financial decoder.
+
 Broker execution cannot begin until WARDEN-01 passes adversarial testing.
 
 Plasticity cannot begin until frozen-connectome behavior is reproducible.
@@ -768,7 +787,8 @@ LEVEL 2 — ALIVE
 Neural simulation responds to stimulus.
 
 LEVEL 3 — MARKET AWARE
-Market changes produce reproducible neural responses.
+Market changes produce reproducible neural responses that propagate beyond the
+artificial retinal population into downstream connectome circuitry.
 
 LEVEL 4 — OPINIONATED
 MQ-001 generates autonomous financial decisions.
@@ -851,8 +871,8 @@ YOLO & HODL LLC
 MOSCAQUANT
 
 SUBJECT ................. MQ-001
-CURRENT PHASE ........... MQ-0
-MISSION ................. ACQUIRE SUBJECT
+CURRENT PHASE ........... MQ-3
+MISSION ................. EMPLOYEE HAS OPINIONS
 
 BROKER .................. NONE
 TRADING AUTHORITY ....... NONE
@@ -864,6 +884,6 @@ CONTAINMENT ............. ACTIVE
 
 NEXT OBJECTIVE:
 
-LOAD THE CONNECTOME.
+DEFINE AND VALIDATE THE FINANCIAL DECISION READOUT.
 
 Past performance does not guarantee future sugar cubes.

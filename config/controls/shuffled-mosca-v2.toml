@@ -1,0 +1,37 @@
+[control]
+id = "shuffled-mosca-v2"
+version = 2
+seed = 20260915
+
+artifact = "connectome-shuffled-mosca-v2.npz"
+artifact_sha256 = "2d183a1663531d14fbe58c919568835cbc3fbfbbd60b2959d0fa16c1ba14ac52"
+
+provenance = "shuffled-mosca-v2.json"
+provenance_sha256 = "f8d8b11f354f2ba812e0a407a118367a709b01d6bcc88f97b3b5d6814b80b774"
+
+[interface]
+protected_retinal_identities = 3241
+protected_retinal_output_edges = 14471
+protected_r1_r6_relay_edges = 10036
+
+[shuffle]
+moved_identities = 163459
+moved_protected_identities = 0
+moved_nonprotected_identities = 163459
+
+[preserved]
+mapped_r1_r6_identity = true
+mapped_r1_r6_output_interface = true
+r1_r6_to_visual_relay_interface = true
+transmitter_sign = true
+postsynaptic_row_degree = true
+postsynaptic_weight_sequence = true
+incoming_absolute_normalization = true
+edge_count = true
+global_outdegree_distribution = true
+
+[experimental]
+market_condition_independent = true
+pnl_independent = true
+decoder_independent = true
+release_gain_v1_unchanged = true
