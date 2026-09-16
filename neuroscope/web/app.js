@@ -88,6 +88,11 @@
     showFallback: true,
     showCausal: true,
     showRespondersOnly: false,
+    showRetina: true,
+    showRelay: true,
+    showGraded: true,
+    showDN: true,
+    showResponders: true,
 
     animationFrame: null,
   };
@@ -570,6 +575,43 @@
     visible = visible.filter((n) => {
       if (n.topologyFallback && !state.showFallback) return false;
       if (!n.topologyFallback && !state.showReal) return false;
+
+      const roles = Number(n.raw?.roles ?? 0);
+
+      const roleBits =
+        state.payload?.roleBits || {
+          retina: 1,
+          relay: 2,
+          graded: 4,
+          dn: 8,
+          responder: 16,
+        };
+
+      if (
+        (roles & Number(roleBits.retina)) !== 0 &&
+        !state.showRetina
+      ) return false;
+
+      if (
+        (roles & Number(roleBits.relay)) !== 0 &&
+        !state.showRelay
+      ) return false;
+
+      if (
+        (roles & Number(roleBits.graded)) !== 0 &&
+        !state.showGraded
+      ) return false;
+
+      if (
+        (roles & Number(roleBits.dn)) !== 0 &&
+        !state.showDN
+      ) return false;
+
+      if (
+        (roles & Number(roleBits.responder)) !== 0 &&
+        !state.showResponders
+      ) return false;
+
       return true;
     });
 
@@ -1044,6 +1086,16 @@
         state.showRespondersOnly
       )}
 
+      <div class="ns-panel-title" style="margin-top:18px">
+        ROLES
+      </div>
+
+      ${toggle("show-retina", "Retina", state.showRetina)}
+      ${toggle("show-relay", "Relay", state.showRelay)}
+      ${toggle("show-graded", "Graded", state.showGraded)}
+      ${toggle("show-dn", "Descending neurons", state.showDN)}
+      ${toggle("show-responders", "Responders", state.showResponders)}
+
       <button id="reset-camera" class="ns-button">
         RESET CAMERA
       </button>
@@ -1063,6 +1115,26 @@
 
     bindToggle("responders-only", (checked) => {
       state.showRespondersOnly = checked;
+    });
+
+    bindToggle("show-retina", (checked) => {
+      state.showRetina = checked;
+    });
+
+    bindToggle("show-relay", (checked) => {
+      state.showRelay = checked;
+    });
+
+    bindToggle("show-graded", (checked) => {
+      state.showGraded = checked;
+    });
+
+    bindToggle("show-dn", (checked) => {
+      state.showDN = checked;
+    });
+
+    bindToggle("show-responders", (checked) => {
+      state.showResponders = checked;
     });
 
     document
@@ -1135,52 +1207,104 @@
       return;
     }
 
-    const geometryLabel = n.topologyFallback
-      ? "topologyFallback"
-      : "somaLocation";
+    const raw = n.raw || {};
+
+    const modelIndex =
+      raw.i ??
+      raw.modelIndex ??
+      raw.model_index ??
+      "—";
+
+    const bodyId =
+      raw.body ??
+      raw.bodyId ??
+      raw.body_id ??
+      n.id ??
+      "—";
+
+    const rolesValue = Number(raw.roles ?? 0);
+
+    const roleBits =
+      state.payload?.roleBits || {
+        retina: 1,
+        relay: 2,
+        graded: 4,
+        dn: 8,
+        responder: 16,
+      };
+
+    const roles = Object.entries(roleBits)
+      .filter(([, bit]) => (rolesValue & Number(bit)) !== 0)
+      .map(([name]) => name.toUpperCase());
+
+    const geometryLabel =
+      raw.positionSource ||
+      (n.topologyFallback
+        ? "topologyFallback"
+        : "somaLocation");
+
+    const gradedType =
+      raw.gradedType ??
+      "—";
+
+    const dnCluster =
+      raw.dnCluster ??
+      "—";
+
+    const somaSide =
+      raw.somaSide ??
+      n.side ??
+      "—";
+
+    const somaNeuromere =
+      raw.somaNeuromere ??
+      "—";
+
+    const causalNode =
+      raw.causalNode === true;
 
     info.innerHTML = `
       <dl class="ns-dl">
 
+        <dt>Model index</dt>
+        <dd>${escapeHtml(String(modelIndex))}</dd>
+
         <dt>Body ID</dt>
-        <dd>${escapeHtml(n.id)}</dd>
+        <dd>${escapeHtml(String(bodyId))}</dd>
 
-        <dt>Type</dt>
-        <dd>${escapeHtml(n.type || "unknown")}</dd>
+        <dt>Roles</dt>
+        <dd>${escapeHtml(
+          roles.length ? roles.join(" · ") : "—"
+        )}</dd>
 
-        <dt>Instance</dt>
-        <dd>${escapeHtml(n.instance || "—")}</dd>
+        <dt>Graded type</dt>
+        <dd>${escapeHtml(String(gradedType))}</dd>
 
-        <dt>Side</dt>
-        <dd>${escapeHtml(n.side || "—")}</dd>
+        <dt>DN cluster</dt>
+        <dd>${escapeHtml(String(dnCluster))}</dd>
+
+        <dt>Soma side</dt>
+        <dd>${escapeHtml(String(somaSide))}</dd>
+
+        <dt>Neuromere</dt>
+        <dd>${escapeHtml(String(somaNeuromere))}</dd>
 
         <dt>Geometry</dt>
         <dd class="${
           n.topologyFallback ? "warn" : "good"
         }">
-          ${geometryLabel}
+          ${escapeHtml(String(geometryLabel))}
         </dd>
 
-        <dt>Causal responder</dt>
-        <dd>${n.responder ? "YES" : "NO"}</dd>
+        <dt>Causal node</dt>
+        <dd class="${causalNode ? "good" : ""}">
+          ${causalNode ? "YES" : "NO"}
+        </dd>
 
-        ${
-          n.response != null
-            ? `
-              <dt>Response</dt>
-              <dd>${escapeHtml(String(n.response))}</dd>
-            `
-            : ""
-        }
-
-        ${
-          n.latency != null
-            ? `
-              <dt>Latency / delay</dt>
-              <dd>${escapeHtml(String(n.latency))}</dd>
-            `
-            : ""
-        }
+        <dt>Responder</dt>
+        <dd class="${n.responder ? "good" : ""}">
+          ${n.responder ? "YES" : "NO"}
+        </dd>
 
       </dl>
 
@@ -1201,7 +1325,6 @@
       }
     `;
   }
-
   // ---------------------------------------------------------------------------
   // Resize / redraw
   // ---------------------------------------------------------------------------
