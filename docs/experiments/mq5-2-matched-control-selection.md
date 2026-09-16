@@ -119,3 +119,58 @@ activity while treating graph degree as a secondary similarity measure
 rather than a requirement.
 
 No matched-control intervention outcome has been observed.
+
+## Amendment 3
+
+Status:
+
+**PRE-REGISTERED BEFORE FOURTH CANDIDATE SEARCH**
+
+Amendment 2 also produced zero eligible candidates.
+
+This establishes that no eligible control exists under all of the
+following simultaneously:
+
+- exact Tm2 subtype
+- positive effective activity at frame 145
+- activity ratio between 0.25 and 4.0
+- exclusion from frozen causal nodes
+- no direct structural edge to neuron 656
+
+The activity window will not be widened.
+
+Instead, exact graded subtype is relaxed to the frozen graded functional
+class.
+
+Eligible candidates may therefore be:
+
+- Tm2
+- Tm3
+- Tm4
+
+All remaining criteria are unchanged:
+
+- candidate must be a member of the frozen graded population
+- candidate must have positive effective activity at frame 145
+- activity ratio must remain between 0.25 and 4.0 relative to neuron 43417
+- candidate must not be part of the frozen causal-node set
+- candidate must not have a direct structural edge to neuron 656
+
+Ranking remains:
+
+1. smallest absolute log activity ratio
+2. smallest combined in-degree/out-degree log distance
+3. lowest model index
+
+Exact subtype is not used as a ranking preference.
+
+Rationale:
+
+Two tolerance-based searches and one degree-relaxed search produced no
+valid exact-Tm2 control.
+
+This amendment relaxes one categorical matching dimension while retaining
+functional graded-neuron identity, intervention-frame activity matching,
+causal exclusion, and the previously frozen activity tolerance.
+
+No matched-control intervention outcome has been observed.

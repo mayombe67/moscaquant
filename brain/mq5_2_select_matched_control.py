@@ -397,12 +397,22 @@ def main():
         if index in direct_to_target:
             continue
 
-        if role(
+        candidate_role = role(
             index,
             retina,
             relay,
             graded,
-        ) != source_role:
+        )
+
+        #
+        # Amendment 3:
+        # Require the same functional role
+        # (graded), but not exact Tm subtype.
+        #
+        if (
+            candidate_role[0]
+            != source_role[0]
+        ):
             continue
 
         activity = float(
@@ -479,7 +489,7 @@ def main():
                     source_role[0],
 
                 "graded_type":
-                    source_role[1],
+                    candidate_role[1],
 
                 "activity":
                     activity,

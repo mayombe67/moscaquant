@@ -12,7 +12,11 @@ match_frame = 145
 exclude_frozen_causal_nodes = true
 exclude_direct_edge_to_target = true
 require_same_functional_class = true
-require_same_graded_type_if_applicable = true
+# Amendment 3:
+# Exact Tm2 matching produced zero eligible candidates
+# after activity and degree amendments.
+# Match the frozen graded functional class instead.
+require_same_graded_type_if_applicable = false
 require_positive_activity_at_match_frame = true
 
 [acceptance]
