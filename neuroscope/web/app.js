@@ -94,6 +94,11 @@
     showDN: true,
     showResponders: true,
 
+    currentFrame: 0,
+    replayPlaying: false,
+    replayFps: 8,
+    replayTimer: null,
+
     animationFrame: null,
   };
 
@@ -214,6 +219,7 @@
 
     calculateSceneBounds();
     updateHud();
+    updateFrameSummary();
   }
 
   function normalizeNode(raw, index) {
@@ -659,7 +665,170 @@
     ctx.globalAlpha = 1;
   }
 
+  function setReplayFrame(frameIndex) {
+    const total =
+      state.payload?.frames?.length ?? 0;
+
+    if (!total) return;
+
+    state.currentFrame =
+      Math.max(
+        0,
+        Math.min(total - 1, frameIndex)
+      );
+
+    const slider =
+      document.getElementById("frame-slider");
+
+    if (slider) {
+      slider.value =
+        String(state.currentFrame);
+    }
+
+    updateFrameSummary();
+    requestDraw();
+  }
+
+  function startReplay() {
+    const total =
+      state.payload?.frames?.length ?? 0;
+
+    if (!total || state.replayPlaying) return;
+
+    if (state.currentFrame >= total - 1) {
+      setReplayFrame(0);
+    }
+
+    state.replayPlaying = true;
+
+    const button =
+      document.getElementById("frame-play");
+
+    if (button) {
+      button.textContent = "PAUSE";
+      button.classList.add("active");
+    }
+
+    state.replayTimer = window.setInterval(
+      () => {
+        if (state.currentFrame >= total - 1) {
+          stopReplay();
+          return;
+        }
+
+        setReplayFrame(
+          state.currentFrame + 1
+        );
+      },
+      1000 / Math.max(1, state.replayFps)
+    );
+  }
+
+  function stopReplay() {
+    state.replayPlaying = false;
+
+    if (state.replayTimer != null) {
+      window.clearInterval(
+        state.replayTimer
+      );
+
+      state.replayTimer = null;
+    }
+
+    const button =
+      document.getElementById("frame-play");
+
+    if (button) {
+      button.textContent = "PLAY";
+      button.classList.remove("active");
+    }
+  }
+
+  function sparseActivityMap(values) {
+    const map = new Map();
+
+    if (!Array.isArray(values)) {
+      return map;
+    }
+
+    for (const item of values) {
+      if (
+        Array.isArray(item) &&
+        item.length >= 2
+      ) {
+        map.set(
+          Number(item[0]),
+          Number(item[1])
+        );
+      } else if (
+        Number.isInteger(item)
+      ) {
+        map.set(
+          Number(item),
+          1
+        );
+      }
+    }
+
+    return map;
+  }
+
+  function currentFrameActivity() {
+    const frame =
+      state.payload?.frames?.[
+        state.currentFrame
+      ];
+
+    if (!frame) {
+      return {
+        voltage: new Map(),
+        effective: new Map(),
+        spikes: new Map(),
+        responders: new Map(),
+      };
+    }
+
+    const responderMap =
+      new Map();
+
+    const responderIndices =
+      state.payload?.responderModelIndices || [];
+
+    const responderValues =
+      Array.isArray(frame.responders)
+        ? frame.responders
+        : [];
+
+    for (
+      let i = 0;
+      i < responderIndices.length;
+      i++
+    ) {
+      responderMap.set(
+        Number(responderIndices[i]),
+        Number(responderValues[i] ?? 0)
+      );
+    }
+
+    return {
+      voltage:
+        sparseActivityMap(frame.voltage),
+
+      effective:
+        sparseActivityMap(frame.effective),
+
+      spikes:
+        sparseActivityMap(frame.spikes),
+
+      responders:
+        responderMap,
+    };
+  }
+
   function drawNodes() {
+    const activity =
+      currentFrameActivity();
+
     for (const p of state.projected) {
       const n = p.node;
 
@@ -673,10 +842,87 @@
 
       let alpha = n.topologyFallback ? 0.38 : 0.72;
 
+      const modelIndex =
+        Number(
+          n.raw?.i ??
+          n.raw?.modelIndex ??
+          n.index
+        );
+
+      const localIndex =
+        Number(n.index);
+
+      const voltage =
+        Number(
+          activity.voltage.get(localIndex) ?? 0
+        );
+
+      const effective =
+        Number(
+          activity.effective.get(localIndex) ?? 0
+        );
+
+      const spike =
+        Number(
+          activity.spikes.get(localIndex) ?? 0
+        );
+
+      const voltageIntensity =
+        clamp(
+          Math.abs(voltage) / 0.08,
+          0,
+          1
+        );
+
+      if (voltageIntensity > 0.02) {
+        alpha = Math.max(
+          alpha,
+          0.45 + voltageIntensity * 0.5
+        );
+
+        radius +=
+          voltageIntensity * 1.4;
+      }
+
+      if (effective !== 0) {
+        fill = "#64e9ff";
+        alpha = 0.92;
+
+        radius +=
+          Math.min(
+            2.5,
+            Math.abs(effective) * 4
+          );
+      }
+
+      if (spike !== 0) {
+        fill = "#ffffff";
+        alpha = 1;
+
+        radius += 2.4;
+      }
+
       if (n.responder) {
-        radius = CONFIG.responderRadius;
+        const responderValue =
+          Number(
+            activity.responders.get(
+              modelIndex
+            ) ?? 0
+          );
+
+        radius =
+          CONFIG.responderRadius +
+          Math.min(
+            4,
+            Math.abs(responderValue) * 24
+          );
+
         fill = CONFIG.responder;
-        alpha = 0.96;
+
+        alpha =
+          responderValue !== 0
+            ? 1
+            : 0.96;
       }
 
       if (state.hovered === n) {
@@ -1114,6 +1360,67 @@
       ${toggle("show-dn", "Descending neurons", state.showDN)}
       ${toggle("show-responders", "Responders", state.showResponders)}
 
+      <div class="ns-panel-title" style="margin-top:18px">
+        REPLAY
+      </div>
+
+      <div class="ns-replay">
+        <div class="ns-replay-row">
+          <span>Frame</span>
+          <strong id="frame-label">0 / 191</strong>
+        </div>
+
+        <input
+          id="frame-slider"
+          class="ns-frame-slider"
+          type="range"
+          min="0"
+          max="191"
+          step="1"
+          value="0"
+        >
+
+        <div class="ns-replay-buttons">
+          <button
+            id="frame-prev"
+            class="ns-replay-button"
+            type="button"
+          >
+            ◀
+          </button>
+
+          <button
+            id="frame-play"
+            class="ns-replay-button ns-replay-play"
+            type="button"
+          >
+            PLAY
+          </button>
+
+          <button
+            id="frame-next"
+            class="ns-replay-button"
+            type="button"
+          >
+            ▶
+          </button>
+
+          <select
+            id="replay-speed"
+            class="ns-replay-speed"
+            aria-label="Replay speed"
+          >
+            <option value="2">2 fps</option>
+            <option value="4">4 fps</option>
+            <option value="8" selected>8 fps</option>
+            <option value="12">12 fps</option>
+            <option value="24">24 fps</option>
+          </select>
+        </div>
+
+        <div id="frame-summary" class="ns-frame-summary"></div>
+      </div>
+
       <button id="reset-camera" class="ns-button">
         RESET CAMERA
       </button>
@@ -1155,6 +1462,70 @@
       state.showResponders = checked;
     });
 
+    const frameSlider =
+      document.getElementById("frame-slider");
+
+    const framePrev =
+      document.getElementById("frame-prev");
+
+    const framePlay =
+      document.getElementById("frame-play");
+
+    const frameNext =
+      document.getElementById("frame-next");
+
+    const replaySpeed =
+      document.getElementById("replay-speed");
+
+    frameSlider.max = String(
+      Math.max(
+        0,
+        Number(state.payload?.frameCount ?? 192) - 1
+      )
+    );
+
+    frameSlider.addEventListener("input", (event) => {
+      stopReplay();
+
+      setReplayFrame(
+        Number(event.target.value)
+      );
+    });
+
+    framePrev.addEventListener("click", () => {
+      stopReplay();
+
+      setReplayFrame(
+        state.currentFrame - 1
+      );
+    });
+
+    frameNext.addEventListener("click", () => {
+      stopReplay();
+
+      setReplayFrame(
+        state.currentFrame + 1
+      );
+    });
+
+    framePlay.addEventListener("click", () => {
+      if (state.replayPlaying) {
+        stopReplay();
+      } else {
+        startReplay();
+      }
+    });
+
+    replaySpeed.addEventListener("change", (event) => {
+      state.replayFps =
+        Number(event.target.value) || 8;
+
+      if (state.replayPlaying) {
+        stopReplay();
+        startReplay();
+      }
+    });
+
     document
       .getElementById("reset-camera")
       .addEventListener("click", resetCamera);
@@ -1179,6 +1550,100 @@
         >
         <span>${label}</span>
       </label>
+    `;
+  }
+
+  function updateFrameSummary() {
+    if (!state.payload?.frames?.length) return;
+
+    const frame =
+      state.payload.frames[state.currentFrame];
+
+    if (!frame) return;
+
+    const frameLabel =
+      document.getElementById("frame-label");
+
+    const summary =
+      document.getElementById("frame-summary");
+
+    if (frameLabel) {
+      frameLabel.textContent =
+        `${state.currentFrame} / ${
+          state.payload.frames.length - 1
+        }`;
+    }
+
+    if (!summary) return;
+
+    const dnMean =
+      Array.isArray(frame.dnMean)
+        ? frame.dnMean
+        : [];
+
+    const dnMax =
+      Array.isArray(frame.dnMax)
+        ? frame.dnMax
+        : [];
+
+    const dnSpikes =
+      Array.isArray(frame.dnSpikes)
+        ? frame.dnSpikes
+        : [];
+
+    const responders =
+      Array.isArray(frame.responders)
+        ? frame.responders
+        : [];
+
+    const maxResponder =
+      responders.length
+        ? Math.max(...responders.map(Number))
+        : 0;
+
+    summary.innerHTML = `
+      <dl class="ns-frame-dl">
+
+        <dt>Retinal spikes</dt>
+        <dd>${escapeHtml(
+          String(frame.retinalSpikes ?? 0)
+        )}</dd>
+
+        <dt>Relay spikes</dt>
+        <dd>${escapeHtml(
+          String(frame.relaySpikes ?? 0)
+        )}</dd>
+
+        <dt>Graded active</dt>
+        <dd>${escapeHtml(
+          String(frame.gradedActive ?? 0)
+        )}</dd>
+
+        <dt>DN mean</dt>
+        <dd>${escapeHtml(
+          dnMean
+            .map((v) => Number(v).toExponential(2))
+            .join(" · ") || "—"
+        )}</dd>
+
+        <dt>DN max</dt>
+        <dd>${escapeHtml(
+          dnMax
+            .map((v) => Number(v).toExponential(2))
+            .join(" · ") || "—"
+        )}</dd>
+
+        <dt>DN spikes</dt>
+        <dd>${escapeHtml(
+          dnSpikes.join(" · ") || "—"
+        )}</dd>
+
+        <dt>Max responder</dt>
+        <dd>${escapeHtml(
+          Number(maxResponder).toExponential(3)
+        )}</dd>
+
+      </dl>
     `;
   }
 
@@ -1690,6 +2155,91 @@
 
       .ns-toggle input {
         accent-color: #8b5cf6;
+      }
+
+      .ns-replay {
+        margin: 8px 0 14px;
+      }
+
+      .ns-replay-buttons {
+        display: grid;
+        grid-template-columns:
+          34px
+          1fr
+          34px
+          70px;
+        gap: 5px;
+        margin-top: 8px;
+      }
+
+      .ns-replay-button,
+      .ns-replay-speed {
+        min-height: 28px;
+        border: 1px solid #303b4a;
+        background: #111722;
+        color: #aeb9c6;
+        font-family: monospace;
+        font-size: 9px;
+      }
+
+      .ns-replay-button {
+        cursor: pointer;
+      }
+
+      .ns-replay-button:hover {
+        border-color: #8b5cf6;
+      }
+
+      .ns-replay-play.active {
+        border-color: #8b5cf6;
+        color: #cbbaff;
+        background: #181226;
+      }
+
+      .ns-replay-speed {
+        padding: 0 4px;
+      }
+
+      .ns-replay-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 8px;
+        color: #778291;
+        font-family: monospace;
+        font-size: 10px;
+      }
+
+      .ns-replay-row strong {
+        color: #b69cff;
+      }
+
+      .ns-frame-slider {
+        width: 100%;
+        accent-color: #8b5cf6;
+      }
+
+      .ns-frame-summary {
+        margin-top: 10px;
+      }
+
+      .ns-frame-dl {
+        display: grid;
+        grid-template-columns: 105px 1fr;
+        gap: 5px 8px;
+        margin: 0;
+        font-family: monospace;
+        font-size: 9px;
+      }
+
+      .ns-frame-dl dt {
+        color: #626d7b;
+      }
+
+      .ns-frame-dl dd {
+        margin: 0;
+        color: #b5bfcc;
+        overflow-wrap: anywhere;
       }
 
       .ns-button {
