@@ -23,27 +23,30 @@ require_positive_activity_at_match_frame = true
 minimum_activity_ratio = 0.25
 maximum_activity_ratio = 4.0
 
-minimum_in_degree_ratio = 0.25
-maximum_in_degree_ratio = 4.0
+# Amendment 2:
+# Degree is no longer an eligibility constraint.
+# It remains a secondary ranking dimension.
+minimum_in_degree_ratio = 0.0
+maximum_in_degree_ratio = 999999.0
 
-minimum_out_degree_ratio = 0.25
-maximum_out_degree_ratio = 4.0
+minimum_out_degree_ratio = 0.0
+maximum_out_degree_ratio = 999999.0
 
 [ranking]
 # Applied only after all eligibility and acceptance rules pass.
 #
-# score =
+# Amendment 2 ranking:
+#
+# Primary:
 #   |ln(candidate_activity / source_activity)|
-# + |ln((candidate_in_degree + 1) / (source_in_degree + 1))|
+#
+# Secondary:
+#   |ln((candidate_in_degree + 1) / (source_in_degree + 1))|
 # + |ln((candidate_out_degree + 1) / (source_out_degree + 1))|
 #
-# Lowest score wins.
-#
-# model index is the deterministic tie breaker.
-activity_weight = 1.0
-in_degree_weight = 1.0
-out_degree_weight = 1.0
-tie_breaker = "lowest_model_index"
+# Final deterministic tie breaker:
+#   lowest model index
+ranking_method = "activity_then_degree_then_model_index"
 
 [control]
 attenuation = 1.0

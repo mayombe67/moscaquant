@@ -65,3 +65,57 @@ preserving the categorical biological and causal exclusions.
 
 The amendment was defined before a second candidate search and before
 any matched-control intervention outcome was observed.
+
+## Amendment 2
+
+Status:
+
+**PRE-REGISTERED BEFORE THIRD CANDIDATE SEARCH**
+
+Amendment 1 also produced zero eligible candidates.
+
+The categorical criteria remain unchanged:
+
+- exact Tm2 graded subtype
+- positive baseline effective activity at frame 145
+- exclusion from frozen causal nodes
+- no direct structural edge to neuron 656
+
+The activity requirement remains:
+
+- activity ratio between 0.25 and 4.0 relative to neuron 43417
+
+Structural in-degree and out-degree are no longer hard eligibility
+constraints.
+
+They remain part of candidate ranking.
+
+Ranking becomes lexicographic:
+
+1. smallest absolute log activity ratio
+2. smallest combined absolute log in-degree and out-degree difference
+3. lowest model index as deterministic tie breaker
+
+Formally:
+
+activity_distance =
+`|ln(candidate_activity / source_activity)|`
+
+degree_distance =
+`|ln((candidate_in_degree + 1) / (source_in_degree + 1))|`
+`+ |ln((candidate_out_degree + 1) / (source_out_degree + 1))|`
+
+Candidates are sorted by:
+
+`(activity_distance, degree_distance, model_index)`
+
+Rationale:
+
+Two prospectively frozen attempts produced no eligible candidate when
+graph degree was treated as a hard matching criterion.
+
+This amendment preserves functional identity and intervention-frame
+activity while treating graph degree as a secondary similarity measure
+rather than a requirement.
+
+No matched-control intervention outcome has been observed.
