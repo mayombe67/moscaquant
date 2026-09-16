@@ -2,7 +2,7 @@
 
 **Owner:** YOLO & HODL LLC  
 **Subject:** MQ-001  
-**Current Phase:** MQ-3 — EMPLOYEE HAS OPINIONS
+**Current Phase:** MQ-4 — NEUROSCOPE
 
 ## MQ-0 — ACQUIRE SUBJECT
 Load and validate MaleCNS. Build sparse connectivity, identify initial populations, inject controlled stimulus, observe propagation, and record telemetry.
@@ -41,7 +41,47 @@ MQ-2.1 parameters and results are frozen for this experimental line.
 MQ-3 is unblocked.
 
 ## MQ-3 — EMPLOYEE HAS OPINIONS
-Decode autonomous BUY / HOLD / SELL decisions without broker execution.
+
+**Status:** ACTIVE — descending readout defined; propagation bottleneck under investigation.
+
+The MQ-3 output boundary is frozen at all 1,314 confirmed descending neurons.
+Two independent anatomy-only structural views identified a reproducible coarse
+three-way organization. Their consensus assigns 1,191 neurons to anonymous
+output populations and leaves 123 structurally discordant neurons unassigned:
+
+- DN-C0: 6 neurons
+- DN-C1: 646 neurons
+- DN-C2: 539 neurons
+- UNASSIGNED: 123 neurons
+
+No BUY / HOLD / SELL semantics have been assigned.
+
+The frozen spike-only MQ-3 market readout produced deterministic ABSTAIN
+outcomes for both synthetic conditions A and B because no market-conditioned
+activity reached any assigned descending neuron.
+
+Propagation audits localized the failure:
+
+- Condition A produced 40 visual-relay spike events across 34 relay neurons.
+- All active relay neurons were structurally within 2–4 synapses of the
+  assigned descending population.
+- 25 first-hop bridge neurons both received active-relay input and projected
+  directly to assigned descending neurons.
+- All 25 received signed market-conditioned current.
+- None crossed the baseline LIF threshold.
+- Maximum bridge voltage was 0.37755101919174194 against threshold 1.0.
+
+MQ-3.1 tested a parameter-free global positive-subthreshold propagation
+hypothesis while preserving the frozen retinal transduction boundary.
+The hypothesis was rejected at the precommitted neutral gate because neutral
+input produced substantial descending-neuron voltage and spikes.
+
+A/B market replay was therefore not performed under the MQ-3.1 hybrid model.
+
+**Next objective:** determine whether a narrower physiology- and
+anatomy-constrained propagation model is justified for the identified
+relay → bridge → descending pathways. Any replacement dynamics must pass
+neutral validation before renewed A/B exposure.
 
 ## MQ-4 — NEUROSCOPE
 Build detailed live connectome and neural-activity visualization.

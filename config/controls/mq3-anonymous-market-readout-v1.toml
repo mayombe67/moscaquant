@@ -1,0 +1,39 @@
+[experiment]
+id = "mq3-anonymous-market-readout-v1"
+conditions = ["A", "B"]
+replays_per_condition = 2
+frames_per_replay = 192
+
+[population]
+artifact = "mq3-dn-consensus-v1"
+channels = ["DN-C0", "DN-C1", "DN-C2"]
+
+[score]
+primary_metric = "episode_mean_positive_voltage"
+frame_metric = "mean_positive_voltage"
+size_normalized = true
+time_normalized = true
+
+[decision]
+abstain_rule = "all_channel_scores_exactly_zero"
+winner_rule = "maximum_channel_score"
+tie_rule = "abstain"
+
+[diagnostics]
+peak_frame_metric = true
+integrated_positive_voltage = true
+maximum_neuron_voltage = true
+positive_neuron_fraction = true
+spike_count = true
+spike_rate_per_neuron = true
+first_positive_frame = true
+
+[principles]
+neutral_calibration_frozen = true
+financial_semantics_used = false
+pnl_used = false
+buy_label_used = false
+sell_label_used = false
+hold_label_used = false
+winner_mapping_after_results_forbidden = true
+metric_selection_after_results_forbidden = true

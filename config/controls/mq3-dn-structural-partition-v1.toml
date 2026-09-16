@@ -1,0 +1,28 @@
+[partition]
+id = "mq3-dn-structural-partition-v1"
+population = "mq3-descending-readout-v1"
+method = "signed_directional_cosine_average_linkage"
+
+[representation]
+positive_incoming = true
+negative_incoming = true
+positive_outgoing = true
+negative_outgoing = true
+block_l2_normalization = true
+final_l2_normalization = true
+
+[selection]
+minimum_clusters = 2
+maximum_clusters = 20
+criterion = "maximum_mean_silhouette"
+tie_break = "smallest_k"
+
+[principles]
+market_response_used = false
+financial_semantics_used = false
+condition_a_used = false
+condition_b_used = false
+pnl_used = false
+cluster_count_preselected = false
+all_confirmed_descending_neurons_used = true
+tbc_descending_neurons_excluded = true

@@ -1,0 +1,30 @@
+[readout]
+id = "mq3-readout-metric-v1"
+population = "mq3-dn-consensus-v1"
+channels = ["DN-C0", "DN-C1", "DN-C2"]
+
+[primary_metric]
+name = "mean_positive_voltage"
+definition = "mean(max(voltage, 0))"
+size_normalized = true
+
+[diagnostics]
+mean_voltage = true
+rms_voltage = true
+maximum_voltage = true
+positive_fraction = true
+quarter_threshold_fraction = true
+spike_rate_per_neuron = true
+
+[neutral_calibration]
+enabled = true
+condition = "neutral"
+frames = 192
+
+[principles]
+market_condition_a_used = false
+market_condition_b_used = false
+financial_semantics_used = false
+pnl_used = false
+raw_population_totals_forbidden = true
+metric_selection_after_results_forbidden = true

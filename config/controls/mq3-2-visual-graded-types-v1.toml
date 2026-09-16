@@ -1,0 +1,44 @@
+[experiment]
+id = "mq3-2-visual-graded-types-v1"
+phase = "MQ-3.2"
+
+[baseline]
+runtime = "spike_only_lif"
+preserve_baseline = true
+replace_baseline = false
+
+[graded_population]
+selection_basis = "annotation_type"
+types = ["Tm2", "Tm3", "Tm4"]
+
+[graded_rule]
+method = "positive_subthreshold_voltage"
+threshold = 1.0
+floor = 0.0
+ceiling = 1.0
+gain = 1.0
+combine_with_spike = "maximum"
+
+[excluded_types]
+Dm17 = "insufficient direct physiological support for identical graded rule"
+Dm19 = "insufficient direct physiological support for identical graded rule"
+MeLo2 = "insufficient direct physiological support"
+TmY3 = "insufficient direct physiological support"
+T2 = "insufficient direct physiological support"
+
+[sequence]
+neutral_before_market = true
+market_ab_after_neutral_failure = false
+
+[principles]
+structural_connectome_unchanged = true
+retinal_transduction_unchanged = true
+sensory_gain_unchanged = true
+visual_release_gain_unchanged = true
+dn_consensus_unchanged = true
+readout_metric_unchanged = true
+financial_semantics_used = false
+pnl_used = false
+neuron_ids_selected_from_market_path = false
+type_rule_applies_globally = true
+tunable_graded_gain_forbidden = true
