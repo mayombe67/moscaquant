@@ -1,0 +1,68 @@
+[experiment]
+id = "mq3-2-causal-intervention-v1"
+phase = "MQ-3.2"
+purpose = "interventional test of activity-supported first-onset pathways"
+
+[intervention_artifact]
+path = "/home/wil/moscaquant-data/processed/mq3-2-first-onset-causal-edges-v1.json"
+sha256 = "23cc19a39c30e554671bdf92b904865311d2f7df4dd9ef82af1eaf66638c3a2b"
+edge_count = 13
+
+[targets]
+model_indices = [92, 656, 317, 137122, 126002, 55, 129, 51, 1273]
+original_first_positive_frames = [145, 145, 147, 146, 147, 146, 148, 149, 147]
+
+[runs]
+baseline_A = true
+targeted_A = true
+sham_A = true
+targeted_neutral = true
+targeted_B = true
+
+[targeted_intervention]
+method = "zero_frozen_edges"
+modify_only_weight_values = true
+restore_after_run = true
+
+[sham_intervention]
+enabled = true
+edge_count = 13
+selection = "same_presynaptic_neuron_nearest_positive_weight"
+exclude_frozen_intervention_edges = true
+exclude_nine_responder_targets = true
+unique_edges = true
+tie_break = "lowest_postsynaptic_model_index"
+selection_before_outcome = true
+
+[primary_endpoint]
+name = "original_onset_removed_or_delayed"
+criterion = "target_voltage_at_original_first_positive_frame_must_be_nonpositive"
+evaluate_per_target = true
+
+[secondary_endpoints]
+record_new_first_positive_frame = true
+record_maximum_voltage = true
+record_positive_frame_count = true
+record_integrated_positive_voltage = true
+record_dn_c1_episode_score = true
+record_dn_spikes = true
+
+[confirmation]
+strong_confirmation = "targeted removes_or_delays all nine original onsets while sham preserves all nine"
+partial_confirmation = "targeted removes_or_delays at least one original onset with route-specific correspondence"
+failure = "targeted intervention leaves all nine original onset events unchanged"
+
+[controls]
+structural_connectome_otherwise_unchanged = true
+sensory_gain_unchanged = true
+visual_release_gain_unchanged = true
+retinal_transduction_unchanged = true
+graded_population_unchanged = true
+dn_consensus_unchanged = true
+financial_semantics_used = false
+pnl_used = false
+
+[interpretation]
+claim_scope = "causal necessity within frozen MoscaQuant model"
+biological_causality_claim = false
+financial_semantics_claim = false
