@@ -2,7 +2,7 @@
 
 **Owner:** YOLO & HODL LLC  
 **Subject:** MQ-001  
-**Current Phase:** MQ-3 — EMPLOYEE HAS OPINIONS
+**Current Phase:** MQ-4 — NEUROSCOPE
 
 ## MQ-0 — ACQUIRE SUBJECT
 Load and validate MaleCNS. Build sparse connectivity, identify initial populations, inject controlled stimulus, observe propagation, and record telemetry.
