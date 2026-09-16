@@ -1,0 +1,38 @@
+[experiment]
+id = "mq5-7-neuroscope-intervention-replay-v1"
+phase = "MQ-5.7"
+classification = "visualization-replay"
+
+[boundary]
+read_only = true
+simulation_feedback = false
+execute_simulation = false
+execute_interventions = false
+generate_new_outcomes = false
+allow_posthoc_selection = false
+
+[base_replay]
+artifact = "replay-A-v1.json"
+modify_scientific_contents = false
+
+[output]
+schema = "mq5-neuroscope-intervention-replay-v1"
+artifact = "mq5-interventions-v1.json"
+
+[sources]
+generalized = "mq5-generalized-intervention-matrix-v1.json"
+pathway = "mq5-4-pathway-56393-68045-1273-v1.json"
+convergence = "mq5-5-convergence-specificity-v1.json"
+normalization_robustness = "conf-004a-generalized-intervention-matrix-v1.json"
+independent_replication = "mq5-6-replication-stability-v1.json"
+
+[viewer]
+show_generalized_edges = true
+show_pathway = true
+show_convergence = true
+show_controls = true
+show_provenance = true
+
+[scope]
+biological_causality_claim = false
+financial_semantics_used = false
