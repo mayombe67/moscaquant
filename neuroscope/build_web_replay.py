@@ -5,19 +5,9 @@ from pathlib import Path
 
 import numpy as np
 
-
-SOURCE = Path(
-    "/home/wil/moscaquant-data/neuroscope/"
-    "mq4-neuroscope-replay-A-v1.npz"
-)
-
-CAUSAL = Path(
-    "/home/wil/moscaquant-data/processed/"
-    "mq3-2-first-onset-causal-edges-v1.json"
-)
-
-OUTPUT = Path(
-    "neuroscope/web/data/replay-A-v1.json"
+from neuroscope.runtime_profile import (
+    PROJECT_ROOT,
+    load_runtime_profile,
 )
 
 
@@ -69,16 +59,67 @@ def sparse_frame(
 
 
 def main():
+    profile = load_runtime_profile()
+
+    source = (
+        profile.data_dir
+        / "neuroscope"
+        / "mq4-neuroscope-replay-A-v1.npz"
+    )
+
+    causal_path = (
+        profile.data_dir
+        / "processed"
+        / "mq3-2-first-onset-causal-edges-v1.json"
+    )
+
+    geometry_path = (
+        profile.data_dir
+        / "neuroscope"
+        / "mq4-soma-geometry-v1.json"
+    )
+
+    output = (
+        PROJECT_ROOT
+        / "neuroscope"
+        / "web"
+        / "data"
+        / "replay-A-v1.json"
+    )
+
+    for required in (
+        source,
+        causal_path,
+        geometry_path,
+    ):
+        if not required.exists():
+            raise RuntimeError(
+                f"required artifact missing: {required}"
+            )
+
     data = np.load(
-        SOURCE,
+        source,
         allow_pickle=False,
     )
 
     causal_data = json.loads(
-        CAUSAL.read_text(
+        causal_path.read_text(
             encoding="utf-8"
         )
     )
+
+    geometry_data = json.loads(
+        geometry_path.read_text(
+            encoding="utf-8"
+        )
+    )
+
+    geometry_by_index = {
+        int(node["modelIndex"]):
+            node
+        for node
+        in geometry_data["nodes"]
+    }
 
     neuron_ids = np.asarray(
         data["neuron_ids"],
@@ -87,16 +128,14 @@ def main():
 
     retina = set(
         int(x)
-        for x in data[
-            "retinal_indices"
-        ]
+        for x
+        in data["retinal_indices"]
     )
 
     relay = set(
         int(x)
-        for x in data[
-            "relay_indices"
-        ]
+        for x
+        in data["relay_indices"]
     )
 
     graded_indices = np.asarray(
@@ -109,7 +148,8 @@ def main():
     ).astype(str)
 
     graded = {
-        int(index): str(cell_type)
+        int(index):
+            str(cell_type)
         for index, cell_type
         in zip(
             graded_indices,
@@ -128,7 +168,8 @@ def main():
     )
 
     dn = {
-        int(index): int(cluster)
+        int(index):
+            int(cluster)
         for index, cluster
         in zip(
             dn_indices,
@@ -138,34 +179,22 @@ def main():
 
     responders = set(
         int(x)
-        for x in data[
-            "responder_indices"
-        ]
+        for x
+        in data["responder_indices"]
     )
 
-    #
-    # Causal-path endpoints are first-class
-    # Neuroscope nodes even when they are not
-    # members of the four primary populations.
-    #
     causal_nodes = set()
 
-    for edge in causal_data[
-        "edges"
-    ]:
+    for edge in causal_data["edges"]:
         causal_nodes.add(
             int(
-                edge[
-                    "presynaptic"
-                ]
+                edge["presynaptic"]
             )
         )
 
         causal_nodes.add(
             int(
-                edge[
-                    "postsynaptic"
-                ]
+                edge["postsynaptic"]
             )
         )
 
@@ -184,25 +213,15 @@ def main():
         in enumerate(selected)
     }
 
-    #
-    # Translate frozen model-index causal
-    # edges into viewer-local node indices.
-    #
     causal_edges = []
 
-    for edge in causal_data[
-        "edges"
-    ]:
+    for edge in causal_data["edges"]:
         pre = int(
-            edge[
-                "presynaptic"
-            ]
+            edge["presynaptic"]
         )
 
         post = int(
-            edge[
-                "postsynaptic"
-            ]
+            edge["postsynaptic"]
         )
 
         if (
@@ -211,21 +230,16 @@ def main():
         ):
             raise RuntimeError(
                 "causal endpoint missing "
-                f"from viewer population: "
-                f"{pre}->{post}"
+                f"from viewer: {pre}->{post}"
             )
 
         causal_edges.append(
             {
                 "pre":
-                    lookup[
-                        pre
-                    ],
+                    lookup[pre],
 
                 "post":
-                    lookup[
-                        post
-                    ],
+                    lookup[post],
 
                 "preModel":
                     pre,
@@ -235,9 +249,7 @@ def main():
 
                 "weight":
                     float(
-                        edge[
-                            "weight"
-                        ]
+                        edge["weight"]
                     ),
 
                 "frames":
@@ -260,30 +272,22 @@ def main():
             }
         )
 
-    expected_causal_edges = len(
-        causal_data[
-            "edges"
-        ]
-    )
-
     if (
-        len(
-            causal_edges
+        len(causal_edges)
+        != len(
+            causal_data["edges"]
         )
-        != expected_causal_edges
     ):
         raise RuntimeError(
-            "causal edge export incomplete: "
-            f"expected "
-            f"{expected_causal_edges}, "
-            f"exported "
-            f"{len(causal_edges)}"
+            "causal edge export incomplete"
         )
 
     nodes = []
 
-    for model_index in selected:
+    real_geometry_count = 0
+    fallback_count = 0
 
+    for model_index in selected:
         roles = 0
 
         if model_index in retina:
@@ -300,6 +304,33 @@ def main():
 
         if model_index in responders:
             roles |= ROLE_RESPONDER
+
+        geometry = geometry_by_index.get(
+            model_index
+        )
+
+        if geometry is None:
+            raise RuntimeError(
+                "geometry artifact missing "
+                f"model index {model_index}"
+            )
+
+        xyz = geometry.get(
+            "xyz"
+        )
+
+        position_source = geometry[
+            "positionSource"
+        ]
+
+        if (
+            position_source
+            == "somaLocation"
+        ):
+            real_geometry_count += 1
+
+        else:
+            fallback_count += 1
 
         nodes.append(
             {
@@ -330,6 +361,22 @@ def main():
                     bool(
                         model_index
                         in causal_nodes
+                    ),
+
+                "positionSource":
+                    position_source,
+
+                "xyz":
+                    xyz,
+
+                "somaSide":
+                    geometry.get(
+                        "somaSide"
+                    ),
+
+                "somaNeuromere":
+                    geometry.get(
+                        "somaNeuromere"
                     ),
             }
         )
@@ -416,9 +463,7 @@ def main():
                         float(x)
                         for x in data[
                             "dn_mean_positive"
-                        ][
-                            frame
-                        ]
+                        ][frame]
                     ],
 
                 "dnMax":
@@ -426,9 +471,7 @@ def main():
                         float(x)
                         for x in data[
                             "dn_max_positive"
-                        ][
-                            frame
-                        ]
+                        ][frame]
                     ],
 
                 "dnSpikes":
@@ -436,36 +479,28 @@ def main():
                         int(x)
                         for x in data[
                             "dn_spike_count"
-                        ][
-                            frame
-                        ]
+                        ][frame]
                     ],
 
                 "retinalSpikes":
                     int(
                         data[
                             "retinal_spike_count"
-                        ][
-                            frame
-                        ]
+                        ][frame]
                     ),
 
                 "relaySpikes":
                     int(
                         data[
                             "relay_spike_count"
-                        ][
-                            frame
-                        ]
+                        ][frame]
                     ),
 
                 "gradedActive":
                     int(
                         data[
                             "graded_active_count"
-                        ][
-                            frame
-                        ]
+                        ][frame]
                     ),
 
                 "responders":
@@ -473,25 +508,66 @@ def main():
                         float(x)
                         for x in data[
                             "responder_voltage"
-                        ][
-                            frame
-                        ]
+                        ][frame]
                     ],
             }
         )
 
     payload = {
         "schema":
-            "mq4-neuroscope-web-v1",
+            "mq4-neuroscope-web-v2",
+
+        "runtimeProfile":
+            profile.name,
 
         "source":
-            SOURCE.name,
+            source.name,
 
-        "layout":
+        "layouts": [
             "signal-flow",
+            "hybrid-anatomy",
+        ],
 
-        "anatomicalCoordinates":
-            False,
+        "geometry": {
+            "realCount":
+                real_geometry_count,
+
+            "fallbackCount":
+                fallback_count,
+
+            "fractionReal":
+                (
+                    real_geometry_count
+                    / len(nodes)
+                ),
+
+            "center":
+                geometry_data[
+                    "coordinateSystem"
+                ][
+                    "center"
+                ],
+
+            "span":
+                geometry_data[
+                    "coordinateSystem"
+                ][
+                    "span"
+                ],
+
+            "scale":
+                geometry_data[
+                    "coordinateSystem"
+                ][
+                    "uniformScaleDenominator"
+                ],
+
+            "anatomicalSource":
+                "MaleCNS somaLocation",
+
+            "fallbackIsAnatomical":
+                False,
+        },
 
         "roleBits": {
             "retina":
@@ -514,9 +590,7 @@ def main():
             frame_count,
 
         "populationCount":
-            len(
-                nodes
-            ),
+            len(nodes),
 
         "nodes":
             nodes,
@@ -524,7 +598,8 @@ def main():
         "responderModelIndices":
             [
                 int(x)
-                for x in data[
+                for x
+                in data[
                     "responder_indices"
                 ]
             ],
@@ -536,12 +611,12 @@ def main():
             frames,
     }
 
-    OUTPUT.parent.mkdir(
+    output.parent.mkdir(
         parents=True,
         exist_ok=True,
     )
 
-    OUTPUT.write_text(
+    output.write_text(
         json.dumps(
             payload,
             separators=(
@@ -554,22 +629,28 @@ def main():
 
     print("=" * 72)
     print(
-        "MQ-4.2 NEUROSCOPE WEB REPLAY"
+        "MQ-4.4 NEUROSCOPE WEB REPLAY"
     )
     print("=" * 72)
 
     print(
-        "selected nodes:",
-        len(
-            nodes
-        ),
+        "runtime:",
+        profile.name,
     )
 
     print(
-        "causal nodes:",
-        len(
-            causal_nodes
-        ),
+        "selected nodes:",
+        len(nodes),
+    )
+
+    print(
+        "real anatomy:",
+        real_geometry_count,
+    )
+
+    print(
+        "fallback:",
+        fallback_count,
     )
 
     print(
@@ -586,13 +667,13 @@ def main():
 
     print(
         "output:",
-        OUTPUT,
+        output,
     )
 
     print(
         "size MiB:",
         round(
-            OUTPUT.stat().st_size
+            output.stat().st_size
             / 1024
             / 1024,
             2,
@@ -601,11 +682,12 @@ def main():
 
     print()
     print(
-        "LAYOUT: SIGNAL FLOW"
+        "HYBRID ANATOMY READY: YES"
     )
 
     print(
-        "ANATOMICAL COORDINATES: NO"
+        "INVENTED ANATOMICAL "
+        "COORDINATES: NO"
     )
 
 

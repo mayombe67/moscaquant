@@ -418,3 +418,55 @@ button:hover {
   vertical-align: middle;
   margin-right: 5px;
 }
+
+.top-controls {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.mode-switch {
+  display: flex;
+  gap: 4px;
+}
+
+.mode {
+  font-size: 10px;
+  padding: 0 12px;
+  color: #718094;
+}
+
+.mode.active {
+  color: #ffffff;
+  border-color: #567087;
+  background: #182330;
+}
+
+.anatomy-notice {
+  position: absolute;
+  left: 18px;
+  bottom: 18px;
+
+  padding: 8px 10px;
+
+  border: 1px solid #243342;
+
+  background:
+    rgba(
+      5,
+      8,
+      12,
+      0.84
+    );
+
+  color: #718094;
+
+  font-size: 9px;
+  line-height: 1.6;
+
+  pointer-events: none;
+}
+
+.hidden {
+  display: none;
+}

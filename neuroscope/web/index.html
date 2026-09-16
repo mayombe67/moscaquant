@@ -2,12 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+
   <meta
     name="viewport"
     content="width=device-width, initial-scale=1"
   >
+
   <title>MoscaQuant // Neuroscope</title>
-  <link rel="icon" href="data:,">
+
+  <link
+    rel="icon"
+    href="data:,"
+  >
+
   <link
     rel="stylesheet"
     href="style.css"
@@ -15,17 +22,39 @@
 </head>
 
 <body>
-  <header class="topbar">
-    <div>
-      <div class="eyebrow">
-        MOSCAQUANT // MQ-4
-      </div>
 
-      <h1>NEUROSCOPE</h1>
+<header class="topbar">
 
-      <div class="subtitle">
-        READ-ONLY CONNECTOME TELEMETRY
-      </div>
+  <div>
+    <div class="eyebrow">
+      MOSCAQUANT // MQ-4
+    </div>
+
+    <h1>NEUROSCOPE</h1>
+
+    <div class="subtitle">
+      READ-ONLY CONNECTOME TELEMETRY
+    </div>
+  </div>
+
+  <div class="top-controls">
+
+    <div class="mode-switch">
+
+      <button
+        id="flowMode"
+        class="mode active"
+      >
+        SIGNAL FLOW
+      </button>
+
+      <button
+        id="anatomyMode"
+        class="mode"
+      >
+        HYBRID ANATOMY
+      </button>
+
     </div>
 
     <div class="status">
@@ -33,142 +62,201 @@
       REPLAY
       <strong>CONDITION A</strong>
     </div>
-  </header>
 
-  <main class="shell">
+  </div>
 
-    <section class="viewport-panel">
+</header>
 
-      <div class="viewport-header">
-        <div>
-          <strong>TOPOLOGY VIEW</strong>
-          <span>
-            NOT ANATOMICAL COORDINATES
-          </span>
-        </div>
 
-        <div id="frameLabel">
-          FRAME 145 / 191
-        </div>
+<main class="shell">
+
+  <section class="viewport-panel">
+
+    <div class="viewport-header">
+
+      <div>
+        <strong id="viewTitle">
+          TOPOLOGY VIEW
+        </strong>
+
+        <span id="viewSubtitle">
+          NOT ANATOMICAL COORDINATES
+        </span>
       </div>
 
-      <canvas id="scope"></canvas>
+      <div id="frameLabel">
+        FRAME 145 / 191
+      </div>
 
-      <div class="stage-labels">
-        <span>RETINA</span>
-        <span>VISUAL RELAY</span>
-        <span>Tm2 / Tm3 / Tm4</span>
-        <span>DESCENDING</span>
+    </div>
+
+    <canvas id="scope"></canvas>
+
+    <div
+      id="stageLabels"
+      class="stage-labels"
+    >
+      <span>RETINA</span>
+      <span>VISUAL RELAY</span>
+      <span>Tm2 / Tm3 / Tm4</span>
+      <span>DESCENDING</span>
+    </div>
+
+    <div
+      id="anatomyNotice"
+      class="anatomy-notice hidden"
+    >
+      REAL SOMA: 7,486
+      <br>
+      FALLBACK: 4,989
+      <br>
+      DRAG TO ROTATE · WHEEL TO ZOOM
+    </div>
+
+  </section>
+
+
+  <aside class="sidebar">
+
+    <section class="card">
+
+      <div class="card-title">
+        FRAME STATE
+      </div>
+
+      <div class="metrics">
+
+        <div>
+          <span>Retinal spikes</span>
+          <strong id="retinalSpikes">0</strong>
+        </div>
+
+        <div>
+          <span>Relay spikes</span>
+          <strong id="relaySpikes">0</strong>
+        </div>
+
+        <div>
+          <span>Graded active</span>
+          <strong id="gradedActive">0</strong>
+        </div>
+
       </div>
 
     </section>
 
-    <aside class="sidebar">
 
-      <section class="card">
-        <div class="card-title">
-          FRAME STATE
-        </div>
+    <section class="card">
 
-        <div class="metrics">
-          <div>
-            <span>Retinal spikes</span>
-            <strong id="retinalSpikes">0</strong>
-          </div>
+      <div class="card-title">
+        DESCENDING READOUT
+      </div>
 
-          <div>
-            <span>Relay spikes</span>
-            <strong id="relaySpikes">0</strong>
-          </div>
+      <div
+        id="dnChannels"
+        class="channels"
+      ></div>
 
-          <div>
-            <span>Graded active</span>
-            <strong id="gradedActive">0</strong>
-          </div>
-        </div>
-      </section>
+    </section>
 
-      <section class="card">
-        <div class="card-title">
-          DESCENDING READOUT
-        </div>
 
-        <div
-          id="dnChannels"
-          class="channels"
-        ></div>
-      </section>
+    <section class="card grow">
 
-      <section class="card grow">
-        <div class="card-title">
-          MQ-3 RESPONDERS
-        </div>
+      <div class="card-title">
+        MQ-3 RESPONDERS
+      </div>
 
-        <div
-          id="responders"
-          class="responders"
-        ></div>
-      </section>
+      <div
+        id="responders"
+        class="responders"
+      ></div>
 
-      <section class="card">
-        <div class="card-title">
-          SELECTED NEURON
-        </div>
+    </section>
 
-        <div id="selection">
-          Click a neuron.
-        </div>
-      </section>
 
-    </aside>
+    <section class="card">
 
-  </main>
+      <div class="card-title">
+        SELECTED NEURON
+      </div>
 
-  <footer class="transport">
+      <div id="selection">
+        Click a neuron.
+      </div>
 
-    <button id="back">
-      ◀
-    </button>
+    </section>
 
-    <button id="play">
-      PLAY
-    </button>
+  </aside>
+
+</main>
+
+
+<footer class="transport">
+
+  <button id="back">
+    ◀
+  </button>
+
+  <button id="play">
+    PLAY
+  </button>
+
+  <input
+    id="timeline"
+    type="range"
+    min="0"
+    max="191"
+    value="145"
+    step="1"
+  >
+
+  <button id="forward">
+    ▶
+  </button>
+
+  <label class="causal-toggle">
 
     <input
-      id="timeline"
-      type="range"
-      min="0"
-      max="191"
-      value="145"
-      step="1"
+      id="causalToggle"
+      type="checkbox"
+      checked
     >
 
-    <button id="forward">
-      ▶
-    </button>
+    CAUSAL ROUTES
 
-    <label class="causal-toggle">
-      <input
-        id="causalToggle"
-        type="checkbox"
-        checked
-      >
-      CAUSAL ROUTES
-    </label>
+  </label>
 
-    <div class="legend">
-      <span class="retina">● Retina</span>
-      <span class="relay">● Relay</span>
-      <span class="graded">● Tm2/3/4</span>
-      <span class="dn">● DN</span>
-      <span class="responder">● MQ-3 responder</span>
-    </div>
+  <div class="legend">
 
-  </footer>
+    <span class="retina">
+      ● Retina
+    </span>
 
-  <script
-    src="app.js"
-    defer
-  ></script>
+    <span class="relay">
+      ● Relay
+    </span>
+
+    <span class="graded">
+      ● Tm2/3/4
+    </span>
+
+    <span class="dn">
+      ● DN
+    </span>
+
+    <span class="responder">
+      ● MQ-3 responder
+    </span>
+
+  </div>
+
+</footer>
+
+
+<script
+  src="app.js"
+  defer
+></script>
+
 </body>
 </html>
