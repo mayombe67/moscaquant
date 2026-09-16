@@ -69,6 +69,10 @@ MoscaQuant exists to investigate:
 
 Negative results are valid results.
 
+A modeled mechanism rejected by a precommitted experimental gate remains part
+of the permanent record. It must not be silently retuned against withheld
+market conditions until it produces a desired downstream response.
+
 ---
 
 ## 4. Authorized Market Universe
@@ -778,6 +782,10 @@ Performance claims cannot infer profitability from insufficient samples.
 
 MQ-001 can never receive direct execution authority.
 
+Any material neural-dynamics replacement introduced to restore downstream
+propagation must pass its precommitted neutral-contamination gate before
+market-conditioned A/B responses are inspected.
+
 26. Success Levels
 
 LEVEL 1 — CONTAINED
@@ -884,6 +892,6 @@ CONTAINMENT ............. ACTIVE
 
 NEXT OBJECTIVE:
 
-DEFINE AND VALIDATE THE FINANCIAL DECISION READOUT.
+RESOLVE THE DESCENDING PROPAGATION BOTTLENECK WITHOUT MARKET-CONDITION TUNING.
 
 Past performance does not guarantee future sugar cubes.
