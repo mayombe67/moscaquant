@@ -1,7 +1,7 @@
 # MQ-4.4 — Hybrid Soma Geometry Neuroscope
 
-**Status:** Complete  
-**Branch:** `mq4/neuroscope`  
+**Status:** Complete
+**Branch:** `mq4/neuroscope`
 **Implementation commit:** `a208cb1`
 
 ## Objective
@@ -100,7 +100,3 @@ MQ-4.4 is complete.
 The Neuroscope viewer now supports interactive rotation, zoom, pan, neuron inspection, real soma geometry, topology fallback, causal-path visualization, and responder highlighting while preserving the frozen experimental state.
 
 **Same neurons. Deeper questions.**
-
-
-
-

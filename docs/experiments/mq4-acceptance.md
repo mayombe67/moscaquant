@@ -1,6 +1,6 @@
 # MQ-4 — Neuroscope Acceptance Record
 
-**Status:** COMPLETE  
+**Status:** COMPLETE
 **Branch:** `mq4/neuroscope`
 
 ## Purpose
@@ -25,11 +25,11 @@ No MQ-4.9 feature is required for phase completion.
 
 The accepted Neuroscope build reports:
 
-NEURONS       12,475  
-REAL SOMA      7,486  
-FALLBACK       4,989  
-CAUSAL EDGES      13  
-RESPONDERS          9  
+NEURONS       12,475
+REAL SOMA      7,486
+FALLBACK       4,989
+CAUSAL EDGES      13
+RESPONDERS          9
 REPLAY FRAMES      192
 
 These values remained stable while using display filters, replay controls, causal traversal, and responder isolation.
@@ -73,10 +73,10 @@ Inspection is read-only.
 
 Verified role populations:
 
-Retina                3,241  
-Relay                 2,430  
-Graded                5,490  
-Descending neurons    1,314  
+Retina                3,241
+Relay                 2,430
+Graded                5,490
+Descending neurons    1,314
 Responders                 9
 
 Role filters alter visible populations without modifying dataset totals or experimental state.
@@ -132,14 +132,14 @@ Verified example:
 
 Tracing model `1273` produces:
 
-TRACE ROOT    1273  
-NODES         3  
-EDGES         2  
+TRACE ROOT    1273
+NODES         3
+EDGES         2
 MAX DEPTH     2
 
 with:
 
-UP model 68045 depth 1  
+UP model 68045 depth 1
 UP model 56393 depth 2
 
 Traversal semantics:
@@ -157,14 +157,14 @@ Traversal does not generate new causal relationships.
 
 The frozen responder ensemble remains:
 
-92  
-656  
-317  
-137122  
-126002  
-55  
-129  
-51  
+92
+656
+317
+137122
+126002
+55
+129
+51
 1273
 
 Verified capabilities:
@@ -181,14 +181,14 @@ Verified capabilities:
 
 Verified peak frames:
 
-92        F191  
-656       F165  
-317       F187  
-137122    F183  
-126002    F191  
-55        F191  
-129       F191  
-51        F191  
+92        F191
+656       F165
+317       F187
+137122    F183
+126002    F191
+55        F191
+129       F191
+51        F191
 1273      F191
 
 Responder magnitude and timing remain descriptive telemetry and do not create additional causal claims.

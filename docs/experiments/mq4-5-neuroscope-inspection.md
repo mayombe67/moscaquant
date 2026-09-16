@@ -1,6 +1,6 @@
 # MQ-4.5 — Neuroscope Inspection and Causal Exploration
 
-**Status:** Complete  
+**Status:** Complete
 **Branch:** `mq4/neuroscope`
 
 ## Objective

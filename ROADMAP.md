@@ -1,7 +1,7 @@
 # MoscaQuant Roadmap
 
-**Owner:** YOLO & HODL LLC  
-**Subject:** MQ-001  
+**Owner:** YOLO & HODL LLC
+**Subject:** MQ-001
 **Current Phase:** MQ-4 — NEUROSCOPE
 
 ## MQ-0 — ACQUIRE SUBJECT
@@ -227,4 +227,3 @@ MQ-5 must not:
 `MQ-1 → MQ-2 → MQ-3 → MQ-4 COMPLETE → MQ-5 PLANNING`
 
 **Financial semantics: NOT ASSIGNED**
-

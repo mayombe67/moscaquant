@@ -1,6 +1,6 @@
 # MQ-4.6 — Neuroscope Replay Exploration
 
-**Status:** Complete  
+**Status:** Complete
 **Branch:** `mq4/neuroscope`
 
 ## Objective

@@ -1,6 +1,6 @@
 # MQ-4.7 — Neuroscope Causal Traversal
 
-**Status:** Complete  
+**Status:** Complete
 **Branch:** `mq4/neuroscope`
 
 ## Objective

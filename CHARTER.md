@@ -1,14 +1,14 @@
 # MOSCAQUANT PROJECT CHARTER
 
-**Document:** MQ-CHARTER-002  
-**Owner:** YOLO & HODL LLC  
-**Subject:** MQ-001  
-**Status:** ACTIVE  
-**Classification:** CONNECTOMIC / FINANCIAL  
-**Revision:** 2.0  
-**Date:** September 2026  
+**Document:** MQ-CHARTER-002
+**Owner:** YOLO & HODL LLC
+**Subject:** MQ-001
+**Status:** ACTIVE
+**Classification:** CONNECTOMIC / FINANCIAL
+**Revision:** 2.0
+**Date:** September 2026
 
-> **THE MARKET PROVIDES FEEDBACK.  
+> **THE MARKET PROVIDES FEEDBACK.
 > WE PROVIDE CONSEQUENCES.**
 
 **166,700 neurons. Zero fiduciary responsibility.**
@@ -35,11 +35,11 @@ The connectome is the decision substrate.
 
 ## 2. Subject
 
-**Designation:** MQ-001  
-**Corporate designation:** Employee #0001  
-**Species:** *Drosophila melanogaster*  
-**Organization:** YOLO & HODL LLC  
-**Division:** Quantitative Strategies  
+**Designation:** MQ-001
+**Corporate designation:** Employee #0001
+**Species:** *Drosophila melanogaster*
+**Organization:** YOLO & HODL LLC
+**Division:** Quantitative Strategies
 
 MQ-001 is derived from the complete adult male CNS connectome containing
 approximately 166,700 neurons.
@@ -1130,5 +1130,3 @@ MQ-5 asks:
 > What changes when we deliberately intervene on that evidence-defined system?
 
 **Anatomy. Evidence. Causality. Next.**
-
-

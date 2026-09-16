@@ -1,6 +1,6 @@
 # MQ-4.8 — Responder Ensemble Analysis
 
-**Status:** Complete  
+**Status:** Complete
 **Branch:** `mq4/neuroscope`
 
 ## Objective
