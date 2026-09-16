@@ -115,3 +115,116 @@ Compare MQ-001 against Shuffled Mosca and conventional benchmarks.
 Detailed requirements and go/no-go gates are defined in `CHARTER.md`.
 
 **THE MARKET PROVIDES FEEDBACK. WE PROVIDE CONSEQUENCES.**
+
+---
+
+## MQ-5 — Intervention and Perturbation Experiments
+
+**Status:** PLANNING / PROTOCOL DEFINITION
+
+MQ-4 Neuroscope is complete and accepted.
+
+MQ-5 moves from passive inspection of frozen experimental telemetry to
+controlled perturbation of evidence-defined neural targets.
+
+### Goal
+
+Test whether deliberate interventions on previously identified causal
+nodes and pathways produce reproducible downstream effects relative to
+predefined controls.
+
+### MQ-5 sequence
+
+#### MQ-5.1 — Experimental Protocol
+
+Define:
+
+- hypothesis
+- eligible target-selection rule
+- intervention mechanism
+- control condition
+- measurement window
+- outcome metrics
+- reproducibility requirement
+- acceptance criteria
+- artifact schema and versioning
+
+No intervention implementation begins before this protocol is frozen.
+
+#### MQ-5.2 — Intervention Harness
+
+Implement intervention execution separately from Neuroscope.
+
+Requirements:
+
+- deterministic experiment configuration
+- explicit intervention metadata
+- reproducible seeds where randomness exists
+- baseline and control execution
+- machine/runtime independence
+- versioned outputs
+
+#### MQ-5.3 — Single-Node Perturbation
+
+Run controlled interventions against selected causal nodes.
+
+Compare intervention outcomes against the predefined controls.
+
+Measure downstream response, responder effects, latency, and persistence.
+
+#### MQ-5.4 — Pathway Perturbation
+
+Extend intervention testing to evidence-defined causal paths and
+intermediate nodes.
+
+Preserve directional and timing information from the frozen causal
+artifacts.
+
+#### MQ-5.5 — Sham and Specificity Tests
+
+Test whether measured effects are specific to the intended intervention
+rather than generic perturbation, timing, or magnitude effects.
+
+#### MQ-5.6 — Replication and Stability
+
+Repeat accepted candidate effects according to the predefined
+reproducibility protocol.
+
+Distinguish reproducible results from one-run observations.
+
+#### MQ-5.7 — Neuroscope Intervention Replay
+
+Allow Neuroscope to consume completed MQ-5 artifacts for inspection.
+
+Neuroscope remains read-only and does not execute interventions.
+
+#### MQ-5.8 — MQ-5 Acceptance
+
+Review:
+
+- protocol compliance
+- controls
+- reproducibility
+- artifact provenance
+- scientific interpretation
+- runtime portability
+- absence of inference inflation
+
+### MQ-5 constraints
+
+MQ-5 must not:
+
+- alter frozen MQ-1 through MQ-3 evidence in place
+- reinterpret topology fallback as anatomy
+- use Neuroscope as an undocumented experiment engine
+- choose controls after observing intervention results
+- choose success thresholds after observing results
+- treat visualization alone as causal evidence
+- assign financial or trading semantics
+
+### Current phase chain
+
+`MQ-1 → MQ-2 → MQ-3 → MQ-4 COMPLETE → MQ-5 PLANNING`
+
+**Financial semantics: NOT ASSIGNED**
+

@@ -914,3 +914,221 @@ NEXT OBJECTIVE:
 BUILD NEUROSCOPE FROM FROZEN MQ-1 THROUGH MQ-3 TELEMETRY WITHOUT ALTERING THE EXPERIMENTAL MODEL.
 
 Past performance does not guarantee future sugar cubes.
+
+---
+
+## MQ-4 Closure and MQ-5 Entry
+
+**Canonical status date:** 2026-09-16
+
+### MQ-4 — Neuroscope
+
+MQ-4 is **COMPLETE and ACCEPTED**.
+
+Neuroscope is the read-only visualization and inspection layer for the
+frozen MQ-1 through MQ-3 experimental state.
+
+Accepted MQ-4 capabilities include:
+
+- hybrid anatomical visualization
+- explicit distinction between MaleCNS `somaLocation` and
+  non-anatomical `topologyFallback`
+- interactive neuron inspection
+- role filtering
+- 192-frame replay exploration
+- recorded activity visualization
+- frozen MQ-3.2 causal-edge inspection
+- causal graph traversal
+- nine-neuron responder isolation
+- responder peak analysis
+- synchronized responder activity plotting
+- integrated operator documentation
+
+Accepted dataset invariants are:
+
+- 12,475 selected neurons
+- 7,486 real soma positions
+- 4,989 topology fallbacks
+- 13 preserved causal edges
+- 9 causal responders
+- 192 replay frames
+
+MQ-4 does not alter experimental state.
+
+Replay remains recorded telemetry rather than a new simulation.
+
+Causal traversal and visualization do not create additional causal
+evidence.
+
+Topology fallback geometry remains explicitly non-anatomical.
+
+The accepted MQ-4 record is:
+
+`docs/experiments/mq4-acceptance.md`
+
+The operator-facing Neuroscope guide is available from the visualization
+and is also documented in:
+
+`docs/neuroscope-guide.md`
+
+### MQ-5 — Intervention and Perturbation Experiments
+
+MQ-5 advances the experiment itself rather than extending Neuroscope as
+a visualization product.
+
+The purpose of MQ-5 is to test whether controlled interventions on
+previously identified causal nodes and pathways produce reproducible,
+measurable downstream changes relative to appropriate controls.
+
+MQ-5 begins from the frozen evidence produced by MQ-1 through MQ-3.
+MQ-4 provides the inspection instrument but is not the experiment
+engine.
+
+#### Core question
+
+Given the causal structure identified before MQ-5, what happens when
+specific nodes, edges, or defined pathway components are deliberately
+perturbed under controlled experimental conditions?
+
+#### Initial experimental scope
+
+MQ-5 may evaluate interventions involving:
+
+- individual causal source neurons
+- intermediate causal-path neurons
+- responder-associated inputs
+- explicitly defined multi-hop causal paths
+- appropriate sham or matched control interventions
+
+Candidate interventions must be selected from established experimental
+artifacts or by a separately documented selection rule.
+
+They must not be chosen retroactively because a result looks
+interesting.
+
+#### Required controls
+
+Every intervention experiment must define its control before results are
+interpreted.
+
+Controls may include, where scientifically appropriate:
+
+- sham intervention
+- matched non-causal intervention
+- unchanged baseline replay
+- timing-shifted control
+- strength-matched control
+
+The specific control belongs to the experiment definition and must not
+be selected after seeing the outcome.
+
+#### Required measurements
+
+MQ-5 experiments must record enough information to distinguish:
+
+- intervention target
+- intervention type
+- intervention magnitude
+- intervention timing
+- baseline state
+- downstream activity
+- responder activity
+- latency
+- effect duration
+- control outcome
+
+Metrics and measurement windows must be defined before an intervention
+is judged.
+
+#### Causal discipline
+
+MQ-5 must preserve the distinction between:
+
+1. previously established causal evidence,
+2. the intervention being introduced,
+3. the observed downstream response, and
+4. any new causal conclusion supported by that experiment.
+
+A visually compelling response is not by itself sufficient evidence.
+
+New causal claims require a documented experimental comparison against
+the predefined control.
+
+#### Reproducibility
+
+An MQ-5 result is not accepted solely because a single intervention run
+produces the expected direction of effect.
+
+Experiments must define reproducibility requirements before acceptance.
+
+Randomness, seeds, runtime parameters, machine configuration, and
+scientific configuration must remain separable and auditable.
+
+#### Neuroscope boundary
+
+Neuroscope may visualize MQ-5 intervention results.
+
+Neuroscope must not silently become the mechanism that changes the
+scientific state.
+
+Intervention execution belongs to the experimental pipeline.
+
+Visualization remains an interpretation layer.
+
+#### Runtime portability
+
+MQ-5 continues the existing separation between:
+
+- scientific configuration
+- experiment configuration
+- runtime / machine configuration
+
+Migration from Habitat to another workstation or cloud runtime must not
+silently alter scientific semantics or expected outputs.
+
+#### Entry condition
+
+MQ-5 implementation must begin with a written experimental protocol.
+
+Before intervention code is accepted, that protocol must identify:
+
+- hypothesis
+- intervention target-selection rule
+- intervention mechanism
+- control
+- measurement window
+- outcome metrics
+- reproducibility requirement
+- acceptance / rejection criteria
+- generated artifact names and versions
+
+No intervention result should determine its own success criterion.
+
+#### Financial semantics
+
+Financial and trading semantics remain:
+
+**NOT ASSIGNED**
+
+MQ-5 is a neuroscience / computational experiment phase.
+
+No market action, asset interpretation, position sizing, or trading
+behavior is inferred from neural responses during this phase.
+
+### Phase transition
+
+The canonical project transition is now:
+
+**MQ-1–MQ-3 frozen experimental evidence → MQ-4 accepted Neuroscope → MQ-5 controlled intervention experiments**
+
+MQ-4 answers:
+
+> What happened, where did it happen, and how can we inspect the evidence?
+
+MQ-5 asks:
+
+> What changes when we deliberately intervene on that evidence-defined system?
+
+**Anatomy. Evidence. Causality. Next.**
+
+
