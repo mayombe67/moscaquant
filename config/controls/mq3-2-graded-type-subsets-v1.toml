@@ -1,0 +1,37 @@
+[experiment]
+id = "mq3-2-graded-type-subsets-v1"
+phase = "MQ-3.2"
+purpose = "post-hoc mechanistic attribution"
+
+[types]
+ordered = ["Tm2", "Tm3", "Tm4"]
+
+[subsets]
+exhaustive = true
+count = 8
+include_empty = true
+include_full = true
+
+[conditions]
+ordered = ["neutral", "A", "B"]
+
+[readout]
+dn_consensus = "mq3-dn-consensus-v1"
+primary_metric = "episode_mean_positive_voltage"
+record_per_neuron_maximum = true
+record_ever_positive = true
+record_first_positive_frame = true
+record_spikes = true
+
+[controls]
+sensory_gain_unchanged = true
+visual_release_gain_unchanged = true
+retinal_transduction_unchanged = true
+structural_connectome_unchanged = true
+dn_consensus_unchanged = true
+financial_semantics_used = false
+pnl_used = false
+
+[interpretation]
+discovery_claim_forbidden = true
+mechanistic_followup_only = true
