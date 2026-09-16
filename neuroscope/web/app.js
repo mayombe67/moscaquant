@@ -73,6 +73,11 @@ const selectionEl =
     "selection"
   );
 
+const causalToggle =
+  document.getElementById(
+    "causalToggle"
+  );
+
 let replay = null;
 
 let frame = 145;
@@ -427,6 +432,460 @@ function drawBackground(
 }
 
 
+
+function drawCausalEdges() {
+  if (
+    !causalToggle.checked
+    || !replay.causalEdges
+  ) {
+    return;
+  }
+
+  const AFTERGLOW_FRAMES = 6;
+
+  for (
+    const edge
+    of replay.causalEdges
+  ) {
+
+    const pre =
+      positions[
+        edge.pre
+      ];
+
+    const post =
+      positions[
+        edge.post
+      ];
+
+    if (!pre || !post) {
+      continue;
+    }
+
+    const onsetFrame =
+      Math.min(
+        ...edge.frames
+      );
+
+    const activeNow =
+      edge.frames.includes(
+        frame
+      );
+
+    const age =
+      frame - onsetFrame;
+
+    const recent =
+      (
+        age > 0
+        && age <= AFTERGLOW_FRAMES
+      );
+
+    //
+    // Future routes are invisible.
+    //
+    if (
+      !activeNow
+      && !recent
+    ) {
+      continue;
+    }
+
+    const dx =
+      post.x - pre.x;
+
+    const dy =
+      post.y - pre.y;
+
+    const length =
+      Math.max(
+        1,
+        Math.sqrt(
+          dx * dx
+          + dy * dy
+        )
+      );
+
+    const ux =
+      dx / length;
+
+    const uy =
+      dy / length;
+
+    const startX =
+      pre.x + ux * 5;
+
+    const startY =
+      pre.y + uy * 5;
+
+    const endX =
+      post.x - ux * 7;
+
+    const endY =
+      post.y - uy * 7;
+
+    ctx.save();
+
+    //
+    // ACTIVE ONSET:
+    // huge outer glow.
+    //
+    if (activeNow) {
+
+      ctx.beginPath();
+
+      ctx.moveTo(
+        startX,
+        startY
+      );
+
+      ctx.lineTo(
+        endX,
+        endY
+      );
+
+      ctx.strokeStyle =
+        "#ffb000";
+
+      ctx.globalAlpha =
+        0.26;
+
+      ctx.lineWidth =
+        11;
+
+      ctx.shadowColor =
+        "#ffb000";
+
+      ctx.shadowBlur =
+        24;
+
+      ctx.stroke();
+
+      //
+      // Bright gold body.
+      //
+      ctx.beginPath();
+
+      ctx.moveTo(
+        startX,
+        startY
+      );
+
+      ctx.lineTo(
+        endX,
+        endY
+      );
+
+      ctx.strokeStyle =
+        "#ffd166";
+
+      ctx.globalAlpha =
+        1;
+
+      ctx.lineWidth =
+        5;
+
+      ctx.shadowColor =
+        "#ffd166";
+
+      ctx.shadowBlur =
+        14;
+
+      ctx.stroke();
+
+      //
+      // White-hot center.
+      //
+      ctx.beginPath();
+
+      ctx.moveTo(
+        startX,
+        startY
+      );
+
+      ctx.lineTo(
+        endX,
+        endY
+      );
+
+      ctx.strokeStyle =
+        "#fff4c2";
+
+      ctx.globalAlpha =
+        0.95;
+
+      ctx.lineWidth =
+        1.5;
+
+      ctx.shadowBlur =
+        0;
+
+      ctx.stroke();
+
+      //
+      // Moving signal pulse.
+      //
+      const phase =
+        (
+          (
+            performance.now()
+            / 650
+          )
+          % 1
+        );
+
+      const pulseX =
+        startX
+        + (
+          endX - startX
+        )
+        * phase;
+
+      const pulseY =
+        startY
+        + (
+          endY - startY
+        )
+        * phase;
+
+      ctx.beginPath();
+
+      ctx.arc(
+        pulseX,
+        pulseY,
+        5.5,
+        0,
+        Math.PI * 2
+      );
+
+      ctx.fillStyle =
+        "#ffffff";
+
+      ctx.shadowColor =
+        "#ffd166";
+
+      ctx.shadowBlur =
+        18;
+
+      ctx.fill();
+
+    } else {
+
+      //
+      // Recently fired route.
+      //
+      const fade =
+        1
+        - (
+          age
+          / (
+            AFTERGLOW_FRAMES
+            + 1
+          )
+        );
+
+      ctx.beginPath();
+
+      ctx.moveTo(
+        startX,
+        startY
+      );
+
+      ctx.lineTo(
+        endX,
+        endY
+      );
+
+      ctx.strokeStyle =
+        "#c77d22";
+
+      ctx.globalAlpha =
+        0.18
+        + fade * 0.42;
+
+      ctx.lineWidth =
+        1.5
+        + fade * 1.5;
+
+      ctx.shadowColor =
+        "#c77d22";
+
+      ctx.shadowBlur =
+        4
+        + fade * 6;
+
+      ctx.stroke();
+    }
+
+    //
+    // Arrowhead.
+    //
+    const angle =
+      Math.atan2(
+        endY - startY,
+        endX - startX
+      );
+
+    const arrowSize =
+      activeNow
+        ? 10
+        : 7;
+
+    ctx.beginPath();
+
+    ctx.moveTo(
+      endX,
+      endY
+    );
+
+    ctx.lineTo(
+      endX
+        - Math.cos(
+            angle - 0.52
+          )
+          * arrowSize,
+      endY
+        - Math.sin(
+            angle - 0.52
+          )
+          * arrowSize
+    );
+
+    ctx.lineTo(
+      endX
+        - Math.cos(
+            angle + 0.52
+          )
+          * arrowSize,
+      endY
+        - Math.sin(
+            angle + 0.52
+          )
+          * arrowSize
+    );
+
+    ctx.closePath();
+
+    ctx.fillStyle =
+      activeNow
+        ? "#fff4c2"
+        : "#c77d22";
+
+    ctx.globalAlpha =
+      activeNow
+        ? 1
+        : 0.55;
+
+    ctx.shadowColor =
+      activeNow
+        ? "#ffd166"
+        : "#c77d22";
+
+    ctx.shadowBlur =
+      activeNow
+        ? 12
+        : 4;
+
+    ctx.fill();
+
+    //
+    // Active route identifier.
+    //
+    if (activeNow) {
+
+      const midX =
+        (
+          startX + endX
+        )
+        / 2;
+
+      const midY =
+        (
+          startY + endY
+        )
+        / 2;
+
+      const label =
+        `${edge.preModel} → ${edge.postModel}`;
+
+      ctx.shadowBlur =
+        0;
+
+      ctx.font =
+        "bold 9px monospace";
+
+      const metrics =
+        ctx.measureText(
+          label
+        );
+
+      const padding =
+        5;
+
+      const boxWidth =
+        metrics.width
+        + padding * 2;
+
+      const boxHeight =
+        17;
+
+      ctx.globalAlpha =
+        0.92;
+
+      ctx.fillStyle =
+        "#171006";
+
+      ctx.fillRect(
+        midX
+          - boxWidth / 2,
+        midY
+          - boxHeight / 2,
+        boxWidth,
+        boxHeight
+      );
+
+      ctx.strokeStyle =
+        "#ffd166";
+
+      ctx.lineWidth =
+        1;
+
+      ctx.strokeRect(
+        midX
+          - boxWidth / 2,
+        midY
+          - boxHeight / 2,
+        boxWidth,
+        boxHeight
+      );
+
+      ctx.globalAlpha =
+        1;
+
+      ctx.fillStyle =
+        "#ffe4a0";
+
+      ctx.textAlign =
+        "center";
+
+      ctx.textBaseline =
+        "middle";
+
+      ctx.fillText(
+        label,
+        midX,
+        midY
+      );
+
+      ctx.textAlign =
+        "start";
+    }
+
+    ctx.restore();
+  }
+}
+
+
 function drawNode(
   node,
   localIndex
@@ -693,6 +1152,11 @@ function render() {
       );
     }
   }
+
+  //
+  // Evidence overlay sits above the neural field.
+  //
+  drawCausalEdges();
 
   drawResponderLabels();
 
@@ -1138,10 +1602,37 @@ playButton.addEventListener(
 );
 
 
+
+causalToggle.addEventListener(
+  "change",
+  render
+);
+
+
 window.addEventListener(
   "resize",
   resizeCanvas
 );
+
+
+function animateEvidence() {
+  if (
+    replay
+    && causalToggle.checked
+    && replay.causalEdges.some(
+      (edge) =>
+        edge.frames.includes(
+          frame
+        )
+    )
+  ) {
+    render();
+  }
+
+  requestAnimationFrame(
+    animateEvidence
+  );
+}
 
 
 async function init() {
@@ -1169,6 +1660,10 @@ async function init() {
     );
 
   resizeCanvas();
+
+  requestAnimationFrame(
+    animateEvidence
+  );
 
   console.log(
     "Neuroscope loaded",

@@ -11,6 +11,11 @@ SOURCE = Path(
     "mq4-neuroscope-replay-A-v1.npz"
 )
 
+CAUSAL = Path(
+    "/home/wil/moscaquant-data/processed/"
+    "mq3-2-first-onset-causal-edges-v1.json"
+)
+
 OUTPUT = Path(
     "neuroscope/web/data/replay-A-v1.json"
 )
@@ -67,6 +72,12 @@ def main():
     data = np.load(
         SOURCE,
         allow_pickle=False,
+    )
+
+    causal_data = json.loads(
+        CAUSAL.read_text(
+            encoding="utf-8"
+        )
     )
 
     neuron_ids = np.asarray(
@@ -132,18 +143,142 @@ def main():
         ]
     )
 
+    #
+    # Causal-path endpoints are first-class
+    # Neuroscope nodes even when they are not
+    # members of the four primary populations.
+    #
+    causal_nodes = set()
+
+    for edge in causal_data[
+        "edges"
+    ]:
+        causal_nodes.add(
+            int(
+                edge[
+                    "presynaptic"
+                ]
+            )
+        )
+
+        causal_nodes.add(
+            int(
+                edge[
+                    "postsynaptic"
+                ]
+            )
+        )
+
     selected = sorted(
         retina
         | relay
         | set(graded)
         | set(dn)
+        | causal_nodes
     )
 
     lookup = {
-        model_index: local_index
+        model_index:
+            local_index
         for local_index, model_index
         in enumerate(selected)
     }
+
+    #
+    # Translate frozen model-index causal
+    # edges into viewer-local node indices.
+    #
+    causal_edges = []
+
+    for edge in causal_data[
+        "edges"
+    ]:
+        pre = int(
+            edge[
+                "presynaptic"
+            ]
+        )
+
+        post = int(
+            edge[
+                "postsynaptic"
+            ]
+        )
+
+        if (
+            pre not in lookup
+            or post not in lookup
+        ):
+            raise RuntimeError(
+                "causal endpoint missing "
+                f"from viewer population: "
+                f"{pre}->{post}"
+            )
+
+        causal_edges.append(
+            {
+                "pre":
+                    lookup[
+                        pre
+                    ],
+
+                "post":
+                    lookup[
+                        post
+                    ],
+
+                "preModel":
+                    pre,
+
+                "postModel":
+                    post,
+
+                "weight":
+                    float(
+                        edge[
+                            "weight"
+                        ]
+                    ),
+
+                "frames":
+                    [
+                        int(x)
+                        for x
+                        in edge[
+                            "observed_frames"
+                        ]
+                    ],
+
+                "targets":
+                    [
+                        int(x)
+                        for x
+                        in edge[
+                            "targets"
+                        ]
+                    ],
+            }
+        )
+
+    expected_causal_edges = len(
+        causal_data[
+            "edges"
+        ]
+    )
+
+    if (
+        len(
+            causal_edges
+        )
+        != expected_causal_edges
+    ):
+        raise RuntimeError(
+            "causal edge export incomplete: "
+            f"expected "
+            f"{expected_causal_edges}, "
+            f"exported "
+            f"{len(causal_edges)}"
+        )
 
     nodes = []
 
@@ -168,20 +303,33 @@ def main():
 
         nodes.append(
             {
-                "i": model_index,
-                "body": int(
-                    neuron_ids[
-                        model_index
-                    ]
-                ),
-                "roles": roles,
+                "i":
+                    model_index,
+
+                "body":
+                    int(
+                        neuron_ids[
+                            model_index
+                        ]
+                    ),
+
+                "roles":
+                    roles,
+
                 "gradedType":
                     graded.get(
                         model_index
                     ),
+
                 "dnCluster":
                     dn.get(
                         model_index
+                    ),
+
+                "causalNode":
+                    bool(
+                        model_index
+                        in causal_nodes
                     ),
             }
         )
@@ -268,7 +416,9 @@ def main():
                         float(x)
                         for x in data[
                             "dn_mean_positive"
-                        ][frame]
+                        ][
+                            frame
+                        ]
                     ],
 
                 "dnMax":
@@ -276,7 +426,9 @@ def main():
                         float(x)
                         for x in data[
                             "dn_max_positive"
-                        ][frame]
+                        ][
+                            frame
+                        ]
                     ],
 
                 "dnSpikes":
@@ -284,28 +436,36 @@ def main():
                         int(x)
                         for x in data[
                             "dn_spike_count"
-                        ][frame]
+                        ][
+                            frame
+                        ]
                     ],
 
                 "retinalSpikes":
                     int(
                         data[
                             "retinal_spike_count"
-                        ][frame]
+                        ][
+                            frame
+                        ]
                     ),
 
                 "relaySpikes":
                     int(
                         data[
                             "relay_spike_count"
-                        ][frame]
+                        ][
+                            frame
+                        ]
                     ),
 
                 "gradedActive":
                     int(
                         data[
                             "graded_active_count"
-                        ][frame]
+                        ][
+                            frame
+                        ]
                     ),
 
                 "responders":
@@ -313,7 +473,9 @@ def main():
                         float(x)
                         for x in data[
                             "responder_voltage"
-                        ][frame]
+                        ][
+                            frame
+                        ]
                     ],
             }
         )
@@ -334,12 +496,16 @@ def main():
         "roleBits": {
             "retina":
                 ROLE_RETINA,
+
             "relay":
                 ROLE_RELAY,
+
             "graded":
                 ROLE_GRADED,
+
             "dn":
                 ROLE_DN,
+
             "responder":
                 ROLE_RESPONDER,
         },
@@ -348,7 +514,9 @@ def main():
             frame_count,
 
         "populationCount":
-            len(nodes),
+            len(
+                nodes
+            ),
 
         "nodes":
             nodes,
@@ -360,6 +528,9 @@ def main():
                     "responder_indices"
                 ]
             ],
+
+        "causalEdges":
+            causal_edges,
 
         "frames":
             frames,
@@ -389,7 +560,23 @@ def main():
 
     print(
         "selected nodes:",
-        len(nodes),
+        len(
+            nodes
+        ),
+    )
+
+    print(
+        "causal nodes:",
+        len(
+            causal_nodes
+        ),
+    )
+
+    print(
+        "causal edges:",
+        len(
+            causal_edges
+        ),
     )
 
     print(
