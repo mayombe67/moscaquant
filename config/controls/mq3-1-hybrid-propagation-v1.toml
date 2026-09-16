@@ -1,0 +1,43 @@
+[experiment]
+id = "mq3-1-hybrid-propagation-v1"
+phase = "MQ-3.1"
+
+[baseline]
+runtime = "spike_only_lif"
+preserve_baseline = true
+replace_baseline = false
+
+[hybrid]
+method = "spike_or_positive_subthreshold_voltage"
+threshold = 1.0
+graded_floor = 0.0
+graded_ceiling = 1.0
+gain = 1.0
+
+[effective_activity]
+rule = "max(previous_spike, clip(previous_voltage, 0, 1))"
+double_count_spikes = false
+negative_presynaptic_voltage_transmitted = false
+
+[rationale]
+bridge_neurons_audited = 25
+bridge_neurons_receiving_current = 25
+bridge_neurons_spiking = 0
+maximum_bridge_voltage = 0.37755101919174194
+minimum_bridge_voltage = -0.08777699619531631
+
+[sequence]
+neutral_before_market = true
+condition_a_before_rule_change = false
+condition_b_before_rule_change = false
+
+[principles]
+structural_connectome_unchanged = true
+sensory_gain_unchanged = true
+visual_release_gain_unchanged = true
+dn_consensus_unchanged = true
+readout_metric_unchanged = true
+financial_semantics_used = false
+pnl_used = false
+bridge_specific_exception = false
+tunable_graded_gain_forbidden = true
