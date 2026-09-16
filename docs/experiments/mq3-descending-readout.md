@@ -2,7 +2,7 @@
 
 ## Status
 
-MQ-3 remains active.
+**MQ-3 COMPLETE.**
 
 The descending-neuron output boundary and anonymous anatomical readout populations are frozen. The initial spike-only market readout produced deterministic abstention under both synthetic market conditions because market-conditioned activity did not reach the descending-neuron population.
 
@@ -344,6 +344,18 @@ Before another market-conditioned readout is attempted:
 5. only after neutral passes, repeat anonymous A/B readout.
 
 No financial semantics will be assigned until a reproducible biological output response exists.
+
+---
+
+## Detailed MQ-3.2 experiment records
+
+The final MQ-3.2 experimental line is documented in greater methodological
+detail in:
+
+- [`mq3-2-physiology-constrained-propagation.md`](mq3-2-physiology-constrained-propagation.md)
+- [`mq3-2-causal-intervention.md`](mq3-2-causal-intervention.md)
+
+This document remains the phase-level MQ-3 record and interpretation summary.
 
 ---
 

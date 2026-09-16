@@ -725,7 +725,24 @@ retinal population and required controls are repeated.
 
 MQ-3 — EMPLOYEE HAS OPINIONS
 
-Produce autonomous BUY / HOLD / SELL decisions.
+Status: COMPLETE.
+
+Establish an anatomy-first descending readout and test whether market-conditioned
+sensory activity can reach that boundary reproducibly without neutral
+contamination.
+
+MQ-3 closed with a reproducible, sparse, strongly subthreshold DN-C1 response
+under Condition A using the physiology-constrained MQ-3.2 visual propagation
+model.
+
+Targeted deletion of 13 preidentified first-onset pathway edges delayed all
+9 original responder onsets, while 13 deterministic weight-matched sham
+deletions altered 0 of 9 original onsets.
+
+This supports causal necessity of those first-onset routes within the frozen
+MoscaQuant computational model.
+
+No financial semantics were assigned during MQ-3.
 
 MQ-4 — NEUROSCOPE
 
@@ -879,8 +896,8 @@ YOLO & HODL LLC
 MOSCAQUANT
 
 SUBJECT ................. MQ-001
-CURRENT PHASE ........... MQ-3
-MISSION ................. EMPLOYEE HAS OPINIONS
+CURRENT PHASE ........... MQ-4
+MISSION ................. NEUROSCOPE
 
 BROKER .................. NONE
 TRADING AUTHORITY ....... NONE
@@ -890,8 +907,10 @@ PANOPTICON .............. NOT DEPLOYED
 
 CONTAINMENT ............. ACTIVE
 
+FINANCIAL SEMANTICS ..... NOT ASSIGNED
+
 NEXT OBJECTIVE:
 
-RESOLVE THE DESCENDING PROPAGATION BOTTLENECK WITHOUT MARKET-CONDITION TUNING.
+BUILD NEUROSCOPE FROM FROZEN MQ-1 THROUGH MQ-3 TELEMETRY WITHOUT ALTERING THE EXPERIMENTAL MODEL.
 
 Past performance does not guarantee future sugar cubes.
