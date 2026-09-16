@@ -5,7 +5,7 @@ classification = "confirmatory-replication"
 condition = "A"
 
 [replication]
-implementation = "independent_reduced_circuit"
+implementation = "independent_full_reference_runtime"
 reuse_existing_runtime_step = false
 reuse_existing_effective_activity = false
 reuse_existing_intervention_runtime = false

@@ -14,8 +14,8 @@ MQ-5.6 distinguishes:
 Exact reruns of the existing MoscaQuant runtime have already established
 deterministic software reproducibility.
 
-MQ-5.6 therefore focuses on an independently implemented reduced-circuit
-reference model for selected, previously accepted causal findings.
+MQ-5.6 therefore focuses on an independently implemented full-network
+reference runtime for selected, previously accepted causal findings.
 
 ## Selected replication set
 
@@ -89,16 +89,27 @@ It may reuse:
 The purpose is to reproduce the scientific calculation through a separate
 implementation path.
 
-## Reduced-circuit scope
+## Independent-runtime scope
 
-The reference implementation may simulate only the neurons and incoming
-terms necessary to reproduce the selected causal relationships.
+The reference implementation will evolve the full frozen network state.
 
-Any reduced-circuit simplification must be explicit.
+It must independently implement the relevant scientific equations rather
+than inherit from or call the existing MoscaQuant runtime classes.
 
-The reference calculation must preserve the relevant scientific equations,
-weights, decay behavior, release behavior, intervention magnitude, and
-frame semantics.
+It must preserve:
+
+- frozen connectome weights
+- retinal relay handling
+- graded Tm2/Tm3/Tm4 propagation
+- membrane decay
+- threshold and reset semantics
+- release-from-inhibition behavior
+- intervention magnitude
+- frame semantics
+- float32 model state
+
+The purpose is to avoid a reduced local model silently omitting indirect
+network paths or recurrent effects.
 
 ## Intervention conditions
 
