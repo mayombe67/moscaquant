@@ -1,0 +1,56 @@
+[experiment]
+id = "mq5-4-pathway-56393-68045-1273-v1"
+phase = "MQ-5.4"
+classification = "confirmatory"
+condition = "A"
+
+[path]
+upstream = 56393
+intermediate = 68045
+downstream = 1273
+
+[timing]
+upstream_causal_frame = 146
+intermediate_causal_frame = 147
+
+[interventions]
+attenuation_levels = [0.25, 0.50, 0.75, 1.0]
+
+[primary_predictions]
+# Upstream intervention must first affect the predefined intermediate.
+upstream_reduces_intermediate = true
+
+# Upstream intervention is then expected to reduce the downstream
+# path target relative to baseline/sham.
+upstream_reduces_downstream = true
+
+# Intermediate intervention is expected to reduce the downstream target.
+intermediate_reduces_downstream = true
+
+[measurements]
+record_upstream_effective_activity = true
+record_intermediate_voltage = true
+record_intermediate_effective_activity = true
+record_downstream_voltage = true
+record_downstream_spikes = true
+record_first_positive_frame = true
+record_peak_voltage = true
+record_peak_frame = true
+record_integrated_positive_voltage = true
+record_positive_frame_count = true
+
+[controls]
+baseline = true
+zero_effect_sham = true
+require_exact_baseline_sham_identity = true
+require_frozen_artifacts_unchanged = true
+deterministic_replicate = true
+
+[interpretation]
+# No assumption is made that the two hops have equal effect magnitude.
+assume_equal_hop_strength = false
+
+# No biological causality or financial interpretation follows from
+# successful simulated pathway propagation.
+biological_causality_claim = false
+financial_semantics_used = false
