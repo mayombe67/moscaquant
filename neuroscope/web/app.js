@@ -729,15 +729,33 @@
       state.projected.map((p) => [p.node.id, p])
     );
 
-    ctx.strokeStyle = CONFIG.causalEdge;
-    ctx.lineWidth = 1.4;
-    ctx.globalAlpha = 0.72;
+    const selectedId =
+      state.selected?.id ?? null;
 
     for (const edge of state.edges) {
       const a = byId.get(edge.source);
       const b = byId.get(edge.target);
 
       if (!a || !b) continue;
+
+      const selectedEdge =
+        selectedId !== null &&
+        (
+          edge.source === selectedId ||
+          edge.target === selectedId
+        );
+
+      ctx.strokeStyle = selectedEdge
+        ? "#ffb84d"
+        : CONFIG.causalEdge;
+
+      ctx.lineWidth = selectedEdge
+        ? 3.0
+        : 1.4;
+
+      ctx.globalAlpha = selectedEdge
+        ? 1.0
+        : 0.58;
 
       ctx.beginPath();
       ctx.moveTo(a.x, a.y);
@@ -1263,6 +1281,61 @@
     const causalNode =
       raw.causalNode === true;
 
+    const causalEdges = state.edges.filter(
+      (edge) =>
+        edge.source === n.id ||
+        edge.target === n.id
+    );
+
+    const causalEdgeHtml = causalEdges.length
+      ? causalEdges.map((edge) => {
+          const outgoing = edge.source === n.id;
+
+          const peerModelIndex =
+            outgoing
+              ? edge.raw?.postModel
+              : edge.raw?.preModel;
+
+          const frames =
+            edge.raw?.frames ??
+            edge.raw?.observed_frames ??
+            [];
+
+          const weight =
+            Number(edge.weight);
+
+          const weightLabel =
+            Number.isFinite(weight)
+              ? weight.toExponential(4)
+              : "—";
+
+          return `
+            <div class="ns-causal-edge">
+              <div>
+                <strong>${outgoing ? "OUT" : "IN"}</strong>
+                · model ${escapeHtml(
+                  String(peerModelIndex ?? "—")
+                )}
+              </div>
+
+              <div>
+                weight ${escapeHtml(weightLabel)}
+              </div>
+
+              <div>
+                frame${
+                  frames.length === 1 ? "" : "s"
+                } ${
+                  frames.length
+                    ? escapeHtml(frames.join(", "))
+                    : "—"
+                }
+              </div>
+            </div>
+          `;
+        }).join("")
+      : "";
+
     info.innerHTML = `
       <dl class="ns-dl">
 
@@ -1306,7 +1379,23 @@
           ${n.responder ? "YES" : "NO"}
         </dd>
 
+        <dt>Causal edges</dt>
+        <dd>${causalEdges.length}</dd>
+
       </dl>
+
+      ${
+        causalEdges.length
+          ? `
+            <div class="ns-causal-block">
+              <div class="ns-causal-title">
+                CAUSAL CONNECTIONS
+              </div>
+              ${causalEdgeHtml}
+            </div>
+          `
+          : ""
+      }
 
       ${
         n.topologyFallback
@@ -1650,6 +1739,36 @@
 
       .ns-dl .warn {
         color: #f5bb65;
+      }
+
+      .ns-causal-block {
+        margin-top: 15px;
+        padding-top: 12px;
+        border-top: 1px solid #27303d;
+      }
+
+      .ns-causal-title {
+        margin-bottom: 8px;
+        color: #ff9a55;
+        font-family: monospace;
+        font-size: 9px;
+        font-weight: 700;
+        letter-spacing: .12em;
+      }
+
+      .ns-causal-edge {
+        margin: 6px 0;
+        padding: 7px 8px;
+        border-left: 2px solid #ff7a45;
+        background: #111016;
+        color: #8994a3;
+        font-family: monospace;
+        font-size: 9px;
+        line-height: 1.45;
+      }
+
+      .ns-causal-edge strong {
+        color: #ffb84d;
       }
 
       .ns-warning,
