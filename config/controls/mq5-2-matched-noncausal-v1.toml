@@ -17,14 +17,17 @@ require_positive_activity_at_match_frame = true
 
 [acceptance]
 # Ratios are candidate / source.
-minimum_activity_ratio = 0.5
-maximum_activity_ratio = 2.0
+# Amendment 1:
+# Initial 0.5–2.0 windows produced zero eligible candidates.
+# Expanded prospectively before the second candidate search.
+minimum_activity_ratio = 0.25
+maximum_activity_ratio = 4.0
 
-minimum_in_degree_ratio = 0.5
-maximum_in_degree_ratio = 2.0
+minimum_in_degree_ratio = 0.25
+maximum_in_degree_ratio = 4.0
 
-minimum_out_degree_ratio = 0.5
-maximum_out_degree_ratio = 2.0
+minimum_out_degree_ratio = 0.25
+maximum_out_degree_ratio = 4.0
 
 [ranking]
 # Applied only after all eligibility and acceptance rules pass.
