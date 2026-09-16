@@ -1,0 +1,674 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+  <title>MoscaQuant Neuroscope Guide</title>
+
+  <style>
+    :root {
+      color-scheme: dark;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: #06080c;
+      color: #c8d1dc;
+      font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+      line-height: 1.65;
+    }
+
+    a {
+      color: #b69cff;
+    }
+
+    code {
+      color: #c7b4ff;
+      font-family: monospace;
+    }
+
+    .shell {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 28px 24px 72px;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      margin: -28px -24px 28px;
+      padding: 14px 24px;
+      border-bottom: 1px solid #1b2430;
+      background: rgba(9, 12, 18, .95);
+      backdrop-filter: blur(8px);
+    }
+
+    .brand {
+      font-family: monospace;
+    }
+
+    .brand small {
+      display: block;
+      color: #8b5cf6;
+      font-size: 9px;
+      letter-spacing: .16em;
+    }
+
+    .brand strong {
+      font-size: 15px;
+      letter-spacing: .08em;
+    }
+
+    .back {
+      display: inline-flex;
+      align-items: center;
+      min-height: 32px;
+      padding: 0 12px;
+      border: 1px solid #303b4a;
+      background: #111722;
+      color: #c8d1dc;
+      text-decoration: none;
+      font-family: monospace;
+      font-size: 9px;
+      letter-spacing: .08em;
+    }
+
+    .back:hover {
+      border-color: #8b5cf6;
+    }
+
+    h1,
+    h2,
+    h3 {
+      line-height: 1.2;
+      color: #eef2f7;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 36px;
+      letter-spacing: .04em;
+    }
+
+    h2 {
+      margin-top: 44px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #1d2632;
+      font-size: 23px;
+    }
+
+    h3 {
+      margin-top: 26px;
+      font-size: 16px;
+    }
+
+    .lead {
+      max-width: 800px;
+      color: #8e99a8;
+      font-size: 15px;
+    }
+
+    .tagline {
+      margin-top: 18px;
+      color: #8b5cf6;
+      font-family: monospace;
+      font-size: 12px;
+      letter-spacing: .08em;
+    }
+
+    .quick-grid {
+      display: grid;
+      grid-template-columns:
+        repeat(auto-fit, minmax(210px, 1fr));
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .card {
+      padding: 14px;
+      border: 1px solid #222c38;
+      background: #0b1016;
+    }
+
+    .card strong {
+      display: block;
+      margin-bottom: 5px;
+      color: #d8dee7;
+      font-size: 11px;
+      font-family: monospace;
+    }
+
+    .card span {
+      color: #7d8998;
+      font-size: 12px;
+    }
+
+    .legend {
+      display: grid;
+      grid-template-columns:
+        repeat(auto-fit, minmax(170px, 1fr));
+      gap: 8px;
+      margin: 16px 0;
+    }
+
+    .legend-item {
+      padding: 10px;
+      border: 1px solid #222c38;
+      background: #0b1016;
+      font-family: monospace;
+      font-size: 10px;
+    }
+
+    .blue { color: #78a8ff; }
+    .gray { color: #818896; }
+    .orange { color: #ffb84d; }
+    .cyan { color: #64e9ff; }
+    .green { color: #7ef29a; }
+    .white { color: #ffffff; }
+
+    .warning {
+      margin: 16px 0;
+      padding: 12px 14px;
+      border-left: 3px solid #ffb84d;
+      background: #17130d;
+      color: #c9a96f;
+      font-size: 12px;
+    }
+
+    .good {
+      margin: 16px 0;
+      padding: 12px 14px;
+      border-left: 3px solid #73e6a2;
+      background: #0d1713;
+      color: #83cda5;
+      font-size: 12px;
+    }
+
+    .mono {
+      padding: 12px;
+      overflow-x: auto;
+      border: 1px solid #222c38;
+      background: #090d13;
+      color: #aeb9c6;
+      font-family: monospace;
+      font-size: 11px;
+      white-space: pre;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin: 5px 0;
+    }
+
+    .exercise {
+      margin: 18px 0;
+      padding: 16px;
+      border: 1px solid #302947;
+      background: #0f0c18;
+    }
+
+    .exercise strong {
+      color: #cbbaff;
+    }
+
+    footer {
+      margin-top: 56px;
+      padding-top: 18px;
+      border-top: 1px solid #1b2430;
+      color: #606b79;
+      font-family: monospace;
+      font-size: 9px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="shell">
+
+    <div class="topbar">
+      <div class="brand">
+        <small>MOSCAQUANT / MQ-4</small>
+        <strong>NEUROSCOPE GUIDE</strong>
+      </div>
+
+      <a class="back" href="./">
+        ← BACK TO NEUROSCOPE
+      </a>
+    </div>
+
+    <h1>Neuroscope Operator Guide</h1>
+
+    <p class="lead">
+      Neuroscope is MoscaQuant's read-only visualization
+      and experimental inspection layer. It combines hybrid
+      MaleCNS geometry, frozen replay telemetry, causal-path
+      evidence, graph traversal, and analysis of the
+      nine-neuron responder ensemble.
+    </p>
+
+    <div class="tagline">
+      SAME NEURONS. DEEPER QUESTIONS.
+    </div>
+
+    <h2>Quick Start</h2>
+
+    <div class="quick-grid">
+      <div class="card">
+        <strong>ROTATE</strong>
+        <span>Drag on the main viewer.</span>
+      </div>
+
+      <div class="card">
+        <strong>PAN</strong>
+        <span>Shift + drag.</span>
+      </div>
+
+      <div class="card">
+        <strong>ZOOM</strong>
+        <span>Mouse wheel.</span>
+      </div>
+
+      <div class="card">
+        <strong>INSPECT</strong>
+        <span>Click a neuron.</span>
+      </div>
+
+      <div class="card">
+        <strong>REPLAY</strong>
+        <span>Scrub or press Play.</span>
+      </div>
+
+      <div class="card">
+        <strong>TRACE</strong>
+        <span>Select a causal node, then Trace Path.</span>
+      </div>
+    </div>
+
+    <h2>Viewer Invariants</h2>
+
+    <div class="mono">NEURONS       12,475
+REAL SOMA      7,486
+FALLBACK       4,989
+CAUSAL EDGES      13
+RESPONDERS          9
+REPLAY FRAMES      192</div>
+
+    <p>
+      Unexpected changes to these values should be treated
+      as a build or data issue until explained.
+    </p>
+
+    <h2>Color Cheat Sheet</h2>
+
+    <div class="legend">
+      <div class="legend-item blue">
+        BLUE — real soma geometry
+      </div>
+
+      <div class="legend-item gray">
+        GRAY — topology fallback
+      </div>
+
+      <div class="legend-item orange">
+        ORANGE — causal responder / causal overlay
+      </div>
+
+      <div class="legend-item white">
+        WHITE — spike or selection emphasis
+      </div>
+
+      <div class="legend-item cyan">
+        CYAN — effective activity / upstream trace
+      </div>
+
+      <div class="legend-item green">
+        GREEN — downstream trace
+      </div>
+    </div>
+
+    <h2>Geometry</h2>
+
+    <h3>Real soma geometry</h3>
+
+    <p>
+      Nodes marked <code>somaLocation</code> use real
+      MaleCNS soma coordinates. These are anatomical data.
+    </p>
+
+    <h3>Topology fallback</h3>
+
+    <p>
+      Nodes marked <code>topologyFallback</code> lack usable
+      soma geometry in the MQ-4 artifact. Their displayed
+      positions preserve useful topology only.
+    </p>
+
+    <div class="warning">
+      Topology fallback coordinates are not anatomical
+      coordinates and must not be interpreted as anatomical
+      evidence.
+    </div>
+
+    <h2>Display Controls</h2>
+
+    <ul>
+      <li><strong>Real soma geometry</strong> — show/hide real anatomical soma positions.</li>
+      <li><strong>Topology fallback</strong> — show/hide non-anatomical fallback placement.</li>
+      <li><strong>Causal overlay</strong> — show/hide the frozen MQ-3.2 causal graph.</li>
+      <li><strong>Responders only</strong> — restrict display to responder neurons.</li>
+    </ul>
+
+    <h2>Role Filters</h2>
+
+    <div class="mono">Retina                3,241
+Relay                 2,430
+Graded                5,490
+Descending neurons    1,314
+Responders                 9</div>
+
+    <p>
+      A neuron can belong to more than one role.
+      Filtering affects presentation only.
+    </p>
+
+    <h2>Replay</h2>
+
+    <p>
+      Neuroscope contains 192 recorded replay frames,
+      numbered 0 through 191.
+    </p>
+
+    <ul>
+      <li>Previous frame</li>
+      <li>Play / Pause</li>
+      <li>Next frame</li>
+      <li>2, 4, 8, 12, or 24 fps playback</li>
+      <li>Direct timeline scrubbing</li>
+    </ul>
+
+    <p>
+      Manual timeline movement automatically pauses playback.
+    </p>
+
+    <h3>Frame summary</h3>
+
+    <ul>
+      <li>Retinal spikes</li>
+      <li>Relay spikes</li>
+      <li>Graded-active count</li>
+      <li>DN mean activity</li>
+      <li>DN maximum activity</li>
+      <li>DN spikes</li>
+      <li>Maximum responder value</li>
+    </ul>
+
+    <div class="warning">
+      Replay is recorded telemetry. Pressing Play does not
+      execute a new simulation.
+    </div>
+
+    <h2>Activity Visualization</h2>
+
+    <ul>
+      <li>Voltage magnitude increases node brightness and size.</li>
+      <li>Effective activity receives cyan emphasis.</li>
+      <li>Spikes receive bright white emphasis.</li>
+      <li>Responders remain amber regardless of momentary activity.</li>
+      <li>Responder magnitude can increase responder size.</li>
+    </ul>
+
+    <h2>Neuron Inspector</h2>
+
+    <p>Click a neuron to inspect:</p>
+
+    <ul>
+      <li>Model index</li>
+      <li>MaleCNS body ID</li>
+      <li>Roles</li>
+      <li>Graded type</li>
+      <li>DN cluster</li>
+      <li>Soma side</li>
+      <li>Soma neuromere</li>
+      <li>Geometry source</li>
+      <li>Causal-node status</li>
+      <li>Responder status</li>
+    </ul>
+
+    <h2>Causal Inspection</h2>
+
+    <p>
+      Causal nodes expose their preserved incoming and
+      outgoing connections.
+    </p>
+
+    <div class="mono">IN · model 43417
+weight 6.6445e-4
+frame 145</div>
+
+    <p>
+      Edge direction, weight, and observed frame originate
+      from the frozen MQ-3.2 causal artifact.
+    </p>
+
+    <h2>Causal Traversal</h2>
+
+    <p>
+      Select a causal node and press
+      <strong>TRACE PATH</strong>.
+    </p>
+
+    <ul>
+      <li>Cyan — upstream</li>
+      <li>Green — downstream</li>
+      <li>Trace root — selected origin</li>
+      <li>Unrelated anatomy — dimmed</li>
+    </ul>
+
+    <p>
+      The trace panel reports node count, edge count,
+      and maximum graph depth.
+    </p>
+
+    <h3>Verified example</h3>
+
+    <div class="mono">56393 → 68045 → 1273</div>
+
+    <p>
+      Trace model <code>1273</code> to reconstruct the full
+      three-node chain.
+    </p>
+
+    <h2>Responder Ensemble</h2>
+
+    <div class="mono">92
+656
+317
+137122
+126002
+55
+129
+51
+1273</div>
+
+    <p>
+      The Responder Ensemble panel displays each responder's
+      current value, peak value, peak frame, and preserved
+      causal-input count.
+    </p>
+
+    <p>
+      Use <strong>ISOLATE 9 RESPONDERS</strong> to hide the
+      rest of the population.
+    </p>
+
+    <h3>Recorded peak frames</h3>
+
+    <div class="mono">92        F191
+656       F165
+317       F187
+137122    F183
+126002    F191
+55        F191
+129       F191
+51        F191
+1273      F191</div>
+
+    <h2>Synchronized Responder Plot</h2>
+
+    <p>
+      The compact responder graph shows all nine recorded
+      responder series across frames 0–191.
+    </p>
+
+    <ul>
+      <li>White line — current frame</li>
+      <li>Colored lines — individual responder series</li>
+      <li>Selected responder — thicker trace</li>
+      <li>Click the graph — jump to that frame</li>
+    </ul>
+
+    <h2>Guided Exercises</h2>
+
+    <div class="exercise">
+      <strong>Exercise 1 — Responder 656</strong>
+
+      <p>
+        Find model <code>656</code> in the responder panel
+        and click <code>F165</code>.
+      </p>
+
+      <p>
+        Inspect its incoming causal edge from model
+        <code>43417</code> and compare the edge observation
+        at frame 145 with the later response peak at 165.
+      </p>
+    </div>
+
+    <div class="exercise">
+      <strong>Exercise 2 — Multi-hop path</strong>
+
+      <p>
+        Navigate to model <code>1273</code> and select
+        <strong>TRACE PATH</strong>.
+      </p>
+
+      <p>Expected:</p>
+
+      <div class="mono">TRACE ROOT    1273
+NODES         3
+EDGES         2
+MAX DEPTH     2
+
+UP model 68045 depth 1
+UP model 56393 depth 2</div>
+    </div>
+
+    <div class="exercise">
+      <strong>Exercise 3 — Late responder ensemble</strong>
+
+      <p>
+        Jump to frame <code>191</code>, isolate the nine
+        responders, and compare their synchronized activity
+        traces.
+      </p>
+    </div>
+
+    <h2>Scientific Boundaries</h2>
+
+    <div class="good">
+      Neuroscope is a read-only interpretation layer over
+      frozen MoscaQuant experimental telemetry.
+    </div>
+
+    <ul>
+      <li>No synthetic fallback is promoted to anatomy.</li>
+      <li>Replay does not rerun the experiment.</li>
+      <li>Traversal does not create new causal edges.</li>
+      <li>Responder magnitude does not establish causal importance.</li>
+      <li>Filtering never changes the underlying dataset.</li>
+    </ul>
+
+    <h3>Financial semantics</h3>
+
+    <div class="mono">NOT ASSIGNED</div>
+
+    <h2>Troubleshooting</h2>
+
+    <h3>Replay artifact missing</h3>
+
+    <div class="mono">source .venv/bin/activate
+python -m neuroscope.build_web_replay</div>
+
+    <h3>Old interface appears</h3>
+
+    <p>
+      Hard-refresh the browser or add a cache-busting query
+      parameter:
+    </p>
+
+    <div class="mono">http://127.0.0.1:8080/?fresh=1</div>
+
+    <h3>Check JavaScript</h3>
+
+    <div class="mono">node --check neuroscope/web/app.js
+git diff --check</div>
+
+    <h3>Check what the web server is serving</h3>
+
+    <div class="mono">curl -s http://127.0.0.1:8080/app.js | grep -n "RESPONDER ENSEMBLE"</div>
+
+    <h2>Recommended Operator Workflow</h2>
+
+    <div class="mono">1. Inspect anatomy
+2. Adjust role filters
+3. Select a neuron
+4. Inspect metadata
+5. Scrub replay
+6. Inspect local causal evidence
+7. Trace causal graph
+8. Compare responder ensemble
+9. Jump to important replay frames
+10. Return to full anatomy</div>
+
+    <h2>Principle</h2>
+
+    <blockquote>
+      Visualization may make the evidence easier to understand,
+      but it must not silently change what the evidence means.
+    </blockquote>
+
+    <footer>
+      ANATOMY. EVIDENCE. CAUSALITY. NEXT.
+      <br>
+      SAME NEURONS. DEEPER QUESTIONS.
+    </footer>
+
+  </div>
+</body>
+</html>

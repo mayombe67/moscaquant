@@ -1615,9 +1615,20 @@
             </div>
           </div>
 
-          <div class="ns-runtime">
-            <span>RUNTIME</span>
-            <strong>${escapeHtml(CONFIG.runtime)}</strong>
+          <div class="ns-header-actions">
+            <a
+              class="ns-guide-link"
+              href="./guide.html"
+              target="_blank"
+              rel="noopener"
+            >
+              GUIDE
+            </a>
+
+            <div class="ns-runtime">
+              <span>RUNTIME</span>
+              <strong>${escapeHtml(CONFIG.runtime)}</strong>
+            </div>
           </div>
         </header>
 
@@ -3268,6 +3279,33 @@
         margin-top: 5px;
         color: #75808e;
         font-size: 12px;
+      }
+
+      .ns-header-actions {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+
+      .ns-guide-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 32px;
+        padding: 0 12px;
+        border: 1px solid #47396b;
+        background: #14101f;
+        color: #c7b4ff;
+        text-decoration: none;
+        font-family: monospace;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: .12em;
+      }
+
+      .ns-guide-link:hover {
+        border-color: #8b5cf6;
+        background: #1b142b;
       }
 
       .ns-runtime {
