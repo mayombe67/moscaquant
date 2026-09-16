@@ -227,3 +227,56 @@ MQ-5 must not:
 `MQ-1 → MQ-2 → MQ-3 → MQ-4 COMPLETE → MQ-5 PLANNING`
 
 **Financial semantics: NOT ASSIGNED**
+
+## Methodological Hardening Track
+
+The following work is now required across later MoscaQuant phases.
+
+### MQ-5.6 — Replication and Stability
+
+MQ-5.6 should include, where practical:
+
+- deterministic reproducibility verification,
+- multi-seed robustness where stochastic behavior exists,
+- independent-runtime or reduced-circuit replication of selected causal
+  findings,
+- explicit distinction between software reproducibility and scientific
+  robustness.
+
+### Post-MQ-5 — Expanded Null Models
+
+Before strong claims that MaleCNS topology itself is responsible for an
+effect, evaluate the result against multiple appropriate null families.
+
+Candidate families include:
+
+- degree-preserving rewires,
+- sign-preserving rewires,
+- weight-distribution-preserving rewires,
+- cell-class-constrained shuffles,
+- spatially constrained nulls where scientifically appropriate.
+
+Null-model definitions must precede confirmatory outcome inspection.
+
+### Post-MQ-5 — Encoding Robustness
+
+Test whether important neural findings persist under multiple reasonable
+market-to-sensory encodings.
+
+This stage evaluates whether observed causal structure is robust to the
+encoding choice rather than being an artifact of one hand-designed input
+representation.
+
+### Pre-Financial-Semantics Gate
+
+Before assigning financial meaning to neural output:
+
+- establish a claims ledger,
+- preserve exploratory vs confirmatory labels,
+- retain negative and inconclusive results,
+- maintain explicit MQ-001 versus WARDEN-01 performance attribution,
+- complete required topology/null-model controls,
+- complete appropriate robustness checks.
+
+No future trading result may retroactively alter the interpretation of
+earlier neuroscience experiments.

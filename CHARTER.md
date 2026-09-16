@@ -1130,3 +1130,132 @@ MQ-5 asks:
 > What changes when we deliberately intervene on that evidence-defined system?
 
 **Anatomy. Evidence. Causality. Next.**
+
+## Methodological Hardening After MQ-4
+
+The progression into MQ-5 does not change the frozen MQ-1 through MQ-3
+evidence or the pre-registered MQ-5.1 intervention protocol.
+
+The following project-level safeguards apply to future MoscaQuant phases.
+
+### Internal causality is not biological validation
+
+A successful intervention establishes a causal relationship within the
+specified MoscaQuant model.
+
+It does not, by itself, establish equivalent causal behavior in a living
+Drosophila nervous system.
+
+Claims must preserve the distinction between:
+
+- structural connectivity,
+- simulated dynamical causality,
+- biological causality,
+- financial interpretation.
+
+Biological causality must not be claimed without evidence appropriate to
+that claim.
+
+### Independent-runtime replication
+
+Re-running identical code proves implementation reproducibility, not
+independent scientific replication.
+
+Where practical, important causal findings should later be reproduced
+using an independently implemented runtime or reduced-circuit reference
+implementation.
+
+Independent replication must preserve the scientific configuration while
+remaining implementation-independent.
+
+### Null-model diversity
+
+Claims that MaleCNS topology itself matters must not depend on comparison
+against only one randomized graph.
+
+Before strong topology-specific conclusions are permitted, future control
+work should include multiple scientifically defensible null families where
+practical, including examples such as:
+
+- degree-preserving rewiring,
+- sign-preserving rewiring,
+- weight-distribution-preserving controls,
+- cell-class-constrained controls,
+- spatially constrained controls where appropriate.
+
+Exact null families must be defined before their confirmatory results are
+interpreted.
+
+### Sensory-encoding robustness
+
+Market-to-sensory encoding is an experimental design choice.
+
+A causal pathway that appears under only one arbitrary encoding must not
+automatically be described as a general property of the connectome.
+
+Later phases should test whether important findings survive reasonable
+alternative sensory encodings while holding the neural substrate fixed.
+
+### Exploratory and confirmatory separation
+
+Exploratory observations are allowed and encouraged, but they must be
+labeled exploratory.
+
+Targets, thresholds, controls, or hypotheses discovered after inspecting
+results must not be represented as pre-registered confirmatory tests.
+
+Protocol amendments must remain recoverable through Git history.
+
+### Negative-results policy
+
+Failed, null, opposite-direction, and inconclusive experiments are part of
+the scientific record.
+
+They must not be hidden, silently discarded, or omitted merely because
+they weaken a preferred narrative.
+
+The meme layer may joke about failure.
+
+The scientific layer must preserve it.
+
+### Claims ledger
+
+Before financial semantics are assigned, MoscaQuant should maintain a
+machine- or human-readable claims ledger recording:
+
+- the claim,
+- supporting evidence,
+- current status,
+- permitted wording,
+- prohibited or unsupported wording,
+- the phase in which the claim became justified.
+
+The purpose is to prevent conclusions from silently expanding beyond the
+evidence that supports them.
+
+### Warden attribution boundary
+
+When real-money phases eventually exist, performance must be attributable
+to the correct system component.
+
+At minimum, reporting must distinguish:
+
+- raw MQ-001 proposals,
+- WARDEN-01 accepted proposals,
+- WARDEN-01 rejected proposals,
+- actually executed trades.
+
+WARDEN-01 risk logic must not be mistaken for neural-model performance.
+
+### Scientific identity
+
+MoscaQuant intentionally combines absurd presentation with conservative
+experimental practice.
+
+The humor may escalate.
+
+The evidentiary standard must not relax.
+
+Financial semantics remain:
+
+**NOT ASSIGNED**
