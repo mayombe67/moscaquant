@@ -1,0 +1,153 @@
+{
+  "edges": [
+    {
+      "causal_frame": 145,
+      "observed_frames": [
+        145
+      ],
+      "postsynaptic": 656,
+      "presynaptic": 43417,
+      "timing_control_available": true,
+      "timing_control_frame": 146,
+      "timing_control_offset": 1
+    },
+    {
+      "causal_frame": 146,
+      "observed_frames": [
+        146
+      ],
+      "postsynaptic": 55,
+      "presynaptic": 44274,
+      "timing_control_available": true,
+      "timing_control_frame": 147,
+      "timing_control_offset": 1
+    },
+    {
+      "causal_frame": 149,
+      "observed_frames": [
+        149
+      ],
+      "postsynaptic": 51,
+      "presynaptic": 55548,
+      "timing_control_available": true,
+      "timing_control_frame": 150,
+      "timing_control_offset": 1
+    },
+    {
+      "causal_frame": 146,
+      "observed_frames": [
+        146
+      ],
+      "postsynaptic": 55,
+      "presynaptic": 55925,
+      "timing_control_available": true,
+      "timing_control_frame": 147,
+      "timing_control_offset": 1
+    },
+    {
+      "causal_frame": 146,
+      "observed_frames": [
+        146
+      ],
+      "postsynaptic": 68045,
+      "presynaptic": 56393,
+      "timing_control_available": true,
+      "timing_control_frame": 147,
+      "timing_control_offset": 1
+    },
+    {
+      "causal_frame": 145,
+      "observed_frames": [
+        145
+      ],
+      "postsynaptic": 92,
+      "presynaptic": 64717,
+      "timing_control_available": true,
+      "timing_control_frame": 146,
+      "timing_control_offset": 1
+    },
+    {
+      "causal_frame": 146,
+      "observed_frames": [
+        146
+      ],
+      "postsynaptic": 137122,
+      "presynaptic": 65084,
+      "timing_control_available": true,
+      "timing_control_frame": 147,
+      "timing_control_offset": 1
+    },
+    {
+      "causal_frame": 147,
+      "observed_frames": [
+        147
+      ],
+      "postsynaptic": 1273,
+      "presynaptic": 68045,
+      "timing_control_available": true,
+      "timing_control_frame": 148,
+      "timing_control_offset": 1
+    },
+    {
+      "causal_frame": 149,
+      "observed_frames": [
+        149
+      ],
+      "postsynaptic": 51,
+      "presynaptic": 87441,
+      "timing_control_available": true,
+      "timing_control_frame": 150,
+      "timing_control_offset": 1
+    },
+    {
+      "causal_frame": 148,
+      "observed_frames": [
+        148
+      ],
+      "postsynaptic": 129,
+      "presynaptic": 92657,
+      "timing_control_available": true,
+      "timing_control_frame": 149,
+      "timing_control_offset": 1
+    },
+    {
+      "causal_frame": 148,
+      "observed_frames": [
+        148
+      ],
+      "postsynaptic": 129,
+      "presynaptic": 93484,
+      "timing_control_available": true,
+      "timing_control_frame": 149,
+      "timing_control_offset": 1
+    },
+    {
+      "causal_frame": 147,
+      "observed_frames": [
+        147
+      ],
+      "postsynaptic": 317,
+      "presynaptic": 128590,
+      "timing_control_available": true,
+      "timing_control_frame": 148,
+      "timing_control_offset": 1
+    },
+    {
+      "causal_frame": 147,
+      "observed_frames": [
+        147
+      ],
+      "postsynaptic": 126002,
+      "presynaptic": 135589,
+      "timing_control_available": true,
+      "timing_control_frame": 148,
+      "timing_control_offset": 1
+    }
+  ],
+  "financial_semantics_used": false,
+  "intervention_outcomes_used": false,
+  "maximum_offset": 4,
+  "schema": "mq5-2-generalized-timing-map-v1",
+  "selection_rule": "nearest baseline frame outside the edge's frozen observed frames where the same source has positive effective activity; search +/-4; earlier frame wins equal-distance tie",
+  "status": "FROZEN_BEFORE_GENERALIZED_INTERVENTION_OUTCOMES"
+}
