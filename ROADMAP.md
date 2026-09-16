@@ -280,3 +280,131 @@ Before assigning financial meaning to neural output:
 
 No future trading result may retroactively alter the interpretation of
 earlier neuroscience experiments.
+
+## Panopticon Community and Special-Day Track
+
+This track is independent of the MQ-5 confirmatory intervention program.
+
+### Special-Day framework
+
+Build a generic, explicitly exploratory perturbation framework capable of
+supporting public novelty events without modifying frozen scientific
+artifacts.
+
+Each Special Day should record:
+
+- public display name,
+- scientific alias,
+- perturbation definition,
+- configuration version,
+- runtime profile,
+- start and end time,
+- scientific classification,
+- whether public voting selected it,
+- resulting telemetry artifact.
+
+Default classification:
+
+`EXPLORATORY_ENTERTAINMENT`
+
+### Initial Special-Day candidates
+
+High-value early candidates include:
+
+- Left Eye Day / Right Eye Day
+  - unilateral sensory restriction
+  - lateralization and redundancy
+
+- Groundhog Day
+  - repeated identical stimulation
+  - state dependence and reproducibility
+
+- White Noise Day
+  - structure-destroyed matched stimulation
+  - input-structure control
+
+- Everything Is DOGE Day
+  - feature/channel collapse
+  - sensory differentiation test
+
+- Half-Brain Day
+  - controlled unilateral or population lesion
+  - redundancy and robustness
+
+- Management Consultant Day
+  - constrained topology randomization
+  - null-model exploration
+
+- Constant Orgasm Day
+  - sustained synthetic reward drive
+  - saturation and adaptation
+
+- Cocaine Day
+  - synthetic global hyperexcitability
+  - gain and stability perturbation
+
+No pharmacological Special Day implies biological pharmacological
+fidelity unless a separately validated biological model exists.
+
+### Community voting
+
+Add OAuth-backed voting when the Panopticon public layer is ready.
+
+Design goals:
+
+- minimal OAuth scopes,
+- one-account/one-vote enforcement where practical,
+- anti-abuse protection,
+- explicit privacy disclosure,
+- no dependency between voter identity and scientific telemetry,
+- append-only or auditable vote records.
+
+Voting initially selects only exploratory or entertainment activities.
+
+### Monetization
+
+The Panopticon may later support:
+
+- donations,
+- supporter ranks,
+- sponsored Special Days,
+- merchandise,
+- premium historical visualization,
+- research sponsorship.
+
+Financial support may influence scheduling of exploratory entertainment.
+
+It must never influence scientific interpretation or result retention.
+
+### Visual identity
+
+When full-body MQ-001 visualization is introduced:
+
+- retain the original fly identity,
+- include the canonical tie,
+- allow state-specific visual reactions,
+- preserve the existing mood/status portrait concept.
+
+Special-Day state should be visibly obvious in the Panopticon UI.
+
+Examples:
+
+`SPECIAL DAY: LEFT EYE ONLY`
+
+`SPECIAL DAY: CONSTANT ORGASM`
+
+`SPECIAL DAY: MANAGEMENT CONSULTANT`
+
+Each should also expose its sober scientific alias and experimental
+classification.
+
+### Separation from MQ-5
+
+MQ-5 remains a pre-registered intervention and perturbation program.
+
+Special Days must not alter MQ-5 hypotheses, controls, targets, timing,
+outcome definitions, or frozen artifacts.
+
+Interesting Special-Day observations may generate future hypotheses.
+
+They do not become MQ-5 evidence after the fact.

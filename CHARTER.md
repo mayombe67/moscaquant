@@ -1259,3 +1259,196 @@ The evidentiary standard must not relax.
 Financial semantics remain:
 
 **NOT ASSIGNED**
+
+## Panopticon Public Experiment and Entertainment Layer
+
+MoscaQuant is simultaneously:
+
+1. a serious experimental project,
+2. an intentionally absurd public spectacle.
+
+These roles may coexist only if their boundaries remain explicit.
+
+The entertainment layer must never silently alter the scientific record.
+
+### Special Days
+
+The Panopticon may host clearly labeled novelty or exploratory
+perturbations known publicly as **Special Days**.
+
+Example public modes include:
+
+- Left Eye Day,
+- Right Eye Day,
+- Super Genius Day,
+- Cocaine Day,
+- Constant Orgasm Day,
+- Sleep-Deprived Fly Day,
+- Sedated Fly Day,
+- Sensory Deprivation Day,
+- White Noise Day,
+- Groundhog Day,
+- Everything Is DOGE Day,
+- Half-Brain Day,
+- Management Consultant Day,
+- Latency From Hell Day,
+- Glitch in the Matrix Day.
+
+These names are entertainment labels.
+
+Where useful, a Special Day should also expose a sober scientific alias
+describing the actual perturbation.
+
+Examples:
+
+- `LEFT EYE DAY`
+  -> unilateral sensory-input restriction
+
+- `CONSTANT ORGASM DAY`
+  -> sustained reward-saturation perturbation
+
+- `MANAGEMENT CONSULTANT DAY`
+  -> constrained topology-randomization control
+
+- `GROUNDHOG DAY`
+  -> repeated-input state-dependence experiment
+
+The public name may be ridiculous.
+
+The underlying perturbation definition must not be ambiguous.
+
+### Special-Day scientific status
+
+Special Days default to:
+
+**EXPLORATORY / ENTERTAINMENT**
+
+They are not confirmatory experiments merely because they produce
+interesting behavior.
+
+Special-Day telemetry must remain distinguishable from:
+
+- frozen baseline telemetry,
+- pre-registered experiments,
+- confirmatory intervention results,
+- evidence used to support scientific claims.
+
+A Special Day may later motivate a formal scientific experiment.
+
+If so, the resulting hypothesis, controls, targets, timing, and outcome
+criteria must be defined separately before confirmatory data are
+examined.
+
+Public engagement must never retroactively convert an exploratory result
+into a pre-registered one.
+
+### Community voting
+
+The Panopticon may allow authenticated users to vote on upcoming
+Special Days, novelty experiments, presentation themes, or other
+non-confirmatory activities.
+
+Community voting may influence what exploratory entertainment experiment
+is performed next.
+
+Community voting must not determine:
+
+- whether a scientific result is published,
+- which confirmatory results are retained,
+- whether a failed experiment is hidden,
+- scientific thresholds after results are known,
+- the interpretation of frozen evidence.
+
+Money or popularity may select the next joke.
+
+They may not select the conclusion.
+
+### Authentication and privacy
+
+OAuth or equivalent authentication may be used for voting,
+anti-abuse controls, supporter identity, or community features.
+
+MoscaQuant should request the minimum practical authentication scope.
+
+User information should be collected only when it has a defined product
+purpose.
+
+The Panopticon must clearly disclose what information is collected and
+why.
+
+Authentication data, supporter data, community data, and scientific
+telemetry are separate concerns.
+
+User identity must not become an implicit scientific variable.
+
+### Monetization
+
+MoscaQuant is permitted to generate revenue.
+
+Potential mechanisms include:
+
+- voluntary donations,
+- supporter memberships,
+- merchandise,
+- sponsorships,
+- premium presentation or historical telemetry access,
+- community-driven novelty-event sponsorship,
+- research sponsorship.
+
+Monetization must not alter scientific reporting.
+
+Sponsors, donors, voters, supporters, or customers receive no right to:
+
+- suppress results,
+- rewrite hypotheses after outcomes are known,
+- hide negative findings,
+- change frozen experimental evidence,
+- convert exploratory observations into confirmatory claims.
+
+Commercial success is not scientific evidence.
+
+Scientific failure is not commercial failure.
+
+### WARDEN-01 and financial attribution
+
+Future real-money operation must preserve explicit attribution between:
+
+- raw MQ-001 proposals,
+- WARDEN-01 approved proposals,
+- WARDEN-01 rejected proposals,
+- executed trades,
+- realized financial outcomes.
+
+WARDEN-01 must not accidentally become the profitable strategy while
+MQ-001 receives the scientific or public credit.
+
+The brain proposes.
+
+The Pi disposes.
+
+### Fly Wife's Boyfriend Capital
+
+Public-facing MoscaQuant language may refer to future experimental
+capital as:
+
+**FLY WIFE'S BOYFRIEND CAPITAL**
+
+This is a meme-layer term only.
+
+Formal experiment and risk artifacts must use precise financial and risk
+terminology.
+
+Financial semantics remain:
+
+**NOT ASSIGNED**
+
+until the corresponding project gate is explicitly passed.
+
+### MQ-001 presentation canon
+
+When MQ-001 receives a full-body Panopticon representation, the canonical
+presentation includes a tie.
+
+The presentation layer may be absurd.
+
+The scientific artifacts remain boring.
