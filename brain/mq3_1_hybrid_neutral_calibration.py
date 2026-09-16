@@ -196,7 +196,7 @@ def run_once(
         TERRITORIES
     )
 
-    runtime = HybridHybridVisualTransductionRuntime(
+    runtime = HybridVisualTransductionRuntime(
         connectome=connectome,
         retinal_indices=retinal_indices,
         relay_artifact=RELAY,
