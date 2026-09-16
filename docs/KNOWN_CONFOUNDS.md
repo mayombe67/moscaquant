@@ -42,13 +42,26 @@ Mitigation direction:
 
 ## CONF-002 — Runtime implementation dependence
 
-Status: `OPEN`
+Status: `OPEN — SUBSTANTIALLY MITIGATED`
 
 Validated causal behavior has primarily been observed using the current
 MoscaQuant simulation implementation.
 
 A result reproduced only by one implementation may include
 implementation-specific behavior.
+
+Evidence to date:
+
+- MQ-5.6 reproduced selected direct-edge, two-hop pathway, and convergence
+  findings using an independently implemented full-network reference runtime.
+- All predefined numerical and qualitative replication gates passed.
+- The independent runtime did not inherit from or call the production neural
+  runtime or MQ-5 intervention runtime.
+
+Remaining limitation:
+
+- independent replication currently covers a selected frozen causal subset,
+  not the entire validated population or every experimental condition.
 
 Affected claims:
 
@@ -177,12 +190,25 @@ Evaluate multiple appropriate null families, potentially including:
 
 ## CONF-007 — Deterministic reruns are not statistical replication
 
-Status: `OPEN`
+Status: `OPEN — PARTIALLY MITIGATED`
 
 Exact deterministic reruns establish software reproducibility.
 
 They do not establish robustness across stochastic variation, input
 variation, implementations, or populations.
+
+Evidence to date:
+
+- MQ-5.6 added independent-implementation replication for selected causal
+  findings and reproduced them within predefined tolerances.
+- This goes beyond identical-code deterministic reruns.
+
+Remaining:
+
+- stochastic multi-seed robustness if randomness is introduced
+- broader input variation
+- wider replication coverage
+- population-level replication
 
 Affected claims:
 
