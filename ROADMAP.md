@@ -408,3 +408,135 @@ outcome definitions, or frozen artifacts.
 Interesting Special-Day observations may generate future hypotheses.
 
 They do not become MQ-5 evidence after the fact.
+
+## Financial Validation and Warden Hardening Gates
+
+### Statistical framework
+
+Before any future confirmatory experiment with ambiguous or partial
+outcomes:
+
+- define the experimental unit,
+- define the effect metric,
+- define the null/control distribution,
+- define the classification rule,
+- freeze those choices before outcome inspection.
+
+Do not assume independent Bernoulli trials when biological or simulated
+units are dependent.
+
+### Known-confounds register
+
+Maintain:
+
+`docs/KNOWN_CONFOUNDS.md`
+
+Each entry should have:
+
+- identifier,
+- description,
+- status,
+- affected claims or phases,
+- mitigation plan,
+- resolution evidence where applicable.
+
+Allowed statuses:
+
+- `OPEN`
+- `MITIGATED`
+- `RESOLVED`
+
+### Hypothesis-family stopping rules
+
+Before iterative financial-model development begins, define explicit
+stopping criteria for each major hypothesis family.
+
+Repeated encoder or decoder tuning must not continue indefinitely after
+confirmatory failure.
+
+### MQ-8.5 — Historical Held-Out Financial Validation
+
+Before broker integration:
+
+1. freeze the encoder and decoder,
+2. freeze historical-data partitions,
+3. prevent future-data leakage,
+4. include transaction costs and slippage,
+5. perform walk-forward or equivalent time-respecting evaluation,
+6. compare against appropriate simple baselines,
+7. compare against shuffled/null Mosca controls,
+8. evaluate once on a final held-out period,
+9. publish the result whether favorable, null, or negative.
+
+Candidate comparison baselines include:
+
+- buy-and-hold,
+- always-flat,
+- random-action,
+- simple momentum,
+- simple mean-reversion,
+- shuffled Mosca,
+- real-topology Mosca.
+
+Passing MQ-8.5 is required before financial semantics may advance toward
+real-money operation.
+
+### Pre-Warden red-team protocol
+
+Before WARDEN-01 production deployment, create a pre-registered
+adversarial safety protocol defining:
+
+- attacks,
+- failure modes,
+- pass conditions,
+- fail-closed behavior,
+- recovery behavior,
+- audit requirements.
+
+No broker credential should be exposed to MQ-001 directly.
+
+### Special-Day addition
+
+Add:
+
+**EFFICIENT MARKET DAY**
+
+Public interpretation:
+
+A convincing-looking market stream containing no intended exploitable
+structure.
+
+Scientific alias:
+
+`structure-null sensory input control`
+
+Purpose:
+
+Measure whether MQ-001 produces apparent structure or confidence when the
+input-generating process is deliberately null-like.
+
+### Achievement additions
+
+Add the following Panopticon achievements:
+
+**SHUFFLED MOSCA WON, WE HAVE ADMITTED IT**
+
+Unlock condition:
+
+A pre-defined shuffled/null control outperforms the corresponding
+real-topology experiment and the negative result is retained and reported.
+
+Purpose:
+
+Reward scientific honesty, not performance.
+
+**STILL SUBTHRESHOLD**
+
+Unlock/display condition:
+
+Relevant monitored activity remains below the defined firing threshold.
+
+Achievement logic must consume already-defined scientific outcomes.
+
+Scientific criteria must never be changed in order to unlock an
+achievement.
