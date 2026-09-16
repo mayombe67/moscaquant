@@ -1,0 +1,36 @@
+[experiment]
+id = "mq5-2-43417-to-656-v1"
+phase = "MQ-5.2"
+classification = "confirmatory"
+condition = "A"
+
+[causal_edge]
+presynaptic_model_index = 43417
+postsynaptic_model_index = 656
+causal_frame = 145
+
+[intervention]
+attenuation_levels = [0.0, 0.25, 0.50, 0.75, 1.0]
+start_frame = 145
+end_frame = 145
+
+[controls]
+baseline = true
+sham = true
+require_exact_baseline_sham_identity = true
+require_frozen_artifacts_unchanged = true
+
+[outcomes]
+record_target_voltage_trace = true
+record_source_effective_trace = true
+record_voltage_at_causal_frame = true
+record_peak_voltage = true
+record_peak_frame = true
+record_integrated_positive_voltage = true
+record_positive_frame_count = true
+record_first_positive_frame = true
+
+[interpretation]
+financial_semantics_used = false
+biological_causality_claim = false
+claim_scope = "causal perturbation within frozen MoscaQuant model"
