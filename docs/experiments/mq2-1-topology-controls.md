@@ -605,3 +605,93 @@ Higher-priority MQ-2.1 controls are now:
 
 The existing topology ensembles should remain frozen while these orthogonal
 controls are evaluated.
+## Ticker-to-Territory Permutation Control
+
+A balanced asset-to-retinal-territory permutation control tested whether the
+MQ-2.1 A/B result depended on the original ticker assignment.
+
+The control used twelve precommitted mappings:
+
+* six cyclic rotations;
+* six reversed cyclic rotations.
+
+Across the twelve mappings, each of the six assets occupied each retinal
+territory exactly twice.
+
+Only asset-to-territory assignment changed.
+
+The following remained frozen:
+
+* synthetic market histories;
+* feature calculations;
+* per-asset causal normalization;
+* retinal territory geometry;
+* sensory gain;
+* visual-transduction model;
+* `release_gain_v1`;
+* MaleCNS connectome.
+
+### Input Perturbation Validation
+
+The permutation control produced genuinely different inputs.
+
+For Condition A:
+
+* unique normalized-history hashes: `12 / 12`;
+* unique retinal-stimulus hashes: `12 / 12`.
+
+For Condition B:
+
+* unique normalized-history hashes: `12 / 12`;
+* unique retinal-stimulus hashes: `12 / 12`.
+
+The control therefore changed what the artificial retinal population received
+and was not merely a relabeling of identical inputs.
+
+The first eight observations were identical across assets by construction.
+
+After the synthetic histories diverged, all six normalized asset rows became
+distinct.
+
+### Propagation Results
+
+Across all twelve ticker-to-territory mappings:
+
+| Measure                               | Condition A | Condition B |
+| ------------------------------------- | ----------: | ----------: |
+| Mappings with relay spikes            |     12 / 12 |      0 / 12 |
+| Mappings with excitatory relay spikes |     12 / 12 |      0 / 12 |
+
+The L2/L3-attributed downstream peak for Condition A was identical across all
+twelve tested mappings:
+
+`0.44255319237709045`
+
+Condition B remained:
+
+`0.0`
+
+The equality of this scalar peak does not imply identical neural trajectories.
+The retinal stimulus hashes differed across every mapping.
+
+It establishes only that the maximum L2/L3-attributed downstream response
+measured by this experiment was invariant across the tested balanced
+asset-to-territory assignments.
+
+## Permutation-Control Interpretation
+
+The original A/B relay-level distinction is not dependent on the original
+BTC, ETH, SOL, XRP, HBAR, DOGE ordering across retinal territories.
+
+Condition A continued to produce biological relay activity and excitatory
+relay propagation for every tested mapping.
+
+Condition B failed to produce relay activity for every tested mapping.
+
+This strengthens the interpretation that the observed A/B distinction reflects
+the structure of the synthetic market conditions rather than one fortunate
+ticker-to-retinal-territory assignment.
+
+It does not establish invariance to every possible one of the `6! = 720`
+ticker permutations, nor does it establish market understanding,
+prediction, preference, learning, or trading performance.
