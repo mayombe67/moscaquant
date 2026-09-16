@@ -99,6 +99,8 @@
     replayFps: 8,
     replayTimer: null,
 
+    trace: null,
+
     animationFrame: null,
   };
 
@@ -825,6 +827,338 @@
     };
   }
 
+
+  function causalEdgeKey(edge) {
+    return `${edge.source}->${edge.target}`;
+  }
+
+  function causalNodes() {
+    const ids = new Set();
+
+    for (const edge of state.edges) {
+      ids.add(edge.source);
+      ids.add(edge.target);
+    }
+
+    return state.nodes
+      .filter((node) => ids.has(node.id))
+      .sort((a, b) => {
+        const ai = Number(a.raw?.i ?? a.index);
+        const bi = Number(b.raw?.i ?? b.index);
+
+        return ai - bi;
+      });
+  }
+
+  function causalModelIndex(nodeId) {
+    const node = state.nodes.find(
+      (candidate) => candidate.id === nodeId
+    );
+
+    return node
+      ? Number(node.raw?.i ?? node.index)
+      : null;
+  }
+
+  function buildCausalTrace(rootId) {
+    const upstreamDepth = new Map();
+    const downstreamDepth = new Map();
+
+    const upstreamQueue = [
+      [rootId, 0],
+    ];
+
+    const seenUpstream = new Set([
+      rootId,
+    ]);
+
+    while (upstreamQueue.length) {
+      const [current, depth] =
+        upstreamQueue.shift();
+
+      for (const edge of state.edges) {
+        if (edge.target !== current) {
+          continue;
+        }
+
+        if (
+          seenUpstream.has(edge.source)
+        ) {
+          continue;
+        }
+
+        const nextDepth = depth + 1;
+
+        seenUpstream.add(edge.source);
+
+        upstreamDepth.set(
+          edge.source,
+          nextDepth
+        );
+
+        upstreamQueue.push([
+          edge.source,
+          nextDepth,
+        ]);
+      }
+    }
+
+    const downstreamQueue = [
+      [rootId, 0],
+    ];
+
+    const seenDownstream = new Set([
+      rootId,
+    ]);
+
+    while (downstreamQueue.length) {
+      const [current, depth] =
+        downstreamQueue.shift();
+
+      for (const edge of state.edges) {
+        if (edge.source !== current) {
+          continue;
+        }
+
+        if (
+          seenDownstream.has(edge.target)
+        ) {
+          continue;
+        }
+
+        const nextDepth = depth + 1;
+
+        seenDownstream.add(edge.target);
+
+        downstreamDepth.set(
+          edge.target,
+          nextDepth
+        );
+
+        downstreamQueue.push([
+          edge.target,
+          nextDepth,
+        ]);
+      }
+    }
+
+    const nodes = new Set([
+      rootId,
+      ...upstreamDepth.keys(),
+      ...downstreamDepth.keys(),
+    ]);
+
+    const edges = new Set();
+
+    for (const edge of state.edges) {
+      if (
+        nodes.has(edge.source) &&
+        nodes.has(edge.target)
+      ) {
+        edges.add(
+          causalEdgeKey(edge)
+        );
+      }
+    }
+
+    const maxDepth = Math.max(
+      0,
+      ...upstreamDepth.values(),
+      ...downstreamDepth.values(),
+    );
+
+    return {
+      rootId,
+      nodes,
+      edges,
+      upstreamDepth,
+      downstreamDepth,
+      maxDepth,
+    };
+  }
+
+  function traceNodeRole(nodeId) {
+    const trace = state.trace;
+
+    if (!trace) return null;
+
+    if (nodeId === trace.rootId) {
+      return "root";
+    }
+
+    if (
+      trace.upstreamDepth.has(nodeId)
+    ) {
+      return "upstream";
+    }
+
+    if (
+      trace.downstreamDepth.has(nodeId)
+    ) {
+      return "downstream";
+    }
+
+    return null;
+  }
+
+  function traceEdgeRole(edge) {
+    const trace = state.trace;
+
+    if (!trace) return null;
+
+    const key =
+      causalEdgeKey(edge);
+
+    if (!trace.edges.has(key)) {
+      return null;
+    }
+
+    const upSource =
+      trace.upstreamDepth.has(
+        edge.source
+      );
+
+    const upTarget =
+      trace.upstreamDepth.has(
+        edge.target
+      );
+
+    if (
+      upSource &&
+      (
+        upTarget ||
+        edge.target === trace.rootId
+      )
+    ) {
+      return "upstream";
+    }
+
+    const downSource =
+      trace.downstreamDepth.has(
+        edge.source
+      );
+
+    const downTarget =
+      trace.downstreamDepth.has(
+        edge.target
+      );
+
+    if (
+      downTarget &&
+      (
+        downSource ||
+        edge.source === trace.rootId
+      )
+    ) {
+      return "downstream";
+    }
+
+    return "trace";
+  }
+
+  function clearCausalTrace() {
+    state.trace = null;
+
+    renderSelection();
+    requestDraw();
+  }
+
+  function toggleSelectedTrace() {
+    const node = state.selected;
+
+    if (!node) return;
+
+    const participates =
+      state.edges.some(
+        (edge) =>
+          edge.source === node.id ||
+          edge.target === node.id
+      );
+
+    if (!participates) return;
+
+    if (
+      state.trace?.rootId === node.id
+    ) {
+      clearCausalTrace();
+      return;
+    }
+
+    state.trace =
+      buildCausalTrace(node.id);
+
+    renderSelection();
+    requestDraw();
+  }
+
+  function navigateCausalNode(delta) {
+    const nodes =
+      causalNodes();
+
+    if (!nodes.length) return;
+
+    let index = nodes.findIndex(
+      (node) =>
+        node === state.selected
+    );
+
+    if (index < 0) {
+      index = 0;
+    } else {
+      index =
+        (
+          index +
+          delta +
+          nodes.length
+        ) % nodes.length;
+    }
+
+    state.selected =
+      nodes[index];
+
+    if (state.trace) {
+      state.trace =
+        buildCausalTrace(
+          state.selected.id
+        );
+    }
+
+    renderSelection();
+    requestDraw();
+  }
+
+  function bindTraceControls() {
+    const previous =
+      document.getElementById(
+        "causal-prev"
+      );
+
+    const traceButton =
+      document.getElementById(
+        "trace-path"
+      );
+
+    const next =
+      document.getElementById(
+        "causal-next"
+      );
+
+    previous?.addEventListener(
+      "click",
+      () => navigateCausalNode(-1)
+    );
+
+    next?.addEventListener(
+      "click",
+      () => navigateCausalNode(1)
+    );
+
+    traceButton?.addEventListener(
+      "click",
+      toggleSelectedTrace
+    );
+  }
+
   function drawNodes() {
     const activity =
       currentFrameActivity();
@@ -925,6 +1259,17 @@
             : 0.96;
       }
 
+      const traceRole =
+        traceNodeRole(n.id);
+
+      if (
+        state.trace &&
+        !traceRole
+      ) {
+        alpha *= 0.08;
+        radius *= 0.82;
+      }
+
       if (state.hovered === n) {
         radius += 2;
         alpha = 1;
@@ -947,6 +1292,35 @@
       ctx.fillStyle = fill;
       ctx.globalAlpha = alpha;
       ctx.fill();
+
+      if (traceRole) {
+        const traceColor =
+          traceRole === "root"
+            ? "#d7c4ff"
+            : traceRole === "upstream"
+              ? "#64e9ff"
+              : "#7ef29a";
+
+        ctx.beginPath();
+        ctx.arc(
+          p.x,
+          p.y,
+          radius + 4,
+          0,
+          Math.PI * 2
+        );
+
+        ctx.strokeStyle =
+          traceColor;
+
+        ctx.globalAlpha = 0.95;
+        ctx.lineWidth =
+          traceRole === "root"
+            ? 2.5
+            : 1.8;
+
+        ctx.stroke();
+      }
 
       if (n.responder) {
         ctx.beginPath();
@@ -972,15 +1346,20 @@
     if (!state.edges.length) return;
 
     const byId = new Map(
-      state.projected.map((p) => [p.node.id, p])
+      state.projected.map(
+        (p) => [p.node.id, p]
+      )
     );
 
     const selectedId =
       state.selected?.id ?? null;
 
     for (const edge of state.edges) {
-      const a = byId.get(edge.source);
-      const b = byId.get(edge.target);
+      const a =
+        byId.get(edge.source);
+
+      const b =
+        byId.get(edge.target);
 
       if (!a || !b) continue;
 
@@ -991,17 +1370,43 @@
           edge.target === selectedId
         );
 
-      ctx.strokeStyle = selectedEdge
-        ? "#ffb84d"
-        : CONFIG.causalEdge;
+      const traceRole =
+        traceEdgeRole(edge);
 
-      ctx.lineWidth = selectedEdge
-        ? 3.0
-        : 1.4;
+      if (state.trace) {
+        if (!traceRole) {
+          ctx.strokeStyle =
+            CONFIG.causalEdge;
 
-      ctx.globalAlpha = selectedEdge
-        ? 1.0
-        : 0.58;
+          ctx.lineWidth = 0.8;
+          ctx.globalAlpha = 0.06;
+        } else {
+          ctx.strokeStyle =
+            traceRole === "upstream"
+              ? "#64e9ff"
+              : traceRole === "downstream"
+                ? "#7ef29a"
+                : "#d7c4ff";
+
+          ctx.lineWidth = 2.8;
+          ctx.globalAlpha = 0.95;
+        }
+      } else {
+        ctx.strokeStyle =
+          selectedEdge
+            ? "#ffb84d"
+            : CONFIG.causalEdge;
+
+        ctx.lineWidth =
+          selectedEdge
+            ? 3.0
+            : 1.4;
+
+        ctx.globalAlpha =
+          selectedEdge
+            ? 1.0
+            : 0.58;
+      }
 
       ctx.beginPath();
       ctx.moveTo(a.x, a.y);
@@ -1801,6 +2206,115 @@
         }).join("")
       : "";
 
+    const selectedParticipates =
+      causalEdges.length > 0;
+
+    const selectedTrace =
+      state.trace &&
+      state.trace.nodes.has(n.id)
+        ? state.trace
+        : null;
+
+    const traceActiveHere =
+      state.trace?.rootId === n.id;
+
+    const traceRootModel =
+      state.trace
+        ? causalModelIndex(
+            state.trace.rootId
+          )
+        : null;
+
+    const traceSummaryHtml =
+      selectedTrace
+        ? `
+          <div class="ns-trace-summary">
+            <div>
+              <span>TRACE ROOT</span>
+              <strong>${
+                traceRootModel ?? "—"
+              }</strong>
+            </div>
+
+            <div>
+              <span>NODES</span>
+              <strong>${
+                selectedTrace.nodes.size
+              }</strong>
+            </div>
+
+            <div>
+              <span>EDGES</span>
+              <strong>${
+                selectedTrace.edges.size
+              }</strong>
+            </div>
+
+            <div>
+              <span>MAX DEPTH</span>
+              <strong>${
+                selectedTrace.maxDepth
+              }</strong>
+            </div>
+          </div>
+        `
+        : "";
+
+    const traceNodeHtml =
+      selectedTrace
+        ? [
+            ...[
+              ...selectedTrace.upstreamDepth
+            ].map(([id, depth]) => ({
+              id,
+              depth,
+              direction: "UP",
+            })),
+
+            ...[
+              ...selectedTrace.downstreamDepth
+            ].map(([id, depth]) => ({
+              id,
+              depth,
+              direction: "DOWN",
+            })),
+          ]
+            .sort(
+              (a, b) =>
+                a.depth - b.depth ||
+                Number(
+                  causalModelIndex(a.id)
+                ) -
+                Number(
+                  causalModelIndex(b.id)
+                )
+            )
+            .map((entry) => `
+              <div class="ns-trace-node">
+                <strong class="${
+                  entry.direction === "UP"
+                    ? "up"
+                    : "down"
+                }">
+                  ${entry.direction}
+                </strong>
+
+                <span>
+                  model ${
+                    causalModelIndex(
+                      entry.id
+                    ) ?? "—"
+                  }
+                </span>
+
+                <span>
+                  depth ${entry.depth}
+                </span>
+              </div>
+            `)
+            .join("")
+        : "";
+
     info.innerHTML = `
       <dl class="ns-dl">
 
@@ -1850,6 +2364,58 @@
       </dl>
 
       ${
+        selectedParticipates
+          ? `
+            <div class="ns-trace-controls">
+              <button
+                id="causal-prev"
+                class="ns-trace-button"
+                type="button"
+              >
+                ◀ PREV
+              </button>
+
+              <button
+                id="trace-path"
+                class="ns-trace-button trace"
+                type="button"
+              >
+                ${
+                  traceActiveHere
+                    ? "CLEAR TRACE"
+                    : "TRACE PATH"
+                }
+              </button>
+
+              <button
+                id="causal-next"
+                class="ns-trace-button"
+                type="button"
+              >
+                NEXT ▶
+              </button>
+            </div>
+          `
+          : ""
+      }
+
+      ${traceSummaryHtml}
+
+      ${
+        selectedTrace
+          ? `
+            <div class="ns-trace-list">
+              <div class="ns-causal-title">
+                TRACED NODES
+              </div>
+
+              ${traceNodeHtml}
+            </div>
+          `
+          : ""
+      }
+
+      ${
         causalEdges.length
           ? `
             <div class="ns-causal-block">
@@ -1878,6 +2444,8 @@
           `
       }
     `;
+
+    bindTraceControls();
   }
   // ---------------------------------------------------------------------------
   // Resize / redraw
@@ -2289,6 +2857,90 @@
 
       .ns-dl .warn {
         color: #f5bb65;
+      }
+
+      .ns-trace-controls {
+        display: grid;
+        grid-template-columns:
+          1fr
+          1.4fr
+          1fr;
+        gap: 5px;
+        margin-top: 14px;
+      }
+
+      .ns-trace-button {
+        min-height: 29px;
+        border: 1px solid #303b4a;
+        background: #111722;
+        color: #9da9b8;
+        font-family: monospace;
+        font-size: 8px;
+        cursor: pointer;
+      }
+
+      .ns-trace-button:hover {
+        border-color: #8b5cf6;
+      }
+
+      .ns-trace-button.trace {
+        border-color: #665193;
+        color: #cbbaff;
+      }
+
+      .ns-trace-summary {
+        display: grid;
+        grid-template-columns:
+          1fr 1fr;
+        gap: 5px;
+        margin-top: 10px;
+      }
+
+      .ns-trace-summary > div {
+        padding: 6px 7px;
+        border: 1px solid #27303d;
+        background: #0e131b;
+      }
+
+      .ns-trace-summary span {
+        display: block;
+        color: #626d7b;
+        font-family: monospace;
+        font-size: 7px;
+        letter-spacing: .08em;
+      }
+
+      .ns-trace-summary strong {
+        display: block;
+        margin-top: 2px;
+        color: #d4dae2;
+        font-family: monospace;
+        font-size: 10px;
+      }
+
+      .ns-trace-list {
+        margin-top: 12px;
+      }
+
+      .ns-trace-node {
+        display: grid;
+        grid-template-columns:
+          38px 1fr 55px;
+        gap: 5px;
+        margin: 3px 0;
+        padding: 5px 6px;
+        background: #0e1319;
+        color: #8994a3;
+        font-family: monospace;
+        font-size: 8px;
+      }
+
+      .ns-trace-node .up {
+        color: #64e9ff;
+      }
+
+      .ns-trace-node .down {
+        color: #7ef29a;
       }
 
       .ns-causal-block {
