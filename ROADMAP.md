@@ -2,7 +2,8 @@
 
 **Owner:** YOLO & HODL LLC
 **Subject:** MQ-001
-**Current Phase:** MQ-5 — COMPLETE — ACCEPTED WITH DOCUMENTED LIMITATIONS
+**Current Phase:** MQ-6 — COMPLETE — PRODUCTION CONTAINMENT HARDENING PASSED UNDER TESTED LOCAL CONDITIONS
+**Next Phase:** MQ-7 — AWAKEN THE ORACLE
 
 ## MQ-0 — ACQUIRE SUBJECT
 Load and validate MaleCNS. Build sparse connectivity, identify initial populations, inject controlled stimulus, observe propagation, and record telemetry.
@@ -98,7 +99,25 @@ replication, and read-only Neuroscope intervention replay.
 **Status:** COMPLETE — ACCEPTED WITH DOCUMENTED LIMITATIONS.
 
 ## MQ-6 — DEPLOY THE WARDEN
-Deploy WARDEN-01 and adversarially test the independent risk boundary.
+
+**Status:** COMPLETE — PRODUCTION CONTAINMENT HARDENING PASSED UNDER TESTED LOCAL CONDITIONS.
+
+WARDEN-01 is now a tested independent local authority boundary.
+
+Final Warden regression: **191 / 191 tests passed**.
+
+Broker: NONE
+Exchange: NONE
+Wallet: NONE
+External execution: DISABLED
+Live capital policy: NOT ASSIGNED
+Financial semantics: NOT ASSIGNED
+
+## Infrastructure Side Quest — Cloud Deployment
+
+Cloud migration is infrastructure work, not a new scientific MQ phase. It must preserve accepted MQ-1 through MQ-6 evidence and behavior, keep scientific configuration separate from runtime configuration, and preserve WARDEN-01 as an independent private authority service. WARDEN-01 requires no broker credentials or public Internet access; future broker connectivity belongs to a separate executor.
+
+Cloud migration does not assign financial semantics and does not enable external execution.
 
 ## MQ-7 — AWAKEN THE ORACLE
 Implement and validate the behavioral correction and behavioral-layer
@@ -509,7 +528,7 @@ stopping criteria for each major hypothesis family.
 Repeated encoder or decoder tuning must not continue indefinitely after
 confirmatory failure.
 
-### MQ-8.5 — Historical Held-Out Financial Validation
+### Pre-Financial-Semantics — Historical Held-Out Financial Validation
 
 Before broker integration:
 
@@ -533,13 +552,12 @@ Candidate comparison baselines include:
 - shuffled Mosca,
 - real-topology Mosca.
 
-Passing MQ-8.5 is required before financial semantics may advance toward
-real-money operation.
+Passing this held-out financial-validation gate is required before financial
+semantics may advance toward real-money operation.
 
-### Pre-Warden red-team protocol
+### Warden red-team completion state
 
-Before WARDEN-01 production deployment, create a pre-registered
-adversarial safety protocol defining:
+MQ-6 completed a frozen adversarial safety and containment program covering:
 
 - attacks,
 - failure modes,

@@ -192,7 +192,7 @@ Kubernetes will not be introduced merely because management has heard of it.
 
 8. WARDEN-01
 
-WARDEN-01 is the independent risk and execution authority.
+WARDEN-01 is the independent risk and authorization authority.
 
 Initial physical host:
 
@@ -907,14 +907,14 @@ YOLO & HODL LLC
 MOSCAQUANT
 
 SUBJECT ................. MQ-001
-CURRENT PHASE ........... MQ-5 COMPLETE
-NEXT PHASE .............. MQ-6 / DEPLOY THE WARDEN
-MISSION ................. POST-MQ-5 HARDENING / WARDEN PREPARATION
+CURRENT PHASE ........... MQ-6 COMPLETE
+NEXT PHASE .............. MQ-7 / AWAKEN THE ORACLE
+MISSION ................. MQ-7 / BEHAVIORAL LAYER PREPARATION
 
 BROKER .................. NONE
 TRADING AUTHORITY ....... NONE
 ORACLE .................. DORMANT
-WARDEN-01 ............... NOT DEPLOYED
+WARDEN-01 ............... MQ-6 COMPLETE / LOCAL AUTHORITY SERVICE
 PANOPTICON .............. NOT DEPLOYED
 
 CONTAINMENT ............. ACTIVE
@@ -924,8 +924,8 @@ FINANCIAL SEMANTICS ..... NOT ASSIGNED
 CURRENT DIRECTIVE:
 
 PRESERVE THE ACCEPTED MQ-5 SCIENTIFIC RECORD AND ITS CLAIM BOUNDARIES.
-MQ-6 MAY DESIGN AND TEST WARDEN-01, BUT NO FINANCIAL OR TRADING SEMANTICS
-ARE RETROACTIVELY ASSIGNED TO MQ-1 THROUGH MQ-5.
+MQ-6 COMPLETED WARDEN-01 AUTHORITY, CONTAINMENT, AND ADVERSARIAL TESTING.
+NO FINANCIAL OR TRADING SEMANTICS ARE RETROACTIVELY ASSIGNED TO MQ-1 THROUGH MQ-5.
 
 Past performance does not guarantee future sugar cubes.
 
@@ -1144,6 +1144,26 @@ MQ-5 asks:
 > What changes when we deliberately intervene on that evidence-defined system?
 
 **Anatomy. Evidence. Causality. Next.**
+
+## MQ-6 Canonical Authority and Execution Boundary
+
+MQ-6 is **COMPLETE**. WARDEN-01 completed its local authority-boundary and production-containment program with **191 / 191 tests passed** under tested local conditions.
+
+Accepted MQ-6 capabilities include exact authority accounting, durable replay protection, fail-closed persistence, versioned `warden-interface-v1`, sanitized telemetry, local Unix-domain-socket IPC, OS-derived peer identity, socket containment, tamper-evident audit chaining, generated adversarial testing, real SIGKILL/restart resilience, resource-pressure testing, and hardened supervisor/OS sandboxing.
+
+Canonical architecture:
+
+`MQ-001 / MoscaQuant -> WARDEN-01 -> Future Execution Adapter -> Broker / Exchange`
+
+WARDEN-01 owns authorization, accounting, replay protection, persistence, and audit evidence. It does **not** require broker credentials, exchange credentials, wallet credentials, public Internet connectivity, broker SDKs, or exchange SDKs.
+
+External execution, if later authorized by the roadmap, belongs to a separate execution adapter. Future reporting must distinguish MQ-001 proposals, Warden approvals/denials, executor behavior, and realized external outcomes.
+
+MQ-6 does not alter the accepted MQ-1 through MQ-5 scientific record.
+
+**Financial semantics remain: NOT ASSIGNED**
+
+**External execution remains: DISABLED**
 
 ## Methodological Hardening After MQ-4
 
