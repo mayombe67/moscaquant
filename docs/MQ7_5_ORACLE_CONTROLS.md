@@ -132,7 +132,18 @@ Every shuffled condition must record:
 
 A shuffle must never be rerolled because of an undesirable result.
 
-## 9. Control ownership
+Initial shuffle algorithm:
+
+`sha256-sort/v1`
+
+For each eligible evidence reference:
+
+`SHA256(seed || NUL || evidence_ref)`
+
+Evidence references are ordered lexicographically by the resulting digest.
+
+This makes O3 deterministic independently of Python PRNG implementation details.
+\n\n## 9. Control ownership
 
 The harness controls experimental routing only.
 

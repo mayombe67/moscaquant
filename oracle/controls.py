@@ -2,7 +2,6 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from enum import StrEnum
-import random
 
 from oracle.models import OracleInput, OracleProposal, OracleState
 from oracle.state import transition
@@ -54,12 +53,17 @@ def _shuffle_evidence(
     *,
     seed: int,
 ) -> tuple[str, ...]:
-    items = list(refs)
+    import hashlib
 
-    rng = random.Random(seed)
-    rng.shuffle(items)
+    decorated = []
 
-    return tuple(items)
+    for ref in refs:
+        payload = f"{seed}\0{ref}".encode("utf-8")
+        digest = hashlib.sha256(payload).hexdigest()
+        decorated.append((digest, ref))
+
+    decorated.sort()
+    return tuple(ref for _, ref in decorated)
 
 
 def apply_control(
@@ -141,7 +145,7 @@ def apply_control(
 
         provenance = ControlProvenance(
             control=selected,
-            shuffle_algorithm="python-random/v1",
+            shuffle_algorithm="sha256-sort/v1",
             shuffle_seed=shuffle_seed,
             original_evidence_refs=oracle_input.evidence_refs,
             transformed_evidence_refs=shuffled,
