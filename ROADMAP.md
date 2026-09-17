@@ -640,3 +640,24 @@ The minimal production baseline has been verified:
 Neuroscope remains an interpretation and replay instrument only. It does not execute interventions or create causal evidence.
 
 Further infrastructure expansion is deferred unless required by a scientific or operational milestone.
+
+### MQ-7.3 — Oracle Audit/Event Construction — COMPLETE
+
+ORACLE-01 now emits tamper-evident audit records for deterministic state transitions.
+
+Implemented properties:
+
+- canonical serialization;
+- SHA-256 object hashing;
+- immutable Oracle event records;
+- event construction from Oracle input, prior state, proposal, and resulting state;
+- previous-event hash chaining;
+- genesis-event handling;
+- chain-link verification;
+- tamper detection;
+- Oracle transition wrapper that emits state, proposal, and audit event together.
+
+No adaptive learning, reinforcement, Sugar Cube selection, market strategy, or execution logic is present in MQ-7.3.
+
+ORACLE-01 remains proposal-only and WARDEN-01 retains independent authority.
+
