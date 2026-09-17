@@ -2,10 +2,11 @@ from __future__ import annotations
 
 import hashlib
 import json
-from dataclasses import asdict, is_dataclass
+from dataclasses import asdict, is_dataclass, replace
 from typing import Any
+from datetime import datetime, timezone
 
-from oracle.models import OracleEvent
+from oracle.models import OracleEvent, OracleInput, OracleProposal, OracleState
 
 
 class OracleAuditError(ValueError):
@@ -104,3 +105,43 @@ def verify_chain_sequence(
     for event in events:
         verify_chain(previous, event)
         previous = event
+
+
+def build_event(
+    *,
+    event_id: str,
+    oracle_input: OracleInput,
+    pre_state: OracleState,
+    proposal: OracleProposal,
+    post_state: OracleState,
+    oracle_artifact_hash: str,
+    previous_event_hash: str | None,
+    intervention_id: str | None = None,
+    entropy_commitment: str | None = None,
+    warden_disposition: str | None = None,
+    notes: str | None = None,
+) -> OracleEvent:
+    event = OracleEvent(
+        schema_version="oracle-event/v1",
+        event_id=event_id,
+        timestamp=datetime.now(timezone.utc).isoformat(),
+        experiment_id=oracle_input.experiment_id,
+        session_id=oracle_input.session_id,
+        oracle_version=proposal.oracle_version,
+        oracle_artifact_hash=oracle_artifact_hash,
+        input_hash=sha256_hex(oracle_input),
+        pre_state_hash=pre_state.state_hash,
+        proposal_hash=sha256_hex(proposal),
+        post_state_hash=post_state.state_hash,
+        previous_event_hash=previous_event_hash,
+        event_hash="",
+        intervention_id=intervention_id,
+        entropy_commitment=entropy_commitment,
+        warden_disposition=warden_disposition,
+        notes=notes,
+    )
+
+    return replace(
+        event,
+        event_hash=compute_event_hash(event),
+    )

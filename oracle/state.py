@@ -2,8 +2,9 @@ from __future__ import annotations
 
 from dataclasses import replace
 
-from oracle.audit import sha256_hex
+from oracle.audit import build_event, sha256_hex
 from oracle.models import (
+    OracleEvent,
     OracleInput,
     OracleProposal,
     OracleState,
@@ -119,3 +120,33 @@ def transition(
     validate_proposal(proposal)
 
     return next_state, proposal
+
+
+def transition_with_event(
+    *,
+    oracle_input: OracleInput,
+    prior_state: OracleState,
+    event_id: str,
+    oracle_artifact_hash: str,
+    previous_event_hash: str | None,
+) -> tuple[
+    OracleState,
+    OracleProposal,
+    OracleEvent,
+]:
+    next_state, proposal = transition(
+        oracle_input=oracle_input,
+        prior_state=prior_state,
+    )
+
+    event = build_event(
+        event_id=event_id,
+        oracle_input=oracle_input,
+        pre_state=prior_state,
+        proposal=proposal,
+        post_state=next_state,
+        oracle_artifact_hash=oracle_artifact_hash,
+        previous_event_hash=previous_event_hash,
+    )
+
+    return next_state, proposal, event
