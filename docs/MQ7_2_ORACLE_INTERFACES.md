@@ -1,3 +1,7 @@
+**System:** ORACLE-01  
+**Codename:** GLaDOS  
+**Role:** Behavioral interpretation / adaptation layer  
+**Authority:** None
 # MQ-7.2 — Oracle Interface & State Model
 
 **Status:** DESIGN FREEZE BEFORE BEHAVIORAL IMPLEMENTATION

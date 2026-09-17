@@ -1,3 +1,7 @@
+**System:** ORACLE-01  
+**Codename:** GLaDOS  
+**Role:** Behavioral interpretation / adaptation layer  
+**Authority:** None
 # MQ-7.1 — ORACLE Behavioral-Layer Protocol Freeze
 
 **Status:** FROZEN BEFORE IMPLEMENTATION
