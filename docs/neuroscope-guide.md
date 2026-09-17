@@ -4,6 +4,18 @@
 **Component:** Neuroscope — MQ-4 foundation with MQ-5.7 intervention replay
 **Scope:** MQ-4.1 through MQ-4.8 plus MQ-5.7 read-only intervention replay
 **Status:** Operator Guide
+## Public Production Deployment
+
+A public read-only deployment of Neuroscope is available at:
+
+`https://moscaquant.com/neuroscope/`
+
+The production deployment serves static accepted scientific artifacts only.
+
+It does not provide an experiment-execution, intervention, trading, authority, or WARDEN-01 control path.
+
+The local development workflow documented below remains the reproducibility path for building and inspecting Neuroscope from a repository checkout.
+
 
 > **Same neurons. Deeper questions.**
 
