@@ -683,3 +683,35 @@ The event chain remains the authoritative historical record.
 State snapshots are derived convenience artifacts and must agree with the final verified event.
 
 No learning, reinforcement, Sugar Cube selection, market strategy, authority, or execution logic is present in MQ-7.4.
+
+### MQ-7.5 — Oracle Control-Condition Harness — COMPLETE
+
+ORACLE-01 now supports explicit experimental control conditions:
+
+- `O0_NO_ORACLE`
+- `O1_STATIC_ORACLE`
+- `O2_ADAPTIVE_ORACLE`
+- `O3_SHUFFLED_ORACLE`
+
+Implemented properties:
+
+- unknown control identifiers fail closed;
+- O0 bypass is distinct from Oracle abstention;
+- O1 executes deterministic non-adaptive Oracle behavior;
+- O2 is explicitly labeled but remains non-adaptive;
+- O3 uses deterministic `sha256-sort/v1` evidence shuffling;
+- O3 requires an explicit seed;
+- original evidence remains unchanged;
+- shuffle provenance is retained;
+- control selection is explicit experimental provenance.
+
+The O3 shuffle is defined as:
+
+`SHA256(seed || NUL || evidence_ref)`
+
+Eligible evidence references are ordered lexicographically by the resulting digest.
+
+This avoids dependence on Python PRNG implementation details.
+
+No learning, reinforcement, Sugar Cube selection, market strategy, authority, or execution logic is present in MQ-7.5.
+
