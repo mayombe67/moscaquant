@@ -35,3 +35,25 @@ Heavy scientific compute may later burst to ephemeral workers without changing s
 
 Current public surface: temporary MoscaQuant coming-soon page.
 
+### Verified cloud baseline
+
+The initial MoscaQuant cloud baseline has been deployed and verified.
+
+Verified properties:
+
+- `moscaquant.com` is served over TLS through Nginx.
+- `www.moscaquant.com` redirects to the canonical apex domain.
+- automated certificate renewal passes a Certbot dry-run.
+- `/healthz` provides a minimal public host-health check.
+- Neuroscope is deployed as a static, read-only science surface at `/neuroscope/`.
+- Neuroscope exposes accepted scientific artifacts only and provides no execution or authority path.
+- WARDEN-01 remains a local-only private authority service and is not exposed through Nginx or public DNS.
+- WARDEN-01 automatically recovers after host reboot.
+- authoritative state survives host reboot.
+- the unprivileged `ubuntu` account cannot access WARDEN-01 IPC or authoritative state.
+
+The public science deployment verified at this checkpoint corresponds to commit:
+
+`6e24093f9013b0d0c2600d669e9bb54dce90cfd4`
+
+Deployment state does not alter accepted scientific configuration or experiment semantics.

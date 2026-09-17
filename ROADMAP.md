@@ -623,3 +623,20 @@ Achievement logic must consume already-defined scientific outcomes.
 
 Scientific criteria must never be changed in order to unlock an
 achievement.
+
+### Cloud baseline checkpoint — COMPLETE
+
+The minimal production baseline has been verified:
+
+- TLS and canonical-domain routing;
+- certificate-renewal simulation;
+- public host-health endpoint;
+- reboot recovery;
+- WARDEN-01 service and IPC restoration;
+- persistence of authoritative state across reboot;
+- operating-system isolation of WARDEN-01 IPC and state;
+- static read-only Neuroscope deployment.
+
+Neuroscope remains an interpretation and replay instrument only. It does not execute interventions or create causal evidence.
+
+Further infrastructure expansion is deferred unless required by a scientific or operational milestone.
