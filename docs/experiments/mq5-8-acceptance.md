@@ -2,7 +2,14 @@
 
 Status:
 
-**ACCEPTANCE REVIEW FROZEN — FINAL VERDICT PENDING**
+**COMPLETE — ACCEPTED WITH DOCUMENTED LIMITATIONS**
+
+Final acceptance audit:
+
+- checks: 75
+- passed: 75
+- failed: 0
+- acceptance gates: ALL PASSED
 
 ## Purpose
 
@@ -211,3 +218,45 @@ claim-boundary checks pass.
 
 A failed criterion must be documented rather than repaired by changing the
 acceptance rule after inspection.
+
+## Final verdict
+
+MQ-5 is formally accepted.
+
+The completed phase supports reproducible simulated causal effects across:
+
+- generalized single-node intervention,
+- two-hop pathway perturbation,
+- convergent-input perturbation,
+- frozen matched and timing controls,
+- a tested causal median / MAD normalization alternative,
+- selected independent full-network runtime replication,
+- read-only Neuroscope intervention replay.
+
+Acceptance does not resolve the remaining documented confounds.
+
+In particular, acceptance does not establish:
+
+- biological causality in living Drosophila,
+- general sensory-encoding independence,
+- validity across the full descending-neuron population,
+- uniqueness against every appropriate null-model family,
+- financial usefulness,
+- predictive trading value,
+- trading profitability.
+
+The accepted scientific scope remains:
+
+**Frozen MoscaQuant simulation model**
+
+Biological causality:
+
+**NOT CLAIMED**
+
+Financial semantics:
+
+**NOT ASSIGNED**
+
+MQ-5 final classification:
+
+**COMPLETE — ACCEPTED WITH DOCUMENTED LIMITATIONS**

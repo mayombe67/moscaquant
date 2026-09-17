@@ -224,7 +224,7 @@ MQ-5 must not:
 
 ### Current phase chain
 
-`MQ-1 → MQ-2 → MQ-3 → MQ-4 COMPLETE → MQ-5.6 COMPLETE → MQ-5.7 ACTIVE`
+`MQ-1 → MQ-2 → MQ-3 → MQ-4 COMPLETE → MQ-5 COMPLETE`
 
 MQ-5 status:
 
@@ -235,8 +235,18 @@ MQ-5 status:
 - MQ-5.5 — Sham and Specificity Tests: COMPLETE
 - CONF-004A — Robust Normalization Hardening: COMPLETE
 - MQ-5.6 — Replication and Stability: COMPLETE
-- MQ-5.7 — Neuroscope Intervention Replay: NEXT / ACTIVE
-- MQ-5.8 — MQ-5 Acceptance: PENDING
+- MQ-5.7 — Neuroscope Intervention Replay: COMPLETE
+- MQ-5.8 — MQ-5 Acceptance: COMPLETE — 75 / 75 acceptance checks passed
+
+MQ-5 final status:
+
+**COMPLETE — ACCEPTED WITH DOCUMENTED LIMITATIONS**
+
+MQ-5.8 acceptance audit:
+
+- 75 checks executed
+- 75 passed
+- 0 failed
 
 Key evidence accumulated through MQ-5.6:
 

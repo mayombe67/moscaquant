@@ -1260,6 +1260,44 @@ Financial semantics remain:
 
 **NOT ASSIGNED**
 
+## MQ-5 Acceptance State
+
+MQ-5 completed formal acceptance review after MQ-5.7.
+
+Acceptance audit result:
+
+- checks: 75
+- passed: 75
+- failed: 0
+
+MQ-5 classification:
+
+**COMPLETE — ACCEPTED WITH DOCUMENTED LIMITATIONS**
+
+Acceptance confirms that the frozen MoscaQuant simulation evidence,
+implementation controls, artifact-integrity requirements, Neuroscope
+read-only boundary, and claim restrictions were satisfied.
+
+Acceptance does not convert unresolved confounds into resolved ones.
+
+The project must continue to preserve the distinction between:
+
+- simulated causal structure,
+- implementation reproducibility,
+- robustness to tested alternatives,
+- biological causality,
+- financial usefulness.
+
+Biological causality remains:
+
+**NOT CLAIMED**
+
+Financial semantics remain:
+
+**NOT ASSIGNED**
+
+---
+
 ## MQ-5 Evidence State Through MQ-5.6
 
 This section records the durable scientific state reached before MQ-5.7.
