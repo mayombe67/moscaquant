@@ -6,5 +6,5 @@ workers = 8
 device = "cpu"
 
 [paths]
-data_dir = "~/moscaquant-data"
-scratch_dir = "~/moscaquant-data/cache"
+data_dir = "/var/lib/moscaquant"
+scratch_dir = "/var/cache/moscaquant"
