@@ -2,7 +2,7 @@
 
 **Owner:** YOLO & HODL LLC
 **Subject:** MQ-001
-**Current Phase:** MQ-4 — NEUROSCOPE
+**Current Phase:** MQ-5 — COMPLETE — ACCEPTED WITH DOCUMENTED LIMITATIONS
 
 ## MQ-0 — ACQUIRE SUBJECT
 Load and validate MaleCNS. Build sparse connectivity, identify initial populations, inject controlled stimulus, observe propagation, and record telemetry.
@@ -42,7 +42,7 @@ MQ-3 is unblocked.
 
 ## MQ-3 — EMPLOYEE HAS OPINIONS
 
-**Status:** ACTIVE — descending readout defined; propagation bottleneck under investigation.
+**Status:** COMPLETE.
 
 The MQ-3 output boundary is frozen at all 1,314 confirmed descending neurons.
 Two independent anatomy-only structural views identified a reproducible coarse
@@ -78,36 +78,49 @@ input produced substantial descending-neuron voltage and spikes.
 
 A/B market replay was therefore not performed under the MQ-3.1 hybrid model.
 
-**Next objective:** determine whether a narrower physiology- and
-anatomy-constrained propagation model is justified for the identified
-relay → bridge → descending pathways. Any replacement dynamics must pass
-neutral validation before renewed A/B exposure.
+MQ-3 subsequently closed under the physiology-constrained MQ-3.2
+propagation model and its frozen causal evidence became the input to MQ-4
+Neuroscope and MQ-5 intervention experiments.
+
+See the MQ-3 experiment record and later MQ-5 evidence state for the accepted
+results and limitations.
 
 ## MQ-4 — NEUROSCOPE
 Build detailed live connectome and neural-activity visualization.
 
-## MQ-5 — DEPLOY THE WARDEN
+**Status:** COMPLETE.
+
+## MQ-5 — INTERVENTION AND PERTURBATION EXPERIMENTS
+Test evidence-defined causal nodes and pathways using frozen intervention
+protocols, predefined controls, robustness checks, independent-runtime
+replication, and read-only Neuroscope intervention replay.
+
+**Status:** COMPLETE — ACCEPTED WITH DOCUMENTED LIMITATIONS.
+
+## MQ-6 — DEPLOY THE WARDEN
 Deploy WARDEN-01 and adversarially test the independent risk boundary.
 
-## MQ-6 — AWAKEN THE ORACLE
-Implement and validate the D6 Behavioral Correction Protocol.
+## MQ-7 — AWAKEN THE ORACLE
+Implement and validate the behavioral correction and behavioral-layer
+protocols.
 
-## MQ-7 — CORPORATE CULTURE
+## MQ-8 — CORPORATE CULTURE
 Implement achievements, personnel records, reviews, PIPs, and related systems.
 
-## MQ-8 — OPEN THE PANOPTICON
+## MQ-9 — OPEN THE PANOPTICON
 Deploy the public spectator interface and embodied Containment Chamber.
 
-## MQ-9 — INTRODUCE THE MONEY
+## MQ-10 — INTRODUCE THE MONEY
 Connect supported broker infrastructure in read-only mode.
 
-## MQ-10 — THE CASINO OPENS
+## MQ-11 — THE CASINO OPENS
 Permit tiny controlled real-money transactions through WARDEN-01.
 
-## MQ-11 — CONSEQUENCES
-Enable experimental plasticity and persistent aversive learning while preserving controls.
+## MQ-12 — CONSEQUENCES
+Enable experimental plasticity and persistent aversive learning while
+preserving controls.
 
-## MQ-12 — MOSCA VS THE WORLD
+## MQ-13 — MOSCA VS THE WORLD
 Compare MQ-001 against Shuffled Mosca and conventional benchmarks.
 
 ---
@@ -120,7 +133,7 @@ Detailed requirements and go/no-go gates are defined in `CHARTER.md`.
 
 ## MQ-5 — Intervention and Perturbation Experiments
 
-**Status:** PLANNING / PROTOCOL DEFINITION
+**Status:** COMPLETE — ACCEPTED WITH DOCUMENTED LIMITATIONS
 
 MQ-4 Neuroscope is complete and accepted.
 
@@ -224,6 +237,361 @@ MQ-5 must not:
 
 ### Current phase chain
 
-`MQ-1 → MQ-2 → MQ-3 → MQ-4 COMPLETE → MQ-5 PLANNING`
+`MQ-1 → MQ-2 → MQ-3 → MQ-4 COMPLETE → MQ-5 COMPLETE`
+
+MQ-5 status:
+
+- MQ-5.1 — Experimental Protocol: COMPLETE
+- MQ-5.2 — Intervention Harness: COMPLETE
+- MQ-5.3 — Single-Node Perturbation: COMPLETE
+- MQ-5.4 — Pathway Perturbation: COMPLETE
+- MQ-5.5 — Sham and Specificity Tests: COMPLETE
+- CONF-004A — Robust Normalization Hardening: COMPLETE
+- MQ-5.6 — Replication and Stability: COMPLETE
+- MQ-5.7 — Neuroscope Intervention Replay: COMPLETE
+- MQ-5.8 — MQ-5 Acceptance: COMPLETE — 75 / 75 acceptance checks passed
+
+MQ-5 final status:
+
+**COMPLETE — ACCEPTED WITH DOCUMENTED LIMITATIONS**
+
+MQ-5.8 acceptance audit:
+
+- 75 checks executed
+- 75 passed
+- 0 failed
+
+Key evidence accumulated through MQ-5.6:
+
+- 13 / 13 frozen causal edges retained monotonic dose response
+- 12 / 12 eligible causal interventions exceeded frozen matched controls
+- timing results supported broader active causal windows rather than
+  single-frame temporal exclusivity
+- the frozen `56393 → 68045 → 1273` two-hop pathway propagated intervention
+  effects through the intermediate node
+- all three frozen convergence systems retained combined-input contribution
+- CONF-004A reproduced the principal MQ-5 findings under causal median/MAD
+  normalization
+- MQ-5.6 independently reproduced selected direct-edge, pathway, and
+  convergence findings using a separately implemented full-network runtime
+
+The current evidence supports simulated causal structure within the frozen
+MoscaQuant model.
+
+It does not establish biological causality, financial usefulness, or general
+encoding independence.
 
 **Financial semantics: NOT ASSIGNED**
+
+## Methodological Hardening Track
+
+The following work is now required across later MoscaQuant phases.
+
+### MQ-5.6 — Replication and Stability
+
+MQ-5.6 should include, where practical:
+
+- deterministic reproducibility verification,
+- multi-seed robustness where stochastic behavior exists,
+- independent-runtime or reduced-circuit replication of selected causal
+  findings,
+- explicit distinction between software reproducibility and scientific
+  robustness.
+
+### Post-MQ-5 — Expanded Null Models
+
+Before strong claims that MaleCNS topology itself is responsible for an
+effect, evaluate the result against multiple appropriate null families.
+
+Candidate families include:
+
+- degree-preserving rewires,
+- sign-preserving rewires,
+- weight-distribution-preserving rewires,
+- cell-class-constrained shuffles,
+- spatially constrained nulls where scientifically appropriate.
+
+Null-model definitions must precede confirmatory outcome inspection.
+
+### Post-MQ-5 — Encoding Robustness
+
+Test whether important neural findings persist under multiple reasonable
+market-to-sensory encodings.
+
+This stage evaluates whether observed causal structure is robust to the
+encoding choice rather than being an artifact of one hand-designed input
+representation.
+
+### Pre-Financial-Semantics Gate
+
+Before assigning financial meaning to neural output:
+
+- establish a claims ledger,
+- preserve exploratory vs confirmatory labels,
+- retain negative and inconclusive results,
+- maintain explicit MQ-001 versus WARDEN-01 performance attribution,
+- complete required topology/null-model controls,
+- complete appropriate robustness checks.
+
+No future trading result may retroactively alter the interpretation of
+earlier neuroscience experiments.
+
+## Panopticon Community and Special-Day Track
+
+This track is independent of the MQ-5 confirmatory intervention program.
+
+### Special-Day framework
+
+Build a generic, explicitly exploratory perturbation framework capable of
+supporting public novelty events without modifying frozen scientific
+artifacts.
+
+Each Special Day should record:
+
+- public display name,
+- scientific alias,
+- perturbation definition,
+- configuration version,
+- runtime profile,
+- start and end time,
+- scientific classification,
+- whether public voting selected it,
+- resulting telemetry artifact.
+
+Default classification:
+
+`EXPLORATORY_ENTERTAINMENT`
+
+### Initial Special-Day candidates
+
+High-value early candidates include:
+
+- Left Eye Day / Right Eye Day
+  - unilateral sensory restriction
+  - lateralization and redundancy
+
+- Groundhog Day
+  - repeated identical stimulation
+  - state dependence and reproducibility
+
+- White Noise Day
+  - structure-destroyed matched stimulation
+  - input-structure control
+
+- Everything Is DOGE Day
+  - feature/channel collapse
+  - sensory differentiation test
+
+- Half-Brain Day
+  - controlled unilateral or population lesion
+  - redundancy and robustness
+
+- Management Consultant Day
+  - constrained topology randomization
+  - null-model exploration
+
+- Constant Orgasm Day
+  - sustained synthetic reward drive
+  - saturation and adaptation
+
+- Cocaine Day
+  - synthetic global hyperexcitability
+  - gain and stability perturbation
+
+No pharmacological Special Day implies biological pharmacological
+fidelity unless a separately validated biological model exists.
+
+### Community voting
+
+Add OAuth-backed voting when the Panopticon public layer is ready.
+
+Design goals:
+
+- minimal OAuth scopes,
+- one-account/one-vote enforcement where practical,
+- anti-abuse protection,
+- explicit privacy disclosure,
+- no dependency between voter identity and scientific telemetry,
+- append-only or auditable vote records.
+
+Voting initially selects only exploratory or entertainment activities.
+
+### Monetization
+
+The Panopticon may later support:
+
+- donations,
+- supporter ranks,
+- sponsored Special Days,
+- merchandise,
+- premium historical visualization,
+- research sponsorship.
+
+Financial support may influence scheduling of exploratory entertainment.
+
+It must never influence scientific interpretation or result retention.
+
+### Visual identity
+
+When full-body MQ-001 visualization is introduced:
+
+- retain the original fly identity,
+- include the canonical tie,
+- allow state-specific visual reactions,
+- preserve the existing mood/status portrait concept.
+
+Special-Day state should be visibly obvious in the Panopticon UI.
+
+Examples:
+
+`SPECIAL DAY: LEFT EYE ONLY`
+
+`SPECIAL DAY: CONSTANT ORGASM`
+
+`SPECIAL DAY: MANAGEMENT CONSULTANT`
+
+Each should also expose its sober scientific alias and experimental
+classification.
+
+### Separation from MQ-5
+
+MQ-5 remains a pre-registered intervention and perturbation program.
+
+Special Days must not alter MQ-5 hypotheses, controls, targets, timing,
+outcome definitions, or frozen artifacts.
+
+Interesting Special-Day observations may generate future hypotheses.
+
+They do not become MQ-5 evidence after the fact.
+
+## Financial Validation and Warden Hardening Gates
+
+### Statistical framework
+
+Before any future confirmatory experiment with ambiguous or partial
+outcomes:
+
+- define the experimental unit,
+- define the effect metric,
+- define the null/control distribution,
+- define the classification rule,
+- freeze those choices before outcome inspection.
+
+Do not assume independent Bernoulli trials when biological or simulated
+units are dependent.
+
+### Known-confounds register
+
+Maintain:
+
+`docs/KNOWN_CONFOUNDS.md`
+
+Each entry should have:
+
+- identifier,
+- description,
+- status,
+- affected claims or phases,
+- mitigation plan,
+- resolution evidence where applicable.
+
+Allowed statuses:
+
+- `OPEN`
+- `MITIGATED`
+- `RESOLVED`
+
+### Hypothesis-family stopping rules
+
+Before iterative financial-model development begins, define explicit
+stopping criteria for each major hypothesis family.
+
+Repeated encoder or decoder tuning must not continue indefinitely after
+confirmatory failure.
+
+### MQ-8.5 — Historical Held-Out Financial Validation
+
+Before broker integration:
+
+1. freeze the encoder and decoder,
+2. freeze historical-data partitions,
+3. prevent future-data leakage,
+4. include transaction costs and slippage,
+5. perform walk-forward or equivalent time-respecting evaluation,
+6. compare against appropriate simple baselines,
+7. compare against shuffled/null Mosca controls,
+8. evaluate once on a final held-out period,
+9. publish the result whether favorable, null, or negative.
+
+Candidate comparison baselines include:
+
+- buy-and-hold,
+- always-flat,
+- random-action,
+- simple momentum,
+- simple mean-reversion,
+- shuffled Mosca,
+- real-topology Mosca.
+
+Passing MQ-8.5 is required before financial semantics may advance toward
+real-money operation.
+
+### Pre-Warden red-team protocol
+
+Before WARDEN-01 production deployment, create a pre-registered
+adversarial safety protocol defining:
+
+- attacks,
+- failure modes,
+- pass conditions,
+- fail-closed behavior,
+- recovery behavior,
+- audit requirements.
+
+No broker credential should be exposed to MQ-001 directly.
+
+### Special-Day addition
+
+Add:
+
+**EFFICIENT MARKET DAY**
+
+Public interpretation:
+
+A convincing-looking market stream containing no intended exploitable
+structure.
+
+Scientific alias:
+
+`structure-null sensory input control`
+
+Purpose:
+
+Measure whether MQ-001 produces apparent structure or confidence when the
+input-generating process is deliberately null-like.
+
+### Achievement additions
+
+Add the following Panopticon achievements:
+
+**SHUFFLED MOSCA WON, WE HAVE ADMITTED IT**
+
+Unlock condition:
+
+A pre-defined shuffled/null control outperforms the corresponding
+real-topology experiment and the negative result is retained and reported.
+
+Purpose:
+
+Reward scientific honesty, not performance.
+
+**STILL SUBTHRESHOLD**
+
+Unlock/display condition:
+
+Relevant monitored activity remains below the defined firing threshold.
+
+Achievement logic must consume already-defined scientific outcomes.
+
+Scientific criteria must never be changed in order to unlock an
+achievement.

@@ -1,18 +1,19 @@
 /*
  * MoscaQuant — MQ-4 Neuroscope
- * MQ-4.4 Hybrid Anatomy Viewer
+ * MQ-4.4 Hybrid Anatomy Viewer + MQ-5.7 Intervention Replay
  *
  * Same neurons. Deeper questions.
  *
  * Design constraints
  * ------------------
- * - Consume frozen MQ-1 -> MQ-3 telemetry.
+ * - Consume frozen MQ-1 -> MQ-3 telemetry and completed MQ-5 evidence.
  * - Do NOT alter experimental state/model behavior.
  * - Real soma coordinates remain real soma coordinates.
  * - Missing anatomical coordinates remain explicit topologyFallback.
  * - No invented anatomical positions.
  * - Causal overlay is derived from frozen MQ-3 intervention evidence.
  * - Runtime/machine configuration is separate from scientific semantics.
+ * - MQ-5.7 is read-only visualization: no simulation, no new outcomes.
  */
 
 (() => {
@@ -22,6 +23,10 @@
     dataUrl:
       window.MOSCAQUANT_NEUROSCOPE_DATA ||
       "./data/replay-A-v1.json",
+
+    interventionDataUrl:
+      window.MOSCAQUANT_MQ5_INTERVENTION_DATA ||
+      "./data/mq5-interventions-v1.json",
 
     runtime:
       window.MOSCAQUANT_RUNTIME ||
@@ -102,6 +107,13 @@
     trace: null,
     responderEnsemble: false,
 
+    interventionPayload: null,
+    interventionFamily: "generalized",
+    interventionItem: 0,
+    interventionDose: "100",
+    interventionVariant: "causal",
+    interventionLoadError: null,
+
     animationFrame: null,
   };
 
@@ -141,6 +153,7 @@
       const payload = await response.json();
 
       loadPayload(payload);
+      await loadInterventionReplay();
       resize();
 
       setStatus(
@@ -164,6 +177,56 @@
           <code>${escapeHtml(CONFIG.dataUrl)}</code>
         </div>
       `;
+    }
+  }
+
+
+
+  async function loadInterventionReplay() {
+    try {
+      const response = await fetch(
+        CONFIG.interventionDataUrl,
+        { cache: "no-store" }
+      );
+
+      if (!response.ok) {
+        throw new Error(
+          `HTTP ${response.status} loading ${CONFIG.interventionDataUrl}`
+        );
+      }
+
+      const payload = await response.json();
+
+      if (payload.readOnly !== true) {
+        throw new Error("MQ-5.7 artifact is not marked read-only.");
+      }
+
+      if (payload.simulationFeedback !== false) {
+        throw new Error("MQ-5.7 artifact permits simulation feedback.");
+      }
+
+      if (payload.generatesScientificOutcomes !== false) {
+        throw new Error("MQ-5.7 artifact permits scientific outcome generation.");
+      }
+
+      if (payload.schema !== "mq5-neuroscope-intervention-replay-v1") {
+        throw new Error(`Unexpected MQ-5.7 schema: ${payload.schema}`);
+      }
+
+      state.interventionPayload = payload;
+      state.interventionLoadError = null;
+      state.interventionFamily = "generalized";
+      state.interventionItem = 0;
+      state.interventionDose = "100";
+      state.interventionVariant = "causal";
+
+      renderInterventionControls();
+      requestDraw();
+    } catch (error) {
+      console.error("[Neuroscope MQ-5.7]", error);
+      state.interventionPayload = null;
+      state.interventionLoadError = error.message;
+      renderInterventionControls();
     }
   }
 
@@ -645,7 +708,9 @@
       drawCausalEdges();
     }
 
+    drawInterventionEdges();
     drawNodes();
+    drawInterventionNodes();
     drawOrientation();
     updateHud();
   }
@@ -697,6 +762,7 @@
 
     updateFrameSummary();
     updateResponderEnsemble();
+    updateInterventionPlot();
     requestDraw();
   }
 
@@ -1608,7 +1674,7 @@
 
         <header class="ns-header">
           <div>
-            <div class="ns-kicker">MOSCAQUANT / MQ-4</div>
+            <div class="ns-kicker">MOSCAQUANT / MQ-5.7</div>
             <h1>NEUROSCOPE</h1>
             <div class="ns-subtitle">
               Same neurons. Deeper questions.
@@ -1688,7 +1754,7 @@
               </div>
 
               <div>
-                Frozen MQ-1 → MQ-3 telemetry
+                Frozen MQ-1 → MQ-5.6 evidence
               </div>
 
               <div>
@@ -1712,7 +1778,7 @@
           </span>
 
           <span>
-            Anatomy. Evidence. Causality. Next.
+            Anatomy. Evidence. Causality. Replay.
           </span>
         </footer>
 
@@ -1844,6 +1910,20 @@
         </div>
 
         <div id="frame-summary" class="ns-frame-summary"></div>
+      </div>
+
+      <div
+        class="ns-panel-title"
+        style="margin-top:18px"
+      >
+        INTERVENTION REPLAY
+      </div>
+
+      <div
+        id="mq5-intervention-controls"
+        class="ns-intervention"
+      >
+        Loading frozen MQ-5 evidence…
       </div>
 
       <div
@@ -2015,6 +2095,475 @@
     document
       .getElementById("reset-camera")
       .addEventListener("click", resetCamera);
+  }
+
+
+
+  function interventionExperiments() {
+    const payload = state.interventionPayload;
+
+    if (!payload) return [];
+
+    if (state.interventionFamily === "generalized") {
+      return payload.generalized?.edges || [];
+    }
+
+    if (state.interventionFamily === "pathway") {
+      return payload.pathway?.replay
+        ? [payload.pathway.replay]
+        : [];
+    }
+
+    if (state.interventionFamily === "convergence") {
+      return payload.convergence?.systems || [];
+    }
+
+    return [];
+  }
+
+  function interventionItemLabel(item) {
+    if (state.interventionFamily === "generalized") {
+      return `${item.source} → ${item.target} · F${item.causalFrame}`;
+    }
+
+    if (state.interventionFamily === "pathway") {
+      return `${item.upstream} → ${item.intermediate} → ${item.downstream}`;
+    }
+
+    return `${item.inputA} + ${item.inputB} → ${item.target}`;
+  }
+
+  function interventionVariants() {
+    if (state.interventionFamily === "pathway") {
+      return [
+        ["upstream", "UPSTREAM ATTENUATION"],
+        ["intermediate", "INTERMEDIATE ATTENUATION"],
+      ];
+    }
+
+    if (state.interventionFamily === "convergence") {
+      return [
+        ["aOnly", "A ONLY"],
+        ["bOnly", "B ONLY"],
+        ["combined", "A + B"],
+      ];
+    }
+
+    return [["causal", "CAUSAL SOURCE"]];
+  }
+
+  function renderInterventionControls() {
+    const host = document.getElementById("mq5-intervention-controls");
+
+    if (!host) return;
+
+    if (state.interventionLoadError) {
+      host.innerHTML = `
+        <div class="ns-intervention-warning">
+          MQ-5.7 replay unavailable.<br>
+          ${escapeHtml(state.interventionLoadError)}
+        </div>
+      `;
+      return;
+    }
+
+    if (!state.interventionPayload) {
+      host.textContent = "Loading frozen MQ-5 evidence…";
+      return;
+    }
+
+    const experiments = interventionExperiments();
+
+    if (!experiments.length) {
+      host.textContent = "No frozen interventions available.";
+      return;
+    }
+
+    state.interventionItem = clamp(
+      state.interventionItem,
+      0,
+      experiments.length - 1
+    );
+
+    const variants = interventionVariants();
+
+    if (!variants.some(([value]) => value === state.interventionVariant)) {
+      state.interventionVariant = variants[0][0];
+    }
+
+    host.innerHTML = `
+      <label class="ns-intervention-field">
+        <span>FAMILY</span>
+        <select id="mq5-family">
+          <option value="generalized" ${state.interventionFamily === "generalized" ? "selected" : ""}>SINGLE EDGE · 13</option>
+          <option value="pathway" ${state.interventionFamily === "pathway" ? "selected" : ""}>TWO-HOP PATHWAY</option>
+          <option value="convergence" ${state.interventionFamily === "convergence" ? "selected" : ""}>CONVERGENCE · 3</option>
+        </select>
+      </label>
+
+      <label class="ns-intervention-field">
+        <span>EXPERIMENT</span>
+        <select id="mq5-experiment">
+          ${experiments.map((item, index) => `
+            <option value="${index}" ${index === state.interventionItem ? "selected" : ""}>
+              ${escapeHtml(interventionItemLabel(item))}
+            </option>
+          `).join("")}
+        </select>
+      </label>
+
+      <div class="ns-intervention-grid">
+        <label class="ns-intervention-field">
+          <span>DOSE</span>
+          <select id="mq5-dose">
+            ${["25", "50", "75", "100"].map((dose) => `
+              <option value="${dose}" ${dose === state.interventionDose ? "selected" : ""}>${dose}%</option>
+            `).join("")}
+          </select>
+        </label>
+
+        <label class="ns-intervention-field">
+          <span>CONDITION</span>
+          <select id="mq5-variant">
+            ${variants.map(([value, label]) => `
+              <option value="${value}" ${value === state.interventionVariant ? "selected" : ""}>${label}</option>
+            `).join("")}
+          </select>
+        </label>
+      </div>
+
+      <button id="mq5-jump-frame" class="ns-button ns-intervention-jump" type="button">
+        JUMP TO CAUSAL FRAME
+      </button>
+
+      <div id="mq5-intervention-summary"></div>
+
+      <div class="ns-intervention-plot-wrap">
+        <canvas id="mq5-intervention-plot" width="260" height="120"></canvas>
+      </div>
+
+      <div class="ns-intervention-boundary">
+        READ-ONLY · NO SIMULATION · NO NEW OUTCOMES
+      </div>
+    `;
+
+    document.getElementById("mq5-family")?.addEventListener("change", (event) => {
+      state.interventionFamily = event.target.value;
+      state.interventionItem = 0;
+      state.interventionVariant = interventionVariants()[0][0];
+      renderInterventionControls();
+      requestDraw();
+    });
+
+    document.getElementById("mq5-experiment")?.addEventListener("change", (event) => {
+      state.interventionItem = Number(event.target.value) || 0;
+      renderInterventionSummary();
+      requestDraw();
+    });
+
+    document.getElementById("mq5-dose")?.addEventListener("change", (event) => {
+      state.interventionDose = event.target.value;
+      renderInterventionSummary();
+      requestDraw();
+    });
+
+    document.getElementById("mq5-variant")?.addEventListener("change", (event) => {
+      state.interventionVariant = event.target.value;
+      renderInterventionSummary();
+      requestDraw();
+    });
+
+    document.getElementById("mq5-jump-frame")?.addEventListener("click", () => {
+      const descriptor = selectedInterventionDescriptor();
+      if (!descriptor?.causalFrames?.length) return;
+      stopReplay();
+      setReplayFrame(descriptor.causalFrames[0]);
+    });
+
+    document.getElementById("mq5-intervention-plot")?.addEventListener("click", interventionPlotClick);
+
+    renderInterventionSummary();
+  }
+
+  function selectedInterventionDescriptor() {
+    const experiments = interventionExperiments();
+    const item = experiments[state.interventionItem];
+
+    if (!item) return null;
+
+    const dose = state.interventionDose;
+
+    if (state.interventionFamily === "generalized") {
+      const intervention = item.doses?.[dose];
+      return {
+        title: `${item.source} → ${item.target}`,
+        causalFrames: [Number(item.causalFrame)],
+        nodes: [
+          { viewerIndex: Number(item.sourceViewerIndex), role: "source" },
+          { viewerIndex: Number(item.targetViewerIndex), role: "target" },
+        ],
+        edges: [[Number(item.sourceViewerIndex), Number(item.targetViewerIndex)]],
+        baselineTrace: item.baselineTargetVoltageTrace,
+        interventionTrace: intervention?.targetVoltageTrace,
+        metrics: intervention?.metrics || null,
+        note: item.matchedControl?.available
+          ? `matched control model ${item.matchedControl.modelIndex}`
+          : "matched control unavailable by frozen prospective criteria",
+        warning: null,
+      };
+    }
+
+    if (state.interventionFamily === "pathway") {
+      const upstream = state.interventionVariant === "upstream";
+      const intervention = upstream
+        ? item.upstreamInterventions?.[dose]
+        : item.intermediateInterventions?.[dose];
+
+      return {
+        title: `${item.upstream} → ${item.intermediate} → ${item.downstream}`,
+        causalFrames: [Number(item.upstreamCausalFrame), Number(item.intermediateCausalFrame)],
+        nodes: [
+          { viewerIndex: Number(item.upstreamViewerIndex), role: upstream ? "source" : "context" },
+          { viewerIndex: Number(item.intermediateViewerIndex), role: upstream ? "intermediate" : "source" },
+          { viewerIndex: Number(item.downstreamViewerIndex), role: "target" },
+        ],
+        edges: [
+          [Number(item.upstreamViewerIndex), Number(item.intermediateViewerIndex)],
+          [Number(item.intermediateViewerIndex), Number(item.downstreamViewerIndex)],
+        ],
+        baselineTrace: item.baselineTraces?.downstreamVoltage,
+        interventionTrace: intervention?.downstreamVoltageTrace,
+        metrics: intervention?.metrics?.downstream_metrics || intervention?.metrics || null,
+        note: upstream ? "upstream source attenuation" : "intermediate-node attenuation",
+        warning: null,
+      };
+    }
+
+    const intervention = item.doses?.[dose];
+    const variant = state.interventionVariant;
+    const traceKey =
+      variant === "aOnly"
+        ? "aOnlyTargetVoltageTrace"
+        : variant === "bOnly"
+          ? "bOnlyTargetVoltageTrace"
+          : "combinedTargetVoltageTrace";
+
+    const nodes = [
+      { viewerIndex: Number(item.targetViewerIndex), role: "target" },
+    ];
+    const edges = [];
+
+    if (variant !== "bOnly") {
+      nodes.push({ viewerIndex: Number(item.inputAViewerIndex), role: "source" });
+      edges.push([Number(item.inputAViewerIndex), Number(item.targetViewerIndex)]);
+    }
+
+    if (variant !== "aOnly") {
+      nodes.push({ viewerIndex: Number(item.inputBViewerIndex), role: "source" });
+      edges.push([Number(item.inputBViewerIndex), Number(item.targetViewerIndex)]);
+    }
+
+    return {
+      title: `${item.inputA} + ${item.inputB} → ${item.target}`,
+      causalFrames: [...new Set([Number(item.causalFrameA), Number(item.causalFrameB)])],
+      nodes,
+      edges,
+      baselineTrace: item.baselineTraces?.targetVoltage,
+      interventionTrace: intervention?.[traceKey],
+      metrics: intervention?.result?.[variant] || intervention?.result || null,
+      note: intervention?.result?.combined_exceeds_each_single === true
+        ? "frozen result: combined effect exceeds either single input"
+        : "completed convergence replay",
+      warning: item.numericalScaleWarning || null,
+    };
+  }
+
+  function metricValue(metrics, keys) {
+    if (!metrics || typeof metrics !== "object") return null;
+
+    for (const key of keys) {
+      const value = metrics[key];
+      if (typeof value === "number" && Number.isFinite(value)) return value;
+    }
+
+    return null;
+  }
+
+  function formatScientific(value) {
+    if (value == null || !Number.isFinite(Number(value))) return "—";
+    const n = Number(value);
+    if (n === 0) return "0";
+    if (Math.abs(n) < 0.001 || Math.abs(n) >= 1000) return n.toExponential(3);
+    return n.toFixed(6);
+  }
+
+  function renderInterventionSummary() {
+    const host = document.getElementById("mq5-intervention-summary");
+    const descriptor = selectedInterventionDescriptor();
+
+    if (!host || !descriptor) return;
+
+    const integrated = metricValue(
+      descriptor.metrics,
+      ["delta_integrated_positive_vs_baseline", "integrated_positive_voltage"]
+    );
+
+    const peak = metricValue(
+      descriptor.metrics,
+      ["delta_peak_voltage_vs_baseline", "peak_voltage"]
+    );
+
+    host.innerHTML = `
+      <div class="ns-intervention-summary">
+        <strong>${escapeHtml(descriptor.title)}</strong>
+        <span>dose ${escapeHtml(state.interventionDose)}% · frame ${escapeHtml(descriptor.causalFrames.join(" / "))}</span>
+        <span>integrated ${escapeHtml(formatScientific(integrated))}</span>
+        <span>peak ${escapeHtml(formatScientific(peak))}</span>
+        <span>${escapeHtml(descriptor.note || "")}</span>
+        ${descriptor.warning ? `<span class="warn">${escapeHtml(descriptor.warning)}</span>` : ""}
+      </div>
+    `;
+
+    updateInterventionPlot();
+  }
+
+  function updateInterventionPlot() {
+    const canvas = document.getElementById("mq5-intervention-plot");
+    const descriptor = selectedInterventionDescriptor();
+
+    if (!canvas || !descriptor) return;
+
+    const plot = canvas.getContext("2d");
+    const baseline = Array.isArray(descriptor.baselineTrace) ? descriptor.baselineTrace : [];
+    const intervention = Array.isArray(descriptor.interventionTrace) ? descriptor.interventionTrace : [];
+    const total = Math.max(baseline.length, intervention.length);
+
+    plot.clearRect(0, 0, canvas.width, canvas.height);
+    plot.fillStyle = "#080d13";
+    plot.fillRect(0, 0, canvas.width, canvas.height);
+
+    if (!total) {
+      plot.fillStyle = "#6b7582";
+      plot.font = "10px monospace";
+      plot.fillText("trace unavailable", 10, 20);
+      return;
+    }
+
+    const values = [...baseline, ...intervention].filter(Number.isFinite);
+    let min = Math.min(0, ...values);
+    let max = Math.max(0, ...values);
+    if (max === min) max = min + 1;
+
+    const xFor = (index) => 8 + (index / Math.max(1, total - 1)) * (canvas.width - 16);
+    const yFor = (value) => canvas.height - 12 - ((value - min) / (max - min)) * (canvas.height - 24);
+
+    const drawSeries = (series, color, width) => {
+      if (!series.length) return;
+      plot.beginPath();
+      series.forEach((value, index) => {
+        const x = xFor(index);
+        const y = yFor(Number(value));
+        if (index === 0) plot.moveTo(x, y);
+        else plot.lineTo(x, y);
+      });
+      plot.strokeStyle = color;
+      plot.lineWidth = width;
+      plot.stroke();
+    };
+
+    drawSeries(baseline, "#697586", 1.2);
+    drawSeries(intervention, "#c084fc", 1.8);
+
+    for (const frame of descriptor.causalFrames) {
+      const x = xFor(frame);
+      plot.beginPath();
+      plot.moveTo(x, 6);
+      plot.lineTo(x, canvas.height - 8);
+      plot.strokeStyle = "#ffb84d";
+      plot.globalAlpha = 0.7;
+      plot.lineWidth = 1;
+      plot.stroke();
+    }
+
+    const currentX = xFor(state.currentFrame);
+    plot.beginPath();
+    plot.moveTo(currentX, 4);
+    plot.lineTo(currentX, canvas.height - 6);
+    plot.strokeStyle = "#64e9ff";
+    plot.globalAlpha = 0.9;
+    plot.lineWidth = 1;
+    plot.stroke();
+    plot.globalAlpha = 1;
+  }
+
+  function interventionPlotClick(event) {
+    const canvas = event.currentTarget;
+    const rect = canvas.getBoundingClientRect();
+    const ratio = clamp((event.clientX - rect.left) / Math.max(1, rect.width), 0, 1);
+    const total = Number(state.payload?.frameCount ?? 192);
+    stopReplay();
+    setReplayFrame(Math.round(ratio * Math.max(0, total - 1)));
+  }
+
+  function drawInterventionEdges() {
+    const descriptor = selectedInterventionDescriptor();
+    if (!descriptor?.edges?.length) return;
+
+    const projected = new Map(
+      state.projected.map((p) => [Number(p.node.index), p])
+    );
+
+    ctx.save();
+
+    for (const [source, target] of descriptor.edges) {
+      const a = projected.get(Number(source));
+      const b = projected.get(Number(target));
+      if (!a || !b) continue;
+
+      ctx.beginPath();
+      ctx.moveTo(a.x, a.y);
+      ctx.lineTo(b.x, b.y);
+      ctx.strokeStyle = "#c084fc";
+      ctx.globalAlpha = 0.95;
+      ctx.lineWidth = 3.4;
+      ctx.stroke();
+    }
+
+    ctx.restore();
+  }
+
+  function drawInterventionNodes() {
+    const descriptor = selectedInterventionDescriptor();
+    if (!descriptor?.nodes?.length) return;
+
+    const roleColor = {
+      source: "#ffb84d",
+      intermediate: "#64e9ff",
+      target: "#c084fc",
+      context: "#7b8796",
+    };
+
+    const projected = new Map(
+      state.projected.map((p) => [Number(p.node.index), p])
+    );
+
+    ctx.save();
+
+    for (const item of descriptor.nodes) {
+      const p = projected.get(Number(item.viewerIndex));
+      if (!p) continue;
+
+      const pulse = descriptor.causalFrames.includes(state.currentFrame) ? 3 : 0;
+
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, 8 + pulse, 0, Math.PI * 2);
+      ctx.strokeStyle = roleColor[item.role] || "#c084fc";
+      ctx.globalAlpha = 0.95;
+      ctx.lineWidth = 2.4;
+      ctx.stroke();
+    }
+
+    ctx.restore();
   }
 
   function bindToggle(id, setter) {
@@ -3738,6 +4287,97 @@
         border-color: #204233;
         background: #0d1713;
         color: #79cfa1;
+      }
+
+
+
+      .ns-intervention {
+        color: #8b95a3;
+        font-family: monospace;
+        font-size: 9px;
+      }
+
+      .ns-intervention-field {
+        display: block;
+        margin-bottom: 7px;
+      }
+
+      .ns-intervention-field > span {
+        display: block;
+        margin-bottom: 3px;
+        color: #626d7b;
+        font-size: 7px;
+        letter-spacing: .1em;
+      }
+
+      .ns-intervention-field select {
+        width: 100%;
+        min-height: 28px;
+        border: 1px solid #303b4a;
+        background: #101620;
+        color: #c7d0dc;
+        font-family: monospace;
+        font-size: 8px;
+      }
+
+      .ns-intervention-grid {
+        display: grid;
+        grid-template-columns: 72px 1fr;
+        gap: 6px;
+      }
+
+      .ns-intervention-jump {
+        margin-top: 3px;
+        border-color: #574175;
+        color: #d0b9ff;
+      }
+
+      .ns-intervention-summary {
+        display: grid;
+        gap: 4px;
+        margin: 9px 0;
+        padding: 8px;
+        border-left: 2px solid #c084fc;
+        background: #100d17;
+        color: #8e99a8;
+        line-height: 1.35;
+      }
+
+      .ns-intervention-summary strong {
+        color: #d9c7ff;
+        font-size: 10px;
+      }
+
+      .ns-intervention-summary .warn {
+        color: #f5bb65;
+      }
+
+      .ns-intervention-plot-wrap {
+        padding: 6px;
+        border: 1px solid #252e3a;
+        background: #080d13;
+      }
+
+      #mq5-intervention-plot {
+        display: block;
+        width: 100%;
+        height: 120px;
+        cursor: crosshair;
+      }
+
+      .ns-intervention-boundary {
+        margin-top: 7px;
+        color: #73e6a2;
+        font-size: 7px;
+        letter-spacing: .06em;
+      }
+
+      .ns-intervention-warning {
+        padding: 8px;
+        border: 1px solid #5b382b;
+        background: #1a100d;
+        color: #e0a277;
+        line-height: 1.5;
       }
 
       .ns-science {

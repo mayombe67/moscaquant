@@ -1,0 +1,43 @@
+[experiment]
+id = "mq5-6-replication-stability-v1"
+phase = "MQ-5.6"
+classification = "confirmatory-replication"
+condition = "A"
+
+[replication]
+implementation = "independent_full_reference_runtime"
+reuse_existing_runtime_step = false
+reuse_existing_effective_activity = false
+reuse_existing_intervention_runtime = false
+deterministic = true
+multi_seed_required = false
+
+[tolerance]
+absolute = 1e-12
+relative = 1e-6
+small_value_threshold = 1e-12
+
+[direct_edge]
+source = 43417
+target = 656
+frame = 145
+
+[pathway]
+upstream = 56393
+intermediate = 68045
+downstream = 1273
+upstream_frame = 146
+intermediate_frame = 147
+
+[convergence]
+input_a = 44274
+input_b = 55925
+target = 55
+frame = 146
+
+[interventions]
+attenuation_levels = [0.25, 0.50, 0.75, 1.0]
+
+[scope]
+biological_causality_claim = false
+financial_semantics_used = false

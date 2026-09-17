@@ -748,35 +748,46 @@ MQ-4 — NEUROSCOPE
 
 Build detailed live neural visualization.
 
-MQ-5 — DEPLOY THE WARDEN
+Status: COMPLETE.
+
+MQ-5 — INTERVENTION AND PERTURBATION EXPERIMENTS
+
+Test evidence-defined causal nodes and pathways using frozen intervention
+protocols, controls, robustness checks, independent-runtime replication,
+and read-only Neuroscope intervention replay.
+
+Status: COMPLETE — ACCEPTED WITH DOCUMENTED LIMITATIONS.
+
+MQ-6 — DEPLOY THE WARDEN
 
 Deploy independent risk gateway and conduct adversarial testing.
 
-MQ-6 — AWAKEN THE ORACLE
+MQ-7 — AWAKEN THE ORACLE
 
-Implement and validate the complete D6 protocol.
+Implement and validate the behavioral correction and behavioral-layer
+protocols.
 
-MQ-7 — CORPORATE CULTURE
+MQ-8 — CORPORATE CULTURE
 
 Implement achievements, personnel records, reviews and related systems.
 
-MQ-8 — OPEN THE PANOPTICON
+MQ-9 — OPEN THE PANOPTICON
 
 Deploy the public spectator environment and Containment Chamber.
 
-MQ-9 — INTRODUCE THE MONEY
+MQ-10 — INTRODUCE THE MONEY
 
 Connect supported broker infrastructure in read-only mode.
 
-MQ-10 — THE CASINO OPENS
+MQ-11 — THE CASINO OPENS
 
 Permit tiny controlled real-money transactions through WARDEN-01.
 
-MQ-11 — CONSEQUENCES
+MQ-12 — CONSEQUENCES
 
 Enable experimental plasticity and persistent aversive learning.
 
-MQ-12 — MOSCA VS THE WORLD
+MQ-13 — MOSCA VS THE WORLD
 
 Conduct comparative experiments against controls and benchmarks.
 
@@ -896,8 +907,9 @@ YOLO & HODL LLC
 MOSCAQUANT
 
 SUBJECT ................. MQ-001
-CURRENT PHASE ........... MQ-4
-MISSION ................. NEUROSCOPE
+CURRENT PHASE ........... MQ-5 COMPLETE
+NEXT PHASE .............. MQ-6 / DEPLOY THE WARDEN
+MISSION ................. POST-MQ-5 HARDENING / WARDEN PREPARATION
 
 BROKER .................. NONE
 TRADING AUTHORITY ....... NONE
@@ -909,9 +921,11 @@ CONTAINMENT ............. ACTIVE
 
 FINANCIAL SEMANTICS ..... NOT ASSIGNED
 
-NEXT OBJECTIVE:
+CURRENT DIRECTIVE:
 
-BUILD NEUROSCOPE FROM FROZEN MQ-1 THROUGH MQ-3 TELEMETRY WITHOUT ALTERING THE EXPERIMENTAL MODEL.
+PRESERVE THE ACCEPTED MQ-5 SCIENTIFIC RECORD AND ITS CLAIM BOUNDARIES.
+MQ-6 MAY DESIGN AND TEST WARDEN-01, BUT NO FINANCIAL OR TRADING SEMANTICS
+ARE RETROACTIVELY ASSIGNED TO MQ-1 THROUGH MQ-5.
 
 Past performance does not guarantee future sugar cubes.
 
@@ -1130,3 +1144,626 @@ MQ-5 asks:
 > What changes when we deliberately intervene on that evidence-defined system?
 
 **Anatomy. Evidence. Causality. Next.**
+
+## Methodological Hardening After MQ-4
+
+The progression into MQ-5 does not change the frozen MQ-1 through MQ-3
+evidence or the pre-registered MQ-5.1 intervention protocol.
+
+The following project-level safeguards apply to future MoscaQuant phases.
+
+### Internal causality is not biological validation
+
+A successful intervention establishes a causal relationship within the
+specified MoscaQuant model.
+
+It does not, by itself, establish equivalent causal behavior in a living
+Drosophila nervous system.
+
+Claims must preserve the distinction between:
+
+- structural connectivity,
+- simulated dynamical causality,
+- biological causality,
+- financial interpretation.
+
+Biological causality must not be claimed without evidence appropriate to
+that claim.
+
+### Independent-runtime replication
+
+Re-running identical code proves implementation reproducibility, not
+independent scientific replication.
+
+Where practical, important causal findings should later be reproduced
+using an independently implemented runtime or reduced-circuit reference
+implementation.
+
+Independent replication must preserve the scientific configuration while
+remaining implementation-independent.
+
+### Null-model diversity
+
+Claims that MaleCNS topology itself matters must not depend on comparison
+against only one randomized graph.
+
+Before strong topology-specific conclusions are permitted, future control
+work should include multiple scientifically defensible null families where
+practical, including examples such as:
+
+- degree-preserving rewiring,
+- sign-preserving rewiring,
+- weight-distribution-preserving controls,
+- cell-class-constrained controls,
+- spatially constrained controls where appropriate.
+
+Exact null families must be defined before their confirmatory results are
+interpreted.
+
+### Sensory-encoding robustness
+
+Market-to-sensory encoding is an experimental design choice.
+
+A causal pathway that appears under only one arbitrary encoding must not
+automatically be described as a general property of the connectome.
+
+Later phases should test whether important findings survive reasonable
+alternative sensory encodings while holding the neural substrate fixed.
+
+### Exploratory and confirmatory separation
+
+Exploratory observations are allowed and encouraged, but they must be
+labeled exploratory.
+
+Targets, thresholds, controls, or hypotheses discovered after inspecting
+results must not be represented as pre-registered confirmatory tests.
+
+Protocol amendments must remain recoverable through Git history.
+
+### Negative-results policy
+
+Failed, null, opposite-direction, and inconclusive experiments are part of
+the scientific record.
+
+They must not be hidden, silently discarded, or omitted merely because
+they weaken a preferred narrative.
+
+The meme layer may joke about failure.
+
+The scientific layer must preserve it.
+
+### Claims ledger
+
+Before financial semantics are assigned, MoscaQuant should maintain a
+machine- or human-readable claims ledger recording:
+
+- the claim,
+- supporting evidence,
+- current status,
+- permitted wording,
+- prohibited or unsupported wording,
+- the phase in which the claim became justified.
+
+The purpose is to prevent conclusions from silently expanding beyond the
+evidence that supports them.
+
+### Warden attribution boundary
+
+When real-money phases eventually exist, performance must be attributable
+to the correct system component.
+
+At minimum, reporting must distinguish:
+
+- raw MQ-001 proposals,
+- WARDEN-01 accepted proposals,
+- WARDEN-01 rejected proposals,
+- actually executed trades.
+
+WARDEN-01 risk logic must not be mistaken for neural-model performance.
+
+### Scientific identity
+
+MoscaQuant intentionally combines absurd presentation with conservative
+experimental practice.
+
+The humor may escalate.
+
+The evidentiary standard must not relax.
+
+Financial semantics remain:
+
+**NOT ASSIGNED**
+
+## MQ-5 Acceptance State
+
+MQ-5 completed formal acceptance review after MQ-5.7.
+
+Acceptance audit result:
+
+- checks: 75
+- passed: 75
+- failed: 0
+
+MQ-5 classification:
+
+**COMPLETE — ACCEPTED WITH DOCUMENTED LIMITATIONS**
+
+Acceptance confirms that the frozen MoscaQuant simulation evidence,
+implementation controls, artifact-integrity requirements, Neuroscope
+read-only boundary, and claim restrictions were satisfied.
+
+Acceptance does not convert unresolved confounds into resolved ones.
+
+The project must continue to preserve the distinction between:
+
+- simulated causal structure,
+- implementation reproducibility,
+- robustness to tested alternatives,
+- biological causality,
+- financial usefulness.
+
+Biological causality remains:
+
+**NOT CLAIMED**
+
+Financial semantics remain:
+
+**NOT ASSIGNED**
+
+---
+
+## MQ-5 Evidence State Through MQ-5.6
+
+This section records the durable scientific state reached before MQ-5.7.
+
+It does not replace the individual preregistrations or result artifacts.
+
+### Generalized intervention evidence
+
+Across the 13 frozen MQ-3 causal edges:
+
+- 13 / 13 retained monotonic dose-response behavior,
+- 12 / 12 edges with prospectively valid matched controls showed a larger
+  causal-source intervention effect than the matched non-causal control,
+- 3 / 13 causal-frame interventions exceeded the nearby timing control,
+- 10 / 13 nearby timing controls produced equal or larger effect magnitude,
+- 7 / 13 full source-silencing interventions delayed first downstream
+  response.
+
+The timing result must not be rewritten as single-frame temporal
+exclusivity.
+
+The supported interpretation is that the frozen causal frames identify
+causal onset or evidence points within broader active causal windows.
+
+### Multi-hop pathway evidence
+
+The frozen pathway:
+
+`56393 → 68045 → 1273`
+
+retained dose-dependent propagation through the intermediate node.
+
+Attenuating the upstream source reduced the intermediate state and then the
+downstream response.
+
+Attenuating the intermediate node independently reduced the downstream
+response.
+
+This supports causal propagation within the frozen simulation model.
+
+It does not establish equivalent biological propagation in a living fly.
+
+### Convergence evidence
+
+The frozen convergence systems:
+
+- `44274 + 55925 → 55`
+- `55548 + 87441 → 51`
+- `92657 + 93484 → 129`
+
+all retained:
+
+- independent contribution from each frozen input,
+- combined perturbation exceeding either individual perturbation,
+- monotonic combined dose response.
+
+No statistical synergy, antagonism, subadditivity, or superadditivity label
+is assigned without a separately preregistered interaction test.
+
+Responder 51 remains subject to its documented extremely-small numerical
+scale.
+
+### Sensory-normalization robustness
+
+CONF-004A replaced the original causal rolling mean / standard-deviation
+normalizer with a causal rolling median / MAD normalizer while holding the
+remaining scientific configuration fixed.
+
+The alternative representation materially changed sensory and network
+activity.
+
+Nevertheless:
+
+- 13 / 13 frozen causal sources remained engaged,
+- 12 / 12 frozen matched controls remained engaged,
+- generalized single-node results retained the same categorical pattern,
+- the two-hop pathway retained its qualitative and quantitative structure,
+- all three convergence systems retained their qualitative structure.
+
+Median Encoder-B / Encoder-A absolute full-silencing effect ratio across the
+generalized edge set was approximately:
+
+`1.00007`
+
+This supports robustness to the tested normalization alternative.
+
+It does not establish general sensory-encoding independence.
+
+### Independent-runtime replication
+
+MQ-5.6 reproduced selected accepted causal findings through a separately
+implemented full-network reference runtime.
+
+The independent runtime did not inherit from or call:
+
+- the production visual-transduction runtime,
+- the production physiology-constrained runtime,
+- the MQ-5 intervention runtime.
+
+Before outcome generation, numerical comparison tolerances were frozen as:
+
+- absolute tolerance: `1e-12`
+- relative tolerance: `1e-6`
+- small-value threshold: `1e-12`
+
+Selected replication targets were:
+
+- direct edge: `43417 → 656`
+- pathway: `56393 → 68045 → 1273`
+- convergence: `44274 + 55925 → 55`
+
+All predefined replication gates passed:
+
+- frozen artifacts unchanged,
+- direct numeric replication,
+- pathway numeric replication,
+- convergence numeric replication,
+- convergence combined-dose monotonicity,
+- convergence combined effect exceeding either single input.
+
+This materially reduces concern that the selected MQ-5 findings are artifacts
+of one neural-runtime implementation.
+
+It remains replication within the same frozen mathematical model.
+
+### Current claim boundary
+
+The following wording is supported:
+
+> Selected causal effects are reproducible within the frozen MoscaQuant
+> simulation model across the production runtime, a tested alternative
+> normalization scheme, and an independently implemented full-network
+> reference runtime.
+
+The following wording is not supported:
+
+- MoscaQuant has established biological causality in living Drosophila.
+- The findings are independent of all sensory encodings.
+- The validated responder ensemble represents all descending neurons.
+- MaleCNS topology has been established as uniquely responsible relative to
+  all appropriate null-model families.
+- The neural findings have demonstrated predictive trading value.
+- The neural findings have demonstrated profitability.
+
+Financial semantics remain:
+
+**NOT ASSIGNED**
+
+---
+
+## Panopticon Public Experiment and Entertainment Layer
+
+MoscaQuant is simultaneously:
+
+1. a serious experimental project,
+2. an intentionally absurd public spectacle.
+
+These roles may coexist only if their boundaries remain explicit.
+
+The entertainment layer must never silently alter the scientific record.
+
+### Special Days
+
+The Panopticon may host clearly labeled novelty or exploratory
+perturbations known publicly as **Special Days**.
+
+Example public modes include:
+
+- Left Eye Day,
+- Right Eye Day,
+- Super Genius Day,
+- Cocaine Day,
+- Constant Orgasm Day,
+- Sleep-Deprived Fly Day,
+- Sedated Fly Day,
+- Sensory Deprivation Day,
+- White Noise Day,
+- Groundhog Day,
+- Everything Is DOGE Day,
+- Half-Brain Day,
+- Management Consultant Day,
+- Latency From Hell Day,
+- Glitch in the Matrix Day.
+
+These names are entertainment labels.
+
+Where useful, a Special Day should also expose a sober scientific alias
+describing the actual perturbation.
+
+Examples:
+
+- `LEFT EYE DAY`
+  -> unilateral sensory-input restriction
+
+- `CONSTANT ORGASM DAY`
+  -> sustained reward-saturation perturbation
+
+- `MANAGEMENT CONSULTANT DAY`
+  -> constrained topology-randomization control
+
+- `GROUNDHOG DAY`
+  -> repeated-input state-dependence experiment
+
+The public name may be ridiculous.
+
+The underlying perturbation definition must not be ambiguous.
+
+### Special-Day scientific status
+
+Special Days default to:
+
+**EXPLORATORY / ENTERTAINMENT**
+
+They are not confirmatory experiments merely because they produce
+interesting behavior.
+
+Special-Day telemetry must remain distinguishable from:
+
+- frozen baseline telemetry,
+- pre-registered experiments,
+- confirmatory intervention results,
+- evidence used to support scientific claims.
+
+A Special Day may later motivate a formal scientific experiment.
+
+If so, the resulting hypothesis, controls, targets, timing, and outcome
+criteria must be defined separately before confirmatory data are
+examined.
+
+Public engagement must never retroactively convert an exploratory result
+into a pre-registered one.
+
+### Community voting
+
+The Panopticon may allow authenticated users to vote on upcoming
+Special Days, novelty experiments, presentation themes, or other
+non-confirmatory activities.
+
+Community voting may influence what exploratory entertainment experiment
+is performed next.
+
+Community voting must not determine:
+
+- whether a scientific result is published,
+- which confirmatory results are retained,
+- whether a failed experiment is hidden,
+- scientific thresholds after results are known,
+- the interpretation of frozen evidence.
+
+Money or popularity may select the next joke.
+
+They may not select the conclusion.
+
+### Authentication and privacy
+
+OAuth or equivalent authentication may be used for voting,
+anti-abuse controls, supporter identity, or community features.
+
+MoscaQuant should request the minimum practical authentication scope.
+
+User information should be collected only when it has a defined product
+purpose.
+
+The Panopticon must clearly disclose what information is collected and
+why.
+
+Authentication data, supporter data, community data, and scientific
+telemetry are separate concerns.
+
+User identity must not become an implicit scientific variable.
+
+### Monetization
+
+MoscaQuant is permitted to generate revenue.
+
+Potential mechanisms include:
+
+- voluntary donations,
+- supporter memberships,
+- merchandise,
+- sponsorships,
+- premium presentation or historical telemetry access,
+- community-driven novelty-event sponsorship,
+- research sponsorship.
+
+Monetization must not alter scientific reporting.
+
+Sponsors, donors, voters, supporters, or customers receive no right to:
+
+- suppress results,
+- rewrite hypotheses after outcomes are known,
+- hide negative findings,
+- change frozen experimental evidence,
+- convert exploratory observations into confirmatory claims.
+
+Commercial success is not scientific evidence.
+
+Scientific failure is not commercial failure.
+
+### WARDEN-01 and financial attribution
+
+Future real-money operation must preserve explicit attribution between:
+
+- raw MQ-001 proposals,
+- WARDEN-01 approved proposals,
+- WARDEN-01 rejected proposals,
+- executed trades,
+- realized financial outcomes.
+
+WARDEN-01 must not accidentally become the profitable strategy while
+MQ-001 receives the scientific or public credit.
+
+The brain proposes.
+
+The Pi disposes.
+
+### Fly Wife's Boyfriend Capital
+
+Public-facing MoscaQuant language may refer to future experimental
+capital as:
+
+**FLY WIFE'S BOYFRIEND CAPITAL**
+
+This is a meme-layer term only.
+
+Formal experiment and risk artifacts must use precise financial and risk
+terminology.
+
+Financial semantics remain:
+
+**NOT ASSIGNED**
+
+until the corresponding project gate is explicitly passed.
+
+### MQ-001 presentation canon
+
+When MQ-001 receives a full-body Panopticon representation, the canonical
+presentation includes a tie.
+
+The presentation layer may be absurd.
+
+The scientific artifacts remain boring.
+
+## Statistical Discipline, Confounds, and Stopping Rules
+
+MoscaQuant must define the rule used to classify an experiment before
+examining the result that rule will classify.
+
+### Statistical decision discipline
+
+A statistical method must match the actual experimental unit and control
+design.
+
+MoscaQuant must not manufacture rigor by treating dependent neurons,
+frames, or repeated observations as independent samples merely because
+doing so produces a convenient p-value.
+
+Where appropriate, analysis should prefer:
+
+- explicit effect sizes,
+- uncertainty intervals,
+- permutation or randomization tests,
+- null distributions generated by the experimental control design,
+- tests that preserve known dependence structure.
+
+The exact statistical rule for a confirmatory experiment must be frozen
+before its confirmatory outcome is inspected.
+
+No statistical threshold may be selected because it produces a preferred
+classification.
+
+### Known-confounds register
+
+Claims and limitations are separate records.
+
+The claims ledger records what available evidence supports.
+
+The known-confounds register records unresolved reasons an interpretation
+could still be incomplete, fragile, or wrong.
+
+Open confounds must remain visible until explicitly mitigated or resolved.
+
+A limitation must not disappear merely because later experiments become
+more interesting.
+
+### Hypothesis-family stopping rules
+
+MoscaQuant must not indefinitely modify an encoder, decoder, control, or
+analysis until a desired result appears.
+
+For research programs involving repeated attempts against a common
+hypothesis, a stopping or falsification rule should be defined before
+confirmatory testing begins.
+
+When the pre-registered stopping condition is reached, the corresponding
+claim is classified unsupported.
+
+A genuinely new hypothesis may begin a new experimental program only if
+it is defined prospectively and is not a disguised continuation of failed
+post-hoc tuning.
+
+### Financial-validation boundary
+
+Neural activity is not evidence of financial usefulness.
+
+Before financial semantics may be assigned, MoscaQuant must demonstrate
+performance using real historical market data under a frozen validation
+protocol.
+
+That protocol must include appropriate controls for:
+
+- look-ahead bias,
+- test-set leakage,
+- transaction costs,
+- slippage,
+- temporal non-stationarity,
+- trivial benchmark strategies,
+- randomized or shuffled controls.
+
+The final held-out evaluation period must not become another development
+set.
+
+### WARDEN-01 adversarial validation
+
+Before WARDEN-01 is permitted to authorize real-money actions, its safety
+protocol must be pre-registered.
+
+Attack scenarios and pass/fail conditions must be written before final
+safety evaluation.
+
+WARDEN-01 follows the principle:
+
+**Ambiguous state fails closed.**
+
+Adversarial validation should include, where applicable:
+
+- duplicate proposals,
+- replayed proposals,
+- stale proposals,
+- malformed quantities,
+- invalid or extreme prices,
+- concurrent conflicting requests,
+- partial fills,
+- broker timeouts,
+- network partitions,
+- process restarts,
+- clock drift,
+- corrupted local state,
+- credential-compromise attempts,
+- daily-loss-boundary behavior,
+- kill-switch operation,
+- watchdog failure.
+
+Safety performance must not be graded solely by the implementation that
+is being tested.
