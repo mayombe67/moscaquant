@@ -661,3 +661,25 @@ No adaptive learning, reinforcement, Sugar Cube selection, market strategy, or e
 
 ORACLE-01 remains proposal-only and WARDEN-01 retains independent authority.
 
+### MQ-7.4 — Oracle Persistence & Replay — COMPLETE
+
+ORACLE-01 now persists and reloads auditable state without rewriting history.
+
+Implemented properties:
+
+- append-only JSONL event history;
+- atomic state snapshot replacement;
+- persistence metadata;
+- full event-chain verification during reload;
+- state/final-event consistency checks;
+- metadata consistency checks;
+- corruption and tamper rejection;
+- deterministic read-only replay;
+- immutable tuple restoration after JSON deserialization;
+- restart-safe Oracle state reconstruction.
+
+The event chain remains the authoritative historical record.
+
+State snapshots are derived convenience artifacts and must agree with the final verified event.
+
+No learning, reinforcement, Sugar Cube selection, market strategy, authority, or execution logic is present in MQ-7.4.
