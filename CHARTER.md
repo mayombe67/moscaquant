@@ -1145,6 +1145,42 @@ MQ-5 asks:
 
 **Anatomy. Evidence. Causality. Next.**
 
+## Current Cloud Deployment Architecture
+
+Canonical public URL: **https://moscaquant.com**
+
+Current deployment uses a cost-conscious AWS baseline host while preserving logical service boundaries.
+
+```text
+Internet
+   |
+   v
+Route 53 / TLS
+   |
+   v
+https://moscaquant.com
+   |
+   v
+Public Web Surface
+   |
+   +-- MQ-001 runtime
+   |
+   +-- WARDEN-01
+          local IPC only
+          no public TCP service
+          no broker credentials
+          no exchange credentials
+          no wallet credentials
+```
+
+Future heavy compute may move to ephemeral workers without changing scientific configuration or accepted experimental semantics.
+
+A future Execution Adapter remains a separate architectural layer and is **NOT IMPLEMENTED**.
+
+**External execution: DISABLED**
+
+**Financial semantics: NOT ASSIGNED**
+
 ## MQ-6 Canonical Authority and Execution Boundary
 
 MQ-6 is **COMPLETE**. WARDEN-01 completed its local authority-boundary and production-containment program with **191 / 191 tests passed** under tested local conditions.

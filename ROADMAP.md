@@ -119,6 +119,16 @@ Cloud migration is infrastructure work, not a new scientific MQ phase. It must p
 
 Cloud migration does not assign financial semantics and does not enable external execution.
 
+Current baseline deployment:
+
+- canonical URL: `https://moscaquant.com`;
+- AWS-hosted baseline runtime;
+- public web surface behind Nginx and TLS;
+- MQ-001 and WARDEN-01 separated by service identities and filesystem boundaries;
+- WARDEN-01 remains local IPC only and credential-free;
+- future heavy compute may use ephemeral workers;
+- future execution remains a separate architectural layer and is not implemented.
+
 ## MQ-7 — AWAKEN THE ORACLE
 Implement and validate the behavioral correction and behavioral-layer
 protocols.
