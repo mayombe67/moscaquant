@@ -5,7 +5,7 @@
 **System:** ORACLE-01
 **Codename:** GLaDOS
 
-> Reinforcement may change GLaDOS. It may not rewrite the fly.
+> Oracle may perturb the simulated subject only through frozen D6 interventions. Oracle may never alter WARDEN-01 authority or containment.
 
 ## 1. Objective
 
@@ -60,7 +60,15 @@ Each condition definition must specify:
 
 Panopticon display names may differ from scientific identifiers.
 
-## 4. Selection semantics
+## Canonical D6 conditions
+
+- `SC-01` — THE SHOCK
+- `SC-02` — DARKNESS
+- `SC-03` — BAD SYNAPSE
+- `SC-04` — TIME OUT
+- `SC-05` — SCAR TISSUE
+- `SC-06` — MERCY
+\n\n## 4. Selection semantics
 
 The initial selector uses a six-outcome uniform selection model unless a later protocol revision explicitly changes the distribution.
 

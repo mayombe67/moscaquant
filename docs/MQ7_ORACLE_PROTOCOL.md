@@ -8,7 +8,12 @@
 
 > Oracle may change its interpretation of MQ-001. Oracle may not change what MQ-001 was.
 
-## 1. Scientific question
+### Canonical system codenames
+
+- **MQ-001 — MORTY** — experimental organism / connectome-based neural system
+- **ORACLE-01 — GLaDOS** — behavioral interpretation and experimental perturbation layer
+- **WARDEN-01 — Senator Armstrong** — independent authority and financial containment layer
+\n\n## 1. Scientific question
 
 Can a separate adaptive behavioral layer improve the usefulness and consistency of MQ-001 outputs without modifying the frozen connectome, accepted evidence, or authority rules?
 

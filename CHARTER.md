@@ -1822,4 +1822,9 @@ Adversarial validation should include, where applicable:
 - watchdog failure.
 
 Safety performance must not be graded solely by the implementation that
-is being tested.
+is being tested.\n\n## Canonical system codenames
+
+- **MQ-001 — MORTY** — experimental organism / connectome-based neural system
+- **ORACLE-01 — GLaDOS** — behavioral interpretation and experimental perturbation layer
+- **WARDEN-01 — Senator Armstrong** — independent authority and financial containment layer
+\n
