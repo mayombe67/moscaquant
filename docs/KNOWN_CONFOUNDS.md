@@ -3,8 +3,13 @@
 Status values:
 
 - `OPEN`
+- `OPEN — PARTIALLY MITIGATED`
+- `OPEN — SUBSTANTIALLY MITIGATED`
 - `MITIGATED`
 - `RESOLVED`
+
+The graded `OPEN` statuses indicate that evidence has narrowed a confound
+without eliminating the remaining limitation.
 
 This document records limitations that remain relevant even when an
 experiment produces a positive result.

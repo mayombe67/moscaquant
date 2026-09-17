@@ -1,19 +1,21 @@
 # MoscaQuant Neuroscope User Guide
 
 **Project:** MoscaQuant
-**Component:** MQ-4 Neuroscope
-**Scope:** MQ-4.1 through MQ-4.8
+**Component:** Neuroscope — MQ-4 foundation with MQ-5.7 intervention replay
+**Scope:** MQ-4.1 through MQ-4.8 plus MQ-5.7 read-only intervention replay
 **Status:** Operator Guide
 
 > **Same neurons. Deeper questions.**
 
-Neuroscope is the interactive visualization and inspection layer for the frozen MoscaQuant MQ-1 through MQ-3 experimental state.
+Neuroscope is the interactive visualization and inspection layer for frozen MoscaQuant experimental evidence.
 
-It is designed to help inspect anatomy, replay recorded neural activity, examine preserved causal evidence, traverse causal pathways, and analyze the nine-neuron responder ensemble.
+Its MQ-4 foundation exposes anatomy, recorded neural activity, preserved MQ-3 causal evidence, graph traversal, and the nine-neuron responder ensemble.
+
+MQ-5.7 extends the same read-only instrument with replay of completed MQ-5 intervention artifacts, including generalized single-edge perturbations, the frozen two-hop pathway, convergence systems, and associated provenance.
 
 Neuroscope is a **read-only interpretation layer**.
 
-It does not modify the experimental model and does not create new causal evidence.
+It does not modify the experimental model, execute interventions, or create new causal evidence.
 
 ---
 
@@ -742,6 +744,42 @@ Context matters.
 
 For example, cyan can indicate replay effective activity or an upstream causal trace depending on the active viewer mode.
 
+20A. MQ-5.7 Intervention Replay
+
+MQ-5.7 adds a read-only science-dashboard layer over completed MQ-5 artifacts.
+
+It exposes:
+
+- all 13 generalized causal-edge intervention replays,
+- 25%, 50%, 75%, and 100% attenuation levels,
+- timing controls,
+- matched controls where prospectively valid,
+- the frozen `56393 → 68045 → 1273` pathway,
+- the three frozen convergence systems,
+- baseline versus intervention traces,
+- completed robustness and independent-replication provenance.
+
+Selecting a family, condition, dose, or causal frame changes presentation only.
+
+Neuroscope does not:
+
+- execute the production neural runtime,
+- execute the MQ-5 intervention runtime,
+- generate a missing trace,
+- create a new control,
+- infer a new causal relationship,
+- strengthen a scientific classification.
+
+For `43417 → 656`, no valid matched control existed, so the dashboard must continue to show that control as unavailable.
+
+Responder 51 retains the documented extremely-small numerical-scale caveat.
+
+For convergence systems, combined effect exceeding either single input is descriptive. It is not a statistical synergy classification.
+
+The MQ-5.7 dashboard artifact is downstream of completed science.
+
+Visualization is not an additional experiment.
+
 21. Scientific Boundaries
 
 These constraints are important.
@@ -784,7 +822,7 @@ Neuroscope currently describes the neural experimental model only.
 
 22. Expected Invariants
 
-A healthy MQ-4.8 Neuroscope build should report:
+A healthy Neuroscope build should preserve the MQ-4.8 base invariants:
 
 NEURONS       12,475
 REAL SOMA      7,486
@@ -885,9 +923,9 @@ A practical Neuroscope analysis session usually follows this order:
 
 This keeps anatomy, recorded activity, and causal evidence conceptually separate.
 
-26. Current MQ-4 Capability Summary
+26. Current Neuroscope Capability Summary
 
-As of MQ-4.8, Neuroscope supports:
+Neuroscope currently supports the accepted MQ-4.8 capability set plus MQ-5.7 intervention replay:
 
 hybrid anatomical geometry
 real soma coordinates
@@ -913,6 +951,13 @@ nine-responder isolation
 responder peak analysis
 responder peak-frame navigation
 synchronized responder activity plotting
+MQ-5 generalized intervention replay
+MQ-5 two-hop pathway replay
+MQ-5 convergence replay
+baseline/intervention trace comparison
+frozen dose selection
+control visibility
+robustness and provenance display
 
 Neuroscope remains an experimental inspection instrument rather than an execution engine.
 

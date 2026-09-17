@@ -748,35 +748,46 @@ MQ-4 — NEUROSCOPE
 
 Build detailed live neural visualization.
 
-MQ-5 — DEPLOY THE WARDEN
+Status: COMPLETE.
+
+MQ-5 — INTERVENTION AND PERTURBATION EXPERIMENTS
+
+Test evidence-defined causal nodes and pathways using frozen intervention
+protocols, controls, robustness checks, independent-runtime replication,
+and read-only Neuroscope intervention replay.
+
+Status: COMPLETE — ACCEPTED WITH DOCUMENTED LIMITATIONS.
+
+MQ-6 — DEPLOY THE WARDEN
 
 Deploy independent risk gateway and conduct adversarial testing.
 
-MQ-6 — AWAKEN THE ORACLE
+MQ-7 — AWAKEN THE ORACLE
 
-Implement and validate the complete D6 protocol.
+Implement and validate the behavioral correction and behavioral-layer
+protocols.
 
-MQ-7 — CORPORATE CULTURE
+MQ-8 — CORPORATE CULTURE
 
 Implement achievements, personnel records, reviews and related systems.
 
-MQ-8 — OPEN THE PANOPTICON
+MQ-9 — OPEN THE PANOPTICON
 
 Deploy the public spectator environment and Containment Chamber.
 
-MQ-9 — INTRODUCE THE MONEY
+MQ-10 — INTRODUCE THE MONEY
 
 Connect supported broker infrastructure in read-only mode.
 
-MQ-10 — THE CASINO OPENS
+MQ-11 — THE CASINO OPENS
 
 Permit tiny controlled real-money transactions through WARDEN-01.
 
-MQ-11 — CONSEQUENCES
+MQ-12 — CONSEQUENCES
 
 Enable experimental plasticity and persistent aversive learning.
 
-MQ-12 — MOSCA VS THE WORLD
+MQ-13 — MOSCA VS THE WORLD
 
 Conduct comparative experiments against controls and benchmarks.
 
@@ -896,8 +907,9 @@ YOLO & HODL LLC
 MOSCAQUANT
 
 SUBJECT ................. MQ-001
-CURRENT PHASE ........... MQ-4
-MISSION ................. NEUROSCOPE
+CURRENT PHASE ........... MQ-5 COMPLETE
+NEXT PHASE .............. MQ-6 / DEPLOY THE WARDEN
+MISSION ................. POST-MQ-5 HARDENING / WARDEN PREPARATION
 
 BROKER .................. NONE
 TRADING AUTHORITY ....... NONE
@@ -909,9 +921,11 @@ CONTAINMENT ............. ACTIVE
 
 FINANCIAL SEMANTICS ..... NOT ASSIGNED
 
-NEXT OBJECTIVE:
+CURRENT DIRECTIVE:
 
-BUILD NEUROSCOPE FROM FROZEN MQ-1 THROUGH MQ-3 TELEMETRY WITHOUT ALTERING THE EXPERIMENTAL MODEL.
+PRESERVE THE ACCEPTED MQ-5 SCIENTIFIC RECORD AND ITS CLAIM BOUNDARIES.
+MQ-6 MAY DESIGN AND TEST WARDEN-01, BUT NO FINANCIAL OR TRADING SEMANTICS
+ARE RETROACTIVELY ASSIGNED TO MQ-1 THROUGH MQ-5.
 
 Past performance does not guarantee future sugar cubes.
 
