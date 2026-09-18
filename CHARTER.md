@@ -2351,3 +2351,248 @@ The site is canonical.
 Social media is an echo.
 
 <!-- END CANON: MQ-8.9 PANOPTICON BROADCAST SYSTEM -->
+
+<!-- BEGIN CANON: PANOPTICON NAVIGATION AND MOBILE CONTRACT -->
+
+## PANOPTICON NAVIGATION CONTRACT
+
+Panopticon navigation SHALL be centralized.
+
+Public dossiers, personnel records, achievements, experiment records, broadcast
+events, anomalies, observances, HR records, and future overlay-based interfaces
+SHALL use the same navigation semantics.
+
+### Central navigation controller
+
+Panopticon SHALL maintain one shared navigation controller responsible for:
+
+- opening public overlays
+- closing the active overlay
+- returning to the previous overlay
+- closing all overlays
+- browser history integration
+- deep-link state
+- breadcrumbs
+- focus transfer and restoration
+- scroll-position preservation
+- unknown-record handling
+- one-active-overlay ownership
+
+Feature modules SHALL register content / renderers with the navigation layer
+rather than implementing incompatible modal-history behavior independently.
+
+### Back versus Close
+
+BACK and CLOSE are distinct actions.
+
+BACK SHALL:
+
+- return to the previous Panopticon overlay or dossier when history exists
+- restore the previous overlay's scroll position where practical
+- restore the relevant navigation context
+
+CLOSE SHALL:
+
+- exit the overlay stack
+- return the user to the underlying Panopticon page
+- clear transient overlay navigation state
+
+ESCAPE SHALL behave as BACK when overlay history exists and CLOSE otherwise.
+
+### Browser history
+
+Panopticon overlay navigation SHOULD integrate with browser history.
+
+The browser Back button SHOULD move backward through dossier / overlay history
+before leaving the underlying page when such history exists.
+
+Navigation state SHOULD remain understandable when users enter through a deep
+link.
+
+### Deep links
+
+Public records SHOULD support stable deep-linkable state for relevant entities,
+including where appropriate:
+
+- achievement IDs
+- personnel IDs
+- HR record IDs
+- experiment IDs
+- broadcast IDs
+- anomaly / observance IDs
+
+A copied public link SHOULD open the same public-safe record when the record
+still exists.
+
+Unknown or retired IDs SHALL produce an explicit not-found state rather than a
+silent failure.
+
+### Breadcrumbs
+
+Dossiers SHOULD display sufficient context to explain the current navigation
+path.
+
+Example:
+
+    Personnel / Senator Armstrong / HR-003 / ACH-003
+
+Breadcrumbs are navigation aids, not scientific provenance.
+
+### Focus and accessibility
+
+When an overlay opens:
+
+- keyboard focus SHALL move into the active overlay
+- background interactive content SHOULD not accidentally receive focus
+- closing or backing out SHOULD restore focus to the initiating control when
+  practical
+
+Interactive controls SHALL be keyboard reachable.
+
+Hover SHALL NOT be required to access functionality.
+
+### Overlay ownership
+
+Only one top-level Panopticon overlay SHALL be interactive at a time.
+
+Hidden overlays SHALL NOT remain accidentally active for keyboard or pointer
+input.
+
+Cross-links SHALL navigate through the central controller rather than creating
+unbounded modal stacking.
+
+### Scroll preservation
+
+Back navigation SHOULD restore the previous dossier's scroll position.
+
+A user navigating:
+
+    Personnel Directory
+      → Senator Armstrong
+      → ACH-003 ROUTING TABLES
+      → Back
+      → Back
+
+SHOULD return to the prior locations rather than resetting the interface.
+
+### Loading and error states
+
+Public-data consumers SHALL expose explicit loading and error states.
+
+Missing JSON, unavailable public feeds, unknown IDs, or malformed public-safe
+records SHOULD fail visibly and non-destructively.
+
+Navigation failures SHALL NOT affect scientific execution, WARDEN containment,
+or canonical state.
+
+---
+
+## PANOPTICON MOBILE-FIRST PUBLIC UI CONTRACT
+
+Panopticon public interfaces SHALL be mobile-first.
+
+Desktop MAY add density.
+
+Mobile MUST NOT lose functionality.
+
+### Functional parity
+
+Any public action available on desktop SHALL remain available on supported
+mobile layouts unless the action is explicitly desktop-only for a documented
+technical reason.
+
+Mobile layouts SHALL retain access to:
+
+- Back
+- Close
+- dossier navigation
+- evidence links
+- personnel navigation
+- achievement navigation
+- copy/share links
+- filters
+- mute controls
+- reduced-motion controls
+- future live-blog navigation
+
+### Mobile overlay behavior
+
+On phone-sized layouts, dossier and navigation overlays SHOULD behave as
+full-height or near-full-height sheets.
+
+Mobile overlays SHOULD provide:
+
+- sticky Back control
+- sticky Close control
+- safe scrolling
+- no clipped evidence sections
+- no horizontal overflow
+- readable metadata
+- touch-safe controls
+
+### Touch targets
+
+Primary interactive controls SHOULD provide a minimum practical touch target
+of approximately 44 CSS pixels in at least one dimension where layout permits.
+
+Dense scientific metadata MAY use smaller non-interactive text.
+
+### Responsive layout
+
+Public UI SHALL be tested at representative viewport widths including:
+
+- 390px
+- 430px
+- 768px
+- 1024px
+
+These are validation targets, not exclusive breakpoints.
+
+### Safe areas
+
+Mobile UI SHOULD respect browser chrome and device safe-area insets where
+available.
+
+Sticky controls SHOULD avoid being obscured by notches, home indicators, and
+mobile browser controls.
+
+### Typography and density
+
+Mobile MAY reduce information density but SHALL NOT remove meaning.
+
+Metadata MAY:
+
+- stack vertically
+- collapse into expandable sections
+- wrap
+- move below primary content
+
+It SHALL NOT disappear solely because the viewport is narrow.
+
+### Achievement presentation
+
+Achievement toasts on mobile SHOULD:
+
+- use nearly full available width
+- avoid covering critical navigation controls
+- remain dismissible / inspectable
+- preserve mute and reduced-motion preferences
+
+### Accessibility preferences
+
+Mute and reduced-motion preferences SHOULD persist across Panopticon public
+surfaces.
+
+Reduced-motion mode SHALL remove non-essential animation without suppressing
+the underlying event.
+
+Muting a presentation effect SHALL NOT suppress the achievement or public
+record itself.
+
+### Governing principle
+
+PUBLIC INTERFACES MUST SURVIVE THE PHONE.
+
+If a feature only works comfortably in desktop DevTools, it is not complete.
+
+<!-- END CANON: PANOPTICON NAVIGATION AND MOBILE CONTRACT -->

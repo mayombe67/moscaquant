@@ -958,3 +958,60 @@ It MUST also remain portable to horizontally scalable infrastructure later.
 Scale changes runtime architecture, not experimental meaning.
 
 <!-- END CANON: MQ-8 EXPANDED IMPLEMENTATION -->
+
+<!-- BEGIN CANON: MQ-8 UI NAVIGATION INFRASTRUCTURE -->
+
+### MQ-8 UI Navigation Infrastructure — ACTIVE
+
+Before additional Panopticon public-surface expansion, MoscaQuant SHALL
+implement the centralized navigation and mobile-first contracts defined in the
+Charter.
+
+Implementation sequence:
+
+- MQ-8.UI.1 Central Navigation Controller
+  - shared overlay stack
+  - Back
+  - Close
+  - Close All
+  - one-active-overlay ownership
+
+- MQ-8.UI.2 Browser History and Deep Links
+  - pushState / popstate integration
+  - stable public-safe record links
+  - explicit not-found state
+
+- MQ-8.UI.3 Breadcrumbs and Cross-Module Navigation
+  - personnel
+  - HR
+  - achievements
+  - future experiments / broadcasts
+
+- MQ-8.UI.4 Focus, Keyboard, and Scroll Restoration
+  - focus trap / transfer
+  - initiating-control restoration
+  - Escape semantics
+  - scroll-position preservation
+
+- MQ-8.UI.5 Mobile Interaction Pass
+  - sticky Back / Close
+  - full-height sheet behavior
+  - 44px-class touch targets
+  - no hover-only actions
+  - 390 / 430 / 768 / 1024 validation
+
+- MQ-8.UI.6 Preference Persistence
+  - mute
+  - reduced motion
+  - presentation preferences remain independent of scientific event state
+
+### UI completion rule
+
+A Panopticon public feature is not considered complete when it only works in
+desktop DevTools.
+
+Desktop may add density.
+
+Mobile must not lose functionality.
+
+<!-- END CANON: MQ-8 UI NAVIGATION INFRASTRUCTURE -->
