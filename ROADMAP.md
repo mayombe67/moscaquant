@@ -2,8 +2,8 @@
 
 **Owner:** YOLO & HODL LLC
 **Subject:** MQ-001
-**Current Phase:** MQ-6 — COMPLETE — PRODUCTION CONTAINMENT HARDENING PASSED UNDER TESTED LOCAL CONDITIONS
-**Next Phase:** MQ-7 — AWAKEN THE ORACLE
+**Current Phase:** MQ-8 — CORPORATE CULTURE
+**Next Phase:** MQ-9 — OPEN THE PANOPTICON
 
 ## MQ-0 — ACQUIRE SUBJECT
 Load and validate MaleCNS. Build sparse connectivity, identify initial populations, inject controlled stimulus, observe propagation, and record telemetry.
@@ -130,11 +130,86 @@ Current baseline deployment:
 - future execution remains a separate architectural layer and is not implemented.
 
 ## MQ-7 — AWAKEN THE ORACLE
-Implement and validate the behavioral correction and behavioral-layer
-protocols.
+
+**Status:** COMPLETE — ORACLE AND FULL D6 BEHAVIORAL INTERVENTION SYSTEM VALIDATED.
+
+ORACLE-01 now provides deterministic behavioral-state interpretation and
+protocol-defined experimental intervention without financial authority.
+
+The complete D6 Behavioral Correction Protocol is implemented:
+
+- SC-01 — THE SHOCK
+- SC-02 — DARKNESS
+- SC-03 — BAD SYNAPSE
+- SC-04 — TIME OUT
+- SC-05 — SCAR TISSUE
+- SC-06 — MERCY
+
+Validated MQ-7 work includes:
+
+- deterministic D6 selection and replay;
+- persistent Oracle state with hash-chained audit history;
+- matched O1 static and O2 adaptive experimental controls;
+- fail-closed SC-03 causal-credit assignment;
+- persistent and reversible SC-03 plasticity overlays;
+- SC-05 cross-session persistence;
+- full D6 neural execution integration;
+- frozen multi-session all-D6 validation;
+- perturbation-dependent expression of latent plasticized state;
+- dynamic differential tracing;
+- causal pathway and downstream mediation experiments;
+- distributed first-wave causal mediation.
+
+The frozen structural MaleCNS connectome remained unchanged throughout these
+experiments.
+
+The MQ-7 causal-pathway subphase showed that, under the frozen condition-B
+SHOCK-56393 replay, ten dynamically identified first-wave branches accounted
+for approximately 96.5% of the measured DN-C1 plasticity-expression effect.
+Adding the independently validated 68045 -> 1273 route reduced the remaining
+measured effect to approximately 2.8e-7 of the intact magnitude.
+
+These plasticity experiments are preregistered scientific groundwork for
+MQ-12 — CONSEQUENCES.
+
+They do NOT constitute completion or activation of roadmap MQ-12.
+
+ORACLE-01 has no authority to:
+
+- override WARDEN-01;
+- alter financial containment;
+- assign live capital;
+- enable broker execution;
+- rewrite the structural connectome.
+
+Broker: NONE
+Exchange: NONE
+Wallet: NONE
+External execution: DISABLED
+Live capital policy: NOT ASSIGNED
+Financial semantics: NOT ASSIGNED
+
+MQ-8 is unblocked.
 
 ## MQ-8 — CORPORATE CULTURE
+
+**Status:** CURRENT.
+
 Implement achievements, personnel records, reviews, PIPs, and related systems.
+
+This phase may expose scientific events through clearly separated narrative and
+entertainment systems, but presentation must not alter experimental state,
+scientific claims, WARDEN policy, or historical records.
+
+Initial planned systems include:
+
+- global achievement events and Panopticon achievement toasts;
+- personnel records for canonical entities;
+- reviews and PIPs driven only by explicit system events;
+- narrative telemetry derived from real experimental outcomes;
+- separation of science-facing terminology from comedic lore.
+
+MQ-9 remains gated until MQ-8 requirements are satisfied.
 
 ## MQ-9 — OPEN THE PANOPTICON
 Deploy the public spectator interface and embodied Containment Chamber.
