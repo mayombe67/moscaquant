@@ -397,3 +397,34 @@ SC-01 activity floor = 0.75
 frozen connectome propagation
         ↓
 downstream neural response
+### SC-05 SCAR TISSUE — implemented v1
+
+SC-05 applies a bounded, reversible persistent attenuation to one deterministically selected node from the frozen MQ-5 causal source pool.
+
+The v1 effect is:
+
+- attenuation: 25%
+- retained effective activity: 75%
+- active for the remainder of the origin session;
+- active for the entire following session;
+- fully recovered after the following session;
+- stacking prohibited while active.
+
+The target is selected deterministically from the frozen causal-source pool using recorded provenance.
+
+SC-05 does not modify connectome weights or frozen structural artifacts.
+
+Operational lifecycle:
+
+```text
+session N
+SC-05 selected
+      ↓
+25% source attenuation
+remainder of session N
+      ↓
+session N+1
+same bounded attenuation persists
+      ↓
+session N+2
+full recovery
