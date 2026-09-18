@@ -1,0 +1,7 @@
+schema_version = "sc-03-plasticity-config/v1"
+
+enabled = false
+
+live_protocol = "sc-03-live-plasticity/v1"
+credit_protocol = "mq7-credit-assignment/v1"
+state_protocol = "sc-03-plasticity-state/v1"
