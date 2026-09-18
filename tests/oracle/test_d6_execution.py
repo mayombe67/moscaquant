@@ -302,3 +302,104 @@ def test_non_applicable_sc03_has_no_new_intervention():
     assert plan.darkness is None
     assert plan.timeout is None
     assert plan.mercy is None
+def test_scar_origin_session_starts_at_activation_generation():
+    seed, result = select_condition(
+        ReinforcementCondition.SC_05_SCAR_TISSUE
+    )
+
+    plan = build_d6_execution_plan(
+        d6_result=result,
+        seed=seed,
+        experiment_id=EXPERIMENT,
+        session_id=SESSION,
+        readout_indices=np.array(
+            [1],
+            dtype=np.int64,
+        ),
+        intervention_generation=5,
+    )
+
+    target = plan.scar_target_model_index
+
+    activity = np.zeros(
+        140000,
+        dtype=np.float32,
+    )
+
+    activity[target] = 1.0
+
+    before = plan.activity_modifier(
+        activity,
+        4,
+    )
+
+    active = plan.activity_modifier(
+        activity,
+        5,
+    )
+
+    assert np.isclose(
+        before[target],
+        1.0,
+    )
+
+    assert np.isclose(
+        active[target],
+        0.75,
+    )
+
+
+def test_scar_following_session_active_from_generation_zero():
+    seed, result = select_condition(
+        ReinforcementCondition.SC_05_SCAR_TISSUE
+    )
+
+    first = build_d6_execution_plan(
+        d6_result=result,
+        seed=seed,
+        experiment_id=EXPERIMENT,
+        session_id=SESSION,
+        readout_indices=np.array(
+            [1],
+            dtype=np.int64,
+        ),
+        intervention_generation=5,
+    )
+
+    next_result = select_d6(
+        seed=seed,
+        experiment_id=EXPERIMENT,
+        session_id="session-002",
+        plasticity_active=True,
+    )
+
+    second = build_d6_execution_plan(
+        d6_result=next_result,
+        seed=seed,
+        experiment_id=EXPERIMENT,
+        session_id="session-002",
+        readout_indices=np.array(
+            [1],
+            dtype=np.int64,
+        ),
+        prior_scar_state=first.scar_state,
+    )
+
+    target = second.scar_target_model_index
+
+    activity = np.zeros(
+        140000,
+        dtype=np.float32,
+    )
+
+    activity[target] = 1.0
+
+    modified = second.activity_modifier(
+        activity,
+        0,
+    )
+
+    assert np.isclose(
+        modified[target],
+        0.75,
+    )

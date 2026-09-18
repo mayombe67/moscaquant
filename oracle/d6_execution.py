@@ -16,6 +16,7 @@ from oracle.d6_mercy import (
     build_mercy,
 )
 from oracle.d6_scar import (
+    ScarPhase,
     ScarTissueState,
     advance_scar,
     build_scar,
@@ -93,6 +94,7 @@ def build_d6_execution_plan(
     experiment_id: str,
     session_id: str,
     readout_indices: np.ndarray,
+    intervention_generation: int = 0,
     plasticity_state: PlasticityState | None = None,
     prior_scar_state: ScarTissueState | None = None,
 ) -> D6ExecutionPlan:
@@ -128,7 +130,7 @@ def build_d6_execution_plan(
                 seed=seed,
                 experiment_id=experiment_id,
                 session_id=session_id,
-                current_generation=0,
+                current_generation=intervention_generation,
             )
 
         elif (
@@ -136,7 +138,7 @@ def build_d6_execution_plan(
             is ReinforcementCondition.SC_02_DARKNESS
         ):
             darkness = build_darkness(
-                current_generation=0,
+                current_generation=intervention_generation,
             )
 
         elif (
@@ -144,7 +146,7 @@ def build_d6_execution_plan(
             is ReinforcementCondition.SC_04_TIME_OUT
         ):
             timeout = build_timeout(
-                current_generation=0,
+                current_generation=intervention_generation,
             )
 
         elif (
@@ -157,7 +159,7 @@ def build_d6_execution_plan(
             ):
                 scar_state = build_scar(
                     session_id=session_id,
-                    current_generation=0,
+                    current_generation=intervention_generation,
                 )
 
         elif (
@@ -168,7 +170,7 @@ def build_d6_execution_plan(
                 seed=seed,
                 experiment_id=experiment_id,
                 session_id=session_id,
-                current_generation=0,
+                current_generation=intervention_generation,
             )
 
     #
@@ -226,10 +228,29 @@ def build_d6_execution_plan(
             # acute current-session activity
             # intervention second.
             #
+            scar_active_now = False
+
             if (
                 scar_state is not None
                 and scar_target is not None
+                and scar_state.active
             ):
+                if (
+                    scar_state.phase
+                    is ScarPhase.CURRENT_SESSION
+                ):
+                    scar_active_now = (
+                        generation
+                        >= scar_state.activated_generation
+                    )
+
+                elif (
+                    scar_state.phase
+                    is ScarPhase.FOLLOWING_SESSION
+                ):
+                    scar_active_now = True
+
+            if scar_active_now:
                 modified = apply_scar_effect(
                     effective_activity=modified,
                     scar_state=scar_state,
