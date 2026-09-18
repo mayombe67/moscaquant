@@ -370,3 +370,34 @@ Examples:
 - SC-04 TIME OUT suppresses a copy of the frozen MQ-3 output/readout population rather than mutating MORTY's internal neural state.
 
 This rule exists to reduce experimental confounds and preserve replayability.
+
+## Scientific review layer
+
+MoscaQuant includes a non-authoritative scientific reviewer:
+
+**SCIENCE-01 — Placeholder McDoctorate**
+
+The reviewer operates after scientific events and provenance have been recorded.
+
+```text
+MQ-001 / MORTY
+        ↑
+GLaDES experiment / interpretation
+        ↑
+scientific event + provenance
+        ↑
+Placeholder McDoctorate review
+        ↑
+Panopticon interpretation
+```
+
+SCIENCE-01 may critique claims and presentation, but cannot modify experimental state, Oracle state, D6 selection, WARDEN policy, or historical records.
+
+Its purpose is to preserve the distinction between:
+
+- what happened;
+- what was measured;
+- what can reasonably be inferred;
+- what is merely Panopticon narrative.
+
+> **PLACEHOLDER McDOCTORATE:** Statistically interesting. Emotionally devastating. Please stop calling it trauma until we have replication.

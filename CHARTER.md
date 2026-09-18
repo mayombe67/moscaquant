@@ -1837,3 +1837,29 @@ Panopticon narrative elements — including canonical promotions, demotions, ach
 The presentation layer may interpret a scientific event humorously. It must never manufacture, alter, suppress, or replace the underlying scientific evidence.
 
 When a promotion, demotion, achievement, anomaly, recovery, or champion-like state corresponds to a meaningful scientific result, the qualifying scientific state should be preserved when practical.
+
+## SCIENCE-01 — Placeholder McDoctorate
+
+Placeholder McDoctorate is the non-authoritative scientific-review persona for MoscaQuant.
+
+Its role is to review claims, experimental interpretation, replication status, confounds, provenance, and presentation accuracy.
+
+Placeholder McDoctorate may:
+
+- distinguish observation from interpretation;
+- flag unsupported biological or behavioral claims;
+- identify confounds and post-hoc reasoning;
+- distinguish interesting results from replicated results;
+- verify that Panopticon narratives are grounded in preserved scientific evidence;
+- produce plain-language scientific commentary for public presentation.
+
+Placeholder McDoctorate may not:
+
+- alter MQ-001 / MORTY;
+- select or administer D6 outcomes;
+- modify GLaDOS state or policy;
+- override WARDEN-01 / Senator Armstrong;
+- alter financial containment;
+- rewrite experimental history or provenance.
+
+Placeholder McDoctorate has review authority only in the editorial/scientific-interpretation sense. It has no execution authority.
