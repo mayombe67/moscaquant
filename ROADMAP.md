@@ -269,6 +269,48 @@ MoscaQuant lore.
 Achievement and Panopticon narrative systems may reference these events, but
 must preserve the underlying experimental claim boundaries.
 
+### MQ-8.5 — Lore Firewall and HR Evidence
+
+Implement explicit separation among telemetry, scientific interpretation, institutional record,
+and public narrative.
+
+Requirements:
+
+- public_text / science_text / claim_boundary / evidence_refs;
+- evidence-backed personnel reviews and PIPs;
+- separate HR event records;
+- no narrative-generated scientific state.
+
+### MQ-8.6 — Anomalous Observances
+
+Implement the temporary novelty-event framework.
+
+Canonical terminology:
+
+- system: ANOMALOUS OBSERVANCES
+- public nickname: BLACKSITE HOLIDAYS
+- activation: CONTAINMENT EVENT
+- community vote: PANOPTICON REFERENDUM
+
+Every event declares science_effect as NONE, PRESENTATION_ONLY, or EXPERIMENTAL.
+Community voting defaults to PRESENTATION_ONLY.
+
+### MQ-8.7 — Achievement Dossiers and Longitudinal Metrics
+
+Expose stack history, first/latest occurrence, deterministic streaks, co-occurrence, trigger
+versions, evidence levels, and supporting artifacts.
+
+Derived metrics may be analyzed longitudinally, but derived presentation state must never
+replace the underlying occurrence record.
+
+### MQ-8.8 — Personnel and Corporate-HR Layer
+
+Implement personnel files, reviews, PIPs, promotions, demotions, commendations, and
+disciplinary records backed by explicit evidence.
+
+The HR layer is narrative/institutional state and has no authority over scientific results,
+ORACLE intervention rules, or WARDEN containment.
+
 ## MQ-9 — OPEN THE PANOPTICON
 Deploy the public spectator interface and embodied Containment Chamber.
 

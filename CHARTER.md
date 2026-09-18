@@ -906,6 +906,121 @@ THE SCIENTIST MAY CLOSE THE POPUP.
 
 THE SCIENTIST MAY NOT DELETE THE EVENT.
 
+### MQ-8 Achievement Refinements
+
+The 128-slot namespace is partitioned for operational clarity:
+
+- ACH-001 through ACH-032 — SCIENCE
+- ACH-033 through ACH-048 — ORACLE
+- ACH-049 through ACH-064 — CONTAINMENT
+- ACH-065 through ACH-088 — BEHAVIOR
+- ACH-089 through ACH-112 — LORE
+- ACH-113 through ACH-120 — ANOMALOUS OBSERVANCES / BLACKSITE HOLIDAYS
+- ACH-121 through ACH-128 — SECRET / ODDITY
+
+Reserved ranges organize identifiers only. They do not rank scientific importance.
+
+Achievement definitions and achievement occurrences are distinct records.
+Definitions describe deterministic trigger semantics. Occurrences record every qualifying event.
+
+Repeatable achievements must preserve every occurrence. Stack counts, first-seen timestamps,
+latest-seen timestamps, streaks, and milestone tiers are derived views over the immutable
+occurrence history.
+
+A single source event may unlock multiple achievements. All such occurrences must retain the
+same source event identifier so later analysis can reconstruct co-occurrence.
+
+Achievement trigger versions are immutable. A later trigger revision creates a new trigger
+version and must not silently reinterpret historical occurrences.
+
+Historical replay must be idempotent. Reprocessing the same source event under the same
+achievement definition and trigger version must not create duplicate occurrences.
+
+Presentation suppression does not suppress evidence. Reduced motion, muted audio,
+presentation mode, route transitions, or closed notifications may hide or soften the popup,
+but the underlying event remains recorded.
+
+MQ-8 defines a Lore Firewall.
+
+Every public-facing narrative achievement must maintain, where applicable:
+
+- public_text;
+- science_text;
+- claim_boundary;
+- evidence_refs.
+
+Narrative language may be absurd. Scientific interpretation may not be.
+
+MQ-8 personnel records, reviews, PIPs, promotions, demotions, commendations, and disciplinary
+actions must be backed by explicit recorded events or declared manual canon. Corporate-HR
+narrative may summarize evidence but may not invent behavioral facts.
+
+HR records are separate from achievement records. Achievements may contribute evidence to
+reviews, but a review is not itself an achievement occurrence.
+
+ANOMALOUS OBSERVANCES is the canonical system name for temporary novelty-event days.
+BLACKSITE HOLIDAYS is the approved public nickname.
+An individual activation is a CONTAINMENT EVENT.
+Community voting is presented as a PANOPTICON REFERENDUM.
+
+Every Anomalous Observance must declare:
+
+science_effect = NONE | PRESENTATION_ONLY | EXPERIMENTAL
+
+Community-selected events default to PRESENTATION_ONLY.
+Any EXPERIMENTAL event requires its own frozen protocol and may not enter the scientific record
+through the entertainment layer alone.
+
+Achievement notification delivery uses a deterministic global queue. When multiple unlocks
+occur simultaneously, all events are recorded immediately and presentation order is
+deterministic.
+
+Presentation priority is:
+
+SECRET / ODDITY
+LEGENDARY
+SCIENCE
+CONTAINMENT
+ORACLE
+BEHAVIOR
+LORE
+
+Presentation priority affects display order only. It does not change evidence, causality, or
+scientific importance.
+
+The global achievement overlay has two required surfaces:
+
+1. a brief application-wide toast;
+2. a detailed achievement dossier.
+
+The dossier must expose, where available:
+
+- first occurrence;
+- latest occurrence;
+- total occurrence count;
+- complete occurrence history;
+- trigger definition and version;
+- evidence level;
+- source-event linkage;
+- experiment/session/generation;
+- supporting measurements;
+- source artifacts;
+- co-occurring achievements.
+
+The toast may be obnoxious.
+The dossier must have receipts.
+
+At least one valid achievement definition must remain deliberately unreachable as a registry
+and UI test case.
+
+ACH-128 is reserved for this purpose.
+Its canonical title is HALF-LIFE 3 CONFIRMED.
+Its trigger is permanently false.
+Its public text is: Nice try.
+Its evidence level is E0 — LORE ONLY.
+Its permanent locked state is intentional and must not be bypassed by historical replay,
+community voting, manual telemetry injection, or ordinary runtime events.
+
 25. Go / No-Go Gates
 
 MQ-3 cannot begin until market-driven activity propagates reproducibly beyond
