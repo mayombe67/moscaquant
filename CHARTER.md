@@ -1828,3 +1828,12 @@ is being tested.\n\n## Canonical system codenames
 - **ORACLE-01 — GLaDOS** — behavioral interpretation and experimental perturbation layer
 - **WARDEN-01 — Senator Armstrong** — independent authority and financial containment layer
 \n
+## Science-first presentation rule
+
+> **Science first. Lulz a very close second.**
+
+Panopticon narrative elements — including canonical promotions, demotions, achievements, GLaDOS commentary, MORTY status, and other comedic presentation — should be grounded in real recorded scientific events, measurements, states, or provenance whenever possible.
+
+The presentation layer may interpret a scientific event humorously. It must never manufacture, alter, suppress, or replace the underlying scientific evidence.
+
+When a promotion, demotion, achievement, anomaly, recovery, or champion-like state corresponds to a meaningful scientific result, the qualifying scientific state should be preserved when practical.

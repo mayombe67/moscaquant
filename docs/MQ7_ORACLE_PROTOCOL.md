@@ -343,3 +343,18 @@ MQ-7.1 is complete only when all of the following are frozen:
 * WARDEN-01 supremacy.
 
 No Oracle implementation work should begin before this protocol is reviewed and accepted.
+## Scientific event to Panopticon mapping
+
+Panopticon presentation should consume recorded scientific events rather than create scientific meaning.
+
+```text
+scientific event
+      |
+      v
+notable state + provenance
+      |
+      v
+Panopticon interpretation
+      |
+      v
+promotion / demotion / achievement / narrative

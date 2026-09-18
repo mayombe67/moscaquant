@@ -320,3 +320,23 @@ This specification does not yet implement:
 ## 16. Governing invariant
 
 > Push MORTY hard enough to discover what the brain can and cannot do, while preserving enough control and provenance to know why it behaved that way.
+## Candidate-state preservation
+
+Scientifically interesting MORTY states produced during D6 experiments should be preservable as reproducible candidate snapshots.
+
+Candidate-state preservation is not limited to positive outcomes. Eligible states may include strong performance, unusual robustness, recovery after perturbation, cross-session persistence, generalization, anomalous behavior, or states associated with canonical Panopticon promotion/demotion events.
+
+A candidate snapshot should preserve, where applicable:
+
+- MQ-001 state hash;
+- model/connectome version;
+- scientific configuration hash;
+- experiment and session IDs;
+- D6 history;
+- Oracle version/state reference;
+- control condition;
+- seeds or entropy commitments;
+- event-chain head;
+- measured qualification reason.
+
+Preservation does not imply scientific superiority. Qualification and replication remain separate from Panopticon presentation.
