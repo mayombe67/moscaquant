@@ -1,6 +1,7 @@
 schema_version = "mq7-adaptive-experiment-config/v1"
 
 experiment_id = "mq7-o2-adaptive-v1"
+d6_experiment_id = "mq7-adaptive-pair-v1"
 condition = "O2_ADAPTIVE_ORACLE"
 
 sc03_config = "config/oracle/sc03-plasticity-v1.toml"

@@ -23,6 +23,7 @@ class AdaptiveExperimentConfigError(ValueError):
 class AdaptiveExperimentConfig:
     schema_version: str
     experiment_id: str
+    d6_experiment_id: str
     condition: str
     sc03_config: str
 
@@ -79,6 +80,10 @@ def parse_adaptive_experiment_config(
         "experiment_id"
     )
 
+    d6_experiment_id = payload.get(
+        "d6_experiment_id"
+    )
+
     condition = payload.get(
         "condition"
     )
@@ -90,6 +95,11 @@ def parse_adaptive_experiment_config(
     if not experiment_id:
         raise AdaptiveExperimentConfigError(
             "experiment_id is required"
+        )
+
+    if not d6_experiment_id:
+        raise AdaptiveExperimentConfigError(
+            "d6_experiment_id is required"
         )
 
     if condition not in {O1, O2}:
@@ -238,6 +248,7 @@ def parse_adaptive_experiment_config(
     return AdaptiveExperimentConfig(
         schema_version=EXPERIMENT_CONFIG_SCHEMA,
         experiment_id=experiment_id,
+        d6_experiment_id=d6_experiment_id,
         condition=condition,
         sc03_config=sc03_config,
         plasticity_enabled=enabled,
@@ -289,6 +300,7 @@ def validate_matched_pair(
         )
 
     frozen_fields = (
+        "d6_experiment_id",
         "live_protocol",
         "credit_protocol",
         "state_protocol",
