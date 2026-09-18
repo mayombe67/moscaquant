@@ -197,6 +197,51 @@ MQ-8 is unblocked.
 
 Implement achievements, personnel records, reviews, PIPs, and related systems.
 
+### MQ-8.1 — Achievement Architecture
+
+Establish the canonical achievement registry and append-only occurrence model.
+
+Requirements:
+
+- namespace capacity: 128 canonical achievement definitions;
+- initial populated target: approximately 60 achievements;
+- deterministic trigger definitions;
+- repeatable and progressive stacking;
+- immutable occurrence history;
+- evidence and provenance references;
+- historical replay support;
+- simultaneous unlock support;
+- explicit SCIENCE / ORACLE / CONTAINMENT / BEHAVIOR / LORE / SECRET categories;
+- evidence levels E0 through E4;
+- global Panopticon notification overlay;
+- page-independent achievement delivery;
+- direct navigation from an achievement occurrence to supporting evidence.
+
+The achievement system is an observability and narrative layer only.
+
+It may not modify scientific state, experimental execution, historical records,
+ORACLE authority, or WARDEN policy.
+
+### MQ-8.2 — Canonical Achievement Set v1
+
+Populate approximately 60 of the 128 reserved achievement identifiers.
+
+References may draw from MoscaQuant history, science fiction, video games,
+finance culture, internet culture, and original project lore, provided every
+non-lore achievement remains traceable to valid underlying evidence.
+
+### MQ-8.3 — Historical Replay
+
+Replay accepted project history through the achievement engine and issue
+explicitly marked HISTORICAL_REPLAY occurrences for qualifying events.
+
+### MQ-8.4 — Global Achievement Overlay
+
+Deploy the application-wide achievement notification layer across Panopticon
+and Neuroscope surfaces.
+
+The overlay must remain presentation-only and independent of experimental state.
+
 This phase may expose scientific events through clearly separated narrative and
 entertainment systems, but presentation must not alter experimental state,
 scientific claims, WARDEN policy, or historical records.

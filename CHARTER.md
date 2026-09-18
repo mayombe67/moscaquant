@@ -791,6 +791,121 @@ MQ-13 — MOSCA VS THE WORLD
 
 Conduct comparative experiments against controls and benchmarks.
 
+24.X. MQ-8 Achievement System
+
+MQ-8 introduces a global achievement and narrative-observability system.
+
+The achievement registry supports a maximum canonical namespace of:
+
+128 ACHIEVEMENT DEFINITIONS
+
+The initial MQ-8 release should target approximately 60 populated definitions.
+Unused identifiers remain reserved for later roadmap phases and experimentally
+validated behaviors.
+
+Achievements are presentation and observability artifacts.
+
+They do not create scientific evidence.
+
+Every non-lore achievement must derive from at least one of:
+
+- explicit recorded telemetry;
+- a frozen experimental result;
+- a preregistered control-supported result;
+- a reproducible runtime or provenance event;
+- an explicitly declared canonical project milestone.
+
+Every unlock must be traceable to the data or project record that caused it.
+
+Repeatable achievements are represented as independent append-only occurrence
+records.
+
+Stack counts are derived from occurrence history and are never treated as
+primary scientific state.
+
+Each occurrence must preserve, where applicable:
+
+- achievement identifier and definition version;
+- subject identifier;
+- timestamp;
+- experiment and session identifier;
+- generation or frame;
+- source event identifier;
+- trigger version;
+- stack index;
+- relevant trigger measurements;
+- artifact or evidence references;
+- experiment seed;
+- runtime profile;
+- state hash;
+- previous-occurrence hash.
+
+Historical achievements discovered by replaying accepted experimental records
+must be explicitly marked as HISTORICAL_REPLAY.
+
+Project-level narrative milestones must be explicitly marked as MANUAL_CANON.
+
+Achievements may unlock simultaneously from one source event.
+
+Unless a frozen definition declares otherwise, one achievement does not suppress
+another.
+
+Achievement presentation may include humorous, cultural, science-fiction,
+video-game, finance, internet, or project-specific references.
+
+Narrative language must not alter the scientific interpretation of the source
+event.
+
+The achievement layer must maintain an explicit distinction between:
+
+- SCIENCE
+- ORACLE
+- CONTAINMENT
+- BEHAVIOR
+- LORE
+- SECRET / ODDITY
+
+Every achievement must have exactly one canonical category.
+
+Where useful, achievements should expose an evidence classification:
+
+E0 — LORE ONLY
+E1 — TELEMETRY DERIVED
+E2 — EXPERIMENTALLY OBSERVED
+E3 — CONTROL-SUPPORTED
+E4 — REPLICATED
+
+Evidence level describes provenance only.
+
+It is not a score of importance.
+
+The Panopticon achievement notification system must be global application
+chrome.
+
+Achievement notifications must be capable of appearing regardless of the page
+currently being viewed, including science-facing Neuroscope and experimental
+review pages.
+
+Achievement notifications:
+
+- must not alter experimental execution;
+- must not alter scientific state;
+- must not alter WARDEN-01 policy;
+- must survive route changes;
+- must queue simultaneous unlocks deterministically;
+- must display repeat counts when applicable;
+- must permit navigation to supporting evidence;
+- must permit visual/audio muting without disabling event recording;
+- must use original MoscaQuant visual, audio, animation, and interaction design.
+
+The intended interaction may evoke the immediacy and persistence of classic
+console achievement notifications, but protected artwork, sounds, layouts, or
+trade dress must not be copied.
+
+THE SCIENTIST MAY CLOSE THE POPUP.
+
+THE SCIENTIST MAY NOT DELETE THE EVENT.
+
 25. Go / No-Go Gates
 
 MQ-3 cannot begin until market-driven activity propagates reproducibly beyond
@@ -932,6 +1047,16 @@ CONTAINMENT ............. ACTIVE
 FINANCIAL SEMANTICS ..... NOT ASSIGNED
 
 CURRENT DIRECTIVE:
+
+MQ-8 SHALL IMPLEMENT AN APPEND-ONLY, EVIDENCE-BACKED ACHIEVEMENT SYSTEM WITH A
+128-DEFINITION CANONICAL NAMESPACE.
+
+ACHIEVEMENT STACKS SHALL PRESERVE EVERY UNDERLYING OCCURRENCE AND ITS SUPPORTING
+TELEMETRY OR PROJECT RECORD.
+
+THE GLOBAL PANOPTICON ACHIEVEMENT OVERLAY MAY INTERRUPT THE SCIENTIST'S SCREEN.
+
+IT MAY NOT INTERRUPT THE SCIENCE.
 
 PRESERVE THE ACCEPTED MQ-5 SCIENTIFIC RECORD AND ITS CLAIM BOUNDARIES.
 PRESERVE WARDEN-01 AS AN INDEPENDENT AUTHORITY BOUNDARY.
