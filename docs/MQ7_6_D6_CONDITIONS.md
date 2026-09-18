@@ -361,3 +361,39 @@ retained amplitude = 0.25
 VisualTransductionRuntime
         ↓
 MQ-001 / MORTY
+### SC-01 THE SHOCK — implemented v1
+
+SC-01 applies a bounded artificial effective-activity drive to one preregistered causal source node.
+
+The eligible target pool is the frozen MQ-5 primary causal source set:
+
+- 43417
+- 44274
+- 55548
+- 55925
+- 56393
+- 64717
+- 65084
+- 68045
+- 87441
+- 92657
+- 93484
+- 128590
+- 135589
+
+The target is selected deterministically from this frozen pool using recorded event provenance.
+
+The intervention does not claim that these neurons form a biological pain, punishment, stress, or aversion circuit. "Aversive" is the protocol label for the experimental perturbation.
+
+Operational boundary:
+
+```text
+MORTY effective activity
+        ↓
+deterministically selected frozen causal source
+        ↓
+SC-01 activity floor = 0.75
+        ↓
+frozen connectome propagation
+        ↓
+downstream neural response
