@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from collections.abc import Callable
 from pathlib import Path
 
 import numpy as np
@@ -40,12 +41,19 @@ class PhysiologyConstrainedVisualTransductionRuntime(
         relay_artifact: Path,
         graded_artifact: Path,
         config: VisualTransductionConfig | None = None,
+        synaptic_modifier: Callable[
+            [np.ndarray, np.ndarray],
+            np.ndarray,
+        ] | None = None,
     ):
         super().__init__(
             connectome=connectome,
             retinal_indices=retinal_indices,
             relay_artifact=relay_artifact,
             config=config,
+        )
+        self.synaptic_modifier = (
+            synaptic_modifier
         )
 
         graded = np.load(
@@ -194,6 +202,31 @@ class PhysiologyConstrainedVisualTransductionRuntime(
             synaptic,
             dtype=np.float32,
         ).ravel()
+
+        if self.synaptic_modifier is not None:
+            modified = self.synaptic_modifier(
+                effective_activity,
+                synaptic,
+            )
+
+            modified = np.asarray(
+                modified,
+                dtype=np.float32,
+            )
+
+            if modified.shape != synaptic.shape:
+                raise ValueError(
+                    "synaptic modifier shape mismatch"
+                )
+
+            if not np.all(
+                np.isfinite(modified)
+            ):
+                raise ValueError(
+                    "synaptic modifier produced non-finite values"
+                )
+
+            synaptic = modified.copy()
 
         #
         # Frozen MQ-2.1 retinal double-count removal.

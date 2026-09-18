@@ -256,6 +256,7 @@ def run_replay(
     retinal_indices,
     channel_indices,
     release_gain,
+    synaptic_modifier=None,
 ):
     normalizers = [
         CausalNormalizer(
@@ -288,6 +289,7 @@ def run_replay(
         config=VisualTransductionConfig(
             release_gain=release_gain,
         ),
+        synaptic_modifier=synaptic_modifier,
     )
 
     traces = {
