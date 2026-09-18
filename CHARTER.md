@@ -2116,3 +2116,238 @@ Placeholder McDoctorate may not:
 - rewrite experimental history or provenance.
 
 Placeholder McDoctorate has review authority only in the editorial/scientific-interpretation sense. It has no execution authority.
+
+<!-- BEGIN CANON: MQ-8.9 PANOPTICON BROADCAST SYSTEM -->
+
+## MQ-8.9 — PANOPTICON BROADCAST SYSTEM
+
+MoscaQuant SHALL maintain a platform-independent public broadcast layer for
+major scientific results, project milestones, achievement events, containment
+events, personnel/lore events, anomalies, releases, and community observances.
+
+### Canonical source
+
+The MoscaQuant site is the canonical public broadcast surface.
+
+External platforms are syndication targets only.
+
+The canonical flow is:
+
+    experiment / milestone / achievement / incident
+                        ↓
+                PANOPTICON BROADCAST
+                        ↓
+               canonical site entry
+                        ↓
+          ┌─────────────┼─────────────┐
+          ↓             ↓             ↓
+       Live Blog       RSS         Bluesky
+                                      ↓
+                                      X
+
+A failure, outage, suspension, API change, or deletion on any external social
+platform SHALL NOT alter canonical MoscaQuant history.
+
+### BroadcastEvent
+
+All public broadcast outputs SHALL derive from a single sanitized
+BroadcastEvent contract.
+
+A BroadcastEvent MAY include:
+
+- broadcast_id
+- event_type
+- issuer
+- timestamp
+- experiment_id / session_id when public-safe
+- achievement_id when applicable
+- title
+- public_text
+- science_text
+- claim_boundary
+- evidence_level
+- provenance_class
+- canonical_url
+- public evidence references
+- social eligibility
+- syndication class
+- supersedes / correction reference when applicable
+
+Private source-event IDs, private ledger hashes, private runtime paths, private
+artifact hashes, credentials, and operational internals SHALL NOT be exposed
+through BroadcastEvent.
+
+### Issuers
+
+Canonical public issuer identities are:
+
+- PANOPTICON — factual system and project announcements
+- MORTY — narrative / organism-perspective presentation
+- GLaDOS — ORACLE intervention commentary
+- Placeholder McDoctorate — scientific skepticism, caveats, replication review
+- WARDEN — containment and financial-authority notices
+- HR — personnel, promotion, demotion, commendation, PIP, and discipline lore
+
+Issuer identity is presentation metadata. It does not create scientific
+authority beyond the underlying evidence.
+
+### Entry classes
+
+The live public feed MAY contain:
+
+- EXPERIMENT STARTED
+- EXPERIMENT RESULT
+- ACHIEVEMENT
+- CONTAINMENT EVENT
+- PROJECT MILESTONE
+- SCIENTIFIC REVIEW
+- HR NOTICE
+- ANOMALY
+- COMMUNITY EVENT
+- RELEASE NOTE
+- CORRECTION / SUPERSESSION
+
+### Provenance classes
+
+Every public event SHALL clearly distinguish, where applicable:
+
+- LIVE
+- HISTORICAL_REPLAY
+- MANUAL_CANON
+- PRESENTATION_ONLY
+- EXPERIMENTAL
+
+Historical replay SHALL never masquerade as a live event.
+
+### Syndication policy
+
+Broadcast events SHALL be classified for external syndication:
+
+- MAJOR — phase completion, major scientific result, replication, major
+  containment event, or other canonical project milestone.
+- NOTABLE — rare achievement, scientifically interesting null, unusual
+  behavioral event, or meaningful anomaly; may require review before posting.
+- NOISE — routine telemetry, ordinary stack increments, and low-value events;
+  Panopticon only by default.
+
+Scientific claims used in social posts SHALL come from approved canonical
+science_text / claim_boundary fields. Humor MAY vary. Scientific meaning SHALL
+NOT.
+
+### Live blog
+
+The Panopticon live blog SHALL be the human-readable chronological mission log.
+
+It SHOULD support filtering by:
+
+- SCIENCE
+- ACHIEVEMENTS
+- WARDEN
+- ORACLE
+- HR
+- ANOMALIES
+- RELEASES
+- COMMUNITY
+
+The live blog SHOULD support links to experiment records, achievement dossiers,
+and public evidence references.
+
+The live blog MAY expose a current-state header for project phase, most recent
+experiment, latest achievement, Warden state, and other public-safe telemetry.
+
+### RSS
+
+RSS SHALL be generated from the same BroadcastEvent stream.
+
+RSS is a durable, platform-independent public subscription path and SHALL NOT
+depend on X, Bluesky, or any other social network.
+
+### Social adapters
+
+Bluesky, X, and future social integrations SHALL be adapters over
+BroadcastEvent rather than independent truth sources.
+
+A social adapter SHALL be optional and failure-isolated.
+
+Failure to post externally SHALL NOT:
+
+- block experiment execution
+- alter scientific provenance
+- affect Warden containment
+- alter achievement occurrence history
+- alter canonical project state
+- prevent the site or RSS record from being published
+
+### Resource discipline / AWS baseline
+
+The production baseline SHALL remain resource-cheap and suitable for the
+current AWS Lightsail deployment.
+
+Initial implementation SHOULD prefer:
+
+- precomputed static JSON
+- precomputed RSS XML
+- static HTML or client-rendered live-blog entries
+- Nginx delivery
+- bounded polling rather than WebSockets
+- append-only JSONL and/or SQLite where appropriate
+- systemd timers / small workers instead of heavyweight queue infrastructure
+- no Redis, Kafka, RabbitMQ, Elasticsearch, or always-on application server
+  unless demonstrated load requires them
+
+Broadcast infrastructure SHALL be lower priority than scientific execution,
+provenance, and Warden containment.
+
+Broadcast infrastructure may degrade, delay, or disappear without affecting
+experimental execution, scientific provenance, Warden containment, or
+canonical project state.
+
+### Scalability contract
+
+MoscaQuant SHALL begin static-first and single-node where practical, but all
+public event, achievement, and broadcast interfaces MUST remain portable to
+horizontally scalable infrastructure without changing scientific semantics.
+
+Scale changes runtime architecture, not experimental meaning.
+
+Permitted future scaling includes:
+
+- CDN-backed static delivery
+- object storage
+- managed Postgres or equivalent
+- dedicated queues and workers
+- server-sent events or WebSockets
+- load-balanced application services
+- horizontally scaled read-only Panopticon frontends
+- dedicated broadcast workers
+
+Scientific configuration SHALL remain separate from runtime / hardware /
+deployment configuration during all such migrations.
+
+### Corrections and historical integrity
+
+Public mistakes SHALL be corrected by append-only correction or supersession
+records where practical.
+
+Canonical history SHOULD NOT be silently rewritten merely to improve narrative
+presentation.
+
+### Community observances
+
+PANOPTICON REFERENDUM outcomes and ANOMALOUS OBSERVANCES MAY generate
+PRESENTATION_ONLY BroadcastEvents and achievements.
+
+Any event with EXPERIMENTAL scientific effect still requires its own frozen
+experimental protocol.
+
+### Governing principle
+
+OPEN CLAIMS.
+OPEN METHODS.
+OPEN EVIDENCE BOUNDARIES.
+PRIVATE OPERATIONAL PLUMBING.
+
+The site is canonical.
+Social media is an echo.
+
+<!-- END CANON: MQ-8.9 PANOPTICON BROADCAST SYSTEM -->

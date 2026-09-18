@@ -890,3 +890,71 @@ This avoids dependence on Python PRNG implementation details.
 
 No learning, reinforcement, Sugar Cube selection, market strategy, authority, or execution logic is present in MQ-7.5.
 
+<!-- BEGIN CANON: MQ-8 EXPANDED IMPLEMENTATION -->
+
+### MQ-8 expanded implementation sequence
+
+- MQ-8.4 GLOBAL ACHIEVEMENT OVERLAY — COMPLETE
+  - global queue and route-independent presentation host proven locally
+  - sanitized public achievement projection
+  - dossier access
+  - synthesized original MoscaQuant achievement sting
+  - no copied platform audio/assets
+
+- MQ-8.5 LORE FIREWALL AND HR EVIDENCE — CURRENT
+  - MQ-8.5A Achievement Semantics Expansion
+    - complete claim boundaries for historical achievements
+    - occurrence origin / provenance classes
+    - achievement families / tags
+    - related-achievement links
+    - dossier schema expansion
+  - MQ-8.5B HR Evidence Records
+    - promotions
+    - demotions
+    - PIPs
+    - commendations
+    - discipline
+    - evidence-linked personnel records
+  - HR records remain narrative / organizational artifacts and do not create
+    scientific evidence.
+
+- MQ-8.6 ANOMALOUS OBSERVANCES
+  - BLACKSITE HOLIDAYS
+  - PANOPTICON REFERENDUM
+  - PRESENTATION_ONLY by default
+  - EXPERIMENTAL effects require separate frozen protocol
+
+- MQ-8.7 DOSSIERS AND LONGITUDINAL METRICS
+  - stack history
+  - first/latest occurrence
+  - co-occurrence views
+  - achievement families
+  - longitudinal summaries
+  - public-safe provenance
+
+- MQ-8.8 PERSONNEL AND CORPORATE-HR LAYER
+  - public presentation of evidence-linked personnel history
+  - character-specific review / commentary surfaces
+
+- MQ-8.9 PANOPTICON BROADCAST SYSTEM
+  - canonical site live blog
+  - BroadcastEvent schema
+  - RSS
+  - Bluesky adapter
+  - X adapter
+  - issuer identities
+  - syndication eligibility
+  - correction / supersession records
+  - static-first AWS baseline
+  - horizontally scalable interface contract
+
+### MQ-8.9 implementation constraint
+
+MQ-8.9 MUST be designed for the current Lightsail baseline without requiring
+heavy always-on infrastructure.
+
+It MUST also remain portable to horizontally scalable infrastructure later.
+
+Scale changes runtime architecture, not experimental meaning.
+
+<!-- END CANON: MQ-8 EXPANDED IMPLEMENTATION -->
