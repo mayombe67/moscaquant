@@ -1,0 +1,113 @@
+{
+  "count": 4,
+  "records": [
+    {
+      "action": "COMMENDATION",
+      "evidence_refs": [
+        {
+          "kind": "ACHIEVEMENT",
+          "note": "ROUTING TABLES",
+          "ref": "ACH-003"
+        },
+        {
+          "kind": "ACHIEVEMENT",
+          "note": "STEALTH BUILD",
+          "ref": "ACH-008"
+        },
+        {
+          "kind": "ACHIEVEMENT",
+          "note": "CRITICAL HIT",
+          "ref": "ACH-009"
+        },
+        {
+          "kind": "ACHIEVEMENT",
+          "note": "DIMENSIONAL MERGE",
+          "ref": "ACH-019"
+        }
+      ],
+      "issuer": "HR",
+      "provenance_class": "MANUAL_CANON",
+      "public": true,
+      "public_text": "GLaDOS is formally commended for producing interpretable intervention outcomes without exceeding assigned authority.",
+      "rationale": "The MQ-7 intervention series produced control-supported causal results and bounded perturbation-dependent plasticity findings while preserving the separation between ORACLE interpretation and WARDEN financial containment.",
+      "record_id": "HR-001",
+      "subject": "GLaDOS",
+      "title": "Productive Interference"
+    },
+    {
+      "action": "REVIEW",
+      "evidence_refs": [
+        {
+          "kind": "ACHIEVEMENT",
+          "note": "ROUTING TABLES claim boundary",
+          "ref": "ACH-003"
+        },
+        {
+          "kind": "ACHIEVEMENT",
+          "note": "99.9999% claim boundary",
+          "ref": "ACH-020"
+        }
+      ],
+      "issuer": "PANOPTICON",
+      "provenance_class": "MANUAL_CANON",
+      "public": true,
+      "public_text": "Placeholder McDoctorate acknowledges the current findings and requests replication before broader generalization.",
+      "rationale": "MQ-7 produced strong frozen-replay results, but current claim boundaries explicitly limit generalization beyond the tested conditions. Scientific review therefore remains active.",
+      "record_id": "HR-002",
+      "subject": "Placeholder McDoctorate",
+      "title": "Replication Requested"
+    },
+    {
+      "action": "COMMENDATION",
+      "evidence_refs": [
+        {
+          "kind": "CANON_MILESTONE",
+          "note": "DEPLOY THE WARDEN complete",
+          "ref": "MQ-6"
+        },
+        {
+          "kind": "CANON_MILESTONE",
+          "note": "The Mosca makes the decision. The Warden controls the money.",
+          "ref": "CHARTER:WARDEN-INDEPENDENCE"
+        }
+      ],
+      "issuer": "HR",
+      "provenance_class": "MANUAL_CANON",
+      "public": true,
+      "public_text": "WARDEN is commended for maintaining independent financial containment while the rest of the project became increasingly weird.",
+      "rationale": "WARDEN remained operationally independent from MORTY and GLaDOS, preserved hard financial containment, and retained sole authority over financial execution boundaries.",
+      "record_id": "HR-003",
+      "subject": "WARDEN",
+      "title": "Containment Without Negotiation"
+    },
+    {
+      "action": "REVIEW",
+      "evidence_refs": [
+        {
+          "kind": "ACHIEVEMENT",
+          "note": "MISSION FAILED SUCCESSFULLY",
+          "ref": "ACH-001"
+        },
+        {
+          "kind": "ACHIEVEMENT",
+          "note": "TEN BUTTONS",
+          "ref": "ACH-004"
+        },
+        {
+          "kind": "ACHIEVEMENT",
+          "note": "BOOMERANG NEURON",
+          "ref": "ACH-007"
+        }
+      ],
+      "issuer": "Placeholder McDoctorate",
+      "provenance_class": "MANUAL_CANON",
+      "public": true,
+      "public_text": "MQ-001 receives a formal performance review. No promotion, demotion, or additional authority is granted.",
+      "rationale": "MQ-001 produced measurable modeled responses across the MQ-7 intervention series, including valid nulls and perturbation-dependent effects. The organism model remains an experimental subject and receives no operational authority from those results.",
+      "record_id": "HR-004",
+      "subject": "MQ-001",
+      "title": "Performance Review: Subject Remains the Subject"
+    }
+  ],
+  "schema": "moscaquant-hr-records/v1"
+}

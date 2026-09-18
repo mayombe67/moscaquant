@@ -253,3 +253,205 @@
     display: none;
   }
 }
+
+/* MQ-8.5A expanded dossier semantics */
+.mq-achievement-dossier {
+  --mq-dossier-accent: #8b5cf6;
+  max-width: 980px;
+  margin-inline: auto;
+  background:
+    radial-gradient(circle at top right, rgba(139,92,246,.09), transparent 34%),
+    #0a0d12;
+}
+
+.mq-achievement-dossier[data-priority="HIGH"] {
+  --mq-dossier-accent: #a879ff;
+}
+
+.mq-achievement-dossier[data-priority="CRITICAL"] {
+  --mq-dossier-accent: #d06bff;
+  border-color: rgba(208,107,255,.46);
+  box-shadow:
+    0 24px 90px rgba(0,0,0,.62),
+    0 0 42px rgba(208,107,255,.13);
+}
+
+.mq-dossier-header {
+  padding-right: 44px;
+  margin-bottom: 16px;
+}
+
+.mq-dossier-eyebrow,
+.mq-dossier-section-label {
+  color: var(--mq-dossier-accent);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: .17em;
+  text-transform: uppercase;
+}
+
+.mq-dossier-header h2 {
+  margin: 5px 0 7px;
+  font-size: clamp(26px, 4vw, 42px);
+  line-height: .98;
+  letter-spacing: -.035em;
+}
+
+.mq-dossier-public-text {
+  margin: 0;
+  font-size: 17px;
+  opacity: .84;
+}
+
+.mq-dossier-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 15px;
+}
+
+.mq-dossier-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  padding: 3px 8px;
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 999px;
+  background: rgba(255,255,255,.035);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  opacity: .84;
+}
+
+.mq-dossier-badge-evidence,
+.mq-dossier-badge-broadcast,
+.mq-dossier-badge-social {
+  border-color: color-mix(in srgb, var(--mq-dossier-accent) 60%, transparent);
+  color: var(--mq-dossier-accent);
+}
+
+.mq-dossier-section {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+
+.mq-dossier-section p {
+  margin: 7px 0 0;
+  max-width: 82ch;
+  line-height: 1.55;
+  opacity: .9;
+}
+
+.mq-dossier-boundary {
+  border: 1px solid rgba(255,255,255,.09);
+  border-left: 3px solid var(--mq-dossier-accent);
+  border-radius: 10px;
+  padding: 14px 16px;
+  background: rgba(255,255,255,.025);
+}
+
+.mq-dossier-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.mq-dossier-stat {
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 10px;
+  padding: 12px;
+  background: rgba(255,255,255,.025);
+}
+
+.mq-dossier-stat span {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  opacity: .52;
+}
+
+.mq-dossier-stat strong {
+  display: block;
+  font-size: 14px;
+}
+
+.mq-dossier-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 9px;
+}
+
+.mq-dossier-tag {
+  display: inline-flex;
+  padding: 4px 8px;
+  border-radius: 7px;
+  background: rgba(255,255,255,.055);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 11px;
+  opacity: .82;
+}
+
+.mq-related-achievements {
+  display: grid;
+  gap: 7px;
+  margin-top: 9px;
+}
+
+.mq-related-achievement {
+  border: 1px solid rgba(255,255,255,.09);
+  border-radius: 9px;
+  background: rgba(255,255,255,.025);
+  color: inherit;
+  padding: 10px 12px;
+  cursor: pointer;
+  text-align: left;
+  transition:
+    border-color 120ms ease,
+    background 120ms ease,
+    transform 120ms ease;
+}
+
+.mq-related-achievement:hover {
+  border-color: var(--mq-dossier-accent);
+  background: rgba(255,255,255,.055);
+  transform: translateX(2px);
+}
+
+.mq-dossier-evidence {
+  margin-top: 9px;
+  display: grid;
+  gap: 5px;
+}
+
+.mq-dossier-evidence code {
+  white-space: normal;
+  overflow-wrap: anywhere;
+  font-size: 11px;
+  opacity: .78;
+}
+
+.mq-dossier-empty {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 12px;
+  opacity: .45;
+}
+
+@media (max-width: 760px) {
+  .mq-achievement-dossier {
+    inset: 3vh 12px;
+    padding: 18px;
+  }
+
+  .mq-dossier-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

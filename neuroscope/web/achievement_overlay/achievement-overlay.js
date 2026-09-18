@@ -197,29 +197,139 @@
       .map(ref => `<code>${escapeHtml(ref)}</code>`)
       .join("<br>");
 
+    const tags = (item.tags || [])
+      .map(tag => `<span class="mq-dossier-tag">${escapeHtml(tag)}</span>`)
+      .join("");
+
+    const related = (item.related_achievement_ids || [])
+      .map(id => {
+        const relatedItem = state.byId.get(id);
+        const label = relatedItem
+          ? `${id} · ${relatedItem.title}`
+          : id;
+
+        return `
+          <button
+            type="button"
+            class="mq-related-achievement"
+            data-achievement-id="${escapeHtml(id)}"
+          >
+            ${escapeHtml(label)}
+          </button>
+        `;
+      })
+      .join("");
+
     const boundary = item.claim_boundary
-      ? `<p><strong>Claim boundary:</strong> ${escapeHtml(item.claim_boundary)}</p>`
+      ? `
+        <section class="mq-dossier-section mq-dossier-boundary">
+          <div class="mq-dossier-section-label">Claim boundary</div>
+          <p>${escapeHtml(item.claim_boundary)}</p>
+        </section>
+      `
       : "";
+
+    const socialBadge = item.social_eligible
+      ? `<span class="mq-dossier-badge mq-dossier-badge-social">SOCIAL ELIGIBLE</span>`
+      : `<span class="mq-dossier-badge">PANOPTICON ONLY</span>`;
+
+    node.dataset.priority = item.dossier_priority || "NORMAL";
+    node.dataset.syndication = item.syndication_class || "NOISE";
 
     node.innerHTML = `
       <button class="mq-achievement-close" aria-label="Close">&times;</button>
-      <div class="mq-achievement-kicker">${escapeHtml(item.category)} · ${escapeHtml(item.evidence_level)}</div>
-      <h2>${escapeHtml(item.title)}</h2>
-      <p><strong>${escapeHtml(item.public_text)}</strong></p>
-      <hr>
-      <p>${escapeHtml(item.science_text)}</p>
+
+      <div class="mq-dossier-header">
+        <div class="mq-dossier-eyebrow">
+          ${escapeHtml(item.achievement_id)}
+        </div>
+
+        <h2>${escapeHtml(item.title)}</h2>
+        <p class="mq-dossier-public-text">${escapeHtml(item.public_text)}</p>
+
+        <div class="mq-dossier-badges">
+          <span class="mq-dossier-badge mq-dossier-badge-evidence">
+            ${escapeHtml(item.evidence_level)}
+          </span>
+          <span class="mq-dossier-badge">
+            ${escapeHtml(item.category)}
+          </span>
+          <span class="mq-dossier-badge">
+            ${escapeHtml(item.family || "UNCLASSIFIED")}
+          </span>
+          <span class="mq-dossier-badge">
+            ${escapeHtml(item.provenance_class || "UNKNOWN")}
+          </span>
+          <span class="mq-dossier-badge">
+            ${escapeHtml(item.dossier_priority || "NORMAL")} PRIORITY
+          </span>
+          <span class="mq-dossier-badge mq-dossier-badge-broadcast">
+            ${escapeHtml(item.syndication_class || "NOISE")}
+          </span>
+          ${socialBadge}
+        </div>
+      </div>
+
+      <section class="mq-dossier-section">
+        <div class="mq-dossier-section-label">Scientific interpretation</div>
+        <p>${escapeHtml(item.science_text)}</p>
+      </section>
+
       ${boundary}
-      <p><strong>Occurrences:</strong> ${escapeHtml(item.stack_count)}</p>
-      <p><strong>First recorded:</strong> ${escapeHtml(item.first_recorded_date || "n/a")}</p>
-      <p><strong>Latest recorded:</strong> ${escapeHtml(item.latest_recorded_date || "n/a")}</p>
-      <p><strong>Historical replay:</strong> ${item.historical_replay ? "yes" : "no"}</p>
-      <p><strong>Evidence:</strong><br>${evidence || "n/a"}</p>
+
+      <section class="mq-dossier-grid">
+        <div class="mq-dossier-stat">
+          <span>Occurrences</span>
+          <strong>${escapeHtml(item.stack_count)}</strong>
+        </div>
+        <div class="mq-dossier-stat">
+          <span>First recorded</span>
+          <strong>${escapeHtml(item.first_recorded_date || "n/a")}</strong>
+        </div>
+        <div class="mq-dossier-stat">
+          <span>Latest recorded</span>
+          <strong>${escapeHtml(item.latest_recorded_date || "n/a")}</strong>
+        </div>
+        <div class="mq-dossier-stat">
+          <span>Historical replay</span>
+          <strong>${item.historical_replay ? "YES" : "NO"}</strong>
+        </div>
+      </section>
+
+      <section class="mq-dossier-section">
+        <div class="mq-dossier-section-label">Tags</div>
+        <div class="mq-dossier-tags">
+          ${tags || '<span class="mq-dossier-empty">No tags</span>'}
+        </div>
+      </section>
+
+      <section class="mq-dossier-section">
+        <div class="mq-dossier-section-label">Related achievements</div>
+        <div class="mq-related-achievements">
+          ${related || '<span class="mq-dossier-empty">No related achievements</span>'}
+        </div>
+      </section>
+
+      <section class="mq-dossier-section">
+        <div class="mq-dossier-section-label">Public evidence</div>
+        <div class="mq-dossier-evidence">
+          ${evidence || '<span class="mq-dossier-empty">No public evidence references</span>'}
+        </div>
+      </section>
     `;
 
     node.hidden = false;
+
     node.querySelector(".mq-achievement-close").onclick = () => {
       node.hidden = true;
     };
+
+    node.querySelectorAll(".mq-related-achievement").forEach(button => {
+      button.onclick = () => {
+        const relatedItem = state.byId.get(button.dataset.achievementId);
+        if (relatedItem) showDossier(relatedItem);
+      };
+    });
   }
 
   function sortQueue() {
