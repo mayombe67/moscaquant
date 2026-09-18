@@ -358,3 +358,15 @@ Panopticon interpretation
       |
       v
 promotion / demotion / achievement / narrative
+## D6 implementation boundary rule
+
+D6 interventions must be attached to the narrowest scientifically defined interface that matches the frozen protocol.
+
+They must not be implemented by modifying a broader subsystem when a narrower interface exists.
+
+Examples:
+
+- SC-02 DARKNESS attenuates the encoded retinal sensory stimulus rather than modifying raw market data, normalization state, or generic Oracle features.
+- SC-04 TIME OUT suppresses a copy of the frozen MQ-3 output/readout population rather than mutating MORTY's internal neural state.
+
+This rule exists to reduce experimental confounds and preserve replayability.

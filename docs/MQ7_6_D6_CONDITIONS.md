@@ -340,3 +340,24 @@ A candidate snapshot should preserve, where applicable:
 - measured qualification reason.
 
 Preservation does not imply scientific superiority. Qualification and replication remain separate from Panopticon presentation.
+## Implemented perturbation boundaries
+
+### SC-02 DARKNESS — implemented v1
+
+The intervention is applied after the frozen market-to-retina encoder has produced the full retinal stimulus and before visual transduction is advanced.
+
+Operational boundary:
+
+```text
+normalized market features
+        ↓
+MarketVisionSpatialEncoder.encode()
+        ↓
+retinal stimulus
+        ↓
+SC-02 DARKNESS
+retained amplitude = 0.25
+        ↓
+VisualTransductionRuntime
+        ↓
+MQ-001 / MORTY
