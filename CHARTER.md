@@ -900,6 +900,17 @@ BACKLOG_OF_QUESTIONABLE_IDEAS.md
 Architecture decisions that materially alter the project should receive an
 Architecture Decision Record under docs/decisions/.
 
+The canonical project retrospective and approved highlight-reel narrative is:
+
+docs/retrospectives/MOSCAQUANT_EXPERIMENTAL_HIGHLIGHT_REEL.md
+
+The retrospective may summarize accepted scientific results and their approved
+lore/comedic framing, but it does not replace frozen experiment protocols,
+result records, or claim boundaries.
+
+Its DOCX companion is a rendered distribution artifact. The Markdown source is
+authoritative for retrospective content.
+
 Git history is the authoritative project record.
 29. Current Directive
 YOLO & HODL LLC

@@ -211,6 +211,19 @@ Initial planned systems include:
 
 MQ-9 remains gated until MQ-8 requirements are satisfied.
 
+### Canonical Retrospective
+
+The approved project-history and highlight-reel source is:
+
+`docs/retrospectives/MOSCAQUANT_EXPERIMENTAL_HIGHLIGHT_REEL.md`
+
+This retrospective provides the canonical narrative framing for notable
+scientific results, failures, nulls, debugging incidents, and approved
+MoscaQuant lore.
+
+Achievement and Panopticon narrative systems may reference these events, but
+must preserve the underlying experimental claim boundaries.
+
 ## MQ-9 — OPEN THE PANOPTICON
 Deploy the public spectator interface and embodied Containment Chamber.
 
