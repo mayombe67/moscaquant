@@ -10,6 +10,23 @@ from oracle.audit import canonical_json, verify_chain_sequence
 from oracle.models import OracleEvent, OracleState
 
 
+def _restore_tuples(value):
+    if isinstance(value, list):
+        return tuple(
+            _restore_tuples(item)
+            for item in value
+        )
+
+    if isinstance(value, dict):
+        return {
+            key: _restore_tuples(item)
+            for key, item in value.items()
+        }
+
+    return value
+
+
+
 class OraclePersistenceError(ValueError):
     pass
 
@@ -113,9 +130,8 @@ def load_state(path: Path) -> OracleState:
             "adaptation_state",
             "intervention_state",
         ):
-            payload[field] = tuple(
-                tuple(item)
-                for item in payload[field]
+            payload[field] = _restore_tuples(
+                payload[field]
             )
 
         return OracleState(**payload)
