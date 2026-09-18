@@ -1,0 +1,193 @@
+{
+  "achievement_count": 11,
+  "achievements": [
+    {
+      "achievement_id": "ACH-001",
+      "category": "SCIENCE",
+      "claim_boundary": "",
+      "evidence_level": "E2",
+      "first_recorded_date": "2026-09-18",
+      "historical_replay": true,
+      "latest_recorded_date": "2026-09-18",
+      "public_evidence_refs": [
+        "docs/experiments/mq7-14-residual-branch-mediation-protocol.md"
+      ],
+      "public_text": "Hypothesis dead. Science alive.",
+      "science_text": "A preregistered null constrains the next question.",
+      "stack_count": 1,
+      "stack_policy": "REPEATABLE",
+      "title": "MISSION FAILED SUCCESSFULLY"
+    },
+    {
+      "achievement_id": "ACH-002",
+      "category": "SCIENCE",
+      "claim_boundary": "",
+      "evidence_level": "E3",
+      "first_recorded_date": "2026-09-18",
+      "historical_replay": true,
+      "latest_recorded_date": "2026-09-18",
+      "public_evidence_refs": [
+        "docs/experiments/mq7-11-causal-route-ablation-protocol.md"
+      ],
+      "public_text": "We removed the haunted wire.",
+      "science_text": "Validated-edge ablation removes the measured effect while the matched control lesion does not.",
+      "stack_count": 1,
+      "stack_policy": "SINGLE",
+      "title": "THE WIRE WAS HAUNTED"
+    },
+    {
+      "achievement_id": "ACH-003",
+      "category": "SCIENCE",
+      "claim_boundary": "",
+      "evidence_level": "E3",
+      "first_recorded_date": "2026-09-18",
+      "historical_replay": true,
+      "latest_recorded_date": "2026-09-18",
+      "public_evidence_refs": [
+        "docs/experiments/mq7-17-cumulative-first-wave-mediation-results.md"
+      ],
+      "public_text": "The ghost had routing tables.",
+      "science_text": "Cumulative first-wave mediation explains at least 95% of the measured downstream effect.",
+      "stack_count": 1,
+      "stack_policy": "SINGLE",
+      "title": "ROUTING TABLES"
+    },
+    {
+      "achievement_id": "ACH-004",
+      "category": "SCIENCE",
+      "claim_boundary": "",
+      "evidence_level": "E2",
+      "first_recorded_date": "2026-09-18",
+      "historical_replay": true,
+      "latest_recorded_date": "2026-09-18",
+      "public_evidence_refs": [
+        "docs/experiments/mq7-9-shock-target-specificity-protocol.md"
+      ],
+      "public_text": "GLaDOS found ten buttons.",
+      "science_text": "Ten frozen SC-01 targets expose the latent SC-03 state.",
+      "stack_count": 1,
+      "stack_policy": "SINGLE",
+      "title": "TEN BUTTONS"
+    },
+    {
+      "achievement_id": "ACH-005",
+      "category": "SCIENCE",
+      "claim_boundary": "",
+      "evidence_level": "E3",
+      "first_recorded_date": "2026-09-18",
+      "historical_replay": true,
+      "latest_recorded_date": "2026-09-18",
+      "public_evidence_refs": [
+        "docs/experiments/mq7-16-first-wave-causal-screen-protocol.md"
+      ],
+      "public_text": "Outstanding activity. Zero contribution.",
+      "science_text": "Large early differential signal coexists with zero measured lesion attenuation.",
+      "stack_count": 1,
+      "stack_policy": "REPEATABLE",
+      "title": "LOOKING BUSY"
+    },
+    {
+      "achievement_id": "ACH-006",
+      "category": "SCIENCE",
+      "claim_boundary": "",
+      "evidence_level": "E3",
+      "first_recorded_date": "2026-09-18",
+      "historical_replay": true,
+      "latest_recorded_date": "2026-09-18",
+      "public_evidence_refs": [
+        "docs/experiments/mq7-13-residual-route-discovery-protocol.md"
+      ],
+      "public_text": "The wiring diagram was more of a suggestion.",
+      "science_text": "Static structural ranking fails while dynamic tracing identifies useful causal candidates.",
+      "stack_count": 1,
+      "stack_policy": "SINGLE",
+      "title": "SPAGHETTI CONNECTOME"
+    },
+    {
+      "achievement_id": "ACH-007",
+      "category": "SCIENCE",
+      "claim_boundary": "",
+      "evidence_level": "E2",
+      "first_recorded_date": "2026-09-18",
+      "historical_replay": true,
+      "latest_recorded_date": "2026-09-18",
+      "public_evidence_refs": [
+        "docs/experiments/mq7-15-differential-trace-protocol.md"
+      ],
+      "public_text": "The signal came back.",
+      "science_text": "Divergence later returns to the original perturbation node in the frozen trace.",
+      "stack_count": 1,
+      "stack_policy": "REPEATABLE",
+      "title": "BOOMERANG NEURON"
+    },
+    {
+      "achievement_id": "ACH-008",
+      "category": "SCIENCE",
+      "claim_boundary": "",
+      "evidence_level": "E3",
+      "first_recorded_date": "2026-09-18",
+      "historical_replay": true,
+      "latest_recorded_date": "2026-09-18",
+      "public_evidence_refs": [
+        "docs/experiments/mq7-8-shock-plasticity-interaction-results.md"
+      ],
+      "public_text": "Passive effect: hidden.",
+      "science_text": "Persistent plasticity is silent at baseline and measurable under matched perturbation.",
+      "stack_count": 1,
+      "stack_policy": "SINGLE",
+      "title": "STEALTH BUILD"
+    },
+    {
+      "achievement_id": "ACH-009",
+      "category": "SCIENCE",
+      "claim_boundary": "",
+      "evidence_level": "E2",
+      "first_recorded_date": "2026-09-18",
+      "historical_replay": true,
+      "latest_recorded_date": "2026-09-18",
+      "public_evidence_refs": [
+        "docs/experiments/mq7-8-shock-plasticity-interaction-results.md"
+      ],
+      "public_text": "That one reached the decision layer.",
+      "science_text": "An acute intervention changes the anonymous final decision in the frozen replay.",
+      "stack_count": 1,
+      "stack_policy": "REPEATABLE",
+      "title": "CRITICAL HIT"
+    },
+    {
+      "achievement_id": "ACH-019",
+      "category": "SCIENCE",
+      "claim_boundary": "",
+      "evidence_level": "E3",
+      "first_recorded_date": "2026-09-18",
+      "historical_replay": true,
+      "latest_recorded_date": "2026-09-18",
+      "public_evidence_refs": [
+        "docs/experiments/mq7-8-shock-plasticity-interaction-results.md"
+      ],
+      "public_text": "Two states entered. One interaction left.",
+      "science_text": "A latent persistent state becomes measurable only under a second matched perturbation.",
+      "stack_count": 1,
+      "stack_policy": "SINGLE",
+      "title": "DIMENSIONAL MERGE"
+    },
+    {
+      "achievement_id": "ACH-020",
+      "category": "SCIENCE",
+      "claim_boundary": "",
+      "evidence_level": "E3",
+      "first_recorded_date": "2026-09-18",
+      "historical_replay": true,
+      "latest_recorded_date": "2026-09-18",
+      "public_evidence_refs": [
+        "docs/experiments/mq7-17-cumulative-first-wave-mediation-results.md"
+      ],
+      "public_text": "Close enough for government neuroscience.",
+      "science_text": "Cumulative tested branches reduce the residual measured effect below 0.001% of intact magnitude.",
+      "stack_count": 1,
+      "stack_policy": "SINGLE",
+      "title": "99.9999%"
+    }
+  ],
+  "schema": "moscaquant-public-achievement-projection/v1"
+}
