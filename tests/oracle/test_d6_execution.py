@@ -235,6 +235,9 @@ def test_scar_carries_into_following_session():
             dtype=np.int64,
         ),
         prior_scar_state=first.scar_state,
+        prior_scar_target_model_index=(
+            first.scar_target_model_index
+        ),
     )
 
     assert second.scar_state is not None
@@ -383,6 +386,9 @@ def test_scar_following_session_active_from_generation_zero():
             dtype=np.int64,
         ),
         prior_scar_state=first.scar_state,
+        prior_scar_target_model_index=(
+            first.scar_target_model_index
+        ),
     )
 
     target = second.scar_target_model_index
@@ -402,4 +408,49 @@ def test_scar_following_session_active_from_generation_zero():
     assert np.isclose(
         modified[target],
         0.75,
+    )
+
+
+def test_scar_target_is_identical_in_following_session():
+    seed, result = select_condition(
+        ReinforcementCondition.SC_05_SCAR_TISSUE
+    )
+
+    first = build_d6_execution_plan(
+        d6_result=result,
+        seed=seed,
+        experiment_id=EXPERIMENT,
+        session_id=SESSION,
+        readout_indices=np.array(
+            [1],
+            dtype=np.int64,
+        ),
+        intervention_generation=5,
+    )
+
+    next_result = select_d6(
+        seed=seed + 999,
+        experiment_id=EXPERIMENT,
+        session_id="session-002",
+        plasticity_active=True,
+    )
+
+    second = build_d6_execution_plan(
+        d6_result=next_result,
+        seed=seed + 999,
+        experiment_id=EXPERIMENT,
+        session_id="session-002",
+        readout_indices=np.array(
+            [1],
+            dtype=np.int64,
+        ),
+        prior_scar_state=first.scar_state,
+        prior_scar_target_model_index=(
+            first.scar_target_model_index
+        ),
+    )
+
+    assert (
+        second.scar_target_model_index
+        == first.scar_target_model_index
     )

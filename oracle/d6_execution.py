@@ -97,6 +97,7 @@ def build_d6_execution_plan(
     intervention_generation: int = 0,
     plasticity_state: PlasticityState | None = None,
     prior_scar_state: ScarTissueState | None = None,
+    prior_scar_target_model_index: int | None = None,
 ) -> D6ExecutionPlan:
     condition = d6_result.selection.condition
 
@@ -106,12 +107,16 @@ def build_d6_execution_plan(
     # the newly selected D6 condition.
     #
     scar_state = prior_scar_state
+    scar_target = prior_scar_target_model_index
 
     if scar_state is not None:
         scar_state = advance_scar(
             state=scar_state,
             session_id=session_id,
         )
+
+        if not scar_state.active:
+            scar_target = None
 
     shock = None
     darkness = None
@@ -178,11 +183,10 @@ def build_d6_execution_plan(
     # from its origin session, including the
     # following-session carryover.
     #
-    scar_target = None
-
     if (
         scar_state is not None
         and scar_state.active
+        and scar_target is None
     ):
         _, scar_target = select_scar_target(
             seed=seed,
