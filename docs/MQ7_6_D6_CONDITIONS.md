@@ -428,3 +428,29 @@ same bounded attenuation persists
       ↓
 session N+2
 full recovery
+### SC-06 MERCY — implemented v1
+
+SC-06 is the single non-aversive D6 outcome.
+
+It applies a bounded, one-transition positive modulation to one deterministically selected node from the same frozen MQ-5 causal source pool used by other controlled perturbations.
+
+The v1 effect is:
+
+- positive gain: 25%
+- duration: one eligible transition
+- cooldown: 10 eligible transitions
+- maximum effective activity: 1.0
+- no persistence
+- no activity is created from an inactive source
+
+Operational boundary:
+
+```text
+existing effective activity
+        ↓
+SC-06 MERCY
++25% bounded gain
+        ↓
+cap at 1.0
+        ↓
+frozen connectome propagation

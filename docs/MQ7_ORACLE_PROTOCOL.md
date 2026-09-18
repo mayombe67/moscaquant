@@ -401,3 +401,21 @@ Its purpose is to preserve the distinction between:
 - what is merely Panopticon narrative.
 
 > **PLACEHOLDER McDOCTORATE:** Statistically interesting. Emotionally devastating. Please stop calling it trauma until we have replication.
+## MERCY authority invariant
+
+SC-06 MERCY is a neural experimental perturbation only.
+
+It has no financial or containment authority.
+
+MERCY must never:
+
+- alter WARDEN-01 policy;
+- reopen trading;
+- disable Sugar Cube Mode;
+- erase punishment or intervention history;
+- modify D6 selection provenance;
+- convert a blocked financial action into an allowed one.
+
+The Mosca may receive MERCY.
+
+The Warden still controls the money.
