@@ -1,0 +1,27 @@
+schema_version = "mq7-adaptive-experiment-config/v1"
+
+experiment_id = "mq7-o2-adaptive-v1"
+condition = "O2_ADAPTIVE_ORACLE"
+
+sc03_config = "config/oracle/sc03-plasticity-v1.toml"
+
+[plasticity]
+enabled = true
+
+live_protocol = "sc-03-live-plasticity/v1"
+credit_protocol = "mq7-credit-assignment/v1"
+state_protocol = "sc-03-plasticity-state/v1"
+
+[controls]
+matched_condition = "O1_STATIC_ORACLE"
+require_identical_seed = true
+require_identical_market_input = true
+require_identical_connectome = true
+require_identical_sensory_config = true
+require_identical_readout_config = true
+require_identical_d6_selector = true
+require_identical_warden_policy = true
+
+[claims]
+financial_utility = false
+biological_learning = false
