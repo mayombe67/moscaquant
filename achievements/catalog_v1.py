@@ -71,7 +71,7 @@ V1_DEFINITIONS = (
     AchievementDefinition(
         achievement_id='ACH-001',
         version="1.0",
-        trigger_version='deferred/v1',
+        trigger_version="historical-evidence/v1",
         title='MISSION FAILED SUCCESSFULLY',
         category=Category.SCIENCE,
         evidence_level=EvidenceLevel.E2,
@@ -84,7 +84,7 @@ V1_DEFINITIONS = (
     AchievementDefinition(
         achievement_id='ACH-002',
         version="1.0",
-        trigger_version='deferred/v1',
+        trigger_version="historical-evidence/v1",
         title='THE WIRE WAS HAUNTED',
         category=Category.SCIENCE,
         evidence_level=EvidenceLevel.E3,
@@ -97,7 +97,7 @@ V1_DEFINITIONS = (
     AchievementDefinition(
         achievement_id='ACH-003',
         version="1.0",
-        trigger_version='deferred/v1',
+        trigger_version="historical-evidence/v1",
         title='ROUTING TABLES',
         category=Category.SCIENCE,
         evidence_level=EvidenceLevel.E3,
@@ -110,7 +110,7 @@ V1_DEFINITIONS = (
     AchievementDefinition(
         achievement_id='ACH-004',
         version="1.0",
-        trigger_version='deferred/v1',
+        trigger_version="historical-evidence/v1",
         title='TEN BUTTONS',
         category=Category.SCIENCE,
         evidence_level=EvidenceLevel.E2,
@@ -123,7 +123,7 @@ V1_DEFINITIONS = (
     AchievementDefinition(
         achievement_id='ACH-005',
         version="1.0",
-        trigger_version='deferred/v1',
+        trigger_version="historical-evidence/v1",
         title='LOOKING BUSY',
         category=Category.SCIENCE,
         evidence_level=EvidenceLevel.E3,
@@ -136,7 +136,7 @@ V1_DEFINITIONS = (
     AchievementDefinition(
         achievement_id='ACH-006',
         version="1.0",
-        trigger_version='deferred/v1',
+        trigger_version="historical-evidence/v1",
         title='SPAGHETTI CONNECTOME',
         category=Category.SCIENCE,
         evidence_level=EvidenceLevel.E3,
@@ -149,7 +149,7 @@ V1_DEFINITIONS = (
     AchievementDefinition(
         achievement_id='ACH-007',
         version="1.0",
-        trigger_version='deferred/v1',
+        trigger_version="historical-evidence/v1",
         title='BOOMERANG NEURON',
         category=Category.SCIENCE,
         evidence_level=EvidenceLevel.E2,
@@ -162,7 +162,7 @@ V1_DEFINITIONS = (
     AchievementDefinition(
         achievement_id='ACH-008',
         version="1.0",
-        trigger_version='deferred/v1',
+        trigger_version="historical-evidence/v1",
         title='STEALTH BUILD',
         category=Category.SCIENCE,
         evidence_level=EvidenceLevel.E3,
@@ -175,7 +175,7 @@ V1_DEFINITIONS = (
     AchievementDefinition(
         achievement_id='ACH-009',
         version="1.0",
-        trigger_version='deferred/v1',
+        trigger_version="historical-evidence/v1",
         title='CRITICAL HIT',
         category=Category.SCIENCE,
         evidence_level=EvidenceLevel.E2,
@@ -188,7 +188,7 @@ V1_DEFINITIONS = (
     AchievementDefinition(
         achievement_id='ACH-010',
         version="1.0",
-        trigger_version='deferred/v1',
+        trigger_version="historical-evidence/v1",
         title='STILL ALIVE, SOMEHOW',
         category=Category.SCIENCE,
         evidence_level=EvidenceLevel.E2,
@@ -201,7 +201,7 @@ V1_DEFINITIONS = (
     AchievementDefinition(
         achievement_id='ACH-011',
         version="1.0",
-        trigger_version='deferred/v1',
+        trigger_version="historical-evidence/v1",
         title='NEW GAME PLUS',
         category=Category.SCIENCE,
         evidence_level=EvidenceLevel.E4,
@@ -214,7 +214,7 @@ V1_DEFINITIONS = (
     AchievementDefinition(
         achievement_id='ACH-012',
         version="1.0",
-        trigger_version='deferred/v1',
+        trigger_version="historical-evidence/v1",
         title='THE CONTROL WAS THE CONTENT',
         category=Category.SCIENCE,
         evidence_level=EvidenceLevel.E3,
@@ -227,7 +227,7 @@ V1_DEFINITIONS = (
     AchievementDefinition(
         achievement_id='ACH-013',
         version="1.0",
-        trigger_version='deferred/v1',
+        trigger_version="historical-evidence/v1",
         title='NO REROLLS',
         category=Category.SCIENCE,
         evidence_level=EvidenceLevel.E2,
@@ -240,7 +240,7 @@ V1_DEFINITIONS = (
     AchievementDefinition(
         achievement_id='ACH-014',
         version="1.0",
-        trigger_version='deferred/v1',
+        trigger_version="historical-evidence/v1",
         title='BRAINROT PASSED PEER REVIEW',
         category=Category.SCIENCE,
         evidence_level=EvidenceLevel.E3,
@@ -253,7 +253,7 @@ V1_DEFINITIONS = (
     AchievementDefinition(
         achievement_id='ACH-015',
         version="1.0",
-        trigger_version='deferred/v1',
+        trigger_version="historical-evidence/v1",
         title='THERE ARE FOUR LIGHTS',
         category=Category.SCIENCE,
         evidence_level=EvidenceLevel.E3,
@@ -266,7 +266,7 @@ V1_DEFINITIONS = (
     AchievementDefinition(
         achievement_id='ACH-016',
         version="1.0",
-        trigger_version='deferred/v1',
+        trigger_version="historical-evidence/v1",
         title='THE PRIME DIRECTIVE',
         category=Category.SCIENCE,
         evidence_level=EvidenceLevel.E2,
@@ -279,7 +279,7 @@ V1_DEFINITIONS = (
     AchievementDefinition(
         achievement_id='ACH-017',
         version="1.0",
-        trigger_version='deferred/v1',
+        trigger_version="historical-evidence/v1",
         title='Q DID IT',
         category=Category.SCIENCE,
         evidence_level=EvidenceLevel.E2,
@@ -292,7 +292,7 @@ V1_DEFINITIONS = (
     AchievementDefinition(
         achievement_id='ACH-018',
         version="1.0",
-        trigger_version='deferred/v1',
+        trigger_version="historical-evidence/v1",
         title='DATA WOULD LIKE A WORD',
         category=Category.SCIENCE,
         evidence_level=EvidenceLevel.E2,
@@ -305,7 +305,7 @@ V1_DEFINITIONS = (
     AchievementDefinition(
         achievement_id='ACH-019',
         version="1.0",
-        trigger_version='deferred/v1',
+        trigger_version="historical-evidence/v1",
         title='DIMENSIONAL MERGE',
         category=Category.SCIENCE,
         evidence_level=EvidenceLevel.E3,
@@ -318,7 +318,7 @@ V1_DEFINITIONS = (
     AchievementDefinition(
         achievement_id='ACH-020',
         version="1.0",
-        trigger_version='deferred/v1',
+        trigger_version="historical-evidence/v1",
         title='99.9999%',
         category=Category.SCIENCE,
         evidence_level=EvidenceLevel.E3,
@@ -331,7 +331,7 @@ V1_DEFINITIONS = (
     AchievementDefinition(
         achievement_id='ACH-033',
         version="1.0",
-        trigger_version='deferred/v1',
+        trigger_version="historical-evidence/v1",
         title='THE CAKE WAS NEVER BUDGETED',
         category=Category.ORACLE,
         evidence_level=EvidenceLevel.E2,
@@ -344,7 +344,7 @@ V1_DEFINITIONS = (
     AchievementDefinition(
         achievement_id='ACH-034',
         version="1.0",
-        trigger_version='deferred/v1',
+        trigger_version="historical-evidence/v1",
         title='STATUS EFFECT: SCARRED',
         category=Category.ORACLE,
         evidence_level=EvidenceLevel.E2,
