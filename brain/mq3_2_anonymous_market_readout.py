@@ -256,7 +256,10 @@ def run_replay(
     retinal_indices,
     channel_indices,
     release_gain,
+    stimulus_modifier=None,
+    activity_modifier=None,
     synaptic_modifier=None,
+    readout_modifier=None,
 ):
     normalizers = [
         CausalNormalizer(
@@ -289,6 +292,7 @@ def run_replay(
         config=VisualTransductionConfig(
             release_gain=release_gain,
         ),
+        activity_modifier=activity_modifier,
         synaptic_modifier=synaptic_modifier,
     )
 
@@ -366,10 +370,23 @@ def run_replay(
         )
 
         for stimulus in frames:
+            effective_stimulus = (
+                stimulus
+                * SENSORY_GAIN
+            )
+
+            if stimulus_modifier is not None:
+                effective_stimulus = (
+                    stimulus_modifier(
+                        effective_stimulus,
+                        frame_number,
+                    )
+                )
+
             spikes = (
                 runtime.step(
-                    stimulus
-                    * SENSORY_GAIN
+                    effective_stimulus,
+                    generation=frame_number,
                 ) > 0
             )
 
@@ -385,10 +402,23 @@ def run_replay(
                 ).tobytes()
             )
 
-            for channel in CHANNELS:
-                metrics = frame_metrics(
+            readout_voltage = runtime.voltage
+            readout_spikes = spikes
+
+            if readout_modifier is not None:
+                (
+                    readout_voltage,
+                    readout_spikes,
+                ) = readout_modifier(
                     runtime.voltage,
                     spikes,
+                    frame_number,
+                )
+
+            for channel in CHANNELS:
+                metrics = frame_metrics(
+                    readout_voltage,
+                    readout_spikes,
                     channel_indices[
                         channel
                     ],

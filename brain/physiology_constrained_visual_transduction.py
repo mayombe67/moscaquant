@@ -41,6 +41,10 @@ class PhysiologyConstrainedVisualTransductionRuntime(
         relay_artifact: Path,
         graded_artifact: Path,
         config: VisualTransductionConfig | None = None,
+        activity_modifier: Callable[
+            [np.ndarray, int],
+            np.ndarray,
+        ] | None = None,
         synaptic_modifier: Callable[
             [np.ndarray, np.ndarray],
             np.ndarray,
@@ -52,6 +56,10 @@ class PhysiologyConstrainedVisualTransductionRuntime(
             relay_artifact=relay_artifact,
             config=config,
         )
+        self.activity_modifier = (
+            activity_modifier
+        )
+
         self.synaptic_modifier = (
             synaptic_modifier
         )
@@ -143,6 +151,8 @@ class PhysiologyConstrainedVisualTransductionRuntime(
     def step(
         self,
         stimulus: np.ndarray,
+        *,
+        generation: int = 0,
     ) -> np.ndarray:
         stimulus = np.asarray(
             stimulus,
@@ -192,6 +202,41 @@ class PhysiologyConstrainedVisualTransductionRuntime(
         effective_activity = (
             self.effective_activity()
         )
+
+        if self.activity_modifier is not None:
+            modified_activity = (
+                self.activity_modifier(
+                    effective_activity,
+                    generation,
+                )
+            )
+
+            modified_activity = np.asarray(
+                modified_activity,
+                dtype=np.float32,
+            )
+
+            if (
+                modified_activity.shape
+                != effective_activity.shape
+            ):
+                raise ValueError(
+                    "activity modifier shape mismatch"
+                )
+
+            if not np.all(
+                np.isfinite(
+                    modified_activity
+                )
+            ):
+                raise ValueError(
+                    "activity modifier produced "
+                    "non-finite values"
+                )
+
+            effective_activity = (
+                modified_activity.copy()
+            )
 
         synaptic = (
             self.connectome
