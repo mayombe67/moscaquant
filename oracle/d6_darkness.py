@@ -1,8 +1,9 @@
 from __future__ import annotations
 
-from dataclasses import dataclass, replace
+from dataclasses import dataclass
 
-from oracle.models import OracleInput
+import numpy as np
+
 from oracle.reinforcement import ReinforcementCondition
 
 
@@ -23,15 +24,6 @@ class DarknessIntervention:
     duration_transitions: int
     started_at_generation: int
     ends_after_generation: int
-
-
-@dataclass(frozen=True)
-class DarknessTelemetry:
-    intervention_version: str
-    original_input_hash: str
-    transformed_input_hash: str
-    retained_amplitude: float
-    active: bool
 
 
 def build_darkness(
@@ -76,31 +68,30 @@ def is_darkness_active(
 
 def apply_darkness(
     *,
-    oracle_input: OracleInput,
+    stimulus: np.ndarray,
     intervention: DarknessIntervention,
     generation: int,
-) -> OracleInput:
+) -> np.ndarray:
+    original = np.asarray(
+        stimulus,
+        dtype=np.float32,
+    )
+
+    if not np.all(np.isfinite(original)):
+        raise DarknessError(
+            "stimulus contains non-finite values"
+        )
+
     if not is_darkness_active(
         intervention,
         generation=generation,
     ):
-        return oracle_input
+        return original.copy()
 
-    transformed_features = []
-
-    for key, value in oracle_input.derived_features:
-        if isinstance(value, (int, float)):
-            transformed_features.append(
-                (
-                    key,
-                    float(value)
-                    * intervention.retained_amplitude,
-                )
-            )
-        else:
-            transformed_features.append((key, value))
-
-    return replace(
-        oracle_input,
-        derived_features=tuple(transformed_features),
+    return (
+        original
+        * intervention.retained_amplitude
+    ).astype(
+        np.float32,
+        copy=False,
     )

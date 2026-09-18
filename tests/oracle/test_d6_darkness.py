@@ -1,41 +1,30 @@
 from __future__ import annotations
 
+import numpy as np
+import pytest
+
 from oracle.d6_darkness import (
+    DARKNESS_VERSION,
     DEFAULT_DURATION_TRANSITIONS,
     DEFAULT_RETAINED_AMPLITUDE,
+    DarknessError,
     apply_darkness,
     build_darkness,
     is_darkness_active,
 )
-from oracle.models import OracleInput
-
-
-HASH = "a" * 64
-
-
-def make_input() -> OracleInput:
-    return OracleInput(
-        schema_version="oracle-input/v1",
-        experiment_id="mq7-darkness",
-        session_id="session-001",
-        frame_id="frame-001",
-        timestamp="2026-09-17T00:00:00+00:00",
-        mq001_version="MORTY-test",
-        scientific_config_hash=HASH,
-        evidence_refs=("evidence-001",),
-        derived_features=(
-            ("price_signal", 1.0),
-            ("momentum", -0.8),
-            ("label", "control"),
-        ),
-        prior_oracle_state_hash=HASH,
-        warden_history=(),
-    )
+from oracle.reinforcement import ReinforcementCondition
 
 
 def test_darkness_defaults_are_frozen():
     intervention = build_darkness(
         current_generation=5,
+    )
+
+    assert intervention.schema_version == DARKNESS_VERSION
+
+    assert (
+        intervention.condition
+        is ReinforcementCondition.SC_02_DARKNESS
     )
 
     assert (
@@ -77,60 +66,117 @@ def test_darkness_window_is_exact():
     )
 
 
-def test_darkness_attenuates_numeric_features_only():
-    original = make_input()
+def test_darkness_retains_exactly_quarter_amplitude():
+    stimulus = np.asarray(
+        [0.0, 1.0, 2.0, 4.0],
+        dtype=np.float32,
+    )
 
     intervention = build_darkness(
         current_generation=0,
     )
 
     transformed = apply_darkness(
-        oracle_input=original,
+        stimulus=stimulus,
         intervention=intervention,
         generation=0,
     )
 
-    assert transformed.derived_features == (
-        ("price_signal", 0.25),
-        ("momentum", -0.2),
-        ("label", "control"),
+    np.testing.assert_allclose(
+        transformed,
+        stimulus * 0.25,
     )
 
 
-def test_darkness_does_not_modify_original_input():
-    original = make_input()
+def test_darkness_preserves_spatial_pattern():
+    stimulus = np.asarray(
+        [1.0, 2.0, 4.0, 8.0],
+        dtype=np.float32,
+    )
 
     intervention = build_darkness(
         current_generation=0,
     )
 
     transformed = apply_darkness(
-        oracle_input=original,
+        stimulus=stimulus,
         intervention=intervention,
         generation=0,
     )
 
-    assert original.derived_features == (
-        ("price_signal", 1.0),
-        ("momentum", -0.8),
-        ("label", "control"),
+    original_ratio = stimulus / stimulus.sum()
+    transformed_ratio = transformed / transformed.sum()
+
+    np.testing.assert_allclose(
+        transformed_ratio,
+        original_ratio,
     )
 
-    assert transformed is not original
 
+def test_darkness_does_not_modify_original_stimulus():
+    stimulus = np.asarray(
+        [1.0, 2.0, 3.0],
+        dtype=np.float32,
+    )
 
-def test_darkness_recovers_immediately_after_window():
-    original = make_input()
+    original = stimulus.copy()
 
     intervention = build_darkness(
         current_generation=0,
-        duration_transitions=10,
     )
 
     transformed = apply_darkness(
-        oracle_input=original,
+        stimulus=stimulus,
+        intervention=intervention,
+        generation=0,
+    )
+
+    np.testing.assert_array_equal(
+        stimulus,
+        original,
+    )
+
+    assert transformed is not stimulus
+
+
+def test_darkness_recovers_immediately():
+    stimulus = np.asarray(
+        [1.0, 2.0, 3.0],
+        dtype=np.float32,
+    )
+
+    intervention = build_darkness(
+        current_generation=0,
+    )
+
+    transformed = apply_darkness(
+        stimulus=stimulus,
         intervention=intervention,
         generation=10,
     )
 
-    assert transformed == original
+    np.testing.assert_array_equal(
+        transformed,
+        stimulus,
+    )
+
+
+def test_darkness_rejects_non_finite_stimulus():
+    intervention = build_darkness(
+        current_generation=0,
+    )
+
+    stimulus = np.asarray(
+        [1.0, np.nan],
+        dtype=np.float32,
+    )
+
+    with pytest.raises(
+        DarknessError,
+        match="non-finite",
+    ):
+        apply_darkness(
+            stimulus=stimulus,
+            intervention=intervention,
+            generation=0,
+        )
