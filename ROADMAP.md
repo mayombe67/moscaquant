@@ -992,13 +992,13 @@ No learning, reinforcement, Sugar Cube selection, market strategy, authority, or
   - HR records remain narrative / organizational artifacts and do not create
     scientific evidence.
 
-- MQ-8.6 ANOMALOUS OBSERVANCES — CURRENT
+- MQ-8.6 ANOMALOUS OBSERVANCES — COMPLETE
   - BLACKSITE HOLIDAYS
   - PANOPTICON REFERENDUM
   - PRESENTATION_ONLY by default
   - EXPERIMENTAL effects require separate frozen protocol
 
-- MQ-8.7 DOSSIERS AND LONGITUDINAL METRICS
+- MQ-8.7 DOSSIERS AND LONGITUDINAL METRICS — CURRENT
   - stack history
   - first/latest occurrence
   - co-occurrence views

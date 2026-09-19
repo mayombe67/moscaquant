@@ -1438,8 +1438,8 @@ authoritative for retrospective content.
 Git history is the authoritative project record.
 29. Current Directive
 
-**Current implementation directive:** complete MQ-8.6 — ANOMALOUS
-OBSERVANCES next. MQ-8.7, MQ-8.8, and MQ-8.9 remain subsequent MQ-8 work.
+**Current implementation directive:** complete MQ-8.7 — ACHIEVEMENT DOSSIERS
+AND LONGITUDINAL METRICS next. MQ-8.8 and MQ-8.9 remain subsequent MQ-8 work.
 MQ-9 remains gated until MQ-8 requirements are satisfied.
 
 YOLO & HODL LLC
