@@ -998,7 +998,7 @@ No learning, reinforcement, Sugar Cube selection, market strategy, authority, or
   - PRESENTATION_ONLY by default
   - EXPERIMENTAL effects require separate frozen protocol
 
-- MQ-8.7 DOSSIERS AND LONGITUDINAL METRICS — CURRENT
+- MQ-8.7 DOSSIERS AND LONGITUDINAL METRICS — COMPLETE
   - stack history
   - first/latest occurrence
   - co-occurrence views
@@ -1006,7 +1006,7 @@ No learning, reinforcement, Sugar Cube selection, market strategy, authority, or
   - longitudinal summaries
   - public-safe provenance
 
-- MQ-8.8 PERSONNEL AND CORPORATE-HR LAYER
+- MQ-8.8 PERSONNEL AND CORPORATE-HR LAYER — CURRENT
   - public presentation of evidence-linked personnel history
   - character-specific review / commentary surfaces
 
