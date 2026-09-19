@@ -158,7 +158,9 @@ Validated MQ-7 work includes:
 - perturbation-dependent expression of latent plasticized state;
 - dynamic differential tracing;
 - causal pathway and downstream mediation experiments;
-- distributed first-wave causal mediation.
+- distributed first-wave causal mediation;
+- pairwise supra-independent interaction;
+- bidirectional conditional compensation-like dependence among the strongest frozen branch pairs.
 
 The frozen structural MaleCNS connectome remained unchanged throughout these
 experiments.
@@ -168,6 +170,78 @@ SHOCK-56393 replay, ten dynamically identified first-wave branches accounted
 for approximately 96.5% of the measured DN-C1 plasticity-expression effect.
 Adding the independently validated 68045 -> 1273 route reduced the remaining
 measured effect to approximately 2.8e-7 of the intact magnitude.
+
+### MQ-7.18 — Pairwise Route Interaction — COMPLETE
+
+Under the frozen condition-B SHOCK-56393 replay, MQ-7.18 tested all 45 unique
+pairs among the ten frozen first-wave branches against the preregistered
+independent-residual expectation:
+
+`expected = 1 - (1 - A) * (1 - B)`
+
+Multiple pairs showed positive supra-independent interaction excess.
+
+The strongest pair was `62598 + 77298`:
+
+- observed pair attenuation: `0.47053613280033013`
+- independent-residual expectation: `0.4509162290662455`
+- interaction excess: `0.01961990373408462`
+
+The strongest negative interaction excess was approximately `-0.000753`.
+
+Validated null-edge pair controls using `68045 -> 82348` produced maximum
+absolute interaction excess `0.0`.
+
+**Classification:** PAIRWISE SUPRA-INDEPENDENT INTERACTION: SUPPORTED.
+
+Claim boundary: this is a frozen-model interaction result. It does not
+establish biological compensation, adaptive rerouting, biological learning,
+or generalization beyond the tested replay.
+
+### MQ-7.19 — Conditional Pairwise Contribution — COMPLETE
+
+MQ-7.19 froze the three strongest positive MQ-7.18 pairs:
+
+1. `62598 + 77298`
+2. `62598 + 79672`
+3. `79672 + 77298`
+
+Each tested direction showed positive conditional gain: each branch explained
+a larger fraction of the remaining DN-C1 effect when its partner branch was
+absent than its standalone attenuation alone predicted.
+
+Validated null controls again produced maximum absolute conditional gain
+`0.0`.
+
+**Classification:** CONDITIONAL COMPENSATION-LIKE DEPENDENCE: SUPPORTED.
+
+The supported claim is bidirectional conditional dependence compatible with
+compensation-like behavior **within the frozen model**.
+
+It does not establish biological compensation, adaptive rewiring,
+homeostasis, or living-fly behavior.
+
+The MQ-7 causal-pathway subphase is CLOSED after MQ-7.19. Blind triple or
+higher-order combinatorial searches require a new independently motivated
+hypothesis and frozen protocol.
+
+
+MQ-7.18 tested all 45 unique pairs among the ten frozen first-wave branches
+against a preregistered independent-residual null. Multiple pairs showed
+positive supra-independent interaction excess. The strongest pair,
+68045 -> 62598 plus 68045 -> 77298, exceeded the null expectation by
+approximately 1.96 percentage points. Pairing each first-wave branch with the
+validated null edge 68045 -> 82348 produced zero interaction excess.
+
+MQ-7.19 froze the three strongest MQ-7.18 pairs and measured conditional
+residual contribution in both directions. Every tested direction showed
+positive conditional gain, while validated null controls again produced zero.
+The supported claim is conditional compensation-like dependence within the
+frozen model. Biological compensation in a living organism is not established.
+
+MQ-7 causal-pathway work is CLOSED after MQ-7.19. Blind higher-order
+combinatorial searches are not authorized without a new independently
+motivated hypothesis and frozen protocol.
 
 These plasticity experiments are preregistered scientific groundwork for
 MQ-12 — CONSEQUENCES.
@@ -901,7 +975,7 @@ No learning, reinforcement, Sugar Cube selection, market strategy, authority, or
   - synthesized original MoscaQuant achievement sting
   - no copied platform audio/assets
 
-- MQ-8.5 LORE FIREWALL AND HR EVIDENCE — CURRENT
+- MQ-8.5 LORE FIREWALL AND HR EVIDENCE — COMPLETE
   - MQ-8.5A Achievement Semantics Expansion
     - complete claim boundaries for historical achievements
     - occurrence origin / provenance classes
@@ -918,7 +992,7 @@ No learning, reinforcement, Sugar Cube selection, market strategy, authority, or
   - HR records remain narrative / organizational artifacts and do not create
     scientific evidence.
 
-- MQ-8.6 ANOMALOUS OBSERVANCES
+- MQ-8.6 ANOMALOUS OBSERVANCES — CURRENT
   - BLACKSITE HOLIDAYS
   - PANOPTICON REFERENDUM
   - PRESENTATION_ONLY by default
@@ -961,7 +1035,7 @@ Scale changes runtime architecture, not experimental meaning.
 
 <!-- BEGIN CANON: MQ-8 UI NAVIGATION INFRASTRUCTURE -->
 
-### MQ-8 UI Navigation Infrastructure — ACTIVE
+### MQ-8 UI Navigation Infrastructure — COMPLETE
 
 Before additional Panopticon public-surface expansion, MoscaQuant SHALL
 implement the centralized navigation and mobile-first contracts defined in the
@@ -969,38 +1043,38 @@ Charter.
 
 Implementation sequence:
 
-- MQ-8.UI.1 Central Navigation Controller
+- MQ-8.UI.1 Central Navigation Controller — COMPLETE
   - shared overlay stack
   - Back
   - Close
   - Close All
   - one-active-overlay ownership
 
-- MQ-8.UI.2 Browser History and Deep Links
+- MQ-8.UI.2 Browser History and Deep Links — COMPLETE
   - pushState / popstate integration
   - stable public-safe record links
   - explicit not-found state
 
-- MQ-8.UI.3 Breadcrumbs and Cross-Module Navigation
+- MQ-8.UI.3 Breadcrumbs and Cross-Module Navigation — COMPLETE
   - personnel
   - HR
   - achievements
   - future experiments / broadcasts
 
-- MQ-8.UI.4 Focus, Keyboard, and Scroll Restoration
+- MQ-8.UI.4 Focus, Keyboard, and Scroll Restoration — COMPLETE
   - focus trap / transfer
   - initiating-control restoration
   - Escape semantics
   - scroll-position preservation
 
-- MQ-8.UI.5 Mobile Interaction Pass
+- MQ-8.UI.5 Mobile Interaction Pass — COMPLETE
   - sticky Back / Close
   - full-height sheet behavior
   - 44px-class touch targets
   - no hover-only actions
   - 390 / 430 / 768 / 1024 validation
 
-- MQ-8.UI.6 Preference Persistence
+- MQ-8.UI.6 Preference Persistence — COMPLETE
   - mute
   - reduced motion
   - presentation preferences remain independent of scientific event state

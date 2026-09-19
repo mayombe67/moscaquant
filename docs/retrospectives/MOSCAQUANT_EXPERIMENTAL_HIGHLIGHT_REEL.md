@@ -169,3 +169,40 @@ These are candidates, not yet the canonical MQ-8 achievement registry: `MISSION 
 MoscaQuant is still deliberately ridiculous. But the strongest part of the project is no longer the premise. It is the discipline with which the premise has been constrained: frozen baselines, matched controls, replayable state, null-preserving protocols, structural immutability, dynamic tracing, and causal ablation. The humor works because the experiment is allowed to embarrass the story.
 
 > Final management comment: **THIS WAS SUPPOSED TO BE FUNNY.**
+
+
+## MQ-7.18 / MQ-7.19 — THE ROUTES STARTED COVERING FOR EACH OTHER
+
+A community question about whether downstream routes might partially
+compensate for one another reopened the otherwise closed MQ-7 causal-pathway
+analysis.
+
+MQ-7.18 tested all 45 unique pairs among the ten frozen first-wave branches
+against an independent-residual null rather than assuming that single-branch
+effects combine independently.
+
+The strongest pair, `62598 + 77298`, produced approximately **+1.96 percentage
+points** of supra-independent interaction excess. Validated null-edge pair
+controls produced **0.0** interaction excess.
+
+MQ-7.19 then froze the three strongest MQ-7.18 pairs and asked the stricter
+conditional question: does each branch explain more of the residual effect
+when its partner is absent?
+
+Across all three pairs, the answer was yes in both directions. Null controls
+again produced **0.0** conditional gain.
+
+**Scientific interpretation:** the frozen model supports structured pairwise
+interaction and conditional compensation-like dependence.
+
+**Boundary:** this does not establish biological compensation, rewiring,
+learning, or living-fly adaptation.
+
+The causal-pathway line was reclosed after MQ-7.19. No blind triple or
+higher-order combinatorial fishing expedition is authorized without a new
+independent hypothesis.
+
+Approved internal historical footnote: the detour began with a useful Reddit
+question shortly before the project's separately nicknamed
+**"r/quant neckbeards problem."**
+

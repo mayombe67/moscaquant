@@ -762,10 +762,84 @@ MQ-6 — DEPLOY THE WARDEN
 
 Deploy independent risk gateway and conduct adversarial testing.
 
+REPOSITORY AUTHORITY BOUNDARY
+
+Public moscaquant is authoritative for scientific configuration, protocols,
+methods, accepted results, claim boundaries, reproducibility code, public-safe
+evidence, and the open scientific Neuroscope viewer.
+
+Private moscaquant-panopticon owns presentation/product implementation:
+navigation, personnel/HR presentation, achievement UX/audio, preferences,
+mobile UX, Broadcast/live-blog presentation, social adapters, community
+presentation, and lore.
+
+Private moscaquant-ops remains authoritative for WARDEN-01, private operational
+ledgers, containment state, operational provenance, and private execution
+plumbing.
+
+Panopticon consumes scientific meaning from public-safe artifacts. It is not a
+scientific authority.
+
+PRESENTATION MAY INTERPRET EVIDENCE. IT MAY NEVER MANUFACTURE IT.
+
 MQ-7 — AWAKEN THE ORACLE
 
 Implement and validate the behavioral correction and behavioral-layer
 protocols.
+
+MQ-7.18 — PAIRWISE ROUTE INTERACTION — COMPLETE
+
+Under the frozen condition-B SHOCK-56393 replay, MQ-7.18 tested all 45 unique
+pairs among the ten frozen first-wave branches against the preregistered
+independent-residual expectation:
+
+    expected = 1 - (1 - A) * (1 - B)
+
+Multiple pairs showed positive supra-independent interaction excess.
+
+Strongest pair: 62598 + 77298
+Observed pair attenuation: 0.47053613280033013
+Independent-residual expectation: 0.4509162290662455
+Interaction excess: 0.01961990373408462
+
+The strongest negative interaction excess was approximately -0.000753.
+
+Validated null-edge pair controls using 68045 -> 82348 produced maximum
+absolute interaction excess 0.0.
+
+CLASSIFICATION: PAIRWISE SUPRA-INDEPENDENT INTERACTION — SUPPORTED.
+
+Claim boundary: this is a frozen-model interaction result. It does not
+establish biological compensation, adaptive rerouting, biological learning,
+or generalization beyond the tested replay.
+
+MQ-7.19 — CONDITIONAL PAIRWISE CONTRIBUTION — COMPLETE
+
+MQ-7.19 froze the three strongest positive MQ-7.18 pairs:
+
+1. 62598 + 77298
+2. 62598 + 79672
+3. 79672 + 77298
+
+Each tested direction showed positive conditional gain: each branch explained
+a larger fraction of the remaining DN-C1 effect when its partner branch was
+absent than its standalone attenuation alone predicted.
+
+Validated null controls produced maximum absolute conditional gain 0.0.
+
+CLASSIFICATION: CONDITIONAL COMPENSATION-LIKE DEPENDENCE — SUPPORTED.
+
+The supported claim is bidirectional conditional dependence compatible with
+compensation-like behavior within the frozen model.
+
+It does not establish biological compensation, adaptive rewiring, homeostasis,
+or living-fly behavior.
+
+The MQ-7 causal-pathway subphase is CLOSED after MQ-7.19.
+
+Blind triple or higher-order combinatorial searches require a new
+independently motivated hypothesis and frozen protocol.
+
 
 MQ-8 — CORPORATE CULTURE
 
@@ -1143,6 +1217,11 @@ authoritative for retrospective content.
 
 Git history is the authoritative project record.
 29. Current Directive
+
+**Current implementation directive:** complete MQ-8.6 — ANOMALOUS
+OBSERVANCES next. MQ-8.7, MQ-8.8, and MQ-8.9 remain subsequent MQ-8 work.
+MQ-9 remains gated until MQ-8 requirements are satisfied.
+
 YOLO & HODL LLC
 MOSCAQUANT
 
@@ -1352,6 +1431,22 @@ MQ-5 continues the existing separation between:
 
 Migration from Habitat to another workstation or cloud runtime must not
 silently alter scientific semantics or expected outputs.
+
+Before a new workstation, cloud worker, or other runtime profile becomes an
+authoritative scientific execution environment, it must pass a frozen
+runtime-parity acceptance check.
+
+Where practical, that check compares:
+
+- scientific artifact and configuration hashes;
+- frozen stimulus identity;
+- deterministic neural outputs or equivalent scientific outputs;
+- selected responder values;
+- accepted causal-result identity;
+- runtime-profile metadata.
+
+A hardware migration that changes scientific output is a scientific change,
+not an infrastructure-only migration.
 
 #### Entry condition
 
