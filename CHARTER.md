@@ -1095,6 +1095,226 @@ Its evidence level is E0 — LORE ONLY.
 Its permanent locked state is intentional and must not be bypassed by historical replay,
 community voting, manual telemetry injection, or ordinary runtime events.
 
+MQ-8 PANOPTICON 3D CONTAINMENT PRESENTATION CANON
+
+The future 3D containment space is a Panopticon presentation surface.
+
+It may dramatize accepted scientific, behavioral, containment, achievement,
+HR, Broadcast, and public-safe market state.
+
+It is not a scientific authority, Warden authority, Oracle authority, or
+broker command surface.
+
+MQ-001 / MORTY SHALL be visually embodied at the trading desk.
+
+The chained-to-the-trading-desk presentation is canonical visual language.
+The chain is a presentation element only and has no operational authority.
+
+MORTY SHALL wear the corporate tie.
+
+MORTY's asymmetric eye presentation SHALL preserve the established retinal-map
+coverage:
+
+LEFT:
+- 1,085 R1-R6 receptors
+- 292 represented columns
+
+RIGHT:
+- 2,156 R1-R6 receptors
+- 508 represented columns
+
+The asymmetry represents retinal-map coverage and SHALL NOT be presented as a
+claim that the biological right eye is literally twice the anatomical size of
+the left eye.
+
+The established asymmetric visual identity is the o_0 presentation.
+
+Eye degradation, loss, dimming, deformation, or other renderer effects MAY
+reflect sanitized active-neuron / retinal telemetry.
+
+The renderer SHALL NOT invent neuron loss or feed visual state back into the
+scientific runtime.
+
+WARDEN-01 / Senator Armstrong and SCIENCE-01 / Placeholder McDoctorate SHALL
+occupy the elevated observation-window / overlook as shadowed supervisory
+figures.
+
+WARDEN-01 / Senator Armstrong SHALL read immediately as physically imposing:
+an exaggeratedly muscular, broad-shouldered silhouette consistent with the
+project's Senator Armstrong visual joke.
+
+SCIENCE-01 / Placeholder McDoctorate remains a less imposing academic /
+reviewer silhouette whose visual language emphasizes observation, notes, and
+skepticism rather than physical authority.
+
+Their presentation MAY animate in response to public-safe state.
+
+Examples include:
+
+WARDEN-01:
+- watching;
+- arms crossed;
+- leaning forward;
+- containment response.
+
+SCIENCE-01:
+- watching;
+- taking notes;
+- skeptical reaction;
+- facepalm.
+
+These reactions are presentation only and grant no new authority.
+
+ORACLE-01 / GLaDOS SHALL receive a deliberately excessive dramatic entrance
+when the Sugar Cube Protocol begins.
+
+ORACLE-01 / GLaDOS SHALL be presented as explicitly female / feminine-coded in
+the Panopticon visual layer while remaining an artificial / mechanical Oracle
+entity rather than a human scientific actor.
+
+The canonical presentation sequence MAY include:
+
+1. red-alert alarms;
+2. emergency lighting;
+3. screen override;
+4. observation-window blackout;
+5. mechanical / theatrical entry;
+6. protocol reveal;
+7. intervention presentation;
+8. recovery / exit.
+
+The renderer receives an already-authorized Sugar Cube / D6 event.
+
+The renderer SHALL NOT roll the D6, choose a punishment, administer an
+intervention, or modify Oracle state.
+
+Decorative containment-room objects are explicitly permitted.
+
+Examples include:
+
+- coffee cups;
+- trading-desk clutter;
+- achievement trophies;
+- warning placards;
+- sugar-cube containers;
+- market displays;
+- fake corporate awards;
+- motivational posters, including the intentionally ridiculous lady-fly
+  bikini poster;
+- other lore props consistent with Panopticon presentation.
+
+Decor MAY react to state.
+
+Decor SHALL NOT create state.
+
+The 3D renderer SHALL consume sanitized, versioned presentation state and
+remain renderer-independent.
+
+Three.js, WebGPU, Godot, Unreal, or another renderer MAY replace one another
+without changing scientific meaning.
+
+The 3D renderer MUST NOT:
+
+- mutate the connectome;
+- change scientific configuration;
+- administer experimental perturbations;
+- enable or disable trading;
+- place or cancel broker orders;
+- change WARDEN-01 state;
+- rewrite scientific, achievement, HR, or Broadcast evidence;
+- expose private broker credentials, account identifiers, private Warden
+  ledgers, private runtime paths, or other containment secrets.
+
+SCENE STATE MAY REFLECT REALITY.
+
+SCENE STATE MAY NOT CREATE REALITY.
+
+CONTAINMENT ROOM VISUAL DENSITY AND HUD CANON
+
+The 3D containment space SHALL preserve a clear visual hierarchy:
+
+1. MQ-001 / MORTY;
+2. the trading desk;
+3. the observation window;
+4. environmental lore and decorative props.
+
+Persistent environment props MAY include:
+
+- a coffee cup;
+- a dead office plant;
+- a cheap analog wall clock;
+- a WARDEN warning placard;
+- a sugar-cube container;
+- a small performance-review / HR corkboard;
+- an Employee of the Month frame featuring MQ-001;
+- a red containment phone;
+- a compact analog MORALE gauge;
+- the approved ridiculous lady-fly motivational poster.
+
+The MORALE gauge is intentionally non-scientific corporate theater.
+Approved presentation labels MAY include:
+
+- OPTIMAL;
+- CONCERNING;
+- UNIONIZING;
+- REDACTED.
+
+The red containment phone SHALL remain visually quiet during normal operation.
+It MAY illuminate or animate during containment, Oracle, or incident events.
+It SHALL NOT function as a real operational control.
+
+Environmental state-reactive effects MAY include:
+
+- desk-lamp flicker during elevated stress;
+- coffee-level depletion during fatigue;
+- monitor scanline or static effects during punishment;
+- a subtle spotlight or visual emphasis on the motivational poster during
+  elevated courtship / arousal presentation state;
+- increased visibility or movement of observation-window silhouettes during
+  significant events.
+
+Rare event gags MAY include:
+
+- sprinkler mist during a major incident;
+- a temporary achievement banner;
+- a small corporate confetti effect after promotion or major achievement;
+- a MANDATORY MORALE IMPROVEMENT indicator after punishment.
+
+Rare event gags SHOULD remain rare.
+Only one dominant environmental gag SHOULD compete for attention at a time.
+
+The persistent MQ-001 mood indicator SHALL use an original low-frame,
+pixel-art fly portrait inspired by the concept of classic status-face HUDs
+without copying protected artwork.
+
+The pixel HUD SHALL mirror the current public-safe 3D presentation state,
+including where applicable:
+
+- hunger;
+- arousal;
+- courtship drive;
+- threat / stress;
+- fatigue;
+- reward;
+- punishment;
+- Sugar Cube / abnormal state;
+- current gross pose or action category.
+
+The pixel HUD SHALL update at a deliberately slower visual cadence than the
+full 3D renderer.
+
+The HUD is a compressed presentation of already-derived state.
+It SHALL NOT independently infer or create scientific state.
+
+Numeric telemetry SHALL remain available alongside the mood portrait.
+
+The governing clutter rule is:
+
+MORTY FIRST.
+THE DESK SECOND.
+THE WINDOW THIRD.
+THE ROOM SUPPORTS THE JOKE.
+
 25. Go / No-Go Gates
 
 MQ-3 cannot begin until market-driven activity propagates reproducibly beyond
