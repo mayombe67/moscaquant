@@ -1477,9 +1477,8 @@ dread the phrase: "Hahn would like a quick conversation with HR."
 
 29. Current Directive
 
-**Current implementation directive:** complete MQ-8.8 — PERSONNEL AND
-CORPORATE-HR LAYER next. MQ-8.9 remains the subsequent MQ-8 work.
-MQ-9 remains gated until MQ-8 requirements are satisfied.
+**Current implementation directive:** complete MQ-8.9 — PANOPTICON
+BROADCAST SYSTEM next. MQ-9 remains gated until MQ-8 requirements are satisfied.
 
 YOLO & HODL LLC
 MOSCAQUANT
