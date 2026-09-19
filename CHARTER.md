@@ -773,6 +773,23 @@ navigation, personnel/HR presentation, achievement UX/audio, preferences,
 mobile UX, Broadcast/live-blog presentation, social adapters, community
 presentation, and lore.
 
+### PANOPTICON facility codename
+
+The canonical facility codename for Panopticon is **SITE-19B**.
+
+SITE-19B is a MoscaQuant containment-site designation and a deliberate
+SCP-inspired homage in the project's presentation/lore layer. It is not a claim
+that MoscaQuant is part of SCP Foundation canon.
+
+Usage:
+
+- PANOPTICON — system / product name;
+- SITE-19B — facility / containment-site codename;
+- "PANOPTICON // SITE-19B" — approved combined public presentation.
+
+The SITE-19B designation is presentation metadata only. It creates no scientific,
+experimental, HR, WARDEN, broker, trading, or operational authority.
+
 Private moscaquant-ops remains authoritative for WARDEN-01, private operational
 ledgers, containment state, operational provenance, and private execution
 plumbing.
