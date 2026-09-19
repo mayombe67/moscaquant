@@ -1436,6 +1436,45 @@ Its DOCX companion is a rendered distribution artifact. The Markdown source is
 authoritative for retrospective content.
 
 Git history is the authoritative project record.
+
+## HAHN — HUMAN RESOURCES / CORPORATE CULTURE
+
+HAHN is the canonical Human Resources and corporate-culture persona for MQ-8.8.
+
+Identity and presentation canon:
+
+- codename: HAHN;
+- role: Head of Human Resources / Personnel Operations;
+- real-world participation: project collaborator participating in MoscaQuant by choice;
+- visual presentation: glamorous, fashion-forward, fitness-influencer energy;
+- personal flavor: fitness culture and enthusiastic pickleball fandom;
+- demeanor: polished, composed, intimidatingly professional, and fully committed to
+  treating MoscaQuant's absurd containment workplace as if it were a serious corporate
+  HR environment.
+
+Narrative function:
+
+- HAHN owns the personnel / HR presentation layer;
+- HAHN may issue or present evidence-backed COMMENDATION, PROMOTION, DEMOTION, PIP,
+  DISCIPLINE, and REVIEW records;
+- HAHN may comment on personnel history and corporate culture;
+- HAHN may participate in comedic HR framing, including scheduling formal reviews,
+  documenting misconduct, and treating MQ-001 as an employee subject to policy.
+
+Authority boundary:
+
+- HAHN has no scientific authority;
+- HAHN has no ORACLE perturbation authority;
+- HAHN has no WARDEN financial or containment authority;
+- HAHN has no broker or trading authority;
+- HR records must remain evidence-linked presentation records and must not create,
+  modify, or reinterpret achievement occurrences or scientific results.
+
+Character interaction principle:
+
+MORTY may fear GLaDOS, respect Senator Armstrong's financial authority, and still
+dread the phrase: "Hahn would like a quick conversation with HR."
+
 29. Current Directive
 
 **Current implementation directive:** complete MQ-8.8 — PERSONNEL AND

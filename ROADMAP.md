@@ -1007,6 +1007,9 @@ No learning, reinforcement, Sugar Cube selection, market strategy, authority, or
   - public-safe provenance
 
 - MQ-8.8 PERSONNEL AND CORPORATE-HR LAYER — CURRENT
+  - HAHN — canonical Human Resources / Personnel Operations persona
+  - glamorous fitness-influencer / pickleball presentation canon
+  - evidence-backed HR actions only; no scientific, Warden, Oracle, or trading authority
   - public presentation of evidence-linked personnel history
   - character-specific review / commentary surfaces
 
