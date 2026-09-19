@@ -4,188 +4,370 @@
     {
       "achievement_id": "ACH-001",
       "category": "SCIENCE",
-      "claim_boundary": "",
+      "claim_boundary": "Supports the value of the frozen null result in MQ-7.14 for constraining subsequent hypotheses. Does not establish that all null results are informative or generalize beyond the tested replay.",
+      "dossier_priority": "HIGH",
       "evidence_level": "E2",
+      "family": "NULL_RESULTS",
       "first_recorded_date": "2026-09-18",
       "historical_replay": true,
       "latest_recorded_date": "2026-09-18",
+      "provenance_class": "HISTORICAL_REPLAY",
       "public_evidence_refs": [
         "docs/experiments/mq7-14-residual-branch-mediation-protocol.md"
       ],
       "public_text": "Hypothesis dead. Science alive.",
+      "related_achievement_ids": [
+        "ACH-005",
+        "ACH-006"
+      ],
       "science_text": "A preregistered null constrains the next question.",
+      "social_eligible": true,
       "stack_count": 1,
       "stack_policy": "REPEATABLE",
+      "syndication_class": "NOTABLE",
+      "tags": [
+        "MQ-7.14",
+        "null-result",
+        "residual-branch",
+        "hypothesis-test"
+      ],
       "title": "MISSION FAILED SUCCESSFULLY"
     },
     {
       "achievement_id": "ACH-002",
       "category": "SCIENCE",
-      "claim_boundary": "",
+      "claim_boundary": "Supports causal dependence on the tested 56393\u219268045 edge in the frozen MQ-7.11 replay because the validated-edge ablation removed the measured effect while the matched control lesion did not. Does not establish a general biological pathway or mechanism.",
+      "dossier_priority": "HIGH",
       "evidence_level": "E3",
+      "family": "CAUSAL_PATHWAY",
       "first_recorded_date": "2026-09-18",
       "historical_replay": true,
       "latest_recorded_date": "2026-09-18",
+      "provenance_class": "HISTORICAL_REPLAY",
       "public_evidence_refs": [
         "docs/experiments/mq7-11-causal-route-ablation-protocol.md"
       ],
       "public_text": "We removed the haunted wire.",
+      "related_achievement_ids": [
+        "ACH-003",
+        "ACH-006",
+        "ACH-020"
+      ],
       "science_text": "Validated-edge ablation removes the measured effect while the matched control lesion does not.",
+      "social_eligible": true,
       "stack_count": 1,
       "stack_policy": "SINGLE",
+      "syndication_class": "MAJOR",
+      "tags": [
+        "MQ-7.11",
+        "ablation",
+        "causal-route",
+        "validated-edge"
+      ],
       "title": "THE WIRE WAS HAUNTED"
     },
     {
       "achievement_id": "ACH-003",
       "category": "SCIENCE",
-      "claim_boundary": "",
+      "claim_boundary": "Supported only for the frozen MQ-7.17 replay and measured downstream effect. Does not establish a general network decomposition, biological pathway, biological learning, or transfer to other replay conditions without replication.",
+      "dossier_priority": "CRITICAL",
       "evidence_level": "E3",
+      "family": "CAUSAL_PATHWAY",
       "first_recorded_date": "2026-09-18",
       "historical_replay": true,
       "latest_recorded_date": "2026-09-18",
+      "provenance_class": "HISTORICAL_REPLAY",
       "public_evidence_refs": [
         "docs/experiments/mq7-17-cumulative-first-wave-mediation-results.md"
       ],
       "public_text": "The ghost had routing tables.",
+      "related_achievement_ids": [
+        "ACH-002",
+        "ACH-005",
+        "ACH-006",
+        "ACH-020"
+      ],
       "science_text": "Cumulative first-wave mediation explains at least 95% of the measured downstream effect.",
+      "social_eligible": true,
       "stack_count": 1,
       "stack_policy": "SINGLE",
+      "syndication_class": "MAJOR",
+      "tags": [
+        "MQ-7.17",
+        "mediation",
+        "first-wave",
+        "causal-pathway"
+      ],
       "title": "ROUTING TABLES"
     },
     {
       "achievement_id": "ACH-004",
       "category": "SCIENCE",
-      "claim_boundary": "",
+      "claim_boundary": "Describes the frozen MQ-7.9 target-specificity screen in which ten tested SC-01 targets exposed the latent modeled plasticity state. It does not imply that all nearby targets, all perturbations, or biological neurons would behave similarly.",
+      "dossier_priority": "HIGH",
       "evidence_level": "E2",
+      "family": "INTERVENTION",
       "first_recorded_date": "2026-09-18",
       "historical_replay": true,
       "latest_recorded_date": "2026-09-18",
+      "provenance_class": "HISTORICAL_REPLAY",
       "public_evidence_refs": [
         "docs/experiments/mq7-9-shock-target-specificity-protocol.md"
       ],
       "public_text": "GLaDOS found ten buttons.",
+      "related_achievement_ids": [
+        "ACH-008",
+        "ACH-009",
+        "ACH-019"
+      ],
       "science_text": "Ten frozen SC-01 targets expose the latent SC-03 state.",
+      "social_eligible": true,
       "stack_count": 1,
       "stack_policy": "SINGLE",
+      "syndication_class": "NOTABLE",
+      "tags": [
+        "MQ-7.9",
+        "SC-01",
+        "target-specificity",
+        "shock"
+      ],
       "title": "TEN BUTTONS"
     },
     {
       "achievement_id": "ACH-005",
       "category": "SCIENCE",
-      "claim_boundary": "",
+      "claim_boundary": "Supports the specific MQ-7.16 observation that large differential activity can coexist with zero measured lesion attenuation for the tested control branch. It does not imply that large activity is generally non-causal.",
+      "dossier_priority": "HIGH",
       "evidence_level": "E3",
+      "family": "NULL_RESULTS",
       "first_recorded_date": "2026-09-18",
       "historical_replay": true,
       "latest_recorded_date": "2026-09-18",
+      "provenance_class": "HISTORICAL_REPLAY",
       "public_evidence_refs": [
         "docs/experiments/mq7-16-first-wave-causal-screen-protocol.md"
       ],
       "public_text": "Outstanding activity. Zero contribution.",
+      "related_achievement_ids": [
+        "ACH-001",
+        "ACH-003",
+        "ACH-006",
+        "ACH-007"
+      ],
       "science_text": "Large early differential signal coexists with zero measured lesion attenuation.",
+      "social_eligible": true,
       "stack_count": 1,
       "stack_policy": "REPEATABLE",
+      "syndication_class": "NOTABLE",
+      "tags": [
+        "MQ-7.16",
+        "causal-screen",
+        "control",
+        "dynamic-trace"
+      ],
       "title": "LOOKING BUSY"
     },
     {
       "achievement_id": "ACH-006",
       "category": "SCIENCE",
-      "claim_boundary": "",
+      "claim_boundary": "Summarizes the MQ-7.13 through MQ-7.16 finding that static structural ranking was not sufficient to identify the useful causal branches in the frozen replay, while dynamic divergence tracing produced productive candidates. This does not establish dynamic tracing as universally superior.",
+      "dossier_priority": "HIGH",
       "evidence_level": "E3",
+      "family": "CAUSAL_PATHWAY",
       "first_recorded_date": "2026-09-18",
       "historical_replay": true,
       "latest_recorded_date": "2026-09-18",
+      "provenance_class": "HISTORICAL_REPLAY",
       "public_evidence_refs": [
         "docs/experiments/mq7-13-residual-route-discovery-protocol.md"
       ],
       "public_text": "The wiring diagram was more of a suggestion.",
+      "related_achievement_ids": [
+        "ACH-002",
+        "ACH-003",
+        "ACH-005",
+        "ACH-007"
+      ],
       "science_text": "Static structural ranking fails while dynamic tracing identifies useful causal candidates.",
+      "social_eligible": true,
       "stack_count": 1,
       "stack_policy": "SINGLE",
+      "syndication_class": "NOTABLE",
+      "tags": [
+        "MQ-7.13",
+        "MQ-7.14",
+        "MQ-7.15",
+        "MQ-7.16",
+        "topology",
+        "dynamic-trace"
+      ],
       "title": "SPAGHETTI CONNECTOME"
     },
     {
       "achievement_id": "ACH-007",
       "category": "SCIENCE",
-      "claim_boundary": "",
+      "claim_boundary": "Describes recurrent divergence returning to the original perturbation node in the frozen MQ-7.15 differential trace. It is a model/replay observation and does not establish a biological recurrent mechanism.",
+      "dossier_priority": "NORMAL",
       "evidence_level": "E2",
+      "family": "DYNAMIC_TRACE",
       "first_recorded_date": "2026-09-18",
       "historical_replay": true,
       "latest_recorded_date": "2026-09-18",
+      "provenance_class": "HISTORICAL_REPLAY",
       "public_evidence_refs": [
         "docs/experiments/mq7-15-differential-trace-protocol.md"
       ],
       "public_text": "The signal came back.",
+      "related_achievement_ids": [
+        "ACH-005",
+        "ACH-006"
+      ],
       "science_text": "Divergence later returns to the original perturbation node in the frozen trace.",
+      "social_eligible": true,
       "stack_count": 1,
       "stack_policy": "REPEATABLE",
+      "syndication_class": "NOTABLE",
+      "tags": [
+        "MQ-7.15",
+        "recurrence",
+        "differential-trace",
+        "56393"
+      ],
       "title": "BOOMERANG NEURON"
     },
     {
       "achievement_id": "ACH-008",
       "category": "SCIENCE",
-      "claim_boundary": "",
+      "claim_boundary": "Supports perturbation-dependent expression of persistent modeled plasticity under the frozen MQ-7.8 replay. Plasticity alone was silent at baseline. This does not establish biological learning, consciousness, or financial utility.",
+      "dossier_priority": "CRITICAL",
       "evidence_level": "E3",
+      "family": "PLASTICITY",
       "first_recorded_date": "2026-09-18",
       "historical_replay": true,
       "latest_recorded_date": "2026-09-18",
+      "provenance_class": "HISTORICAL_REPLAY",
       "public_evidence_refs": [
         "docs/experiments/mq7-8-shock-plasticity-interaction-results.md"
       ],
       "public_text": "Passive effect: hidden.",
+      "related_achievement_ids": [
+        "ACH-004",
+        "ACH-009",
+        "ACH-019"
+      ],
       "science_text": "Persistent plasticity is silent at baseline and measurable under matched perturbation.",
+      "social_eligible": true,
       "stack_count": 1,
       "stack_policy": "SINGLE",
+      "syndication_class": "MAJOR",
+      "tags": [
+        "MQ-7.8",
+        "SC-03",
+        "plasticity",
+        "latent-state",
+        "shock"
+      ],
       "title": "STEALTH BUILD"
     },
     {
       "achievement_id": "ACH-009",
       "category": "SCIENCE",
-      "claim_boundary": "",
+      "claim_boundary": "The frozen MQ-7.8 replay showed an acute intervention reaching the modeled decision layer. The large decision effect belongs to the SHOCK intervention; the persistent plasticity state only subtly modified the matched trajectory and must not be credited with the entire decision change.",
+      "dossier_priority": "CRITICAL",
       "evidence_level": "E2",
+      "family": "INTERVENTION",
       "first_recorded_date": "2026-09-18",
       "historical_replay": true,
       "latest_recorded_date": "2026-09-18",
+      "provenance_class": "HISTORICAL_REPLAY",
       "public_evidence_refs": [
         "docs/experiments/mq7-8-shock-plasticity-interaction-results.md"
       ],
       "public_text": "That one reached the decision layer.",
+      "related_achievement_ids": [
+        "ACH-004",
+        "ACH-008",
+        "ACH-019"
+      ],
       "science_text": "An acute intervention changes the anonymous final decision in the frozen replay.",
+      "social_eligible": true,
       "stack_count": 1,
       "stack_policy": "REPEATABLE",
+      "syndication_class": "MAJOR",
+      "tags": [
+        "MQ-7.8",
+        "decision-layer",
+        "SC-01",
+        "shock",
+        "plasticity-interaction"
+      ],
       "title": "CRITICAL HIT"
     },
     {
       "achievement_id": "ACH-019",
       "category": "SCIENCE",
-      "claim_boundary": "",
+      "claim_boundary": "Supports an interaction in the frozen MQ-7.8 replay where a persistent modeled state became measurable under a second matched perturbation. It does not establish biological synergy, biological learning, consciousness, or generalization beyond the tested replay.",
+      "dossier_priority": "CRITICAL",
       "evidence_level": "E3",
+      "family": "PLASTICITY",
       "first_recorded_date": "2026-09-18",
       "historical_replay": true,
       "latest_recorded_date": "2026-09-18",
+      "provenance_class": "HISTORICAL_REPLAY",
       "public_evidence_refs": [
         "docs/experiments/mq7-8-shock-plasticity-interaction-results.md"
       ],
       "public_text": "Two states entered. One interaction left.",
+      "related_achievement_ids": [
+        "ACH-004",
+        "ACH-008",
+        "ACH-009"
+      ],
       "science_text": "A latent persistent state becomes measurable only under a second matched perturbation.",
+      "social_eligible": true,
       "stack_count": 1,
       "stack_policy": "SINGLE",
+      "syndication_class": "MAJOR",
+      "tags": [
+        "MQ-7.8",
+        "interaction",
+        "latent-state",
+        "SC-03",
+        "SC-01"
+      ],
       "title": "DIMENSIONAL MERGE"
     },
     {
       "achievement_id": "ACH-020",
       "category": "SCIENCE",
-      "claim_boundary": "",
+      "claim_boundary": "Within the frozen MQ-7.17 replay, cumulative tested first-wave branches plus the tested downstream 68045\u21921273 edge reduced the residual measured effect below 0.001% of intact magnitude at the current numerical resolution. This is not a claim of universal network completeness or biological pathway completeness.",
+      "dossier_priority": "CRITICAL",
       "evidence_level": "E3",
+      "family": "CAUSAL_PATHWAY",
       "first_recorded_date": "2026-09-18",
       "historical_replay": true,
       "latest_recorded_date": "2026-09-18",
+      "provenance_class": "HISTORICAL_REPLAY",
       "public_evidence_refs": [
         "docs/experiments/mq7-17-cumulative-first-wave-mediation-results.md"
       ],
       "public_text": "Close enough for government neuroscience.",
+      "related_achievement_ids": [
+        "ACH-002",
+        "ACH-003",
+        "ACH-006"
+      ],
       "science_text": "Cumulative tested branches reduce the residual measured effect below 0.001% of intact magnitude.",
+      "social_eligible": true,
       "stack_count": 1,
       "stack_policy": "SINGLE",
+      "syndication_class": "MAJOR",
+      "tags": [
+        "MQ-7.17",
+        "cumulative-mediation",
+        "residual-effect",
+        "causal-pathway"
+      ],
       "title": "99.9999%"
     }
   ],
