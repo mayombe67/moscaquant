@@ -14,7 +14,7 @@ CANONICAL_HR_RECORDS = [
         record_id="HR-001",
         subject="GLaDOS",
         action="COMMENDATION",
-        issuer="HR",
+        issuer="HAHN",
         title="Productive Interference",
         public_text=(
             "GLaDOS is formally commended for producing interpretable "
@@ -83,7 +83,7 @@ CANONICAL_HR_RECORDS = [
         record_id="HR-003",
         subject="WARDEN",
         action="COMMENDATION",
-        issuer="HR",
+        issuer="HAHN",
         title="Containment Without Negotiation",
         public_text=(
             "WARDEN is commended for maintaining independent financial "

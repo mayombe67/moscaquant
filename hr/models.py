@@ -21,6 +21,7 @@ HRAction = Literal[
 
 HRIssuer = Literal[
     "HR",
+    "HAHN",
     "Placeholder McDoctorate",
     "GLaDOS",
     "WARDEN",

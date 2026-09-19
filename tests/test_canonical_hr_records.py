@@ -25,6 +25,16 @@ def test_first_canonical_hr_subjects_are_expected():
     }
 
 
+def test_hahn_issues_canonical_hr_actions():
+    by_id = {
+        record.record_id: record
+        for record in CANONICAL_HR_RECORDS
+    }
+
+    assert by_id["HR-001"].issuer == "HAHN"
+    assert by_id["HR-003"].issuer == "HAHN"
+
+
 def test_no_unearned_promotion_or_demotion():
     actions = {record.record_id: record.action for record in CANONICAL_HR_RECORDS}
 

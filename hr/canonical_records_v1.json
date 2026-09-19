@@ -25,7 +25,7 @@
           "ref": "ACH-019"
         }
       ],
-      "issuer": "HR",
+      "issuer": "HAHN",
       "provenance_class": "MANUAL_CANON",
       "public": true,
       "public_text": "GLaDOS is formally commended for producing interpretable intervention outcomes without exceeding assigned authority.",
@@ -71,7 +71,7 @@
           "ref": "CHARTER:WARDEN-INDEPENDENCE"
         }
       ],
-      "issuer": "HR",
+      "issuer": "HAHN",
       "provenance_class": "MANUAL_CANON",
       "public": true,
       "public_text": "WARDEN is commended for maintaining independent financial containment while the rest of the project became increasingly weird.",
