@@ -1,0 +1,43 @@
+{
+  "accepted_causal_edge_count": 13,
+  "dataset_class": "EMPIRICAL_MALECNS",
+  "responder_real_count": 9,
+  "responder_total_count": 9,
+  "scientific_outputs": {
+    "fixture_id": "habitat-golden-v1",
+    "mq7_17": {
+      "connectome_unchanged": true,
+      "cumulative_count": 10,
+      "schema_version": "mq7-cumulative-first-wave-mediation/v1",
+      "shock_seed": 5,
+      "shock_target": 56393
+    },
+    "mq7_18": {
+      "connectome_unchanged": true,
+      "experiment": "mq7-18-pairwise-route-interaction-v1",
+      "first_wave_target_count": 10,
+      "frozen_parent": "mq7-17-cumulative-first-wave-mediation-v1",
+      "intact_effect": 1.1174368270910759e-08,
+      "null_interaction_max_abs": 0.0,
+      "pair_count": 45,
+      "schema_version": "mq7-pairwise-route-interaction/v1",
+      "shock_seed": 5,
+      "shock_target": 56393
+    },
+    "mq7_19": {
+      "connectome_unchanged": true,
+      "experiment": "mq7-19-conditional-pairwise-contribution-v1",
+      "frozen_pair_count": 3,
+      "frozen_parent": "mq7-18-pairwise-route-interaction-v1",
+      "intact_effect": 1.1174368270910759e-08,
+      "max_abs_null_conditional_gain": 0.0,
+      "pair_count": 3,
+      "schema_version": "mq7-conditional-pairwise-contribution/v1",
+      "shock_seed": 5,
+      "shock_target": 56393
+    },
+    "source_commit": "5da62fbc926559133618671216cffafde5615103"
+  },
+  "spatial_real_count": 7486,
+  "topology_fallback_count": 4989
+}

@@ -1,0 +1,77 @@
+{
+  "acceptance_profile": "mq-runtime-parity-v1",
+  "artifacts": [
+    {
+      "label": "mq4-4-replay",
+      "path": "/home/wil/projects/moscaquant/neuroscope/web/data/replay-A-v1.json",
+      "sha256": "3dbf3b727e66cbc2cf390812370f59479775f8ab0f0771af0c383b884a5e92b0",
+      "size_bytes": 32370655
+    },
+    {
+      "label": "mq7-17",
+      "path": "/home/wil/moscaquant-data/experiments/mq7-17-cumulative-first-wave-mediation-v1.json",
+      "sha256": "e739cb86c92d321020649192207791557a5e92e43f05cd6793dfa0ed6f54d39b",
+      "size_bytes": 10143
+    },
+    {
+      "label": "mq7-18",
+      "path": "/home/wil/moscaquant-data/experiments/mq7-18-pairwise-route-interaction-v1.json",
+      "sha256": "649bc6cdb80e6c7a157dadeb5430ca9c9a1ebee99d3e9884fe83311899b992f7",
+      "size_bytes": 51774
+    },
+    {
+      "label": "mq7-19",
+      "path": "/home/wil/moscaquant-data/experiments/mq7-19-conditional-pairwise-contribution-v1.json",
+      "sha256": "a7edefed2476e06552d8ede553bff876f228ca9758dd75315018173536cb26f4",
+      "size_bytes": 11961
+    }
+  ],
+  "dataset_class": "EMPIRICAL_MALECNS",
+  "generated_by": "scripts/runtime_parity_v1.py",
+  "metrics": {
+    "accepted_causal_edge_count": 13,
+    "responder_real_count": 9,
+    "responder_total_count": 9,
+    "spatial_real_count": 7486,
+    "topology_fallback_count": 4989
+  },
+  "runtime_profile_id": "habitat",
+  "schema_version": "moscaquant.runtime_parity/v1",
+  "scientific_digest": "6f092a8296240e8d6a193c2c201dfb621ab591440e65926acd994615412a08a5",
+  "scientific_outputs": {
+    "fixture_id": "habitat-golden-v1",
+    "mq7_17": {
+      "connectome_unchanged": true,
+      "cumulative_count": 10,
+      "schema_version": "mq7-cumulative-first-wave-mediation/v1",
+      "shock_seed": 5,
+      "shock_target": 56393
+    },
+    "mq7_18": {
+      "connectome_unchanged": true,
+      "experiment": "mq7-18-pairwise-route-interaction-v1",
+      "first_wave_target_count": 10,
+      "frozen_parent": "mq7-17-cumulative-first-wave-mediation-v1",
+      "intact_effect": 1.1174368270910759e-08,
+      "null_interaction_max_abs": 0.0,
+      "pair_count": 45,
+      "schema_version": "mq7-pairwise-route-interaction/v1",
+      "shock_seed": 5,
+      "shock_target": 56393
+    },
+    "mq7_19": {
+      "connectome_unchanged": true,
+      "experiment": "mq7-19-conditional-pairwise-contribution-v1",
+      "frozen_pair_count": 3,
+      "frozen_parent": "mq7-18-pairwise-route-interaction-v1",
+      "intact_effect": 1.1174368270910759e-08,
+      "max_abs_null_conditional_gain": 0.0,
+      "pair_count": 3,
+      "schema_version": "mq7-conditional-pairwise-contribution/v1",
+      "shock_seed": 5,
+      "shock_target": 56393
+    },
+    "source_commit": "5da62fbc926559133618671216cffafde5615103"
+  },
+  "source_commit": "5da62fbc926559133618671216cffafde5615103"
+}
