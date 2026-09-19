@@ -104,3 +104,56 @@ result.
 
 Internal project nickname: **the r/quant neckbeards problem**.
 
+## Runtime portability, embodiment, and adjacent trading watch — 2026-09-19
+
+These projects are engineering/benchmark references, not scientific evidence for MoscaQuant claims.
+
+### FlyBrain / flybrain provenance patterns
+
+Useful patterns include deterministic experiment entry points, source/output hashes, explicit dataset provenance, and separation of real-data experiments from synthetic fixtures.
+
+References:
+- https://github.com/mehrantsi/flyBrain
+- https://github.com/Imperol3/flybrain
+
+### soup-connectome
+
+Reference: https://github.com/MakazhanAlpamys/soup-connectome
+
+Use: backend-portability and parity benchmark only. MoscaQuant does not adopt its fixed-point numerical model as scientific dynamics.
+
+### FlyDrones
+
+Reference: https://github.com/SpikeCalls/FlyDrones
+
+Use: inspect camera/sensory-to-connectome and descending-neuron interface patterns. Engineered drone-control semantics are not imported.
+
+### Closed-Loop Fly
+
+Reference: https://github.com/ZeroXClem/closed-loop-fly
+
+Use: inspect compound-eye/optic-lobe/MaleCNS integration, descending-neuron inspection, parity benches, and especially documented readout artefacts.
+
+### flyquant
+
+Reference: https://github.com/0xbuilder1/flyquant
+
+Use: adjacent trading comparator. MoscaQuant does not adopt its execution or leverage design. Future comparison should focus on controls, provenance, causal evidence, held-out financial validation, adapter boundaries, and independent WARDEN-01 containment.
+
+### MoscaQuant adoption decision
+
+ADOPT:
+- hashable provenance manifests;
+- explicit empirical/surrogate/synthetic classes;
+- executable runtime-parity acceptance;
+- separately hashable adapter boundaries.
+
+BENCHMARK:
+- backend portability;
+- sensory and DN inspection interfaces;
+- adjacent connectome-to-finance claims.
+
+DO NOT ADOPT:
+- another project's scientific dynamics merely for portability;
+- another project's engineered motor/trading mapping;
+- financial success as evidence of biological validity.

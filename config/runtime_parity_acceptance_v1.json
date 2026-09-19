@@ -1,0 +1,25 @@
+{
+  "schema_version": "moscaquant.runtime_parity_acceptance/v1",
+  "acceptance_profile": "mq-runtime-parity-v1",
+  "authoritative_dataset_class": "EMPIRICAL_MALECNS",
+  "provenance_classes": [
+    "EMPIRICAL_MALECNS",
+    "SPATIAL_SURROGATE",
+    "SYNTHETIC_TEST"
+  ],
+  "required_invariants": {
+    "spatial_real_count": 7486,
+    "topology_fallback_count": 4989,
+    "responder_real_count": 9,
+    "responder_total_count": 9,
+    "accepted_causal_edge_count": 13
+  },
+  "comparison_policy": {
+    "scientific_digest": "exact",
+    "source_commit": "exact",
+    "runtime_profile_id": "recorded_but_excluded_from_scientific_digest",
+    "artifact_paths": "recorded_but_excluded_from_scientific_digest",
+    "artifact_hashes": "exact",
+    "scientific_outputs": "exact"
+  }
+}
