@@ -1,0 +1,88 @@
+{
+  "schema_version": "moscaquant.sidequest.temporal_decoupling/v1",
+  "sidequest_id": "SQ-01",
+  "title": "TEMPORAL DECOUPLING",
+  "lore_name": "TEMPORAL JETLAG",
+  "baseline": {
+    "frame_count": 16,
+    "dt_ms": 1.0,
+    "stimulus_scale": 1.0
+  },
+  "variants": [
+    {
+      "id": "BASELINE",
+      "frame_count": 16,
+      "dt_ms": 1.0,
+      "stimulus_scale": 1.0,
+      "class": "REFERENCE"
+    },
+    {
+      "id": "CLOCK_FAST",
+      "frame_count": 16,
+      "dt_ms": 0.5,
+      "stimulus_scale": 1.0,
+      "class": "CLOCK_SCALE"
+    },
+    {
+      "id": "CLOCK_SLOW",
+      "frame_count": 16,
+      "dt_ms": 2.0,
+      "stimulus_scale": 1.0,
+      "class": "CLOCK_SCALE"
+    },
+    {
+      "id": "RESAMPLE_8",
+      "frame_count": 8,
+      "dt_ms": 2.0,
+      "stimulus_scale": 2.0,
+      "class": "DURATION_ENERGY_MATCHED"
+    },
+    {
+      "id": "RESAMPLE_32",
+      "frame_count": 32,
+      "dt_ms": 0.5,
+      "stimulus_scale": 0.5,
+      "class": "DURATION_ENERGY_MATCHED"
+    },
+    {
+      "id": "RAW_8",
+      "frame_count": 8,
+      "dt_ms": 1.0,
+      "stimulus_scale": 1.0,
+      "class": "FRAME_COUNT_CONFOUND_CONTROL"
+    },
+    {
+      "id": "RAW_32",
+      "frame_count": 32,
+      "dt_ms": 1.0,
+      "stimulus_scale": 1.0,
+      "class": "FRAME_COUNT_CONFOUND_CONTROL"
+    }
+  ],
+  "conditions": [
+    "A",
+    "B"
+  ],
+  "determinism_repeats": 2,
+  "primary_endpoints": [
+    "relay_spikes",
+    "wider_spikes",
+    "unique_relay",
+    "unique_wider",
+    "first_relay_frame",
+    "first_excitatory_relay_frame",
+    "first_wider_frame",
+    "final_voltage_max",
+    "relay_hash",
+    "wider_hash",
+    "final_voltage_hash"
+  ],
+  "acceptance_questions": [
+    "Does the harness reproduce the accepted 16-frame/1 ms baseline exactly?",
+    "Does A/A replay remain exact under every variant?",
+    "Does A/B relay or wider-connectome discrimination remain present under each variant?",
+    "How sensitive are propagation counts and onset timing to clock-scale changes at fixed frame count?",
+    "How sensitive are propagation counts and onset timing to duration-and-energy-matched temporal resampling?"
+  ],
+  "claim_boundary": "SQ-01 is a deterministic sensitivity analysis of the frozen MoscaQuant computational model. It tests dependence on temporal discretization and runtime leak-step assumptions. It does not establish biological timing, biological robustness, market profitability, or live-trading utility."
+}
