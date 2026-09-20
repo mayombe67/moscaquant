@@ -16,7 +16,7 @@ It is also intentionally ridiculous.
 
 ---
 
-### Presentation lexicons
+## Presentation lexicons
 
 MoscaQuant keeps scientific terminology authoritative while allowing recurring
 presentation vocabularies in Panopticon.
@@ -59,6 +59,30 @@ Next:
 - MQ-13 — MOSCA VS THE WORLD
 
 See [`ROADMAP.md`](ROADMAP.md) for canonical phase status.
+
+---
+
+### MQ-9 focus
+
+MQ-9 opens the Panopticon as the public spectator interface and embodied
+Containment Chamber.
+
+The public experience may visualize and dramatize sanitized scientific,
+behavioral, containment, achievement, personnel, HR, Broadcast, and public-safe
+market state, but presentation remains downstream of canonical evidence.
+
+MQ-9 does not grant Panopticon scientific, ORACLE, WARDEN, broker, or trading
+authority.
+
+Current focus:
+
+- public spectator experience;
+- embodied MQ-001 / MORTY containment presentation;
+- SITE-19B containment-room presentation;
+- integration of accepted Panopticon systems into the public experience;
+- preservation of scientific claim boundaries and authority separation.
+
+Presentation may interpret evidence. It may never manufacture it.
 
 ---
 
@@ -236,30 +260,6 @@ Important sources:
 - [`docs/retrospectives/MOSCAQUANT_EXPERIMENTAL_HIGHLIGHT_REEL.md`](docs/retrospectives/MOSCAQUANT_EXPERIMENTAL_HIGHLIGHT_REEL.md) — canonical retrospective and approved science/lore framing
 
 Git history is the authoritative project record.
-
----
-
-## Current Phase — MQ-9
-
-MQ-9 opens the Panopticon as the public spectator interface and embodied
-Containment Chamber.
-
-The public experience may visualize and dramatize sanitized scientific,
-behavioral, containment, achievement, personnel, HR, Broadcast, and public-safe
-market state, but presentation remains downstream of canonical evidence.
-
-MQ-9 does not grant Panopticon scientific, ORACLE, WARDEN, broker, or trading
-authority.
-
-Current focus:
-
-- public spectator experience;
-- embodied MQ-001 / MORTY containment presentation;
-- SITE-19B containment-room presentation;
-- integration of accepted Panopticon systems into the public experience;
-- preservation of scientific claim boundaries and authority separation.
-
-Presentation may interpret evidence. It may never manufacture it.
 
 ---
 

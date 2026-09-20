@@ -3,6 +3,8 @@
 ## Provisional Comparative Biological Control Program
 
 **Canonical status:** Provisional scientific subject program  
+
+MQ-002 is canonically named but is not yet a validated second experimental subject.
 **Designation:** `MQ-002 // LILITH`  
 **Role:** Comparative biological control for MQ-001  
 **Initial source:** published FlyWire female-brain connectome through official

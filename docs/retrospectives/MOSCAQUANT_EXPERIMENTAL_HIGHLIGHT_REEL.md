@@ -152,7 +152,7 @@ Small global changes to spike threshold and membrane time constant produced larg
 **Science:** the frozen runtime is strongly sensitive to global model mechanics, but the wider-network propagation limit was not overcome by the tested excitability and membrane-persistence changes.\
 **Lore:** We turned every scientifically permitted knob. MORTY got louder. The rest of the brain still declined the meeting.
 
-### 18 — The Receipts Checked Out
+### 18 — FIND THE DIFFERENCE
 **Reference:** SQ-03B FIND THE DIFFERENCE; SQ-03C CHECK THE RECEIPTS.  
 SQ-03B exposed a long-tailed landscape of single-edge counterfactual sensitivities, but its production run used the validated batched execution path. SQ-03C froze 84 upper-tail jobs and 64 low-tail controls, then reran all 148 one at a time through the original scalar `HybridRuntime`. All 148 passed exact A/A replay and all 148 agreed with the SQ-03B metrics under the already-frozen numerical parity contract.  
 **Science:** the selected SQ-03B upper-tail localization effects survived independent scalar re-execution; the low-tail controls reproduced as well. This rules out the batched engine as the explanation for the verified upper-tail signal, while remaining a computational replication rather than a biological or population-level statistical result.  
@@ -245,7 +245,7 @@ Approved internal historical footnote: the detour began with a useful Reddit
 question shortly before the project's separately nicknamed
 **"r/quant neckbeards problem."**
 
-### 19 — Structure Is Not Destiny
+### 19 — STRUCTURE IS NOT DESTINY
 
 **Reference:** SQ-03E — STRUCTURE IS NOT DESTINY
 
@@ -257,4 +257,3 @@ structural/dynamic overlap was only 188 edges for `S` and
 184 for `C`.
 
 **Lore:** The wiring diagram arrived with a résumé. The runtime checked its references.
-

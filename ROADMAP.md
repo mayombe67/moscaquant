@@ -98,6 +98,154 @@ replication, and read-only Neuroscope intervention replay.
 
 **Status:** COMPLETE — ACCEPTED WITH DOCUMENTED LIMITATIONS.
 
+MQ-4 Neuroscope is complete and accepted.
+
+MQ-5 moves from passive inspection of frozen experimental telemetry to
+controlled perturbation of evidence-defined neural targets.
+
+### Goal
+
+Test whether deliberate interventions on previously identified causal
+nodes and pathways produce reproducible downstream effects relative to
+predefined controls.
+
+### MQ-5 sequence
+
+#### MQ-5.1 — Experimental Protocol
+
+Define:
+
+- hypothesis
+- eligible target-selection rule
+- intervention mechanism
+- control condition
+- measurement window
+- outcome metrics
+- reproducibility requirement
+- acceptance criteria
+- artifact schema and versioning
+
+No intervention implementation begins before this protocol is frozen.
+
+#### MQ-5.2 — Intervention Harness
+
+Implement intervention execution separately from Neuroscope.
+
+Requirements:
+
+- deterministic experiment configuration
+- explicit intervention metadata
+- reproducible seeds where randomness exists
+- baseline and control execution
+- machine/runtime independence
+- versioned outputs
+
+#### MQ-5.3 — Single-Node Perturbation
+
+Run controlled interventions against selected causal nodes.
+
+Compare intervention outcomes against the predefined controls.
+
+Measure downstream response, responder effects, latency, and persistence.
+
+#### MQ-5.4 — Pathway Perturbation
+
+Extend intervention testing to evidence-defined causal paths and
+intermediate nodes.
+
+Preserve directional and timing information from the frozen causal
+artifacts.
+
+#### MQ-5.5 — Sham and Specificity Tests
+
+Test whether measured effects are specific to the intended intervention
+rather than generic perturbation, timing, or magnitude effects.
+
+#### MQ-5.6 — Replication and Stability
+
+Repeat accepted candidate effects according to the predefined
+reproducibility protocol.
+
+Distinguish reproducible results from one-run observations.
+
+#### MQ-5.7 — Neuroscope Intervention Replay
+
+Allow Neuroscope to consume completed MQ-5 artifacts for inspection.
+
+Neuroscope remains read-only and does not execute interventions.
+
+#### MQ-5.8 — MQ-5 Acceptance
+
+Review:
+
+- protocol compliance
+- controls
+- reproducibility
+- artifact provenance
+- scientific interpretation
+- runtime portability
+- absence of inference inflation
+
+### MQ-5 constraints
+
+MQ-5 must not:
+
+- alter frozen MQ-1 through MQ-3 evidence in place
+- reinterpret topology fallback as anatomy
+- use Neuroscope as an undocumented experiment engine
+- choose controls after observing intervention results
+- choose success thresholds after observing results
+- treat visualization alone as causal evidence
+- assign financial or trading semantics
+
+### Current phase chain
+
+`MQ-1 → MQ-2 → MQ-3 → MQ-4 COMPLETE → MQ-5 COMPLETE`
+
+MQ-5 status:
+
+- MQ-5.1 — Experimental Protocol: COMPLETE
+- MQ-5.2 — Intervention Harness: COMPLETE
+- MQ-5.3 — Single-Node Perturbation: COMPLETE
+- MQ-5.4 — Pathway Perturbation: COMPLETE
+- MQ-5.5 — Sham and Specificity Tests: COMPLETE
+- CONF-004A — Robust Normalization Hardening: COMPLETE
+- MQ-5.6 — Replication and Stability: COMPLETE
+- MQ-5.7 — Neuroscope Intervention Replay: COMPLETE
+- MQ-5.8 — MQ-5 Acceptance: COMPLETE — 75 / 75 acceptance checks passed
+
+MQ-5 final status:
+
+**COMPLETE — ACCEPTED WITH DOCUMENTED LIMITATIONS**
+
+MQ-5.8 acceptance audit:
+
+- 75 checks executed
+- 75 passed
+- 0 failed
+
+Key evidence accumulated through MQ-5.6:
+
+- 13 / 13 frozen causal edges retained monotonic dose response
+- 12 / 12 eligible causal interventions exceeded frozen matched controls
+- timing results supported broader active causal windows rather than
+  single-frame temporal exclusivity
+- the frozen `56393 → 68045 → 1273` two-hop pathway propagated intervention
+  effects through the intermediate node
+- all three frozen convergence systems retained combined-input contribution
+- CONF-004A reproduced the principal MQ-5 findings under causal median/MAD
+  normalization
+- MQ-5.6 independently reproduced selected direct-edge, pathway, and
+  convergence findings using a separately implemented full-network runtime
+
+The current evidence supports simulated causal structure within the frozen
+MoscaQuant model.
+
+It does not establish biological causality, financial usefulness, or general
+encoding independence.
+
+**Financial semantics: NOT ASSIGNED**
+
 ## MQ-6 — DEPLOY THE WARDEN
 
 **Status:** COMPLETE — PRODUCTION CONTAINMENT HARDENING PASSED UNDER TESTED LOCAL CONDITIONS.
@@ -265,6 +413,82 @@ Financial semantics: NOT ASSIGNED
 
 MQ-8 is unblocked.
 
+### MQ-7.3 — Oracle Audit/Event Construction — COMPLETE
+
+ORACLE-01 now emits tamper-evident audit records for deterministic state transitions.
+
+Implemented properties:
+
+- canonical serialization;
+- SHA-256 object hashing;
+- immutable Oracle event records;
+- event construction from Oracle input, prior state, proposal, and resulting state;
+- previous-event hash chaining;
+- genesis-event handling;
+- chain-link verification;
+- tamper detection;
+- Oracle transition wrapper that emits state, proposal, and audit event together.
+
+No adaptive learning, reinforcement, Sugar Cube selection, market strategy, or execution logic is present in MQ-7.3.
+
+ORACLE-01 remains proposal-only and WARDEN-01 retains independent authority.
+
+### MQ-7.4 — Oracle Persistence & Replay — COMPLETE
+
+ORACLE-01 now persists and reloads auditable state without rewriting history.
+
+Implemented properties:
+
+- append-only JSONL event history;
+- atomic state snapshot replacement;
+- persistence metadata;
+- full event-chain verification during reload;
+- state/final-event consistency checks;
+- metadata consistency checks;
+- corruption and tamper rejection;
+- deterministic read-only replay;
+- immutable tuple restoration after JSON deserialization;
+- restart-safe Oracle state reconstruction.
+
+The event chain remains the authoritative historical record.
+
+State snapshots are derived convenience artifacts and must agree with the final verified event.
+
+No learning, reinforcement, Sugar Cube selection, market strategy, authority, or execution logic is present in MQ-7.4.
+
+### MQ-7.5 — Oracle Control-Condition Harness — COMPLETE
+
+ORACLE-01 now supports explicit experimental control conditions:
+
+- `O0_NO_ORACLE`
+- `O1_STATIC_ORACLE`
+- `O2_ADAPTIVE_ORACLE`
+- `O3_SHUFFLED_ORACLE`
+
+Implemented properties:
+
+- unknown control identifiers fail closed;
+- O0 bypass is distinct from Oracle abstention;
+- O1 executes deterministic non-adaptive Oracle behavior;
+- O2 is explicitly labeled but remains non-adaptive;
+- O3 uses deterministic `sha256-sort/v1` evidence shuffling;
+- O3 requires an explicit seed;
+- original evidence remains unchanged;
+- shuffle provenance is retained;
+- control selection is explicit experimental provenance.
+
+The O3 shuffle is defined as:
+
+`SHA256(seed || NUL || evidence_ref)`
+
+Eligible evidence references are ordered lexicographically by the resulting digest.
+
+This avoids dependence on Python PRNG implementation details.
+
+No learning, reinforcement, Sugar Cube selection, market strategy, authority, or execution logic is present in MQ-7.5.
+
+<!-- BEGIN CANON: MQ-8 EXPANDED IMPLEMENTATION -->
+
 ## MQ-8 — CORPORATE CULTURE
 
 **Status:** CURRENT.
@@ -411,6 +635,133 @@ This lexicon is especially appropriate for later causal-network work where
 aggregate source influence, local hierarchy, matched comparisons, and
 high-throughput subnetworks become experimentally relevant.
 
+### MQ-8 expanded implementation sequence
+
+- MQ-8.4 GLOBAL ACHIEVEMENT OVERLAY — COMPLETE
+  - global queue and route-independent presentation host proven locally
+  - sanitized public achievement projection
+  - dossier access
+  - synthesized original MoscaQuant achievement sting
+  - no copied platform audio/assets
+
+- MQ-8.5 LORE FIREWALL AND HR EVIDENCE — COMPLETE
+  - MQ-8.5A Achievement Semantics Expansion
+    - complete claim boundaries for historical achievements
+    - occurrence origin / provenance classes
+    - achievement families / tags
+    - related-achievement links
+    - dossier schema expansion
+  - MQ-8.5B HR Evidence Records
+    - promotions
+    - demotions
+    - PIPs
+    - commendations
+    - discipline
+    - evidence-linked personnel records
+  - HR records remain narrative / organizational artifacts and do not create
+    scientific evidence.
+
+- MQ-8.6 ANOMALOUS OBSERVANCES — COMPLETE
+  - BLACKSITE HOLIDAYS
+  - PANOPTICON REFERENDUM
+  - PRESENTATION_ONLY by default
+  - EXPERIMENTAL effects require separate frozen protocol
+
+- MQ-8.7 DOSSIERS AND LONGITUDINAL METRICS — COMPLETE
+  - stack history
+  - first/latest occurrence
+  - co-occurrence views
+  - achievement families
+  - longitudinal summaries
+  - public-safe provenance
+
+- MQ-8.8 PERSONNEL AND CORPORATE-HR LAYER — COMPLETE
+  - HAHN — canonical Human Resources / Personnel Operations persona
+  - glamorous fitness-influencer / pickleball presentation canon
+  - evidence-backed HR actions only; no scientific, Warden, Oracle, or trading authority
+  - public presentation of evidence-linked personnel history
+  - character-specific review / commentary surfaces
+
+- MQ-8.9 PANOPTICON BROADCAST SYSTEM — COMPLETE
+  - canonical site live blog
+  - BroadcastEvent schema
+  - RSS
+  - Bluesky adapter
+  - X adapter
+  - issuer identities
+  - syndication eligibility
+  - correction / supersession records
+  - static-first AWS baseline
+  - horizontally scalable interface contract
+
+### MQ-8.9 implementation constraint
+
+MQ-8.9 MUST be designed for the current Lightsail baseline without requiring
+heavy always-on infrastructure.
+
+It MUST also remain portable to horizontally scalable infrastructure later.
+
+Scale changes runtime architecture, not experimental meaning.
+
+<!-- END CANON: MQ-8 EXPANDED IMPLEMENTATION -->
+
+<!-- BEGIN CANON: MQ-8 UI NAVIGATION INFRASTRUCTURE -->
+
+### MQ-8 UI Navigation Infrastructure — COMPLETE
+
+Before additional Panopticon public-surface expansion, MoscaQuant SHALL
+implement the centralized navigation and mobile-first contracts defined in the
+Charter.
+
+Implementation sequence:
+
+- MQ-8.UI.1 Central Navigation Controller — COMPLETE
+  - shared overlay stack
+  - Back
+  - Close
+  - Close All
+  - one-active-overlay ownership
+
+- MQ-8.UI.2 Browser History and Deep Links — COMPLETE
+  - pushState / popstate integration
+  - stable public-safe record links
+  - explicit not-found state
+
+- MQ-8.UI.3 Breadcrumbs and Cross-Module Navigation — COMPLETE
+  - personnel
+  - HR
+  - achievements
+  - future experiments / broadcasts
+
+- MQ-8.UI.4 Focus, Keyboard, and Scroll Restoration — COMPLETE
+  - focus trap / transfer
+  - initiating-control restoration
+  - Escape semantics
+  - scroll-position preservation
+
+- MQ-8.UI.5 Mobile Interaction Pass — COMPLETE
+  - sticky Back / Close
+  - full-height sheet behavior
+  - 44px-class touch targets
+  - no hover-only actions
+  - 390 / 430 / 768 / 1024 validation
+
+- MQ-8.UI.6 Preference Persistence — COMPLETE
+  - mute
+  - reduced motion
+  - presentation preferences remain independent of scientific event state
+
+### UI completion rule
+
+A Panopticon public feature is not considered complete when it only works in
+desktop DevTools.
+
+Desktop may add density.
+
+Mobile must not lose functionality.
+
+<!-- END CANON: MQ-8 UI NAVIGATION INFRASTRUCTURE -->
+
 ## MQ-9 — OPEN THE PANOPTICON
 Deploy the public spectator interface and embodied Containment Chamber.
 
@@ -448,158 +799,6 @@ Detailed requirements and go/no-go gates are defined in `CHARTER.md`.
 **THE MARKET PROVIDES FEEDBACK. WE PROVIDE CONSEQUENCES.**
 
 ---
-
-## MQ-5 — Intervention and Perturbation Experiments
-
-**Status:** COMPLETE — ACCEPTED WITH DOCUMENTED LIMITATIONS
-
-MQ-4 Neuroscope is complete and accepted.
-
-MQ-5 moves from passive inspection of frozen experimental telemetry to
-controlled perturbation of evidence-defined neural targets.
-
-### Goal
-
-Test whether deliberate interventions on previously identified causal
-nodes and pathways produce reproducible downstream effects relative to
-predefined controls.
-
-### MQ-5 sequence
-
-#### MQ-5.1 — Experimental Protocol
-
-Define:
-
-- hypothesis
-- eligible target-selection rule
-- intervention mechanism
-- control condition
-- measurement window
-- outcome metrics
-- reproducibility requirement
-- acceptance criteria
-- artifact schema and versioning
-
-No intervention implementation begins before this protocol is frozen.
-
-#### MQ-5.2 — Intervention Harness
-
-Implement intervention execution separately from Neuroscope.
-
-Requirements:
-
-- deterministic experiment configuration
-- explicit intervention metadata
-- reproducible seeds where randomness exists
-- baseline and control execution
-- machine/runtime independence
-- versioned outputs
-
-#### MQ-5.3 — Single-Node Perturbation
-
-Run controlled interventions against selected causal nodes.
-
-Compare intervention outcomes against the predefined controls.
-
-Measure downstream response, responder effects, latency, and persistence.
-
-#### MQ-5.4 — Pathway Perturbation
-
-Extend intervention testing to evidence-defined causal paths and
-intermediate nodes.
-
-Preserve directional and timing information from the frozen causal
-artifacts.
-
-#### MQ-5.5 — Sham and Specificity Tests
-
-Test whether measured effects are specific to the intended intervention
-rather than generic perturbation, timing, or magnitude effects.
-
-#### MQ-5.6 — Replication and Stability
-
-Repeat accepted candidate effects according to the predefined
-reproducibility protocol.
-
-Distinguish reproducible results from one-run observations.
-
-#### MQ-5.7 — Neuroscope Intervention Replay
-
-Allow Neuroscope to consume completed MQ-5 artifacts for inspection.
-
-Neuroscope remains read-only and does not execute interventions.
-
-#### MQ-5.8 — MQ-5 Acceptance
-
-Review:
-
-- protocol compliance
-- controls
-- reproducibility
-- artifact provenance
-- scientific interpretation
-- runtime portability
-- absence of inference inflation
-
-### MQ-5 constraints
-
-MQ-5 must not:
-
-- alter frozen MQ-1 through MQ-3 evidence in place
-- reinterpret topology fallback as anatomy
-- use Neuroscope as an undocumented experiment engine
-- choose controls after observing intervention results
-- choose success thresholds after observing results
-- treat visualization alone as causal evidence
-- assign financial or trading semantics
-
-### Current phase chain
-
-`MQ-1 → MQ-2 → MQ-3 → MQ-4 COMPLETE → MQ-5 COMPLETE`
-
-MQ-5 status:
-
-- MQ-5.1 — Experimental Protocol: COMPLETE
-- MQ-5.2 — Intervention Harness: COMPLETE
-- MQ-5.3 — Single-Node Perturbation: COMPLETE
-- MQ-5.4 — Pathway Perturbation: COMPLETE
-- MQ-5.5 — Sham and Specificity Tests: COMPLETE
-- CONF-004A — Robust Normalization Hardening: COMPLETE
-- MQ-5.6 — Replication and Stability: COMPLETE
-- MQ-5.7 — Neuroscope Intervention Replay: COMPLETE
-- MQ-5.8 — MQ-5 Acceptance: COMPLETE — 75 / 75 acceptance checks passed
-
-MQ-5 final status:
-
-**COMPLETE — ACCEPTED WITH DOCUMENTED LIMITATIONS**
-
-MQ-5.8 acceptance audit:
-
-- 75 checks executed
-- 75 passed
-- 0 failed
-
-Key evidence accumulated through MQ-5.6:
-
-- 13 / 13 frozen causal edges retained monotonic dose response
-- 12 / 12 eligible causal interventions exceeded frozen matched controls
-- timing results supported broader active causal windows rather than
-  single-frame temporal exclusivity
-- the frozen `56393 → 68045 → 1273` two-hop pathway propagated intervention
-  effects through the intermediate node
-- all three frozen convergence systems retained combined-input contribution
-- CONF-004A reproduced the principal MQ-5 findings under causal median/MAD
-  normalization
-- MQ-5.6 independently reproduced selected direct-edge, pathway, and
-  convergence findings using a separately implemented full-network runtime
-
-The current evidence supports simulated causal structure within the frozen
-MoscaQuant model.
-
-It does not establish biological causality, financial usefulness, or general
-encoding independence.
-
-**Financial semantics: NOT ASSIGNED**
 
 ## Methodological Hardening Track
 
@@ -929,209 +1128,6 @@ The minimal production baseline has been verified:
 Neuroscope remains an interpretation and replay instrument only. It does not execute interventions or create causal evidence.
 
 Further infrastructure expansion is deferred unless required by a scientific or operational milestone.
-
-### MQ-7.3 — Oracle Audit/Event Construction — COMPLETE
-
-ORACLE-01 now emits tamper-evident audit records for deterministic state transitions.
-
-Implemented properties:
-
-- canonical serialization;
-- SHA-256 object hashing;
-- immutable Oracle event records;
-- event construction from Oracle input, prior state, proposal, and resulting state;
-- previous-event hash chaining;
-- genesis-event handling;
-- chain-link verification;
-- tamper detection;
-- Oracle transition wrapper that emits state, proposal, and audit event together.
-
-No adaptive learning, reinforcement, Sugar Cube selection, market strategy, or execution logic is present in MQ-7.3.
-
-ORACLE-01 remains proposal-only and WARDEN-01 retains independent authority.
-
-### MQ-7.4 — Oracle Persistence & Replay — COMPLETE
-
-ORACLE-01 now persists and reloads auditable state without rewriting history.
-
-Implemented properties:
-
-- append-only JSONL event history;
-- atomic state snapshot replacement;
-- persistence metadata;
-- full event-chain verification during reload;
-- state/final-event consistency checks;
-- metadata consistency checks;
-- corruption and tamper rejection;
-- deterministic read-only replay;
-- immutable tuple restoration after JSON deserialization;
-- restart-safe Oracle state reconstruction.
-
-The event chain remains the authoritative historical record.
-
-State snapshots are derived convenience artifacts and must agree with the final verified event.
-
-No learning, reinforcement, Sugar Cube selection, market strategy, authority, or execution logic is present in MQ-7.4.
-
-### MQ-7.5 — Oracle Control-Condition Harness — COMPLETE
-
-ORACLE-01 now supports explicit experimental control conditions:
-
-- `O0_NO_ORACLE`
-- `O1_STATIC_ORACLE`
-- `O2_ADAPTIVE_ORACLE`
-- `O3_SHUFFLED_ORACLE`
-
-Implemented properties:
-
-- unknown control identifiers fail closed;
-- O0 bypass is distinct from Oracle abstention;
-- O1 executes deterministic non-adaptive Oracle behavior;
-- O2 is explicitly labeled but remains non-adaptive;
-- O3 uses deterministic `sha256-sort/v1` evidence shuffling;
-- O3 requires an explicit seed;
-- original evidence remains unchanged;
-- shuffle provenance is retained;
-- control selection is explicit experimental provenance.
-
-The O3 shuffle is defined as:
-
-`SHA256(seed || NUL || evidence_ref)`
-
-Eligible evidence references are ordered lexicographically by the resulting digest.
-
-This avoids dependence on Python PRNG implementation details.
-
-No learning, reinforcement, Sugar Cube selection, market strategy, authority, or execution logic is present in MQ-7.5.
-
-<!-- BEGIN CANON: MQ-8 EXPANDED IMPLEMENTATION -->
-
-### MQ-8 expanded implementation sequence
-
-- MQ-8.4 GLOBAL ACHIEVEMENT OVERLAY — COMPLETE
-  - global queue and route-independent presentation host proven locally
-  - sanitized public achievement projection
-  - dossier access
-  - synthesized original MoscaQuant achievement sting
-  - no copied platform audio/assets
-
-- MQ-8.5 LORE FIREWALL AND HR EVIDENCE — COMPLETE
-  - MQ-8.5A Achievement Semantics Expansion
-    - complete claim boundaries for historical achievements
-    - occurrence origin / provenance classes
-    - achievement families / tags
-    - related-achievement links
-    - dossier schema expansion
-  - MQ-8.5B HR Evidence Records
-    - promotions
-    - demotions
-    - PIPs
-    - commendations
-    - discipline
-    - evidence-linked personnel records
-  - HR records remain narrative / organizational artifacts and do not create
-    scientific evidence.
-
-- MQ-8.6 ANOMALOUS OBSERVANCES — COMPLETE
-  - BLACKSITE HOLIDAYS
-  - PANOPTICON REFERENDUM
-  - PRESENTATION_ONLY by default
-  - EXPERIMENTAL effects require separate frozen protocol
-
-- MQ-8.7 DOSSIERS AND LONGITUDINAL METRICS — COMPLETE
-  - stack history
-  - first/latest occurrence
-  - co-occurrence views
-  - achievement families
-  - longitudinal summaries
-  - public-safe provenance
-
-- MQ-8.8 PERSONNEL AND CORPORATE-HR LAYER — COMPLETE
-  - HAHN — canonical Human Resources / Personnel Operations persona
-  - glamorous fitness-influencer / pickleball presentation canon
-  - evidence-backed HR actions only; no scientific, Warden, Oracle, or trading authority
-  - public presentation of evidence-linked personnel history
-  - character-specific review / commentary surfaces
-
-- MQ-8.9 PANOPTICON BROADCAST SYSTEM — COMPLETE
-  - canonical site live blog
-  - BroadcastEvent schema
-  - RSS
-  - Bluesky adapter
-  - X adapter
-  - issuer identities
-  - syndication eligibility
-  - correction / supersession records
-  - static-first AWS baseline
-  - horizontally scalable interface contract
-
-### MQ-8.9 implementation constraint
-
-MQ-8.9 MUST be designed for the current Lightsail baseline without requiring
-heavy always-on infrastructure.
-
-It MUST also remain portable to horizontally scalable infrastructure later.
-
-Scale changes runtime architecture, not experimental meaning.
-
-<!-- END CANON: MQ-8 EXPANDED IMPLEMENTATION -->
-
-<!-- BEGIN CANON: MQ-8 UI NAVIGATION INFRASTRUCTURE -->
-
-### MQ-8 UI Navigation Infrastructure — COMPLETE
-
-Before additional Panopticon public-surface expansion, MoscaQuant SHALL
-implement the centralized navigation and mobile-first contracts defined in the
-Charter.
-
-Implementation sequence:
-
-- MQ-8.UI.1 Central Navigation Controller — COMPLETE
-  - shared overlay stack
-  - Back
-  - Close
-  - Close All
-  - one-active-overlay ownership
-
-- MQ-8.UI.2 Browser History and Deep Links — COMPLETE
-  - pushState / popstate integration
-  - stable public-safe record links
-  - explicit not-found state
-
-- MQ-8.UI.3 Breadcrumbs and Cross-Module Navigation — COMPLETE
-  - personnel
-  - HR
-  - achievements
-  - future experiments / broadcasts
-
-- MQ-8.UI.4 Focus, Keyboard, and Scroll Restoration — COMPLETE
-  - focus trap / transfer
-  - initiating-control restoration
-  - Escape semantics
-  - scroll-position preservation
-
-- MQ-8.UI.5 Mobile Interaction Pass — COMPLETE
-  - sticky Back / Close
-  - full-height sheet behavior
-  - 44px-class touch targets
-  - no hover-only actions
-  - 390 / 430 / 768 / 1024 validation
-
-- MQ-8.UI.6 Preference Persistence — COMPLETE
-  - mute
-  - reduced motion
-  - presentation preferences remain independent of scientific event state
-
-### UI completion rule
-
-A Panopticon public feature is not considered complete when it only works in
-desktop DevTools.
-
-Desktop may add density.
-
-Mobile must not lose functionality.
-
-<!-- END CANON: MQ-8 UI NAVIGATION INFRASTRUCTURE -->
 
 ### Cross-phase infrastructure — OVERWATCH
 

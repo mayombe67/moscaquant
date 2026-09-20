@@ -2,6 +2,8 @@
 
 **Status:** COMPLETE — DATA QUALIFICATION
 
+MQ-002 remains provisional.
+
 ## Observed mapping coverage
 
 The official MaleCNS/FlyWire mapping JSON was acquired under the frozen

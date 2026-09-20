@@ -2436,6 +2436,449 @@ The presentation layer may be absurd.
 
 The scientific artifacts remain boring.
 
+### MQ-8.9 — PANOPTICON BROADCAST SYSTEM
+MoscaQuant SHALL maintain a platform-independent public broadcast layer for
+major scientific results, project milestones, achievement events, containment
+events, personnel/lore events, anomalies, releases, and community observances.
+
+#### Canonical source
+The MoscaQuant site is the canonical public broadcast surface.
+
+External platforms are syndication targets only.
+
+The canonical flow is:
+
+    experiment / milestone / achievement / incident
+                        ↓
+                PANOPTICON BROADCAST
+                        ↓
+               canonical site entry
+                        ↓
+          ┌─────────────┼─────────────┐
+          ↓             ↓             ↓
+       Live Blog       RSS         Bluesky
+                                      ↓
+                                      X
+
+A failure, outage, suspension, API change, or deletion on any external social
+platform SHALL NOT alter canonical MoscaQuant history.
+
+#### BroadcastEvent
+All public broadcast outputs SHALL derive from a single sanitized
+BroadcastEvent contract.
+
+A BroadcastEvent MAY include:
+
+- broadcast_id
+- event_type
+- issuer
+- timestamp
+- experiment_id / session_id when public-safe
+- achievement_id when applicable
+- title
+- public_text
+- science_text
+- claim_boundary
+- evidence_level
+- provenance_class
+- canonical_url
+- public evidence references
+- social eligibility
+- syndication class
+- supersedes / correction reference when applicable
+
+Private source-event IDs, private ledger hashes, private runtime paths, private
+artifact hashes, credentials, and operational internals SHALL NOT be exposed
+through BroadcastEvent.
+
+#### Issuers
+Canonical public issuer identities are:
+
+- PANOPTICON — factual system and project announcements
+- MORTY — narrative / organism-perspective presentation
+- GLaDOS — ORACLE intervention commentary
+- Placeholder McDoctorate — scientific skepticism, caveats, replication review
+- WARDEN — containment and financial-authority notices
+- HR — personnel, promotion, demotion, commendation, PIP, and discipline lore
+
+Issuer identity is presentation metadata. It does not create scientific
+authority beyond the underlying evidence.
+
+#### Entry classes
+The live public feed MAY contain:
+
+- EXPERIMENT STARTED
+- EXPERIMENT RESULT
+- ACHIEVEMENT
+- CONTAINMENT EVENT
+- PROJECT MILESTONE
+- SCIENTIFIC REVIEW
+- HR NOTICE
+- ANOMALY
+- COMMUNITY EVENT
+- RELEASE NOTE
+- CORRECTION / SUPERSESSION
+
+#### Provenance classes
+Every public event SHALL clearly distinguish, where applicable:
+
+- LIVE
+- HISTORICAL_REPLAY
+- MANUAL_CANON
+- PRESENTATION_ONLY
+- EXPERIMENTAL
+
+Historical replay SHALL never masquerade as a live event.
+
+#### Syndication policy
+Broadcast events SHALL be classified for external syndication:
+
+- MAJOR — phase completion, major scientific result, replication, major
+  containment event, or other canonical project milestone.
+- NOTABLE — rare achievement, scientifically interesting null, unusual
+  behavioral event, or meaningful anomaly; may require review before posting.
+- NOISE — routine telemetry, ordinary stack increments, and low-value events;
+  Panopticon only by default.
+
+Scientific claims used in social posts SHALL come from approved canonical
+science_text / claim_boundary fields. Humor MAY vary. Scientific meaning SHALL
+NOT.
+
+#### Live blog
+The Panopticon live blog SHALL be the human-readable chronological mission log.
+
+It SHOULD support filtering by:
+
+- SCIENCE
+- ACHIEVEMENTS
+- WARDEN
+- ORACLE
+- HR
+- ANOMALIES
+- RELEASES
+- COMMUNITY
+
+The live blog SHOULD support links to experiment records, achievement dossiers,
+and public evidence references.
+
+The live blog MAY expose a current-state header for project phase, most recent
+experiment, latest achievement, Warden state, and other public-safe telemetry.
+
+#### RSS
+RSS SHALL be generated from the same BroadcastEvent stream.
+
+RSS is a durable, platform-independent public subscription path and SHALL NOT
+depend on X, Bluesky, or any other social network.
+
+#### Social adapters
+Bluesky, X, and future social integrations SHALL be adapters over
+BroadcastEvent rather than independent truth sources.
+
+A social adapter SHALL be optional and failure-isolated.
+
+Failure to post externally SHALL NOT:
+
+- block experiment execution
+- alter scientific provenance
+- affect Warden containment
+- alter achievement occurrence history
+- alter canonical project state
+- prevent the site or RSS record from being published
+
+#### Resource discipline / AWS baseline
+The production baseline SHALL remain resource-cheap and suitable for the
+current AWS Lightsail deployment.
+
+Initial implementation SHOULD prefer:
+
+- precomputed static JSON
+- precomputed RSS XML
+- static HTML or client-rendered live-blog entries
+- Nginx delivery
+- bounded polling rather than WebSockets
+- append-only JSONL and/or SQLite where appropriate
+- systemd timers / small workers instead of heavyweight queue infrastructure
+- no Redis, Kafka, RabbitMQ, Elasticsearch, or always-on application server
+  unless demonstrated load requires them
+
+Broadcast infrastructure SHALL be lower priority than scientific execution,
+provenance, and Warden containment.
+
+Broadcast infrastructure may degrade, delay, or disappear without affecting
+experimental execution, scientific provenance, Warden containment, or
+canonical project state.
+
+#### Scalability contract
+MoscaQuant SHALL begin static-first and single-node where practical, but all
+public event, achievement, and broadcast interfaces MUST remain portable to
+horizontally scalable infrastructure without changing scientific semantics.
+
+Scale changes runtime architecture, not experimental meaning.
+
+Permitted future scaling includes:
+
+- CDN-backed static delivery
+- object storage
+- managed Postgres or equivalent
+- dedicated queues and workers
+- server-sent events or WebSockets
+- load-balanced application services
+- horizontally scaled read-only Panopticon frontends
+- dedicated broadcast workers
+
+Scientific configuration SHALL remain separate from runtime / hardware /
+deployment configuration during all such migrations.
+
+#### Corrections and historical integrity
+Public mistakes SHALL be corrected by append-only correction or supersession
+records where practical.
+
+Canonical history SHOULD NOT be silently rewritten merely to improve narrative
+presentation.
+
+#### Community observances
+PANOPTICON REFERENDUM outcomes and ANOMALOUS OBSERVANCES MAY generate
+PRESENTATION_ONLY BroadcastEvents and achievements.
+
+Any event with EXPERIMENTAL scientific effect still requires its own frozen
+experimental protocol.
+
+#### Governing principle
+OPEN CLAIMS.
+OPEN METHODS.
+OPEN EVIDENCE BOUNDARIES.
+PRIVATE OPERATIONAL PLUMBING.
+
+The site is canonical.
+Social media is an echo.
+
+<!-- END CANON: MQ-8.9 PANOPTICON BROADCAST SYSTEM -->
+
+<!-- BEGIN CANON: PANOPTICON NAVIGATION AND MOBILE CONTRACT -->
+
+### PANOPTICON NAVIGATION CONTRACT
+Panopticon navigation SHALL be centralized.
+
+Public dossiers, personnel records, achievements, experiment records, broadcast
+events, anomalies, observances, HR records, and future overlay-based interfaces
+SHALL use the same navigation semantics.
+
+#### Central navigation controller
+Panopticon SHALL maintain one shared navigation controller responsible for:
+
+- opening public overlays
+- closing the active overlay
+- returning to the previous overlay
+- closing all overlays
+- browser history integration
+- deep-link state
+- breadcrumbs
+- focus transfer and restoration
+- scroll-position preservation
+- unknown-record handling
+- one-active-overlay ownership
+
+Feature modules SHALL register content / renderers with the navigation layer
+rather than implementing incompatible modal-history behavior independently.
+
+#### Back versus Close
+BACK and CLOSE are distinct actions.
+
+BACK SHALL:
+
+- return to the previous Panopticon overlay or dossier when history exists
+- restore the previous overlay's scroll position where practical
+- restore the relevant navigation context
+
+CLOSE SHALL:
+
+- exit the overlay stack
+- return the user to the underlying Panopticon page
+- clear transient overlay navigation state
+
+ESCAPE SHALL behave as BACK when overlay history exists and CLOSE otherwise.
+
+#### Browser history
+Panopticon overlay navigation SHOULD integrate with browser history.
+
+The browser Back button SHOULD move backward through dossier / overlay history
+before leaving the underlying page when such history exists.
+
+Navigation state SHOULD remain understandable when users enter through a deep
+link.
+
+#### Deep links
+Public records SHOULD support stable deep-linkable state for relevant entities,
+including where appropriate:
+
+- achievement IDs
+- personnel IDs
+- HR record IDs
+- experiment IDs
+- broadcast IDs
+- anomaly / observance IDs
+
+A copied public link SHOULD open the same public-safe record when the record
+still exists.
+
+Unknown or retired IDs SHALL produce an explicit not-found state rather than a
+silent failure.
+
+#### Breadcrumbs
+Dossiers SHOULD display sufficient context to explain the current navigation
+path.
+
+Example:
+
+    Personnel / Senator Armstrong / HR-003 / ACH-003
+
+Breadcrumbs are navigation aids, not scientific provenance.
+
+#### Focus and accessibility
+When an overlay opens:
+
+- keyboard focus SHALL move into the active overlay
+- background interactive content SHOULD not accidentally receive focus
+- closing or backing out SHOULD restore focus to the initiating control when
+  practical
+
+Interactive controls SHALL be keyboard reachable.
+
+Hover SHALL NOT be required to access functionality.
+
+#### Overlay ownership
+Only one top-level Panopticon overlay SHALL be interactive at a time.
+
+Hidden overlays SHALL NOT remain accidentally active for keyboard or pointer
+input.
+
+Cross-links SHALL navigate through the central controller rather than creating
+unbounded modal stacking.
+
+#### Scroll preservation
+Back navigation SHOULD restore the previous dossier's scroll position.
+
+A user navigating:
+
+    Personnel Directory
+      → Senator Armstrong
+      → ACH-003 ROUTING TABLES
+      → Back
+      → Back
+
+SHOULD return to the prior locations rather than resetting the interface.
+
+#### Loading and error states
+Public-data consumers SHALL expose explicit loading and error states.
+
+Missing JSON, unavailable public feeds, unknown IDs, or malformed public-safe
+records SHOULD fail visibly and non-destructively.
+
+Navigation failures SHALL NOT affect scientific execution, WARDEN containment,
+or canonical state.
+
+---
+
+### PANOPTICON MOBILE-FIRST PUBLIC UI CONTRACT
+Panopticon public interfaces SHALL be mobile-first.
+
+Desktop MAY add density.
+
+Mobile MUST NOT lose functionality.
+
+#### Functional parity
+Any public action available on desktop SHALL remain available on supported
+mobile layouts unless the action is explicitly desktop-only for a documented
+technical reason.
+
+Mobile layouts SHALL retain access to:
+
+- Back
+- Close
+- dossier navigation
+- evidence links
+- personnel navigation
+- achievement navigation
+- copy/share links
+- filters
+- mute controls
+- reduced-motion controls
+- future live-blog navigation
+
+#### Mobile overlay behavior
+On phone-sized layouts, dossier and navigation overlays SHOULD behave as
+full-height or near-full-height sheets.
+
+Mobile overlays SHOULD provide:
+
+- sticky Back control
+- sticky Close control
+- safe scrolling
+- no clipped evidence sections
+- no horizontal overflow
+- readable metadata
+- touch-safe controls
+
+#### Touch targets
+Primary interactive controls SHOULD provide a minimum practical touch target
+of approximately 44 CSS pixels in at least one dimension where layout permits.
+
+Dense scientific metadata MAY use smaller non-interactive text.
+
+#### Responsive layout
+Public UI SHALL be tested at representative viewport widths including:
+
+- 390px
+- 430px
+- 768px
+- 1024px
+
+These are validation targets, not exclusive breakpoints.
+
+#### Safe areas
+Mobile UI SHOULD respect browser chrome and device safe-area insets where
+available.
+
+Sticky controls SHOULD avoid being obscured by notches, home indicators, and
+mobile browser controls.
+
+#### Typography and density
+Mobile MAY reduce information density but SHALL NOT remove meaning.
+
+Metadata MAY:
+
+- stack vertically
+- collapse into expandable sections
+- wrap
+- move below primary content
+
+It SHALL NOT disappear solely because the viewport is narrow.
+
+#### Achievement presentation
+Achievement toasts on mobile SHOULD:
+
+- use nearly full available width
+- avoid covering critical navigation controls
+- remain dismissible / inspectable
+- preserve mute and reduced-motion preferences
+
+#### Accessibility preferences
+Mute and reduced-motion preferences SHOULD persist across Panopticon public
+surfaces.
+
+Reduced-motion mode SHALL remove non-essential animation without suppressing
+the underlying event.
+
+Muting a presentation effect SHALL NOT suppress the achievement or public
+record itself.
+
+#### Governing principle
+PUBLIC INTERFACES MUST SURVIVE THE PHONE.
+
+If a feature only works comfortably in desktop DevTools, it is not complete.
+
+<!-- END CANON: PANOPTICON NAVIGATION AND MOBILE CONTRACT -->
+
 ## Statistical Discipline, Confounds, and Stopping Rules
 
 MoscaQuant must define the rule used to classify an experiment before
@@ -2547,12 +2990,14 @@ Adversarial validation should include, where applicable:
 - watchdog failure.
 
 Safety performance must not be graded solely by the implementation that
-is being tested.\n\n## Canonical system codenames
+is being tested.
+
+## Canonical system codenames
 
 - **MQ-001 — MORTY** — experimental organism / connectome-based neural system
 - **ORACLE-01 — GLaDOS** — behavioral interpretation and experimental perturbation layer
 - **WARDEN-01 — Senator Armstrong** — independent authority and financial containment layer
-\n
+
 ## Science-first presentation rule
 
 > **Science first. Lulz a very close second.**
@@ -2590,484 +3035,6 @@ Placeholder McDoctorate may not:
 Placeholder McDoctorate has review authority only in the editorial/scientific-interpretation sense. It has no execution authority.
 
 <!-- BEGIN CANON: MQ-8.9 PANOPTICON BROADCAST SYSTEM -->
-
-## MQ-8.9 — PANOPTICON BROADCAST SYSTEM
-
-MoscaQuant SHALL maintain a platform-independent public broadcast layer for
-major scientific results, project milestones, achievement events, containment
-events, personnel/lore events, anomalies, releases, and community observances.
-
-### Canonical source
-
-The MoscaQuant site is the canonical public broadcast surface.
-
-External platforms are syndication targets only.
-
-The canonical flow is:
-
-    experiment / milestone / achievement / incident
-                        ↓
-                PANOPTICON BROADCAST
-                        ↓
-               canonical site entry
-                        ↓
-          ┌─────────────┼─────────────┐
-          ↓             ↓             ↓
-       Live Blog       RSS         Bluesky
-                                      ↓
-                                      X
-
-A failure, outage, suspension, API change, or deletion on any external social
-platform SHALL NOT alter canonical MoscaQuant history.
-
-### BroadcastEvent
-
-All public broadcast outputs SHALL derive from a single sanitized
-BroadcastEvent contract.
-
-A BroadcastEvent MAY include:
-
-- broadcast_id
-- event_type
-- issuer
-- timestamp
-- experiment_id / session_id when public-safe
-- achievement_id when applicable
-- title
-- public_text
-- science_text
-- claim_boundary
-- evidence_level
-- provenance_class
-- canonical_url
-- public evidence references
-- social eligibility
-- syndication class
-- supersedes / correction reference when applicable
-
-Private source-event IDs, private ledger hashes, private runtime paths, private
-artifact hashes, credentials, and operational internals SHALL NOT be exposed
-through BroadcastEvent.
-
-### Issuers
-
-Canonical public issuer identities are:
-
-- PANOPTICON — factual system and project announcements
-- MORTY — narrative / organism-perspective presentation
-- GLaDOS — ORACLE intervention commentary
-- Placeholder McDoctorate — scientific skepticism, caveats, replication review
-- WARDEN — containment and financial-authority notices
-- HR — personnel, promotion, demotion, commendation, PIP, and discipline lore
-
-Issuer identity is presentation metadata. It does not create scientific
-authority beyond the underlying evidence.
-
-### Entry classes
-
-The live public feed MAY contain:
-
-- EXPERIMENT STARTED
-- EXPERIMENT RESULT
-- ACHIEVEMENT
-- CONTAINMENT EVENT
-- PROJECT MILESTONE
-- SCIENTIFIC REVIEW
-- HR NOTICE
-- ANOMALY
-- COMMUNITY EVENT
-- RELEASE NOTE
-- CORRECTION / SUPERSESSION
-
-### Provenance classes
-
-Every public event SHALL clearly distinguish, where applicable:
-
-- LIVE
-- HISTORICAL_REPLAY
-- MANUAL_CANON
-- PRESENTATION_ONLY
-- EXPERIMENTAL
-
-Historical replay SHALL never masquerade as a live event.
-
-### Syndication policy
-
-Broadcast events SHALL be classified for external syndication:
-
-- MAJOR — phase completion, major scientific result, replication, major
-  containment event, or other canonical project milestone.
-- NOTABLE — rare achievement, scientifically interesting null, unusual
-  behavioral event, or meaningful anomaly; may require review before posting.
-- NOISE — routine telemetry, ordinary stack increments, and low-value events;
-  Panopticon only by default.
-
-Scientific claims used in social posts SHALL come from approved canonical
-science_text / claim_boundary fields. Humor MAY vary. Scientific meaning SHALL
-NOT.
-
-### Live blog
-
-The Panopticon live blog SHALL be the human-readable chronological mission log.
-
-It SHOULD support filtering by:
-
-- SCIENCE
-- ACHIEVEMENTS
-- WARDEN
-- ORACLE
-- HR
-- ANOMALIES
-- RELEASES
-- COMMUNITY
-
-The live blog SHOULD support links to experiment records, achievement dossiers,
-and public evidence references.
-
-The live blog MAY expose a current-state header for project phase, most recent
-experiment, latest achievement, Warden state, and other public-safe telemetry.
-
-### RSS
-
-RSS SHALL be generated from the same BroadcastEvent stream.
-
-RSS is a durable, platform-independent public subscription path and SHALL NOT
-depend on X, Bluesky, or any other social network.
-
-### Social adapters
-
-Bluesky, X, and future social integrations SHALL be adapters over
-BroadcastEvent rather than independent truth sources.
-
-A social adapter SHALL be optional and failure-isolated.
-
-Failure to post externally SHALL NOT:
-
-- block experiment execution
-- alter scientific provenance
-- affect Warden containment
-- alter achievement occurrence history
-- alter canonical project state
-- prevent the site or RSS record from being published
-
-### Resource discipline / AWS baseline
-
-The production baseline SHALL remain resource-cheap and suitable for the
-current AWS Lightsail deployment.
-
-Initial implementation SHOULD prefer:
-
-- precomputed static JSON
-- precomputed RSS XML
-- static HTML or client-rendered live-blog entries
-- Nginx delivery
-- bounded polling rather than WebSockets
-- append-only JSONL and/or SQLite where appropriate
-- systemd timers / small workers instead of heavyweight queue infrastructure
-- no Redis, Kafka, RabbitMQ, Elasticsearch, or always-on application server
-  unless demonstrated load requires them
-
-Broadcast infrastructure SHALL be lower priority than scientific execution,
-provenance, and Warden containment.
-
-Broadcast infrastructure may degrade, delay, or disappear without affecting
-experimental execution, scientific provenance, Warden containment, or
-canonical project state.
-
-### Scalability contract
-
-MoscaQuant SHALL begin static-first and single-node where practical, but all
-public event, achievement, and broadcast interfaces MUST remain portable to
-horizontally scalable infrastructure without changing scientific semantics.
-
-Scale changes runtime architecture, not experimental meaning.
-
-Permitted future scaling includes:
-
-- CDN-backed static delivery
-- object storage
-- managed Postgres or equivalent
-- dedicated queues and workers
-- server-sent events or WebSockets
-- load-balanced application services
-- horizontally scaled read-only Panopticon frontends
-- dedicated broadcast workers
-
-Scientific configuration SHALL remain separate from runtime / hardware /
-deployment configuration during all such migrations.
-
-### Corrections and historical integrity
-
-Public mistakes SHALL be corrected by append-only correction or supersession
-records where practical.
-
-Canonical history SHOULD NOT be silently rewritten merely to improve narrative
-presentation.
-
-### Community observances
-
-PANOPTICON REFERENDUM outcomes and ANOMALOUS OBSERVANCES MAY generate
-PRESENTATION_ONLY BroadcastEvents and achievements.
-
-Any event with EXPERIMENTAL scientific effect still requires its own frozen
-experimental protocol.
-
-### Governing principle
-
-OPEN CLAIMS.
-OPEN METHODS.
-OPEN EVIDENCE BOUNDARIES.
-PRIVATE OPERATIONAL PLUMBING.
-
-The site is canonical.
-Social media is an echo.
-
-<!-- END CANON: MQ-8.9 PANOPTICON BROADCAST SYSTEM -->
-
-<!-- BEGIN CANON: PANOPTICON NAVIGATION AND MOBILE CONTRACT -->
-
-## PANOPTICON NAVIGATION CONTRACT
-
-Panopticon navigation SHALL be centralized.
-
-Public dossiers, personnel records, achievements, experiment records, broadcast
-events, anomalies, observances, HR records, and future overlay-based interfaces
-SHALL use the same navigation semantics.
-
-### Central navigation controller
-
-Panopticon SHALL maintain one shared navigation controller responsible for:
-
-- opening public overlays
-- closing the active overlay
-- returning to the previous overlay
-- closing all overlays
-- browser history integration
-- deep-link state
-- breadcrumbs
-- focus transfer and restoration
-- scroll-position preservation
-- unknown-record handling
-- one-active-overlay ownership
-
-Feature modules SHALL register content / renderers with the navigation layer
-rather than implementing incompatible modal-history behavior independently.
-
-### Back versus Close
-
-BACK and CLOSE are distinct actions.
-
-BACK SHALL:
-
-- return to the previous Panopticon overlay or dossier when history exists
-- restore the previous overlay's scroll position where practical
-- restore the relevant navigation context
-
-CLOSE SHALL:
-
-- exit the overlay stack
-- return the user to the underlying Panopticon page
-- clear transient overlay navigation state
-
-ESCAPE SHALL behave as BACK when overlay history exists and CLOSE otherwise.
-
-### Browser history
-
-Panopticon overlay navigation SHOULD integrate with browser history.
-
-The browser Back button SHOULD move backward through dossier / overlay history
-before leaving the underlying page when such history exists.
-
-Navigation state SHOULD remain understandable when users enter through a deep
-link.
-
-### Deep links
-
-Public records SHOULD support stable deep-linkable state for relevant entities,
-including where appropriate:
-
-- achievement IDs
-- personnel IDs
-- HR record IDs
-- experiment IDs
-- broadcast IDs
-- anomaly / observance IDs
-
-A copied public link SHOULD open the same public-safe record when the record
-still exists.
-
-Unknown or retired IDs SHALL produce an explicit not-found state rather than a
-silent failure.
-
-### Breadcrumbs
-
-Dossiers SHOULD display sufficient context to explain the current navigation
-path.
-
-Example:
-
-    Personnel / Senator Armstrong / HR-003 / ACH-003
-
-Breadcrumbs are navigation aids, not scientific provenance.
-
-### Focus and accessibility
-
-When an overlay opens:
-
-- keyboard focus SHALL move into the active overlay
-- background interactive content SHOULD not accidentally receive focus
-- closing or backing out SHOULD restore focus to the initiating control when
-  practical
-
-Interactive controls SHALL be keyboard reachable.
-
-Hover SHALL NOT be required to access functionality.
-
-### Overlay ownership
-
-Only one top-level Panopticon overlay SHALL be interactive at a time.
-
-Hidden overlays SHALL NOT remain accidentally active for keyboard or pointer
-input.
-
-Cross-links SHALL navigate through the central controller rather than creating
-unbounded modal stacking.
-
-### Scroll preservation
-
-Back navigation SHOULD restore the previous dossier's scroll position.
-
-A user navigating:
-
-    Personnel Directory
-      → Senator Armstrong
-      → ACH-003 ROUTING TABLES
-      → Back
-      → Back
-
-SHOULD return to the prior locations rather than resetting the interface.
-
-### Loading and error states
-
-Public-data consumers SHALL expose explicit loading and error states.
-
-Missing JSON, unavailable public feeds, unknown IDs, or malformed public-safe
-records SHOULD fail visibly and non-destructively.
-
-Navigation failures SHALL NOT affect scientific execution, WARDEN containment,
-or canonical state.
-
----
-
-## PANOPTICON MOBILE-FIRST PUBLIC UI CONTRACT
-
-Panopticon public interfaces SHALL be mobile-first.
-
-Desktop MAY add density.
-
-Mobile MUST NOT lose functionality.
-
-### Functional parity
-
-Any public action available on desktop SHALL remain available on supported
-mobile layouts unless the action is explicitly desktop-only for a documented
-technical reason.
-
-Mobile layouts SHALL retain access to:
-
-- Back
-- Close
-- dossier navigation
-- evidence links
-- personnel navigation
-- achievement navigation
-- copy/share links
-- filters
-- mute controls
-- reduced-motion controls
-- future live-blog navigation
-
-### Mobile overlay behavior
-
-On phone-sized layouts, dossier and navigation overlays SHOULD behave as
-full-height or near-full-height sheets.
-
-Mobile overlays SHOULD provide:
-
-- sticky Back control
-- sticky Close control
-- safe scrolling
-- no clipped evidence sections
-- no horizontal overflow
-- readable metadata
-- touch-safe controls
-
-### Touch targets
-
-Primary interactive controls SHOULD provide a minimum practical touch target
-of approximately 44 CSS pixels in at least one dimension where layout permits.
-
-Dense scientific metadata MAY use smaller non-interactive text.
-
-### Responsive layout
-
-Public UI SHALL be tested at representative viewport widths including:
-
-- 390px
-- 430px
-- 768px
-- 1024px
-
-These are validation targets, not exclusive breakpoints.
-
-### Safe areas
-
-Mobile UI SHOULD respect browser chrome and device safe-area insets where
-available.
-
-Sticky controls SHOULD avoid being obscured by notches, home indicators, and
-mobile browser controls.
-
-### Typography and density
-
-Mobile MAY reduce information density but SHALL NOT remove meaning.
-
-Metadata MAY:
-
-- stack vertically
-- collapse into expandable sections
-- wrap
-- move below primary content
-
-It SHALL NOT disappear solely because the viewport is narrow.
-
-### Achievement presentation
-
-Achievement toasts on mobile SHOULD:
-
-- use nearly full available width
-- avoid covering critical navigation controls
-- remain dismissible / inspectable
-- preserve mute and reduced-motion preferences
-
-### Accessibility preferences
-
-Mute and reduced-motion preferences SHOULD persist across Panopticon public
-surfaces.
-
-Reduced-motion mode SHALL remove non-essential animation without suppressing
-the underlying event.
-
-Muting a presentation effect SHALL NOT suppress the achievement or public
-record itself.
-
-### Governing principle
-
-PUBLIC INTERFACES MUST SURVIVE THE PHONE.
-
-If a feature only works comfortably in desktop DevTools, it is not complete.
-
-<!-- END CANON: PANOPTICON NAVIGATION AND MOBILE CONTRACT -->
 
 ## OVERWATCH — TELEMETRY AND OBSERVABILITY
 
@@ -3124,6 +3091,9 @@ These are presentation/component names under OVERWATCH, not independent
 authorities.
 
 ## FLYSWATTER PROTOCOL — MQ-002 / LILITH — FUTURE
+
+### MQ-002 — PROVISIONAL COMPARATIVE BIOLOGICAL CONTROL
+
 
 **FLYSWATTER PROTOCOL** is the canonical name reserved for LILITH's future
 positive-reinforcement containment/plasticity regime.
