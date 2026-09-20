@@ -250,8 +250,41 @@ def participation_counts_from_masks(sources, masks):
 
 
 def hhi_from_masks(sources, masks):
-    counts = participation_counts_from_masks(sources, masks)
-    return participation_mass_hhi(counts)
+    # Exact algebraic fast path for participation-mass HHI.
+    #
+    # Let c_t be the number of selected source territories containing target t.
+    #
+    #   HHI = sum_t (c_t / total_mass)^2
+    #       = sum_t c_t^2 / total_mass^2
+    #
+    # Also:
+    #
+    #   sum_t c_t^2
+    #     = sum_i |T_i| + 2 * sum_{i<j} |T_i intersect T_j|
+    #
+    # This is exactly equivalent to materializing target participation counts,
+    # but avoids walking every set bit for every randomized draw.
+    ordered = list(sources)
+    if not ordered:
+        raise ValueError("At least one source is required")
+
+    total_mass = 0
+    squared_mass = 0
+
+    for source in ordered:
+        size = masks[source].bit_count()
+        total_mass += size
+        squared_mass += size
+
+    if total_mass == 0:
+        raise ValueError("No positive downstream participation mass")
+
+    for i, left in enumerate(ordered):
+        a = masks[left]
+        for right in ordered[i + 1:]:
+            squared_mass += 2 * (a & masks[right]).bit_count()
+
+    return squared_mass / (total_mass * total_mass)
 
 
 def run_commission():
