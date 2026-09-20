@@ -9,7 +9,7 @@
   },
   "question": "Do the strongest SQ-03D paired-background context-residual effects survive independent scalar re-execution of both subject counterfactuals, while frozen near-zero controls remain near-zero?",
   "panel_selection": {
-    "source": "SQ-03D authoritative result only",
+    "source": "SQ-03D authoritative result plus deterministic replay of the frozen SQ-03D analyzer against the exact hashed SQ-03B ledger solely to recover complete row identities needed for low-tail selection",
     "upper_tail_pairs": 16,
     "upper_tail_rank": [
       "integrated_positive_voltage_context_residual DESC",
@@ -28,7 +28,14 @@
     "minimum_upper_per_input": 2,
     "minimum_low_per_input": 2,
     "no_manual_addition": true,
-    "no_post_selection_substitution": true
+    "no_post_selection_substitution": true,
+    "replay_constraints": {
+      "sq03d_result_summary_must_match": true,
+      "sq03d_top100_must_match": true,
+      "sq03b_ledger_hash_must_match_sq03d": true,
+      "no_new_neural_dynamics": true,
+      "no_selection_rule_change": true
+    }
   },
   "execution": {
     "subjects": [
@@ -61,5 +68,11 @@
     "upper_tail": "all selected upper-tail pairs must reproduce both subject counterfactuals within the already-frozen SQ-03B/SQ-03C numerical agreement contract",
     "low_tail": "all low-tail controls must reproduce within the same numerical agreement contract"
   },
-  "claim_boundary": "SQ-03D.1 can verify that selected SQ-03D context-dependent hotspots survive an independent scalar execution path. It does not establish a biological sex mechanism, population-level statistical significance, organism-level behavior, intelligence differences, or financial utility."
+  "claim_boundary": "SQ-03D.1 can verify that selected SQ-03D context-dependent hotspots survive an independent scalar execution path. It does not establish a biological sex mechanism, population-level statistical significance, organism-level behavior, intelligence differences, or financial utility.",
+  "protocol_amendment": {
+    "id": "SQ-03D.1-A1",
+    "reason": "The authoritative SQ-03D result stores the complete summaries and top 100 ranked pairs but not every low-tail row identity. Before panel selection, the protocol was amended to permit deterministic replay of the already-frozen SQ-03D analysis over the exact same hashed SQ-03B ledger solely to recover those identities.",
+    "timing": "BEFORE_PANEL_SELECTION",
+    "scientific_effect": "No selection thresholds, ranking rules, panel sizes, runtime mechanics, or acceptance criteria changed."
+  }
 }

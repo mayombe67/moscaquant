@@ -20,7 +20,19 @@ A frozen near-zero control panel is rerun in parallel.
 
 ## Selection source
 
-Only the authoritative SQ-03D result artifact may be used to derive the panel.
+The authoritative SQ-03D result artifact remains the controlling result.
+
+Because that artifact stores the full summaries and top-100 ranking but not every low-tail row identity, **Amendment SQ-03D.1-A1** was frozen before panel selection. It permits deterministic replay of the already-frozen SQ-03D analysis against the exact same hashed SQ-03B ledger solely to recover complete row identities required by the precommitted low-tail selection rule.
+
+The replay must reproduce:
+
+- the authoritative SQ-03D global summary;
+- the authoritative SQ-03D top-100 ranking;
+- the exact SQ-03B ledger hash recorded by SQ-03D.
+
+No neural dynamics are rerun.
+
+No selection threshold, ranking rule, panel size, runtime mechanic, or acceptance criterion is changed by this amendment.
 
 No candidate may be added manually.
 

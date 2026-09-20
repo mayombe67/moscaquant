@@ -33,6 +33,18 @@ def test_no_manual_posthoc_selection():
     assert sel["no_manual_addition"] is True
     assert sel["no_post_selection_substitution"] is True
 
+
+def test_panel_source_replay_is_evidence_recovery_only():
+    cfg = load()
+    sel = cfg["panel_selection"]
+    replay = sel["replay_constraints"]
+    assert replay["sq03d_result_summary_must_match"] is True
+    assert replay["sq03d_top100_must_match"] is True
+    assert replay["sq03b_ledger_hash_must_match_sq03d"] is True
+    assert replay["no_new_neural_dynamics"] is True
+    assert replay["no_selection_rule_change"] is True
+    assert cfg["protocol_amendment"]["timing"] == "BEFORE_PANEL_SELECTION"
+
 def test_both_subjects_are_required():
     cfg = load()
     assert cfg["execution"]["subjects"] == ["MORTY", "LILITH"]
