@@ -1,7 +1,7 @@
 # MoscaQuant Experimental Highlight Reel
 
 **Science, Failure, Causality, and the Increasingly Questionable Treatment of MQ-001**  
-Version 0.2 — 2026-09-20
+Version 0.3 — 2026-09-20
 > **Canonical status:** Project retrospective and narrative record.
 >
 > This document is canonical for MoscaQuant project history, highlight-reel
@@ -131,6 +131,12 @@ Small global changes to spike threshold and membrane time constant produced larg
 **Science:** the frozen runtime is strongly sensitive to global model mechanics, but the wider-network propagation limit was not overcome by the tested excitability and membrane-persistence changes.\
 **Lore:** We turned every scientifically permitted knob. MORTY got louder. The rest of the brain still declined the meeting.
 
+### 18 — The Receipts Checked Out
+**Reference:** SQ-03B FIND THE DIFFERENCE; SQ-03C CHECK THE RECEIPTS.  
+SQ-03B exposed a long-tailed landscape of single-edge counterfactual sensitivities, but its production run used the validated batched execution path. SQ-03C froze 84 upper-tail jobs and 64 low-tail controls, then reran all 148 one at a time through the original scalar `HybridRuntime`. All 148 passed exact A/A replay and all 148 agreed with the SQ-03B metrics under the already-frozen numerical parity contract.  
+**Science:** the selected SQ-03B upper-tail localization effects survived independent scalar re-execution; the low-tail controls reproduced as well. This rules out the batched engine as the explanation for the verified upper-tail signal, while remaining a computational replication rather than a biological or population-level statistical result.  
+**Lore:** Science accused the batch engine of cooking the books. One hundred forty-eight interrogations later, the machine produced receipts.
+
 ## Scientific lessons to keep
 
 - Preregistration beat vibes.
@@ -171,6 +177,10 @@ These are candidates, not yet the canonical MQ-8 achievement registry: `MISSION 
 - `docs/experiments/mq7-17-cumulative-first-wave-mediation-results.md`
 - `docs/experiments/sq04-global-modulation-protocol.md`
 - `docs/experiments/sq04-global-modulation-results.md`
+- `docs/experiments/sq03b-mechanistic-localization-protocol.md`
+- `docs/experiments/sq03b-mechanistic-localization-results.md`
+- `docs/experiments/sq03c-scalar-verification-protocol.md`
+- `docs/experiments/sq03c-scalar-verification-results.md`
 
 ## Closing note
 
