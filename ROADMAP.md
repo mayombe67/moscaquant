@@ -2,8 +2,8 @@
 
 **Owner:** YOLO & HODL LLC
 **Subject:** MQ-001
-**Current Phase:** MQ-8 — CORPORATE CULTURE
-**Next Phase:** MQ-9 — OPEN THE PANOPTICON
+**Current Phase:** MQ-9 — OPEN THE PANOPTICON
+**Next Phase:** MQ-10 — INTRODUCE THE MONEY
 
 ## MQ-0 — ACQUIRE SUBJECT
 Load and validate MaleCNS. Build sparse connectivity, identify initial populations, inject controlled stimulus, observe propagation, and record telemetry.
@@ -328,7 +328,7 @@ Initial planned systems include:
 - narrative telemetry derived from real experimental outcomes;
 - separation of science-facing terminology from comedic lore.
 
-MQ-9 remains gated until MQ-8 requirements are satisfied.
+MQ-8 requirements are satisfied. MQ-9 — OPEN THE PANOPTICON is CURRENT.
 
 ### Canonical Retrospective
 
@@ -1013,7 +1013,7 @@ No learning, reinforcement, Sugar Cube selection, market strategy, authority, or
   - public presentation of evidence-linked personnel history
   - character-specific review / commentary surfaces
 
-- MQ-8.9 PANOPTICON BROADCAST SYSTEM — CURRENT
+- MQ-8.9 PANOPTICON BROADCAST SYSTEM — COMPLETE
   - canonical site live blog
   - BroadcastEvent schema
   - RSS

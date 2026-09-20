@@ -1494,28 +1494,28 @@ dread the phrase: "Hahn would like a quick conversation with HR."
 
 29. Current Directive
 
-**Current implementation directive:** complete MQ-8.9 — PANOPTICON
-BROADCAST SYSTEM next. MQ-9 remains gated until MQ-8 requirements are satisfied.
+**Current implementation directive:** execute MQ-9 — OPEN THE PANOPTICON.
+MQ-8 requirements are satisfied and MQ-9 is no longer gated.
 
 YOLO & HODL LLC
 MOSCAQUANT
 
 SUBJECT ................. MQ-001
-CURRENT PHASE ........... MQ-8 / CORPORATE CULTURE
-NEXT PHASE .............. MQ-9 / OPEN THE PANOPTICON
-MISSION ................. MQ-8 / ACHIEVEMENTS, PERSONNEL, REVIEWS, AND RELATED SYSTEMS
+CURRENT PHASE ........... MQ-9 / OPEN THE PANOPTICON
+NEXT PHASE .............. MQ-10 / INTRODUCE THE MONEY
+MISSION ................. MQ-9 / PUBLIC SPECTATOR INTERFACE AND EMBODIED CONTAINMENT CHAMBER
 
 BROKER .................. NONE
 TRADING AUTHORITY ....... NONE
 ORACLE .................. ACTIVE / MQ-7 COMPLETE
 WARDEN-01 ............... MQ-6 COMPLETE / LOCAL AUTHORITY SERVICE
-PANOPTICON .............. BASELINE DEPLOYED / MQ-9 NOT YET COMPLETE
+PANOPTICON .............. BASELINE DEPLOYED / MQ-9 CURRENT
 
 CONTAINMENT ............. ACTIVE
 
 FINANCIAL SEMANTICS ..... NOT ASSIGNED
 
-CURRENT DIRECTIVE:
+MQ-8 ACCEPTED DIRECTIVE RECORD:
 
 MQ-8 SHALL IMPLEMENT AN APPEND-ONLY, EVIDENCE-BACKED ACHIEVEMENT SYSTEM WITH A
 128-DEFINITION CANONICAL NAMESPACE.
