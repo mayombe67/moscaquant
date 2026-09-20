@@ -1,0 +1,94 @@
+{
+  "schema": "moscaquant.sq03f2_capo_test/v1",
+  "sidequest_id": "SQ-03F.2",
+  "title": "THE CAPO TEST",
+  "status": "FROZEN_BEFORE_ANALYSIS",
+  "class": "SOURCE_LEVEL_HOTSPOT_DECOMPOSITION",
+  "question": "Does the SQ-03F.1 source-out-strength association reflect a broader property of the hotspot source neuron, rather than being driven by the hotspot edge itself or by a small number of dominant outgoing edges?",
+  "data_and_universe": {
+    "candidate_universe": "same 114825 SQ-03E/SQ-03F candidate edges",
+    "graph": "same conservative matched graph: verdict_corr == isomorphic and weight_m > 0 and weight_f > 0",
+    "reference_weight": "mean_weight = (weight_m + weight_f) / 2",
+    "hotspots": {
+      "S": "reuse exact SQ-03F/SQ-03F.1 top-1-percent membership by max integrated S",
+      "C": "reuse exact SQ-03F/SQ-03F.1 top-1-percent membership by max integrated C"
+    },
+    "matching": "deterministically reconstruct SQ-03F.1 exact 1:1 controls: same context_count, total_weight_decile, and abs_weight_difference_decile; without replacement; no widening",
+    "no_new_neural_dynamics": true
+  },
+  "unit_and_duplicate_rule": {
+    "primary_unit": "matched hotspot-edge/control-edge pair",
+    "repeated_sources": "edge-pair summaries are primary; additionally report unique source counts and a descriptive unique-source sensitivity summary"
+  },
+  "primary_features": [
+    {
+      "name": "leave_one_edge_out_source_strength",
+      "definition": "source total outgoing mean-weight strength minus the focal edge mean_weight; if parallel rows exist, remove only the focal row"
+    },
+    {
+      "name": "leave_one_edge_out_mean_outgoing_weight",
+      "definition": "leave_one_edge_out_source_strength divided by number of other outgoing conservative edge rows; null if none"
+    }
+  ],
+  "secondary_features": [
+    {
+      "name": "source_out_edge_count"
+    },
+    {
+      "name": "source_median_outgoing_weight"
+    },
+    {
+      "name": "source_max_outgoing_weight"
+    },
+    {
+      "name": "source_top1_output_share"
+    },
+    {
+      "name": "source_top5_output_share"
+    },
+    {
+      "name": "source_output_hhi"
+    },
+    {
+      "name": "focal_edge_output_rank_percentile"
+    }
+  ],
+  "reporting": {
+    "for_each_hotspot_set_and_feature": [
+      "hotspot median",
+      "matched-control median",
+      "median paired difference",
+      "fraction hotspot > control"
+    ],
+    "matching_audit": [
+      "matched count",
+      "unmatched count",
+      "exact context-count check",
+      "exact structural-bin check",
+      "reproduction of SQ-03F.1 source-out-strength summary"
+    ],
+    "source_audit": [
+      "unique hotspot source count",
+      "unique control source count",
+      "fraction of hotspot edges sharing a source with another hotspot edge"
+    ],
+    "no_p_values": true,
+    "no_significance_threshold": true
+  },
+  "interpretation_rules": [
+    "If leave-one-edge-out source strength retains the SQ-03F.1 direction, the surviving source-strength association is not attributable solely to the focal hotspot edge.",
+    "If leave-one-edge-out mean outgoing weight is also higher while edge count remains similar, the association is compatible with broadly stronger outgoing weights rather than merely more outgoing edges.",
+    "If top-share/HHI metrics are higher, concentration into a few dominant outputs is a candidate explanation; if they are similar or lower while mean/median outgoing weight is higher, a diffuse high-throughput source background is more compatible with the observed pattern.",
+    "These are descriptive model-level interpretations only."
+  ],
+  "family_model": {
+    "presentation_name": "THE CAPO TEST",
+    "translation": "Is the edge the boss, or does it merely belong to a source neuron running a larger operation?",
+    "firewall": "Family Model language is downstream of evidence and has no scientific authority."
+  },
+  "claim_boundary": "SQ-03F.2 may describe source-level graph properties associated with the already-frozen hotspot sets under exact SQ-03F.1 matching. It cannot establish biological sex mechanisms, neuron classes, living-fly behavior, population effects, organism-level hierarchy, or financial utility.",
+  "parent": {
+    "sq03f1_result": "artifacts/sidequests/sq03f1-no-free-looks-result-v1.json",
+    "sq03f1_result_sha256": "e8ff42d6ef371d74276956515a3f27719e2a6c64be67da8a05fca3cf46e4c3e5"
+  }
+}
