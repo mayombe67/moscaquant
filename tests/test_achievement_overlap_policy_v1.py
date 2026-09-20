@@ -6,8 +6,9 @@ from achievements.overlap_policy_v1 import (
 
 def test_modern_overlap_policy_covers_129_through_152():
     expected = {f"ACH-{n:03d}" for n in range(129, 153)}
-    assert set(CANONICAL_PREDICATE_BY_ID) == expected
-    assert set(REVIEW_STATE_BY_ID) == expected
+    assert expected <= set(CANONICAL_PREDICATE_BY_ID)
+    assert expected <= set(REVIEW_STATE_BY_ID)
+    assert {REVIEW_STATE_BY_ID[x] for x in expected} == {"REVIEWED_DISTINCT"}
 
 def test_reviewed_predicates_are_unique_unless_explicitly_comedic():
     owners = {}
@@ -25,7 +26,9 @@ def test_reviewed_predicates_are_unique_unless_explicitly_comedic():
             )
 
 def test_no_modern_entry_is_silently_unreviewed():
-    assert set(REVIEW_STATE_BY_ID.values()) == {"REVIEWED_DISTINCT"}
+    modern = {f"ACH-{n:03d}" for n in range(129, 153)}
+    assert {REVIEW_STATE_BY_ID[x] for x in modern} == {"REVIEWED_DISTINCT"}
+    assert REVIEW_STATE_BY_ID["ACH-040"] == "REPLACED_RETARGETED"
 
 def test_known_boundaries_stay_distinct():
     p = CANONICAL_PREDICATE_BY_ID

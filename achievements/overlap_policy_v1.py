@@ -1,6 +1,15 @@
 from __future__ import annotations
 
 CANONICAL_PREDICATE_BY_ID = {
+    "ACH-001": "science.preregistered_null_constrains_next_question",
+    "ACH-008": "science.persistent_state_silent_at_baseline_exposed_by_perturbation",
+    "ACH-012": "science.preregistered_control_constrains_causal_interpretation",
+    "ACH-019": "science.latent_state_requires_second_matched_perturbation",
+    "ACH-035": "oracle.measurable_positive_modulation",
+    "ACH-036": "oracle.measurable_propagation_change",
+    "ACH-040": "oracle.valid_nonzero_effect_below_practical_relevance_threshold",
+    "ACH-066": "behavior.single_adverse_threshold_held_without_reversal",
+    "ACH-074": "behavior.progressive_adverse_worsening_while_exposure_persists",
     "ACH-129": "science.expected_lookup_target_missing",
     "ACH-130": "science.provenance_unresolved_or_conflicting",
     "ACH-131": "containment.fly_proximity_presentation_event",
@@ -33,3 +42,17 @@ REVIEW_STATE_BY_ID = {
     achievement_id: "REVIEWED_DISTINCT"
     for achievement_id in CANONICAL_PREDICATE_BY_ID
 }
+
+LEGACY_ADJUDICATION_V1 = {
+    "ACH-001": "REVIEWED_DISTINCT",
+    "ACH-008": "REVIEWED_DISTINCT",
+    "ACH-012": "REVIEWED_DISTINCT",
+    "ACH-019": "REVIEWED_DISTINCT",
+    "ACH-035": "REVIEWED_DISTINCT",
+    "ACH-036": "REVIEWED_DISTINCT",
+    "ACH-040": "REPLACED_RETARGETED",
+    "ACH-066": "REVIEWED_DISTINCT",
+    "ACH-074": "REVIEWED_DISTINCT",
+}
+
+REVIEW_STATE_BY_ID.update(LEGACY_ADJUDICATION_V1)

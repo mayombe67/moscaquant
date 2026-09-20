@@ -1,74 +1,79 @@
 # MQ-8 Achievement Overlap Review V1
 
-**Status:** ACTIVE REVIEW
+**Status:** LEGACY AUDIT ADJUDICATED
 
 ## Canonical rule
 
-Every achievement ultimately owns one canonical trigger predicate.
+Every achievement owns one canonical trigger predicate.
 
-Multiple achievements may unlock from the same source event. That is allowed.
+Co-firing from the same source event is allowed.
 
-Two achievements may not represent the same predicate unless the duplication is
-explicitly marked as intentional comedic overlap.
+Two achievements may not represent the same semantic predicate unless both are
+explicitly documented as intentional comedic overlap.
 
-## Catalog state
+## Adjudication
 
-Before this extension:
+### ACH-008 STEALTH BUILD vs ACH-019 DIMENSIONAL MERGE — DISTINCT
 
-- namespace capacity: 140
-- populated definitions: 72
+- ACH-008: persistent plasticity is silent at baseline and becomes measurable under matched perturbation.
+- ACH-019: a latent persistent state becomes measurable only under a second matched perturbation.
 
-After this extension:
+Boundary: hidden-until-stimulated is not the same predicate as a second-state interaction requirement.
 
-- namespace capacity: 152
-- populated definitions: 84
-- ACH-128 remains permanently locked
+### ACH-035 BUFF ACTIVE vs ACH-040 — REPLACE / RETARGET
 
-## Reviewed modern definitions
+The old ACH-040 duplicated the practical scientific job of ACH-035.
 
-ACH-129 through ACH-152 have explicit canonical predicate IDs in
-`achievements/overlap_policy_v1.py`.
+ACH-035 keeps the measurable positive-modulation predicate.
 
-Important semantic boundaries include:
+ACH-040 is retargeted to **ANYWAY, $4 A POUND.**
 
-- ACH-130 = unresolved/conflicting provenance.
-- ACH-152 = known and declared surrogate/synthetic/inferred provenance.
-- ACH-136 = frozen experiment-level hypothesis rejection.
-- ACH-143 = candidate-level insufficiency despite adequate opportunity.
-- ACH-138 = control-supported status/network demotion.
-- ACH-146 = raw effect specifically shrinking under required control/adjustment.
-- ACH-129 = expected lookup target missing.
-- ACH-147 = asymmetric paired coverage.
+Predicate: a valid nonzero modeled effect is below a preregistered
+practical-relevance threshold or minimum operational magnitude.
 
-## Legacy audit candidates still OPEN
+Boundary: this is neither a null nor generic positive modulation. The effect
+exists; the achievement records that its practical magnitude is trivial under a
+predeclared rule.
 
-1. ACH-008 STEALTH BUILD vs ACH-019 DIMENSIONAL MERGE
-2. ACH-035 BUFF ACTIVE vs ACH-040 THE TRAVELER PROVIDES
-3. ACH-066 DIAMOND HANDS vs ACH-074 THIS IS FINE
-4. ACH-001 MISSION FAILED SUCCESSFULLY vs ACH-012 THE CONTROL WAS THE CONTENT
-5. ACH-035 BUFF ACTIVE vs ACH-036 DEBUFF ACTIVE
+### ACH-035 BUFF ACTIVE vs ACH-036 DEBUFF ACTIVE — DISTINCT
 
-The common `historical-evidence/v1`, `deferred/v1`, and `manual-canon/v1`
-strings are old trigger-version labels and do not alone prove semantic overlap.
+- ACH-035: measurable positive modulation.
+- ACH-036: measurable change in neural propagation from SC-02.
 
-## Reserved verified Sopranos replacement candidates
+The latter does not require the effect to be positive and is intervention-class specific.
 
-- ANYWAY, $4 A POUND.
-- A NOTE FROM YOUR DOCTOR SAYING YOU DON'T LIKE TO SUCK COCK?
-- I THINK IT'S TIME YOU STARTED SERIOUSLY CONSIDERING SALADS.
-- WHAT DO I MEAN? I MEAN GET OFF MY CAR BEFORE YOU FLIP IT OVER, YOU FAT FUCK.
+### ACH-066 DIAMOND HANDS vs ACH-074 THIS IS FINE — DISTINCT
 
-Do not assign one just because a slot exists. It must fit a distinct canonical
-predicate.
+- ACH-066: directional exposure survives one predefined adverse movement without reversal.
+- ACH-074: exposure persists while predefined adverse metrics continue worsening under a progressive rule.
 
-## Adjudication values
+Boundary: one adverse threshold-crossing hold is not the same predicate as continued worsening across a progressive sequence.
 
-- DISTINCT
-- INTENTIONAL_COMEDIC_OVERLAP
-- REPLACE_OR_RETARGET
+### ACH-001 MISSION FAILED SUCCESSFULLY vs ACH-012 THE CONTROL WAS THE CONTENT — DISTINCT
 
-No legacy title is replaced by this extension. First inspect the full science
-text and claim boundary for each OPEN pair.
+- ACH-001: a preregistered null result constrains the next scientific question.
+- ACH-012: a preregistered control condition materially constrains causal interpretation.
 
-**Comedy may overlap intentionally. Scientific meaning may not overlap by
-accident.**
+Boundary: informative null outcome versus informative control comparison.
+
+## Result
+
+All five automated legacy collision candidates are now adjudicated.
+
+Four pairs are semantically distinct.
+
+One redundant definition was retargeted:
+
+- ACH-040 -> `ANYWAY, $4 A POUND.`
+
+No intentional comedic duplicate predicate is required by this pass.
+
+## Still-reserved Sopranos candidates
+
+These remain unassigned until a genuinely distinct trigger predicate is found:
+
+- `A NOTE FROM YOUR DOCTOR SAYING YOU DON'T LIKE TO SUCK COCK?`
+- `I THINK IT'S TIME YOU STARTED SERIOUSLY CONSIDERING SALADS.`
+- `WHAT DO I MEAN? I MEAN GET OFF MY CAR BEFORE YOU FLIP IT OVER, YOU FAT FUCK.`
+
+**Comedy may overlap intentionally. Scientific meaning may not overlap by accident.**
