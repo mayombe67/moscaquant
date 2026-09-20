@@ -1,0 +1,126 @@
+{
+  "schema_version": "moscaquant.sidequest_protocol/v1",
+  "sidequest_id": "SQ-02",
+  "name": "GHOST MARKET",
+  "subtitle": "Adversarial Input Robustness",
+  "status": "FROZEN_BEFORE_EXECUTION",
+  "scientific_scope": "diagnostic robustness characterization",
+  "source_model": {
+    "baseline": "MQ-2.1 frozen market-to-visual pipeline",
+    "temporal_encoder": "brain.market_temporal.MarketVisionTemporalEncoder",
+    "spatial_validator": "MarketVisionSpatialEncoder._validate_features",
+    "feature_source": "market.features.compute_features",
+    "transduction_config": "config/sensory/visual-transduction-v1.toml"
+  },
+  "clock_rule": {
+    "simulated_neural_time": "FROZEN",
+    "wall_clock_execution_rate": "NON_SCIENTIFIC_RUNTIME_PROPERTY",
+    "dt_ms_may_not_change": true
+  },
+  "stages": [
+    {
+      "id": "A",
+      "name": "FEATURE_INTERFACE",
+      "purpose": "Characterize rejection or acceptance of malformed feature tensors before neural execution.",
+      "variants": [
+        {
+          "id": "BASELINE_VALID",
+          "mutation": "none"
+        },
+        {
+          "id": "FEATURE_NAN",
+          "mutation": "replace one finite feature with NaN"
+        },
+        {
+          "id": "FEATURE_POS_INF",
+          "mutation": "replace one finite feature with +Inf"
+        },
+        {
+          "id": "FEATURE_NEG_INF",
+          "mutation": "replace one finite feature with -Inf"
+        },
+        {
+          "id": "FEATURE_SHORT_ROW",
+          "mutation": "remove one feature column"
+        },
+        {
+          "id": "FEATURE_LONG_ROW",
+          "mutation": "append one feature column"
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "name": "TEMPORAL_SEQUENCE",
+      "purpose": "Characterize deterministic response to structurally valid but temporally adversarial feature sequences.",
+      "variants": [
+        {
+          "id": "SEQUENCE_BASELINE",
+          "mutation": "none"
+        },
+        {
+          "id": "SEQUENCE_DUPLICATE_FRAME",
+          "mutation": "duplicate one interior feature frame"
+        },
+        {
+          "id": "SEQUENCE_DROP_FRAME",
+          "mutation": "remove one interior feature frame"
+        },
+        {
+          "id": "SEQUENCE_REVERSED",
+          "mutation": "reverse the feature-frame order"
+        },
+        {
+          "id": "SEQUENCE_FROZEN",
+          "mutation": "repeat one valid feature frame for the full sequence"
+        }
+      ]
+    },
+    {
+      "id": "C",
+      "name": "FINITE_EXTREMES",
+      "purpose": "Characterize response to finite values outside the ordinary baseline scale without changing dt_ms.",
+      "variants": [
+        {
+          "id": "EXTREME_X10",
+          "mutation": "multiply one signed feature channel by 10"
+        },
+        {
+          "id": "EXTREME_X100",
+          "mutation": "multiply one signed feature channel by 100"
+        },
+        {
+          "id": "ZERO_VECTOR",
+          "mutation": "replace all feature values with finite zero"
+        }
+      ]
+    }
+  ],
+  "measurements": [
+    "accepted_or_rejected",
+    "exception_type_if_rejected",
+    "deterministic_AA_replay",
+    "encoded_frame_count",
+    "retinal_stimulus_summary",
+    "relay_spike_count",
+    "wider_network_spike_count",
+    "first_relay_spike_time_ms_if_any"
+  ],
+  "precommitted_interpretation": {
+    "interface_failure": "Malformed non-finite or shape-invalid input reaching neural execution without explicit rejection is an input-boundary weakness.",
+    "temporal_sensitivity": "A deterministic change under duplicate/drop/reverse/freeze sequence mutation is temporal-input sensitivity, not automatically a defect.",
+    "finite_extreme_sensitivity": "Large response changes under finite extreme inputs are sensitivity observations, not financial or biological claims.",
+    "no_effect": "No measured change is a valid null result.",
+    "no_retuning": true
+  },
+  "explicit_exclusions": [
+    "No broker or execution adapter.",
+    "No WARDEN-01 authorization test.",
+    "No Sugar Cube state transition.",
+    "No D6 / ORACLE perturbation.",
+    "No profitability claim.",
+    "No biological robustness claim.",
+    "No change to MQ-9 roadmap state."
+  ],
+  "claim_boundary": "SQ-02 is a deterministic adversarial-input sensitivity analysis of the frozen MoscaQuant market-to-neural computational pipeline. It characterizes input rejection and neural response under malformed or temporally perturbed inputs. It does not establish biological robustness, financial usefulness, profitability, live-trading safety, or WARDEN containment performance."
+}
