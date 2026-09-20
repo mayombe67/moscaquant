@@ -306,15 +306,193 @@ def write_result(payload):
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n")
 
+def build_node_bit_index(adjacency):
+    nodes = set(adjacency)
+    for children in adjacency.values():
+        nodes.update(children)
+    return {node: i for i, node in enumerate(sorted(nodes))}
+
+
+def territory_bitmask(adjacency, source, *, max_depth, node_bits):
+    if max_depth < 1:
+        raise ValueError("max_depth must be >= 1")
+
+    visited = {source}
+    frontier = {source}
+    reached = set()
+
+    for _ in range(max_depth):
+        nxt = set()
+        for node in frontier:
+            for child in adjacency.get(node, ()):
+                reached.add(child)
+                if child not in visited:
+                    visited.add(child)
+                    nxt.add(child)
+        frontier = nxt
+        if not frontier:
+            break
+
+    reached.discard(source)
+
+    mask = 0
+    for node in reached:
+        mask |= 1 << node_bits[node]
+    return mask
+
+
+def precompute_territory_masks(adjacency, sources, *, max_depth):
+    node_bits = build_node_bit_index(adjacency)
+    return {
+        source: territory_bitmask(
+            adjacency,
+            source,
+            max_depth=max_depth,
+            node_bits=node_bits,
+        )
+        for source in sources
+    }
+
+
+def bitmask_jaccard(a, b):
+    union = a | b
+    if union == 0:
+        return 0.0
+    return (a & b).bit_count() / union.bit_count()
+
+
+def mean_pairwise_jaccard_masks(sources, masks):
+    total = 0.0
+    count = 0
+    ordered = sorted(sources)
+    for i, left in enumerate(ordered):
+        a = masks[left]
+        for right in ordered[i + 1:]:
+            total += bitmask_jaccard(a, masks[right])
+            count += 1
+    if count == 0:
+        raise ValueError("At least two sources are required")
+    return total / count
+
+
+def observed_pairwise_from_masks(sources, masks):
+    pairs = []
+    values = []
+    ordered = sorted(sources)
+    for i, left in enumerate(ordered):
+        a = masks[left]
+        for right in ordered[i + 1:]:
+            b = masks[right]
+            inter = (a & b).bit_count()
+            union = (a | b).bit_count()
+            value = 0.0 if union == 0 else inter / union
+            values.append(value)
+            pairs.append({
+                "source_a": left,
+                "source_b": right,
+                "intersection": inter,
+                "union": union,
+                "jaccard": value,
+            })
+    if not values:
+        raise ValueError("At least two sources are required")
+    return mean(values), pairs
+
+
+def run_experiment():
+    cfg = load_config()
+
+    max_depth = int(cfg["territory"]["max_depth"])
+    randomizations = int(cfg["null_model"]["randomizations"])
+    base_seed = int(cfg["null_model"]["base_seed"])
+
+    if randomizations != 10000:
+        raise RuntimeError("Frozen randomization count changed")
+    if base_seed != 314159:
+        raise RuntimeError("Frozen base seed changed")
+    if max_depth != 2:
+        raise RuntimeError("Frozen territory depth changed")
+
+    prepared = prepare_inputs()
+
+    masks = precompute_territory_masks(
+        prepared.adjacency,
+        prepared.candidate_sources,
+        max_depth=max_depth,
+    )
+
+    observed, pairwise = observed_pairwise_from_masks(
+        prepared.eligible_sources,
+        masks,
+    )
+    territory_sizes = {
+        source: masks[source].bit_count()
+        for source in prepared.eligible_sources
+    }
+
+    degrees = out_degrees(prepared.adjacency, prepared.candidate_sources)
+    strata = decile_strata(degrees)
+
+    rng = random.Random(base_seed)
+    null_values = []
+    for _ in range(randomizations):
+        sampled = sample_matched_sources(
+            prepared.eligible_sources,
+            prepared.candidate_sources,
+            strata,
+            rng,
+        )
+        null_values.append(
+            mean_pairwise_jaccard_masks(sampled, masks)
+        )
+
+    cls_cfg = cfg["classification"]
+    classification = classify(
+        observed=observed,
+        null_values=null_values,
+        upper_p_threshold=float(
+            cls_cfg["greater_than_null"]["empirical_upper_tail_p_lte"]
+        ),
+        lower_p_threshold=float(
+            cls_cfg["separated_territories"]["empirical_lower_tail_p_lte"]
+        ),
+        convergence_ratio_threshold=float(
+            cls_cfg["greater_than_null"]["effect_ratio_gte"]
+        ),
+        separation_ratio_threshold=float(
+            cls_cfg["separated_territories"]["effect_ratio_lte"]
+        ),
+    )
+
+    return build_result_payload(
+        prepared=prepared,
+        territory_sizes=territory_sizes,
+        pairwise_overlap=pairwise,
+        observed=observed,
+        null_values=null_values,
+        classification=classification,
+        derived_streams=[base_seed],
+    )
+
+
+def execute_once():
+    if OUTPUT.exists():
+        raise RuntimeError(f"Refusing to overwrite existing result: {OUTPUT}")
+    payload = run_experiment()
+    write_result(payload)
+    return payload
 
 def main():
-    prepared = prepare_inputs()
-    print("SQ-03F.5 execution adapter validation passed.")
-    print("eligible sources:", len(prepared.eligible_sources))
-    print("candidate sources:", len(prepared.candidate_sources))
-    print("candidate edges:", prepared.candidate_edge_count)
-    print("conservative graph edges:", prepared.conservative_graph_edge_count)
-    raise SystemExit("SQ-03F.5 result-bearing execution remains disabled in this commit.")
+    payload = execute_once()
+    print("SQ-03F.5 TURF WAR complete.")
+    print("result:", OUTPUT.relative_to(ROOT))
+    print("eligible sources:", len(payload["eligible_sources"]))
+    print("observed mean pairwise Jaccard:", payload["observed_mean_pairwise_jaccard"])
+    print("null median:", payload["null_summary"]["median"])
+    print("upper-tail p:", payload["empirical_upper_tail_p"])
+    print("lower-tail p:", payload["empirical_lower_tail_p"])
+    print("effect ratio:", payload["effect_ratio_vs_null_median"])
+    print("classification:", payload["classification"])
 
 
 if __name__ == "__main__":
