@@ -157,3 +157,62 @@ DO NOT ADOPT:
 - another project's scientific dynamics merely for portability;
 - another project's engineered motor/trading mapping;
 - financial success as evidence of biological validity.
+
+## MaleCNS / FlyWire comparative connectomics — MQ-002 // LILITH
+
+MQ-002 // LILITH is a provisional comparative biological control built from
+independent published female-brain connectome data, not from a transformed or
+derived copy of MQ-001 / MORTY.
+
+### MaleCNS
+
+Berg, S., Beckett, I. R., Costa, M., Schlegel, P., Januszewski, M., Marin,
+E. C., Nern, A., Preibisch, S., Qiu, W., Takemura, S.-Y., et al. (2026).
+**Sexual dimorphism in the complete Drosophila male central nervous system
+connectome.** *Cell* 189(18), 5504-5526.e15.
+
+DOI: https://doi.org/10.1016/j.cell.2026.08.015
+
+Project companion data:
+
+- https://github.com/flyconnectome/2025malecns
+
+MoscaQuant uses the official MaleCNS/FlyWire comparison products for MQ-002
+qualification, including:
+
+- `mcns_fw_edge_comp_mappings.json` — neuron-to-cross-matched-label assignments;
+- `mcns_fw_edge_comp.feather` — aligned male/female central-brain type-to-type
+  edge weights and comparison annotations.
+
+The published aligned-edge product excludes connections made within the VNC
+portion of MaleCNS. MoscaQuant therefore does not infer or manufacture a female
+VNC counterpart.
+
+### FlyWire female adult brain
+
+Dorkenwald, S., Matsliah, A., Sterling, A. R., Schlegel, P., Yu, S.-C.,
+McKellar, C. E., Lin, A., Costa, M., Eichler, K., Yin, Y., et al. (2024).
+**Neuronal wiring diagram of an adult brain.** *Nature* 634, 124-138.
+
+DOI: https://doi.org/10.1038/s41586-024-07558-y
+
+FlyWire provides the independently reconstructed adult female *Drosophila*
+brain connectome underlying the female side of the published MaleCNS/FlyWire
+comparison used to qualify MQ-002 // LILITH.
+
+### MoscaQuant use and claim boundary
+
+MQ-001 / MORTY and MQ-002 // LILITH originate from separate biological
+connectome resources. LILITH is not a clone, transformation, or female-derived
+version of MORTY.
+
+The initial MQ-002 program is restricted to traceable cross-matched anatomy and
+explicitly qualified comparison products. SHUFFLED MOSCA remains a separate
+randomized-topology control family.
+
+A computational difference between MQ-001 and MQ-002 does not by itself
+establish a biological sex mechanism, intelligence difference, behavioral
+generality, market skill, or financial usefulness.
+
+MoscaQuant is an independent experimental project and is not affiliated with
+the MaleCNS, FlyWire, or FlyWire Consortium teams.
