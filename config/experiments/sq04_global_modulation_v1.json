@@ -1,0 +1,84 @@
+{
+  "schema_version": "moscaquant.sidequest_protocol/v1",
+  "sidequest_id": "SQ-04",
+  "name": "GLOBAL MODULATION SENSITIVITY",
+  "status": "FROZEN_BEFORE_EXECUTION",
+  "scientific_scope": "computational parameter sensitivity",
+  "source_model": "frozen MQ-2.1 visual-transduction runtime",
+  "condition": "A",
+  "clock_rule": {
+    "dt_ms": 1.0,
+    "dt_ms_frozen": true,
+    "wall_clock_execution_rate": "NON_SCIENTIFIC_RUNTIME_PROPERTY"
+  },
+  "fixed_parameters": {
+    "frame_count": 16,
+    "reset": 0.0,
+    "release_gain": "load unchanged from config/sensory/visual-transduction-v1.toml",
+    "sensory_gain": "unchanged frozen MQ-2.1 value",
+    "market_encoder": "unchanged",
+    "connectome": "unchanged MaleCNS baseline"
+  },
+  "variants": [
+    {
+      "id": "REFERENCE",
+      "class": "REFERENCE",
+      "threshold": 1.0,
+      "tau_ms": 20.0
+    },
+    {
+      "id": "THRESHOLD_LOW_10",
+      "class": "GLOBAL_EXCITABILITY_SENSITIVITY",
+      "threshold": 0.9,
+      "tau_ms": 20.0
+    },
+    {
+      "id": "THRESHOLD_HIGH_10",
+      "class": "GLOBAL_EXCITABILITY_SENSITIVITY",
+      "threshold": 1.1,
+      "tau_ms": 20.0
+    },
+    {
+      "id": "TAU_FAST_25",
+      "class": "MEMBRANE_PERSISTENCE_SENSITIVITY",
+      "threshold": 1.0,
+      "tau_ms": 15.0
+    },
+    {
+      "id": "TAU_SLOW_25",
+      "class": "MEMBRANE_PERSISTENCE_SENSITIVITY",
+      "threshold": 1.0,
+      "tau_ms": 25.0
+    }
+  ],
+  "measurements": [
+    "deterministic_AA_replay",
+    "retinal_hash",
+    "neural_hash",
+    "relay_hash",
+    "wider_hash",
+    "retinal_spike_count",
+    "relay_spike_count",
+    "wider_network_spike_count",
+    "first_relay_spike_time_ms_if_any",
+    "first_wider_spike_time_ms_if_any",
+    "final_voltage_hash",
+    "final_voltage_max",
+    "final_voltage_min"
+  ],
+  "precommitted_interpretation": {
+    "sensitivity": "A deterministic difference from REFERENCE is computational parameter sensitivity.",
+    "no_effect": "No deterministic difference from REFERENCE is a valid null result.",
+    "nonlinear_change": "Non-monotonic or asymmetric responses are reported descriptively unless separately preregistered.",
+    "no_retuning": true
+  },
+  "explicit_exclusions": [
+    "No biological neuromodulator identity is assigned.",
+    "No dopamine, serotonin, octopamine, hormone, or receptor claim.",
+    "No plasticity or learning claim.",
+    "No broker, WARDEN-01, or Sugar Cube test.",
+    "No financial semantics or profitability claim.",
+    "No change to MQ-9 roadmap state."
+  ],
+  "claim_boundary": "SQ-04 measures deterministic sensitivity of the frozen MoscaQuant computational runtime to small global changes in spike threshold and membrane time constant. These parameters are model mechanics. The experiment does not identify or simulate a biological neuromodulatory system, establish biological realism, test learning, or demonstrate financial usefulness."
+}
