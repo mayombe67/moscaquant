@@ -1,0 +1,75 @@
+{
+  "schema": "moscaquant.sq03b_mechanistic_localization/v1",
+  "sidequest_id": "SQ-03B",
+  "title": "FIND THE DIFFERENCE",
+  "status": "FROZEN_BEFORE_LOCALIZATION_EXECUTION",
+  "parent_result": {
+    "sidequest_id": "SQ-03A",
+    "artifact": "artifacts/sidequests/sq03a-other-fly-result-v1.json",
+    "result_commit": "f95122b"
+  },
+  "classification": "POST_HOC_MECHANISTIC_FOLLOWUP_WITH_PREREGISTERED_LOCALIZATION_RULES",
+  "frozen_inputs": [
+    "TmY14",
+    "LPLC2",
+    "AVLP234",
+    "AVLP435"
+  ],
+  "frozen_anchors": [
+    "DNc02",
+    "DNp27",
+    "DNp30"
+  ],
+  "input_selection_rule": "Exactly the SQ-03A preregistered inputs whose predefined peak-voltage anchor rank order differed between MORTY and LILITH.",
+  "graph_rule": {
+    "verdict_corr": "isomorphic",
+    "weight_m": ">0",
+    "weight_f": ">0",
+    "same_node_identity": true,
+    "same_edge_set": true
+  },
+  "candidate_edge_rule": {
+    "description": "For each frozen input-anchor pair, candidate edges are matched edges that lie on at least one directed simple path from the input label to the anchor label with hop count <= 4 in the frozen matched graph.",
+    "max_hops": 4,
+    "simple_paths_only": true,
+    "selection_uses_sq03b_outcomes": false,
+    "weight_difference_required": true
+  },
+  "localization_method": {
+    "name": "single-edge counterfactual equalization",
+    "male_counterfactual": "For one candidate edge at a time, replace weight_m with weight_f while leaving every other male edge and all runtime parameters unchanged.",
+    "female_counterfactual": "For one candidate edge at a time, replace weight_f with weight_m while leaving every other female edge and all runtime parameters unchanged.",
+    "primary_effect_metric": "change in the frozen target anchor peak voltage relative to the subject's unmodified SQ-03A baseline",
+    "secondary_effect_metrics": [
+      "change in integrated positive voltage",
+      "change in first-positive frame"
+    ],
+    "no_multi_edge_search": true,
+    "no_greedy_combination_search": true,
+    "no_parameter_retuning": true
+  },
+  "classification_rule": {
+    "edge_localization": "An edge is reportable as a model-level localization candidate if counterfactual equalization changes the corresponding anchor response in either subject. Magnitude is descriptive; no post-hoc significance threshold is introduced.",
+    "mechanism_claim": "Single-edge sensitivity does not establish a biological mechanism."
+  },
+  "controls": {
+    "baseline_replay_must_match_sq03a": true,
+    "aa_replay_required": true,
+    "identical_runtime_parameters": true,
+    "identical_stimulus_parameters": true,
+    "candidate_set_frozen_before_counterfactual_execution": true
+  },
+  "prohibited": [
+    "adding new inputs after localization outputs are seen",
+    "adding new anchors after localization outputs are seen",
+    "searching multi-edge combinations after seeing single-edge effects",
+    "retuning stimulus or runtime parameters by subject",
+    "inferring missing optic-lobe anatomy",
+    "sex superiority claims",
+    "intelligence claims",
+    "general behavior claims",
+    "market skill claims",
+    "profitability claims"
+  ],
+  "claim_boundary": "SQ-03B is a post-hoc mechanistic follow-up to the preregistered SQ-03A comparison. It localizes sensitivity within the frozen matched-central-brain model by counterfactually equalizing one aligned edge weight at a time. It can identify model-level edges associated with the observed SQ-03A response differences, but it does not establish biological mechanism, general sex differences, behavior, intelligence, or financial utility."
+}
