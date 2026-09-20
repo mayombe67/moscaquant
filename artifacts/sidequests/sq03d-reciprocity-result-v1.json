@@ -1,0 +1,3371 @@
+{
+  "claim_boundary": "SQ-03D measures context dependence inside the frozen MoscaQuant matched central-brain model. A nonzero reciprocity residual means that the same male/female edge-weight difference has different modeled consequences when embedded in the two matched network backgrounds. It does not establish a biological sex mechanism, organism-level behavior, population-level statistical significance, intelligence differences, or financial utility.",
+  "classification": "AUTHORITATIVE_PAIRED_BACKGROUND_ANALYSIS",
+  "global_summary": {
+    "first_positive_frame_relation_counts": {
+      "RECIPROCAL_EXACT": 387866
+    },
+    "integrated": {
+      "context_residual": {
+        "max": 0.007963366340845823,
+        "p50": 1.0244548320770264e-08,
+        "p90": 3.026798367500305e-08,
+        "p99": 7.308044587261873e-08,
+        "p99.9": 3.994233848062025e-06
+      },
+      "normalized_asymmetry": {
+        "max": 1.0,
+        "p50": 1.0,
+        "p90": 1.0,
+        "p99": 1.0
+      },
+      "sign_relation_counts": {
+        "OPPOSITE": 15247,
+        "SAME": 371750,
+        "ZERO_INVOLVED": 869
+      },
+      "total_effect_magnitude": {
+        "max": 0.032600945327430964,
+        "p50": 1.0244548320770264e-08,
+        "p90": 3.026798367500305e-08,
+        "p99": 1.1641532182693481e-07,
+        "p99.9": 7.566598360427018e-06
+      }
+    },
+    "pair_count": 387866,
+    "peak": {
+      "context_residual": {
+        "max": 0.0003302335535408929,
+        "p50": 1.9281287677586079e-10,
+        "p90": 1.4406396076083183e-09,
+        "p99": 4.046705726068382e-09,
+        "p99.9": 2.4486155325577044e-07
+      },
+      "normalized_asymmetry": {
+        "max": 1.0,
+        "p50": 1.0,
+        "p90": 1.0,
+        "p99": 1.0
+      },
+      "sign_relation_counts": {
+        "OPPOSITE": 14052,
+        "SAME": 373188,
+        "ZERO_INVOLVED": 626
+      },
+      "total_effect_magnitude": {
+        "max": 0.0007798317674314603,
+        "p50": 1.9281287677586079e-10,
+        "p90": 1.4406396076083183e-09,
+        "p99": 5.727133611799154e-09,
+        "p99.9": 4.017614810436557e-07
+      }
+    }
+  },
+  "magnitude_deciles": [
+    {
+      "decile": 1,
+      "max_total_effect_magnitude": 2.5029294192790985e-09,
+      "median_context_residual": 3.4924596548080444e-10,
+      "median_normalized_asymmetry": 1.0,
+      "min_total_effect_magnitude": 4.729372449219227e-11,
+      "opposite_sign_fraction": 0.037590883308410254,
+      "pair_count": 38786
+    },
+    {
+      "decile": 2,
+      "max_total_effect_magnitude": 2.6775524020195007e-09,
+      "median_context_residual": 2.6775524020195007e-09,
+      "median_normalized_asymmetry": 1.0,
+      "min_total_effect_magnitude": 2.5029294192790985e-09,
+      "opposite_sign_fraction": 0.0028875654214040787,
+      "pair_count": 38787
+    },
+    {
+      "decile": 3,
+      "max_total_effect_magnitude": 5.704350769519806e-09,
+      "median_context_residual": 3.14321368932724e-09,
+      "median_normalized_asymmetry": 1.0,
+      "min_total_effect_magnitude": 2.6775524020195007e-09,
+      "opposite_sign_fraction": 0.0325117310369721,
+      "pair_count": 38786
+    },
+    {
+      "decile": 4,
+      "max_total_effect_magnitude": 8.265487849712372e-09,
+      "median_context_residual": 6.984919309616089e-09,
+      "median_normalized_asymmetry": 1.0,
+      "min_total_effect_magnitude": 5.704350769519806e-09,
+      "opposite_sign_fraction": 0.020909067471059892,
+      "pair_count": 38787
+    },
+    {
+      "decile": 5,
+      "max_total_effect_magnitude": 1.0244548320770264e-08,
+      "median_context_residual": 8.32369551062584e-09,
+      "median_normalized_asymmetry": 1.0,
+      "min_total_effect_magnitude": 8.265487849712372e-09,
+      "opposite_sign_fraction": 0.013587026581070978,
+      "pair_count": 38787
+    },
+    {
+      "decile": 6,
+      "max_total_effect_magnitude": 1.6298145055770874e-08,
+      "median_context_residual": 1.1641532182693481e-08,
+      "median_normalized_asymmetry": 1.0,
+      "min_total_effect_magnitude": 1.0244548320770264e-08,
+      "opposite_sign_fraction": 0.03869953075852112,
+      "pair_count": 38786
+    },
+    {
+      "decile": 7,
+      "max_total_effect_magnitude": 1.6530975699424744e-08,
+      "median_context_residual": 1.6530975699424744e-08,
+      "median_normalized_asymmetry": 1.0,
+      "min_total_effect_magnitude": 1.6298145055770874e-08,
+      "opposite_sign_fraction": 0.001701601051898832,
+      "pair_count": 38787
+    },
+    {
+      "decile": 8,
+      "max_total_effect_magnitude": 1.7229467630386353e-08,
+      "median_context_residual": 1.6530975699424744e-08,
+      "median_normalized_asymmetry": 1.0,
+      "min_total_effect_magnitude": 1.6530975699424744e-08,
+      "opposite_sign_fraction": 0.004099417315526221,
+      "pair_count": 38786
+    },
+    {
+      "decile": 9,
+      "max_total_effect_magnitude": 3.026798367500305e-08,
+      "median_context_residual": 3.026798367500305e-08,
+      "median_normalized_asymmetry": 1.0,
+      "min_total_effect_magnitude": 1.7229467630386353e-08,
+      "opposite_sign_fraction": 0.0481346843014412,
+      "pair_count": 38787
+    },
+    {
+      "decile": 10,
+      "max_total_effect_magnitude": 0.032600945327430964,
+      "median_context_residual": 3.026798367500305e-08,
+      "median_normalized_asymmetry": 1.0,
+      "min_total_effect_magnitude": 3.026798367500305e-08,
+      "opposite_sign_fraction": 0.19297702838579936,
+      "pair_count": 38787
+    }
+  ],
+  "pair_count": 387866,
+  "protocol_sha256": "017107bae1490674d4c74f9aaf1fb90a93698b8a69c7c43fa3181fc35c5326f2",
+  "schema": "moscaquant.sq03d_result/v1",
+  "sidequest_id": "SQ-03D",
+  "source_commit": "cc70b316a6f5820d2dc6feaf2c897fbd216a500e",
+  "sq03b_ledger_sha256": "7b2632de5792973534177b697efdd7c3af0b82a836d9d2b597812dbc0dd1f725",
+  "sq03c_result_sha256": "4728c197addeadac8eae2af363c9abe9093fdee00dee6b632ff2324b0f70328a",
+  "sq03c_verified_pair_count": 72,
+  "sq03c_verified_subset_summary": {
+    "first_positive_frame_relation_counts": {
+      "RECIPROCAL_EXACT": 72
+    },
+    "integrated": {
+      "context_residual": {
+        "max": 0.007963366340845823,
+        "p50": 3.3599826565477997e-07,
+        "p90": 0.00018963029142469157,
+        "p99": 0.0034760579490103224,
+        "p99.9": 0.0075146355016622824
+      },
+      "normalized_asymmetry": {
+        "max": 1.0,
+        "p50": 0.5532651522457519,
+        "p90": 1.0,
+        "p99": 1.0
+      },
+      "sign_relation_counts": {
+        "OPPOSITE": 58,
+        "SAME": 14
+      },
+      "total_effect_magnitude": {
+        "max": 0.032600945327430964,
+        "p50": 8.519618859281763e-07,
+        "p90": 0.002553641883423552,
+        "p99": 0.029661086362320954,
+        "p99.9": 0.03230695943091997
+      }
+    },
+    "pair_count": 72,
+    "peak": {
+      "context_residual": {
+        "max": 0.0003302335535408929,
+        "p50": 7.496964826714247e-09,
+        "p90": 2.821926573233213e-05,
+        "p99": 0.00019423401201493226,
+        "p99.9": 0.0003166335993882971
+      },
+      "normalized_asymmetry": {
+        "max": 1.0,
+        "p50": 0.6739382036101471,
+        "p90": 1.0,
+        "p99": 1.0
+      },
+      "sign_relation_counts": {
+        "OPPOSITE": 46,
+        "SAME": 26
+      },
+      "total_effect_magnitude": {
+        "max": 0.0007798317674314603,
+        "p50": 1.4736542652826756e-08,
+        "p90": 0.0001640514799873926,
+        "p99": 0.0006758623344649105,
+        "p99.9": 0.0007694348241348056
+      }
+    }
+  },
+  "strata": [
+    {
+      "anchor": "DNc02",
+      "first_positive_frame_relation_counts": {
+        "RECIPROCAL_EXACT": 9455
+      },
+      "input": "AVLP234",
+      "integrated": {
+        "context_residual": {
+          "max": 0.0014244900667108595,
+          "p50": 3.14321368932724e-09,
+          "p90": 3.14321368932724e-09,
+          "p99": 3.641936928033788e-08,
+          "p99.9": 2.518183318898212e-06
+        },
+        "normalized_asymmetry": {
+          "max": 1.0,
+          "p50": 1.0,
+          "p90": 1.0,
+          "p99": 1.0
+        },
+        "sign_relation_counts": {
+          "OPPOSITE": 288,
+          "SAME": 9160,
+          "ZERO_INVOLVED": 7
+        },
+        "total_effect_magnitude": {
+          "max": 0.002443408069666475,
+          "p50": 3.14321368932724e-09,
+          "p90": 3.14321368932724e-09,
+          "p99": 9.295530617236705e-08,
+          "p99.9": 9.371996624396754e-06
+        }
+      },
+      "pair_count": 9455,
+      "peak": {
+        "context_residual": {
+          "max": 0.00013868490350432694,
+          "p50": 4.656612873077393e-10,
+          "p90": 4.656612873077393e-10,
+          "p99": 4.778848960995166e-09,
+          "p99.9": 3.6019383696845225e-07
+        },
+        "normalized_asymmetry": {
+          "max": 1.0,
+          "p50": 1.0,
+          "p90": 1.0,
+          "p99": 1.0
+        },
+        "sign_relation_counts": {
+          "OPPOSITE": 271,
+          "SAME": 9170,
+          "ZERO_INVOLVED": 14
+        },
+        "total_effect_magnitude": {
+          "max": 0.0003204064123565331,
+          "p50": 4.656612873077393e-10,
+          "p90": 4.656612873077393e-10,
+          "p99": 1.2745149433612773e-08,
+          "p99.9": 1.3336512492971806e-06
+        }
+      }
+    },
+    {
+      "anchor": "DNp27",
+      "first_positive_frame_relation_counts": {
+        "RECIPROCAL_EXACT": 23630
+      },
+      "input": "AVLP234",
+      "integrated": {
+        "context_residual": {
+          "max": 3.6330457078292966e-06,
+          "p50": 2.5029294192790985e-09,
+          "p90": 2.5029294192790985e-09,
+          "p99": 5.820329533889801e-09,
+          "p99.9": 9.831214265430751e-08
+        },
+        "normalized_asymmetry": {
+          "max": 1.0,
+          "p50": 1.0,
+          "p90": 1.0,
+          "p99": 1.0
+        },
+        "sign_relation_counts": {
+          "OPPOSITE": 461,
+          "SAME": 23142,
+          "ZERO_INVOLVED": 27
+        },
+        "total_effect_magnitude": {
+          "max": 0.00460506537638139,
+          "p50": 2.5029294192790985e-09,
+          "p90": 2.5029294192790985e-09,
+          "p99": 8.024217095226024e-09,
+          "p99.9": 1.796558644855387e-07
+        }
+      },
+      "pair_count": 23630,
+      "peak": {
+        "context_residual": {
+          "max": 3.3945070754271e-08,
+          "p50": 3.865352482534945e-11,
+          "p90": 3.865352482534945e-11,
+          "p99": 4.229150363244116e-11,
+          "p99.9": 3.364780241099233e-10
+        },
+        "normalized_asymmetry": {
+          "max": 1.0,
+          "p50": 1.0,
+          "p90": 1.0,
+          "p99": 1.0
+        },
+        "sign_relation_counts": {
+          "OPPOSITE": 264,
+          "SAME": 23343,
+          "ZERO_INVOLVED": 23
+        },
+        "total_effect_magnitude": {
+          "max": 0.00010259404643875314,
+          "p50": 3.865352482534945e-11,
+          "p90": 3.865352482534945e-11,
+          "p99": 4.657522367779086e-11,
+          "p99.9": 5.973342922515752e-10
+        }
+      }
+    },
+    {
+      "anchor": "DNp30",
+      "first_positive_frame_relation_counts": {
+        "RECIPROCAL_EXACT": 32651
+      },
+      "input": "AVLP234",
+      "integrated": {
+        "context_residual": {
+          "max": 0.00010813598055392504,
+          "p50": 1.6298145055770874e-08,
+          "p90": 1.6298145055770874e-08,
+          "p99": 1.979060471057892e-08,
+          "p99.9": 1.776730641722547e-06
+        },
+        "normalized_asymmetry": {
+          "max": 1.0,
+          "p50": 1.0,
+          "p90": 1.0,
+          "p99": 1.0
+        },
+        "sign_relation_counts": {
+          "OPPOSITE": 439,
+          "SAME": 32186,
+          "ZERO_INVOLVED": 26
+        },
+        "total_effect_magnitude": {
+          "max": 0.02846029889769852,
+          "p50": 1.6298145055770874e-08,
+          "p90": 1.6298145055770874e-08,
+          "p99": 2.5902409106492996e-08,
+          "p99.9": 2.901238622142942e-06
+        }
+      },
+      "pair_count": 32651,
+      "peak": {
+        "context_residual": {
+          "max": 1.5684490790590644e-06,
+          "p50": 1.9281287677586079e-10,
+          "p90": 1.9281287677586079e-10,
+          "p99": 1.964508555829525e-10,
+          "p99.9": 9.456925909034855e-09
+        },
+        "normalized_asymmetry": {
+          "max": 1.0,
+          "p50": 1.0,
+          "p90": 1.0,
+          "p99": 1.0
+        },
+        "sign_relation_counts": {
+          "OPPOSITE": 257,
+          "SAME": 32370,
+          "ZERO_INVOLVED": 24
+        },
+        "total_effect_magnitude": {
+          "max": 0.0006333959463518113,
+          "p50": 1.9281287677586079e-10,
+          "p90": 1.9281287677586079e-10,
+          "p99": 1.964508555829525e-10,
+          "p99.9": 2.1406594896683276e-08
+        }
+      }
+    },
+    {
+      "anchor": "DNc02",
+      "first_positive_frame_relation_counts": {
+        "RECIPROCAL_EXACT": 22934
+      },
+      "input": "AVLP435",
+      "integrated": {
+        "context_residual": {
+          "max": 0.00020197623598505743,
+          "p50": 3.383320290595293e-10,
+          "p90": 3.8198777474462986e-10,
+          "p99": 1.5303594409487595e-08,
+          "p99.9": 8.582959853811111e-07
+        },
+        "normalized_asymmetry": {
+          "max": 1.0,
+          "p50": 1.0,
+          "p90": 1.0,
+          "p99": 1.0
+        },
+        "sign_relation_counts": {
+          "OPPOSITE": 1637,
+          "SAME": 21128,
+          "ZERO_INVOLVED": 169
+        },
+        "total_effect_magnitude": {
+          "max": 0.0002325734640180599,
+          "p50": 3.383320290595293e-10,
+          "p90": 3.92901711165905e-10,
+          "p99": 2.9721122700721e-08,
+          "p99.9": 3.2180859707294333e-06
+        }
+      },
+      "pair_count": 22934,
+      "peak": {
+        "context_residual": {
+          "max": 4.955595386491041e-05,
+          "p50": 7.912603905424476e-11,
+          "p90": 9.00399754755199e-11,
+          "p99": 3.0536102713083424e-09,
+          "p99.9": 1.8254810765938346e-07
+        },
+        "normalized_asymmetry": {
+          "max": 1.0,
+          "p50": 1.0,
+          "p90": 1.0,
+          "p99": 1.0
+        },
+        "sign_relation_counts": {
+          "OPPOSITE": 1581,
+          "SAME": 21322,
+          "ZERO_INVOLVED": 31
+        },
+        "total_effect_magnitude": {
+          "max": 5.88148072893091e-05,
+          "p50": 7.912603905424476e-11,
+          "p90": 9.276845958083868e-11,
+          "p99": 6.173722795210582e-09,
+          "p99.9": 7.222444228317719e-07
+        }
+      }
+    },
+    {
+      "anchor": "DNp27",
+      "first_positive_frame_relation_counts": {
+        "RECIPROCAL_EXACT": 50951
+      },
+      "input": "AVLP435",
+      "integrated": {
+        "context_residual": {
+          "max": 7.204595021903515e-06,
+          "p50": 2.6775524020195007e-09,
+          "p90": 2.6775524020195007e-09,
+          "p99": 9.778887033462524e-09,
+          "p99.9": 4.5488704927266627e-07
+        },
+        "normalized_asymmetry": {
+          "max": 1.0,
+          "p50": 1.0,
+          "p90": 1.0,
+          "p99": 1.0
+        },
+        "sign_relation_counts": {
+          "OPPOSITE": 1420,
+          "SAME": 49431,
+          "ZERO_INVOLVED": 100
+        },
+        "total_effect_magnitude": {
+          "max": 0.00041845126543194056,
+          "p50": 2.6775524020195007e-09,
+          "p90": 2.6775524020195007e-09,
+          "p99": 1.594889909029007e-08,
+          "p99.9": 8.283008355648074e-07
+        }
+      },
+      "pair_count": 50951,
+      "peak": {
+        "context_residual": {
+          "max": 3.140667104162276e-08,
+          "p50": 3.637978807091713e-11,
+          "p90": 3.637978807091713e-11,
+          "p99": 5.4569682106375694e-11,
+          "p99.9": 1.7165803001264048e-09
+        },
+        "normalized_asymmetry": {
+          "max": 1.0,
+          "p50": 1.0,
+          "p90": 1.0,
+          "p99": 1.0
+        },
+        "sign_relation_counts": {
+          "OPPOSITE": 659,
+          "SAME": 50219,
+          "ZERO_INVOLVED": 73
+        },
+        "total_effect_magnitude": {
+          "max": 9.317238436779007e-06,
+          "p50": 3.637978807091713e-11,
+          "p90": 3.637978807091713e-11,
+          "p99": 7.639755494892597e-11,
+          "p99.9": 3.0575392884209607e-09
+        }
+      }
+    },
+    {
+      "anchor": "DNp30",
+      "first_positive_frame_relation_counts": {
+        "RECIPROCAL_EXACT": 54799
+      },
+      "input": "AVLP435",
+      "integrated": {
+        "context_residual": {
+          "max": 8.843629620969296e-05,
+          "p50": 1.6530975699424744e-08,
+          "p90": 1.6763806343078613e-08,
+          "p99": 3.189779818058014e-08,
+          "p99.9": 1.1160029098389796e-06
+        },
+        "normalized_asymmetry": {
+          "max": 1.0,
+          "p50": 1.0,
+          "p90": 1.0,
+          "p99": 1.0
+        },
+        "sign_relation_counts": {
+          "OPPOSITE": 1044,
+          "SAME": 53647,
+          "ZERO_INVOLVED": 108
+        },
+        "total_effect_magnitude": {
+          "max": 0.026355406967923045,
+          "p50": 1.6530975699424744e-08,
+          "p90": 1.6763806343078613e-08,
+          "p99": 4.540197551250458e-08,
+          "p99.9": 2.7353093028066608e-06
+        }
+      },
+      "pair_count": 54799,
+      "peak": {
+        "context_residual": {
+          "max": 1.354903361061588e-06,
+          "p50": 1.9281287677586079e-10,
+          "p90": 2.000888343900442e-10,
+          "p99": 3.346940502524376e-10,
+          "p99.9": 8.67003109306006e-09
+        },
+        "normalized_asymmetry": {
+          "max": 1.0,
+          "p50": 1.0,
+          "p90": 1.0,
+          "p99": 1.0
+        },
+        "sign_relation_counts": {
+          "OPPOSITE": 602,
+          "SAME": 54186,
+          "ZERO_INVOLVED": 11
+        },
+        "total_effect_magnitude": {
+          "max": 0.000586002064665081,
+          "p50": 1.9281287677586079e-10,
+          "p90": 2.000888343900442e-10,
+          "p99": 3.892637323588133e-10,
+          "p99.9": 2.4412016500714685e-08
+        }
+      }
+    },
+    {
+      "anchor": "DNc02",
+      "first_positive_frame_relation_counts": {
+        "RECIPROCAL_EXACT": 23362
+      },
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": {
+          "max": 0.001643213676288724,
+          "p50": 6.984919309616089e-09,
+          "p90": 6.984919309616089e-09,
+          "p99": 3.026798367500305e-08,
+          "p99.9": 1.5922116581350157e-06
+        },
+        "normalized_asymmetry": {
+          "max": 1.0,
+          "p50": 1.0,
+          "p90": 1.0,
+          "p99": 1.0
+        },
+        "sign_relation_counts": {
+          "OPPOSITE": 747,
+          "SAME": 22573,
+          "ZERO_INVOLVED": 42
+        },
+        "total_effect_magnitude": {
+          "max": 0.006789404666051269,
+          "p50": 6.984919309616089e-09,
+          "p90": 6.984919309616089e-09,
+          "p99": 7.031485438346863e-08,
+          "p99.9": 5.394547479227113e-06
+        }
+      },
+      "pair_count": 23362,
+      "peak": {
+        "context_residual": {
+          "max": 0.00012637993495445698,
+          "p50": 5.238689482212067e-10,
+          "p90": 5.238689482212067e-10,
+          "p99": 3.105233190581194e-09,
+          "p99.9": 2.698764146771237e-07
+        },
+        "normalized_asymmetry": {
+          "max": 1.0,
+          "p50": 1.0,
+          "p90": 1.0,
+          "p99": 1.0
+        },
+        "sign_relation_counts": {
+          "OPPOSITE": 869,
+          "SAME": 22452,
+          "ZERO_INVOLVED": 41
+        },
+        "total_effect_magnitude": {
+          "max": 0.0002195053530158475,
+          "p50": 5.238689482212067e-10,
+          "p90": 5.238689482212067e-10,
+          "p99": 9.297946235164958e-09,
+          "p99.9": 7.06284030456959e-07
+        }
+      }
+    },
+    {
+      "anchor": "DNp27",
+      "first_positive_frame_relation_counts": {
+        "RECIPROCAL_EXACT": 57817
+      },
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": {
+          "max": 0.007963366340845823,
+          "p50": 3.026798367500305e-08,
+          "p90": 3.119930624961853e-08,
+          "p99": 2.8701499104499166e-07,
+          "p99.9": 1.5041541308165006e-05
+        },
+        "normalized_asymmetry": {
+          "max": 1.0,
+          "p50": 1.0,
+          "p90": 1.0,
+          "p99": 1.0
+        },
+        "sign_relation_counts": {
+          "OPPOSITE": 2016,
+          "SAME": 55713,
+          "ZERO_INVOLVED": 88
+        },
+        "total_effect_magnitude": {
+          "max": 0.032600945327430964,
+          "p50": 3.026798367500305e-08,
+          "p90": 3.119930624961853e-08,
+          "p99": 4.317611455917277e-07,
+          "p99.9": 2.9563631862402232e-05
+        }
+      },
+      "pair_count": 57817,
+      "peak": {
+        "context_residual": {
+          "max": 0.0003302335535408929,
+          "p50": 1.4406396076083183e-09,
+          "p90": 1.4988472685217857e-09,
+          "p99": 1.8181162886321036e-08,
+          "p99.9": 1.0908149997703893e-06
+        },
+        "normalized_asymmetry": {
+          "max": 1.0,
+          "p50": 1.0,
+          "p90": 1.0,
+          "p99": 1.0
+        },
+        "sign_relation_counts": {
+          "OPPOSITE": 2392,
+          "SAME": 55347,
+          "ZERO_INVOLVED": 78
+        },
+        "total_effect_magnitude": {
+          "max": 0.0007798317674314603,
+          "p50": 1.4406396076083183e-09,
+          "p90": 1.4988472685217857e-09,
+          "p99": 2.565502654761076e-08,
+          "p99.9": 1.5450869104825072e-06
+        }
+      }
+    },
+    {
+      "anchor": "DNp30",
+      "first_positive_frame_relation_counts": {
+        "RECIPROCAL_EXACT": 58167
+      },
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": {
+          "max": 0.0007374006672762334,
+          "p50": 8.32369551062584e-09,
+          "p90": 1.0419171303510666e-08,
+          "p99": 4.0740240365266434e-07,
+          "p99.9": 1.6827431740240547e-05
+        },
+        "normalized_asymmetry": {
+          "max": 1.0,
+          "p50": 1.0,
+          "p90": 1.0,
+          "p99": 1.0
+        },
+        "sign_relation_counts": {
+          "OPPOSITE": 5839,
+          "SAME": 52101,
+          "ZERO_INVOLVED": 227
+        },
+        "total_effect_magnitude": {
+          "max": 0.0014732510899193585,
+          "p50": 8.32369551062584e-09,
+          "p90": 1.1059455573558807e-08,
+          "p99": 5.586608313024028e-07,
+          "p99.9": 2.8133093612273826e-05
+        }
+      },
+      "pair_count": 58167,
+      "peak": {
+        "context_residual": {
+          "max": 4.6871948143234476e-05,
+          "p50": 5.366018740460277e-10,
+          "p90": 7.075868779793382e-10,
+          "p99": 2.723638317547736e-08,
+          "p99.9": 1.0695656710595413e-06
+        },
+        "normalized_asymmetry": {
+          "max": 1.0,
+          "p50": 1.0,
+          "p90": 1.0,
+          "p99": 1.0
+        },
+        "sign_relation_counts": {
+          "OPPOSITE": 6326,
+          "SAME": 51536,
+          "ZERO_INVOLVED": 305
+        },
+        "total_effect_magnitude": {
+          "max": 5.616777707473375e-05,
+          "p50": 5.366018740460277e-10,
+          "p90": 7.556081982329514e-10,
+          "p99": 3.3766773412935296e-08,
+          "p99.9": 1.513312876340958e-06
+        }
+      }
+    },
+    {
+      "anchor": "DNc02",
+      "first_positive_frame_relation_counts": {
+        "RECIPROCAL_EXACT": 8139
+      },
+      "input": "TmY14",
+      "integrated": {
+        "context_residual": {
+          "max": 4.2272498831152916e-05,
+          "p50": 3.958120942115784e-09,
+          "p90": 3.958120942115784e-09,
+          "p99": 3.1543895602226156e-08,
+          "p99.9": 2.508206176571597e-06
+        },
+        "normalized_asymmetry": {
+          "max": 1.0,
+          "p50": 1.0,
+          "p90": 1.0,
+          "p99": 1.0
+        },
+        "sign_relation_counts": {
+          "OPPOSITE": 382,
+          "SAME": 7743,
+          "ZERO_INVOLVED": 14
+        },
+        "total_effect_magnitude": {
+          "max": 0.006218620692379773,
+          "p50": 3.958120942115784e-09,
+          "p90": 3.958120942115784e-09,
+          "p99": 8.368631824851032e-08,
+          "p99.9": 8.283513598144254e-06
+        }
+      },
+      "pair_count": 8139,
+      "peak": {
+        "context_residual": {
+          "max": 2.7474739908939227e-05,
+          "p50": 9.822542779147625e-11,
+          "p90": 1.0550138540565968e-10,
+          "p99": 6.556365406140582e-09,
+          "p99.9": 3.930870298063412e-07
+        },
+        "normalized_asymmetry": {
+          "max": 1.0,
+          "p50": 1.0,
+          "p90": 1.0,
+          "p99": 1.0
+        },
+        "sign_relation_counts": {
+          "OPPOSITE": 445,
+          "SAME": 7690,
+          "ZERO_INVOLVED": 4
+        },
+        "total_effect_magnitude": {
+          "max": 0.00011503252062539104,
+          "p50": 9.822542779147625e-11,
+          "p90": 1.0913936421275139e-10,
+          "p99": 7.675262168049754e-09,
+          "p99.9": 3.9568157808389667e-07
+        }
+      }
+    },
+    {
+      "anchor": "DNp27",
+      "first_positive_frame_relation_counts": {
+        "RECIPROCAL_EXACT": 23084
+      },
+      "input": "TmY14",
+      "integrated": {
+        "context_residual": {
+          "max": 3.623729571700096e-05,
+          "p50": 1.7229467630386353e-08,
+          "p90": 1.7229467630386353e-08,
+          "p99": 3.453809767961421e-08,
+          "p99.9": 3.448433242738761e-06
+        },
+        "normalized_asymmetry": {
+          "max": 1.0,
+          "p50": 1.0,
+          "p90": 1.0,
+          "p99": 1.0
+        },
+        "sign_relation_counts": {
+          "OPPOSITE": 546,
+          "SAME": 22511,
+          "ZERO_INVOLVED": 27
+        },
+        "total_effect_magnitude": {
+          "max": 0.010694114025682211,
+          "p50": 1.7229467630386353e-08,
+          "p90": 1.7229467630386353e-08,
+          "p99": 7.877591997384944e-08,
+          "p99.9": 8.53960495442181e-06
+        }
+      },
+      "pair_count": 23084,
+      "peak": {
+        "context_residual": {
+          "max": 4.3879845179617405e-07,
+          "p50": 2.6193447411060333e-10,
+          "p90": 2.6193447411060333e-10,
+          "p99": 3.055902197957039e-10,
+          "p99.9": 4.294776590541087e-08
+        },
+        "normalized_asymmetry": {
+          "max": 1.0,
+          "p50": 1.0,
+          "p90": 1.0,
+          "p99": 1.0
+        },
+        "sign_relation_counts": {
+          "OPPOSITE": 246,
+          "SAME": 22832,
+          "ZERO_INVOLVED": 6
+        },
+        "total_effect_magnitude": {
+          "max": 0.000236280175158754,
+          "p50": 2.6193447411060333e-10,
+          "p90": 2.6193447411060333e-10,
+          "p99": 3.6627170629796825e-10,
+          "p99.9": 1.0433534043841269e-07
+        }
+      }
+    },
+    {
+      "anchor": "DNp30",
+      "first_positive_frame_relation_counts": {
+        "RECIPROCAL_EXACT": 22877
+      },
+      "input": "TmY14",
+      "integrated": {
+        "context_residual": {
+          "max": 2.2145919501781464e-05,
+          "p50": 1.0244548320770264e-08,
+          "p90": 1.0244548320770264e-08,
+          "p99": 1.816079020500183e-08,
+          "p99.9": 6.424728780984713e-07
+        },
+        "normalized_asymmetry": {
+          "max": 1.0,
+          "p50": 1.0,
+          "p90": 1.0,
+          "p99": 1.0
+        },
+        "sign_relation_counts": {
+          "OPPOSITE": 428,
+          "SAME": 22415,
+          "ZERO_INVOLVED": 34
+        },
+        "total_effect_magnitude": {
+          "max": 0.002565890084952116,
+          "p50": 1.0244548320770264e-08,
+          "p90": 1.0244548320770264e-08,
+          "p99": 3.7364661693573743e-08,
+          "p99.9": 1.294413581490503e-06
+        }
+      },
+      "pair_count": 22877,
+      "peak": {
+        "context_residual": {
+          "max": 1.0535586625337601e-07,
+          "p50": 1.7462298274040222e-10,
+          "p90": 1.7462298274040222e-10,
+          "p99": 1.8917489796876907e-10,
+          "p99.9": 1.0258518159389377e-09
+        },
+        "normalized_asymmetry": {
+          "max": 1.0,
+          "p50": 1.0,
+          "p90": 1.0,
+          "p99": 1.0
+        },
+        "sign_relation_counts": {
+          "OPPOSITE": 140,
+          "SAME": 22721,
+          "ZERO_INVOLVED": 16
+        },
+        "total_effect_magnitude": {
+          "max": 5.672284169122577e-05,
+          "p50": 1.7462298274040222e-10,
+          "p90": 1.7462298274040222e-10,
+          "p99": 1.8917489796876907e-10,
+          "p99.9": 5.116511601954636e-09
+        }
+      }
+    }
+  ],
+  "title": "THE SAME KNIFE CUTS DIFFERENTLY",
+  "top_context_residual_candidates": [
+    {
+      "anchor": "DNp27",
+      "edge_id": 440271,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 0.007963366340845823,
+        "delta_lilith": 0.01231878949329257,
+        "delta_morty": -0.020282155834138393,
+        "normalized_asymmetry": 0.244267957903212,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 0.032600945327430964
+      },
+      "peak": {
+        "context_residual": 0.0003302335535408929,
+        "delta_lilith": 0.0002247991069452837,
+        "delta_morty": -0.0005550326604861766,
+        "normalized_asymmetry": 0.4234676853811514,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 0.0007798317674314603
+      },
+      "post": "DNp27",
+      "pre": "LPLC2"
+    },
+    {
+      "anchor": "DNc02",
+      "edge_id": 440259,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 0.001643213676288724,
+        "delta_lilith": -0.0025730954948812723,
+        "delta_morty": 0.004216309171169996,
+        "normalized_asymmetry": 0.2420261800721948,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 0.006789404666051269
+      },
+      "peak": {
+        "context_residual": 6.734742783010006e-05,
+        "delta_lilith": -5.1075301598757505e-05,
+        "delta_morty": 0.00011842272942885756,
+        "normalized_asymmetry": 0.3973345732796603,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 0.00016949803102761507
+      },
+      "post": "DNc02",
+      "pre": "LPLC2"
+    },
+    {
+      "anchor": "DNc02",
+      "edge_id": 384762,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "AVLP234",
+      "integrated": {
+        "context_residual": 0.0014244900667108595,
+        "delta_lilith": -0.0005094590014778078,
+        "delta_morty": 0.0019339490681886673,
+        "normalized_asymmetry": 0.5829931088446074,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 0.002443408069666475
+      },
+      "peak": {
+        "context_residual": 0.00011917988013010472,
+        "delta_lilith": -0.0001006132661132142,
+        "delta_morty": 0.00021979314624331892,
+        "normalized_asymmetry": 0.371964715854335,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 0.0003204064123565331
+      },
+      "post": "DNc02",
+      "pre": "KCab"
+    },
+    {
+      "anchor": "DNp30",
+      "edge_id": 456803,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 0.0007374006672762334,
+        "delta_lilith": 7.822929183021188e-05,
+        "delta_morty": -0.0008156299591064453,
+        "normalized_asymmetry": 0.8249628411895117,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 0.0008938592509366572
+      },
+      "peak": {
+        "context_residual": 4.6871948143234476e-05,
+        "delta_lilith": 4.647914465749636e-06,
+        "delta_morty": -5.151986260898411e-05,
+        "normalized_asymmetry": 0.83449889926869,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 5.616777707473375e-05
+      },
+      "post": "DNp30",
+      "pre": "LoVC16"
+    },
+    {
+      "anchor": "DNp30",
+      "edge_id": 402471,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 0.00071232725167647,
+        "delta_lilith": 6.668170681223273e-05,
+        "delta_morty": -0.0007790089584887028,
+        "normalized_asymmetry": 0.8423023700078224,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 0.0008456906653009355
+      },
+      "peak": {
+        "context_residual": 4.651054223359097e-05,
+        "delta_lilith": 4.228755642543547e-06,
+        "delta_morty": -5.0739297876134515e-05,
+        "normalized_asymmetry": 0.8461376973770184,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 5.496805351867806e-05
+      },
+      "post": "LoVC16",
+      "pre": "LC17"
+    },
+    {
+      "anchor": "DNc02",
+      "edge_id": 384762,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 0.0006591309793293476,
+        "delta_lilith": -0.0002057645469903946,
+        "delta_morty": 0.0008648955263197422,
+        "normalized_asymmetry": 0.6156304841848884,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 0.0010706600733101368
+      },
+      "peak": {
+        "context_residual": 0.00012637993495445698,
+        "delta_lilith": -4.656270903069526e-05,
+        "delta_morty": 0.00017294264398515224,
+        "normalized_asymmetry": 0.5757487606479137,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 0.0002195053530158475
+      },
+      "post": "DNc02",
+      "pre": "KCab"
+    },
+    {
+      "anchor": "DNp30",
+      "edge_id": 528580,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 0.000604321132414043,
+        "delta_lilith": 3.4775701351463795e-05,
+        "delta_morty": -0.0006390968337655067,
+        "normalized_asymmetry": 0.8967884888039622,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 0.0006738725351169705
+      },
+      "peak": {
+        "context_residual": 3.24169759551296e-05,
+        "delta_lilith": 2.4444361770292744e-06,
+        "delta_morty": -3.4861412132158875e-05,
+        "normalized_asymmetry": 0.8689515833136957,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 3.730584830918815e-05
+      },
+      "post": "LC17",
+      "pre": "PVLP011"
+    },
+    {
+      "anchor": "DNp27",
+      "edge_id": 402482,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 0.00044546136632561684,
+        "delta_lilith": 3.640493378043175e-05,
+        "delta_morty": -0.0004818663001060486,
+        "normalized_asymmetry": 0.8595139710632456,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 0.0005182712338864803
+      },
+      "peak": {
+        "context_residual": 3.972663398599252e-05,
+        "delta_lilith": 2.983877493534237e-06,
+        "delta_morty": -4.271051147952676e-05,
+        "normalized_asymmetry": 0.8693985165096146,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 4.5694388973060995e-05
+      },
+      "post": "PVLP011",
+      "pre": "LC17"
+    },
+    {
+      "anchor": "DNp27",
+      "edge_id": 528580,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 0.00039348797872662544,
+        "delta_lilith": 4.7940295189619064e-05,
+        "delta_morty": -0.0004414282739162445,
+        "normalized_asymmetry": 0.8040728472725093,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 0.0004893685691058636
+      },
+      "peak": {
+        "context_residual": 2.688153472263366e-05,
+        "delta_lilith": 3.5223638406023383e-06,
+        "delta_morty": -3.0403898563235998e-05,
+        "normalized_asymmetry": 0.7923517893793202,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 3.3926262403838336e-05
+      },
+      "post": "LC17",
+      "pre": "PVLP011"
+    },
+    {
+      "anchor": "DNp27",
+      "edge_id": 438380,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 0.0003497195430099964,
+        "delta_lilith": 0.00032816221937537193,
+        "delta_morty": -0.0006778817623853683,
+        "normalized_asymmetry": 0.34761854287715177,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 0.0010060439817607403
+      },
+      "peak": {
+        "context_residual": 2.4026710889302194e-05,
+        "delta_lilith": 1.1858719517476857e-05,
+        "delta_morty": -3.588543040677905e-05,
+        "normalized_asymmetry": 0.5032388455427432,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 4.774414992425591e-05
+      },
+      "post": "DNp27",
+      "pre": "LLPC1"
+    },
+    {
+      "anchor": "DNp30",
+      "edge_id": 77496,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 0.0003216347540728748,
+        "delta_lilith": 0.0005758081679232419,
+        "delta_morty": -0.0008974429219961166,
+        "normalized_asymmetry": 0.2183163184291146,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 0.0014732510899193585
+      },
+      "peak": {
+        "context_residual": 1.627387428015936e-05,
+        "delta_lilith": 1.565340608067345e-05,
+        "delta_morty": -3.192728036083281e-05,
+        "normalized_asymmetry": 0.3420268915238496,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 4.758068644150626e-05
+      },
+      "post": "DNp30",
+      "pre": "AVLP340"
+    },
+    {
+      "anchor": "DNp27",
+      "edge_id": 152720,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 0.0003176257014274597,
+        "delta_lilith": -8.102878928184509e-05,
+        "delta_morty": 0.0003986544907093048,
+        "normalized_asymmetry": 0.6621571246621727,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 0.0004796832799911499
+      },
+      "peak": {
+        "context_residual": 1.6187084838747978e-05,
+        "delta_lilith": -2.6727793738245964e-06,
+        "delta_morty": 1.8859864212572575e-05,
+        "normalized_asymmetry": 0.7517462857637162,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 2.153264358639717e-05
+      },
+      "post": "DNp27",
+      "pre": "CB0766"
+    },
+    {
+      "anchor": "DNp30",
+      "edge_id": 533525,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 0.0002627930953167379,
+        "delta_lilith": 3.4241063985973597e-05,
+        "delta_morty": -0.0002970341593027115,
+        "normalized_asymmetry": 0.7932772415271473,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 0.0003312752232886851
+      },
+      "peak": {
+        "context_residual": 2.024764944508206e-05,
+        "delta_lilith": 1.8403243302600458e-06,
+        "delta_morty": -2.2087973775342107e-05,
+        "normalized_asymmetry": 0.8461800900224338,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 2.3928298105602153e-05
+      },
+      "post": "DNp30",
+      "pre": "PVLP082"
+    },
+    {
+      "anchor": "DNp30",
+      "edge_id": 411196,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 0.00020663946634158492,
+        "delta_lilith": 0.00033006916055455804,
+        "delta_morty": -0.000536708626896143,
+        "normalized_asymmetry": 0.2383995867606815,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 0.000866777787450701
+      },
+      "peak": {
+        "context_residual": 9.904562830342911e-06,
+        "delta_lilith": 8.928816896514036e-06,
+        "delta_morty": -1.8833379726856947e-05,
+        "normalized_asymmetry": 0.3567643787237274,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 2.7762196623370983e-05
+      },
+      "post": "DNp30",
+      "pre": "LHAD1g1"
+    },
+    {
+      "anchor": "DNc02",
+      "edge_id": 384762,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "AVLP435",
+      "integrated": {
+        "context_residual": 0.00020197623598505743,
+        "delta_lilith": -1.5298614016501233e-05,
+        "delta_morty": 0.00021727485000155866,
+        "normalized_asymmetry": 0.8684405886020319,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 0.0002325734640180599
+      },
+      "peak": {
+        "context_residual": 4.955595386491041e-05,
+        "delta_lilith": -4.629426712199347e-06,
+        "delta_morty": 5.4185380577109754e-05,
+        "normalized_asymmetry": 0.8425761495935107,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 5.88148072893091e-05
+      },
+      "post": "DNc02",
+      "pre": "KCab"
+    },
+    {
+      "anchor": "DNc02",
+      "edge_id": 68785,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "AVLP234",
+      "integrated": {
+        "context_residual": 0.00019814062397927046,
+        "delta_lilith": 0.0010147684952244163,
+        "delta_morty": -0.0008166278712451458,
+        "normalized_asymmetry": 0.10819101075385014,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 0.001831396366469562
+      },
+      "peak": {
+        "context_residual": 0.00013868490350432694,
+        "delta_lilith": 0.00016305159078910947,
+        "delta_morty": -2.436668728478253e-05,
+        "normalized_asymmetry": 0.7399753371421366,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 0.000187418278073892
+      },
+      "post": "OA-VPM4",
+      "pre": "AVLP234"
+    },
+    {
+      "anchor": "DNp27",
+      "edge_id": 402471,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 0.00017616664990782738,
+        "delta_lilith": 2.946937456727028e-05,
+        "delta_morty": -0.00020563602447509766,
+        "normalized_asymmetry": 0.7493092486407796,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 0.00023510539904236794
+      },
+      "peak": {
+        "context_residual": 1.6070531273726374e-05,
+        "delta_lilith": 2.3053944460116327e-06,
+        "delta_morty": -1.8375925719738007e-05,
+        "normalized_asymmetry": 0.7770553883857376,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 2.068132016574964e-05
+      },
+      "post": "LoVC16",
+      "pre": "LC17"
+    },
+    {
+      "anchor": "DNp27",
+      "edge_id": 440591,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 0.00016959663480520248,
+        "delta_lilith": 0.00041861552745103836,
+        "delta_morty": -0.0005882121622562408,
+        "normalized_asymmetry": 0.1684465341378427,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 0.0010068276897072792
+      },
+      "peak": {
+        "context_residual": 9.33813862502575e-06,
+        "delta_lilith": 1.1894910130649805e-05,
+        "delta_morty": -2.1233048755675554e-05,
+        "normalized_asymmetry": 0.28188089272473615,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 3.312795888632536e-05
+      },
+      "post": "DNp27",
+      "pre": "LPLC4"
+    },
+    {
+      "anchor": "DNp30",
+      "edge_id": 402402,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 0.00016152887837961316,
+        "delta_lilith": 9.169511031359434e-06,
+        "delta_morty": -0.0001706983894109726,
+        "normalized_asymmetry": 0.8980417182964862,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 0.00017986790044233203
+      },
+      "peak": {
+        "context_residual": 1.3265618690638803e-05,
+        "delta_lilith": 6.712161848554388e-07,
+        "delta_morty": -1.3936834875494242e-05,
+        "normalized_asymmetry": 0.908103253187921,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 1.460805106034968e-05
+      },
+      "post": "CB1920",
+      "pre": "LC17"
+    },
+    {
+      "anchor": "DNp27",
+      "edge_id": 440424,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 0.0001595369540154934,
+        "delta_lilith": -2.9927585273981094e-05,
+        "delta_morty": 0.0001894645392894745,
+        "normalized_asymmetry": 0.7271772144644597,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 0.00021939212456345558
+      },
+      "peak": {
+        "context_residual": 8.416005584876984e-06,
+        "delta_lilith": -1.5106124919839203e-06,
+        "delta_morty": 9.926618076860905e-06,
+        "normalized_asymmetry": 0.7358429590291116,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 1.1437230568844825e-05
+      },
+      "post": "PVLP011",
+      "pre": "LPLC2"
+    },
+    {
+      "anchor": "DNp30",
+      "edge_id": 402489,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 0.00015740131493657827,
+        "delta_lilith": 1.0420684702694416e-05,
+        "delta_morty": -0.0001678219996392727,
+        "normalized_asymmetry": 0.8830730726350392,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 0.0001782426843419671
+      },
+      "peak": {
+        "context_residual": 1.3039149052929133e-05,
+        "delta_lilith": 7.702110451646149e-07,
+        "delta_morty": -1.3809360098093748e-05,
+        "normalized_asymmetry": 0.8943437996088434,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 1.4579571143258363e-05
+      },
+      "post": "PVLP061",
+      "pre": "LC17"
+    },
+    {
+      "anchor": "DNp30",
+      "edge_id": 402499,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 0.00014035828644409776,
+        "delta_lilith": 6.7757791839540005e-06,
+        "delta_morty": -0.00014713406562805176,
+        "normalized_asymmetry": 0.9119513219933355,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 0.00015390984481200576
+      },
+      "peak": {
+        "context_residual": 1.1567932233447209e-05,
+        "delta_lilith": 5.019792297389358e-07,
+        "delta_morty": -1.2069911463186145e-05,
+        "normalized_asymmetry": 0.9201426035271801,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 1.257189069292508e-05
+      },
+      "post": "PVLP106",
+      "pre": "LC17"
+    },
+    {
+      "anchor": "DNp27",
+      "edge_id": 528585,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 0.00013461662456393242,
+        "delta_lilith": 1.4979857951402664e-05,
+        "delta_morty": -0.00014959648251533508,
+        "normalized_asymmetry": 0.8179585484897786,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 0.00016457634046673775
+      },
+      "peak": {
+        "context_residual": 8.53819801704958e-06,
+        "delta_lilith": 6.874834070913494e-07,
+        "delta_morty": -9.22568142414093e-06,
+        "normalized_asymmetry": 0.8612989052849452,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 9.91316483123228e-06
+      },
+      "post": "LLPC1",
+      "pre": "PVLP011"
+    },
+    {
+      "anchor": "DNc02",
+      "edge_id": 365068,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "AVLP234",
+      "integrated": {
+        "context_residual": 0.00011303729843348265,
+        "delta_lilith": 4.043790977448225e-05,
+        "delta_morty": 7.25993886590004e-05,
+        "normalized_asymmetry": 1.0,
+        "sign_relation": "SAME",
+        "total_effect_magnitude": 0.00011303729843348265
+      },
+      "peak": {
+        "context_residual": 2.73226760327816e-05,
+        "delta_lilith": 8.148432243615389e-06,
+        "delta_morty": 1.9174243789166212e-05,
+        "normalized_asymmetry": 1.0,
+        "sign_relation": "SAME",
+        "total_effect_magnitude": 2.73226760327816e-05
+      },
+      "post": "KCab",
+      "pre": "DPM"
+    },
+    {
+      "anchor": "DNp30",
+      "edge_id": 402482,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 0.0001125046401284635,
+        "delta_lilith": 5.2899704314768314e-06,
+        "delta_morty": -0.00011779461055994034,
+        "normalized_asymmetry": 0.9140433287603147,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 0.00012308458099141717
+      },
+      "peak": {
+        "context_residual": 9.998502719099633e-06,
+        "delta_lilith": 5.048659659223631e-07,
+        "delta_morty": -1.0503368685021996e-05,
+        "normalized_asymmetry": 0.908274853883306,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 1.100823465094436e-05
+      },
+      "post": "PVLP011",
+      "pre": "LC17"
+    },
+    {
+      "anchor": "DNp30",
+      "edge_id": 49149,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "AVLP234",
+      "integrated": {
+        "context_residual": 0.00010813598055392504,
+        "delta_lilith": 7.913808804005384e-05,
+        "delta_morty": -0.00018727406859397888,
+        "normalized_asymmetry": 0.4058973206033919,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 0.0002664121566340327
+      },
+      "peak": {
+        "context_residual": 1.52039501699619e-06,
+        "delta_lilith": 1.2079144653398544e-06,
+        "delta_morty": -2.7283094823360443e-06,
+        "normalized_asymmetry": 0.38625724481298657,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 3.936223947675899e-06
+      },
+      "post": "DNp30",
+      "pre": "AVLP031"
+    },
+    {
+      "anchor": "DNp30",
+      "edge_id": 68720,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "AVLP234",
+      "integrated": {
+        "context_residual": 0.00010794319678097963,
+        "delta_lilith": 2.0333449356257915e-05,
+        "delta_morty": -0.00012827664613723755,
+        "normalized_asymmetry": 0.7263517086273874,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 0.00014861009549349546
+      },
+      "peak": {
+        "context_residual": 1.5684490790590644e-06,
+        "delta_lilith": 3.0170485842972994e-07,
+        "delta_morty": -1.8701539374887943e-06,
+        "normalized_asymmetry": 0.7221689927570704,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 2.1718587959185243e-06
+      },
+      "post": "AVLP031",
+      "pre": "AVLP234"
+    },
+    {
+      "anchor": "DNp30",
+      "edge_id": 49149,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 0.00010326097253710032,
+        "delta_lilith": 3.6601326428353786e-05,
+        "delta_morty": -0.0001398622989654541,
+        "normalized_asymmetry": 0.5851685995153749,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 0.0001764636253938079
+      },
+      "peak": {
+        "context_residual": 6.76966919854749e-06,
+        "delta_lilith": 1.5984678611857817e-06,
+        "delta_morty": -8.368137059733272e-06,
+        "normalized_asymmetry": 0.6792352312810687,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 9.966604920919053e-06
+      },
+      "post": "DNp30",
+      "pre": "AVLP031"
+    },
+    {
+      "anchor": "DNp30",
+      "edge_id": 45801,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 0.00010297488188371062,
+        "delta_lilith": 1.2958480510860682e-05,
+        "delta_morty": -0.0001159333623945713,
+        "normalized_asymmetry": 0.7989247384666798,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 0.00012889184290543199
+      },
+      "peak": {
+        "context_residual": 7.395010470645502e-06,
+        "delta_lilith": 6.310983735602349e-07,
+        "delta_morty": -8.026108844205737e-06,
+        "normalized_asymmetry": 0.8542027797913581,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 8.657207217765972e-06
+      },
+      "post": "DNp30",
+      "pre": "AVLP001"
+    },
+    {
+      "anchor": "DNp27",
+      "edge_id": 440361,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 0.00010227086022496223,
+        "delta_lilith": 2.4139415472745895e-05,
+        "delta_morty": -0.00012641027569770813,
+        "normalized_asymmetry": 0.6793163069937489,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 0.00015054969117045403
+      },
+      "peak": {
+        "context_residual": 7.14204361429438e-06,
+        "delta_lilith": 1.1540032573975623e-06,
+        "delta_morty": -8.296046871691942e-06,
+        "normalized_asymmetry": 0.755767801941015,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 9.450050129089504e-06
+      },
+      "post": "LT56",
+      "pre": "LPLC2"
+    },
+    {
+      "anchor": "DNp27",
+      "edge_id": 440319,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 9.873742237687111e-05,
+        "delta_lilith": 7.046712562441826e-05,
+        "delta_morty": -0.00016920454800128937,
+        "normalized_asymmetry": 0.4119695118041699,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 0.00023967167362570763
+      },
+      "peak": {
+        "context_residual": 4.950132279191166e-06,
+        "delta_lilith": 2.0546940504573286e-06,
+        "delta_morty": -7.004826329648495e-06,
+        "normalized_asymmetry": 0.546401141727256,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 9.059520380105823e-06
+      },
+      "post": "LC4",
+      "pre": "LPLC2"
+    },
+    {
+      "anchor": "DNp27",
+      "edge_id": 439624,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 9.768130257725716e-05,
+        "delta_lilith": 0.00018155155703425407,
+        "delta_morty": -0.00027923285961151123,
+        "normalized_asymmetry": 0.21198916249885047,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 0.0004607844166457653
+      },
+      "peak": {
+        "context_residual": 6.932059477549046e-06,
+        "delta_lilith": 5.878282536286861e-06,
+        "delta_morty": -1.2810342013835907e-05,
+        "normalized_asymmetry": 0.37092400561407335,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 1.8688624550122768e-05
+      },
+      "post": "DNp27",
+      "pre": "LPC1"
+    },
+    {
+      "anchor": "DNp30",
+      "edge_id": 440277,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 9.298539953306317e-05,
+        "delta_lilith": 4.087452543899417e-05,
+        "delta_morty": -0.00013385992497205734,
+        "normalized_asymmetry": 0.5321526425631639,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 0.0001747344504110515
+      },
+      "peak": {
+        "context_residual": 3.5239281714893878e-06,
+        "delta_lilith": 1.0950243449769914e-06,
+        "delta_morty": -4.618952516466379e-06,
+        "normalized_asymmetry": 0.6167207633037617,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 5.713976861443371e-06
+      },
+      "post": "DNpe056",
+      "pre": "LPLC2"
+    },
+    {
+      "anchor": "DNp30",
+      "edge_id": 101198,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "AVLP435",
+      "integrated": {
+        "context_residual": 8.843629620969296e-05,
+        "delta_lilith": 5.7498225942254066e-05,
+        "delta_morty": -0.00014593452215194702,
+        "normalized_asymmetry": 0.43472005878199044,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 0.0002034327480942011
+      },
+      "peak": {
+        "context_residual": 1.354903361061588e-06,
+        "delta_lilith": 8.813185559120029e-07,
+        "delta_morty": -2.236221916973591e-06,
+        "normalized_asymmetry": 0.4346065024161467,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 3.1175404728855938e-06
+      },
+      "post": "DNp30",
+      "pre": "AVLP580"
+    },
+    {
+      "anchor": "DNp30",
+      "edge_id": 84167,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "AVLP435",
+      "integrated": {
+        "context_residual": 8.735689334571362e-05,
+        "delta_lilith": 5.3148018196225166e-05,
+        "delta_morty": -0.00014050491154193878,
+        "normalized_asymmetry": 0.45110029300268234,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 0.00019365292973816395
+      },
+      "peak": {
+        "context_residual": 1.348638761555776e-06,
+        "delta_lilith": 8.207607606891543e-07,
+        "delta_morty": -2.1693995222449303e-06,
+        "normalized_asymmetry": 0.451025575201751,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 2.9901602829340845e-06
+      },
+      "post": "AVLP580",
+      "pre": "AVLP435"
+    },
+    {
+      "anchor": "DNp30",
+      "edge_id": 440424,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 8.384051034227014e-05,
+        "delta_lilith": -6.123387720435858e-06,
+        "delta_morty": 8.9963898062706e-05,
+        "normalized_asymmetry": 0.8725453077266507,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 9.608728578314185e-05
+      },
+      "peak": {
+        "context_residual": 3.8570233300561085e-06,
+        "delta_lilith": -3.942022885894403e-07,
+        "delta_morty": 4.251225618645549e-06,
+        "normalized_asymmetry": 0.830283755786849,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 4.645427907234989e-06
+      },
+      "post": "PVLP011",
+      "pre": "LPLC2"
+    },
+    {
+      "anchor": "DNp30",
+      "edge_id": 364241,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 8.151709334924817e-05,
+        "delta_lilith": 1.8639664631336927e-05,
+        "delta_morty": -0.0001001567579805851,
+        "normalized_asymmetry": 0.686191482512432,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 0.00011879642261192203
+      },
+      "peak": {
+        "context_residual": 2.97285987471696e-06,
+        "delta_lilith": 5.181736923987046e-07,
+        "delta_morty": -3.4910335671156645e-06,
+        "normalized_asymmetry": 0.741508154177357,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 4.009207259514369e-06
+      },
+      "post": "DNp30",
+      "pre": "DNpe056"
+    },
+    {
+      "anchor": "DNp27",
+      "edge_id": 408191,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 8.133100345730782e-05,
+        "delta_lilith": 4.46992926299572e-05,
+        "delta_morty": -0.00012603029608726501,
+        "normalized_asymmetry": 0.47637321725184717,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 0.00017072958871722221
+      },
+      "peak": {
+        "context_residual": 6.536887667607516e-06,
+        "delta_lilith": 1.8992650439031422e-06,
+        "delta_morty": -8.436152711510658e-06,
+        "normalized_asymmetry": 0.6324744506997239,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 1.03354177554138e-05
+      },
+      "post": "DNp27",
+      "pre": "LC9"
+    },
+    {
+      "anchor": "DNp30",
+      "edge_id": 402504,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 7.917644688859582e-05,
+        "delta_lilith": 3.91894718632102e-06,
+        "delta_morty": -8.309539407491684e-05,
+        "normalized_asymmetry": 0.9099241083821941,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 8.701434126123786e-05
+      },
+      "peak": {
+        "context_residual": 6.549027602886781e-06,
+        "delta_lilith": 2.899942046497017e-07,
+        "delta_morty": -6.839021807536483e-06,
+        "normalized_asymmetry": 0.9186439743846859,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 7.1290160121861845e-06
+      },
+      "post": "PVLP135",
+      "pre": "LC17"
+    },
+    {
+      "anchor": "DNp30",
+      "edge_id": 84251,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 7.43057462386787e-05,
+        "delta_lilith": 3.846391336992383e-05,
+        "delta_morty": -0.00011276965960860252,
+        "normalized_asymmetry": 0.4913310237616972,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 0.00015123357297852635
+      },
+      "peak": {
+        "context_residual": 6.321930413832888e-06,
+        "delta_lilith": 1.954587787622586e-06,
+        "delta_morty": -8.276518201455474e-06,
+        "normalized_asymmetry": 0.6179127086144639,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 1.023110598907806e-05
+      },
+      "post": "DNp30",
+      "pre": "AVLP435"
+    },
+    {
+      "anchor": "DNc02",
+      "edge_id": 482774,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "AVLP234",
+      "integrated": {
+        "context_residual": 7.188727613538504e-05,
+        "delta_lilith": 0.0001182811101898551,
+        "delta_morty": -4.639383405447006e-05,
+        "normalized_asymmetry": 0.43654046136324914,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 0.00016467494424432516
+      },
+      "peak": {
+        "context_residual": 2.8301990823820233e-05,
+        "delta_lilith": 1.901388168334961e-05,
+        "delta_morty": 9.288109140470624e-06,
+        "normalized_asymmetry": 1.0,
+        "sign_relation": "SAME",
+        "total_effect_magnitude": 2.8301990823820233e-05
+      },
+      "post": "KCg-m",
+      "pre": "OA-VPM4"
+    },
+    {
+      "anchor": "DNp27",
+      "edge_id": 402596,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 7.033441215753555e-05,
+        "delta_lilith": 2.490077167749405e-05,
+        "delta_morty": -9.52351838350296e-05,
+        "normalized_asymmetry": 0.585456800651188,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 0.00012013595551252365
+      },
+      "peak": {
+        "context_residual": 6.321810360532254e-06,
+        "delta_lilith": 1.1972806532867253e-06,
+        "delta_morty": -7.519091013818979e-06,
+        "normalized_asymmetry": 0.7252800364617115,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 8.716371667105705e-06
+      },
+      "post": "DNp27",
+      "pre": "LC18"
+    },
+    {
+      "anchor": "DNp27",
+      "edge_id": 440323,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 6.644148379564285e-05,
+        "delta_lilith": -1.8212012946605682e-05,
+        "delta_morty": 8.465349674224854e-05,
+        "normalized_asymmetry": 0.6459063295035807,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 0.00010286550968885422
+      },
+      "peak": {
+        "context_residual": 3.914683475159109e-06,
+        "delta_lilith": -6.427435437217355e-07,
+        "delta_morty": 4.557427018880844e-06,
+        "normalized_asymmetry": 0.752799053037193,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 5.20017056260258e-06
+      },
+      "post": "LC9",
+      "pre": "LPLC2"
+    },
+    {
+      "anchor": "DNp30",
+      "edge_id": 440194,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 6.380205741152167e-05,
+        "delta_lilith": 8.761475328356028e-06,
+        "delta_morty": -7.25635327398777e-05,
+        "normalized_asymmetry": 0.7845318300858961,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 8.132500806823373e-05
+      },
+      "peak": {
+        "context_residual": 2.904136636061594e-06,
+        "delta_lilith": 3.423374437261373e-07,
+        "delta_morty": -3.246474079787731e-06,
+        "normalized_asymmetry": 0.8092196029336483,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 3.5888115235138685e-06
+      },
+      "post": "AVLP531",
+      "pre": "LPLC2"
+    },
+    {
+      "anchor": "DNp27",
+      "edge_id": 440419,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 6.350642070174217e-05,
+        "delta_lilith": -3.665918484330177e-05,
+        "delta_morty": 0.00010016560554504395,
+        "normalized_asymmetry": 0.4641441110305654,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 0.00013682479038834572
+      },
+      "peak": {
+        "context_residual": 2.471490006428212e-06,
+        "delta_lilith": -9.822033462114632e-07,
+        "delta_morty": 3.453693352639675e-06,
+        "normalized_asymmetry": 0.5571567992258043,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 4.435896698851138e-06
+      },
+      "post": "PLP163",
+      "pre": "LPLC2"
+    },
+    {
+      "anchor": "DNp30",
+      "edge_id": 440361,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 6.124930223450065e-05,
+        "delta_lilith": 3.3788965083658695e-06,
+        "delta_morty": -6.462819874286652e-05,
+        "normalized_asymmetry": 0.9006310592774616,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 6.800709525123239e-05
+      },
+      "peak": {
+        "context_residual": 4.314861143939197e-06,
+        "delta_lilith": 2.1279265638440847e-07,
+        "delta_morty": -4.5276538003236055e-06,
+        "normalized_asymmetry": 0.9102225251027594,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 4.740446456708014e-06
+      },
+      "post": "LT56",
+      "pre": "LPLC2"
+    },
+    {
+      "anchor": "DNp27",
+      "edge_id": 440333,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 6.0591381043195724e-05,
+        "delta_lilith": -1.0524410754442215e-05,
+        "delta_morty": 7.111579179763794e-05,
+        "normalized_asymmetry": 0.7421757804256193,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 8.164020255208015e-05
+      },
+      "peak": {
+        "context_residual": 2.5875851861201227e-06,
+        "delta_lilith": -3.7250720197334886e-07,
+        "delta_morty": 2.9600923880934715e-06,
+        "normalized_asymmetry": 0.7764464695466881,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 3.3325995900668204e-06
+      },
+      "post": "LPC1",
+      "pre": "LPLC2"
+    },
+    {
+      "anchor": "DNp27",
+      "edge_id": 459293,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 6.056716665625572e-05,
+        "delta_lilith": 8.661765605211258e-06,
+        "delta_morty": -6.922893226146698e-05,
+        "normalized_asymmetry": 0.7775917832951712,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 7.789069786667824e-05
+      },
+      "peak": {
+        "context_residual": 2.8329232009127736e-06,
+        "delta_lilith": 2.8048816602677107e-07,
+        "delta_morty": -3.1134113669395447e-06,
+        "normalized_asymmetry": 0.834710389448906,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 3.3938995329663157e-06
+      },
+      "post": "DNp27",
+      "pre": "LoVCLo3"
+    },
+    {
+      "anchor": "DNp27",
+      "edge_id": 400330,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 6.008567288517952e-05,
+        "delta_lilith": 2.736179158091545e-05,
+        "delta_morty": -8.744746446609497e-05,
+        "normalized_asymmetry": 0.5233521664888806,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 0.00011480925604701042
+      },
+      "peak": {
+        "context_residual": 4.270783392712474e-06,
+        "delta_lilith": 1.097942003980279e-06,
+        "delta_morty": -5.368725396692753e-06,
+        "normalized_asymmetry": 0.6604303465905766,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 6.466667400673032e-06
+      },
+      "post": "DNp27",
+      "pre": "LC10"
+    },
+    {
+      "anchor": "DNp27",
+      "edge_id": 438667,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 5.9170182794332504e-05,
+        "delta_lilith": 0.000155698973685503,
+        "delta_morty": -0.0002148691564798355,
+        "normalized_asymmetry": 0.15967423525582786,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 0.0003705681301653385
+      },
+      "peak": {
+        "context_residual": 3.926208592019975e-06,
+        "delta_lilith": 4.679794074036181e-06,
+        "delta_morty": -8.606002666056156e-06,
+        "normalized_asymmetry": 0.2955192427543256,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 1.3285796740092337e-05
+      },
+      "post": "DNp27",
+      "pre": "LLPC2"
+    },
+    {
+      "anchor": "DNp27",
+      "edge_id": 467609,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 5.913618952035904e-05,
+        "delta_lilith": 2.184975892305374e-05,
+        "delta_morty": -8.098594844341278e-05,
+        "normalized_asymmetry": 0.5750550177052862,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 0.00010283570736646652
+      },
+      "peak": {
+        "context_residual": 3.1869130907580256e-06,
+        "delta_lilith": 6.92743924446404e-07,
+        "delta_morty": -3.87965701520443e-06,
+        "normalized_asymmetry": 0.6969889851788437,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 4.572400939650834e-06
+      },
+      "post": "DNp27",
+      "pre": "MTe13"
+    },
+    {
+      "anchor": "DNp30",
+      "edge_id": 51558,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 5.7754223234951496e-05,
+        "delta_lilith": 2.007500734180212e-05,
+        "delta_morty": -7.782923057675362e-05,
+        "normalized_asymmetry": 0.5899052427433825,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 9.790423791855574e-05
+      },
+      "peak": {
+        "context_residual": 4.538356733974069e-06,
+        "delta_lilith": 9.662835509516299e-07,
+        "delta_morty": -5.504640284925699e-06,
+        "normalized_asymmetry": 0.7013460286476634,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 6.470923835877329e-06
+      },
+      "post": "DNp30",
+      "pre": "AVLP053"
+    },
+    {
+      "anchor": "DNp27",
+      "edge_id": 456805,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 5.7017430663108826e-05,
+        "delta_lilith": -4.20399010181427e-06,
+        "delta_morty": 6.12214207649231e-05,
+        "normalized_asymmetry": 0.8714875444839858,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 6.542541086673737e-05
+      },
+      "peak": {
+        "context_residual": 5.045003490522504e-06,
+        "delta_lilith": -3.1394301913678646e-07,
+        "delta_morty": 5.35894650965929e-06,
+        "normalized_asymmetry": 0.8893181270168634,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 5.672889528796077e-06
+      },
+      "post": "LC11",
+      "pre": "LoVC16"
+    },
+    {
+      "anchor": "DNp27",
+      "edge_id": 440329,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 5.622627213597298e-05,
+        "delta_lilith": -7.75931403040886e-06,
+        "delta_morty": 6.398558616638184e-05,
+        "normalized_asymmetry": 0.7836971266494019,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 7.17449001967907e-05
+      },
+      "peak": {
+        "context_residual": 2.3154643713496625e-06,
+        "delta_lilith": -2.5195913622155786e-07,
+        "delta_morty": 2.5674235075712204e-06,
+        "normalized_asymmetry": 0.8212664486842343,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 2.8193826437927783e-06
+      },
+      "post": "LLPC1",
+      "pre": "LPLC2"
+    },
+    {
+      "anchor": "DNp30",
+      "edge_id": 68713,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "AVLP234",
+      "integrated": {
+        "context_residual": 5.572452209889889e-05,
+        "delta_lilith": 6.817514076828957e-06,
+        "delta_morty": -6.254203617572784e-05,
+        "normalized_asymmetry": 0.8034152744069258,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 6.93595502525568e-05
+      },
+      "peak": {
+        "context_residual": 7.632916094735265e-07,
+        "delta_lilith": 7.911876309663057e-08,
+        "delta_morty": -8.42410372570157e-07,
+        "normalized_asymmetry": 0.8282880919670914,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 9.215291356667876e-07
+      },
+      "post": "AVLP001",
+      "pre": "AVLP234"
+    },
+    {
+      "anchor": "DNp30",
+      "edge_id": 618525,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 5.441450048238039e-05,
+        "delta_lilith": 2.3231725208461285e-05,
+        "delta_morty": -7.764622569084167e-05,
+        "normalized_asymmetry": 0.5394092564062617,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 0.00010087795089930296
+      },
+      "peak": {
+        "context_residual": 2.10406506084837e-06,
+        "delta_lilith": 6.37806806480512e-07,
+        "delta_morty": -2.7418718673288822e-06,
+        "normalized_asymmetry": 0.6225636410803456,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 3.3796786738093942e-06
+      },
+      "post": "DNp30",
+      "pre": "WED061"
+    },
+    {
+      "anchor": "DNp27",
+      "edge_id": 440209,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 5.318550392985344e-05,
+        "delta_lilith": 0.00011390959843993187,
+        "delta_morty": -6.072409451007843e-05,
+        "normalized_asymmetry": 0.3045546539812225,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 0.0001746336929500103
+      },
+      "peak": {
+        "context_residual": 8.21542926132679e-07,
+        "delta_lilith": 3.0675437301397324e-06,
+        "delta_morty": -2.2460008040070534e-06,
+        "normalized_asymmetry": 0.15461297460727821,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 5.313544534146786e-06
+      },
+      "post": "CB0766",
+      "pre": "LPLC2"
+    },
+    {
+      "anchor": "DNp27",
+      "edge_id": 440475,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 5.173077806830406e-05,
+        "delta_lilith": -2.7442816644906998e-05,
+        "delta_morty": 7.917359471321106e-05,
+        "normalized_asymmetry": 0.4852046454137677,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 0.00010661641135811806
+      },
+      "peak": {
+        "context_residual": 2.002117980737239e-06,
+        "delta_lilith": -7.450507837347686e-07,
+        "delta_morty": 2.7471687644720078e-06,
+        "normalized_asymmetry": 0.5733081649363394,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 3.4922195482067764e-06
+      },
+      "post": "TmY14",
+      "pre": "LPLC2"
+    },
+    {
+      "anchor": "DNp30",
+      "edge_id": 45801,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "AVLP234",
+      "integrated": {
+        "context_residual": 5.0113070756196976e-05,
+        "delta_lilith": 1.4509540051221848e-05,
+        "delta_morty": -6.462261080741882e-05,
+        "normalized_asymmetry": 0.6332833142083738,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 7.913215085864067e-05
+      },
+      "peak": {
+        "context_residual": 7.235103112179786e-07,
+        "delta_lilith": 2.1252708393149078e-07,
+        "delta_morty": -9.360373951494694e-07,
+        "normalized_asymmetry": 0.6299257241499454,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 1.1485644790809602e-06
+      },
+      "post": "DNp30",
+      "pre": "AVLP001"
+    },
+    {
+      "anchor": "DNp30",
+      "edge_id": 533269,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 4.9967842642217875e-05,
+        "delta_lilith": 7.74202635511756e-06,
+        "delta_morty": -5.7709868997335434e-05,
+        "normalized_asymmetry": 0.7634285053648212,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 6.5451895352453e-05
+      },
+      "peak": {
+        "context_residual": 4.024590452900156e-06,
+        "delta_lilith": 4.991925379727036e-07,
+        "delta_morty": -4.52378299087286e-06,
+        "normalized_asymmetry": 0.8012363249209643,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 5.0229755288455635e-06
+      },
+      "post": "DNp30",
+      "pre": "PVLP081"
+    },
+    {
+      "anchor": "DNp30",
+      "edge_id": 54368,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 4.974630428478122e-05,
+        "delta_lilith": 1.7621845472604036e-05,
+        "delta_morty": -6.736814975738525e-05,
+        "normalized_asymmetry": 0.5853195326127975,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 8.498999522998929e-05
+      },
+      "peak": {
+        "context_residual": 3.657396518974565e-06,
+        "delta_lilith": 8.253791747847572e-07,
+        "delta_morty": -4.482775693759322e-06,
+        "normalized_asymmetry": 0.6890146594343273,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 5.308154868544079e-06
+      },
+      "post": "DNp30",
+      "pre": "AVLP079"
+    },
+    {
+      "anchor": "DNp27",
+      "edge_id": 440330,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 4.9120280891656876e-05,
+        "delta_lilith": -7.947441190481186e-06,
+        "delta_morty": 5.706772208213806e-05,
+        "normalized_asymmetry": 0.755520380463977,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 6.501516327261925e-05
+      },
+      "peak": {
+        "context_residual": 1.9363142200745642e-06,
+        "delta_lilith": -2.458909875713289e-07,
+        "delta_morty": 2.182205207645893e-06,
+        "normalized_asymmetry": 0.7974619061174955,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 2.428096195217222e-06
+      },
+      "post": "LLPC2",
+      "pre": "LPLC2"
+    },
+    {
+      "anchor": "DNp30",
+      "edge_id": 440482,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 4.86034550704062e-05,
+        "delta_lilith": 1.5010533388704062e-05,
+        "delta_morty": -6.361398845911026e-05,
+        "normalized_asymmetry": 0.6181717093870928,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 7.862452184781432e-05
+      },
+      "peak": {
+        "context_residual": 1.796817741706036e-06,
+        "delta_lilith": 4.0471240936312824e-07,
+        "delta_morty": -2.2015301510691643e-06,
+        "normalized_asymmetry": 0.6894284396184526,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 2.6062425604322925e-06
+      },
+      "post": "WED061",
+      "pre": "LPLC2"
+    },
+    {
+      "anchor": "DNp30",
+      "edge_id": 401645,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 4.7344190534204245e-05,
+        "delta_lilith": 5.338864866644144e-06,
+        "delta_morty": -5.268305540084839e-05,
+        "normalized_asymmetry": 0.8159707627037878,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 5.802192026749253e-05
+      },
+      "peak": {
+        "context_residual": 4.196421286906116e-06,
+        "delta_lilith": 3.151671990053728e-07,
+        "delta_morty": -4.5115884859114885e-06,
+        "normalized_asymmetry": 0.8694082652700904,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 4.826755684916861e-06
+      },
+      "post": "LoVC16",
+      "pre": "LC12"
+    },
+    {
+      "anchor": "DNp27",
+      "edge_id": 439962,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 4.689954221248627e-05,
+        "delta_lilith": 7.670745253562927e-05,
+        "delta_morty": -0.00012360699474811554,
+        "normalized_asymmetry": 0.23412960397236454,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 0.0002003144472837448
+      },
+      "peak": {
+        "context_residual": 4.08467894885689e-06,
+        "delta_lilith": 3.0129303922876716e-06,
+        "delta_morty": -7.097609341144562e-06,
+        "normalized_asymmetry": 0.40400206680857986,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 1.0110539733432233e-05
+      },
+      "post": "DNp27",
+      "pre": "LPLC1"
+    },
+    {
+      "anchor": "DNp30",
+      "edge_id": 440327,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 4.675769014284015e-05,
+        "delta_lilith": 1.3010867405682802e-05,
+        "delta_morty": -5.976855754852295e-05,
+        "normalized_asymmetry": 0.6424575375837471,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 7.277942495420575e-05
+      },
+      "peak": {
+        "context_residual": 1.7392030713381246e-06,
+        "delta_lilith": 3.5755329008679837e-07,
+        "delta_morty": -2.096756361424923e-06,
+        "normalized_asymmetry": 0.7086322910668057,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 2.4543096515117213e-06
+      },
+      "post": "LHAD1g1",
+      "pre": "LPLC2"
+    },
+    {
+      "anchor": "DNp30",
+      "edge_id": 271395,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 4.473369335755706e-05,
+        "delta_lilith": 9.85065707936883e-06,
+        "delta_morty": -5.458435043692589e-05,
+        "normalized_asymmetry": 0.6942451794739766,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 6.443500751629472e-05
+      },
+      "peak": {
+        "context_residual": 3.2208427001023665e-06,
+        "delta_lilith": 4.7362664190586656e-07,
+        "delta_morty": -3.694469342008233e-06,
+        "normalized_asymmetry": 0.7727371712485844,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 4.1680959839141e-06
+      },
+      "post": "DNp30",
+      "pre": "CB3609"
+    },
+    {
+      "anchor": "DNp27",
+      "edge_id": 170273,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 4.4640153646469116e-05,
+        "delta_lilith": 6.847083568572998e-06,
+        "delta_morty": -5.1487237215042114e-05,
+        "normalized_asymmetry": 0.7652468229133406,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 5.833432078361511e-05
+      },
+      "peak": {
+        "context_residual": 3.120992914773524e-06,
+        "delta_lilith": 4.1698513086885214e-07,
+        "delta_morty": -3.537978045642376e-06,
+        "normalized_asymmetry": 0.7891332423293583,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 3.954963176511228e-06
+      },
+      "post": "DNp27",
+      "pre": "CB1099"
+    },
+    {
+      "anchor": "DNp30",
+      "edge_id": 440297,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 4.447164246812463e-05,
+        "delta_lilith": -5.792302545160055e-06,
+        "delta_morty": 5.026394501328468e-05,
+        "normalized_asymmetry": 0.7933396259133846,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 5.605624755844474e-05
+      },
+      "peak": {
+        "context_residual": 2.1241030481178313e-06,
+        "delta_lilith": -2.3217216948978603e-07,
+        "delta_morty": 2.3562752176076174e-06,
+        "normalized_asymmetry": 0.8206089328706534,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 2.5884473870974034e-06
+      },
+      "post": "LC16",
+      "pre": "LPLC2"
+    },
+    {
+      "anchor": "DNp30",
+      "edge_id": 402496,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 4.4059474021196365e-05,
+        "delta_lilith": 2.962537109851837e-06,
+        "delta_morty": -4.70220111310482e-05,
+        "normalized_asymmetry": 0.8814618831574142,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 4.998454824090004e-05
+      },
+      "peak": {
+        "context_residual": 2.7259975468041375e-06,
+        "delta_lilith": 1.8121318134944886e-07,
+        "delta_morty": -2.9072107281535864e-06,
+        "normalized_asymmetry": 0.8826500592798426,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 3.0884239095030352e-06
+      },
+      "post": "PVLP082",
+      "pre": "LC17"
+    },
+    {
+      "anchor": "DNp30",
+      "edge_id": 74704,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 4.374817945063114e-05,
+        "delta_lilith": 1.866137608885765e-06,
+        "delta_morty": -4.561431705951691e-05,
+        "normalized_asymmetry": 0.9213934398093435,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 4.748045466840267e-05
+      },
+      "peak": {
+        "context_residual": 3.5043321986449882e-06,
+        "delta_lilith": 1.1531119525898248e-07,
+        "delta_morty": -3.6196433939039707e-06,
+        "normalized_asymmetry": 0.9382529599724933,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 3.734954589162953e-06
+      },
+      "post": "DNp30",
+      "pre": "AVLP308"
+    },
+    {
+      "anchor": "DNp27",
+      "edge_id": 440337,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 4.357891157269478e-05,
+        "delta_lilith": -2.703024074435234e-05,
+        "delta_morty": 7.060915231704712e-05,
+        "normalized_asymmetry": 0.44632509693388467,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 9.763939306139946e-05
+      },
+      "peak": {
+        "context_residual": 1.7990678315982223e-06,
+        "delta_lilith": -7.826747605577111e-07,
+        "delta_morty": 2.5817425921559334e-06,
+        "normalized_asymmetry": 0.5347338463068931,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 3.3644173527136445e-06
+      },
+      "post": "LPLC4",
+      "pre": "LPLC2"
+    },
+    {
+      "anchor": "DNc02",
+      "edge_id": 384762,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "TmY14",
+      "integrated": {
+        "context_residual": 4.2272498831152916e-05,
+        "delta_lilith": -5.617528222501278e-05,
+        "delta_morty": 9.84477810561657e-05,
+        "normalized_asymmetry": 0.2733906438930223,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 0.00015462306328117847
+      },
+      "peak": {
+        "context_residual": 2.7474739908939227e-05,
+        "delta_lilith": -7.275957614183426e-12,
+        "delta_morty": 2.747474718489684e-05,
+        "normalized_asymmetry": 0.9999994703532201,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 2.7474754460854456e-05
+      },
+      "post": "DNc02",
+      "pre": "KCab"
+    },
+    {
+      "anchor": "DNp30",
+      "edge_id": 161071,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 4.1759805753827095e-05,
+        "delta_lilith": 1.0316958650946617e-05,
+        "delta_morty": -5.207676440477371e-05,
+        "normalized_asymmetry": 0.6692949820694906,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 6.239372305572033e-05
+      },
+      "peak": {
+        "context_residual": 3.0255068850237876e-06,
+        "delta_lilith": 4.906723916064948e-07,
+        "delta_morty": -3.5161792766302824e-06,
+        "normalized_asymmetry": 0.7550833261454791,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 4.006851668236777e-06
+      },
+      "post": "DNp30",
+      "pre": "CB0930"
+    },
+    {
+      "anchor": "DNc02",
+      "edge_id": 42859,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "AVLP234",
+      "integrated": {
+        "context_residual": 4.121498204767704e-05,
+        "delta_lilith": 0.00022997939959168434,
+        "delta_morty": -0.0001887644175440073,
+        "normalized_asymmetry": 0.09842529098004939,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 0.00041874381713569164
+      },
+      "peak": {
+        "context_residual": 5.67917013540864e-05,
+        "delta_lilith": 4.616385558620095e-05,
+        "delta_morty": 1.0627845767885447e-05,
+        "normalized_asymmetry": 1.0,
+        "sign_relation": "SAME",
+        "total_effect_magnitude": 5.67917013540864e-05
+      },
+      "post": "KCab",
+      "pre": "APL"
+    },
+    {
+      "anchor": "DNp30",
+      "edge_id": 440319,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 4.120200173929334e-05,
+        "delta_lilith": 5.961570423096418e-06,
+        "delta_morty": -4.7163572162389755e-05,
+        "normalized_asymmetry": 0.7755650099760815,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 5.3125142585486174e-05
+      },
+      "peak": {
+        "context_residual": 2.1580599423032254e-06,
+        "delta_lilith": 2.493507054168731e-07,
+        "delta_morty": -2.4074106477200985e-06,
+        "normalized_asymmetry": 0.8122897225055972,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 2.6567613531369716e-06
+      },
+      "post": "LC4",
+      "pre": "LPLC2"
+    },
+    {
+      "anchor": "DNp30",
+      "edge_id": 74704,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "AVLP435",
+      "integrated": {
+        "context_residual": 4.029576666653156e-05,
+        "delta_lilith": 2.185581251978874e-06,
+        "delta_morty": -4.248134791851044e-05,
+        "normalized_asymmetry": 0.9021387280223934,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 4.466692917048931e-05
+      },
+      "peak": {
+        "context_residual": 6.031987140886486e-07,
+        "delta_lilith": 2.9023794922977686e-08,
+        "delta_morty": -6.322225090116262e-07,
+        "normalized_asymmetry": 0.9122148743961884,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 6.612463039346039e-07
+      },
+      "post": "DNp30",
+      "pre": "AVLP308"
+    },
+    {
+      "anchor": "DNp30",
+      "edge_id": 536392,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 4.026066744700074e-05,
+        "delta_lilith": 9.852810762822628e-07,
+        "delta_morty": -4.1245948523283005e-05,
+        "normalized_asymmetry": 0.9533387454912085,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 4.223122959956527e-05
+      },
+      "peak": {
+        "context_residual": 3.241108061047271e-06,
+        "delta_lilith": 6.97145878802985e-08,
+        "delta_morty": -3.3108226489275694e-06,
+        "normalized_asymmetry": 0.9587553202365386,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 3.380537236807868e-06
+      },
+      "post": "PVLP082",
+      "pre": "PVLP106"
+    },
+    {
+      "anchor": "DNp27",
+      "edge_id": 528589,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 3.97232361137867e-05,
+        "delta_lilith": -1.8130522221326828e-05,
+        "delta_morty": 5.7853758335113525e-05,
+        "normalized_asymmetry": 0.5227822889535775,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 7.598428055644035e-05
+      },
+      "peak": {
+        "context_residual": 2.8437498258426785e-06,
+        "delta_lilith": -8.299684850499034e-07,
+        "delta_morty": 3.673718310892582e-06,
+        "normalized_asymmetry": 0.6314270851171763,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 4.503686795942485e-06
+      },
+      "post": "LPLC1",
+      "pre": "PVLP011"
+    },
+    {
+      "anchor": "DNp30",
+      "edge_id": 84091,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "AVLP435",
+      "integrated": {
+        "context_residual": 3.9311358705163e-05,
+        "delta_lilith": 1.1546304449439049e-05,
+        "delta_morty": -5.085766315460205e-05,
+        "normalized_asymmetry": 0.629949668498599,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 6.24039676040411e-05
+      },
+      "peak": {
+        "context_residual": 6.006230250932276e-07,
+        "delta_lilith": 1.7767160898074508e-07,
+        "delta_morty": -7.782946340739727e-07,
+        "normalized_asymmetry": 0.6282889479172217,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 9.559662430547178e-07
+      },
+      "post": "AVLP308",
+      "pre": "AVLP435"
+    },
+    {
+      "anchor": "DNp27",
+      "edge_id": 600154,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "TmY14",
+      "integrated": {
+        "context_residual": 3.623729571700096e-05,
+        "delta_lilith": -7.026363164186478e-06,
+        "delta_morty": 4.326365888118744e-05,
+        "normalized_asymmetry": 0.7205663120271859,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 5.029002204537392e-05
+      },
+      "peak": {
+        "context_residual": 2.759043127298355e-07,
+        "delta_lilith": -6.397021934390068e-08,
+        "delta_morty": 3.398745320737362e-07,
+        "normalized_asymmetry": 0.6831940040357452,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 4.0384475141763687e-07
+      },
+      "post": "LPLC2",
+      "pre": "TmY14"
+    },
+    {
+      "anchor": "DNp27",
+      "edge_id": 440397,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 3.6125537008047104e-05,
+        "delta_lilith": 4.658941179513931e-06,
+        "delta_morty": -4.0784478187561035e-05,
+        "normalized_asymmetry": 0.794956398774452,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 4.5443419367074966e-05
+      },
+      "peak": {
+        "context_residual": 1.3653989299200475e-06,
+        "delta_lilith": 1.3798853615298867e-07,
+        "delta_morty": -1.5033874660730362e-06,
+        "normalized_asymmetry": 0.831862369175802,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 1.6413760022260249e-06
+      },
+      "post": "LoVCLo3",
+      "pre": "LPLC2"
+    },
+    {
+      "anchor": "DNp30",
+      "edge_id": 208012,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 3.486766945570707e-05,
+        "delta_lilith": 1.0906951501965523e-06,
+        "delta_morty": -3.5958364605903625e-05,
+        "normalized_asymmetry": 0.9411215746161025,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 3.704905975610018e-05
+      },
+      "peak": {
+        "context_residual": 2.802269591484219e-06,
+        "delta_lilith": 7.196649676188827e-08,
+        "delta_morty": -2.874236088246107e-06,
+        "normalized_asymmetry": 0.9511462673150204,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 2.9462025850079954e-06
+      },
+      "post": "PVLP082",
+      "pre": "CB1920"
+    },
+    {
+      "anchor": "DNp30",
+      "edge_id": 402382,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 3.4477387089282274e-05,
+        "delta_lilith": 2.277723979204893e-06,
+        "delta_morty": -3.675511106848717e-05,
+        "normalized_asymmetry": 0.883291901476187,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 3.903283504769206e-05
+      },
+      "peak": {
+        "context_residual": 2.8884733183076605e-06,
+        "delta_lilith": 1.6952435544226319e-07,
+        "delta_morty": -3.0579976737499237e-06,
+        "normalized_asymmetry": 0.8949507678590852,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 3.227522029192187e-06
+      },
+      "post": "AVLP479",
+      "pre": "LC17"
+    },
+    {
+      "anchor": "DNp27",
+      "edge_id": 440335,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 3.267452120780945e-05,
+        "delta_lilith": -1.856684684753418e-05,
+        "delta_morty": 5.124136805534363e-05,
+        "normalized_asymmetry": 0.46806126260739633,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 6.980821490287781e-05
+      },
+      "peak": {
+        "context_residual": 1.5865152818150818e-06,
+        "delta_lilith": -6.017435225658119e-07,
+        "delta_morty": 2.1882588043808937e-06,
+        "normalized_asymmetry": 0.5686429959186867,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 2.7900023269467056e-06
+      },
+      "post": "LPLC1",
+      "pre": "LPLC2"
+    },
+    {
+      "anchor": "DNp30",
+      "edge_id": 539487,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 3.18133388645947e-05,
+        "delta_lilith": 1.1983211152255535e-06,
+        "delta_morty": -3.301165997982025e-05,
+        "normalized_asymmetry": 0.9299431875220129,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 3.4209981095045805e-05
+      },
+      "peak": {
+        "context_residual": 2.5751814973773435e-06,
+        "delta_lilith": 8.525785233359784e-08,
+        "delta_morty": -2.6604393497109413e-06,
+        "normalized_asymmetry": 0.9378971197041597,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 2.745697202044539e-06
+      },
+      "post": "PVLP082",
+      "pre": "PVLP135"
+    },
+    {
+      "anchor": "DNp30",
+      "edge_id": 101198,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 3.0266819521784782e-05,
+        "delta_lilith": 1.1042924597859383e-05,
+        "delta_morty": -4.1309744119644165e-05,
+        "normalized_asymmetry": 0.5781332692914927,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 5.235266871750355e-05
+      },
+      "peak": {
+        "context_residual": 2.131293513230048e-06,
+        "delta_lilith": 5.258571036392823e-07,
+        "delta_morty": -2.6571506168693304e-06,
+        "normalized_asymmetry": 0.6695847765300076,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 3.1830077205086127e-06
+      },
+      "post": "DNp30",
+      "pre": "AVLP580"
+    },
+    {
+      "anchor": "DNp30",
+      "edge_id": 440184,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 3.0091323424130678e-05,
+        "delta_lilith": 4.206493031233549e-06,
+        "delta_morty": -3.429781645536423e-05,
+        "normalized_asymmetry": 0.7815053386324091,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 3.8504309486597776e-05
+      },
+      "peak": {
+        "context_residual": 1.0699186532292515e-06,
+        "delta_lilith": 1.1387965059839189e-07,
+        "delta_morty": -1.1837983038276434e-06,
+        "normalized_asymmetry": 0.8244870382362918,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 1.2976779544260353e-06
+      },
+      "post": "AVLP340",
+      "pre": "LPLC2"
+    },
+    {
+      "anchor": "DNp27",
+      "edge_id": 600148,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "TmY14",
+      "integrated": {
+        "context_residual": 3.0075665563344955e-05,
+        "delta_lilith": -6.22263178229332e-06,
+        "delta_morty": 3.6298297345638275e-05,
+        "normalized_asymmetry": 0.7073144021114189,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 4.2520929127931595e-05
+      },
+      "peak": {
+        "context_residual": 3.356108209118247e-07,
+        "delta_lilith": -7.264316082000732e-08,
+        "delta_morty": 4.0825398173183203e-07,
+        "normalized_asymmetry": 0.6978848306956759,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 4.808971425518394e-07
+      },
+      "post": "LLPC1",
+      "pre": "TmY14"
+    },
+    {
+      "anchor": "DNp30",
+      "edge_id": 101007,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 2.976990072056651e-05,
+        "delta_lilith": 7.30372266843915e-06,
+        "delta_morty": -3.707362338900566e-05,
+        "normalized_asymmetry": 0.6708355358166415,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 4.437734605744481e-05
+      },
+      "peak": {
+        "context_residual": 1.8392311176285148e-06,
+        "delta_lilith": 3.022869350388646e-07,
+        "delta_morty": -2.1415180526673794e-06,
+        "normalized_asymmetry": 0.7526096095559645,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 2.443804987706244e-06
+      },
+      "post": "DNp30",
+      "pre": "AVLP577"
+    },
+    {
+      "anchor": "DNp27",
+      "edge_id": 440303,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 2.959882840514183e-05,
+        "delta_lilith": -9.218696504831314e-06,
+        "delta_morty": 3.8817524909973145e-05,
+        "normalized_asymmetry": 0.6161772831703132,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 4.803622141480446e-05
+      },
+      "peak": {
+        "context_residual": 1.3129101716913283e-06,
+        "delta_lilith": -3.06426954921335e-07,
+        "delta_morty": 1.6193371266126633e-06,
+        "normalized_asymmetry": 0.6817606498535941,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 1.9257640815339983e-06
+      },
+      "post": "LC21",
+      "pre": "LPLC2"
+    },
+    {
+      "anchor": "DNp27",
+      "edge_id": 440472,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 2.91457399725914e-05,
+        "delta_lilith": 4.242174327373505e-06,
+        "delta_morty": -3.3387914299964905e-05,
+        "normalized_asymmetry": 0.7745328548446975,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 3.763008862733841e-05
+      },
+      "peak": {
+        "context_residual": 1.7904021660797298e-06,
+        "delta_lilith": 2.2043968783691525e-07,
+        "delta_morty": -2.010841853916645e-06,
+        "normalized_asymmetry": 0.8024097957054115,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 2.2312815417535603e-06
+      },
+      "post": "PVLP151",
+      "pre": "LPLC2"
+    },
+    {
+      "anchor": "DNc02",
+      "edge_id": 84133,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "AVLP435",
+      "integrated": {
+        "context_residual": 2.9089631425449625e-05,
+        "delta_lilith": 1.0892803402384743e-05,
+        "delta_morty": -3.998243482783437e-05,
+        "normalized_asymmetry": 0.5717836896176111,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 5.087523823021911e-05
+      },
+      "peak": {
+        "context_residual": 5.630215127894189e-06,
+        "delta_lilith": 3.1873141779215075e-06,
+        "delta_morty": -8.817529305815697e-06,
+        "normalized_asymmetry": 0.46899529640027077,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 1.2004843483737204e-05
+      },
+      "post": "AVLP473",
+      "pre": "AVLP435"
+    },
+    {
+      "anchor": "DNp27",
+      "edge_id": 600132,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "TmY14",
+      "integrated": {
+        "context_residual": 2.9081013053655624e-05,
+        "delta_lilith": 0.005361597519367933,
+        "delta_morty": -0.005332516506314278,
+        "normalized_asymmetry": 0.0027193475760419954,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 0.010694114025682211
+      },
+      "peak": {
+        "context_residual": 4.3879845179617405e-07,
+        "delta_lilith": 0.00011835948680527508,
+        "delta_morty": -0.00011792068835347891,
+        "normalized_asymmetry": 0.0018571107436387768,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 0.000236280175158754
+      },
+      "post": "DNp27",
+      "pre": "TmY14"
+    },
+    {
+      "anchor": "DNp27",
+      "edge_id": 406982,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 2.8925947844982147e-05,
+        "delta_lilith": 1.4231540262699127e-05,
+        "delta_morty": -4.3157488107681274e-05,
+        "normalized_asymmetry": 0.5040327161195047,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 5.73890283703804e-05
+      },
+      "peak": {
+        "context_residual": 1.326465280726552e-06,
+        "delta_lilith": 4.127796273678541e-07,
+        "delta_morty": -1.7392449080944061e-06,
+        "normalized_asymmetry": 0.6163801847368919,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 2.1520245354622602e-06
+      },
+      "post": "DNp27",
+      "pre": "LC4"
+    },
+    {
+      "anchor": "DNp30",
+      "edge_id": 401667,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 2.888153539970517e-05,
+        "delta_lilith": 1.7943675629794598e-06,
+        "delta_morty": -3.067590296268463e-05,
+        "normalized_asymmetry": 0.8894762788279689,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 3.247027052566409e-05
+      },
+      "peak": {
+        "context_residual": 2.8156337066320702e-06,
+        "delta_lilith": 1.3226417650002986e-07,
+        "delta_morty": -2.9478978831321e-06,
+        "normalized_asymmetry": 0.9141186899004746,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 3.08016205963213e-06
+      },
+      "post": "PVLP097",
+      "pre": "LC12"
+    },
+    {
+      "anchor": "DNp30",
+      "edge_id": 618378,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 2.87485308945179e-05,
+        "delta_lilith": 1.2256670743227005e-05,
+        "delta_morty": -4.1005201637744904e-05,
+        "normalized_asymmetry": 0.5397581723917853,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 5.326187238097191e-05
+      },
+      "peak": {
+        "context_residual": 1.1225329217268154e-06,
+        "delta_lilith": 3.588520485209301e-07,
+        "delta_morty": -1.4813849702477455e-06,
+        "normalized_asymmetry": 0.6099936640106911,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 1.8402370187686756e-06
+      },
+      "post": "DNp30",
+      "pre": "WED060"
+    },
+    {
+      "anchor": "DNp27",
+      "edge_id": 440400,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 2.8106383979320526e-05,
+        "delta_lilith": 1.0433606803417206e-05,
+        "delta_morty": -3.853999078273773e-05,
+        "normalized_asymmetry": 0.5739089093848055,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 4.897359758615494e-05
+      },
+      "peak": {
+        "context_residual": 1.0459116310812533e-06,
+        "delta_lilith": 2.7877831598743796e-07,
+        "delta_morty": -1.3246899470686913e-06,
+        "normalized_asymmetry": 0.6522808434560462,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 1.6034682630561292e-06
+      },
+      "post": "MTe13",
+      "pre": "LPLC2"
+    },
+    {
+      "anchor": "DNp30",
+      "edge_id": 531384,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "LPLC2",
+      "integrated": {
+        "context_residual": 2.8040085453540087e-05,
+        "delta_lilith": -4.793400876224041e-07,
+        "delta_morty": 2.851942554116249e-05,
+        "normalized_asymmetry": 0.96694065576732,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 2.8998765628784895e-05
+      },
+      "peak": {
+        "context_residual": 2.268339812872e-06,
+        "delta_lilith": -3.455897967796773e-08,
+        "delta_morty": 2.3028987925499678e-06,
+        "normalized_asymmetry": 0.9704302853394198,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 2.3374577722279355e-06
+      },
+      "post": "AVLP435",
+      "pre": "PVLP061"
+    },
+    {
+      "anchor": "DNc02",
+      "edge_id": 600128,
+      "first_positive_frame_relation": "RECIPROCAL_EXACT",
+      "input": "TmY14",
+      "integrated": {
+        "context_residual": 2.743664663285017e-05,
+        "delta_lilith": -0.0030955920228734612,
+        "delta_morty": 0.0031230286695063114,
+        "normalized_asymmetry": 0.004412014816480241,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 0.006218620692379773
+      },
+      "peak": {
+        "context_residual": 3.129624019493349e-06,
+        "delta_lilith": -5.9081072322442196e-05,
+        "delta_morty": 5.595144830294885e-05,
+        "normalized_asymmetry": 0.02720642825592878,
+        "sign_relation": "OPPOSITE",
+        "total_effect_magnitude": 0.00011503252062539104
+      },
+      "post": "DNc02",
+      "pre": "TmY14"
+    }
+  ]
+}
