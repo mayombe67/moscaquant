@@ -1,0 +1,81 @@
+{
+  "schema": "moscaquant.sq03f4_sit_down/v1",
+  "sidequest_id": "SQ-03F.4",
+  "title": "THE SIT-DOWN",
+  "status": "FROZEN_BEFORE_ANALYSIS",
+  "class": "SOURCE_LEVEL_MATCHED_RECURRENCE_PHENOTYPE_TEST",
+  "question": "Among source neurons with comparable hotspot opportunity, what source-level graph properties distinguish the most recurrent hotspot-producing sources from matched low-recurrence sources?",
+  "universe": {
+    "candidate_sources": "all unique pre labels represented by the frozen 114825 SQ-03F candidate edges",
+    "hotspot_sets": {
+      "S": "reuse exact SQ-03F S hotspot membership",
+      "C": "reuse exact SQ-03F C hotspot membership"
+    },
+    "no_new_neural_dynamics": true
+  },
+  "made_source_definition": {
+    "ranking": "hotspot-edge count per source DESC, source label ASC",
+    "selection": "exact top 1% of candidate sources by hotspot-edge count, separately for S and C; k = ceil(candidate_source_count * 0.01)",
+    "eligibility": "source must contribute at least one hotspot edge",
+    "ties": "source label ASC; exact k; no tie expansion"
+  },
+  "control_definition": {
+    "pool": "candidate sources outside the current made-source set",
+    "ratio": "1:1",
+    "without_replacement": true,
+    "exact_match_bins": [
+      "candidate_edge_count_decile",
+      "sum_candidate_context_count_decile",
+      "distinct_candidate_context_signature_count_decile"
+    ],
+    "selection_order": "made sources in recurrence-count DESC, source label ASC; choose control minimizing absolute candidate-edge-count difference, then absolute sum-context-count difference, then absolute distinct-context-count difference, then source label ASC",
+    "failure_rule": "record unmatched; do not widen bins"
+  },
+  "primary_features": [
+    "source_out_strength",
+    "source_mean_outgoing_weight",
+    "source_max_outgoing_weight",
+    "source_out_edge_count"
+  ],
+  "secondary_features": [
+    "source_median_outgoing_weight",
+    "source_top1_output_share",
+    "source_top5_output_share",
+    "source_output_hhi",
+    "distinct_downstream_target_count",
+    "source_target_diversity_ratio"
+  ],
+  "reporting": {
+    "for_each_feature": [
+      "made-source median",
+      "matched-control median",
+      "median paired difference",
+      "fraction made > control"
+    ],
+    "audits": [
+      "candidate source count",
+      "made-source k",
+      "matched count",
+      "unmatched count",
+      "exact opportunity-bin checks",
+      "overlap of S-made and C-made source sets"
+    ],
+    "no_p_values": true,
+    "no_significance_threshold": true
+  },
+  "frozen_interpretation": [
+    "If made sources retain greater out-strength or heavier outgoing weights after opportunity matching, recurrent hotspot production is associated with source-level network properties beyond opportunity alone.",
+    "If feature differences collapse under source-level opportunity matching, the SQ-03F.2 source phenotype is compatible with the same opportunity structure that drives recurrence.",
+    "Concentration and target-diversity metrics are descriptive model-level features only and do not define a biological neuron class."
+  ],
+  "family_model": {
+    "presentation_name": "THE SIT-DOWN",
+    "translation": "Put a made source across the table from a source with the same number of jobs and ask what is actually different about the operation.",
+    "firewall": "Family Model language is presentation-only and has no scientific authority."
+  },
+  "claim_boundary": "SQ-03F.4 may describe graph properties associated with recurrent hotspot-producing sources after explicit source-opportunity matching inside the frozen model. It does not establish biological neuron classes, sex mechanisms, living-fly behavior, population effects, or financial utility.",
+  "parent": {
+    "sq03f3_result": "artifacts/sidequests/sq03f3-made-men-result-v1.json",
+    "sq03f3_result_sha256": "4a6d47be04d8ac31e5994e5ff83f3d8722840e41ebf104e03dc982e7399f0788"
+  }
+}
