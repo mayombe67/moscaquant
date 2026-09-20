@@ -1,7 +1,7 @@
 # MoscaQuant Experimental Highlight Reel
 
 **Science, Failure, Causality, and the Increasingly Questionable Treatment of MQ-001**  
-Version 0.1 — 2026-09-18
+Version 0.2 — 2026-09-20
 > **Canonical status:** Project retrospective and narrative record.
 >
 > This document is canonical for MoscaQuant project history, highlight-reel
@@ -125,6 +125,12 @@ WARDEN remained an independent authority boundary. Oracle/D6/plasticity could no
 **Science:** experimental freedom remained separated from financial authority.  
 **Lore:** Senator Armstrong kept saying “no” to the budget request.
 
+### 17 — Turning the Knobs Did Not Fix the Ceiling
+**Reference:** SQ-04 GLOBAL MODULATION SENSITIVITY.\
+Small global changes to spike threshold and membrane time constant produced large, deterministic, directionally ordered changes in retinal and relay activity. Lower threshold or slower membrane decay increased and accelerated relay firing; higher threshold or faster decay suppressed and delayed it. No tested setting produced wider-network spikes.\
+**Science:** the frozen runtime is strongly sensitive to global model mechanics, but the wider-network propagation limit was not overcome by the tested excitability and membrane-persistence changes.\
+**Lore:** We turned every scientifically permitted knob. MORTY got louder. The rest of the brain still declined the meeting.
+
 ## Scientific lessons to keep
 
 - Preregistration beat vibes.
@@ -163,6 +169,8 @@ These are candidates, not yet the canonical MQ-8 achievement registry: `MISSION 
 - `docs/experiments/mq7-16-first-wave-causal-screen-protocol.md`
 - `docs/experiments/mq7-17-cumulative-first-wave-mediation-protocol.md`
 - `docs/experiments/mq7-17-cumulative-first-wave-mediation-results.md`
+- `docs/experiments/sq04-global-modulation-protocol.md`
+- `docs/experiments/sq04-global-modulation-results.md`
 
 ## Closing note
 
