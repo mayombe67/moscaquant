@@ -1,0 +1,40 @@
+{
+  "schema": "moscaquant.sq03b_execution/v1",
+  "sidequest_id": "SQ-03B",
+  "title": "FIND THE DIFFERENCE",
+  "status": "FROZEN_BEFORE_COUNTERFACTUAL_EXECUTION",
+  "batch_size": 32,
+  "frames": 64,
+  "stimulus": {
+    "frame": 0,
+    "amplitude": 0.5
+  },
+  "runtime": {
+    "dt_ms": 1.0,
+    "tau_ms": 20.0,
+    "threshold": 1.0,
+    "reset_voltage": 0.0
+  },
+  "parity": {
+    "scalar_vs_batched_rtol": 1e-06,
+    "scalar_vs_batched_atol": 1e-07,
+    "aa_replay_exact": true
+  },
+  "checkpoint": {
+    "directory": "artifacts/sidequests/sq03b-checkpoints-v1",
+    "manifest": "manifest.json",
+    "results_ndjson": "results.ndjson",
+    "checkpoint_every_batches": 1
+  },
+  "output": {
+    "artifact": "artifacts/sidequests/sq03b-mechanistic-localization-result-v1.json"
+  },
+  "controls": {
+    "require_clean_git_worktree_at_start": true,
+    "require_sq03a_baseline_replay": true,
+    "require_exact_aa_per_batch": true,
+    "refuse_candidate_hash_change_on_resume": true,
+    "refuse_config_hash_change_on_resume": true
+  },
+  "claim_boundary": "SQ-03B localizes sensitivity within the frozen matched-central-brain computational model by single-edge counterfactual equalization. Reported effects are model-level sensitivities and do not establish biological mechanism, general sex differences, behavior, intelligence, market skill, profitability, or financial usefulness."
+}
