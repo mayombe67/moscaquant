@@ -218,3 +218,19 @@ def semantics_for(achievement_id: str, category: str) -> dict:
         merged.get("related_achievement_ids", [])
     )
     return merged
+
+
+SEMANTICS_BY_ID.update({
+    "ACH-129": {"family": "PROVENANCE", "related_achievement_ids": ["ACH-130"]},
+    "ACH-130": {"family": "PROVENANCE", "related_achievement_ids": ["ACH-129", "ACH-140"]},
+    "ACH-131": {"family": "CONTAINMENT", "related_achievement_ids": []},
+    "ACH-132": {"family": "BEHAVIOR", "related_achievement_ids": ["ACH-134"]},
+    "ACH-133": {"family": "REWARD", "related_achievement_ids": ["ACH-134"]},
+    "ACH-134": {"family": "REWARD", "related_achievement_ids": ["ACH-133"]},
+    "ACH-135": {"family": "INTERPRETATION", "related_achievement_ids": ["ACH-137"]},
+    "ACH-136": {"family": "NULL_RESULTS", "related_achievement_ids": []},
+    "ACH-137": {"family": "INTERPRETATION", "related_achievement_ids": ["ACH-135"]},
+    "ACH-138": {"family": "FAMILY_MODEL", "related_achievement_ids": []},
+    "ACH-139": {"family": "LORE", "related_achievement_ids": []},
+    "ACH-140": {"family": "SECRET_ODDITY", "related_achievement_ids": ["ACH-130"]},
+})
