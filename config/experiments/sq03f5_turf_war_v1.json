@@ -1,0 +1,49 @@
+{
+  "experiment_id": "SQ-03F.5",
+  "codename": "TURF WAR",
+  "version": 1,
+  "status": "FROZEN_NOT_EXECUTED",
+  "input": {
+    "authoritative_sq03f4_result": "artifacts/sidequests/sq03f4-sit-down-result-v1.json"
+  },
+  "territory": {
+    "direction": "downstream",
+    "max_depth": 2,
+    "exclude_source_nodes": true,
+    "collapse_repeated_nodes": true,
+    "cycle_policy": "visited-set-collapse",
+    "edge_eligibility": "all directed edges present in the frozen analysis graph",
+    "node_eligibility": "all nodes reachable under the frozen edge rule"
+  },
+  "primary_statistic": {
+    "name": "mean_pairwise_jaccard",
+    "definition": "mean over all unordered eligible-source pairs of |Ti intersect Tj| / |Ti union Tj|",
+    "empty_union_policy": "pair contributes 0.0"
+  },
+  "null_model": {
+    "type": "matched_source_randomization",
+    "randomizations": 10000,
+    "base_seed": 314159,
+    "source_count_preserved": true,
+    "matching": {
+      "feature": "out_degree",
+      "strata": "deciles",
+      "universe": "frozen SQ-03F.4 candidate-source universe"
+    },
+    "replacement": false
+  },
+  "classification": {
+    "greater_than_null": {
+      "empirical_upper_tail_p_lte": 0.01,
+      "effect_ratio_gte": 1.25
+    },
+    "separated_territories": {
+      "empirical_lower_tail_p_lte": 0.01,
+      "effect_ratio_lte": 0.80
+    },
+    "otherwise": "NO_CLEAR_EVIDENCE_OF_UNUSUAL_CONVERGENCE"
+  },
+  "output": {
+    "artifact": "artifacts/sidequests/sq03f5-turf-war-result-v1.json"
+  }
+}
