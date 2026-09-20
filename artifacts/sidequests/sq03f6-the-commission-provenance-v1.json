@@ -1,0 +1,22 @@
+{
+  "analyzer_path": "brain/sq03f6_analyze.py",
+  "analyzer_sha256": "d3cae337aad141ed557b52a22026330ec86bc5c812870a35f63c5ddf122009c6",
+  "base_seed": 314159,
+  "classification": "GREATER_THAN_NULL_TARGET_CONCENTRATION",
+  "config_path": "config/experiments/sq03f6_the_commission_v1.json",
+  "config_sha256": "ab2a8830c941a368fb5210592ae4b40efd069e42d90f36c9bbacdca45f340420",
+  "experiment_id": "SQ-03F.6",
+  "note": "Post-run provenance sidecar for the original authoritative result. The result artifact was not regenerated or modified after observation.",
+  "parent_sq03f5_provenance": "artifacts/sidequests/sq03f5-turf-war-provenance-v1.json",
+  "parent_sq03f5_provenance_sha256": "e180a21df4f1618e1f9d4f4450f122873420d31eb13b6010a71fdf08be162265",
+  "parent_sq03f5_result": "artifacts/sidequests/sq03f5-turf-war-result-v1.json",
+  "parent_sq03f5_result_sha256": "4a3cad723d3114a512d6cdcba4527660275ca3ee2b50ebb8f0a4c6bfe5a21776",
+  "protocol_path": "docs/experiments/sq03f6-the-commission-protocol.md",
+  "protocol_sha256": "c579b53173f916014056faec23e8d5a184dcdc685fe387aa42e1f46d0ddc3404",
+  "randomizations": 10000,
+  "result_path": "artifacts/sidequests/sq03f6-the-commission-result-v1.json",
+  "result_sha256": "0c46be0767b47be8cffb257df47f2256b49fae7b89aaf2c18be10f7feac5ae16",
+  "schema": "moscaquant.sq03f6_provenance/v1",
+  "source_commit": "1c7847e1b5ec7994e5dd35e203e0f0260aa55f23",
+  "title": "THE COMMISSION"
+}
