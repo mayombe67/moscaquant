@@ -1154,3 +1154,32 @@ does not grant financial or experimental authority. WARDEN retains hard loss
 containment.
 
 The prior working name **Royal Jelly** is non-canonical and must not be used.
+
+## SQ-03F.6 — THE COMMISSION
+
+SQ-03F.6 tested whether the greater-than-null downstream convergence established
+by SQ-03F.5 is itself unusually concentrated among downstream targets.
+
+Frozen result:
+
+- observed participation-mass HHI: `0.0002087914357059647`
+- matched-null median HHI: `0.00016403723846293884`
+- effect ratio vs null median: `1.272829496901932`
+- empirical upper-tail p: `9.999000099990002e-05`
+- randomizations: `10,000`
+- frozen classification: `GREATER_THAN_NULL_TARGET_CONCENTRATION`
+
+Within the frozen MoscaQuant model and frozen SQ-03F source universe, the
+downstream participation structure is more concentrated among targets than
+expected under the inherited matched-source null.
+
+This does not establish literal biological command hierarchy, anatomical
+governing bodies, organism-level functional modules, sex-specific neural
+organization, consciousness, agency, intent, coordination, financial
+usefulness, or trading usefulness.
+
+See:
+- `docs/experiments/sq03f6-the-commission-protocol.md`
+- `docs/experiments/sq03f6-the-commission-results.md`
+- `artifacts/sidequests/sq03f6-the-commission-result-v1.json`
+- `artifacts/sidequests/sq03f6-the-commission-provenance-v1.json`

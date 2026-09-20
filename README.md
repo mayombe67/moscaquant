@@ -305,3 +305,16 @@ the documented evidence, or evidence of autonomous financial competence.
 
 Main roadmap remains **MQ-9 — OPEN THE PANOPTICON**, followed by
 **MQ-10 — INTRODUCE THE MONEY**.
+
+## Latest SQ-03 result — THE COMMISSION
+
+SQ-03F.6 found **greater-than-null downstream target concentration** under the
+frozen participation-mass HHI test (`effect ratio = 1.272829496901932`,
+empirical upper-tail `p = 9.999000099990002e-05`, 10,000 matched
+randomizations).
+
+The result is model-scoped and does not establish organism-level biological,
+financial, or trading claims.
+
+See `docs/experiments/sq03f6-the-commission-results.md` for the recorded result
+and provenance boundary.
