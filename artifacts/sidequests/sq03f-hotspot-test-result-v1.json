@@ -1,0 +1,2146 @@
+{
+  "C_hotspots": {
+    "features": {
+      "context_count": {
+        "control_median": 3.0,
+        "fraction_hotspot_gt_control": 0.7954743255004352,
+        "hotspot_median": 6.0,
+        "median_paired_difference": 3.0
+      },
+      "endpoint_degree_product": {
+        "control_median": 28569.0,
+        "fraction_hotspot_gt_control": 0.5622280243690165,
+        "hotspot_median": 34920.0,
+        "median_paired_difference": 5232.0
+      },
+      "source_out_degree": {
+        "control_median": 190.0,
+        "fraction_hotspot_gt_control": 0.5039164490861618,
+        "hotspot_median": 214.0,
+        "median_paired_difference": 3.0
+      },
+      "source_out_strength": {
+        "control_median": 10969.0,
+        "fraction_hotspot_gt_control": 0.6335944299390774,
+        "hotspot_median": 19113.5,
+        "median_paired_difference": 5771.0
+      },
+      "source_output_fraction": {
+        "control_median": 0.007989201236835084,
+        "fraction_hotspot_gt_control": 0.37162750217580504,
+        "hotspot_median": 0.00436977034853212,
+        "median_paired_difference": -0.0013213127926629906
+      },
+      "target_in_degree": {
+        "control_median": 143.0,
+        "fraction_hotspot_gt_control": 0.5961705831157529,
+        "hotspot_median": 176.0,
+        "median_paired_difference": 27.0
+      },
+      "target_in_strength": {
+        "control_median": 8018.0,
+        "fraction_hotspot_gt_control": 0.6431679721496953,
+        "hotspot_median": 11256.0,
+        "median_paired_difference": 3071.5
+      },
+      "target_input_fraction": {
+        "control_median": 0.010605115408608859,
+        "fraction_hotspot_gt_control": 0.3637946040034813,
+        "hotspot_median": 0.006568974229408792,
+        "median_paired_difference": -0.0021303301984444984
+      }
+    },
+    "hotspot_count": 1149,
+    "matched_count": 1149,
+    "matched_fraction": 1.0,
+    "negative_control_abs_weight_difference": {
+      "control_median": 53.0,
+      "hotspot_median": 52.0,
+      "median_paired_difference": 0.0
+    },
+    "pairs_first100": [
+      {
+        "abs_weight_difference_decile": 8,
+        "control_edge_id": 1243,
+        "control_post": "LC21",
+        "control_pre": "5-HTPMPV03",
+        "hotspot_edge_id": 440271,
+        "hotspot_post": "DNp27",
+        "hotspot_pre": "LPLC2",
+        "total_weight_decile": 6
+      },
+      {
+        "abs_weight_difference_decile": 3,
+        "control_edge_id": 138,
+        "control_post": "AVLP393,AVLP395",
+        "control_pre": "5-HTPLP01",
+        "hotspot_edge_id": 440259,
+        "hotspot_post": "DNc02",
+        "hotspot_pre": "LPLC2",
+        "total_weight_decile": 1
+      },
+      {
+        "abs_weight_difference_decile": 8,
+        "control_edge_id": 86363,
+        "control_post": "AVLP079",
+        "control_pre": "AVLP454_b",
+        "hotspot_edge_id": 384762,
+        "hotspot_post": "DNc02",
+        "hotspot_pre": "KCab",
+        "total_weight_decile": 8
+      },
+      {
+        "abs_weight_difference_decile": 4,
+        "control_edge_id": 224039,
+        "control_post": "AVLP575",
+        "control_pre": "CB2278",
+        "hotspot_edge_id": 456803,
+        "hotspot_post": "DNp30",
+        "hotspot_pre": "LoVC16",
+        "total_weight_decile": 3
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 401344,
+        "control_post": "CB0732",
+        "control_pre": "LC11",
+        "hotspot_edge_id": 402471,
+        "hotspot_post": "LoVC16",
+        "hotspot_pre": "LC17",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 403527,
+        "control_post": "PVLP099",
+        "control_pre": "LC21",
+        "hotspot_edge_id": 528580,
+        "hotspot_post": "LC17",
+        "hotspot_pre": "PVLP011",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 400902,
+        "control_post": "AOTU008",
+        "control_pre": "LC10d",
+        "hotspot_edge_id": 402482,
+        "hotspot_post": "PVLP011",
+        "hotspot_pre": "LC17",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 9,
+        "control_edge_id": 194884,
+        "control_post": "AVLP316",
+        "control_pre": "CB1596",
+        "hotspot_edge_id": 438380,
+        "hotspot_post": "DNp27",
+        "hotspot_pre": "LLPC1",
+        "total_weight_decile": 7
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 439608,
+        "control_post": "CB4103",
+        "control_pre": "LPC1",
+        "hotspot_edge_id": 77496,
+        "hotspot_post": "DNp30",
+        "hotspot_pre": "AVLP340",
+        "total_weight_decile": 8
+      },
+      {
+        "abs_weight_difference_decile": 3,
+        "control_edge_id": 439,
+        "control_post": "CL334",
+        "control_pre": "5-HTPLP01",
+        "hotspot_edge_id": 152720,
+        "hotspot_post": "DNp27",
+        "hotspot_pre": "CB0766",
+        "total_weight_decile": 1
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 56769,
+        "control_post": "AVLP269",
+        "control_pre": "AVLP086",
+        "hotspot_edge_id": 533525,
+        "hotspot_post": "DNp30",
+        "hotspot_pre": "PVLP082",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 8,
+        "control_edge_id": 5791,
+        "control_post": "AVLP235",
+        "control_pre": "AN_AVLP_1",
+        "hotspot_edge_id": 411196,
+        "hotspot_post": "DNp30",
+        "hotspot_pre": "LHAD1g1",
+        "total_weight_decile": 6
+      },
+      {
+        "abs_weight_difference_decile": 8,
+        "control_edge_id": 66962,
+        "control_post": "SLP189",
+        "control_pre": "AVLP215",
+        "hotspot_edge_id": 68785,
+        "hotspot_post": "OA-VPM4",
+        "hotspot_pre": "AVLP234",
+        "total_weight_decile": 7
+      },
+      {
+        "abs_weight_difference_decile": 6,
+        "control_edge_id": 56624,
+        "control_post": "CB3289",
+        "control_pre": "AVLP085",
+        "hotspot_edge_id": 440591,
+        "hotspot_post": "DNp27",
+        "hotspot_pre": "LPLC4",
+        "total_weight_decile": 7
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 402688,
+        "control_post": "PVLP107",
+        "control_pre": "LC18",
+        "hotspot_edge_id": 402402,
+        "hotspot_post": "CB1920",
+        "hotspot_pre": "LC17",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 438547,
+        "control_post": "PLP249",
+        "control_pre": "LLPC1",
+        "hotspot_edge_id": 440424,
+        "hotspot_post": "PVLP011",
+        "hotspot_pre": "LPLC2",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 491504,
+        "control_post": "EPG",
+        "control_pre": "PEN_a(PEN1)",
+        "hotspot_edge_id": 402489,
+        "hotspot_post": "PVLP061",
+        "hotspot_pre": "LC17",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 407952,
+        "control_post": "CB4048",
+        "control_pre": "LC6",
+        "hotspot_edge_id": 402499,
+        "hotspot_post": "PVLP106",
+        "hotspot_pre": "LC17",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 336133,
+        "control_post": "lLN1_bc",
+        "control_pre": "DL2v_adPN",
+        "hotspot_edge_id": 528585,
+        "hotspot_post": "LLPC1",
+        "hotspot_pre": "PVLP011",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 401175,
+        "control_post": "LC10d",
+        "control_pre": "LC10e",
+        "hotspot_edge_id": 365068,
+        "hotspot_post": "KCab",
+        "hotspot_pre": "DPM",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 274287,
+        "control_post": "AVLP151",
+        "control_pre": "CB3667",
+        "hotspot_edge_id": 49149,
+        "hotspot_post": "DNp30",
+        "hotspot_pre": "AVLP031",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 404477,
+        "control_post": "LC24",
+        "control_pre": "LC26",
+        "hotspot_edge_id": 68720,
+        "hotspot_post": "AVLP031",
+        "hotspot_pre": "AVLP234",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 9,
+        "control_edge_id": 3003,
+        "control_post": "PVLP123",
+        "control_pre": "AMMC-A1",
+        "hotspot_edge_id": 45801,
+        "hotspot_post": "DNp30",
+        "hotspot_pre": "AVLP001",
+        "total_weight_decile": 7
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 403734,
+        "control_post": "LoVC7",
+        "control_pre": "LC22",
+        "hotspot_edge_id": 440361,
+        "hotspot_post": "LT56",
+        "hotspot_pre": "LPLC2",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 630043,
+        "control_post": "lLN2P_c",
+        "control_pre": "lLN1_bc",
+        "hotspot_edge_id": 440319,
+        "hotspot_post": "LC4",
+        "hotspot_pre": "LPLC2",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 7,
+        "control_edge_id": 1406,
+        "control_post": "PLP100",
+        "control_pre": "5-HTPMPV03",
+        "hotspot_edge_id": 439624,
+        "hotspot_post": "DNp27",
+        "hotspot_pre": "LPC1",
+        "total_weight_decile": 4
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 633931,
+        "control_post": "lLN2T_d",
+        "control_pre": "lLN2X12",
+        "hotspot_edge_id": 440277,
+        "hotspot_post": "DNpe056",
+        "hotspot_pre": "LPLC2",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 401883,
+        "control_post": "SAD094",
+        "control_pre": "LC13",
+        "hotspot_edge_id": 101198,
+        "hotspot_post": "DNp30",
+        "hotspot_pre": "AVLP580",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 9,
+        "control_edge_id": 55411,
+        "control_post": "AVLP139",
+        "control_pre": "AVLP082",
+        "hotspot_edge_id": 84167,
+        "hotspot_post": "AVLP580",
+        "hotspot_pre": "AVLP435",
+        "total_weight_decile": 9
+      },
+      {
+        "abs_weight_difference_decile": 3,
+        "control_edge_id": 149,
+        "control_post": "AVLP418",
+        "control_pre": "5-HTPLP01",
+        "hotspot_edge_id": 364241,
+        "hotspot_post": "DNp30",
+        "hotspot_pre": "DNpe056",
+        "total_weight_decile": 2
+      },
+      {
+        "abs_weight_difference_decile": 5,
+        "control_edge_id": 93997,
+        "control_post": "CB1783",
+        "control_pre": "AVLP532",
+        "hotspot_edge_id": 408191,
+        "hotspot_post": "DNp27",
+        "hotspot_pre": "LC9",
+        "total_weight_decile": 6
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 400249,
+        "control_post": "AOTU008",
+        "control_pre": "LC10",
+        "hotspot_edge_id": 402504,
+        "hotspot_post": "PVLP135",
+        "hotspot_pre": "LC17",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 9,
+        "control_edge_id": 59252,
+        "control_post": "AVLP151",
+        "control_pre": "AVLP113",
+        "hotspot_edge_id": 84251,
+        "hotspot_post": "DNp30",
+        "hotspot_pre": "AVLP435",
+        "total_weight_decile": 8
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 402020,
+        "control_post": "LC31b",
+        "control_pre": "LC15",
+        "hotspot_edge_id": 482774,
+        "hotspot_post": "KCg-m",
+        "hotspot_pre": "OA-VPM4",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 7,
+        "control_edge_id": 332,
+        "control_post": "CB2574",
+        "control_pre": "5-HTPLP01",
+        "hotspot_edge_id": 402596,
+        "hotspot_post": "DNp27",
+        "hotspot_pre": "LC18",
+        "total_weight_decile": 4
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 73197,
+        "control_post": "AVLP201",
+        "control_pre": "AVLP295",
+        "hotspot_edge_id": 440323,
+        "hotspot_post": "LC9",
+        "hotspot_pre": "LPLC2",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 400317,
+        "control_post": "CB3127",
+        "control_pre": "LC10",
+        "hotspot_edge_id": 440194,
+        "hotspot_post": "AVLP531",
+        "hotspot_pre": "LPLC2",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 531843,
+        "control_post": "CB1764",
+        "control_pre": "PVLP069",
+        "hotspot_edge_id": 440419,
+        "hotspot_post": "PLP163",
+        "hotspot_pre": "LPLC2",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 91203,
+        "control_post": "AVLP016",
+        "control_pre": "AVLP498",
+        "hotspot_edge_id": 440333,
+        "hotspot_post": "LPC1",
+        "hotspot_pre": "LPLC2",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 8,
+        "control_edge_id": 947,
+        "control_post": "AN_multi_14",
+        "control_pre": "5-HTPMPV03",
+        "hotspot_edge_id": 459293,
+        "hotspot_post": "DNp27",
+        "hotspot_pre": "LoVCLo3",
+        "total_weight_decile": 5
+      },
+      {
+        "abs_weight_difference_decile": 7,
+        "control_edge_id": 299519,
+        "control_post": "AVLP080",
+        "control_pre": "CB4214",
+        "hotspot_edge_id": 400330,
+        "hotspot_post": "DNp27",
+        "hotspot_pre": "LC10",
+        "total_weight_decile": 4
+      },
+      {
+        "abs_weight_difference_decile": 9,
+        "control_edge_id": 228904,
+        "control_post": "CB0925",
+        "control_pre": "CB2395a",
+        "hotspot_edge_id": 438667,
+        "hotspot_post": "DNp27",
+        "hotspot_pre": "LLPC2",
+        "total_weight_decile": 7
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 276166,
+        "control_post": "CB3099",
+        "control_pre": "CB3700",
+        "hotspot_edge_id": 467609,
+        "hotspot_post": "DNp27",
+        "hotspot_pre": "MTe13",
+        "total_weight_decile": 9
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 402690,
+        "control_post": "PVLP109",
+        "control_pre": "LC18",
+        "hotspot_edge_id": 51558,
+        "hotspot_post": "DNp30",
+        "hotspot_pre": "AVLP053",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 402554,
+        "control_post": "CB0738",
+        "control_pre": "LC18",
+        "hotspot_edge_id": 456805,
+        "hotspot_post": "LC11",
+        "hotspot_pre": "LoVC16",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 9,
+        "control_edge_id": 73108,
+        "control_post": "AVLP532",
+        "control_pre": "AVLP294",
+        "hotspot_edge_id": 440329,
+        "hotspot_post": "LLPC1",
+        "hotspot_pre": "LPLC2",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 478973,
+        "control_post": "aMe9",
+        "control_pre": "MeVC20",
+        "hotspot_edge_id": 68713,
+        "hotspot_post": "AVLP001",
+        "hotspot_pre": "AVLP234",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 9,
+        "control_edge_id": 80471,
+        "control_post": "AVLP078",
+        "control_pre": "AVLP394",
+        "hotspot_edge_id": 618525,
+        "hotspot_post": "DNp30",
+        "hotspot_pre": "WED061",
+        "total_weight_decile": 8
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 438729,
+        "control_post": "LPT48_vCal3",
+        "control_pre": "LLPC2",
+        "hotspot_edge_id": 440209,
+        "hotspot_post": "CB0766",
+        "hotspot_pre": "LPLC2",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 47434,
+        "control_post": "AVLP224_a",
+        "control_pre": "AVLP019",
+        "hotspot_edge_id": 440475,
+        "hotspot_post": "TmY14",
+        "hotspot_pre": "LPLC2",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 8,
+        "control_edge_id": 69126,
+        "control_post": "AVLP267",
+        "control_pre": "AVLP244",
+        "hotspot_edge_id": 533269,
+        "hotspot_post": "DNp30",
+        "hotspot_pre": "PVLP081",
+        "total_weight_decile": 5
+      },
+      {
+        "abs_weight_difference_decile": 7,
+        "control_edge_id": 10397,
+        "control_post": "AVLP300_b",
+        "control_pre": "AN_AVLP_GNG_10",
+        "hotspot_edge_id": 54368,
+        "hotspot_post": "DNp30",
+        "hotspot_pre": "AVLP079",
+        "total_weight_decile": 5
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 446775,
+        "control_post": "PVLP024",
+        "control_pre": "LT66",
+        "hotspot_edge_id": 440330,
+        "hotspot_post": "LLPC2",
+        "hotspot_pre": "LPLC2",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 52306,
+        "control_post": "CL067",
+        "control_pre": "AVLP064",
+        "hotspot_edge_id": 440482,
+        "hotspot_post": "WED061",
+        "hotspot_pre": "LPLC2",
+        "total_weight_decile": 9
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 439683,
+        "control_post": "PLP018",
+        "control_pre": "LPC1",
+        "hotspot_edge_id": 401645,
+        "hotspot_post": "LoVC16",
+        "hotspot_pre": "LC12",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 3,
+        "control_edge_id": 70,
+        "control_post": "AVLP164",
+        "control_pre": "5-HTPLP01",
+        "hotspot_edge_id": 439962,
+        "hotspot_post": "DNp27",
+        "hotspot_pre": "LPLC1",
+        "total_weight_decile": 5
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 363726,
+        "control_post": "AstA1",
+        "control_pre": "DNpe053",
+        "hotspot_edge_id": 440327,
+        "hotspot_post": "LHAD1g1",
+        "hotspot_pre": "LPLC2",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 9,
+        "control_edge_id": 7098,
+        "control_post": "AVLP592",
+        "control_pre": "AN_AVLP_21",
+        "hotspot_edge_id": 271395,
+        "hotspot_post": "DNp30",
+        "hotspot_pre": "CB3609",
+        "total_weight_decile": 7
+      },
+      {
+        "abs_weight_difference_decile": 4,
+        "control_edge_id": 230,
+        "control_post": "CB0128",
+        "control_pre": "5-HTPLP01",
+        "hotspot_edge_id": 170273,
+        "hotspot_post": "DNp27",
+        "hotspot_pre": "CB1099",
+        "total_weight_decile": 1
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 333499,
+        "control_post": "CB1485",
+        "control_pre": "DA1_lPN",
+        "hotspot_edge_id": 440297,
+        "hotspot_post": "LC16",
+        "hotspot_pre": "LPLC2",
+        "total_weight_decile": 9
+      },
+      {
+        "abs_weight_difference_decile": 9,
+        "control_edge_id": 269912,
+        "control_post": "CB1017",
+        "control_pre": "CB3578",
+        "hotspot_edge_id": 402496,
+        "hotspot_post": "PVLP082",
+        "hotspot_pre": "LC17",
+        "total_weight_decile": 8
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 11285,
+        "control_post": "CB0519",
+        "control_pre": "AN_AVLP_GNG_21",
+        "hotspot_edge_id": 74704,
+        "hotspot_post": "DNp30",
+        "hotspot_pre": "AVLP308",
+        "total_weight_decile": 9
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 400795,
+        "control_post": "AOTU025",
+        "control_pre": "LC10c-2",
+        "hotspot_edge_id": 440337,
+        "hotspot_post": "LPLC4",
+        "hotspot_pre": "LPLC2",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 210102,
+        "control_post": "AVLP001",
+        "control_pre": "CB1959",
+        "hotspot_edge_id": 161071,
+        "hotspot_post": "DNp30",
+        "hotspot_pre": "CB0930",
+        "total_weight_decile": 9
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 401291,
+        "control_post": "AVLP282",
+        "control_pre": "LC11",
+        "hotspot_edge_id": 42859,
+        "hotspot_post": "KCab",
+        "hotspot_pre": "APL",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 542640,
+        "control_post": "CB3364",
+        "control_pre": "SAD021_a",
+        "hotspot_edge_id": 536392,
+        "hotspot_post": "PVLP082",
+        "hotspot_pre": "PVLP106",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 402079,
+        "control_post": "PLP115_b",
+        "control_pre": "LC15",
+        "hotspot_edge_id": 528589,
+        "hotspot_post": "LPLC1",
+        "hotspot_pre": "PVLP011",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 446028,
+        "control_post": "AVLP183",
+        "control_pre": "LT61b",
+        "hotspot_edge_id": 84091,
+        "hotspot_post": "AVLP308",
+        "hotspot_pre": "AVLP435",
+        "total_weight_decile": 9
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 376075,
+        "control_post": "PS099",
+        "control_pre": "HST",
+        "hotspot_edge_id": 600154,
+        "hotspot_post": "LPLC2",
+        "hotspot_pre": "TmY14",
+        "total_weight_decile": 9
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 478786,
+        "control_post": "OA-AL2i4",
+        "control_pre": "MeVC11",
+        "hotspot_edge_id": 440397,
+        "hotspot_post": "LoVCLo3",
+        "hotspot_pre": "LPLC2",
+        "total_weight_decile": 9
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 438794,
+        "control_post": "PLP105",
+        "control_pre": "LLPC2",
+        "hotspot_edge_id": 208012,
+        "hotspot_post": "PVLP082",
+        "hotspot_pre": "CB1920",
+        "total_weight_decile": 9
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 438494,
+        "control_post": "Nod1",
+        "control_pre": "LLPC1",
+        "hotspot_edge_id": 402382,
+        "hotspot_post": "AVLP479",
+        "hotspot_pre": "LC17",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 479007,
+        "control_post": "MeTu2b",
+        "control_pre": "MeVC21",
+        "hotspot_edge_id": 440335,
+        "hotspot_post": "LPLC1",
+        "hotspot_pre": "LPLC2",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 2856,
+        "control_post": "AN_multi_106",
+        "control_pre": "ALON3",
+        "hotspot_edge_id": 539487,
+        "hotspot_post": "PVLP082",
+        "hotspot_pre": "PVLP135",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 9,
+        "control_edge_id": 614020,
+        "control_post": "lLN1_bc",
+        "control_pre": "VP2_adPN",
+        "hotspot_edge_id": 440184,
+        "hotspot_post": "AVLP340",
+        "hotspot_pre": "LPLC2",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 76169,
+        "control_post": "AVLP079",
+        "control_pre": "AVLP322",
+        "hotspot_edge_id": 600148,
+        "hotspot_post": "LLPC1",
+        "hotspot_pre": "TmY14",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 355268,
+        "control_post": "CB3364",
+        "control_pre": "DNge130",
+        "hotspot_edge_id": 101007,
+        "hotspot_post": "DNp30",
+        "hotspot_pre": "AVLP577",
+        "total_weight_decile": 8
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 412323,
+        "control_post": "AVLP243",
+        "control_pre": "LHAV1a1",
+        "hotspot_edge_id": 440303,
+        "hotspot_post": "LC21",
+        "hotspot_pre": "LPLC2",
+        "total_weight_decile": 9
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 403340,
+        "control_post": "CB0743",
+        "control_pre": "LC21",
+        "hotspot_edge_id": 440472,
+        "hotspot_post": "PVLP151",
+        "hotspot_pre": "LPLC2",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 9,
+        "control_edge_id": 203647,
+        "control_post": "CB2100",
+        "control_pre": "CB1819",
+        "hotspot_edge_id": 84133,
+        "hotspot_post": "AVLP473",
+        "hotspot_pre": "AVLP435",
+        "total_weight_decile": 7
+      },
+      {
+        "abs_weight_difference_decile": 8,
+        "control_edge_id": 39220,
+        "control_post": "PLP177",
+        "control_pre": "AOTU013",
+        "hotspot_edge_id": 600132,
+        "hotspot_post": "DNp27",
+        "hotspot_pre": "TmY14",
+        "total_weight_decile": 7
+      },
+      {
+        "abs_weight_difference_decile": 1,
+        "control_edge_id": 41,
+        "control_post": "AVLP084",
+        "control_pre": "5-HTPLP01",
+        "hotspot_edge_id": 406982,
+        "hotspot_post": "DNp27",
+        "hotspot_pre": "LC4",
+        "total_weight_decile": 2
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 633921,
+        "control_post": "lLN1_bc",
+        "control_pre": "lLN2X12",
+        "hotspot_edge_id": 401667,
+        "hotspot_post": "PVLP097",
+        "hotspot_pre": "LC12",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 9,
+        "control_edge_id": 52916,
+        "control_post": "AVLP026",
+        "control_pre": "AVLP076",
+        "hotspot_edge_id": 618378,
+        "hotspot_post": "DNp30",
+        "hotspot_pre": "WED060",
+        "total_weight_decile": 8
+      },
+      {
+        "abs_weight_difference_decile": 7,
+        "control_edge_id": 6769,
+        "control_post": "CB0125",
+        "control_pre": "AN_AVLP_2",
+        "hotspot_edge_id": 440400,
+        "hotspot_post": "MTe13",
+        "hotspot_pre": "LPLC2",
+        "total_weight_decile": 7
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 629803,
+        "control_post": "CB3417",
+        "control_pre": "lLN1_bc",
+        "hotspot_edge_id": 531384,
+        "hotspot_post": "AVLP435",
+        "hotspot_pre": "PVLP061",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 6,
+        "control_edge_id": 53,
+        "control_post": "AVLP113",
+        "control_pre": "5-HTPLP01",
+        "hotspot_edge_id": 600128,
+        "hotspot_post": "DNc02",
+        "hotspot_pre": "TmY14",
+        "total_weight_decile": 3
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 401559,
+        "control_post": "PVLP135",
+        "control_pre": "LC11",
+        "hotspot_edge_id": 528588,
+        "hotspot_post": "LPC1",
+        "hotspot_pre": "PVLP011",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 84272,
+        "control_post": "PVLP027",
+        "control_pre": "AVLP435",
+        "hotspot_edge_id": 503998,
+        "hotspot_post": "DNp27",
+        "hotspot_pre": "PLP150",
+        "total_weight_decile": 9
+      },
+      {
+        "abs_weight_difference_decile": 9,
+        "control_edge_id": 45871,
+        "control_post": "PVLP115",
+        "control_pre": "AVLP001",
+        "hotspot_edge_id": 440481,
+        "hotspot_post": "WED060",
+        "hotspot_pre": "LPLC2",
+        "total_weight_decile": 8
+      },
+      {
+        "abs_weight_difference_decile": 9,
+        "control_edge_id": 71194,
+        "control_post": "CB2341",
+        "control_pre": "AVLP280",
+        "hotspot_edge_id": 73152,
+        "hotspot_post": "DNp30",
+        "hotspot_pre": "AVLP294",
+        "total_weight_decile": 8
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 53729,
+        "control_post": "CB1552",
+        "control_pre": "AVLP078",
+        "hotspot_edge_id": 450800,
+        "hotspot_post": "DNp27",
+        "hotspot_pre": "LTe13",
+        "total_weight_decile": 9
+      },
+      {
+        "abs_weight_difference_decile": 6,
+        "control_edge_id": 502,
+        "control_post": "PVLP097",
+        "control_pre": "5-HTPLP01",
+        "hotspot_edge_id": 530310,
+        "hotspot_post": "DNp30",
+        "hotspot_pre": "PVLP021",
+        "total_weight_decile": 6
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 400304,
+        "control_post": "CB0007",
+        "control_pre": "LC10",
+        "hotspot_edge_id": 402387,
+        "hotspot_post": "AVLP538",
+        "hotspot_pre": "LC17",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 443926,
+        "control_post": "LC11",
+        "control_pre": "LT1d",
+        "hotspot_edge_id": 407079,
+        "hotspot_post": "PLP150",
+        "hotspot_pre": "LC4",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 1,
+        "control_edge_id": 352,
+        "control_post": "CB3287a",
+        "control_pre": "5-HTPLP01",
+        "hotspot_edge_id": 384921,
+        "hotspot_post": "DNc02",
+        "hotspot_pre": "KCab-m",
+        "total_weight_decile": 5
+      },
+      {
+        "abs_weight_difference_decile": 2,
+        "control_edge_id": 977,
+        "control_post": "CB0344",
+        "control_pre": "5-HTPMPV03",
+        "hotspot_edge_id": 401396,
+        "hotspot_post": "DNp27",
+        "hotspot_pre": "LC11",
+        "total_weight_decile": 4
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 402551,
+        "control_post": "CB0336,CB0796",
+        "control_pre": "LC18",
+        "hotspot_edge_id": 402386,
+        "hotspot_post": "AVLP537",
+        "hotspot_pre": "LC17",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 5,
+        "control_edge_id": 79,
+        "control_post": "AVLP190,AVLP191",
+        "control_pre": "5-HTPLP01",
+        "hotspot_edge_id": 267888,
+        "hotspot_post": "DNp30",
+        "hotspot_pre": "CB3513",
+        "total_weight_decile": 3
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 401067,
+        "control_post": "LTe64",
+        "control_pre": "LC10d",
+        "hotspot_edge_id": 84047,
+        "hotspot_post": "AVLP079",
+        "hotspot_pre": "AVLP435",
+        "total_weight_decile": 10
+      }
+    ],
+    "unmatched": [],
+    "unmatched_count": 0
+  },
+  "S_hotspots": {
+    "features": {
+      "context_count": {
+        "control_median": 3.0,
+        "fraction_hotspot_gt_control": 0.783289817232376,
+        "hotspot_median": 6.0,
+        "median_paired_difference": 3.0
+      },
+      "endpoint_degree_product": {
+        "control_median": 28985.0,
+        "fraction_hotspot_gt_control": 0.5622280243690165,
+        "hotspot_median": 34560.0,
+        "median_paired_difference": 4612.0
+      },
+      "source_out_degree": {
+        "control_median": 191.0,
+        "fraction_hotspot_gt_control": 0.5126196692776327,
+        "hotspot_median": 214.0,
+        "median_paired_difference": 5.0
+      },
+      "source_out_strength": {
+        "control_median": 10969.0,
+        "fraction_hotspot_gt_control": 0.6292428198433421,
+        "hotspot_median": 17803.5,
+        "median_paired_difference": 5267.0
+      },
+      "source_output_fraction": {
+        "control_median": 0.007883971736705095,
+        "fraction_hotspot_gt_control": 0.37684943429068757,
+        "hotspot_median": 0.004402325503242935,
+        "median_paired_difference": -0.0013605956318533364
+      },
+      "target_in_degree": {
+        "control_median": 143.0,
+        "fraction_hotspot_gt_control": 0.5900783289817232,
+        "hotspot_median": 176.0,
+        "median_paired_difference": 28.0
+      },
+      "target_in_strength": {
+        "control_median": 8023.0,
+        "fraction_hotspot_gt_control": 0.639686684073107,
+        "hotspot_median": 11256.0,
+        "median_paired_difference": 3046.0
+      },
+      "target_input_fraction": {
+        "control_median": 0.010564385647663462,
+        "fraction_hotspot_gt_control": 0.3672758920800696,
+        "hotspot_median": 0.006568974229408792,
+        "median_paired_difference": -0.002112079472477013
+      }
+    },
+    "hotspot_count": 1149,
+    "matched_count": 1149,
+    "matched_fraction": 1.0,
+    "negative_control_abs_weight_difference": {
+      "control_median": 53.0,
+      "hotspot_median": 53.0,
+      "median_paired_difference": 0.0
+    },
+    "pairs_first100": [
+      {
+        "abs_weight_difference_decile": 8,
+        "control_edge_id": 1243,
+        "control_post": "LC21",
+        "control_pre": "5-HTPMPV03",
+        "hotspot_edge_id": 440271,
+        "hotspot_post": "DNp27",
+        "hotspot_pre": "LPLC2",
+        "total_weight_decile": 6
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 82007,
+        "control_post": "AVLP323",
+        "control_pre": "AVLP418",
+        "hotspot_edge_id": 68779,
+        "hotspot_post": "DNp30",
+        "hotspot_pre": "AVLP234",
+        "total_weight_decile": 8
+      },
+      {
+        "abs_weight_difference_decile": 9,
+        "control_edge_id": 59252,
+        "control_post": "AVLP151",
+        "control_pre": "AVLP113",
+        "hotspot_edge_id": 84251,
+        "hotspot_post": "DNp30",
+        "hotspot_pre": "AVLP435",
+        "total_weight_decile": 8
+      },
+      {
+        "abs_weight_difference_decile": 8,
+        "control_edge_id": 39220,
+        "control_post": "PLP177",
+        "control_pre": "AOTU013",
+        "hotspot_edge_id": 600132,
+        "hotspot_post": "DNp27",
+        "hotspot_pre": "TmY14",
+        "total_weight_decile": 7
+      },
+      {
+        "abs_weight_difference_decile": 3,
+        "control_edge_id": 138,
+        "control_post": "AVLP393,AVLP395",
+        "control_pre": "5-HTPLP01",
+        "hotspot_edge_id": 440259,
+        "hotspot_post": "DNc02",
+        "hotspot_pre": "LPLC2",
+        "total_weight_decile": 1
+      },
+      {
+        "abs_weight_difference_decile": 6,
+        "control_edge_id": 53,
+        "control_post": "AVLP113",
+        "control_pre": "5-HTPLP01",
+        "hotspot_edge_id": 600128,
+        "hotspot_post": "DNc02",
+        "hotspot_pre": "TmY14",
+        "total_weight_decile": 3
+      },
+      {
+        "abs_weight_difference_decile": 5,
+        "control_edge_id": 396,
+        "control_post": "CB3921",
+        "control_pre": "5-HTPLP01",
+        "hotspot_edge_id": 68778,
+        "hotspot_post": "DNp27",
+        "hotspot_pre": "AVLP234",
+        "total_weight_decile": 1
+      },
+      {
+        "abs_weight_difference_decile": 3,
+        "control_edge_id": 45767,
+        "control_post": "CB4048",
+        "control_pre": "AVLP001",
+        "hotspot_edge_id": 600133,
+        "hotspot_post": "DNp30",
+        "hotspot_pre": "TmY14",
+        "total_weight_decile": 7
+      },
+      {
+        "abs_weight_difference_decile": 8,
+        "control_edge_id": 86363,
+        "control_post": "AVLP079",
+        "control_pre": "AVLP454_b",
+        "hotspot_edge_id": 384762,
+        "hotspot_post": "DNc02",
+        "hotspot_pre": "KCab",
+        "total_weight_decile": 8
+      },
+      {
+        "abs_weight_difference_decile": 8,
+        "control_edge_id": 66962,
+        "control_post": "SLP189",
+        "control_pre": "AVLP215",
+        "hotspot_edge_id": 68785,
+        "hotspot_post": "OA-VPM4",
+        "hotspot_pre": "AVLP234",
+        "total_weight_decile": 7
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 439608,
+        "control_post": "CB4103",
+        "control_pre": "LPC1",
+        "hotspot_edge_id": 77496,
+        "hotspot_post": "DNp30",
+        "hotspot_pre": "AVLP340",
+        "total_weight_decile": 8
+      },
+      {
+        "abs_weight_difference_decile": 6,
+        "control_edge_id": 56624,
+        "control_post": "CB3289",
+        "control_pre": "AVLP085",
+        "hotspot_edge_id": 440591,
+        "hotspot_post": "DNp27",
+        "hotspot_pre": "LPLC4",
+        "total_weight_decile": 7
+      },
+      {
+        "abs_weight_difference_decile": 9,
+        "control_edge_id": 194884,
+        "control_post": "AVLP316",
+        "control_pre": "CB1596",
+        "hotspot_edge_id": 438380,
+        "hotspot_post": "DNp27",
+        "hotspot_pre": "LLPC1",
+        "total_weight_decile": 7
+      },
+      {
+        "abs_weight_difference_decile": 4,
+        "control_edge_id": 224039,
+        "control_post": "AVLP575",
+        "control_pre": "CB2278",
+        "hotspot_edge_id": 456803,
+        "hotspot_post": "DNp30",
+        "hotspot_pre": "LoVC16",
+        "total_weight_decile": 3
+      },
+      {
+        "abs_weight_difference_decile": 8,
+        "control_edge_id": 5791,
+        "control_post": "AVLP235",
+        "control_pre": "AN_AVLP_1",
+        "hotspot_edge_id": 411196,
+        "hotspot_post": "DNp30",
+        "hotspot_pre": "LHAD1g1",
+        "total_weight_decile": 6
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 400925,
+        "control_post": "AOTU041",
+        "control_pre": "LC10d",
+        "hotspot_edge_id": 402471,
+        "hotspot_post": "LoVC16",
+        "hotspot_pre": "LC17",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 401344,
+        "control_post": "CB0732",
+        "control_pre": "LC11",
+        "hotspot_edge_id": 528580,
+        "hotspot_post": "LC17",
+        "hotspot_pre": "PVLP011",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 403527,
+        "control_post": "PVLP099",
+        "control_pre": "LC21",
+        "hotspot_edge_id": 402482,
+        "hotspot_post": "PVLP011",
+        "hotspot_pre": "LC17",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 3,
+        "control_edge_id": 439,
+        "control_post": "CL334",
+        "control_pre": "5-HTPLP01",
+        "hotspot_edge_id": 152720,
+        "hotspot_post": "DNp27",
+        "hotspot_pre": "CB0766",
+        "total_weight_decile": 1
+      },
+      {
+        "abs_weight_difference_decile": 7,
+        "control_edge_id": 1406,
+        "control_post": "PLP100",
+        "control_pre": "5-HTPMPV03",
+        "hotspot_edge_id": 439624,
+        "hotspot_post": "DNp27",
+        "hotspot_pre": "LPC1",
+        "total_weight_decile": 4
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 400902,
+        "control_post": "AOTU008",
+        "control_pre": "LC10d",
+        "hotspot_edge_id": 42859,
+        "hotspot_post": "KCab",
+        "hotspot_pre": "APL",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 1,
+        "control_edge_id": 964,
+        "control_post": "CB0082",
+        "control_pre": "5-HTPMPV03",
+        "hotspot_edge_id": 84250,
+        "hotspot_post": "DNp27",
+        "hotspot_pre": "AVLP435",
+        "total_weight_decile": 1
+      },
+      {
+        "abs_weight_difference_decile": 9,
+        "control_edge_id": 228904,
+        "control_post": "CB0925",
+        "control_pre": "CB2395a",
+        "hotspot_edge_id": 438667,
+        "hotspot_post": "DNp27",
+        "hotspot_pre": "LLPC2",
+        "total_weight_decile": 7
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 478786,
+        "control_post": "OA-AL2i4",
+        "control_pre": "MeVC11",
+        "hotspot_edge_id": 440397,
+        "hotspot_post": "LoVCLo3",
+        "hotspot_pre": "LPLC2",
+        "total_weight_decile": 9
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 56769,
+        "control_post": "AVLP269",
+        "control_pre": "AVLP086",
+        "hotspot_edge_id": 533525,
+        "hotspot_post": "DNp30",
+        "hotspot_pre": "PVLP082",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 274287,
+        "control_post": "AVLP151",
+        "control_pre": "CB3667",
+        "hotspot_edge_id": 49149,
+        "hotspot_post": "DNp30",
+        "hotspot_pre": "AVLP031",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 630043,
+        "control_post": "lLN2P_c",
+        "control_pre": "lLN1_bc",
+        "hotspot_edge_id": 440319,
+        "hotspot_post": "LC4",
+        "hotspot_pre": "LPLC2",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 8,
+        "control_edge_id": 53311,
+        "control_post": "CB3264",
+        "control_pre": "AVLP076",
+        "hotspot_edge_id": 504875,
+        "hotspot_post": "DNp27",
+        "hotspot_pre": "PLP163",
+        "total_weight_decile": 8
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 402688,
+        "control_post": "PVLP107",
+        "control_pre": "LC18",
+        "hotspot_edge_id": 440424,
+        "hotspot_post": "PVLP011",
+        "hotspot_pre": "LPLC2",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 401883,
+        "control_post": "SAD094",
+        "control_pre": "LC13",
+        "hotspot_edge_id": 101198,
+        "hotspot_post": "DNp30",
+        "hotspot_pre": "AVLP580",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 3,
+        "control_edge_id": 70,
+        "control_post": "AVLP164",
+        "control_pre": "5-HTPLP01",
+        "hotspot_edge_id": 439962,
+        "hotspot_post": "DNp27",
+        "hotspot_pre": "LPLC1",
+        "total_weight_decile": 5
+      },
+      {
+        "abs_weight_difference_decile": 9,
+        "control_edge_id": 55411,
+        "control_post": "AVLP139",
+        "control_pre": "AVLP082",
+        "hotspot_edge_id": 84167,
+        "hotspot_post": "AVLP580",
+        "hotspot_pre": "AVLP435",
+        "total_weight_decile": 9
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 438547,
+        "control_post": "PLP249",
+        "control_pre": "LLPC1",
+        "hotspot_edge_id": 402402,
+        "hotspot_post": "CB1920",
+        "hotspot_pre": "LC17",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 491504,
+        "control_post": "EPG",
+        "control_pre": "PEN_a(PEN1)",
+        "hotspot_edge_id": 402489,
+        "hotspot_post": "PVLP061",
+        "hotspot_pre": "LC17",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 633931,
+        "control_post": "lLN2T_d",
+        "control_pre": "lLN2X12",
+        "hotspot_edge_id": 440277,
+        "hotspot_post": "DNpe056",
+        "hotspot_pre": "LPLC2",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 438729,
+        "control_post": "LPT48_vCal3",
+        "control_pre": "LLPC2",
+        "hotspot_edge_id": 440209,
+        "hotspot_post": "CB0766",
+        "hotspot_pre": "LPLC2",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 5,
+        "control_edge_id": 93997,
+        "control_post": "CB1783",
+        "control_pre": "AVLP532",
+        "hotspot_edge_id": 408191,
+        "hotspot_post": "DNp27",
+        "hotspot_pre": "LC9",
+        "total_weight_decile": 6
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 402020,
+        "control_post": "LC31b",
+        "control_pre": "LC15",
+        "hotspot_edge_id": 482774,
+        "hotspot_post": "KCg-m",
+        "hotspot_pre": "OA-VPM4",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 336133,
+        "control_post": "lLN1_bc",
+        "control_pre": "DL2v_adPN",
+        "hotspot_edge_id": 528585,
+        "hotspot_post": "LLPC1",
+        "hotspot_pre": "PVLP011",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 407952,
+        "control_post": "CB4048",
+        "control_pre": "LC6",
+        "hotspot_edge_id": 402499,
+        "hotspot_post": "PVLP106",
+        "hotspot_pre": "LC17",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 401535,
+        "control_post": "PVLP081",
+        "control_pre": "LC11",
+        "hotspot_edge_id": 440361,
+        "hotspot_post": "LT56",
+        "hotspot_pre": "LPLC2",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 404477,
+        "control_post": "LC24",
+        "control_pre": "LC26",
+        "hotspot_edge_id": 68720,
+        "hotspot_post": "AVLP031",
+        "hotspot_pre": "AVLP234",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 531843,
+        "control_post": "CB1764",
+        "control_pre": "PVLP069",
+        "hotspot_edge_id": 440419,
+        "hotspot_post": "PLP163",
+        "hotspot_pre": "LPLC2",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 7,
+        "control_edge_id": 10397,
+        "control_post": "AVLP300_b",
+        "control_pre": "AN_AVLP_GNG_10",
+        "hotspot_edge_id": 54368,
+        "hotspot_post": "DNp30",
+        "hotspot_pre": "AVLP079",
+        "total_weight_decile": 5
+      },
+      {
+        "abs_weight_difference_decile": 9,
+        "control_edge_id": 3003,
+        "control_post": "PVLP123",
+        "control_pre": "AMMC-A1",
+        "hotspot_edge_id": 45801,
+        "hotspot_post": "DNp30",
+        "hotspot_pre": "AVLP001",
+        "total_weight_decile": 7
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 400616,
+        "control_post": "LTe65",
+        "control_pre": "LC10b",
+        "hotspot_edge_id": 385269,
+        "hotspot_post": "KCab",
+        "hotspot_pre": "KCg-m",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 53729,
+        "control_post": "CB1552",
+        "control_pre": "AVLP078",
+        "hotspot_edge_id": 450800,
+        "hotspot_post": "DNp27",
+        "hotspot_pre": "LTe13",
+        "total_weight_decile": 9
+      },
+      {
+        "abs_weight_difference_decile": 7,
+        "control_edge_id": 332,
+        "control_post": "CB2574",
+        "control_pre": "5-HTPLP01",
+        "hotspot_edge_id": 402596,
+        "hotspot_post": "DNp27",
+        "hotspot_pre": "LC18",
+        "total_weight_decile": 4
+      },
+      {
+        "abs_weight_difference_decile": 3,
+        "control_edge_id": 149,
+        "control_post": "AVLP418",
+        "control_pre": "5-HTPLP01",
+        "hotspot_edge_id": 364241,
+        "hotspot_post": "DNp30",
+        "hotspot_pre": "DNpe056",
+        "total_weight_decile": 2
+      },
+      {
+        "abs_weight_difference_decile": 7,
+        "control_edge_id": 299519,
+        "control_post": "AVLP080",
+        "control_pre": "CB4214",
+        "hotspot_edge_id": 400330,
+        "hotspot_post": "DNp27",
+        "hotspot_pre": "LC10",
+        "total_weight_decile": 4
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 401175,
+        "control_post": "LC10d",
+        "control_pre": "LC10e",
+        "hotspot_edge_id": 365068,
+        "hotspot_post": "KCab",
+        "hotspot_pre": "DPM",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 406900,
+        "control_post": "AMMC-A1",
+        "control_pre": "LC4",
+        "hotspot_edge_id": 402394,
+        "hotspot_post": "CB0766",
+        "hotspot_pre": "LC17",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 47434,
+        "control_post": "AVLP224_a",
+        "control_pre": "AVLP019",
+        "hotspot_edge_id": 440475,
+        "hotspot_post": "TmY14",
+        "hotspot_pre": "LPLC2",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 7,
+        "control_edge_id": 11064,
+        "control_post": "WED072",
+        "control_pre": "AN_AVLP_GNG_18",
+        "hotspot_edge_id": 411185,
+        "hotspot_post": "DL2v_adPN",
+        "hotspot_pre": "LHAD1g1",
+        "total_weight_decile": 8
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 73197,
+        "control_post": "AVLP201",
+        "control_pre": "AVLP295",
+        "hotspot_edge_id": 440323,
+        "hotspot_post": "LC9",
+        "hotspot_pre": "LPLC2",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 276166,
+        "control_post": "CB3099",
+        "control_pre": "CB3700",
+        "hotspot_edge_id": 467609,
+        "hotspot_post": "DNp27",
+        "hotspot_pre": "MTe13",
+        "total_weight_decile": 9
+      },
+      {
+        "abs_weight_difference_decile": 9,
+        "control_edge_id": 80471,
+        "control_post": "AVLP078",
+        "control_pre": "AVLP394",
+        "hotspot_edge_id": 618525,
+        "hotspot_post": "DNp30",
+        "hotspot_pre": "WED061",
+        "total_weight_decile": 8
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 402690,
+        "control_post": "PVLP109",
+        "control_pre": "LC18",
+        "hotspot_edge_id": 51558,
+        "hotspot_post": "DNp30",
+        "hotspot_pre": "AVLP053",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 400795,
+        "control_post": "AOTU025",
+        "control_pre": "LC10c-2",
+        "hotspot_edge_id": 440337,
+        "hotspot_post": "LPLC4",
+        "hotspot_pre": "LPLC2",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 400249,
+        "control_post": "AOTU008",
+        "control_pre": "LC10",
+        "hotspot_edge_id": 402504,
+        "hotspot_post": "PVLP135",
+        "hotspot_pre": "LC17",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 91203,
+        "control_post": "AVLP016",
+        "control_pre": "AVLP498",
+        "hotspot_edge_id": 440333,
+        "hotspot_post": "LPC1",
+        "hotspot_pre": "LPLC2",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 400317,
+        "control_post": "CB3127",
+        "control_pre": "LC10",
+        "hotspot_edge_id": 440194,
+        "hotspot_post": "AVLP531",
+        "hotspot_pre": "LPLC2",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 446289,
+        "control_post": "AVLP394",
+        "control_pre": "LT62",
+        "hotspot_edge_id": 440167,
+        "hotspot_post": "AVLP016",
+        "hotspot_pre": "LPLC2",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 52306,
+        "control_post": "CL067",
+        "control_pre": "AVLP064",
+        "hotspot_edge_id": 440482,
+        "hotspot_post": "WED061",
+        "hotspot_pre": "LPLC2",
+        "total_weight_decile": 9
+      },
+      {
+        "abs_weight_difference_decile": 8,
+        "control_edge_id": 947,
+        "control_post": "AN_multi_14",
+        "control_pre": "5-HTPMPV03",
+        "hotspot_edge_id": 459293,
+        "hotspot_post": "DNp27",
+        "hotspot_pre": "LoVCLo3",
+        "total_weight_decile": 5
+      },
+      {
+        "abs_weight_difference_decile": 5,
+        "control_edge_id": 944,
+        "control_post": "AN_multi_105",
+        "control_pre": "5-HTPMPV03",
+        "hotspot_edge_id": 411184,
+        "hotspot_post": "DL2d_adPN",
+        "hotspot_pre": "LHAD1g1",
+        "total_weight_decile": 4
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 402079,
+        "control_post": "PLP115_b",
+        "control_pre": "LC15",
+        "hotspot_edge_id": 528589,
+        "hotspot_post": "LPLC1",
+        "hotspot_pre": "PVLP011",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 7,
+        "control_edge_id": 1085,
+        "control_post": "CB2710",
+        "control_pre": "5-HTPMPV03",
+        "hotspot_edge_id": 405323,
+        "hotspot_post": "DNp27",
+        "hotspot_pre": "LC31a",
+        "total_weight_decile": 3
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 363726,
+        "control_post": "AstA1",
+        "control_pre": "DNpe053",
+        "hotspot_edge_id": 440327,
+        "hotspot_post": "LHAD1g1",
+        "hotspot_pre": "LPLC2",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 403623,
+        "control_post": "LC10b",
+        "control_pre": "LC22",
+        "hotspot_edge_id": 385271,
+        "hotspot_post": "KCab-m",
+        "hotspot_pre": "KCg-m",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 9,
+        "control_edge_id": 73108,
+        "control_post": "AVLP532",
+        "control_pre": "AVLP294",
+        "hotspot_edge_id": 440329,
+        "hotspot_post": "LLPC1",
+        "hotspot_pre": "LPLC2",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 479007,
+        "control_post": "MeTu2b",
+        "control_pre": "MeVC21",
+        "hotspot_edge_id": 440335,
+        "hotspot_post": "LPLC1",
+        "hotspot_pre": "LPLC2",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 478973,
+        "control_post": "aMe9",
+        "control_pre": "MeVC20",
+        "hotspot_edge_id": 68713,
+        "hotspot_post": "AVLP001",
+        "hotspot_pre": "AVLP234",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 8,
+        "control_edge_id": 69126,
+        "control_post": "AVLP267",
+        "control_pre": "AVLP244",
+        "hotspot_edge_id": 533269,
+        "hotspot_post": "DNp30",
+        "hotspot_pre": "PVLP081",
+        "total_weight_decile": 5
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 401669,
+        "control_post": "PVLP100",
+        "control_pre": "LC12",
+        "hotspot_edge_id": 456805,
+        "hotspot_post": "LC11",
+        "hotspot_pre": "LoVC16",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 446775,
+        "control_post": "PVLP024",
+        "control_pre": "LT66",
+        "hotspot_edge_id": 440330,
+        "hotspot_post": "LLPC2",
+        "hotspot_pre": "LPLC2",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 9,
+        "control_edge_id": 7098,
+        "control_post": "AVLP592",
+        "control_pre": "AN_AVLP_21",
+        "hotspot_edge_id": 271395,
+        "hotspot_post": "DNp30",
+        "hotspot_pre": "CB3609",
+        "total_weight_decile": 7
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 446028,
+        "control_post": "AVLP183",
+        "control_pre": "LT61b",
+        "hotspot_edge_id": 84091,
+        "hotspot_post": "AVLP308",
+        "hotspot_pre": "AVLP435",
+        "total_weight_decile": 9
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 210102,
+        "control_post": "AVLP001",
+        "control_pre": "CB1959",
+        "hotspot_edge_id": 161071,
+        "hotspot_post": "DNp30",
+        "hotspot_pre": "CB0930",
+        "total_weight_decile": 9
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 61124,
+        "control_post": "AVLP269",
+        "control_pre": "AVLP153",
+        "hotspot_edge_id": 455277,
+        "hotspot_post": "DNp27",
+        "hotspot_pre": "LTe64",
+        "total_weight_decile": 9
+      },
+      {
+        "abs_weight_difference_decile": 4,
+        "control_edge_id": 230,
+        "control_post": "CB0128",
+        "control_pre": "5-HTPLP01",
+        "hotspot_edge_id": 170273,
+        "hotspot_post": "DNp27",
+        "hotspot_pre": "CB1099",
+        "total_weight_decile": 1
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 439683,
+        "control_post": "PLP018",
+        "control_pre": "LPC1",
+        "hotspot_edge_id": 401645,
+        "hotspot_post": "LoVC16",
+        "hotspot_pre": "LC12",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 54,
+        "control_post": "AVLP120",
+        "control_pre": "5-HTPLP01",
+        "hotspot_edge_id": 528036,
+        "hotspot_post": "DNp30",
+        "hotspot_pre": "PVLP007",
+        "total_weight_decile": 8
+      },
+      {
+        "abs_weight_difference_decile": 1,
+        "control_edge_id": 41,
+        "control_post": "AVLP084",
+        "control_pre": "5-HTPLP01",
+        "hotspot_edge_id": 406982,
+        "hotspot_post": "DNp27",
+        "hotspot_pre": "LC4",
+        "total_weight_decile": 2
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 45761,
+        "control_post": "CB3684",
+        "control_pre": "AVLP001",
+        "hotspot_edge_id": 470017,
+        "hotspot_post": "DNp27",
+        "hotspot_pre": "MTe42",
+        "total_weight_decile": 10
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 333499,
+        "control_post": "CB1485",
+        "control_pre": "DA1_lPN",
+        "hotspot_edge_id": 440297,
+        "hotspot_post": "LC16",
+        "hotspot_pre": "LPLC2",
+        "total_weight_decile": 9
+      },
+      {
+        "abs_weight_difference_decile": 3,
+        "control_edge_id": 48826,
+        "control_post": "AVLP164",
+        "control_pre": "AVLP030",
+        "hotspot_edge_id": 411265,
+        "hotspot_post": "VL2p_adPN",
+        "hotspot_pre": "LHAD1g1",
+        "total_weight_decile": 7
+      },
+      {
+        "abs_weight_difference_decile": 2,
+        "control_edge_id": 977,
+        "control_post": "CB0344",
+        "control_pre": "5-HTPMPV03",
+        "hotspot_edge_id": 401396,
+        "hotspot_post": "DNp27",
+        "hotspot_pre": "LC11",
+        "total_weight_decile": 4
+      },
+      {
+        "abs_weight_difference_decile": 7,
+        "control_edge_id": 90435,
+        "control_post": "AVLP232",
+        "control_pre": "AVLP489",
+        "hotspot_edge_id": 403604,
+        "hotspot_post": "DNp27",
+        "hotspot_pre": "LC22",
+        "total_weight_decile": 6
+      },
+      {
+        "abs_weight_difference_decile": 9,
+        "control_edge_id": 52916,
+        "control_post": "AVLP026",
+        "control_pre": "AVLP076",
+        "hotspot_edge_id": 618378,
+        "hotspot_post": "DNp30",
+        "hotspot_pre": "WED060",
+        "total_weight_decile": 8
+      },
+      {
+        "abs_weight_difference_decile": 9,
+        "control_edge_id": 203647,
+        "control_post": "CB2100",
+        "control_pre": "CB1819",
+        "hotspot_edge_id": 84133,
+        "hotspot_post": "AVLP473",
+        "hotspot_pre": "AVLP435",
+        "total_weight_decile": 7
+      },
+      {
+        "abs_weight_difference_decile": 8,
+        "control_edge_id": 6204,
+        "control_post": "SAD021_a",
+        "control_pre": "AN_AVLP_14",
+        "hotspot_edge_id": 73408,
+        "hotspot_post": "DNp30",
+        "hotspot_pre": "AVLP297",
+        "total_weight_decile": 7
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 376075,
+        "control_post": "PS099",
+        "control_pre": "HST",
+        "hotspot_edge_id": 600154,
+        "hotspot_post": "LPLC2",
+        "hotspot_pre": "TmY14",
+        "total_weight_decile": 9
+      },
+      {
+        "abs_weight_difference_decile": 1,
+        "control_edge_id": 352,
+        "control_post": "CB3287a",
+        "control_pre": "5-HTPLP01",
+        "hotspot_edge_id": 384921,
+        "hotspot_post": "DNc02",
+        "hotspot_pre": "KCab-m",
+        "total_weight_decile": 5
+      },
+      {
+        "abs_weight_difference_decile": 9,
+        "control_edge_id": 269912,
+        "control_post": "CB1017",
+        "control_pre": "CB3578",
+        "hotspot_edge_id": 402496,
+        "hotspot_post": "PVLP082",
+        "hotspot_pre": "LC17",
+        "total_weight_decile": 8
+      },
+      {
+        "abs_weight_difference_decile": 7,
+        "control_edge_id": 6769,
+        "control_post": "CB0125",
+        "control_pre": "AN_AVLP_2",
+        "hotspot_edge_id": 440400,
+        "hotspot_post": "MTe13",
+        "hotspot_pre": "LPLC2",
+        "total_weight_decile": 7
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 412323,
+        "control_post": "AVLP243",
+        "control_pre": "LHAV1a1",
+        "hotspot_edge_id": 440303,
+        "hotspot_post": "LC21",
+        "hotspot_pre": "LPLC2",
+        "total_weight_decile": 9
+      },
+      {
+        "abs_weight_difference_decile": 10,
+        "control_edge_id": 11285,
+        "control_post": "CB0519",
+        "control_pre": "AN_AVLP_GNG_21",
+        "hotspot_edge_id": 74704,
+        "hotspot_post": "DNp30",
+        "hotspot_pre": "AVLP308",
+        "total_weight_decile": 9
+      },
+      {
+        "abs_weight_difference_decile": 9,
+        "control_edge_id": 45871,
+        "control_post": "PVLP115",
+        "control_pre": "AVLP001",
+        "hotspot_edge_id": 440481,
+        "hotspot_post": "WED060",
+        "hotspot_pre": "LPLC2",
+        "total_weight_decile": 8
+      },
+      {
+        "abs_weight_difference_decile": 5,
+        "control_edge_id": 79,
+        "control_post": "AVLP190,AVLP191",
+        "control_pre": "5-HTPLP01",
+        "hotspot_edge_id": 267888,
+        "hotspot_post": "DNp30",
+        "hotspot_pre": "CB3513",
+        "total_weight_decile": 3
+      }
+    ],
+    "unmatched": [],
+    "unmatched_count": 0
+  },
+  "aligned_edges_sha256": "1cac309c7760d16f5f041a7b924efbf5cdfa3a46570090fb234c2323ed9e313c",
+  "candidate_edge_count": 114825,
+  "claim_boundary": "SQ-03F may describe local network-position features associated with the frozen model's strongest dynamic hotspot edges after deterministic structural matching. It does not establish a biological sex mechanism, biological population effect, organism-level behavior, or causal importance outside the MoscaQuant model.",
+  "classification": "AUTHORITATIVE_DYNAMIC_HOTSPOT_NETWORK_POSITION_RESULT",
+  "conservative_matched_graph_edge_count": 639435,
+  "hotspot_fraction": 0.01,
+  "hotspot_k": 1149,
+  "protocol_sha256": "d97e820a719359370cf4120952b41371f8183f43d9a2246b8f6efc327fb440ac",
+  "schema": "moscaquant.sq03f_result/v1",
+  "sidequest_id": "SQ-03F",
+  "source_commit": "a34a5573f0d69dfecebd1746073ea1e1d3ce1c60",
+  "sq03b_ledger_sha256": "7b2632de5792973534177b697efdd7c3af0b82a836d9d2b597812dbc0dd1f725",
+  "sq03e_result_sha256": "648b795448d2e82198dd12620e2228824f084d57e87c89f1bb0645d9551d43c8",
+  "sq03e_top100_C_reproduced": true,
+  "sq03e_top100_S_reproduced": true,
+  "title": "HOTSPOT TEST"
+}
