@@ -5,10 +5,10 @@ from achievements.registry import expected_category, achievement_number
 def test_namespace_capacity_140():
     assert achievement_number("ACH-140") == 140
 
-def test_populated_count_84():
-    assert len(V1_DEFINITIONS) == 84
-    assert len(V1_REGISTRY) == 84
-    assert len(STATUS_BY_ID) == 84
+def test_populated_count_87():
+    assert len(V1_DEFINITIONS) == 87
+    assert len(V1_REGISTRY) == 87
+    assert len(STATUS_BY_ID) == 87
 
 def test_extension_categories():
     assert expected_category("ACH-129") is Category.SCIENCE

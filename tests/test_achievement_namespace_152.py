@@ -20,10 +20,10 @@ EXPECTED = {
 def test_namespace_capacity_ends_at_152():
     assert achievement_number("ACH-152") == 152
 
-def test_populated_catalog_is_84():
-    assert len(V1_DEFINITIONS) == 84
-    assert len(V1_REGISTRY) == 84
-    assert len(STATUS_BY_ID) == 84
+def test_populated_catalog_is_87():
+    assert len(V1_DEFINITIONS) == 87
+    assert len(V1_REGISTRY) == 87
+    assert len(STATUS_BY_ID) == 87
 
 def test_gym_pack_titles_and_categories():
     for aid, (title, category) in EXPECTED.items():

@@ -251,3 +251,10 @@ SEMANTICS_BY_ID.update({
     "ACH-151": {"family": "ANOMALOUS_OBSERVANCE", "related_achievement_ids": []},
     "ACH-152": {"family": "PROVENANCE", "related_achievement_ids": ["ACH-130", "ACH-140"]},
 })
+
+
+SEMANTICS_BY_ID.update({
+    "ACH-021": {"family": "MATCHED_COMPARISON", "related_achievement_ids": ["ACH-097"]},
+    "ACH-057": {"family": "CONTAINMENT", "related_achievement_ids": ["ACH-049", "ACH-052", "ACH-053"]},
+    "ACH-097": {"family": "FAMILY_MODEL", "related_achievement_ids": ["ACH-021"]},
+})

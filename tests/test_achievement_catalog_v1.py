@@ -2,9 +2,9 @@ from achievements.catalog_v1 import STATUS_BY_ID, V1_DEFINITIONS, V1_REGISTRY
 from achievements.models import Category
 
 
-def test_v1_has_exactly_84_populated_definitions():
-    assert len(V1_DEFINITIONS) == 84
-    assert len(V1_REGISTRY) == 84
+def test_v1_has_exactly_87_populated_definitions():
+    assert len(V1_DEFINITIONS) == 87
+    assert len(V1_REGISTRY) == 87
 
 
 def test_v1_spans_all_reserved_categories():

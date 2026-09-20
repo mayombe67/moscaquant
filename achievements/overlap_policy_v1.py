@@ -1,6 +1,9 @@
 from __future__ import annotations
 
 CANONICAL_PREDICATE_BY_ID = {
+    "ACH-021": "science.matched_heavier_source_at_comparable_opportunity",
+    "ACH-057": "containment.unsupported_exemption_request_rejected",
+    "ACH-097": "lore.salads_car_flip_followup",
     "ACH-001": "science.preregistered_null_constrains_next_question",
     "ACH-008": "science.persistent_state_silent_at_baseline_exposed_by_perturbation",
     "ACH-012": "science.preregistered_control_constrains_causal_interpretation",
@@ -36,7 +39,9 @@ CANONICAL_PREDICATE_BY_ID = {
     "ACH-152": "oddity.declared_surrogate_synthetic_or_inferred_input",
 }
 
-COMEDIC_OVERLAP_GROUPS = {}
+COMEDIC_OVERLAP_GROUPS = {
+    "SALADS_CAR_FLIP": ("ACH-021", "ACH-097"),
+}
 
 REVIEW_STATE_BY_ID = {
     achievement_id: "REVIEWED_DISTINCT"
@@ -56,3 +61,11 @@ LEGACY_ADJUDICATION_V1 = {
 }
 
 REVIEW_STATE_BY_ID.update(LEGACY_ADJUDICATION_V1)
+
+SOPRANOS_PACK_REVIEW_V1 = {
+    "ACH-021": "REVIEWED_DISTINCT",
+    "ACH-057": "REVIEWED_DISTINCT",
+    "ACH-097": "INTENTIONAL_COMEDIC_OVERLAP",
+}
+
+REVIEW_STATE_BY_ID.update(SOPRANOS_PACK_REVIEW_V1)
