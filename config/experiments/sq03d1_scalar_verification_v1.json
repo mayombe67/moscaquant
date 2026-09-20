@@ -1,0 +1,65 @@
+{
+  "schema": "moscaquant.sq03d1_scalar_verification/v1",
+  "sidequest_id": "SQ-03D.1",
+  "title": "DOUBLE CHECK THE KNIFE",
+  "status": "FROZEN_BEFORE_PANEL_SELECTION",
+  "class": "CONFIRMATORY_SCALAR_VERIFICATION_FOLLOWUP",
+  "parents": {
+    "sq03d_result": "artifacts/sidequests/sq03d-reciprocity-result-v1.json"
+  },
+  "question": "Do the strongest SQ-03D paired-background context-residual effects survive independent scalar re-execution of both subject counterfactuals, while frozen near-zero controls remain near-zero?",
+  "panel_selection": {
+    "source": "SQ-03D authoritative result only",
+    "upper_tail_pairs": 16,
+    "upper_tail_rank": [
+      "integrated_positive_voltage_context_residual DESC",
+      "peak_voltage_context_residual DESC",
+      "integrated_positive_voltage_total_effect_magnitude DESC",
+      "edge_id ASC"
+    ],
+    "low_tail_controls": 16,
+    "low_tail_rank": [
+      "integrated_positive_voltage_context_residual ASC",
+      "integrated_positive_voltage_total_effect_magnitude ASC",
+      "peak_voltage_context_residual ASC",
+      "edge_id ASC"
+    ],
+    "stratify_by_input": true,
+    "minimum_upper_per_input": 2,
+    "minimum_low_per_input": 2,
+    "no_manual_addition": true,
+    "no_post_selection_substitution": true
+  },
+  "execution": {
+    "subjects": [
+      "MORTY",
+      "LILITH"
+    ],
+    "runtime": "original scalar HybridRuntime",
+    "same_sq03a_sq03b_mechanics": true,
+    "same_single_edge_equalization_rule": true,
+    "exact_aa_required": true,
+    "sq03a_baseline_replay_required": true
+  },
+  "verification": {
+    "reconstruct": [
+      "delta_morty",
+      "delta_lilith",
+      "integrated_context_residual",
+      "integrated_total_effect_magnitude",
+      "integrated_normalized_asymmetry",
+      "peak_context_residual",
+      "peak_total_effect_magnitude",
+      "peak_normalized_asymmetry"
+    ],
+    "compare_to_sq03d": true,
+    "batched_scalar_rtol": 1e-06,
+    "batched_scalar_atol": 1e-07,
+    "formal_p_value_claim": false
+  },
+  "acceptance": {
+    "upper_tail": "all selected upper-tail pairs must reproduce both subject counterfactuals within the already-frozen SQ-03B/SQ-03C numerical agreement contract",
+    "low_tail": "all low-tail controls must reproduce within the same numerical agreement contract"
+  },
+  "claim_boundary": "SQ-03D.1 can verify that selected SQ-03D context-dependent hotspots survive an independent scalar execution path. It does not establish a biological sex mechanism, population-level statistical significance, organism-level behavior, intelligence differences, or financial utility."
+}
