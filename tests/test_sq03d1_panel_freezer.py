@@ -36,6 +36,7 @@ def test_pair_metrics_exact_reciprocity():
     assert got["context_residual"] == 0.0
     assert got["total_effect_magnitude"] == 6.0
     assert got["normalized_asymmetry"] == 0.0
+    assert got["sign_relation"] == "OPPOSITE"
 
 
 def test_upper_allocator_seeds_each_input_then_fills_globally():

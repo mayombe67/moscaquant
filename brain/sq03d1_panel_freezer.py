@@ -12,6 +12,15 @@ def normalized_asymmetry(a: float, b: float) -> float:
     return abs(a + b) / (abs(a) + abs(b))
 
 
+def sign_relation(a: float, b: float) -> str:
+    product = a * b
+    if product < 0:
+        return "OPPOSITE"
+    if product > 0:
+        return "SAME"
+    return "ZERO_INVOLVED"
+
+
 def pair_metrics(dm: float, dl: float) -> dict:
     return {
         "delta_morty": dm,
@@ -19,6 +28,7 @@ def pair_metrics(dm: float, dl: float) -> dict:
         "context_residual": abs(dm + dl),
         "total_effect_magnitude": abs(dm) + abs(dl),
         "normalized_asymmetry": normalized_asymmetry(dm, dl),
+        "sign_relation": sign_relation(dm, dl),
     }
 
 
