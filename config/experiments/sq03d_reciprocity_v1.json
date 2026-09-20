@@ -1,0 +1,115 @@
+{
+  "schema": "moscaquant.sq03d_reciprocity/v1",
+  "sidequest_id": "SQ-03D",
+  "title": "THE SAME KNIFE CUTS DIFFERENTLY",
+  "status": "FROZEN_BEFORE_ANALYSIS",
+  "class": "PAIRED_CONNECTOME_BACKGROUND_ANALYSIS",
+  "parents": {
+    "sq03b_ledger": "artifacts/sidequests/sq03b-checkpoints-v1/results.ndjson",
+    "sq03b_ledger_sha256": "7b2632de5792973534177b697efdd7c3af0b82a836d9d2b597812dbc0dd1f725",
+    "sq03c_result": "artifacts/sidequests/sq03c-scalar-verification-result-v1.json"
+  },
+  "question": "For the same matched edge, input, and output anchor, is the effect of substituting the opposite-sex edge weight approximately reciprocal across MORTY and LILITH backgrounds, or does network background alter the functional consequence of that same structural difference?",
+  "pairing": {
+    "key": [
+      "input",
+      "edge_id",
+      "anchor"
+    ],
+    "subjects_required": [
+      "MORTY",
+      "LILITH"
+    ],
+    "same_edge_required": true,
+    "same_input_required": true,
+    "same_anchor_required": true,
+    "drop_unpaired": false,
+    "unpaired_is_error": true
+  },
+  "definitions": {
+    "delta_morty": "MORTY(opposite-weight edge) - MORTY(native edge)",
+    "delta_lilith": "LILITH(opposite-weight edge) - LILITH(native edge)",
+    "reciprocal_expectation": "delta_morty ~= -delta_lilith",
+    "context_residual": "abs(delta_morty + delta_lilith)",
+    "total_effect_magnitude": "abs(delta_morty) + abs(delta_lilith)",
+    "normalized_asymmetry": "0 when both deltas are exactly zero; otherwise abs(delta_morty + delta_lilith) / (abs(delta_morty) + abs(delta_lilith))",
+    "sign_relation": "OPPOSITE when product < 0; SAME when product > 0; ZERO_INVOLVED otherwise"
+  },
+  "primary_metric": {
+    "name": "integrated_positive_voltage_context_residual",
+    "formula": "abs(delta_morty_integrated + delta_lilith_integrated)",
+    "reason": "Uses the raw reciprocity residual so tiny near-zero effects cannot look important merely because a normalized ratio is large."
+  },
+  "secondary_metrics": [
+    "integrated_positive_voltage_normalized_asymmetry",
+    "integrated_positive_voltage_total_effect_magnitude",
+    "integrated_positive_voltage_sign_relation",
+    "peak_voltage_context_residual",
+    "peak_voltage_normalized_asymmetry",
+    "peak_voltage_total_effect_magnitude",
+    "peak_voltage_sign_relation",
+    "first_positive_frame_pair_relation"
+  ],
+  "strata": {
+    "primary": [
+      "input",
+      "anchor"
+    ],
+    "inputs": [
+      "TmY14",
+      "LPLC2",
+      "AVLP234",
+      "AVLP435"
+    ],
+    "anchors": [
+      "DNc02",
+      "DNp27",
+      "DNp30"
+    ]
+  },
+  "summaries": {
+    "context_residual_quantiles": [
+      0.5,
+      0.9,
+      0.99,
+      0.999,
+      1.0
+    ],
+    "normalized_asymmetry_quantiles": [
+      0.5,
+      0.9,
+      0.99,
+      1.0
+    ],
+    "effect_magnitude_quantiles": [
+      0.5,
+      0.9,
+      0.99,
+      0.999,
+      1.0
+    ],
+    "sign_relation_counts": true,
+    "magnitude_deciles": true,
+    "report_global_and_per_stratum": true
+  },
+  "ranking": {
+    "purpose": "future scalar follow-up candidate generation only",
+    "primary": "integrated_positive_voltage_context_residual DESC",
+    "tie_break_1": "peak_voltage_context_residual DESC",
+    "tie_break_2": "integrated_positive_voltage_total_effect_magnitude DESC",
+    "tie_break_3": "edge_id ASC",
+    "no_candidate_execution_in_sq03d": true
+  },
+  "sq03c_verification_subset": {
+    "use_if_both_subjects_scalar_verified_for_same_pair": true,
+    "purpose": "Report the same frozen metrics on pairs for which both subject counterfactuals have already been independently scalar-verified.",
+    "does_not_replace_full_sq03b_census": true
+  },
+  "statistics": {
+    "population_p_values": false,
+    "simulation_replicates_as_samples": false,
+    "formal_significance_threshold": false,
+    "descriptive_census_only": true
+  },
+  "claim_boundary": "SQ-03D measures context dependence inside the frozen MoscaQuant matched central-brain model. A nonzero reciprocity residual means that the same male/female edge-weight difference has different modeled consequences when embedded in the two matched network backgrounds. It does not establish a biological sex mechanism, organism-level behavior, population-level statistical significance, intelligence differences, or financial utility."
+}
