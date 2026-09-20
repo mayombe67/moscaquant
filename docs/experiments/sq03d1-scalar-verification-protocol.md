@@ -50,6 +50,13 @@ Freeze **16 pairs** from the SQ-03D ranking:
 Selection is stratified so every input contributes at least two upper-tail pairs
 when the frozen ranking contains enough eligible observations.
 
+The stratified allocation is deterministic:
+
+1. rank all eligible pairs by the frozen upper-tail ranking;
+2. seed the panel with the first two pairs for each input;
+3. fill the remaining slots from the global ranking, skipping pairs already
+   selected.
+
 ## Low-tail controls
 
 Freeze **16 near-zero pairs** ranked by:
@@ -61,6 +68,16 @@ Freeze **16 near-zero pairs** ranked by:
 
 Selection is stratified so every input contributes at least two low-tail
 controls when possible.
+
+The low-tail allocation is deterministic:
+
+1. rank all eligible pairs by the frozen low-tail ranking;
+2. exclude all upper-tail panel pairs;
+3. seed the controls with the first two remaining pairs for each input;
+4. fill the remaining slots from the global low-tail ranking, skipping pairs
+   already selected.
+
+Upper-tail and low-tail panel membership may not overlap.
 
 ## Scalar execution
 

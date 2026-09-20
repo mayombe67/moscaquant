@@ -43,7 +43,7 @@ def test_panel_source_replay_is_evidence_recovery_only():
     assert replay["sq03b_ledger_hash_must_match_sq03d"] is True
     assert replay["no_new_neural_dynamics"] is True
     assert replay["no_selection_rule_change"] is True
-    assert cfg["protocol_amendment"]["timing"] == "BEFORE_PANEL_SELECTION"
+    assert cfg["protocol_amendments"][0]["timing"] == "BEFORE_PANEL_SELECTION"
 
 def test_both_subjects_are_required():
     cfg = load()
@@ -65,3 +65,17 @@ def test_no_fake_statistics():
     cfg = load()
     assert cfg["verification"]["formal_p_value_claim"] is False
     assert "No p-value is generated from simulation rows." in DOC.read_text()
+
+def test_stratified_allocation_is_fully_algorithmic():
+    cfg = load()
+    alloc = cfg["panel_selection"]["stratified_allocation"]
+    assert alloc["pair_identity"] == ["input", "edge_id", "anchor"]
+    assert alloc["upper_low_overlap_allowed"] is False
+    assert alloc["manual_override_allowed"] is False
+    assert "first 2 pairs for each input" in alloc["upper"][1]
+    assert "first 2 remaining pairs for each input" in alloc["low"][2]
+    ids = [a["id"] for a in cfg["protocol_amendments"]]
+    assert "SQ-03D.1-A1" in ids
+    assert "SQ-03D.1-A2" in ids
+    assert all(a["timing"] == "BEFORE_PANEL_SELECTION" for a in cfg["protocol_amendments"])
+

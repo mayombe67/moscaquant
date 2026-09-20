@@ -35,6 +35,26 @@
       "sq03b_ledger_hash_must_match_sq03d": true,
       "no_new_neural_dynamics": true,
       "no_selection_rule_change": true
+    },
+    "stratified_allocation": {
+      "upper": [
+        "rank all eligible pairs by frozen upper-tail ranking",
+        "seed the panel with the first 2 pairs for each input",
+        "fill remaining slots from the global ranking, skipping already selected pairs"
+      ],
+      "low": [
+        "rank all eligible pairs by frozen low-tail ranking",
+        "exclude all upper-tail panel pairs",
+        "seed the control panel with the first 2 remaining pairs for each input",
+        "fill remaining slots from the global low-tail ranking, skipping already selected pairs"
+      ],
+      "pair_identity": [
+        "input",
+        "edge_id",
+        "anchor"
+      ],
+      "upper_low_overlap_allowed": false,
+      "manual_override_allowed": false
     }
   },
   "execution": {
@@ -69,10 +89,18 @@
     "low_tail": "all low-tail controls must reproduce within the same numerical agreement contract"
   },
   "claim_boundary": "SQ-03D.1 can verify that selected SQ-03D context-dependent hotspots survive an independent scalar execution path. It does not establish a biological sex mechanism, population-level statistical significance, organism-level behavior, intelligence differences, or financial utility.",
-  "protocol_amendment": {
-    "id": "SQ-03D.1-A1",
-    "reason": "The authoritative SQ-03D result stores the complete summaries and top 100 ranked pairs but not every low-tail row identity. Before panel selection, the protocol was amended to permit deterministic replay of the already-frozen SQ-03D analysis over the exact same hashed SQ-03B ledger solely to recover those identities.",
-    "timing": "BEFORE_PANEL_SELECTION",
-    "scientific_effect": "No selection thresholds, ranking rules, panel sizes, runtime mechanics, or acceptance criteria changed."
-  }
+  "protocol_amendments": [
+    {
+      "id": "SQ-03D.1-A1",
+      "reason": "The authoritative SQ-03D result stores the complete summaries and top 100 ranked pairs but not every low-tail row identity. Before panel selection, the protocol was amended to permit deterministic replay of the already-frozen SQ-03D analysis over the exact same hashed SQ-03B ledger solely to recover those identities.",
+      "timing": "BEFORE_PANEL_SELECTION",
+      "scientific_effect": "No selection thresholds, ranking rules, panel sizes, runtime mechanics, or acceptance criteria changed."
+    },
+    {
+      "id": "SQ-03D.1-A2",
+      "reason": "Before panel selection, the stratification language was made fully algorithmic so the 16-pair upper and low panels can be derived without operator discretion.",
+      "timing": "BEFORE_PANEL_SELECTION",
+      "scientific_effect": "No panel size, ranking key, minimum-per-input requirement, runtime mechanic, numerical tolerance, or acceptance criterion changed."
+    }
+  ]
 }
