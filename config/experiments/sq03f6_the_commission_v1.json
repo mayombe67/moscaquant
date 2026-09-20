@@ -1,0 +1,56 @@
+{
+  "experiment_id": "SQ-03F.6",
+  "codename": "THE COMMISSION",
+  "version": 1,
+  "status": "FROZEN_NOT_EXECUTED",
+  "input": {
+    "authoritative_sq03f5_result": "artifacts/sidequests/sq03f5-turf-war-result-v1.json",
+    "authoritative_sq03f5_provenance": "artifacts/sidequests/sq03f5-turf-war-provenance-v1.json"
+  },
+  "territory": {
+    "direction": "downstream",
+    "max_depth": 2,
+    "exclude_source_nodes": true,
+    "collapse_repeated_nodes": true,
+    "cycle_policy": "visited-set-collapse"
+  },
+  "target_participation": {
+    "definition": "count of eligible SQ-03F.5 sources whose frozen two-hop territory contains the target",
+    "include_singleton_targets": true,
+    "minimum_participation": 1,
+    "tie_handling": "equal participation counts remain tied",
+    "ordering": "descending participation count then ascending target id"
+  },
+  "primary_statistic": {
+    "name": "participation_mass_hhi",
+    "definition": "sum over downstream targets of (target participation count / total participation mass)^2",
+    "range": "(0,1]",
+    "interpretation": "larger values indicate greater concentration of participation mass among fewer targets"
+  },
+  "null_model": {
+    "type": "inherited_sq03f5_matched_source_randomization",
+    "randomizations": 10000,
+    "base_seed": 314159,
+    "source_count_preserved": true,
+    "matching": {
+      "feature": "out_degree",
+      "strata": "deciles",
+      "universe": "frozen SQ-03F candidate-source universe"
+    },
+    "replacement": false
+  },
+  "classification": {
+    "greater_than_null": {
+      "empirical_upper_tail_p_lte": 0.01,
+      "effect_ratio_gte": 1.25
+    },
+    "less_than_null": {
+      "empirical_lower_tail_p_lte": 0.01,
+      "effect_ratio_lte": 0.80
+    },
+    "otherwise": "NO_CLEAR_EVIDENCE_OF_UNUSUAL_TARGET_CONCENTRATION"
+  },
+  "output": {
+    "artifact": "artifacts/sidequests/sq03f6-the-commission-result-v1.json"
+  }
+}
