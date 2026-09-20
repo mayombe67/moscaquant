@@ -68,3 +68,15 @@ SQ-03F.4 — THE SIT-DOWN moves the unit of analysis to the source neuron:
 
 > What graph properties distinguish the most recurrent hotspot-producing
 > sources from sources with comparable opportunity?
+
+## Randomization implementation note
+
+The frozen protocol specified base seed `314159` and independent S/C
+randomization but did not explicitly define stream derivation. The executed
+analyzer used S seed `314159` and C seed `314160` (`base_seed + 1`), as
+recorded in the authoritative artifact.
+
+See
+[`sq03f3-randomization-stream-clarification.md`](sq03f3-randomization-stream-clarification.md)
+for the protocol-integrity classification and future rule.
+
