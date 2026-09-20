@@ -109,12 +109,132 @@ def classify_concentration(
 
     return ConcentrationClassification(label, upper, lower, ratio)
 
+import hashlib
+
+from brain.sq03f5_analyze import (
+    PreparedInputs as F5PreparedInputs,
+    prepare_inputs as prepare_f5_inputs,
+)
+
+F5_RESULT = ROOT / "artifacts/sidequests/sq03f5-turf-war-result-v1.json"
+F5_PROVENANCE = ROOT / "artifacts/sidequests/sq03f5-turf-war-provenance-v1.json"
+OUTPUT = ROOT / "artifacts/sidequests/sq03f6-the-commission-result-v1.json"
+
+
+@dataclass(frozen=True)
+class PreparedCommissionInputs:
+    eligible_sources: tuple[str, ...]
+    candidate_sources: tuple[str, ...]
+    adjacency: dict[str, tuple[str, ...]]
+    candidate_edge_count: int
+    conservative_graph_edge_count: int
+    parent_result_sha256: str
+    parent_provenance_sha256: str
+
+
+def sha256(path: Path) -> str:
+    h = hashlib.sha256()
+    with path.open("rb") as fh:
+        for chunk in iter(lambda: fh.read(1024 * 1024), b""):
+            h.update(chunk)
+    return h.hexdigest()
+
+
+def load_f5_result() -> dict:
+    row = json.loads(F5_RESULT.read_text())
+    if row.get("schema") != "moscaquant.sq03f5_result/v1":
+        raise RuntimeError("Unexpected SQ-03F.5 result schema")
+    if row.get("status") != "COMPLETE":
+        raise RuntimeError("SQ-03F.5 result is not complete")
+    return row
+
+
+def load_f5_provenance() -> dict:
+    row = json.loads(F5_PROVENANCE.read_text())
+    if row.get("schema") != "moscaquant.sq03f5_provenance/v1":
+        raise RuntimeError("Unexpected SQ-03F.5 provenance schema")
+    return row
+
+
+def prepare_commission_inputs() -> PreparedCommissionInputs:
+    cfg = load_config()
+    f5 = load_f5_result()
+    provenance = load_f5_provenance()
+
+    if cfg["input"]["authoritative_sq03f5_result"] != str(F5_RESULT.relative_to(ROOT)):
+        raise RuntimeError("Configured SQ-03F.5 result path mismatch")
+    if cfg["input"]["authoritative_sq03f5_provenance"] != str(F5_PROVENANCE.relative_to(ROOT)):
+        raise RuntimeError("Configured SQ-03F.5 provenance path mismatch")
+
+    result_hash = sha256(F5_RESULT)
+    provenance_hash = sha256(F5_PROVENANCE)
+
+    if provenance.get("result_sha256") != result_hash:
+        raise RuntimeError("SQ-03F.5 result hash does not match provenance sidecar")
+
+    f5_inputs: F5PreparedInputs = prepare_f5_inputs()
+
+    eligible = tuple(sorted(str(x) for x in f5["eligible_sources"]))
+    if eligible != tuple(sorted(f5_inputs.eligible_sources)):
+        raise RuntimeError("SQ-03F.5 eligible sources do not match reconstruction")
+    if len(eligible) != 42:
+        raise RuntimeError("Unexpected SQ-03F.5 eligible-source count")
+
+    territory = f5["territory_parameters"]
+    if territory["direction"] != "downstream":
+        raise RuntimeError("SQ-03F.5 territory direction mismatch")
+    if int(territory["max_depth"]) != 2:
+        raise RuntimeError("SQ-03F.5 territory depth mismatch")
+    if territory["exclude_source_nodes"] is not True:
+        raise RuntimeError("SQ-03F.5 source-exclusion rule mismatch")
+    if territory["collapse_repeated_nodes"] is not True:
+        raise RuntimeError("SQ-03F.5 repeated-node rule mismatch")
+
+    if int(f5["candidate_source_count"]) != len(f5_inputs.candidate_sources):
+        raise RuntimeError("SQ-03F.5 candidate-source count mismatch")
+    if int(f5["candidate_edge_count"]) != f5_inputs.candidate_edge_count:
+        raise RuntimeError("SQ-03F.5 candidate-edge count mismatch")
+    if int(f5["conservative_graph_edge_count"]) != f5_inputs.conservative_graph_edge_count:
+        raise RuntimeError("SQ-03F.5 conservative-graph edge count mismatch")
+
+    return PreparedCommissionInputs(
+        eligible_sources=eligible,
+        candidate_sources=f5_inputs.candidate_sources,
+        adjacency=f5_inputs.adjacency,
+        candidate_edge_count=f5_inputs.candidate_edge_count,
+        conservative_graph_edge_count=f5_inputs.conservative_graph_edge_count,
+        parent_result_sha256=result_hash,
+        parent_provenance_sha256=provenance_hash,
+    )
+
+
+def commission_result_skeleton(prepared: PreparedCommissionInputs) -> dict:
+    return {
+        "schema": "moscaquant.sq03f6_result/v1",
+        "experiment_id": "SQ-03F.6",
+        "title": "THE COMMISSION",
+        "status": "NOT_EXECUTED",
+        "input_artifacts": {
+            "sq03f5_result": str(F5_RESULT.relative_to(ROOT)),
+            "sq03f5_result_sha256": prepared.parent_result_sha256,
+            "sq03f5_provenance": str(F5_PROVENANCE.relative_to(ROOT)),
+            "sq03f5_provenance_sha256": prepared.parent_provenance_sha256,
+        },
+        "eligible_source_count": len(prepared.eligible_sources),
+        "candidate_source_count": len(prepared.candidate_sources),
+        "candidate_edge_count": prepared.candidate_edge_count,
+        "conservative_graph_edge_count": prepared.conservative_graph_edge_count,
+    }
 
 def main() -> None:
-    load_config()
+    prepared = prepare_commission_inputs()
+    print("SQ-03F.6 execution adapter validation passed.")
+    print("eligible sources:", len(prepared.eligible_sources))
+    print("candidate sources:", len(prepared.candidate_sources))
+    print("candidate edges:", prepared.candidate_edge_count)
+    print("conservative graph edges:", prepared.conservative_graph_edge_count)
     raise SystemExit(
-        "SQ-03F.6 analyzer contract is frozen but result-bearing execution "
-        "is intentionally disabled in this commit."
+        "SQ-03F.6 result-bearing execution remains disabled in this commit."
     )
 
 
