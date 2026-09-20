@@ -398,6 +398,20 @@ Permit tiny controlled real-money transactions through WARDEN-01.
 Enable experimental plasticity and persistent aversive learning while
 preserving controls.
 
+### Comparative Biology Sidequest — MQ-002 / THE OTHER FLY
+
+MQ-002 is a provisional female biological comparator, not a mainline phase and
+not a replacement for SHUFFLED MOSCA.
+
+The first step is data qualification only: verify official MaleCNS/FlyWire
+cross-mappings, measure overlap with the frozen MQ-001 scientific interface,
+and determine whether a defensible matched biological subgraph can be built.
+
+No result-bearing male/female neural comparison is authorized until its
+inclusion rules and scientific configuration are frozen in a dedicated
+protocol. MQ-9 remains current and MQ-10 remains next.
+
+
 ## MQ-13 — MOSCA VS THE WORLD
 Compare MQ-001 against Shuffled Mosca and conventional benchmarks.
 

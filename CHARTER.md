@@ -359,6 +359,64 @@ If a control wins, the result will be reported.
 
 Management disappointment does not constitute statistical significance.
 
+12.X. MQ-002 — PROVISIONAL COMPARATIVE BIOLOGICAL CONTROL
+
+MQ-002 is the provisional designation for a female Drosophila biological
+comparison subject derived from the published FlyWire female-brain connectome
+and the official MaleCNS/FlyWire cross-matching products.
+
+Status:
+
+PROVISIONAL / DATA QUALIFICATION REQUIRED
+
+MQ-002 exists to extend comparative experimentation around MQ-001. MQ-002 is
+not a replacement for SHUFFLED MOSCA. Randomized topology and a second real
+biological topology answer different questions and SHALL remain separate
+control families.
+
+Initial scientific use is restricted to explicitly cross-matched central-brain
+cell types and connections supported by the published MaleCNS/FlyWire mapping
+products. MaleCNS VNC connectivity has no female counterpart in the published
+aligned-edge product and SHALL NOT be silently substituted, inferred, or
+presented as matched female anatomy.
+
+Before MQ-002 may participate in a result-bearing neural comparison:
+
+- the published male/female mappings SHALL be acquired and provenance recorded;
+- overlap with the frozen MQ-001 scientific interface SHALL be measured;
+- inclusion/exclusion rules for matched neurons, cell types, and edges SHALL be
+  frozen before outcome inspection;
+- identical scientific configuration SHALL be used wherever a matched
+  comparison claims identical conditions;
+- any unmatched anatomy SHALL remain explicit;
+- SHUFFLED MOSCA SHALL remain an independent randomized-topology control.
+
+MQ-002 has:
+
+- no financial authority;
+- no broker authority;
+- no WARDEN authority;
+- no ORACLE authority;
+- no automatic D6 or plasticity assignment;
+- no claim of equivalence to the complete MaleCNS subject.
+
+A male/female difference is a comparative computational observation only. It
+does not establish sex superiority, intelligence, market skill, behavioral
+generality, or a biological mechanism without separate evidence.
+
+PANOPTICON may tease MQ-002 after the SITE-19B public experience is live, but
+presentation SHALL remain downstream of scientific status. Before qualification
+the subject may be presented only as an incoming/provisional comparative
+biological control, not as a validated second Mosca.
+
+The comedy target is MQ-001's institutional predicament and the bureaucracy of
+comparative experimentation, not stereotypes about biological sex.
+
+Working program name:
+
+THE OTHER FLY
+
+
 13. MQ-001 Embodiment
 
 MQ-001 will eventually inhabit a virtual 3D body inside a simulated containment

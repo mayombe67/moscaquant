@@ -1,0 +1,29 @@
+{
+  "schema_version": "moscaquant.data_qualification_protocol/v1",
+  "experiment_id": "MQ-002.0",
+  "program": "MQ-002",
+  "name": "IDENTITY CHECK",
+  "lore_name": "THE OTHER FLY",
+  "status": "FROZEN_BEFORE_DISCOVERY",
+  "result_bearing_neural_experiment": false,
+  "official_mapping_json": "mcns_fw_edge_comp_mappings.json",
+  "official_aligned_edges": "mcns_fw_edge_comp.feather",
+  "mapping_json_url": "https://raw.githubusercontent.com/flyconnectome/2025malecns/main/supplemental_data/mcns_fw_edge_comp_mappings.json",
+  "automatic_downloads": [
+    "mcns_fw_edge_comp_mappings.json"
+  ],
+  "deferred_downloads": [
+    "mcns_fw_edge_comp.feather"
+  ],
+  "measurements": [
+    "mapping_sha256",
+    "mapping_entry_count",
+    "unique_cross_matched_label_count",
+    "local_body_id_sources",
+    "mapped_body_id_overlap_by_local_source",
+    "frozen_interface_overlap_when_available",
+    "aligned_edge_file_present_locally",
+    "unresolved_interfaces"
+  ],
+  "claim_boundary": "MQ-002.0 establishes only the availability and local coverage of published cross-matching data needed to design a future comparative experiment."
+}
