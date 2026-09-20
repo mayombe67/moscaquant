@@ -4,7 +4,7 @@ phase = "MQ-3.2"
 purpose = "interventional test of activity-supported first-onset pathways"
 
 [intervention_artifact]
-path = "/home/wil/moscaquant-data/processed/mq3-2-first-onset-causal-edges-v1.json"
+path = "${MOSCAQUANT_DATA_ROOT}/processed/mq3-2-first-onset-causal-edges-v1.json"
 sha256 = "23cc19a39c30e554671bdf92b904865311d2f7df4dd9ef82af1eaf66638c3a2b"
 edge_count = 13
 

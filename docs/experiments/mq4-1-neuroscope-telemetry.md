@@ -46,7 +46,7 @@ Population:
 
 ## Replay artifact
 
-`/home/wil/moscaquant-data/neuroscope/mq4-neuroscope-replay-A-v1.npz`
+`${MOSCAQUANT_DATA_ROOT}/neuroscope/mq4-neuroscope-replay-A-v1.npz`
 
 SHA-256:
 
@@ -54,7 +54,7 @@ SHA-256:
 
 ## Metadata
 
-`/home/wil/moscaquant-data/neuroscope/mq4-neuroscope-replay-A-v1.json`
+`${MOSCAQUANT_DATA_ROOT}/neuroscope/mq4-neuroscope-replay-A-v1.json`
 
 SHA-256:
 

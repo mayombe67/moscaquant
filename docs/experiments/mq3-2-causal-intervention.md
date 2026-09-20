@@ -118,7 +118,7 @@ Therefore, peak-frame path counts are not interpreted as exhaustive counts.
 
 Artifact:
 
-`/home/wil/moscaquant-data/experiments/mq3-2-causal-path-decomposition-v1.json`
+`${MOSCAQUANT_DATA_ROOT}/experiments/mq3-2-causal-path-decomposition-v1.json`
 
 SHA-256:
 
@@ -147,7 +147,7 @@ Unique frozen edges:
 
 Artifact:
 
-`/home/wil/moscaquant-data/processed/mq3-2-first-onset-causal-edges-v1.json`
+`${MOSCAQUANT_DATA_ROOT}/processed/mq3-2-first-onset-causal-edges-v1.json`
 
 SHA-256:
 
@@ -395,7 +395,7 @@ Summary:
 
 Artifact:
 
-`/home/wil/moscaquant-data/experiments/mq3-2-causal-intervention-v1.json`
+`${MOSCAQUANT_DATA_ROOT}/experiments/mq3-2-causal-intervention-v1.json`
 
 SHA-256:
 

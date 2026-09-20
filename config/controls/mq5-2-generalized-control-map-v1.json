@@ -182,6 +182,6 @@
   "phase": "MQ-5.2",
   "schema": "mq5-2-generalized-control-map-v1",
   "selection_rule": "same functional role; positive activity at causal frame; activity ratio within frozen window; exclude source/target; exclude frozen causal nodes; exclude direct structural edge to target; rank by activity distance, then degree distance, then model index",
-  "source_artifact": "/home/wil/moscaquant-data/experiments/mq5-control-feasibility-scan-v1.json",
+  "source_artifact": "${MOSCAQUANT_DATA_ROOT}/experiments/mq5-control-feasibility-scan-v1.json",
   "status": "FROZEN_BEFORE_GENERALIZED_INTERVENTION_OUTCOMES"
 }

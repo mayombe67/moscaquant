@@ -25,7 +25,7 @@ Population:
 
 Frozen artifact:
 
-`/home/wil/moscaquant-data/processed/mq3-descending-readout-v1.npz`
+`${MOSCAQUANT_DATA_ROOT}/processed/mq3-descending-readout-v1.npz`
 
 SHA-256:
 
@@ -33,7 +33,7 @@ SHA-256:
 
 Provenance:
 
-`/home/wil/moscaquant-data/processed/mq3-descending-readout-v1.json`
+`${MOSCAQUANT_DATA_ROOT}/processed/mq3-descending-readout-v1.json`
 
 SHA-256:
 
@@ -63,7 +63,7 @@ The result was retained as a boundary result rather than interpreted as evidence
 
 Artifact:
 
-`/home/wil/moscaquant-data/processed/mq3-dn-structural-partition-v1.npz`
+`${MOSCAQUANT_DATA_ROOT}/processed/mq3-dn-structural-partition-v1.npz`
 
 SHA-256:
 
@@ -114,7 +114,7 @@ The 123 discordant neurons were deliberately excluded rather than forced into a 
 
 Frozen consensus artifact:
 
-`/home/wil/moscaquant-data/processed/mq3-dn-consensus-v1.npz`
+`${MOSCAQUANT_DATA_ROOT}/processed/mq3-dn-consensus-v1.npz`
 
 SHA-256:
 
@@ -177,7 +177,7 @@ A/A and B/B replay were exact.
 
 Result artifact:
 
-`/home/wil/moscaquant-data/experiments/mq3-anonymous-market-readout-v1.json`
+`${MOSCAQUANT_DATA_ROOT}/experiments/mq3-anonymous-market-readout-v1.json`
 
 SHA-256:
 
@@ -287,7 +287,7 @@ Repeated neutral replay was exact.
 
 Result artifact:
 
-`/home/wil/moscaquant-data/experiments/mq3-1-hybrid-neutral-calibration-v1.json`
+`${MOSCAQUANT_DATA_ROOT}/experiments/mq3-1-hybrid-neutral-calibration-v1.json`
 
 SHA-256:
 

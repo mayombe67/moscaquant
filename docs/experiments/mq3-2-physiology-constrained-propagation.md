@@ -88,7 +88,7 @@ It was not restricted to neurons known to lie on the Condition-A path.
 
 Artifact:
 
-`/home/wil/moscaquant-data/processed/mq3-2-graded-visual-types-v1.npz`
+`${MOSCAQUANT_DATA_ROOT}/processed/mq3-2-graded-visual-types-v1.npz`
 
 SHA-256:
 
@@ -96,7 +96,7 @@ SHA-256:
 
 Provenance:
 
-`/home/wil/moscaquant-data/processed/mq3-2-graded-visual-types-v1.json`
+`${MOSCAQUANT_DATA_ROOT}/processed/mq3-2-graded-visual-types-v1.json`
 
 SHA-256:
 
