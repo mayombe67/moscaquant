@@ -226,16 +226,167 @@ def commission_result_skeleton(prepared: PreparedCommissionInputs) -> dict:
         "conservative_graph_edge_count": prepared.conservative_graph_edge_count,
     }
 
-def main() -> None:
+from brain.sq03f5_analyze import (
+    precompute_territory_masks,
+    out_degrees,
+    decile_strata,
+    sample_matched_sources,
+)
+import random
+from statistics import mean
+
+
+def participation_counts_from_masks(sources, masks):
+    counts = Counter()
+    for source in sources:
+        mask = masks[source]
+        bit_index = 0
+        while mask:
+            if mask & 1:
+                counts[bit_index] += 1
+            mask >>= 1
+            bit_index += 1
+    return counts
+
+
+def hhi_from_masks(sources, masks):
+    counts = participation_counts_from_masks(sources, masks)
+    return participation_mass_hhi(counts)
+
+
+def run_commission():
+    cfg = load_config()
+
+    randomizations = int(cfg["null_model"]["randomizations"])
+    base_seed = int(cfg["null_model"]["base_seed"])
+    max_depth = int(cfg["territory"]["max_depth"])
+
+    if randomizations != 10000:
+        raise RuntimeError("Frozen randomization count changed")
+    if base_seed != 314159:
+        raise RuntimeError("Frozen base seed changed")
+    if max_depth != 2:
+        raise RuntimeError("Frozen territory depth changed")
+
     prepared = prepare_commission_inputs()
-    print("SQ-03F.6 execution adapter validation passed.")
-    print("eligible sources:", len(prepared.eligible_sources))
-    print("candidate sources:", len(prepared.candidate_sources))
-    print("candidate edges:", prepared.candidate_edge_count)
-    print("conservative graph edges:", prepared.conservative_graph_edge_count)
-    raise SystemExit(
-        "SQ-03F.6 result-bearing execution remains disabled in this commit."
+
+    masks = precompute_territory_masks(
+        prepared.adjacency,
+        prepared.candidate_sources,
+        max_depth=max_depth,
     )
+
+    observed_counts = participation_counts_from_masks(
+        prepared.eligible_sources,
+        masks,
+    )
+    observed_hhi = participation_mass_hhi(observed_counts)
+
+    degrees = out_degrees(prepared.adjacency, prepared.candidate_sources)
+    strata = decile_strata(degrees)
+
+    rng = random.Random(base_seed)
+    null_values = []
+    for _ in range(randomizations):
+        sampled = sample_matched_sources(
+            prepared.eligible_sources,
+            prepared.candidate_sources,
+            strata,
+            rng,
+        )
+        null_values.append(hhi_from_masks(sampled, masks))
+
+    cls = cfg["classification"]
+    classification = classify_concentration(
+        observed=observed_hhi,
+        null_values=null_values,
+        upper_p_threshold=float(
+            cls["greater_than_null"]["empirical_upper_tail_p_lte"]
+        ),
+        lower_p_threshold=float(
+            cls["less_than_null"]["empirical_lower_tail_p_lte"]
+        ),
+        concentration_ratio_threshold=float(
+            cls["greater_than_null"]["effect_ratio_gte"]
+        ),
+        dispersion_ratio_threshold=float(
+            cls["less_than_null"]["effect_ratio_lte"]
+        ),
+    )
+
+    summary = participation_summary(
+        {str(k): v for k, v in observed_counts.items()},
+        source_count=len(prepared.eligible_sources),
+    )
+
+    return {
+        "schema": "moscaquant.sq03f6_result/v1",
+        "experiment_id": "SQ-03F.6",
+        "title": "THE COMMISSION",
+        "status": "COMPLETE",
+        "input_artifacts": {
+            "sq03f5_result": str(F5_RESULT.relative_to(ROOT)),
+            "sq03f5_result_sha256": prepared.parent_result_sha256,
+            "sq03f5_provenance": str(F5_PROVENANCE.relative_to(ROOT)),
+            "sq03f5_provenance_sha256": prepared.parent_provenance_sha256,
+        },
+        "eligible_source_count": len(prepared.eligible_sources),
+        "candidate_source_count": len(prepared.candidate_sources),
+        "candidate_edge_count": prepared.candidate_edge_count,
+        "conservative_graph_edge_count": prepared.conservative_graph_edge_count,
+        "territory_parameters": cfg["territory"],
+        "target_participation_rule": cfg["target_participation"],
+        "primary_statistic": cfg["primary_statistic"],
+        "observed_participation_mass_hhi": observed_hhi,
+        "participation_summary": summary,
+        "null_summary": {
+            "median": median(null_values),
+            "mean": mean(null_values),
+            "min": min(null_values),
+            "max": max(null_values),
+        },
+        "empirical_upper_tail_p": classification.upper_tail_p,
+        "empirical_lower_tail_p": classification.lower_tail_p,
+        "effect_ratio_vs_null_median": classification.effect_ratio,
+        "randomizations": randomizations,
+        "base_seed": base_seed,
+        "classification": classification.label,
+        "claim_boundary": (
+            "This result concerns concentration of downstream participation "
+            "within the frozen MoscaQuant model and frozen SQ-03F source set only. "
+            "It does not establish literal biological command hierarchy, anatomical "
+            "governing bodies, organism-level functional modules, sex-specific neural "
+            "organization, consciousness, agency, intent, coordination, financial "
+            "usefulness, or trading usefulness."
+        ),
+    }
+
+
+def write_commission_result(payload):
+    if OUTPUT.exists():
+        raise RuntimeError(f"Refusing to overwrite existing result: {OUTPUT}")
+    OUTPUT.parent.mkdir(parents=True, exist_ok=True)
+    OUTPUT.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n")
+
+
+def execute_commission_once():
+    if OUTPUT.exists():
+        raise RuntimeError(f"Refusing to overwrite existing result: {OUTPUT}")
+    payload = run_commission()
+    write_commission_result(payload)
+    return payload
+
+def main() -> None:
+    payload = execute_commission_once()
+    print("SQ-03F.6 THE COMMISSION complete.")
+    print("result:", OUTPUT.relative_to(ROOT))
+    print("eligible sources:", payload["eligible_source_count"])
+    print("observed participation-mass HHI:", payload["observed_participation_mass_hhi"])
+    print("null median:", payload["null_summary"]["median"])
+    print("upper-tail p:", payload["empirical_upper_tail_p"])
+    print("lower-tail p:", payload["empirical_lower_tail_p"])
+    print("effect ratio:", payload["effect_ratio_vs_null_median"])
+    print("classification:", payload["classification"])
 
 
 if __name__ == "__main__":
