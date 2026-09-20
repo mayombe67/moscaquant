@@ -1,0 +1,21 @@
+{
+  "aligned_edges_sha256": "1cac309c7760d16f5f041a7b924efbf5cdfa3a46570090fb234c2323ed9e313c",
+  "analyzer_path": "brain/sq03f5_analyze.py",
+  "analyzer_sha256": "fcad45286240108f2bbc7e65a5af861720335a40b13d064352231d7f9edc5799",
+  "base_seed": 314159,
+  "classification": "GREATER_THAN_NULL_DOWNSTREAM_CONVERGENCE",
+  "config_path": "config/experiments/sq03f5_turf_war_v1.json",
+  "config_sha256": "3332ae3d2cb14d8e78b167aceee36e9820adc8f50ef9af0152b3e13ed94727f0",
+  "experiment_id": "SQ-03F.5",
+  "note": "Post-run provenance sidecar for the original authoritative result. The result artifact was not regenerated or modified after observation.",
+  "parent_sq03f4_result": "artifacts/sidequests/sq03f4-sit-down-result-v1.json",
+  "parent_sq03f4_result_sha256": "268d42d5e697a879abac92586596c8ecbf9f86893777ff2b4e19ea806d3d6db0",
+  "protocol_path": "docs/experiments/sq03f5-turf-war-protocol.md",
+  "protocol_sha256": "ac40ac80774c0f97d0b71e04fb959858c26f97232c999a709a543d4aa702e87e",
+  "randomizations": 10000,
+  "result_path": "artifacts/sidequests/sq03f5-turf-war-result-v1.json",
+  "result_sha256": "4a3cad723d3114a512d6cdcba4527660275ca3ee2b50ebb8f0a4c6bfe5a21776",
+  "schema": "moscaquant.sq03f5_provenance/v1",
+  "source_commit": "2430a2e1c698aaa8e7fb016e6063f03cb689021d",
+  "title": "TURF WAR"
+}

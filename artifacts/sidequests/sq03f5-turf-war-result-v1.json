@@ -1,0 +1,6158 @@
+{
+  "base_seed": 314159,
+  "candidate_edge_count": 114825,
+  "candidate_source_count": 4455,
+  "claim_boundary": "This result concerns downstream convergence within the frozen MoscaQuant model and frozen SQ-03F source set only. It does not establish biological gang-like organization, anatomical territory, sex-specific organization, financial usefulness, or trading usefulness.",
+  "classification": "GREATER_THAN_NULL_DOWNSTREAM_CONVERGENCE",
+  "conservative_graph_edge_count": 639435,
+  "derived_streams": [
+    314159
+  ],
+  "effect_ratio_vs_null_median": 1.3874029064078843,
+  "eligible_sources": [
+    "AVLP080",
+    "AVLP234",
+    "AVLP435",
+    "AVLP479",
+    "AVLP500",
+    "AVLP531",
+    "AVLP537",
+    "AVLP538",
+    "CB0010",
+    "CB0050",
+    "CB0766",
+    "CB1852",
+    "CB1920",
+    "DNp04",
+    "KCg-m",
+    "LC10",
+    "LC11",
+    "LC12",
+    "LC17",
+    "LC18",
+    "LC4",
+    "LC9",
+    "LHAD1g1",
+    "LLPC1",
+    "LLPC2",
+    "LLPC3",
+    "LPC1",
+    "LPLC1",
+    "LPLC2",
+    "LPLC4",
+    "LT56",
+    "LoVC16",
+    "PVLP011",
+    "PVLP061",
+    "PVLP069",
+    "PVLP097",
+    "PVLP106",
+    "PVLP111",
+    "PVLP120",
+    "PVLP135",
+    "PVLP151",
+    "TmY14"
+  ],
+  "empirical_lower_tail_p": 1.0,
+  "empirical_upper_tail_p": 9.999000099990002e-05,
+  "experiment_id": "SQ-03F.5",
+  "input_artifacts": {
+    "aligned_edges_sha256": "1cac309c7760d16f5f041a7b924efbf5cdfa3a46570090fb234c2323ed9e313c",
+    "sq03f4_result": "artifacts/sidequests/sq03f4-sit-down-result-v1.json",
+    "sq03f4_result_sha256": "268d42d5e697a879abac92586596c8ecbf9f86893777ff2b4e19ea806d3d6db0"
+  },
+  "null_summary": {
+    "max": 0.47930074706659287,
+    "mean": 0.4056005520850844,
+    "median": 0.40521662251703366,
+    "min": 0.3421719693143666
+  },
+  "observed_mean_pairwise_jaccard": 0.5621987198049191,
+  "pairwise_overlap": [
+    {
+      "intersection": 2550,
+      "jaccard": 0.5257731958762887,
+      "source_a": "AVLP080",
+      "source_b": "AVLP234",
+      "union": 4850
+    },
+    {
+      "intersection": 3313,
+      "jaccard": 0.7091181506849316,
+      "source_a": "AVLP080",
+      "source_b": "AVLP435",
+      "union": 4672
+    },
+    {
+      "intersection": 2972,
+      "jaccard": 0.6316684378320935,
+      "source_a": "AVLP080",
+      "source_b": "AVLP479",
+      "union": 4705
+    },
+    {
+      "intersection": 2555,
+      "jaccard": 0.547343616109683,
+      "source_a": "AVLP080",
+      "source_b": "AVLP500",
+      "union": 4668
+    },
+    {
+      "intersection": 3791,
+      "jaccard": 0.7127279563827787,
+      "source_a": "AVLP080",
+      "source_b": "AVLP531",
+      "union": 5319
+    },
+    {
+      "intersection": 2923,
+      "jaccard": 0.618101078452104,
+      "source_a": "AVLP080",
+      "source_b": "AVLP537",
+      "union": 4729
+    },
+    {
+      "intersection": 3895,
+      "jaccard": 0.7691548183254344,
+      "source_a": "AVLP080",
+      "source_b": "AVLP538",
+      "union": 5064
+    },
+    {
+      "intersection": 2417,
+      "jaccard": 0.43707052441229655,
+      "source_a": "AVLP080",
+      "source_b": "CB0010",
+      "union": 5530
+    },
+    {
+      "intersection": 2746,
+      "jaccard": 0.5930885529157668,
+      "source_a": "AVLP080",
+      "source_b": "CB0050",
+      "union": 4630
+    },
+    {
+      "intersection": 2619,
+      "jaccard": 0.5617760617760618,
+      "source_a": "AVLP080",
+      "source_b": "CB0766",
+      "union": 4662
+    },
+    {
+      "intersection": 3463,
+      "jaccard": 0.6928771508603442,
+      "source_a": "AVLP080",
+      "source_b": "CB1852",
+      "union": 4998
+    },
+    {
+      "intersection": 3250,
+      "jaccard": 0.6938514090520922,
+      "source_a": "AVLP080",
+      "source_b": "CB1920",
+      "union": 4684
+    },
+    {
+      "intersection": 2806,
+      "jaccard": 0.55996807024546,
+      "source_a": "AVLP080",
+      "source_b": "DNp04",
+      "union": 5011
+    },
+    {
+      "intersection": 2698,
+      "jaccard": 0.43467053326888994,
+      "source_a": "AVLP080",
+      "source_b": "KCg-m",
+      "union": 6207
+    },
+    {
+      "intersection": 3108,
+      "jaccard": 0.5644751180530331,
+      "source_a": "AVLP080",
+      "source_b": "LC10",
+      "union": 5506
+    },
+    {
+      "intersection": 3356,
+      "jaccard": 0.6435282837967402,
+      "source_a": "AVLP080",
+      "source_b": "LC11",
+      "union": 5215
+    },
+    {
+      "intersection": 2498,
+      "jaccard": 0.5200916094107849,
+      "source_a": "AVLP080",
+      "source_b": "LC12",
+      "union": 4803
+    },
+    {
+      "intersection": 2863,
+      "jaccard": 0.57374749498998,
+      "source_a": "AVLP080",
+      "source_b": "LC17",
+      "union": 4990
+    },
+    {
+      "intersection": 2842,
+      "jaccard": 0.5803553195834185,
+      "source_a": "AVLP080",
+      "source_b": "LC18",
+      "union": 4897
+    },
+    {
+      "intersection": 3106,
+      "jaccard": 0.6075899843505478,
+      "source_a": "AVLP080",
+      "source_b": "LC4",
+      "union": 5112
+    },
+    {
+      "intersection": 3417,
+      "jaccard": 0.6352481873954267,
+      "source_a": "AVLP080",
+      "source_b": "LC9",
+      "union": 5379
+    },
+    {
+      "intersection": 4010,
+      "jaccard": 0.7499532448101739,
+      "source_a": "AVLP080",
+      "source_b": "LHAD1g1",
+      "union": 5347
+    },
+    {
+      "intersection": 3108,
+      "jaccard": 0.5554959785522788,
+      "source_a": "AVLP080",
+      "source_b": "LLPC1",
+      "union": 5595
+    },
+    {
+      "intersection": 2882,
+      "jaccard": 0.5177865612648221,
+      "source_a": "AVLP080",
+      "source_b": "LLPC2",
+      "union": 5566
+    },
+    {
+      "intersection": 2744,
+      "jaccard": 0.5054337815435623,
+      "source_a": "AVLP080",
+      "source_b": "LLPC3",
+      "union": 5429
+    },
+    {
+      "intersection": 2814,
+      "jaccard": 0.5099673794853208,
+      "source_a": "AVLP080",
+      "source_b": "LPC1",
+      "union": 5518
+    },
+    {
+      "intersection": 3397,
+      "jaccard": 0.6252530830112277,
+      "source_a": "AVLP080",
+      "source_b": "LPLC1",
+      "union": 5433
+    },
+    {
+      "intersection": 3451,
+      "jaccard": 0.62665698202288,
+      "source_a": "AVLP080",
+      "source_b": "LPLC2",
+      "union": 5507
+    },
+    {
+      "intersection": 3349,
+      "jaccard": 0.5868231995794638,
+      "source_a": "AVLP080",
+      "source_b": "LPLC4",
+      "union": 5707
+    },
+    {
+      "intersection": 2056,
+      "jaccard": 0.432296047098402,
+      "source_a": "AVLP080",
+      "source_b": "LT56",
+      "union": 4756
+    },
+    {
+      "intersection": 2033,
+      "jaccard": 0.42230992937266304,
+      "source_a": "AVLP080",
+      "source_b": "LoVC16",
+      "union": 4814
+    },
+    {
+      "intersection": 2745,
+      "jaccard": 0.5509835407466881,
+      "source_a": "AVLP080",
+      "source_b": "PVLP011",
+      "union": 4982
+    },
+    {
+      "intersection": 3380,
+      "jaccard": 0.7148900169204738,
+      "source_a": "AVLP080",
+      "source_b": "PVLP061",
+      "union": 4728
+    },
+    {
+      "intersection": 2462,
+      "jaccard": 0.5295762529576253,
+      "source_a": "AVLP080",
+      "source_b": "PVLP069",
+      "union": 4649
+    },
+    {
+      "intersection": 2983,
+      "jaccard": 0.6329301930829621,
+      "source_a": "AVLP080",
+      "source_b": "PVLP097",
+      "union": 4713
+    },
+    {
+      "intersection": 2830,
+      "jaccard": 0.6044425459205468,
+      "source_a": "AVLP080",
+      "source_b": "PVLP106",
+      "union": 4682
+    },
+    {
+      "intersection": 3082,
+      "jaccard": 0.6487055356766996,
+      "source_a": "AVLP080",
+      "source_b": "PVLP111",
+      "union": 4751
+    },
+    {
+      "intersection": 2818,
+      "jaccard": 0.5957716701902749,
+      "source_a": "AVLP080",
+      "source_b": "PVLP120",
+      "union": 4730
+    },
+    {
+      "intersection": 3225,
+      "jaccard": 0.6806669480793583,
+      "source_a": "AVLP080",
+      "source_b": "PVLP135",
+      "union": 4738
+    },
+    {
+      "intersection": 2850,
+      "jaccard": 0.5920232654756958,
+      "source_a": "AVLP080",
+      "source_b": "PVLP151",
+      "union": 4814
+    },
+    {
+      "intersection": 2152,
+      "jaccard": 0.4020175602465907,
+      "source_a": "AVLP080",
+      "source_b": "TmY14",
+      "union": 5353
+    },
+    {
+      "intersection": 2180,
+      "jaccard": 0.5451362840710178,
+      "source_a": "AVLP234",
+      "source_b": "AVLP435",
+      "union": 3999
+    },
+    {
+      "intersection": 2214,
+      "jaccard": 0.605414273995078,
+      "source_a": "AVLP234",
+      "source_b": "AVLP479",
+      "union": 3657
+    },
+    {
+      "intersection": 1973,
+      "jaccard": 0.5728803716608595,
+      "source_a": "AVLP234",
+      "source_b": "AVLP500",
+      "union": 3444
+    },
+    {
+      "intersection": 2479,
+      "jaccard": 0.5137823834196891,
+      "source_a": "AVLP234",
+      "source_b": "AVLP531",
+      "union": 4825
+    },
+    {
+      "intersection": 2075,
+      "jaccard": 0.5502519225669583,
+      "source_a": "AVLP234",
+      "source_b": "AVLP537",
+      "union": 3771
+    },
+    {
+      "intersection": 2344,
+      "jaccard": 0.4874194219172385,
+      "source_a": "AVLP234",
+      "source_b": "AVLP538",
+      "union": 4809
+    },
+    {
+      "intersection": 1585,
+      "jaccard": 0.34789288849868305,
+      "source_a": "AVLP234",
+      "source_b": "CB0010",
+      "union": 4556
+    },
+    {
+      "intersection": 1965,
+      "jaccard": 0.5450762829403606,
+      "source_a": "AVLP234",
+      "source_b": "CB0050",
+      "union": 3605
+    },
+    {
+      "intersection": 1917,
+      "jaccard": 0.5387858347386172,
+      "source_a": "AVLP234",
+      "source_b": "CB0766",
+      "union": 3558
+    },
+    {
+      "intersection": 2191,
+      "jaccard": 0.4908154121863799,
+      "source_a": "AVLP234",
+      "source_b": "CB1852",
+      "union": 4464
+    },
+    {
+      "intersection": 2283,
+      "jaccard": 0.5937581274382314,
+      "source_a": "AVLP234",
+      "source_b": "CB1920",
+      "union": 3845
+    },
+    {
+      "intersection": 1954,
+      "jaccard": 0.4816366773477939,
+      "source_a": "AVLP234",
+      "source_b": "DNp04",
+      "union": 4057
+    },
+    {
+      "intersection": 1677,
+      "jaccard": 0.30929546292880855,
+      "source_a": "AVLP234",
+      "source_b": "KCg-m",
+      "union": 5422
+    },
+    {
+      "intersection": 1828,
+      "jaccard": 0.3670682730923695,
+      "source_a": "AVLP234",
+      "source_b": "LC10",
+      "union": 4980
+    },
+    {
+      "intersection": 2098,
+      "jaccard": 0.44953931862009855,
+      "source_a": "AVLP234",
+      "source_b": "LC11",
+      "union": 4667
+    },
+    {
+      "intersection": 1708,
+      "jaccard": 0.4510166358595194,
+      "source_a": "AVLP234",
+      "source_b": "LC12",
+      "union": 3787
+    },
+    {
+      "intersection": 1822,
+      "jaccard": 0.43124260355029587,
+      "source_a": "AVLP234",
+      "source_b": "LC17",
+      "union": 4225
+    },
+    {
+      "intersection": 1934,
+      "jaccard": 0.4836209052263066,
+      "source_a": "AVLP234",
+      "source_b": "LC18",
+      "union": 3999
+    },
+    {
+      "intersection": 1966,
+      "jaccard": 0.4421952316689159,
+      "source_a": "AVLP234",
+      "source_b": "LC4",
+      "union": 4446
+    },
+    {
+      "intersection": 2021,
+      "jaccard": 0.4067216743811632,
+      "source_a": "AVLP234",
+      "source_b": "LC9",
+      "union": 4969
+    },
+    {
+      "intersection": 2579,
+      "jaccard": 0.5187047465808527,
+      "source_a": "AVLP234",
+      "source_b": "LHAD1g1",
+      "union": 4972
+    },
+    {
+      "intersection": 1828,
+      "jaccard": 0.3606233971197475,
+      "source_a": "AVLP234",
+      "source_b": "LLPC1",
+      "union": 5069
+    },
+    {
+      "intersection": 1690,
+      "jaccard": 0.3412762520193861,
+      "source_a": "AVLP234",
+      "source_b": "LLPC2",
+      "union": 4952
+    },
+    {
+      "intersection": 1627,
+      "jaccard": 0.34324894514767934,
+      "source_a": "AVLP234",
+      "source_b": "LLPC3",
+      "union": 4740
+    },
+    {
+      "intersection": 1689,
+      "jaccard": 0.34918337812693817,
+      "source_a": "AVLP234",
+      "source_b": "LPC1",
+      "union": 4837
+    },
+    {
+      "intersection": 2068,
+      "jaccard": 0.41727199354318,
+      "source_a": "AVLP234",
+      "source_b": "LPLC1",
+      "union": 4956
+    },
+    {
+      "intersection": 2106,
+      "jaccard": 0.4173602853745541,
+      "source_a": "AVLP234",
+      "source_b": "LPLC2",
+      "union": 5046
+    },
+    {
+      "intersection": 1954,
+      "jaccard": 0.36895770392749244,
+      "source_a": "AVLP234",
+      "source_b": "LPLC4",
+      "union": 5296
+    },
+    {
+      "intersection": 1409,
+      "jaccard": 0.3917153183208229,
+      "source_a": "AVLP234",
+      "source_b": "LT56",
+      "union": 3597
+    },
+    {
+      "intersection": 1526,
+      "jaccard": 0.4341394025604552,
+      "source_a": "AVLP234",
+      "source_b": "LoVC16",
+      "union": 3515
+    },
+    {
+      "intersection": 1785,
+      "jaccard": 0.4315764023210832,
+      "source_a": "AVLP234",
+      "source_b": "PVLP011",
+      "union": 4136
+    },
+    {
+      "intersection": 2221,
+      "jaccard": 0.5442293555501103,
+      "source_a": "AVLP234",
+      "source_b": "PVLP061",
+      "union": 4081
+    },
+    {
+      "intersection": 1845,
+      "jaccard": 0.5332369942196532,
+      "source_a": "AVLP234",
+      "source_b": "PVLP069",
+      "union": 3460
+    },
+    {
+      "intersection": 2113,
+      "jaccard": 0.5594387079692877,
+      "source_a": "AVLP234",
+      "source_b": "PVLP097",
+      "union": 3777
+    },
+    {
+      "intersection": 2086,
+      "jaccard": 0.5762430939226519,
+      "source_a": "AVLP234",
+      "source_b": "PVLP106",
+      "union": 3620
+    },
+    {
+      "intersection": 2082,
+      "jaccard": 0.5277566539923955,
+      "source_a": "AVLP234",
+      "source_b": "PVLP111",
+      "union": 3945
+    },
+    {
+      "intersection": 1898,
+      "jaccard": 0.49375650364203955,
+      "source_a": "AVLP234",
+      "source_b": "PVLP120",
+      "union": 3844
+    },
+    {
+      "intersection": 2119,
+      "jaccard": 0.5247647350173353,
+      "source_a": "AVLP234",
+      "source_b": "PVLP135",
+      "union": 4038
+    },
+    {
+      "intersection": 1918,
+      "jaccard": 0.4868020304568528,
+      "source_a": "AVLP234",
+      "source_b": "PVLP151",
+      "union": 3940
+    },
+    {
+      "intersection": 1290,
+      "jaccard": 0.2925833522340667,
+      "source_a": "AVLP234",
+      "source_b": "TmY14",
+      "union": 4409
+    },
+    {
+      "intersection": 2644,
+      "jaccard": 0.6935991605456453,
+      "source_a": "AVLP435",
+      "source_b": "AVLP479",
+      "union": 3812
+    },
+    {
+      "intersection": 2380,
+      "jaccard": 0.6570955273329652,
+      "source_a": "AVLP435",
+      "source_b": "AVLP500",
+      "union": 3622
+    },
+    {
+      "intersection": 3092,
+      "jaccard": 0.6445695226183031,
+      "source_a": "AVLP435",
+      "source_b": "AVLP531",
+      "union": 4797
+    },
+    {
+      "intersection": 2782,
+      "jaccard": 0.7624006577144423,
+      "source_a": "AVLP435",
+      "source_b": "AVLP537",
+      "union": 3649
+    },
+    {
+      "intersection": 3219,
+      "jaccard": 0.7123257357822527,
+      "source_a": "AVLP435",
+      "source_b": "AVLP538",
+      "union": 4519
+    },
+    {
+      "intersection": 1953,
+      "jaccard": 0.40917661847894404,
+      "source_a": "AVLP435",
+      "source_b": "CB0010",
+      "union": 4773
+    },
+    {
+      "intersection": 2500,
+      "jaccard": 0.6839945280437757,
+      "source_a": "AVLP435",
+      "source_b": "CB0050",
+      "union": 3655
+    },
+    {
+      "intersection": 2422,
+      "jaccard": 0.6657504123144585,
+      "source_a": "AVLP435",
+      "source_b": "CB0766",
+      "union": 3638
+    },
+    {
+      "intersection": 2802,
+      "jaccard": 0.6313654799459216,
+      "source_a": "AVLP435",
+      "source_b": "CB1852",
+      "union": 4438
+    },
+    {
+      "intersection": 2932,
+      "jaccard": 0.775456228510976,
+      "source_a": "AVLP435",
+      "source_b": "CB1920",
+      "union": 3781
+    },
+    {
+      "intersection": 2459,
+      "jaccard": 0.594392071549432,
+      "source_a": "AVLP435",
+      "source_b": "DNp04",
+      "union": 4137
+    },
+    {
+      "intersection": 1877,
+      "jaccard": 0.32323058377819874,
+      "source_a": "AVLP435",
+      "source_b": "KCg-m",
+      "union": 5807
+    },
+    {
+      "intersection": 2536,
+      "jaccard": 0.5221330039118798,
+      "source_a": "AVLP435",
+      "source_b": "LC10",
+      "union": 4857
+    },
+    {
+      "intersection": 2888,
+      "jaccard": 0.6472433886149709,
+      "source_a": "AVLP435",
+      "source_b": "LC11",
+      "union": 4462
+    },
+    {
+      "intersection": 2218,
+      "jaccard": 0.5743138270326256,
+      "source_a": "AVLP435",
+      "source_b": "LC12",
+      "union": 3862
+    },
+    {
+      "intersection": 2539,
+      "jaccard": 0.6203273882237967,
+      "source_a": "AVLP435",
+      "source_b": "LC17",
+      "union": 4093
+    },
+    {
+      "intersection": 2525,
+      "jaccard": 0.6323566240921613,
+      "source_a": "AVLP435",
+      "source_b": "LC18",
+      "union": 3993
+    },
+    {
+      "intersection": 2654,
+      "jaccard": 0.611098319134239,
+      "source_a": "AVLP435",
+      "source_b": "LC4",
+      "union": 4343
+    },
+    {
+      "intersection": 2826,
+      "jaccard": 0.5950726468730259,
+      "source_a": "AVLP435",
+      "source_b": "LC9",
+      "union": 4749
+    },
+    {
+      "intersection": 3048,
+      "jaccard": 0.5990566037735849,
+      "source_a": "AVLP435",
+      "source_b": "LHAD1g1",
+      "union": 5088
+    },
+    {
+      "intersection": 2591,
+      "jaccard": 0.5297485176855449,
+      "source_a": "AVLP435",
+      "source_b": "LLPC1",
+      "union": 4891
+    },
+    {
+      "intersection": 2426,
+      "jaccard": 0.5053113934596959,
+      "source_a": "AVLP435",
+      "source_b": "LLPC2",
+      "union": 4801
+    },
+    {
+      "intersection": 2298,
+      "jaccard": 0.4937688010313709,
+      "source_a": "AVLP435",
+      "source_b": "LLPC3",
+      "union": 4654
+    },
+    {
+      "intersection": 2403,
+      "jaccard": 0.5104078164825828,
+      "source_a": "AVLP435",
+      "source_b": "LPC1",
+      "union": 4708
+    },
+    {
+      "intersection": 2875,
+      "jaccard": 0.6073088297422898,
+      "source_a": "AVLP435",
+      "source_b": "LPLC1",
+      "union": 4734
+    },
+    {
+      "intersection": 2909,
+      "jaccard": 0.6025269262634632,
+      "source_a": "AVLP435",
+      "source_b": "LPLC2",
+      "union": 4828
+    },
+    {
+      "intersection": 2738,
+      "jaccard": 0.5371787325877967,
+      "source_a": "AVLP435",
+      "source_b": "LPLC4",
+      "union": 5097
+    },
+    {
+      "intersection": 1854,
+      "jaccard": 0.4961198822584961,
+      "source_a": "AVLP435",
+      "source_b": "LT56",
+      "union": 3737
+    },
+    {
+      "intersection": 1918,
+      "jaccard": 0.517259978425027,
+      "source_a": "AVLP435",
+      "source_b": "LoVC16",
+      "union": 3708
+    },
+    {
+      "intersection": 2482,
+      "jaccard": 0.6167992047713717,
+      "source_a": "AVLP435",
+      "source_b": "PVLP011",
+      "union": 4024
+    },
+    {
+      "intersection": 2920,
+      "jaccard": 0.7360725989412654,
+      "source_a": "AVLP435",
+      "source_b": "PVLP061",
+      "union": 3967
+    },
+    {
+      "intersection": 2285,
+      "jaccard": 0.6338418862690708,
+      "source_a": "AVLP435",
+      "source_b": "PVLP069",
+      "union": 3605
+    },
+    {
+      "intersection": 2723,
+      "jaccard": 0.7257462686567164,
+      "source_a": "AVLP435",
+      "source_b": "PVLP097",
+      "union": 3752
+    },
+    {
+      "intersection": 2605,
+      "jaccard": 0.7067281606077048,
+      "source_a": "AVLP435",
+      "source_b": "PVLP106",
+      "union": 3686
+    },
+    {
+      "intersection": 2717,
+      "jaccard": 0.697560975609756,
+      "source_a": "AVLP435",
+      "source_b": "PVLP111",
+      "union": 3895
+    },
+    {
+      "intersection": 2627,
+      "jaccard": 0.71,
+      "source_a": "AVLP435",
+      "source_b": "PVLP120",
+      "union": 3700
+    },
+    {
+      "intersection": 3018,
+      "jaccard": 0.8104189044038668,
+      "source_a": "AVLP435",
+      "source_b": "PVLP135",
+      "union": 3724
+    },
+    {
+      "intersection": 2584,
+      "jaccard": 0.6696035242290749,
+      "source_a": "AVLP435",
+      "source_b": "PVLP151",
+      "union": 3859
+    },
+    {
+      "intersection": 1886,
+      "jaccard": 0.428831286948613,
+      "source_a": "AVLP435",
+      "source_b": "TmY14",
+      "union": 4398
+    },
+    {
+      "intersection": 2288,
+      "jaccard": 0.6717557251908397,
+      "source_a": "AVLP479",
+      "source_b": "AVLP500",
+      "union": 3406
+    },
+    {
+      "intersection": 2820,
+      "jaccard": 0.5923125393824826,
+      "source_a": "AVLP479",
+      "source_b": "AVLP531",
+      "union": 4761
+    },
+    {
+      "intersection": 2435,
+      "jaccard": 0.6602494577006508,
+      "source_a": "AVLP479",
+      "source_b": "AVLP537",
+      "union": 3688
+    },
+    {
+      "intersection": 2905,
+      "jaccard": 0.6419889502762431,
+      "source_a": "AVLP479",
+      "source_b": "AVLP538",
+      "union": 4525
+    },
+    {
+      "intersection": 1754,
+      "jaccard": 0.37607204116638077,
+      "source_a": "AVLP479",
+      "source_b": "CB0010",
+      "union": 4664
+    },
+    {
+      "intersection": 2281,
+      "jaccard": 0.639652271452608,
+      "source_a": "AVLP479",
+      "source_b": "CB0050",
+      "union": 3566
+    },
+    {
+      "intersection": 2257,
+      "jaccard": 0.6457796852646638,
+      "source_a": "AVLP479",
+      "source_b": "CB0766",
+      "union": 3495
+    },
+    {
+      "intersection": 2506,
+      "jaccard": 0.5661997288748305,
+      "source_a": "AVLP479",
+      "source_b": "CB1852",
+      "union": 4426
+    },
+    {
+      "intersection": 2639,
+      "jaccard": 0.7007434944237918,
+      "source_a": "AVLP479",
+      "source_b": "CB1920",
+      "union": 3766
+    },
+    {
+      "intersection": 2230,
+      "jaccard": 0.5495317890586496,
+      "source_a": "AVLP479",
+      "source_b": "DNp04",
+      "union": 4058
+    },
+    {
+      "intersection": 1856,
+      "jaccard": 0.336231884057971,
+      "source_a": "AVLP479",
+      "source_b": "KCg-m",
+      "union": 5520
+    },
+    {
+      "intersection": 2318,
+      "jaccard": 0.48625970211873293,
+      "source_a": "AVLP479",
+      "source_b": "LC10",
+      "union": 4767
+    },
+    {
+      "intersection": 2517,
+      "jaccard": 0.5562430939226519,
+      "source_a": "AVLP479",
+      "source_b": "LC11",
+      "union": 4525
+    },
+    {
+      "intersection": 2046,
+      "jaccard": 0.5491143317230274,
+      "source_a": "AVLP479",
+      "source_b": "LC12",
+      "union": 3726
+    },
+    {
+      "intersection": 2253,
+      "jaccard": 0.5534266764922623,
+      "source_a": "AVLP479",
+      "source_b": "LC17",
+      "union": 4071
+    },
+    {
+      "intersection": 2259,
+      "jaccard": 0.571753986332574,
+      "source_a": "AVLP479",
+      "source_b": "LC18",
+      "union": 3951
+    },
+    {
+      "intersection": 2334,
+      "jaccard": 0.5359357060849598,
+      "source_a": "AVLP479",
+      "source_b": "LC4",
+      "union": 4355
+    },
+    {
+      "intersection": 2545,
+      "jaccard": 0.5389665396018636,
+      "source_a": "AVLP479",
+      "source_b": "LC9",
+      "union": 4722
+    },
+    {
+      "intersection": 2924,
+      "jaccard": 0.5962479608482871,
+      "source_a": "AVLP479",
+      "source_b": "LHAD1g1",
+      "union": 4904
+    },
+    {
+      "intersection": 2224,
+      "jaccard": 0.4492929292929293,
+      "source_a": "AVLP479",
+      "source_b": "LLPC1",
+      "union": 4950
+    },
+    {
+      "intersection": 2078,
+      "jaccard": 0.42925015492666807,
+      "source_a": "AVLP479",
+      "source_b": "LLPC2",
+      "union": 4841
+    },
+    {
+      "intersection": 1987,
+      "jaccard": 0.4266695297401761,
+      "source_a": "AVLP479",
+      "source_b": "LLPC3",
+      "union": 4657
+    },
+    {
+      "intersection": 2047,
+      "jaccard": 0.43040370058873,
+      "source_a": "AVLP479",
+      "source_b": "LPC1",
+      "union": 4756
+    },
+    {
+      "intersection": 2511,
+      "jaccard": 0.5242171189979123,
+      "source_a": "AVLP479",
+      "source_b": "LPLC1",
+      "union": 4790
+    },
+    {
+      "intersection": 2525,
+      "jaccard": 0.5148858075040783,
+      "source_a": "AVLP479",
+      "source_b": "LPLC2",
+      "union": 4904
+    },
+    {
+      "intersection": 2408,
+      "jaccard": 0.4704043758546591,
+      "source_a": "AVLP479",
+      "source_b": "LPLC4",
+      "union": 5119
+    },
+    {
+      "intersection": 1693,
+      "jaccard": 0.47158774373259055,
+      "source_a": "AVLP479",
+      "source_b": "LT56",
+      "union": 3590
+    },
+    {
+      "intersection": 1744,
+      "jaccard": 0.4879686625629547,
+      "source_a": "AVLP479",
+      "source_b": "LoVC16",
+      "union": 3574
+    },
+    {
+      "intersection": 2071,
+      "jaccard": 0.5018173007026896,
+      "source_a": "AVLP479",
+      "source_b": "PVLP011",
+      "union": 4127
+    },
+    {
+      "intersection": 2651,
+      "jaccard": 0.6748981670061099,
+      "source_a": "AVLP479",
+      "source_b": "PVLP061",
+      "union": 3928
+    },
+    {
+      "intersection": 2159,
+      "jaccard": 0.630733274905054,
+      "source_a": "AVLP479",
+      "source_b": "PVLP069",
+      "union": 3423
+    },
+    {
+      "intersection": 2428,
+      "jaccard": 0.6493714897031292,
+      "source_a": "AVLP479",
+      "source_b": "PVLP097",
+      "union": 3739
+    },
+    {
+      "intersection": 2336,
+      "jaccard": 0.6405264601041952,
+      "source_a": "AVLP479",
+      "source_b": "PVLP106",
+      "union": 3647
+    },
+    {
+      "intersection": 2488,
+      "jaccard": 0.6519916142557652,
+      "source_a": "AVLP479",
+      "source_b": "PVLP111",
+      "union": 3816
+    },
+    {
+      "intersection": 2307,
+      "jaccard": 0.6214978448275862,
+      "source_a": "AVLP479",
+      "source_b": "PVLP120",
+      "union": 3712
+    },
+    {
+      "intersection": 2559,
+      "jaccard": 0.6603870967741935,
+      "source_a": "AVLP479",
+      "source_b": "PVLP135",
+      "union": 3875
+    },
+    {
+      "intersection": 2300,
+      "jaccard": 0.5997392438070405,
+      "source_a": "AVLP479",
+      "source_b": "PVLP151",
+      "union": 3835
+    },
+    {
+      "intersection": 1542,
+      "jaccard": 0.34776725304465494,
+      "source_a": "AVLP479",
+      "source_b": "TmY14",
+      "union": 4434
+    },
+    {
+      "intersection": 2519,
+      "jaccard": 0.5466579861111112,
+      "source_a": "AVLP500",
+      "source_b": "AVLP531",
+      "union": 4608
+    },
+    {
+      "intersection": 2251,
+      "jaccard": 0.6585722644821533,
+      "source_a": "AVLP500",
+      "source_b": "AVLP537",
+      "union": 3418
+    },
+    {
+      "intersection": 2549,
+      "jaccard": 0.575784955952112,
+      "source_a": "AVLP500",
+      "source_b": "AVLP538",
+      "union": 4427
+    },
+    {
+      "intersection": 1728,
+      "jaccard": 0.40793201133144474,
+      "source_a": "AVLP500",
+      "source_b": "CB0010",
+      "union": 4236
+    },
+    {
+      "intersection": 2166,
+      "jaccard": 0.6712116516888751,
+      "source_a": "AVLP500",
+      "source_b": "CB0050",
+      "union": 3227
+    },
+    {
+      "intersection": 2038,
+      "jaccard": 0.6251533742331289,
+      "source_a": "AVLP500",
+      "source_b": "CB0766",
+      "union": 3260
+    },
+    {
+      "intersection": 2337,
+      "jaccard": 0.5643564356435643,
+      "source_a": "AVLP500",
+      "source_b": "CB1852",
+      "union": 4141
+    },
+    {
+      "intersection": 2402,
+      "jaccard": 0.6768103691180615,
+      "source_a": "AVLP500",
+      "source_b": "CB1920",
+      "union": 3549
+    },
+    {
+      "intersection": 2115,
+      "jaccard": 0.5687012637805862,
+      "source_a": "AVLP500",
+      "source_b": "DNp04",
+      "union": 3719
+    },
+    {
+      "intersection": 1465,
+      "jaccard": 0.2684625251969947,
+      "source_a": "AVLP500",
+      "source_b": "KCg-m",
+      "union": 5457
+    },
+    {
+      "intersection": 1946,
+      "jaccard": 0.4153681963713981,
+      "source_a": "AVLP500",
+      "source_b": "LC10",
+      "union": 4685
+    },
+    {
+      "intersection": 2229,
+      "jaccard": 0.5113558155540262,
+      "source_a": "AVLP500",
+      "source_b": "LC11",
+      "union": 4359
+    },
+    {
+      "intersection": 1857,
+      "jaccard": 0.5365501300202253,
+      "source_a": "AVLP500",
+      "source_b": "LC12",
+      "union": 3461
+    },
+    {
+      "intersection": 1981,
+      "jaccard": 0.5093854461301106,
+      "source_a": "AVLP500",
+      "source_b": "LC17",
+      "union": 3889
+    },
+    {
+      "intersection": 2044,
+      "jaccard": 0.5506465517241379,
+      "source_a": "AVLP500",
+      "source_b": "LC18",
+      "union": 3712
+    },
+    {
+      "intersection": 2111,
+      "jaccard": 0.5118816682832201,
+      "source_a": "AVLP500",
+      "source_b": "LC4",
+      "union": 4124
+    },
+    {
+      "intersection": 2267,
+      "jaccard": 0.4986801583809943,
+      "source_a": "AVLP500",
+      "source_b": "LC9",
+      "union": 4546
+    },
+    {
+      "intersection": 2510,
+      "jaccard": 0.5160361842105263,
+      "source_a": "AVLP500",
+      "source_b": "LHAD1g1",
+      "union": 4864
+    },
+    {
+      "intersection": 1961,
+      "jaccard": 0.41206135742803107,
+      "source_a": "AVLP500",
+      "source_b": "LLPC1",
+      "union": 4759
+    },
+    {
+      "intersection": 1808,
+      "jaccard": 0.3882327678763152,
+      "source_a": "AVLP500",
+      "source_b": "LLPC2",
+      "union": 4657
+    },
+    {
+      "intersection": 1712,
+      "jaccard": 0.38231353282715497,
+      "source_a": "AVLP500",
+      "source_b": "LLPC3",
+      "union": 4478
+    },
+    {
+      "intersection": 1816,
+      "jaccard": 0.40061769247738804,
+      "source_a": "AVLP500",
+      "source_b": "LPC1",
+      "union": 4533
+    },
+    {
+      "intersection": 2200,
+      "jaccard": 0.4734237142242307,
+      "source_a": "AVLP500",
+      "source_b": "LPLC1",
+      "union": 4647
+    },
+    {
+      "intersection": 2250,
+      "jaccard": 0.47619047619047616,
+      "source_a": "AVLP500",
+      "source_b": "LPLC2",
+      "union": 4725
+    },
+    {
+      "intersection": 2051,
+      "jaccard": 0.4084030266825966,
+      "source_a": "AVLP500",
+      "source_b": "LPLC4",
+      "union": 5022
+    },
+    {
+      "intersection": 1546,
+      "jaccard": 0.4709107523606457,
+      "source_a": "AVLP500",
+      "source_b": "LT56",
+      "union": 3283
+    },
+    {
+      "intersection": 1616,
+      "jaccard": 0.4975369458128079,
+      "source_a": "AVLP500",
+      "source_b": "LoVC16",
+      "union": 3248
+    },
+    {
+      "intersection": 1963,
+      "jaccard": 0.5191748214758001,
+      "source_a": "AVLP500",
+      "source_b": "PVLP011",
+      "union": 3781
+    },
+    {
+      "intersection": 2284,
+      "jaccard": 0.5946368133298621,
+      "source_a": "AVLP500",
+      "source_b": "PVLP061",
+      "union": 3841
+    },
+    {
+      "intersection": 1986,
+      "jaccard": 0.6320814767663908,
+      "source_a": "AVLP500",
+      "source_b": "PVLP069",
+      "union": 3142
+    },
+    {
+      "intersection": 2179,
+      "jaccard": 0.6165817770232032,
+      "source_a": "AVLP500",
+      "source_b": "PVLP097",
+      "union": 3534
+    },
+    {
+      "intersection": 2107,
+      "jaccard": 0.6157218001168907,
+      "source_a": "AVLP500",
+      "source_b": "PVLP106",
+      "union": 3422
+    },
+    {
+      "intersection": 2278,
+      "jaccard": 0.6377379619260918,
+      "source_a": "AVLP500",
+      "source_b": "PVLP111",
+      "union": 3572
+    },
+    {
+      "intersection": 2203,
+      "jaccard": 0.6552647233789411,
+      "source_a": "AVLP500",
+      "source_b": "PVLP120",
+      "union": 3362
+    },
+    {
+      "intersection": 2323,
+      "jaccard": 0.6352201257861635,
+      "source_a": "AVLP500",
+      "source_b": "PVLP135",
+      "union": 3657
+    },
+    {
+      "intersection": 2174,
+      "jaccard": 0.6199030510407756,
+      "source_a": "AVLP500",
+      "source_b": "PVLP151",
+      "union": 3507
+    },
+    {
+      "intersection": 1419,
+      "jaccard": 0.34584450402144773,
+      "source_a": "AVLP500",
+      "source_b": "TmY14",
+      "union": 4103
+    },
+    {
+      "intersection": 2774,
+      "jaccard": 0.5800920117105813,
+      "source_a": "AVLP531",
+      "source_b": "AVLP537",
+      "union": 4782
+    },
+    {
+      "intersection": 3585,
+      "jaccard": 0.6792345585449033,
+      "source_a": "AVLP531",
+      "source_b": "AVLP538",
+      "union": 5278
+    },
+    {
+      "intersection": 2352,
+      "jaccard": 0.4277141298417894,
+      "source_a": "AVLP531",
+      "source_b": "CB0010",
+      "union": 5499
+    },
+    {
+      "intersection": 2597,
+      "jaccard": 0.554559043348281,
+      "source_a": "AVLP531",
+      "source_b": "CB0050",
+      "union": 4683
+    },
+    {
+      "intersection": 2512,
+      "jaccard": 0.5375561737641772,
+      "source_a": "AVLP531",
+      "source_b": "CB0766",
+      "union": 4673
+    },
+    {
+      "intersection": 3139,
+      "jaccard": 0.6006505931879066,
+      "source_a": "AVLP531",
+      "source_b": "CB1852",
+      "union": 5226
+    },
+    {
+      "intersection": 3022,
+      "jaccard": 0.6274916943521595,
+      "source_a": "AVLP531",
+      "source_b": "CB1920",
+      "union": 4816
+    },
+    {
+      "intersection": 2730,
+      "jaccard": 0.5469845722300141,
+      "source_a": "AVLP531",
+      "source_b": "DNp04",
+      "union": 4991
+    },
+    {
+      "intersection": 2587,
+      "jaccard": 0.415782706525233,
+      "source_a": "AVLP531",
+      "source_b": "KCg-m",
+      "union": 6222
+    },
+    {
+      "intersection": 3044,
+      "jaccard": 0.556083302886372,
+      "source_a": "AVLP531",
+      "source_b": "LC10",
+      "union": 5474
+    },
+    {
+      "intersection": 3286,
+      "jaccard": 0.6332626710348814,
+      "source_a": "AVLP531",
+      "source_b": "LC11",
+      "union": 5189
+    },
+    {
+      "intersection": 2421,
+      "jaccard": 0.506061872909699,
+      "source_a": "AVLP531",
+      "source_b": "LC12",
+      "union": 4784
+    },
+    {
+      "intersection": 2762,
+      "jaccard": 0.552952952952953,
+      "source_a": "AVLP531",
+      "source_b": "LC17",
+      "union": 4995
+    },
+    {
+      "intersection": 2795,
+      "jaccard": 0.576526402640264,
+      "source_a": "AVLP531",
+      "source_b": "LC18",
+      "union": 4848
+    },
+    {
+      "intersection": 3044,
+      "jaccard": 0.5994486018117369,
+      "source_a": "AVLP531",
+      "source_b": "LC4",
+      "union": 5078
+    },
+    {
+      "intersection": 3303,
+      "jaccard": 0.6120066703724292,
+      "source_a": "AVLP531",
+      "source_b": "LC9",
+      "union": 5397
+    },
+    {
+      "intersection": 3680,
+      "jaccard": 0.6593800394194589,
+      "source_a": "AVLP531",
+      "source_b": "LHAD1g1",
+      "union": 5581
+    },
+    {
+      "intersection": 3075,
+      "jaccard": 0.5558568329718004,
+      "source_a": "AVLP531",
+      "source_b": "LLPC1",
+      "union": 5532
+    },
+    {
+      "intersection": 2880,
+      "jaccard": 0.5263157894736842,
+      "source_a": "AVLP531",
+      "source_b": "LLPC2",
+      "union": 5472
+    },
+    {
+      "intersection": 2716,
+      "jaccard": 0.5066218988994591,
+      "source_a": "AVLP531",
+      "source_b": "LLPC3",
+      "union": 5361
+    },
+    {
+      "intersection": 2822,
+      "jaccard": 0.5212412264499446,
+      "source_a": "AVLP531",
+      "source_b": "LPC1",
+      "union": 5414
+    },
+    {
+      "intersection": 3351,
+      "jaccard": 0.6225153260263794,
+      "source_a": "AVLP531",
+      "source_b": "LPLC1",
+      "union": 5383
+    },
+    {
+      "intersection": 3375,
+      "jaccard": 0.6150902132312739,
+      "source_a": "AVLP531",
+      "source_b": "LPLC2",
+      "union": 5487
+    },
+    {
+      "intersection": 3324,
+      "jaccard": 0.5897799858055358,
+      "source_a": "AVLP531",
+      "source_b": "LPLC4",
+      "union": 5636
+    },
+    {
+      "intersection": 1999,
+      "jaccard": 0.4237863048547806,
+      "source_a": "AVLP531",
+      "source_b": "LT56",
+      "union": 4717
+    },
+    {
+      "intersection": 2013,
+      "jaccard": 0.4248628113127902,
+      "source_a": "AVLP531",
+      "source_b": "LoVC16",
+      "union": 4738
+    },
+    {
+      "intersection": 2702,
+      "jaccard": 0.5481842158652871,
+      "source_a": "AVLP531",
+      "source_b": "PVLP011",
+      "union": 4929
+    },
+    {
+      "intersection": 3095,
+      "jaccard": 0.629448850925361,
+      "source_a": "AVLP531",
+      "source_b": "PVLP061",
+      "union": 4917
+    },
+    {
+      "intersection": 2356,
+      "jaccard": 0.5056879158617729,
+      "source_a": "AVLP531",
+      "source_b": "PVLP069",
+      "union": 4659
+    },
+    {
+      "intersection": 2819,
+      "jaccard": 0.5896256013386321,
+      "source_a": "AVLP531",
+      "source_b": "PVLP097",
+      "union": 4781
+    },
+    {
+      "intersection": 2659,
+      "jaccard": 0.5589657347067479,
+      "source_a": "AVLP531",
+      "source_b": "PVLP106",
+      "union": 4757
+    },
+    {
+      "intersection": 2985,
+      "jaccard": 0.6281565656565656,
+      "source_a": "AVLP531",
+      "source_b": "PVLP111",
+      "union": 4752
+    },
+    {
+      "intersection": 2758,
+      "jaccard": 0.5875585854282063,
+      "source_a": "AVLP531",
+      "source_b": "PVLP120",
+      "union": 4694
+    },
+    {
+      "intersection": 3035,
+      "jaccard": 0.6281043046357616,
+      "source_a": "AVLP531",
+      "source_b": "PVLP135",
+      "union": 4832
+    },
+    {
+      "intersection": 2769,
+      "jaccard": 0.5769952073348614,
+      "source_a": "AVLP531",
+      "source_b": "PVLP151",
+      "union": 4799
+    },
+    {
+      "intersection": 2156,
+      "jaccard": 0.410432134018656,
+      "source_a": "AVLP531",
+      "source_b": "TmY14",
+      "union": 5253
+    },
+    {
+      "intersection": 2852,
+      "jaccard": 0.6264001757083242,
+      "source_a": "AVLP537",
+      "source_b": "AVLP538",
+      "union": 4553
+    },
+    {
+      "intersection": 1843,
+      "jaccard": 0.40505494505494505,
+      "source_a": "AVLP537",
+      "source_b": "CB0010",
+      "union": 4550
+    },
+    {
+      "intersection": 2319,
+      "jaccard": 0.6620039965743648,
+      "source_a": "AVLP537",
+      "source_b": "CB0050",
+      "union": 3503
+    },
+    {
+      "intersection": 2180,
+      "jaccard": 0.6146038906117846,
+      "source_a": "AVLP537",
+      "source_b": "CB0766",
+      "union": 3547
+    },
+    {
+      "intersection": 2517,
+      "jaccard": 0.5733485193621868,
+      "source_a": "AVLP537",
+      "source_b": "CB1852",
+      "union": 4390
+    },
+    {
+      "intersection": 2777,
+      "jaccard": 0.7707466000555093,
+      "source_a": "AVLP537",
+      "source_b": "CB1920",
+      "union": 3603
+    },
+    {
+      "intersection": 2261,
+      "jaccard": 0.564967516241879,
+      "source_a": "AVLP537",
+      "source_b": "DNp04",
+      "union": 4002
+    },
+    {
+      "intersection": 1655,
+      "jaccard": 0.2905547752808989,
+      "source_a": "AVLP537",
+      "source_b": "KCg-m",
+      "union": 5696
+    },
+    {
+      "intersection": 2271,
+      "jaccard": 0.47421173522656085,
+      "source_a": "AVLP537",
+      "source_b": "LC10",
+      "union": 4789
+    },
+    {
+      "intersection": 2654,
+      "jaccard": 0.6082970433188173,
+      "source_a": "AVLP537",
+      "source_b": "LC11",
+      "union": 4363
+    },
+    {
+      "intersection": 2118,
+      "jaccard": 0.5836318545053734,
+      "source_a": "AVLP537",
+      "source_b": "LC12",
+      "union": 3629
+    },
+    {
+      "intersection": 2371,
+      "jaccard": 0.6036150712830958,
+      "source_a": "AVLP537",
+      "source_b": "LC17",
+      "union": 3928
+    },
+    {
+      "intersection": 2348,
+      "jaccard": 0.6119364086525931,
+      "source_a": "AVLP537",
+      "source_b": "LC18",
+      "union": 3837
+    },
+    {
+      "intersection": 2434,
+      "jaccard": 0.5754137115839244,
+      "source_a": "AVLP537",
+      "source_b": "LC4",
+      "union": 4230
+    },
+    {
+      "intersection": 2520,
+      "jaccard": 0.5336721728081322,
+      "source_a": "AVLP537",
+      "source_b": "LC9",
+      "union": 4722
+    },
+    {
+      "intersection": 2789,
+      "jaccard": 0.5562425209413642,
+      "source_a": "AVLP537",
+      "source_b": "LHAD1g1",
+      "union": 5014
+    },
+    {
+      "intersection": 2379,
+      "jaccard": 0.4987421383647799,
+      "source_a": "AVLP537",
+      "source_b": "LLPC1",
+      "union": 4770
+    },
+    {
+      "intersection": 2239,
+      "jaccard": 0.48098818474758326,
+      "source_a": "AVLP537",
+      "source_b": "LLPC2",
+      "union": 4655
+    },
+    {
+      "intersection": 2138,
+      "jaccard": 0.47712564159785764,
+      "source_a": "AVLP537",
+      "source_b": "LLPC3",
+      "union": 4481
+    },
+    {
+      "intersection": 2212,
+      "jaccard": 0.4844502847130968,
+      "source_a": "AVLP537",
+      "source_b": "LPC1",
+      "union": 4566
+    },
+    {
+      "intersection": 2605,
+      "jaccard": 0.5576964247484478,
+      "source_a": "AVLP537",
+      "source_b": "LPLC1",
+      "union": 4671
+    },
+    {
+      "intersection": 2639,
+      "jaccard": 0.5538300104931795,
+      "source_a": "AVLP537",
+      "source_b": "LPLC2",
+      "union": 4765
+    },
+    {
+      "intersection": 2500,
+      "jaccard": 0.4998000799680128,
+      "source_a": "AVLP537",
+      "source_b": "LPLC4",
+      "union": 5002
+    },
+    {
+      "intersection": 1750,
+      "jaccard": 0.49885974914481185,
+      "source_a": "AVLP537",
+      "source_b": "LT56",
+      "union": 3508
+    },
+    {
+      "intersection": 1848,
+      "jaccard": 0.5364296081277213,
+      "source_a": "AVLP537",
+      "source_b": "LoVC16",
+      "union": 3445
+    },
+    {
+      "intersection": 2264,
+      "jaccard": 0.5791762599130212,
+      "source_a": "AVLP537",
+      "source_b": "PVLP011",
+      "union": 3909
+    },
+    {
+      "intersection": 2648,
+      "jaccard": 0.677931387608807,
+      "source_a": "AVLP537",
+      "source_b": "PVLP061",
+      "union": 3906
+    },
+    {
+      "intersection": 2094,
+      "jaccard": 0.604678024833959,
+      "source_a": "AVLP537",
+      "source_b": "PVLP069",
+      "union": 3463
+    },
+    {
+      "intersection": 2654,
+      "jaccard": 0.760894495412844,
+      "source_a": "AVLP537",
+      "source_b": "PVLP097",
+      "union": 3488
+    },
+    {
+      "intersection": 2523,
+      "jaccard": 0.7344978165938865,
+      "source_a": "AVLP537",
+      "source_b": "PVLP106",
+      "union": 3435
+    },
+    {
+      "intersection": 2469,
+      "jaccard": 0.6480314960629922,
+      "source_a": "AVLP537",
+      "source_b": "PVLP111",
+      "union": 3810
+    },
+    {
+      "intersection": 2437,
+      "jaccard": 0.6851279167838066,
+      "source_a": "AVLP537",
+      "source_b": "PVLP120",
+      "union": 3557
+    },
+    {
+      "intersection": 2794,
+      "jaccard": 0.7728907330567082,
+      "source_a": "AVLP537",
+      "source_b": "PVLP135",
+      "union": 3615
+    },
+    {
+      "intersection": 2367,
+      "jaccard": 0.6323804434945232,
+      "source_a": "AVLP537",
+      "source_b": "PVLP151",
+      "union": 3743
+    },
+    {
+      "intersection": 1772,
+      "jaccard": 0.42402488633644414,
+      "source_a": "AVLP537",
+      "source_b": "TmY14",
+      "union": 4179
+    },
+    {
+      "intersection": 2327,
+      "jaccard": 0.43309138284012655,
+      "source_a": "AVLP538",
+      "source_b": "CB0010",
+      "union": 5373
+    },
+    {
+      "intersection": 2697,
+      "jaccard": 0.608528880866426,
+      "source_a": "AVLP538",
+      "source_b": "CB0050",
+      "union": 4432
+    },
+    {
+      "intersection": 2636,
+      "jaccard": 0.5993633469758981,
+      "source_a": "AVLP538",
+      "source_b": "CB0766",
+      "union": 4398
+    },
+    {
+      "intersection": 3513,
+      "jaccard": 0.7472878111040204,
+      "source_a": "AVLP538",
+      "source_b": "CB1852",
+      "union": 4701
+    },
+    {
+      "intersection": 3123,
+      "jaccard": 0.6842681858019282,
+      "source_a": "AVLP538",
+      "source_b": "CB1920",
+      "union": 4564
+    },
+    {
+      "intersection": 2796,
+      "jaccard": 0.585672392124005,
+      "source_a": "AVLP538",
+      "source_b": "DNp04",
+      "union": 4774
+    },
+    {
+      "intersection": 2447,
+      "jaccard": 0.39397842537433586,
+      "source_a": "AVLP538",
+      "source_b": "KCg-m",
+      "union": 6211
+    },
+    {
+      "intersection": 3159,
+      "jaccard": 0.6065668202764977,
+      "source_a": "AVLP538",
+      "source_b": "LC10",
+      "union": 5208
+    },
+    {
+      "intersection": 3395,
+      "jaccard": 0.6887806857374721,
+      "source_a": "AVLP538",
+      "source_b": "LC11",
+      "union": 4929
+    },
+    {
+      "intersection": 2492,
+      "jaccard": 0.5462516440157825,
+      "source_a": "AVLP538",
+      "source_b": "LC12",
+      "union": 4562
+    },
+    {
+      "intersection": 2908,
+      "jaccard": 0.6189868028948489,
+      "source_a": "AVLP538",
+      "source_b": "LC17",
+      "union": 4698
+    },
+    {
+      "intersection": 2828,
+      "jaccard": 0.6063464837049742,
+      "source_a": "AVLP538",
+      "source_b": "LC18",
+      "union": 4664
+    },
+    {
+      "intersection": 3102,
+      "jaccard": 0.6370918052988294,
+      "source_a": "AVLP538",
+      "source_b": "LC4",
+      "union": 4869
+    },
+    {
+      "intersection": 3604,
+      "jaccard": 0.7288169868554095,
+      "source_a": "AVLP538",
+      "source_b": "LC9",
+      "union": 4945
+    },
+    {
+      "intersection": 3613,
+      "jaccard": 0.6572676005093687,
+      "source_a": "AVLP538",
+      "source_b": "LHAD1g1",
+      "union": 5497
+    },
+    {
+      "intersection": 3228,
+      "jaccard": 0.6174445294567712,
+      "source_a": "AVLP538",
+      "source_b": "LLPC1",
+      "union": 5228
+    },
+    {
+      "intersection": 2992,
+      "jaccard": 0.5743904780188136,
+      "source_a": "AVLP538",
+      "source_b": "LLPC2",
+      "union": 5209
+    },
+    {
+      "intersection": 2819,
+      "jaccard": 0.5519874681809281,
+      "source_a": "AVLP538",
+      "source_b": "LLPC3",
+      "union": 5107
+    },
+    {
+      "intersection": 2912,
+      "jaccard": 0.5629228687415426,
+      "source_a": "AVLP538",
+      "source_b": "LPC1",
+      "union": 5173
+    },
+    {
+      "intersection": 3471,
+      "jaccard": 0.6789906103286385,
+      "source_a": "AVLP538",
+      "source_b": "LPLC1",
+      "union": 5112
+    },
+    {
+      "intersection": 3512,
+      "jaccard": 0.6755145220234661,
+      "source_a": "AVLP538",
+      "source_b": "LPLC2",
+      "union": 5199
+    },
+    {
+      "intersection": 3400,
+      "jaccard": 0.6285819929746719,
+      "source_a": "AVLP538",
+      "source_b": "LPLC4",
+      "union": 5409
+    },
+    {
+      "intersection": 2078,
+      "jaccard": 0.4631156674838422,
+      "source_a": "AVLP538",
+      "source_b": "LT56",
+      "union": 4487
+    },
+    {
+      "intersection": 2056,
+      "jaccard": 0.4524647887323944,
+      "source_a": "AVLP538",
+      "source_b": "LoVC16",
+      "union": 4544
+    },
+    {
+      "intersection": 2775,
+      "jaccard": 0.589798087141339,
+      "source_a": "AVLP538",
+      "source_b": "PVLP011",
+      "union": 4705
+    },
+    {
+      "intersection": 3236,
+      "jaccard": 0.6996756756756757,
+      "source_a": "AVLP538",
+      "source_b": "PVLP061",
+      "union": 4625
+    },
+    {
+      "intersection": 2463,
+      "jaccard": 0.5596455351056578,
+      "source_a": "AVLP538",
+      "source_b": "PVLP069",
+      "union": 4401
+    },
+    {
+      "intersection": 2868,
+      "jaccard": 0.6260641781270465,
+      "source_a": "AVLP538",
+      "source_b": "PVLP097",
+      "union": 4581
+    },
+    {
+      "intersection": 2728,
+      "jaccard": 0.6012783777826758,
+      "source_a": "AVLP538",
+      "source_b": "PVLP106",
+      "union": 4537
+    },
+    {
+      "intersection": 3008,
+      "jaccard": 0.6570554827435562,
+      "source_a": "AVLP538",
+      "source_b": "PVLP111",
+      "union": 4578
+    },
+    {
+      "intersection": 2826,
+      "jaccard": 0.6315083798882681,
+      "source_a": "AVLP538",
+      "source_b": "PVLP120",
+      "union": 4475
+    },
+    {
+      "intersection": 3150,
+      "jaccard": 0.6898817345597897,
+      "source_a": "AVLP538",
+      "source_b": "PVLP135",
+      "union": 4566
+    },
+    {
+      "intersection": 2879,
+      "jaccard": 0.6344204495372411,
+      "source_a": "AVLP538",
+      "source_b": "PVLP151",
+      "union": 4538
+    },
+    {
+      "intersection": 2244,
+      "jaccard": 0.44754686876745114,
+      "source_a": "AVLP538",
+      "source_b": "TmY14",
+      "union": 5014
+    },
+    {
+      "intersection": 1847,
+      "jaccard": 0.4325526932084309,
+      "source_a": "CB0010",
+      "source_b": "CB0050",
+      "union": 4270
+    },
+    {
+      "intersection": 1776,
+      "jaccard": 0.4182760244936411,
+      "source_a": "CB0010",
+      "source_b": "CB0766",
+      "union": 4246
+    },
+    {
+      "intersection": 2300,
+      "jaccard": 0.46919624643002855,
+      "source_a": "CB0010",
+      "source_b": "CB1852",
+      "union": 4902
+    },
+    {
+      "intersection": 1905,
+      "jaccard": 0.39937106918238996,
+      "source_a": "CB0010",
+      "source_b": "CB1920",
+      "union": 4770
+    },
+    {
+      "intersection": 2376,
+      "jaccard": 0.5681492109038737,
+      "source_a": "CB0010",
+      "source_b": "DNp04",
+      "union": 4182
+    },
+    {
+      "intersection": 1650,
+      "jaccard": 0.2751834556370914,
+      "source_a": "CB0010",
+      "source_b": "KCg-m",
+      "union": 5996
+    },
+    {
+      "intersection": 1927,
+      "jaccard": 0.3550110537951363,
+      "source_a": "CB0010",
+      "source_b": "LC10",
+      "union": 5428
+    },
+    {
+      "intersection": 2234,
+      "jaccard": 0.4399369830641985,
+      "source_a": "CB0010",
+      "source_b": "LC11",
+      "union": 5078
+    },
+    {
+      "intersection": 1739,
+      "jaccard": 0.4041366488496398,
+      "source_a": "CB0010",
+      "source_b": "LC12",
+      "union": 4303
+    },
+    {
+      "intersection": 1847,
+      "jaccard": 0.3890878449547082,
+      "source_a": "CB0010",
+      "source_b": "LC17",
+      "union": 4747
+    },
+    {
+      "intersection": 1957,
+      "jaccard": 0.43267742648684504,
+      "source_a": "CB0010",
+      "source_b": "LC18",
+      "union": 4523
+    },
+    {
+      "intersection": 2271,
+      "jaccard": 0.48442832764505117,
+      "source_a": "CB0010",
+      "source_b": "LC4",
+      "union": 4688
+    },
+    {
+      "intersection": 2196,
+      "jaccard": 0.4111589589964426,
+      "source_a": "CB0010",
+      "source_b": "LC9",
+      "union": 5341
+    },
+    {
+      "intersection": 2492,
+      "jaccard": 0.4445237245808063,
+      "source_a": "CB0010",
+      "source_b": "LHAD1g1",
+      "union": 5606
+    },
+    {
+      "intersection": 2257,
+      "jaccard": 0.4351262772315404,
+      "source_a": "CB0010",
+      "source_b": "LLPC1",
+      "union": 5187
+    },
+    {
+      "intersection": 2060,
+      "jaccard": 0.40163774614934683,
+      "source_a": "CB0010",
+      "source_b": "LLPC2",
+      "union": 5129
+    },
+    {
+      "intersection": 1950,
+      "jaccard": 0.3928283642224013,
+      "source_a": "CB0010",
+      "source_b": "LLPC3",
+      "union": 4964
+    },
+    {
+      "intersection": 1984,
+      "jaccard": 0.38986048339555907,
+      "source_a": "CB0010",
+      "source_b": "LPC1",
+      "union": 5089
+    },
+    {
+      "intersection": 2288,
+      "jaccard": 0.43308726102593226,
+      "source_a": "CB0010",
+      "source_b": "LPLC1",
+      "union": 5283
+    },
+    {
+      "intersection": 2458,
+      "jaccard": 0.4689944667048273,
+      "source_a": "CB0010",
+      "source_b": "LPLC2",
+      "union": 5241
+    },
+    {
+      "intersection": 2336,
+      "jaccard": 0.4277604834279436,
+      "source_a": "CB0010",
+      "source_b": "LPLC4",
+      "union": 5461
+    },
+    {
+      "intersection": 1450,
+      "jaccard": 0.35339995125517915,
+      "source_a": "CB0010",
+      "source_b": "LT56",
+      "union": 4103
+    },
+    {
+      "intersection": 1431,
+      "jaccard": 0.34423863363002166,
+      "source_a": "CB0010",
+      "source_b": "LoVC16",
+      "union": 4157
+    },
+    {
+      "intersection": 1975,
+      "jaccard": 0.43957266859559313,
+      "source_a": "CB0010",
+      "source_b": "PVLP011",
+      "union": 4493
+    },
+    {
+      "intersection": 2011,
+      "jaccard": 0.4156676312525837,
+      "source_a": "CB0010",
+      "source_b": "PVLP061",
+      "union": 4838
+    },
+    {
+      "intersection": 1662,
+      "jaccard": 0.39665871121718377,
+      "source_a": "CB0010",
+      "source_b": "PVLP069",
+      "union": 4190
+    },
+    {
+      "intersection": 1875,
+      "jaccard": 0.4110039456378781,
+      "source_a": "CB0010",
+      "source_b": "PVLP097",
+      "union": 4562
+    },
+    {
+      "intersection": 1812,
+      "jaccard": 0.4080162125647377,
+      "source_a": "CB0010",
+      "source_b": "PVLP106",
+      "union": 4441
+    },
+    {
+      "intersection": 2005,
+      "jaccard": 0.43882687677828847,
+      "source_a": "CB0010",
+      "source_b": "PVLP111",
+      "union": 4569
+    },
+    {
+      "intersection": 1922,
+      "jaccard": 0.4401190748797802,
+      "source_a": "CB0010",
+      "source_b": "PVLP120",
+      "union": 4367
+    },
+    {
+      "intersection": 1970,
+      "jaccard": 0.41613857203210813,
+      "source_a": "CB0010",
+      "source_b": "PVLP135",
+      "union": 4734
+    },
+    {
+      "intersection": 2021,
+      "jaccard": 0.46099452554744524,
+      "source_a": "CB0010",
+      "source_b": "PVLP151",
+      "union": 4384
+    },
+    {
+      "intersection": 1677,
+      "jaccard": 0.3670387393302692,
+      "source_a": "CB0010",
+      "source_b": "TmY14",
+      "union": 4569
+    },
+    {
+      "intersection": 2192,
+      "jaccard": 0.6725989567351949,
+      "source_a": "CB0050",
+      "source_b": "CB0766",
+      "union": 3259
+    },
+    {
+      "intersection": 2523,
+      "jaccard": 0.6141674780915287,
+      "source_a": "CB0050",
+      "source_b": "CB1852",
+      "union": 4108
+    },
+    {
+      "intersection": 2436,
+      "jaccard": 0.6641221374045801,
+      "source_a": "CB0050",
+      "source_b": "CB1920",
+      "union": 3668
+    },
+    {
+      "intersection": 2249,
+      "jaccard": 0.6016586409844836,
+      "source_a": "CB0050",
+      "source_b": "DNp04",
+      "union": 3738
+    },
+    {
+      "intersection": 1520,
+      "jaccard": 0.27362736273627364,
+      "source_a": "CB0050",
+      "source_b": "KCg-m",
+      "union": 5555
+    },
+    {
+      "intersection": 2079,
+      "jaccard": 0.44187035069075453,
+      "source_a": "CB0050",
+      "source_b": "LC10",
+      "union": 4705
+    },
+    {
+      "intersection": 2421,
+      "jaccard": 0.5604166666666667,
+      "source_a": "CB0050",
+      "source_b": "LC11",
+      "union": 4320
+    },
+    {
+      "intersection": 2002,
+      "jaccard": 0.5771115595272412,
+      "source_a": "CB0050",
+      "source_b": "LC12",
+      "union": 3469
+    },
+    {
+      "intersection": 2145,
+      "jaccard": 0.5531201650335225,
+      "source_a": "CB0050",
+      "source_b": "LC17",
+      "union": 3878
+    },
+    {
+      "intersection": 2250,
+      "jaccard": 0.6149221098660836,
+      "source_a": "CB0050",
+      "source_b": "LC18",
+      "union": 3659
+    },
+    {
+      "intersection": 2305,
+      "jaccard": 0.5645358804800392,
+      "source_a": "CB0050",
+      "source_b": "LC4",
+      "union": 4083
+    },
+    {
+      "intersection": 2418,
+      "jaccard": 0.5316622691292876,
+      "source_a": "CB0050",
+      "source_b": "LC9",
+      "union": 4548
+    },
+    {
+      "intersection": 2612,
+      "jaccard": 0.5314343845371312,
+      "source_a": "CB0050",
+      "source_b": "LHAD1g1",
+      "union": 4915
+    },
+    {
+      "intersection": 2182,
+      "jaccard": 0.4651460243018546,
+      "source_a": "CB0050",
+      "source_b": "LLPC1",
+      "union": 4691
+    },
+    {
+      "intersection": 2019,
+      "jaccard": 0.4390084801043705,
+      "source_a": "CB0050",
+      "source_b": "LLPC2",
+      "union": 4599
+    },
+    {
+      "intersection": 1920,
+      "jaccard": 0.43409450599140853,
+      "source_a": "CB0050",
+      "source_b": "LLPC3",
+      "union": 4423
+    },
+    {
+      "intersection": 1984,
+      "jaccard": 0.43913235945108453,
+      "source_a": "CB0050",
+      "source_b": "LPC1",
+      "union": 4518
+    },
+    {
+      "intersection": 2408,
+      "jaccard": 0.524390243902439,
+      "source_a": "CB0050",
+      "source_b": "LPLC1",
+      "union": 4592
+    },
+    {
+      "intersection": 2447,
+      "jaccard": 0.5227515488143559,
+      "source_a": "CB0050",
+      "source_b": "LPLC2",
+      "union": 4681
+    },
+    {
+      "intersection": 2266,
+      "jaccard": 0.4568548387096774,
+      "source_a": "CB0050",
+      "source_b": "LPLC4",
+      "union": 4960
+    },
+    {
+      "intersection": 1681,
+      "jaccard": 0.5092396243562557,
+      "source_a": "CB0050",
+      "source_b": "LT56",
+      "union": 3301
+    },
+    {
+      "intersection": 1699,
+      "jaccard": 0.5120554550934298,
+      "source_a": "CB0050",
+      "source_b": "LoVC16",
+      "union": 3318
+    },
+    {
+      "intersection": 2111,
+      "jaccard": 0.557580559957739,
+      "source_a": "CB0050",
+      "source_b": "PVLP011",
+      "union": 3786
+    },
+    {
+      "intersection": 2467,
+      "jaccard": 0.6473366570453949,
+      "source_a": "CB0050",
+      "source_b": "PVLP061",
+      "union": 3811
+    },
+    {
+      "intersection": 2084,
+      "jaccard": 0.6518611197998123,
+      "source_a": "CB0050",
+      "source_b": "PVLP069",
+      "union": 3197
+    },
+    {
+      "intersection": 2254,
+      "jaccard": 0.624031007751938,
+      "source_a": "CB0050",
+      "source_b": "PVLP097",
+      "union": 3612
+    },
+    {
+      "intersection": 2180,
+      "jaccard": 0.6225014277555683,
+      "source_a": "CB0050",
+      "source_b": "PVLP106",
+      "union": 3502
+    },
+    {
+      "intersection": 2462,
+      "jaccard": 0.6952838181304716,
+      "source_a": "CB0050",
+      "source_b": "PVLP111",
+      "union": 3541
+    },
+    {
+      "intersection": 2325,
+      "jaccard": 0.6852343059239611,
+      "source_a": "CB0050",
+      "source_b": "PVLP120",
+      "union": 3393
+    },
+    {
+      "intersection": 2493,
+      "jaccard": 0.6848901098901099,
+      "source_a": "CB0050",
+      "source_b": "PVLP135",
+      "union": 3640
+    },
+    {
+      "intersection": 2338,
+      "jaccard": 0.6687643020594966,
+      "source_a": "CB0050",
+      "source_b": "PVLP151",
+      "union": 3496
+    },
+    {
+      "intersection": 1535,
+      "jaccard": 0.37077294685990336,
+      "source_a": "CB0050",
+      "source_b": "TmY14",
+      "union": 4140
+    },
+    {
+      "intersection": 2454,
+      "jaccard": 0.6011758941695248,
+      "source_a": "CB0766",
+      "source_b": "CB1852",
+      "union": 4082
+    },
+    {
+      "intersection": 2286,
+      "jaccard": 0.6140209508460919,
+      "source_a": "CB0766",
+      "source_b": "CB1920",
+      "union": 3723
+    },
+    {
+      "intersection": 2221,
+      "jaccard": 0.6050122582402615,
+      "source_a": "CB0766",
+      "source_b": "DNp04",
+      "union": 3671
+    },
+    {
+      "intersection": 1482,
+      "jaccard": 0.26955256456893417,
+      "source_a": "CB0766",
+      "source_b": "KCg-m",
+      "union": 5498
+    },
+    {
+      "intersection": 2200,
+      "jaccard": 0.4900868790376476,
+      "source_a": "CB0766",
+      "source_b": "LC10",
+      "union": 4489
+    },
+    {
+      "intersection": 2457,
+      "jaccard": 0.586536166149439,
+      "source_a": "CB0766",
+      "source_b": "LC11",
+      "union": 4189
+    },
+    {
+      "intersection": 2028,
+      "jaccard": 0.6057347670250897,
+      "source_a": "CB0766",
+      "source_b": "LC12",
+      "union": 3348
+    },
+    {
+      "intersection": 2199,
+      "jaccard": 0.589702333065165,
+      "source_a": "CB0766",
+      "source_b": "LC17",
+      "union": 3729
+    },
+    {
+      "intersection": 2307,
+      "jaccard": 0.6578272027373824,
+      "source_a": "CB0766",
+      "source_b": "LC18",
+      "union": 3507
+    },
+    {
+      "intersection": 2381,
+      "jaccard": 0.608640081799591,
+      "source_a": "CB0766",
+      "source_b": "LC4",
+      "union": 3912
+    },
+    {
+      "intersection": 2436,
+      "jaccard": 0.5492671927846674,
+      "source_a": "CB0766",
+      "source_b": "LC9",
+      "union": 4435
+    },
+    {
+      "intersection": 2544,
+      "jaccard": 0.5204582651391162,
+      "source_a": "CB0766",
+      "source_b": "LHAD1g1",
+      "union": 4888
+    },
+    {
+      "intersection": 2265,
+      "jaccard": 0.5018834478174163,
+      "source_a": "CB0766",
+      "source_b": "LLPC1",
+      "union": 4513
+    },
+    {
+      "intersection": 2136,
+      "jaccard": 0.48689309322999774,
+      "source_a": "CB0766",
+      "source_b": "LLPC2",
+      "union": 4387
+    },
+    {
+      "intersection": 2013,
+      "jaccard": 0.4753246753246753,
+      "source_a": "CB0766",
+      "source_b": "LLPC3",
+      "union": 4235
+    },
+    {
+      "intersection": 2075,
+      "jaccard": 0.47899353647276083,
+      "source_a": "CB0766",
+      "source_b": "LPC1",
+      "union": 4332
+    },
+    {
+      "intersection": 2453,
+      "jaccard": 0.5509883198562444,
+      "source_a": "CB0766",
+      "source_b": "LPLC1",
+      "union": 4452
+    },
+    {
+      "intersection": 2486,
+      "jaccard": 0.5467341104024631,
+      "source_a": "CB0766",
+      "source_b": "LPLC2",
+      "union": 4547
+    },
+    {
+      "intersection": 2332,
+      "jaccard": 0.48593456970202126,
+      "source_a": "CB0766",
+      "source_b": "LPLC4",
+      "union": 4799
+    },
+    {
+      "intersection": 1793,
+      "jaccard": 0.5795087265675501,
+      "source_a": "CB0766",
+      "source_b": "LT56",
+      "union": 3094
+    },
+    {
+      "intersection": 1745,
+      "jaccard": 0.5492603084671074,
+      "source_a": "CB0766",
+      "source_b": "LoVC16",
+      "union": 3177
+    },
+    {
+      "intersection": 2149,
+      "jaccard": 0.588283602518478,
+      "source_a": "CB0766",
+      "source_b": "PVLP011",
+      "union": 3653
+    },
+    {
+      "intersection": 2385,
+      "jaccard": 0.6279620853080569,
+      "source_a": "CB0766",
+      "source_b": "PVLP061",
+      "union": 3798
+    },
+    {
+      "intersection": 2082,
+      "jaccard": 0.6707474226804123,
+      "source_a": "CB0766",
+      "source_b": "PVLP069",
+      "union": 3104
+    },
+    {
+      "intersection": 2185,
+      "jaccard": 0.6093139988845511,
+      "source_a": "CB0766",
+      "source_b": "PVLP097",
+      "union": 3586
+    },
+    {
+      "intersection": 2140,
+      "jaccard": 0.6208297069915869,
+      "source_a": "CB0766",
+      "source_b": "PVLP106",
+      "union": 3447
+    },
+    {
+      "intersection": 2375,
+      "jaccard": 0.6722332295499576,
+      "source_a": "CB0766",
+      "source_b": "PVLP111",
+      "union": 3533
+    },
+    {
+      "intersection": 2279,
+      "jaccard": 0.6815191387559809,
+      "source_a": "CB0766",
+      "source_b": "PVLP120",
+      "union": 3344
+    },
+    {
+      "intersection": 2403,
+      "jaccard": 0.6610729023383769,
+      "source_a": "CB0766",
+      "source_b": "PVLP135",
+      "union": 3635
+    },
+    {
+      "intersection": 2321,
+      "jaccard": 0.679052077238151,
+      "source_a": "CB0766",
+      "source_b": "PVLP151",
+      "union": 3418
+    },
+    {
+      "intersection": 1610,
+      "jaccard": 0.40554156171284633,
+      "source_a": "CB0766",
+      "source_b": "TmY14",
+      "union": 3970
+    },
+    {
+      "intersection": 2752,
+      "jaccard": 0.6202389001577643,
+      "source_a": "CB1852",
+      "source_b": "CB1920",
+      "union": 4437
+    },
+    {
+      "intersection": 2625,
+      "jaccard": 0.5902855857881718,
+      "source_a": "CB1852",
+      "source_b": "DNp04",
+      "union": 4447
+    },
+    {
+      "intersection": 2146,
+      "jaccard": 0.3568340538742933,
+      "source_a": "CB1852",
+      "source_b": "KCg-m",
+      "union": 6014
+    },
+    {
+      "intersection": 2832,
+      "jaccard": 0.56223942823109,
+      "source_a": "CB1852",
+      "source_b": "LC10",
+      "union": 5037
+    },
+    {
+      "intersection": 3065,
+      "jaccard": 0.6437723167401807,
+      "source_a": "CB1852",
+      "source_b": "LC11",
+      "union": 4761
+    },
+    {
+      "intersection": 2380,
+      "jaccard": 0.5699233716475096,
+      "source_a": "CB1852",
+      "source_b": "LC12",
+      "union": 4176
+    },
+    {
+      "intersection": 2666,
+      "jaccard": 0.60018009905448,
+      "source_a": "CB1852",
+      "source_b": "LC17",
+      "union": 4442
+    },
+    {
+      "intersection": 2670,
+      "jaccard": 0.6174838112858464,
+      "source_a": "CB1852",
+      "source_b": "LC18",
+      "union": 4324
+    },
+    {
+      "intersection": 2919,
+      "jaccard": 0.6409749670619236,
+      "source_a": "CB1852",
+      "source_b": "LC4",
+      "union": 4554
+    },
+    {
+      "intersection": 3256,
+      "jaccard": 0.6790406673618352,
+      "source_a": "CB1852",
+      "source_b": "LC9",
+      "union": 4795
+    },
+    {
+      "intersection": 3266,
+      "jaccard": 0.6109240553684998,
+      "source_a": "CB1852",
+      "source_b": "LHAD1g1",
+      "union": 5346
+    },
+    {
+      "intersection": 2980,
+      "jaccard": 0.5986339895540378,
+      "source_a": "CB1852",
+      "source_b": "LLPC1",
+      "union": 4978
+    },
+    {
+      "intersection": 2726,
+      "jaccard": 0.5477195097448262,
+      "source_a": "CB1852",
+      "source_b": "LLPC2",
+      "union": 4977
+    },
+    {
+      "intersection": 2593,
+      "jaccard": 0.5362978283350569,
+      "source_a": "CB1852",
+      "source_b": "LLPC3",
+      "union": 4835
+    },
+    {
+      "intersection": 2635,
+      "jaccard": 0.532108239095315,
+      "source_a": "CB1852",
+      "source_b": "LPC1",
+      "union": 4952
+    },
+    {
+      "intersection": 3149,
+      "jaccard": 0.6379659643435981,
+      "source_a": "CB1852",
+      "source_b": "LPLC1",
+      "union": 4936
+    },
+    {
+      "intersection": 3235,
+      "jaccard": 0.6498593812776216,
+      "source_a": "CB1852",
+      "source_b": "LPLC2",
+      "union": 4978
+    },
+    {
+      "intersection": 3089,
+      "jaccard": 0.5915358100344695,
+      "source_a": "CB1852",
+      "source_b": "LPLC4",
+      "union": 5222
+    },
+    {
+      "intersection": 2004,
+      "jaccard": 0.4932316022643367,
+      "source_a": "CB1852",
+      "source_b": "LT56",
+      "union": 4063
+    },
+    {
+      "intersection": 1946,
+      "jaccard": 0.46823869104908566,
+      "source_a": "CB1852",
+      "source_b": "LoVC16",
+      "union": 4156
+    },
+    {
+      "intersection": 2593,
+      "jaccard": 0.5907951697425382,
+      "source_a": "CB1852",
+      "source_b": "PVLP011",
+      "union": 4389
+    },
+    {
+      "intersection": 2964,
+      "jaccard": 0.6737894976130939,
+      "source_a": "CB1852",
+      "source_b": "PVLP061",
+      "union": 4399
+    },
+    {
+      "intersection": 2324,
+      "jaccard": 0.5749628896585849,
+      "source_a": "CB1852",
+      "source_b": "PVLP069",
+      "union": 4042
+    },
+    {
+      "intersection": 2551,
+      "jaccard": 0.5797727272727272,
+      "source_a": "CB1852",
+      "source_b": "PVLP097",
+      "union": 4400
+    },
+    {
+      "intersection": 2471,
+      "jaccard": 0.5751862197392924,
+      "source_a": "CB1852",
+      "source_b": "PVLP106",
+      "union": 4296
+    },
+    {
+      "intersection": 2789,
+      "jaccard": 0.6487555245405908,
+      "source_a": "CB1852",
+      "source_b": "PVLP111",
+      "union": 4299
+    },
+    {
+      "intersection": 2602,
+      "jaccard": 0.6193763389669127,
+      "source_a": "CB1852",
+      "source_b": "PVLP120",
+      "union": 4201
+    },
+    {
+      "intersection": 2781,
+      "jaccard": 0.6267748478701826,
+      "source_a": "CB1852",
+      "source_b": "PVLP135",
+      "union": 4437
+    },
+    {
+      "intersection": 2663,
+      "jaccard": 0.6257048872180451,
+      "source_a": "CB1852",
+      "source_b": "PVLP151",
+      "union": 4256
+    },
+    {
+      "intersection": 2064,
+      "jaccard": 0.4395229982964225,
+      "source_a": "CB1852",
+      "source_b": "TmY14",
+      "union": 4696
+    },
+    {
+      "intersection": 2370,
+      "jaccard": 0.5676646706586826,
+      "source_a": "CB1920",
+      "source_b": "DNp04",
+      "union": 4175
+    },
+    {
+      "intersection": 1915,
+      "jaccard": 0.3349073102483386,
+      "source_a": "CB1920",
+      "source_b": "KCg-m",
+      "union": 5718
+    },
+    {
+      "intersection": 2443,
+      "jaccard": 0.49867319861196163,
+      "source_a": "CB1920",
+      "source_b": "LC10",
+      "union": 4899
+    },
+    {
+      "intersection": 2776,
+      "jaccard": 0.6137519345567102,
+      "source_a": "CB1920",
+      "source_b": "LC11",
+      "union": 4523
+    },
+    {
+      "intersection": 2163,
+      "jaccard": 0.5594930160372478,
+      "source_a": "CB1920",
+      "source_b": "LC12",
+      "union": 3866
+    },
+    {
+      "intersection": 2471,
+      "jaccard": 0.6012165450121655,
+      "source_a": "CB1920",
+      "source_b": "LC17",
+      "union": 4110
+    },
+    {
+      "intersection": 2404,
+      "jaccard": 0.5916810238739847,
+      "source_a": "CB1920",
+      "source_b": "LC18",
+      "union": 4063
+    },
+    {
+      "intersection": 2526,
+      "jaccard": 0.5714932126696832,
+      "source_a": "CB1920",
+      "source_b": "LC4",
+      "union": 4420
+    },
+    {
+      "intersection": 2694,
+      "jaccard": 0.5577639751552795,
+      "source_a": "CB1920",
+      "source_b": "LC9",
+      "union": 4830
+    },
+    {
+      "intersection": 3041,
+      "jaccard": 0.6028945281522601,
+      "source_a": "CB1920",
+      "source_b": "LHAD1g1",
+      "union": 5044
+    },
+    {
+      "intersection": 2452,
+      "jaccard": 0.4924683671419964,
+      "source_a": "CB1920",
+      "source_b": "LLPC1",
+      "union": 4979
+    },
+    {
+      "intersection": 2289,
+      "jaccard": 0.46838551258440764,
+      "source_a": "CB1920",
+      "source_b": "LLPC2",
+      "union": 4887
+    },
+    {
+      "intersection": 2189,
+      "jaccard": 0.4645585738539898,
+      "source_a": "CB1920",
+      "source_b": "LLPC3",
+      "union": 4712
+    },
+    {
+      "intersection": 2247,
+      "jaccard": 0.4668605859131519,
+      "source_a": "CB1920",
+      "source_b": "LPC1",
+      "union": 4813
+    },
+    {
+      "intersection": 2744,
+      "jaccard": 0.5700041545492314,
+      "source_a": "CB1920",
+      "source_b": "LPLC1",
+      "union": 4814
+    },
+    {
+      "intersection": 2761,
+      "jaccard": 0.5606091370558376,
+      "source_a": "CB1920",
+      "source_b": "LPLC2",
+      "union": 4925
+    },
+    {
+      "intersection": 2610,
+      "jaccard": 0.5044453034402783,
+      "source_a": "CB1920",
+      "source_b": "LPLC4",
+      "union": 5174
+    },
+    {
+      "intersection": 1768,
+      "jaccard": 0.4687168610816543,
+      "source_a": "CB1920",
+      "source_b": "LT56",
+      "union": 3772
+    },
+    {
+      "intersection": 1838,
+      "jaccard": 0.49183837302649186,
+      "source_a": "CB1920",
+      "source_b": "LoVC16",
+      "union": 3737
+    },
+    {
+      "intersection": 2320,
+      "jaccard": 0.5610640870616687,
+      "source_a": "CB1920",
+      "source_b": "PVLP011",
+      "union": 4135
+    },
+    {
+      "intersection": 2907,
+      "jaccard": 0.7398829218630695,
+      "source_a": "CB1920",
+      "source_b": "PVLP061",
+      "union": 3929
+    },
+    {
+      "intersection": 2231,
+      "jaccard": 0.6183481152993349,
+      "source_a": "CB1920",
+      "source_b": "PVLP069",
+      "union": 3608
+    },
+    {
+      "intersection": 2771,
+      "jaccard": 0.7585546126471393,
+      "source_a": "CB1920",
+      "source_b": "PVLP097",
+      "union": 3653
+    },
+    {
+      "intersection": 2651,
+      "jaccard": 0.7386458623572025,
+      "source_a": "CB1920",
+      "source_b": "PVLP106",
+      "union": 3589
+    },
+    {
+      "intersection": 2697,
+      "jaccard": 0.6979813664596274,
+      "source_a": "CB1920",
+      "source_b": "PVLP111",
+      "union": 3864
+    },
+    {
+      "intersection": 2495,
+      "jaccard": 0.6598783390637397,
+      "source_a": "CB1920",
+      "source_b": "PVLP120",
+      "union": 3781
+    },
+    {
+      "intersection": 2924,
+      "jaccard": 0.7762144942925405,
+      "source_a": "CB1920",
+      "source_b": "PVLP135",
+      "union": 3767
+    },
+    {
+      "intersection": 2441,
+      "jaccard": 0.6178182738547203,
+      "source_a": "CB1920",
+      "source_b": "PVLP151",
+      "union": 3951
+    },
+    {
+      "intersection": 1756,
+      "jaccard": 0.39222693768148315,
+      "source_a": "CB1920",
+      "source_b": "TmY14",
+      "union": 4477
+    },
+    {
+      "intersection": 1452,
+      "jaccard": 0.23944591029023746,
+      "source_a": "DNp04",
+      "source_b": "KCg-m",
+      "union": 6064
+    },
+    {
+      "intersection": 2256,
+      "jaccard": 0.4540148923324613,
+      "source_a": "DNp04",
+      "source_b": "LC10",
+      "union": 4969
+    },
+    {
+      "intersection": 2660,
+      "jaccard": 0.5882352941176471,
+      "source_a": "DNp04",
+      "source_b": "LC11",
+      "union": 4522
+    },
+    {
+      "intersection": 2082,
+      "jaccard": 0.5436031331592689,
+      "source_a": "DNp04",
+      "source_b": "LC12",
+      "union": 3830
+    },
+    {
+      "intersection": 2277,
+      "jaccard": 0.5438261284929544,
+      "source_a": "DNp04",
+      "source_b": "LC17",
+      "union": 4187
+    },
+    {
+      "intersection": 2420,
+      "jaccard": 0.6157760814249363,
+      "source_a": "DNp04",
+      "source_b": "LC18",
+      "union": 3930
+    },
+    {
+      "intersection": 2646,
+      "jaccard": 0.6325603633755678,
+      "source_a": "DNp04",
+      "source_b": "LC4",
+      "union": 4183
+    },
+    {
+      "intersection": 2622,
+      "jaccard": 0.5479623824451411,
+      "source_a": "DNp04",
+      "source_b": "LC9",
+      "union": 4785
+    },
+    {
+      "intersection": 2746,
+      "jaccard": 0.5258521639218691,
+      "source_a": "DNp04",
+      "source_b": "LHAD1g1",
+      "union": 5222
+    },
+    {
+      "intersection": 2546,
+      "jaccard": 0.5339765100671141,
+      "source_a": "DNp04",
+      "source_b": "LLPC1",
+      "union": 4768
+    },
+    {
+      "intersection": 2326,
+      "jaccard": 0.4914430593703782,
+      "source_a": "DNp04",
+      "source_b": "LLPC2",
+      "union": 4733
+    },
+    {
+      "intersection": 2198,
+      "jaccard": 0.4792847797645007,
+      "source_a": "DNp04",
+      "source_b": "LLPC3",
+      "union": 4586
+    },
+    {
+      "intersection": 2311,
+      "jaccard": 0.49892055267702934,
+      "source_a": "DNp04",
+      "source_b": "LPC1",
+      "union": 4632
+    },
+    {
+      "intersection": 2683,
+      "jaccard": 0.5638923917612442,
+      "source_a": "DNp04",
+      "source_b": "LPLC1",
+      "union": 4758
+    },
+    {
+      "intersection": 2835,
+      "jaccard": 0.5988593155893536,
+      "source_a": "DNp04",
+      "source_b": "LPLC2",
+      "union": 4734
+    },
+    {
+      "intersection": 2638,
+      "jaccard": 0.5245575661165242,
+      "source_a": "DNp04",
+      "source_b": "LPLC4",
+      "union": 5029
+    },
+    {
+      "intersection": 1795,
+      "jaccard": 0.4947629547960309,
+      "source_a": "DNp04",
+      "source_b": "LT56",
+      "union": 3628
+    },
+    {
+      "intersection": 1809,
+      "jaccard": 0.49575226089339547,
+      "source_a": "DNp04",
+      "source_b": "LoVC16",
+      "union": 3649
+    },
+    {
+      "intersection": 2414,
+      "jaccard": 0.6151885830784913,
+      "source_a": "DNp04",
+      "source_b": "PVLP011",
+      "union": 3924
+    },
+    {
+      "intersection": 2466,
+      "jaccard": 0.5798260051728192,
+      "source_a": "DNp04",
+      "source_b": "PVLP061",
+      "union": 4253
+    },
+    {
+      "intersection": 2077,
+      "jaccard": 0.5698216735253773,
+      "source_a": "DNp04",
+      "source_b": "PVLP069",
+      "union": 3645
+    },
+    {
+      "intersection": 2323,
+      "jaccard": 0.5830823293172691,
+      "source_a": "DNp04",
+      "source_b": "PVLP097",
+      "union": 3984
+    },
+    {
+      "intersection": 2284,
+      "jaccard": 0.5949466006772597,
+      "source_a": "DNp04",
+      "source_b": "PVLP106",
+      "union": 3839
+    },
+    {
+      "intersection": 2467,
+      "jaccard": 0.6203168217249183,
+      "source_a": "DNp04",
+      "source_b": "PVLP111",
+      "union": 3977
+    },
+    {
+      "intersection": 2425,
+      "jaccard": 0.649437600428495,
+      "source_a": "DNp04",
+      "source_b": "PVLP120",
+      "union": 3734
+    },
+    {
+      "intersection": 2444,
+      "jaccard": 0.5917675544794189,
+      "source_a": "DNp04",
+      "source_b": "PVLP135",
+      "union": 4130
+    },
+    {
+      "intersection": 2601,
+      "jaccard": 0.7079477408818726,
+      "source_a": "DNp04",
+      "source_b": "PVLP151",
+      "union": 3674
+    },
+    {
+      "intersection": 1866,
+      "jaccard": 0.4390588235294118,
+      "source_a": "DNp04",
+      "source_b": "TmY14",
+      "union": 4250
+    },
+    {
+      "intersection": 2332,
+      "jaccard": 0.3899013542885805,
+      "source_a": "KCg-m",
+      "source_b": "LC10",
+      "union": 5981
+    },
+    {
+      "intersection": 1988,
+      "jaccard": 0.31645972620184654,
+      "source_a": "KCg-m",
+      "source_b": "LC11",
+      "union": 6282
+    },
+    {
+      "intersection": 1394,
+      "jaccard": 0.24866214769889405,
+      "source_a": "KCg-m",
+      "source_b": "LC12",
+      "union": 5606
+    },
+    {
+      "intersection": 1722,
+      "jaccard": 0.29536878216123497,
+      "source_a": "KCg-m",
+      "source_b": "LC17",
+      "union": 5830
+    },
+    {
+      "intersection": 1557,
+      "jaccard": 0.2647508927053222,
+      "source_a": "KCg-m",
+      "source_b": "LC18",
+      "union": 5881
+    },
+    {
+      "intersection": 1744,
+      "jaccard": 0.28252065446298397,
+      "source_a": "KCg-m",
+      "source_b": "LC4",
+      "union": 6173
+    },
+    {
+      "intersection": 2239,
+      "jaccard": 0.35789641943734013,
+      "source_a": "KCg-m",
+      "source_b": "LC9",
+      "union": 6256
+    },
+    {
+      "intersection": 3025,
+      "jaccard": 0.5015751948267285,
+      "source_a": "KCg-m",
+      "source_b": "LHAD1g1",
+      "union": 6031
+    },
+    {
+      "intersection": 1941,
+      "jaccard": 0.30041789196718777,
+      "source_a": "KCg-m",
+      "source_b": "LLPC1",
+      "union": 6461
+    },
+    {
+      "intersection": 1849,
+      "jaccard": 0.293585265163544,
+      "source_a": "KCg-m",
+      "source_b": "LLPC2",
+      "union": 6298
+    },
+    {
+      "intersection": 1743,
+      "jaccard": 0.2843857072931963,
+      "source_a": "KCg-m",
+      "source_b": "LLPC3",
+      "union": 6129
+    },
+    {
+      "intersection": 1797,
+      "jaccard": 0.2882579403272377,
+      "source_a": "KCg-m",
+      "source_b": "LPC1",
+      "union": 6234
+    },
+    {
+      "intersection": 2126,
+      "jaccard": 0.33203186006559426,
+      "source_a": "KCg-m",
+      "source_b": "LPLC1",
+      "union": 6403
+    },
+    {
+      "intersection": 2137,
+      "jaccard": 0.327760736196319,
+      "source_a": "KCg-m",
+      "source_b": "LPLC2",
+      "union": 6520
+    },
+    {
+      "intersection": 2223,
+      "jaccard": 0.34032455603184325,
+      "source_a": "KCg-m",
+      "source_b": "LPLC4",
+      "union": 6532
+    },
+    {
+      "intersection": 1140,
+      "jaccard": 0.2122509774716068,
+      "source_a": "KCg-m",
+      "source_b": "LT56",
+      "union": 5371
+    },
+    {
+      "intersection": 1023,
+      "jaccard": 0.18522542096686584,
+      "source_a": "KCg-m",
+      "source_b": "LoVC16",
+      "union": 5523
+    },
+    {
+      "intersection": 1483,
+      "jaccard": 0.24953727073868417,
+      "source_a": "KCg-m",
+      "source_b": "PVLP011",
+      "union": 5943
+    },
+    {
+      "intersection": 1987,
+      "jaccard": 0.3414089347079038,
+      "source_a": "KCg-m",
+      "source_b": "PVLP061",
+      "union": 5820
+    },
+    {
+      "intersection": 1430,
+      "jaccard": 0.26579925650557623,
+      "source_a": "KCg-m",
+      "source_b": "PVLP069",
+      "union": 5380
+    },
+    {
+      "intersection": 1603,
+      "jaccard": 0.2767610497237569,
+      "source_a": "KCg-m",
+      "source_b": "PVLP097",
+      "union": 5792
+    },
+    {
+      "intersection": 1473,
+      "jaccard": 0.25670965493203207,
+      "source_a": "KCg-m",
+      "source_b": "PVLP106",
+      "union": 5738
+    },
+    {
+      "intersection": 1789,
+      "jaccard": 0.311509663938708,
+      "source_a": "KCg-m",
+      "source_b": "PVLP111",
+      "union": 5743
+    },
+    {
+      "intersection": 1516,
+      "jaccard": 0.2645262606874891,
+      "source_a": "KCg-m",
+      "source_b": "PVLP120",
+      "union": 5731
+    },
+    {
+      "intersection": 1864,
+      "jaccard": 0.3214901690238013,
+      "source_a": "KCg-m",
+      "source_b": "PVLP135",
+      "union": 5798
+    },
+    {
+      "intersection": 1503,
+      "jaccard": 0.25648464163822526,
+      "source_a": "KCg-m",
+      "source_b": "PVLP151",
+      "union": 5860
+    },
+    {
+      "intersection": 1174,
+      "jaccard": 0.1946932006633499,
+      "source_a": "KCg-m",
+      "source_b": "TmY14",
+      "union": 6030
+    },
+    {
+      "intersection": 3199,
+      "jaccard": 0.6692468619246862,
+      "source_a": "LC10",
+      "source_b": "LC11",
+      "union": 4780
+    },
+    {
+      "intersection": 2394,
+      "jaccard": 0.5548088064889919,
+      "source_a": "LC10",
+      "source_b": "LC12",
+      "union": 4315
+    },
+    {
+      "intersection": 2886,
+      "jaccard": 0.6596571428571428,
+      "source_a": "LC10",
+      "source_b": "LC17",
+      "union": 4375
+    },
+    {
+      "intersection": 2603,
+      "jaccard": 0.5728433098591549,
+      "source_a": "LC10",
+      "source_b": "LC18",
+      "union": 4544
+    },
+    {
+      "intersection": 2912,
+      "jaccard": 0.6177344081459483,
+      "source_a": "LC10",
+      "source_b": "LC4",
+      "union": 4714
+    },
+    {
+      "intersection": 3436,
+      "jaccard": 0.7206375838926175,
+      "source_a": "LC10",
+      "source_b": "LC9",
+      "union": 4768
+    },
+    {
+      "intersection": 2916,
+      "jaccard": 0.49854676012993676,
+      "source_a": "LC10",
+      "source_b": "LHAD1g1",
+      "union": 5849
+    },
+    {
+      "intersection": 3279,
+      "jaccard": 0.6786009933774835,
+      "source_a": "LC10",
+      "source_b": "LLPC1",
+      "union": 4832
+    },
+    {
+      "intersection": 3170,
+      "jaccard": 0.6764831412718737,
+      "source_a": "LC10",
+      "source_b": "LLPC2",
+      "union": 4686
+    },
+    {
+      "intersection": 3072,
+      "jaccard": 0.6813040585495675,
+      "source_a": "LC10",
+      "source_b": "LLPC3",
+      "union": 4509
+    },
+    {
+      "intersection": 2960,
+      "jaccard": 0.6192468619246861,
+      "source_a": "LC10",
+      "source_b": "LPC1",
+      "union": 4780
+    },
+    {
+      "intersection": 3374,
+      "jaccard": 0.6936677631578947,
+      "source_a": "LC10",
+      "source_b": "LPLC1",
+      "union": 4864
+    },
+    {
+      "intersection": 3346,
+      "jaccard": 0.6665338645418327,
+      "source_a": "LC10",
+      "source_b": "LPLC2",
+      "union": 5020
+    },
+    {
+      "intersection": 3530,
+      "jaccard": 0.7154438589379813,
+      "source_a": "LC10",
+      "source_b": "LPLC4",
+      "union": 4934
+    },
+    {
+      "intersection": 2087,
+      "jaccard": 0.5049600774255988,
+      "source_a": "LC10",
+      "source_b": "LT56",
+      "union": 4133
+    },
+    {
+      "intersection": 1910,
+      "jaccard": 0.43958573072497126,
+      "source_a": "LC10",
+      "source_b": "LoVC16",
+      "union": 4345
+    },
+    {
+      "intersection": 2490,
+      "jaccard": 0.5360602798708288,
+      "source_a": "LC10",
+      "source_b": "PVLP011",
+      "union": 4645
+    },
+    {
+      "intersection": 2563,
+      "jaccard": 0.5174641631334544,
+      "source_a": "LC10",
+      "source_b": "PVLP061",
+      "union": 4953
+    },
+    {
+      "intersection": 1944,
+      "jaccard": 0.4249180327868852,
+      "source_a": "LC10",
+      "source_b": "PVLP069",
+      "union": 4575
+    },
+    {
+      "intersection": 2303,
+      "jaccard": 0.47969173088939804,
+      "source_a": "LC10",
+      "source_b": "PVLP097",
+      "union": 4801
+    },
+    {
+      "intersection": 2177,
+      "jaccard": 0.4589921990301497,
+      "source_a": "LC10",
+      "source_b": "PVLP106",
+      "union": 4743
+    },
+    {
+      "intersection": 2548,
+      "jaccard": 0.5429362880886427,
+      "source_a": "LC10",
+      "source_b": "PVLP111",
+      "union": 4693
+    },
+    {
+      "intersection": 2311,
+      "jaccard": 0.497524219590958,
+      "source_a": "LC10",
+      "source_b": "PVLP120",
+      "union": 4645
+    },
+    {
+      "intersection": 2540,
+      "jaccard": 0.5257710618919479,
+      "source_a": "LC10",
+      "source_b": "PVLP135",
+      "union": 4831
+    },
+    {
+      "intersection": 2322,
+      "jaccard": 0.4888421052631579,
+      "source_a": "LC10",
+      "source_b": "PVLP151",
+      "union": 4750
+    },
+    {
+      "intersection": 2310,
+      "jaccard": 0.5018466217684119,
+      "source_a": "LC10",
+      "source_b": "TmY14",
+      "union": 4603
+    },
+    {
+      "intersection": 2644,
+      "jaccard": 0.6573843858776728,
+      "source_a": "LC11",
+      "source_b": "LC12",
+      "union": 4022
+    },
+    {
+      "intersection": 3106,
+      "jaccard": 0.7553501945525292,
+      "source_a": "LC11",
+      "source_b": "LC17",
+      "union": 4112
+    },
+    {
+      "intersection": 3036,
+      "jaccard": 0.7463126843657817,
+      "source_a": "LC11",
+      "source_b": "LC18",
+      "union": 4068
+    },
+    {
+      "intersection": 3239,
+      "jaccard": 0.7456261510128913,
+      "source_a": "LC11",
+      "source_b": "LC4",
+      "union": 4344
+    },
+    {
+      "intersection": 3507,
+      "jaccard": 0.75354533734422,
+      "source_a": "LC11",
+      "source_b": "LC9",
+      "union": 4654
+    },
+    {
+      "intersection": 3061,
+      "jaccard": 0.5407171877760113,
+      "source_a": "LC11",
+      "source_b": "LHAD1g1",
+      "union": 5661
+    },
+    {
+      "intersection": 3413,
+      "jaccard": 0.7331901181525242,
+      "source_a": "LC11",
+      "source_b": "LLPC1",
+      "union": 4655
+    },
+    {
+      "intersection": 3228,
+      "jaccard": 0.7040348964013086,
+      "source_a": "LC11",
+      "source_b": "LLPC2",
+      "union": 4585
+    },
+    {
+      "intersection": 3140,
+      "jaccard": 0.7139608913142338,
+      "source_a": "LC11",
+      "source_b": "LLPC3",
+      "union": 4398
+    },
+    {
+      "intersection": 3043,
+      "jaccard": 0.6538461538461539,
+      "source_a": "LC11",
+      "source_b": "LPC1",
+      "union": 4654
+    },
+    {
+      "intersection": 3731,
+      "jaccard": 0.8357974910394266,
+      "source_a": "LC11",
+      "source_b": "LPLC1",
+      "union": 4464
+    },
+    {
+      "intersection": 3743,
+      "jaccard": 0.8172489082969432,
+      "source_a": "LC11",
+      "source_b": "LPLC2",
+      "union": 4580
+    },
+    {
+      "intersection": 3587,
+      "jaccard": 0.7420355812991312,
+      "source_a": "LC11",
+      "source_b": "LPLC4",
+      "union": 4834
+    },
+    {
+      "intersection": 2206,
+      "jaccard": 0.5555275749181566,
+      "source_a": "LC11",
+      "source_b": "LT56",
+      "union": 3971
+    },
+    {
+      "intersection": 2212,
+      "jaccard": 0.553,
+      "source_a": "LC11",
+      "source_b": "LoVC16",
+      "union": 4000
+    },
+    {
+      "intersection": 2885,
+      "jaccard": 0.6857618255288804,
+      "source_a": "LC11",
+      "source_b": "PVLP011",
+      "union": 4207
+    },
+    {
+      "intersection": 2933,
+      "jaccard": 0.6460352422907489,
+      "source_a": "LC11",
+      "source_b": "PVLP061",
+      "union": 4540
+    },
+    {
+      "intersection": 2248,
+      "jaccard": 0.5316934720908231,
+      "source_a": "LC11",
+      "source_b": "PVLP069",
+      "union": 4228
+    },
+    {
+      "intersection": 2743,
+      "jaccard": 0.6352477999073646,
+      "source_a": "LC11",
+      "source_b": "PVLP097",
+      "union": 4318
+    },
+    {
+      "intersection": 2622,
+      "jaccard": 0.6162162162162163,
+      "source_a": "LC11",
+      "source_b": "PVLP106",
+      "union": 4255
+    },
+    {
+      "intersection": 2907,
+      "jaccard": 0.6774644604987182,
+      "source_a": "LC11",
+      "source_b": "PVLP111",
+      "union": 4291
+    },
+    {
+      "intersection": 2737,
+      "jaccard": 0.655411877394636,
+      "source_a": "LC11",
+      "source_b": "PVLP120",
+      "union": 4176
+    },
+    {
+      "intersection": 2875,
+      "jaccard": 0.6456321580956659,
+      "source_a": "LC11",
+      "source_b": "PVLP135",
+      "union": 4453
+    },
+    {
+      "intersection": 2750,
+      "jaccard": 0.6426735218508998,
+      "source_a": "LC11",
+      "source_b": "PVLP151",
+      "union": 4279
+    },
+    {
+      "intersection": 2508,
+      "jaccard": 0.5749656121045392,
+      "source_a": "LC11",
+      "source_b": "TmY14",
+      "union": 4362
+    },
+    {
+      "intersection": 2567,
+      "jaccard": 0.759242827565809,
+      "source_a": "LC12",
+      "source_b": "LC17",
+      "union": 3381
+    },
+    {
+      "intersection": 2493,
+      "jaccard": 0.746183777312182,
+      "source_a": "LC12",
+      "source_b": "LC18",
+      "union": 3341
+    },
+    {
+      "intersection": 2557,
+      "jaccard": 0.6807774227902024,
+      "source_a": "LC12",
+      "source_b": "LC4",
+      "union": 3756
+    },
+    {
+      "intersection": 2546,
+      "jaccard": 0.5859608745684695,
+      "source_a": "LC12",
+      "source_b": "LC9",
+      "union": 4345
+    },
+    {
+      "intersection": 2335,
+      "jaccard": 0.45632206370920464,
+      "source_a": "LC12",
+      "source_b": "LHAD1g1",
+      "union": 5117
+    },
+    {
+      "intersection": 2444,
+      "jaccard": 0.5613229214515388,
+      "source_a": "LC12",
+      "source_b": "LLPC1",
+      "union": 4354
+    },
+    {
+      "intersection": 2341,
+      "jaccard": 0.5571156592099,
+      "source_a": "LC12",
+      "source_b": "LLPC2",
+      "union": 4202
+    },
+    {
+      "intersection": 2319,
+      "jaccard": 0.5872372752595594,
+      "source_a": "LC12",
+      "source_b": "LLPC3",
+      "union": 3949
+    },
+    {
+      "intersection": 2183,
+      "jaccard": 0.514373232799246,
+      "source_a": "LC12",
+      "source_b": "LPC1",
+      "union": 4244
+    },
+    {
+      "intersection": 2630,
+      "jaccard": 0.6123399301513388,
+      "source_a": "LC12",
+      "source_b": "LPLC1",
+      "union": 4295
+    },
+    {
+      "intersection": 2653,
+      "jaccard": 0.6029545454545454,
+      "source_a": "LC12",
+      "source_b": "LPLC2",
+      "union": 4400
+    },
+    {
+      "intersection": 2506,
+      "jaccard": 0.5395048439181916,
+      "source_a": "LC12",
+      "source_b": "LPLC4",
+      "union": 4645
+    },
+    {
+      "intersection": 2080,
+      "jaccard": 0.7357622921825256,
+      "source_a": "LC12",
+      "source_b": "LT56",
+      "union": 2827
+    },
+    {
+      "intersection": 2041,
+      "jaccard": 0.7035504998276456,
+      "source_a": "LC12",
+      "source_b": "LoVC16",
+      "union": 2901
+    },
+    {
+      "intersection": 2204,
+      "jaccard": 0.6091763405196241,
+      "source_a": "LC12",
+      "source_b": "PVLP011",
+      "union": 3618
+    },
+    {
+      "intersection": 2240,
+      "jaccard": 0.5652283623517538,
+      "source_a": "LC12",
+      "source_b": "PVLP061",
+      "union": 3963
+    },
+    {
+      "intersection": 1858,
+      "jaccard": 0.554958183990442,
+      "source_a": "LC12",
+      "source_b": "PVLP069",
+      "union": 3348
+    },
+    {
+      "intersection": 2137,
+      "jaccard": 0.5848385331143952,
+      "source_a": "LC12",
+      "source_b": "PVLP097",
+      "union": 3654
+    },
+    {
+      "intersection": 2065,
+      "jaccard": 0.5830039525691699,
+      "source_a": "LC12",
+      "source_b": "PVLP106",
+      "union": 3542
+    },
+    {
+      "intersection": 2311,
+      "jaccard": 0.6389272878075754,
+      "source_a": "LC12",
+      "source_b": "PVLP111",
+      "union": 3617
+    },
+    {
+      "intersection": 2202,
+      "jaccard": 0.6399302528334786,
+      "source_a": "LC12",
+      "source_b": "PVLP120",
+      "union": 3441
+    },
+    {
+      "intersection": 2226,
+      "jaccard": 0.5808977035490606,
+      "source_a": "LC12",
+      "source_b": "PVLP135",
+      "union": 3832
+    },
+    {
+      "intersection": 2185,
+      "jaccard": 0.6113598209289312,
+      "source_a": "LC12",
+      "source_b": "PVLP151",
+      "union": 3574
+    },
+    {
+      "intersection": 1831,
+      "jaccard": 0.4858052533828602,
+      "source_a": "LC12",
+      "source_b": "TmY14",
+      "union": 3769
+    },
+    {
+      "intersection": 2695,
+      "jaccard": 0.7301544296938499,
+      "source_a": "LC17",
+      "source_b": "LC18",
+      "union": 3691
+    },
+    {
+      "intersection": 2909,
+      "jaccard": 0.7353387259858443,
+      "source_a": "LC17",
+      "source_b": "LC4",
+      "union": 3956
+    },
+    {
+      "intersection": 3101,
+      "jaccard": 0.7141870105941962,
+      "source_a": "LC17",
+      "source_b": "LC9",
+      "union": 4342
+    },
+    {
+      "intersection": 2624,
+      "jaccard": 0.4877323420074349,
+      "source_a": "LC17",
+      "source_b": "LHAD1g1",
+      "union": 5380
+    },
+    {
+      "intersection": 2877,
+      "jaccard": 0.6431924882629108,
+      "source_a": "LC17",
+      "source_b": "LLPC1",
+      "union": 4473
+    },
+    {
+      "intersection": 2726,
+      "jaccard": 0.6239414053559167,
+      "source_a": "LC17",
+      "source_b": "LLPC2",
+      "union": 4369
+    },
+    {
+      "intersection": 2671,
+      "jaccard": 0.6437695830320559,
+      "source_a": "LC17",
+      "source_b": "LLPC3",
+      "union": 4149
+    },
+    {
+      "intersection": 2555,
+      "jaccard": 0.5775316455696202,
+      "source_a": "LC17",
+      "source_b": "LPC1",
+      "union": 4424
+    },
+    {
+      "intersection": 3154,
+      "jaccard": 0.7295859356928059,
+      "source_a": "LC17",
+      "source_b": "LPLC1",
+      "union": 4323
+    },
+    {
+      "intersection": 3200,
+      "jaccard": 0.7264472190692395,
+      "source_a": "LC17",
+      "source_b": "LPLC2",
+      "union": 4405
+    },
+    {
+      "intersection": 3051,
+      "jaccard": 0.6558469475494411,
+      "source_a": "LC17",
+      "source_b": "LPLC4",
+      "union": 4652
+    },
+    {
+      "intersection": 2170,
+      "jaccard": 0.6597750076010945,
+      "source_a": "LC17",
+      "source_b": "LT56",
+      "union": 3289
+    },
+    {
+      "intersection": 2117,
+      "jaccard": 0.6268877702102458,
+      "source_a": "LC17",
+      "source_b": "LoVC16",
+      "union": 3377
+    },
+    {
+      "intersection": 2499,
+      "jaccard": 0.6449032258064517,
+      "source_a": "LC17",
+      "source_b": "PVLP011",
+      "union": 3875
+    },
+    {
+      "intersection": 2556,
+      "jaccard": 0.6087163610383425,
+      "source_a": "LC17",
+      "source_b": "PVLP061",
+      "union": 4199
+    },
+    {
+      "intersection": 2032,
+      "jaccard": 0.5453569511540526,
+      "source_a": "LC17",
+      "source_b": "PVLP069",
+      "union": 3726
+    },
+    {
+      "intersection": 2413,
+      "jaccard": 0.6139949109414758,
+      "source_a": "LC17",
+      "source_b": "PVLP097",
+      "union": 3930
+    },
+    {
+      "intersection": 2305,
+      "jaccard": 0.5980799169693825,
+      "source_a": "LC17",
+      "source_b": "PVLP106",
+      "union": 3854
+    },
+    {
+      "intersection": 2553,
+      "jaccard": 0.6501145912910619,
+      "source_a": "LC17",
+      "source_b": "PVLP111",
+      "union": 3927
+    },
+    {
+      "intersection": 2387,
+      "jaccard": 0.6268382352941176,
+      "source_a": "LC17",
+      "source_b": "PVLP120",
+      "union": 3808
+    },
+    {
+      "intersection": 2534,
+      "jaccard": 0.6216879293424926,
+      "source_a": "LC17",
+      "source_b": "PVLP135",
+      "union": 4076
+    },
+    {
+      "intersection": 2412,
+      "jaccard": 0.6186201590151321,
+      "source_a": "LC17",
+      "source_b": "PVLP151",
+      "union": 3899
+    },
+    {
+      "intersection": 2096,
+      "jaccard": 0.5167652859960552,
+      "source_a": "LC17",
+      "source_b": "TmY14",
+      "union": 4056
+    },
+    {
+      "intersection": 2879,
+      "jaccard": 0.7435433884297521,
+      "source_a": "LC18",
+      "source_b": "LC4",
+      "union": 3872
+    },
+    {
+      "intersection": 2892,
+      "jaccard": 0.651791751183232,
+      "source_a": "LC18",
+      "source_b": "LC9",
+      "union": 4437
+    },
+    {
+      "intersection": 2651,
+      "jaccard": 0.5060125978240122,
+      "source_a": "LC18",
+      "source_b": "LHAD1g1",
+      "union": 5239
+    },
+    {
+      "intersection": 2787,
+      "jaccard": 0.6264329062710722,
+      "source_a": "LC18",
+      "source_b": "LLPC1",
+      "union": 4449
+    },
+    {
+      "intersection": 2630,
+      "jaccard": 0.6044587451160652,
+      "source_a": "LC18",
+      "source_b": "LLPC2",
+      "union": 4351
+    },
+    {
+      "intersection": 2547,
+      "jaccard": 0.6124068285645587,
+      "source_a": "LC18",
+      "source_b": "LLPC3",
+      "union": 4159
+    },
+    {
+      "intersection": 2486,
+      "jaccard": 0.5677095227220826,
+      "source_a": "LC18",
+      "source_b": "LPC1",
+      "union": 4379
+    },
+    {
+      "intersection": 2983,
+      "jaccard": 0.6810502283105023,
+      "source_a": "LC18",
+      "source_b": "LPLC1",
+      "union": 4380
+    },
+    {
+      "intersection": 3039,
+      "jaccard": 0.6826145552560647,
+      "source_a": "LC18",
+      "source_b": "LPLC2",
+      "union": 4452
+    },
+    {
+      "intersection": 2845,
+      "jaccard": 0.5997048903878583,
+      "source_a": "LC18",
+      "source_b": "LPLC4",
+      "union": 4744
+    },
+    {
+      "intersection": 2177,
+      "jaccard": 0.6871843434343434,
+      "source_a": "LC18",
+      "source_b": "LT56",
+      "union": 3168
+    },
+    {
+      "intersection": 2127,
+      "jaccard": 0.6538579772517676,
+      "source_a": "LC18",
+      "source_b": "LoVC16",
+      "union": 3253
+    },
+    {
+      "intersection": 2511,
+      "jaccard": 0.669778607628701,
+      "source_a": "LC18",
+      "source_b": "PVLP011",
+      "union": 3749
+    },
+    {
+      "intersection": 2553,
+      "jaccard": 0.6245107632093934,
+      "source_a": "LC18",
+      "source_b": "PVLP061",
+      "union": 4088
+    },
+    {
+      "intersection": 2033,
+      "jaccard": 0.5630019385211853,
+      "source_a": "LC18",
+      "source_b": "PVLP069",
+      "union": 3611
+    },
+    {
+      "intersection": 2433,
+      "jaccard": 0.6409378292939937,
+      "source_a": "LC18",
+      "source_b": "PVLP097",
+      "union": 3796
+    },
+    {
+      "intersection": 2368,
+      "jaccard": 0.6440032635300517,
+      "source_a": "LC18",
+      "source_b": "PVLP106",
+      "union": 3677
+    },
+    {
+      "intersection": 2563,
+      "jaccard": 0.6739416250328688,
+      "source_a": "LC18",
+      "source_b": "PVLP111",
+      "union": 3803
+    },
+    {
+      "intersection": 2488,
+      "jaccard": 0.6924575563595881,
+      "source_a": "LC18",
+      "source_b": "PVLP120",
+      "union": 3593
+    },
+    {
+      "intersection": 2510,
+      "jaccard": 0.6297039638735574,
+      "source_a": "LC18",
+      "source_b": "PVLP135",
+      "union": 3986
+    },
+    {
+      "intersection": 2532,
+      "jaccard": 0.6908594815825375,
+      "source_a": "LC18",
+      "source_b": "PVLP151",
+      "union": 3665
+    },
+    {
+      "intersection": 2044,
+      "jaccard": 0.5117676514772158,
+      "source_a": "LC18",
+      "source_b": "TmY14",
+      "union": 3994
+    },
+    {
+      "intersection": 3193,
+      "jaccard": 0.6918743228602383,
+      "source_a": "LC4",
+      "source_b": "LC9",
+      "union": 4615
+    },
+    {
+      "intersection": 2939,
+      "jaccard": 0.5412523020257827,
+      "source_a": "LC4",
+      "source_b": "LHAD1g1",
+      "union": 5430
+    },
+    {
+      "intersection": 3164,
+      "jaccard": 0.6952318171830367,
+      "source_a": "LC4",
+      "source_b": "LLPC1",
+      "union": 4551
+    },
+    {
+      "intersection": 2963,
+      "jaccard": 0.6588837002446075,
+      "source_a": "LC4",
+      "source_b": "LLPC2",
+      "union": 4497
+    },
+    {
+      "intersection": 2823,
+      "jaccard": 0.6471801925722146,
+      "source_a": "LC4",
+      "source_b": "LLPC3",
+      "union": 4362
+    },
+    {
+      "intersection": 2777,
+      "jaccard": 0.608057805999562,
+      "source_a": "LC4",
+      "source_b": "LPC1",
+      "union": 4567
+    },
+    {
+      "intersection": 3353,
+      "jaccard": 0.7469369570060147,
+      "source_a": "LC4",
+      "source_b": "LPLC1",
+      "union": 4489
+    },
+    {
+      "intersection": 3496,
+      "jaccard": 0.7814036656236031,
+      "source_a": "LC4",
+      "source_b": "LPLC2",
+      "union": 4474
+    },
+    {
+      "intersection": 3279,
+      "jaccard": 0.6846940906243475,
+      "source_a": "LC4",
+      "source_b": "LPLC4",
+      "union": 4789
+    },
+    {
+      "intersection": 2183,
+      "jaccard": 0.5995605602856359,
+      "source_a": "LC4",
+      "source_b": "LT56",
+      "union": 3641
+    },
+    {
+      "intersection": 2142,
+      "jaccard": 0.576271186440678,
+      "source_a": "LC4",
+      "source_b": "LoVC16",
+      "union": 3717
+    },
+    {
+      "intersection": 2772,
+      "jaccard": 0.6987648096798589,
+      "source_a": "LC4",
+      "source_b": "PVLP011",
+      "union": 3967
+    },
+    {
+      "intersection": 2638,
+      "jaccard": 0.5885765283355645,
+      "source_a": "LC4",
+      "source_b": "PVLP061",
+      "union": 4482
+    },
+    {
+      "intersection": 2136,
+      "jaccard": 0.5357411587659895,
+      "source_a": "LC4",
+      "source_b": "PVLP069",
+      "union": 3987
+    },
+    {
+      "intersection": 2479,
+      "jaccard": 0.5861905887916765,
+      "source_a": "LC4",
+      "source_b": "PVLP097",
+      "union": 4229
+    },
+    {
+      "intersection": 2405,
+      "jaccard": 0.5838795824229182,
+      "source_a": "LC4",
+      "source_b": "PVLP106",
+      "union": 4119
+    },
+    {
+      "intersection": 2707,
+      "jaccard": 0.6541807636539391,
+      "source_a": "LC4",
+      "source_b": "PVLP111",
+      "union": 4138
+    },
+    {
+      "intersection": 2631,
+      "jaccard": 0.6696360397047595,
+      "source_a": "LC4",
+      "source_b": "PVLP120",
+      "union": 3929
+    },
+    {
+      "intersection": 2632,
+      "jaccard": 0.6060326962928851,
+      "source_a": "LC4",
+      "source_b": "PVLP135",
+      "union": 4343
+    },
+    {
+      "intersection": 2751,
+      "jaccard": 0.7008917197452229,
+      "source_a": "LC4",
+      "source_b": "PVLP151",
+      "union": 3925
+    },
+    {
+      "intersection": 2321,
+      "jaccard": 0.5531458531935176,
+      "source_a": "LC4",
+      "source_b": "TmY14",
+      "union": 4196
+    },
+    {
+      "intersection": 3156,
+      "jaccard": 0.5449835952339838,
+      "source_a": "LC9",
+      "source_b": "LHAD1g1",
+      "union": 5791
+    },
+    {
+      "intersection": 3484,
+      "jaccard": 0.7244749428155541,
+      "source_a": "LC9",
+      "source_b": "LLPC1",
+      "union": 4809
+    },
+    {
+      "intersection": 3273,
+      "jaccard": 0.6868835257082896,
+      "source_a": "LC9",
+      "source_b": "LLPC2",
+      "union": 4765
+    },
+    {
+      "intersection": 3125,
+      "jaccard": 0.673781802501078,
+      "source_a": "LC9",
+      "source_b": "LLPC3",
+      "union": 4638
+    },
+    {
+      "intersection": 3084,
+      "jaccard": 0.6374534931789996,
+      "source_a": "LC9",
+      "source_b": "LPC1",
+      "union": 4838
+    },
+    {
+      "intersection": 3654,
+      "jaccard": 0.7666806546370122,
+      "source_a": "LC9",
+      "source_b": "LPLC1",
+      "union": 4766
+    },
+    {
+      "intersection": 3716,
+      "jaccard": 0.7690397350993378,
+      "source_a": "LC9",
+      "source_b": "LPLC2",
+      "union": 4832
+    },
+    {
+      "intersection": 3708,
+      "jaccard": 0.7509113001215066,
+      "source_a": "LC9",
+      "source_b": "LPLC4",
+      "union": 4938
+    },
+    {
+      "intersection": 2200,
+      "jaccard": 0.5235602094240838,
+      "source_a": "LC9",
+      "source_b": "LT56",
+      "union": 4202
+    },
+    {
+      "intersection": 2107,
+      "jaccard": 0.4866050808314088,
+      "source_a": "LC9",
+      "source_b": "LoVC16",
+      "union": 4330
+    },
+    {
+      "intersection": 2791,
+      "jaccard": 0.6166593018117543,
+      "source_a": "LC9",
+      "source_b": "PVLP011",
+      "union": 4526
+    },
+    {
+      "intersection": 2863,
+      "jaccard": 0.5921406411582213,
+      "source_a": "LC9",
+      "source_b": "PVLP061",
+      "union": 4835
+    },
+    {
+      "intersection": 2202,
+      "jaccard": 0.4894420982440542,
+      "source_a": "LC9",
+      "source_b": "PVLP069",
+      "union": 4499
+    },
+    {
+      "intersection": 2553,
+      "jaccard": 0.5394041833931967,
+      "source_a": "LC9",
+      "source_b": "PVLP097",
+      "union": 4733
+    },
+    {
+      "intersection": 2419,
+      "jaccard": 0.516549220585095,
+      "source_a": "LC9",
+      "source_b": "PVLP106",
+      "union": 4683
+    },
+    {
+      "intersection": 2850,
+      "jaccard": 0.6232232670019681,
+      "source_a": "LC9",
+      "source_b": "PVLP111",
+      "union": 4573
+    },
+    {
+      "intersection": 2655,
+      "jaccard": 0.5922373410662503,
+      "source_a": "LC9",
+      "source_b": "PVLP120",
+      "union": 4483
+    },
+    {
+      "intersection": 2807,
+      "jaccard": 0.5914454277286135,
+      "source_a": "LC9",
+      "source_b": "PVLP135",
+      "union": 4746
+    },
+    {
+      "intersection": 2725,
+      "jaccard": 0.6016780746301612,
+      "source_a": "LC9",
+      "source_b": "PVLP151",
+      "union": 4529
+    },
+    {
+      "intersection": 2435,
+      "jaccard": 0.5225321888412017,
+      "source_a": "LC9",
+      "source_b": "TmY14",
+      "union": 4660
+    },
+    {
+      "intersection": 2868,
+      "jaccard": 0.47911794186435014,
+      "source_a": "LHAD1g1",
+      "source_b": "LLPC1",
+      "union": 5986
+    },
+    {
+      "intersection": 2653,
+      "jaccard": 0.4461823074335688,
+      "source_a": "LHAD1g1",
+      "source_b": "LLPC2",
+      "union": 5946
+    },
+    {
+      "intersection": 2495,
+      "jaccard": 0.4280322525304512,
+      "source_a": "LHAD1g1",
+      "source_b": "LLPC3",
+      "union": 5829
+    },
+    {
+      "intersection": 2600,
+      "jaccard": 0.44195138534761175,
+      "source_a": "LHAD1g1",
+      "source_b": "LPC1",
+      "union": 5883
+    },
+    {
+      "intersection": 3157,
+      "jaccard": 0.5420673076923077,
+      "source_a": "LHAD1g1",
+      "source_b": "LPLC1",
+      "union": 5824
+    },
+    {
+      "intersection": 3243,
+      "jaccard": 0.5528469144220934,
+      "source_a": "LHAD1g1",
+      "source_b": "LPLC2",
+      "union": 5866
+    },
+    {
+      "intersection": 3118,
+      "jaccard": 0.512070947610445,
+      "source_a": "LHAD1g1",
+      "source_b": "LPLC4",
+      "union": 6089
+    },
+    {
+      "intersection": 1925,
+      "jaccard": 0.38209606986899564,
+      "source_a": "LHAD1g1",
+      "source_b": "LT56",
+      "union": 5038
+    },
+    {
+      "intersection": 1918,
+      "jaccard": 0.3775590551181102,
+      "source_a": "LHAD1g1",
+      "source_b": "LoVC16",
+      "union": 5080
+    },
+    {
+      "intersection": 2527,
+      "jaccard": 0.4722481779106709,
+      "source_a": "LHAD1g1",
+      "source_b": "PVLP011",
+      "union": 5351
+    },
+    {
+      "intersection": 3121,
+      "jaccard": 0.6074347995328921,
+      "source_a": "LHAD1g1",
+      "source_b": "PVLP061",
+      "union": 5138
+    },
+    {
+      "intersection": 2404,
+      "jaccard": 0.4948538493207081,
+      "source_a": "LHAD1g1",
+      "source_b": "PVLP069",
+      "union": 4858
+    },
+    {
+      "intersection": 2758,
+      "jaccard": 0.5419532324621733,
+      "source_a": "LHAD1g1",
+      "source_b": "PVLP097",
+      "union": 5089
+    },
+    {
+      "intersection": 2615,
+      "jaccard": 0.518026941362916,
+      "source_a": "LHAD1g1",
+      "source_b": "PVLP106",
+      "union": 5048
+    },
+    {
+      "intersection": 2957,
+      "jaccard": 0.5882235925999603,
+      "source_a": "LHAD1g1",
+      "source_b": "PVLP111",
+      "union": 5027
+    },
+    {
+      "intersection": 2669,
+      "jaccard": 0.5306163021868787,
+      "source_a": "LHAD1g1",
+      "source_b": "PVLP120",
+      "union": 5030
+    },
+    {
+      "intersection": 2993,
+      "jaccard": 0.584456160906073,
+      "source_a": "LHAD1g1",
+      "source_b": "PVLP135",
+      "union": 5121
+    },
+    {
+      "intersection": 2749,
+      "jaccard": 0.5426371891038294,
+      "source_a": "LHAD1g1",
+      "source_b": "PVLP151",
+      "union": 5066
+    },
+    {
+      "intersection": 1957,
+      "jaccard": 0.3433935778206703,
+      "source_a": "LHAD1g1",
+      "source_b": "TmY14",
+      "union": 5699
+    },
+    {
+      "intersection": 3643,
+      "jaccard": 0.8468154346815435,
+      "source_a": "LLPC1",
+      "source_b": "LLPC2",
+      "union": 4302
+    },
+    {
+      "intersection": 3404,
+      "jaccard": 0.7979371776840132,
+      "source_a": "LLPC1",
+      "source_b": "LLPC3",
+      "union": 4266
+    },
+    {
+      "intersection": 3464,
+      "jaccard": 0.7935853379152348,
+      "source_a": "LLPC1",
+      "source_b": "LPC1",
+      "union": 4365
+    },
+    {
+      "intersection": 3650,
+      "jaccard": 0.7804147958092794,
+      "source_a": "LLPC1",
+      "source_b": "LPLC1",
+      "union": 4677
+    },
+    {
+      "intersection": 3674,
+      "jaccard": 0.7684584814892282,
+      "source_a": "LLPC1",
+      "source_b": "LPLC2",
+      "union": 4781
+    },
+    {
+      "intersection": 3851,
+      "jaccard": 0.8190131858783496,
+      "source_a": "LLPC1",
+      "source_b": "LPLC4",
+      "union": 4702
+    },
+    {
+      "intersection": 2127,
+      "jaccard": 0.5086083213773315,
+      "source_a": "LLPC1",
+      "source_b": "LT56",
+      "union": 4182
+    },
+    {
+      "intersection": 2046,
+      "jaccard": 0.4760353652861796,
+      "source_a": "LLPC1",
+      "source_b": "LoVC16",
+      "union": 4298
+    },
+    {
+      "intersection": 2883,
+      "jaccard": 0.6641326883206634,
+      "source_a": "LLPC1",
+      "source_b": "PVLP011",
+      "union": 4341
+    },
+    {
+      "intersection": 2617,
+      "jaccard": 0.5246591820368885,
+      "source_a": "LLPC1",
+      "source_b": "PVLP061",
+      "union": 4988
+    },
+    {
+      "intersection": 2003,
+      "jaccard": 0.43496199782844736,
+      "source_a": "LLPC1",
+      "source_b": "PVLP069",
+      "union": 4605
+    },
+    {
+      "intersection": 2413,
+      "jaccard": 0.5048117154811715,
+      "source_a": "LLPC1",
+      "source_b": "PVLP097",
+      "union": 4780
+    },
+    {
+      "intersection": 2322,
+      "jaccard": 0.4954128440366973,
+      "source_a": "LLPC1",
+      "source_b": "PVLP106",
+      "union": 4687
+    },
+    {
+      "intersection": 2604,
+      "jaccard": 0.550994498518832,
+      "source_a": "LLPC1",
+      "source_b": "PVLP111",
+      "union": 4726
+    },
+    {
+      "intersection": 2494,
+      "jaccard": 0.5480114260602066,
+      "source_a": "LLPC1",
+      "source_b": "PVLP120",
+      "union": 4551
+    },
+    {
+      "intersection": 2604,
+      "jaccard": 0.5362438220757826,
+      "source_a": "LLPC1",
+      "source_b": "PVLP135",
+      "union": 4856
+    },
+    {
+      "intersection": 2551,
+      "jaccard": 0.5533622559652929,
+      "source_a": "LLPC1",
+      "source_b": "PVLP151",
+      "union": 4610
+    },
+    {
+      "intersection": 2684,
+      "jaccard": 0.6215840666975452,
+      "source_a": "LLPC1",
+      "source_b": "TmY14",
+      "union": 4318
+    },
+    {
+      "intersection": 3340,
+      "jaccard": 0.8196319018404908,
+      "source_a": "LLPC2",
+      "source_b": "LLPC3",
+      "union": 4075
+    },
+    {
+      "intersection": 3380,
+      "jaccard": 0.8059132093466858,
+      "source_a": "LLPC2",
+      "source_b": "LPC1",
+      "union": 4194
+    },
+    {
+      "intersection": 3426,
+      "jaccard": 0.7374085234610418,
+      "source_a": "LLPC2",
+      "source_b": "LPLC1",
+      "union": 4646
+    },
+    {
+      "intersection": 3442,
+      "jaccard": 0.7234131988230349,
+      "source_a": "LLPC2",
+      "source_b": "LPLC2",
+      "union": 4758
+    },
+    {
+      "intersection": 3609,
+      "jaccard": 0.7696737044145874,
+      "source_a": "LLPC2",
+      "source_b": "LPLC4",
+      "union": 4689
+    },
+    {
+      "intersection": 2068,
+      "jaccard": 0.5188158554942298,
+      "source_a": "LLPC2",
+      "source_b": "LT56",
+      "union": 3986
+    },
+    {
+      "intersection": 1950,
+      "jaccard": 0.4711282918579367,
+      "source_a": "LLPC2",
+      "source_b": "LoVC16",
+      "union": 4139
+    },
+    {
+      "intersection": 2714,
+      "jaccard": 0.6378378378378379,
+      "source_a": "LLPC2",
+      "source_b": "PVLP011",
+      "union": 4255
+    },
+    {
+      "intersection": 2436,
+      "jaccard": 0.49572649572649574,
+      "source_a": "LLPC2",
+      "source_b": "PVLP061",
+      "union": 4914
+    },
+    {
+      "intersection": 1838,
+      "jaccard": 0.4070874861572536,
+      "source_a": "LLPC2",
+      "source_b": "PVLP069",
+      "union": 4515
+    },
+    {
+      "intersection": 2249,
+      "jaccard": 0.4796331840477714,
+      "source_a": "LLPC2",
+      "source_b": "PVLP097",
+      "union": 4689
+    },
+    {
+      "intersection": 2156,
+      "jaccard": 0.4688995215311005,
+      "source_a": "LLPC2",
+      "source_b": "PVLP106",
+      "union": 4598
+    },
+    {
+      "intersection": 2434,
+      "jaccard": 0.5244559362206421,
+      "source_a": "LLPC2",
+      "source_b": "PVLP111",
+      "union": 4641
+    },
+    {
+      "intersection": 2344,
+      "jaccard": 0.5272154745838956,
+      "source_a": "LLPC2",
+      "source_b": "PVLP120",
+      "union": 4446
+    },
+    {
+      "intersection": 2443,
+      "jaccard": 0.5130197396052079,
+      "source_a": "LLPC2",
+      "source_b": "PVLP135",
+      "union": 4762
+    },
+    {
+      "intersection": 2393,
+      "jaccard": 0.530245956126745,
+      "source_a": "LLPC2",
+      "source_b": "PVLP151",
+      "union": 4513
+    },
+    {
+      "intersection": 2591,
+      "jaccard": 0.6234359961501443,
+      "source_a": "LLPC2",
+      "source_b": "TmY14",
+      "union": 4156
+    },
+    {
+      "intersection": 3083,
+      "jaccard": 0.7312618595825426,
+      "source_a": "LLPC3",
+      "source_b": "LPC1",
+      "union": 4216
+    },
+    {
+      "intersection": 3280,
+      "jaccard": 0.7261456719061324,
+      "source_a": "LLPC3",
+      "source_b": "LPLC1",
+      "union": 4517
+    },
+    {
+      "intersection": 3312,
+      "jaccard": 0.7179709516583568,
+      "source_a": "LLPC3",
+      "source_b": "LPLC2",
+      "union": 4613
+    },
+    {
+      "intersection": 3439,
+      "jaccard": 0.75021815008726,
+      "source_a": "LLPC3",
+      "source_b": "LPLC4",
+      "union": 4584
+    },
+    {
+      "intersection": 2048,
+      "jaccard": 0.5489145001340123,
+      "source_a": "LLPC3",
+      "source_b": "LT56",
+      "union": 3731
+    },
+    {
+      "intersection": 1904,
+      "jaccard": 0.48695652173913045,
+      "source_a": "LLPC3",
+      "source_b": "LoVC16",
+      "union": 3910
+    },
+    {
+      "intersection": 2581,
+      "jaccard": 0.6275224896669098,
+      "source_a": "LLPC3",
+      "source_b": "PVLP011",
+      "union": 4113
+    },
+    {
+      "intersection": 2342,
+      "jaccard": 0.4948235791252905,
+      "source_a": "LLPC3",
+      "source_b": "PVLP061",
+      "union": 4733
+    },
+    {
+      "intersection": 1774,
+      "jaccard": 0.4121747211895911,
+      "source_a": "LLPC3",
+      "source_b": "PVLP069",
+      "union": 4304
+    },
+    {
+      "intersection": 2190,
+      "jaccard": 0.48960429242119385,
+      "source_a": "LLPC3",
+      "source_b": "PVLP097",
+      "union": 4473
+    },
+    {
+      "intersection": 2085,
+      "jaccard": 0.4745106964041875,
+      "source_a": "LLPC3",
+      "source_b": "PVLP106",
+      "union": 4394
+    },
+    {
+      "intersection": 2333,
+      "jaccard": 0.5222744571300649,
+      "source_a": "LLPC3",
+      "source_b": "PVLP111",
+      "union": 4467
+    },
+    {
+      "intersection": 2218,
+      "jaccard": 0.5161740749360019,
+      "source_a": "LLPC3",
+      "source_b": "PVLP120",
+      "union": 4297
+    },
+    {
+      "intersection": 2304,
+      "jaccard": 0.4980544747081712,
+      "source_a": "LLPC3",
+      "source_b": "PVLP135",
+      "union": 4626
+    },
+    {
+      "intersection": 2246,
+      "jaccard": 0.5122006841505131,
+      "source_a": "LLPC3",
+      "source_b": "PVLP151",
+      "union": 4385
+    },
+    {
+      "intersection": 2485,
+      "jaccard": 0.6232756458490093,
+      "source_a": "LLPC3",
+      "source_b": "TmY14",
+      "union": 3987
+    },
+    {
+      "intersection": 3292,
+      "jaccard": 0.7058319039451115,
+      "source_a": "LPC1",
+      "source_b": "LPLC1",
+      "union": 4664
+    },
+    {
+      "intersection": 3267,
+      "jaccard": 0.6782229603487648,
+      "source_a": "LPC1",
+      "source_b": "LPLC2",
+      "union": 4817
+    },
+    {
+      "intersection": 3425,
+      "jaccard": 0.7199915913390793,
+      "source_a": "LPC1",
+      "source_b": "LPLC4",
+      "union": 4757
+    },
+    {
+      "intersection": 1920,
+      "jaccard": 0.4778496764559482,
+      "source_a": "LPC1",
+      "source_b": "LT56",
+      "union": 4018
+    },
+    {
+      "intersection": 1862,
+      "jaccard": 0.4529311603016298,
+      "source_a": "LPC1",
+      "source_b": "LoVC16",
+      "union": 4111
+    },
+    {
+      "intersection": 2683,
+      "jaccard": 0.6434052757793765,
+      "source_a": "LPC1",
+      "source_b": "PVLP011",
+      "union": 4170
+    },
+    {
+      "intersection": 2377,
+      "jaccard": 0.489396746963146,
+      "source_a": "LPC1",
+      "source_b": "PVLP061",
+      "union": 4857
+    },
+    {
+      "intersection": 1804,
+      "jaccard": 0.40694789081885857,
+      "source_a": "LPC1",
+      "source_b": "PVLP069",
+      "union": 4433
+    },
+    {
+      "intersection": 2224,
+      "jaccard": 0.48368856024358414,
+      "source_a": "LPC1",
+      "source_b": "PVLP097",
+      "union": 4598
+    },
+    {
+      "intersection": 2134,
+      "jaccard": 0.4738010657193606,
+      "source_a": "LPC1",
+      "source_b": "PVLP106",
+      "union": 4504
+    },
+    {
+      "intersection": 2351,
+      "jaccard": 0.5101996527777778,
+      "source_a": "LPC1",
+      "source_b": "PVLP111",
+      "union": 4608
+    },
+    {
+      "intersection": 2311,
+      "jaccard": 0.5296814118725648,
+      "source_a": "LPC1",
+      "source_b": "PVLP120",
+      "union": 4363
+    },
+    {
+      "intersection": 2421,
+      "jaccard": 0.5186375321336761,
+      "source_a": "LPC1",
+      "source_b": "PVLP135",
+      "union": 4668
+    },
+    {
+      "intersection": 2347,
+      "jaccard": 0.5282466801710556,
+      "source_a": "LPC1",
+      "source_b": "PVLP151",
+      "union": 4443
+    },
+    {
+      "intersection": 2478,
+      "jaccard": 0.5966771008909222,
+      "source_a": "LPC1",
+      "source_b": "TmY14",
+      "union": 4153
+    },
+    {
+      "intersection": 3961,
+      "jaccard": 0.8571737719108418,
+      "source_a": "LPLC1",
+      "source_b": "LPLC2",
+      "union": 4621
+    },
+    {
+      "intersection": 3879,
+      "jaccard": 0.807956675692564,
+      "source_a": "LPLC1",
+      "source_b": "LPLC4",
+      "union": 4801
+    },
+    {
+      "intersection": 2206,
+      "jaccard": 0.5215130023640662,
+      "source_a": "LPLC1",
+      "source_b": "LT56",
+      "union": 4230
+    },
+    {
+      "intersection": 2184,
+      "jaccard": 0.509447165850245,
+      "source_a": "LPLC1",
+      "source_b": "LoVC16",
+      "union": 4287
+    },
+    {
+      "intersection": 2958,
+      "jaccard": 0.6733439562941043,
+      "source_a": "LPLC1",
+      "source_b": "PVLP011",
+      "union": 4393
+    },
+    {
+      "intersection": 2870,
+      "jaccard": 0.5902920608802962,
+      "source_a": "LPLC1",
+      "source_b": "PVLP061",
+      "union": 4862
+    },
+    {
+      "intersection": 2207,
+      "jaccard": 0.4874116607773852,
+      "source_a": "LPLC1",
+      "source_b": "PVLP069",
+      "union": 4528
+    },
+    {
+      "intersection": 2669,
+      "jaccard": 0.5738550849279724,
+      "source_a": "LPLC1",
+      "source_b": "PVLP097",
+      "union": 4651
+    },
+    {
+      "intersection": 2542,
+      "jaccard": 0.5533304309969526,
+      "source_a": "LPLC1",
+      "source_b": "PVLP106",
+      "union": 4594
+    },
+    {
+      "intersection": 2885,
+      "jaccard": 0.6310148731408574,
+      "source_a": "LPLC1",
+      "source_b": "PVLP111",
+      "union": 4572
+    },
+    {
+      "intersection": 2715,
+      "jaccard": 0.609154139555755,
+      "source_a": "LPLC1",
+      "source_b": "PVLP120",
+      "union": 4457
+    },
+    {
+      "intersection": 2850,
+      "jaccard": 0.6016466117796073,
+      "source_a": "LPLC1",
+      "source_b": "PVLP135",
+      "union": 4737
+    },
+    {
+      "intersection": 2771,
+      "jaccard": 0.6134602612353331,
+      "source_a": "LPLC1",
+      "source_b": "PVLP151",
+      "union": 4517
+    },
+    {
+      "intersection": 2652,
+      "jaccard": 0.5923609559973196,
+      "source_a": "LPLC1",
+      "source_b": "TmY14",
+      "union": 4477
+    },
+    {
+      "intersection": 3910,
+      "jaccard": 0.7982850142915475,
+      "source_a": "LPLC2",
+      "source_b": "LPLC4",
+      "union": 4898
+    },
+    {
+      "intersection": 2207,
+      "jaccard": 0.506541198072068,
+      "source_a": "LPLC2",
+      "source_b": "LT56",
+      "union": 4357
+    },
+    {
+      "intersection": 2194,
+      "jaccard": 0.49807037457434733,
+      "source_a": "LPLC2",
+      "source_b": "LoVC16",
+      "union": 4405
+    },
+    {
+      "intersection": 3038,
+      "jaccard": 0.6840801621256474,
+      "source_a": "LPLC2",
+      "source_b": "PVLP011",
+      "union": 4441
+    },
+    {
+      "intersection": 2921,
+      "jaccard": 0.5914152662482284,
+      "source_a": "LPLC2",
+      "source_b": "PVLP061",
+      "union": 4939
+    },
+    {
+      "intersection": 2271,
+      "jaccard": 0.49455574912891986,
+      "source_a": "LPLC2",
+      "source_b": "PVLP069",
+      "union": 4592
+    },
+    {
+      "intersection": 2718,
+      "jaccard": 0.5746300211416491,
+      "source_a": "LPLC2",
+      "source_b": "PVLP097",
+      "union": 4730
+    },
+    {
+      "intersection": 2607,
+      "jaccard": 0.5598024479278505,
+      "source_a": "LPLC2",
+      "source_b": "PVLP106",
+      "union": 4657
+    },
+    {
+      "intersection": 2928,
+      "jaccard": 0.628730942666953,
+      "source_a": "LPLC2",
+      "source_b": "PVLP111",
+      "union": 4657
+    },
+    {
+      "intersection": 2787,
+      "jaccard": 0.6175493020163971,
+      "source_a": "LPLC2",
+      "source_b": "PVLP120",
+      "union": 4513
+    },
+    {
+      "intersection": 2886,
+      "jaccard": 0.5976392627873266,
+      "source_a": "LPLC2",
+      "source_b": "PVLP135",
+      "union": 4829
+    },
+    {
+      "intersection": 2887,
+      "jaccard": 0.6374475601678075,
+      "source_a": "LPLC2",
+      "source_b": "PVLP151",
+      "union": 4529
+    },
+    {
+      "intersection": 2715,
+      "jaccard": 0.5977542932628798,
+      "source_a": "LPLC2",
+      "source_b": "TmY14",
+      "union": 4542
+    },
+    {
+      "intersection": 2135,
+      "jaccard": 0.4716147559089905,
+      "source_a": "LPLC4",
+      "source_b": "LT56",
+      "union": 4527
+    },
+    {
+      "intersection": 2036,
+      "jaccard": 0.4368161338768505,
+      "source_a": "LPLC4",
+      "source_b": "LoVC16",
+      "union": 4661
+    },
+    {
+      "intersection": 2886,
+      "jaccard": 0.6152206352590066,
+      "source_a": "LPLC4",
+      "source_b": "PVLP011",
+      "union": 4691
+    },
+    {
+      "intersection": 2787,
+      "jaccard": 0.5389673177335138,
+      "source_a": "LPLC4",
+      "source_b": "PVLP061",
+      "union": 5171
+    },
+    {
+      "intersection": 2087,
+      "jaccard": 0.4281903980303652,
+      "source_a": "LPLC4",
+      "source_b": "PVLP069",
+      "union": 4874
+    },
+    {
+      "intersection": 2553,
+      "jaccard": 0.5113158421790507,
+      "source_a": "LPLC4",
+      "source_b": "PVLP097",
+      "union": 4993
+    },
+    {
+      "intersection": 2408,
+      "jaccard": 0.48607186112232537,
+      "source_a": "LPLC4",
+      "source_b": "PVLP106",
+      "union": 4954
+    },
+    {
+      "intersection": 2748,
+      "jaccard": 0.556838905775076,
+      "source_a": "LPLC4",
+      "source_b": "PVLP111",
+      "union": 4935
+    },
+    {
+      "intersection": 2557,
+      "jaccard": 0.5281966535839703,
+      "source_a": "LPLC4",
+      "source_b": "PVLP120",
+      "union": 4841
+    },
+    {
+      "intersection": 2720,
+      "jaccard": 0.5340663655998429,
+      "source_a": "LPLC4",
+      "source_b": "PVLP135",
+      "union": 5093
+    },
+    {
+      "intersection": 2651,
+      "jaccard": 0.5451367468640756,
+      "source_a": "LPLC4",
+      "source_b": "PVLP151",
+      "union": 4863
+    },
+    {
+      "intersection": 2704,
+      "jaccard": 0.5813803483121909,
+      "source_a": "LPLC4",
+      "source_b": "TmY14",
+      "union": 4651
+    },
+    {
+      "intersection": 1847,
+      "jaccard": 0.7087490406753646,
+      "source_a": "LT56",
+      "source_b": "LoVC16",
+      "union": 2606
+    },
+    {
+      "intersection": 1958,
+      "jaccard": 0.5801481481481482,
+      "source_a": "LT56",
+      "source_b": "PVLP011",
+      "union": 3375
+    },
+    {
+      "intersection": 1835,
+      "jaccard": 0.4730600670275844,
+      "source_a": "LT56",
+      "source_b": "PVLP061",
+      "union": 3879
+    },
+    {
+      "intersection": 1593,
+      "jaccard": 0.5099231754161332,
+      "source_a": "LT56",
+      "source_b": "PVLP069",
+      "union": 3124
+    },
+    {
+      "intersection": 1746,
+      "jaccard": 0.49100112485939257,
+      "source_a": "LT56",
+      "source_b": "PVLP097",
+      "union": 3556
+    },
+    {
+      "intersection": 1718,
+      "jaccard": 0.5052941176470588,
+      "source_a": "LT56",
+      "source_b": "PVLP106",
+      "union": 3400
+    },
+    {
+      "intersection": 1904,
+      "jaccard": 0.5386138613861386,
+      "source_a": "LT56",
+      "source_b": "PVLP111",
+      "union": 3535
+    },
+    {
+      "intersection": 1883,
+      "jaccard": 0.5756649342708652,
+      "source_a": "LT56",
+      "source_b": "PVLP120",
+      "union": 3271
+    },
+    {
+      "intersection": 1857,
+      "jaccard": 0.5002693965517241,
+      "source_a": "LT56",
+      "source_b": "PVLP135",
+      "union": 3712
+    },
+    {
+      "intersection": 1890,
+      "jaccard": 0.5591715976331361,
+      "source_a": "LT56",
+      "source_b": "PVLP151",
+      "union": 3380
+    },
+    {
+      "intersection": 1658,
+      "jaccard": 0.48016217781639153,
+      "source_a": "LT56",
+      "source_b": "TmY14",
+      "union": 3453
+    },
+    {
+      "intersection": 1962,
+      "jaccard": 0.5760422783323547,
+      "source_a": "LoVC16",
+      "source_b": "PVLP011",
+      "union": 3406
+    },
+    {
+      "intersection": 1867,
+      "jaccard": 0.4809376609994848,
+      "source_a": "LoVC16",
+      "source_b": "PVLP061",
+      "union": 3882
+    },
+    {
+      "intersection": 1624,
+      "jaccard": 0.5191815856777494,
+      "source_a": "LoVC16",
+      "source_b": "PVLP069",
+      "union": 3128
+    },
+    {
+      "intersection": 1857,
+      "jaccard": 0.5336206896551724,
+      "source_a": "LoVC16",
+      "source_b": "PVLP097",
+      "union": 3480
+    },
+    {
+      "intersection": 1815,
+      "jaccard": 0.5437387657279809,
+      "source_a": "LoVC16",
+      "source_b": "PVLP106",
+      "union": 3338
+    },
+    {
+      "intersection": 1925,
+      "jaccard": 0.5424063116370809,
+      "source_a": "LoVC16",
+      "source_b": "PVLP111",
+      "union": 3549
+    },
+    {
+      "intersection": 1946,
+      "jaccard": 0.6000616712920136,
+      "source_a": "LoVC16",
+      "source_b": "PVLP120",
+      "union": 3243
+    },
+    {
+      "intersection": 1907,
+      "jaccard": 0.5158236407898296,
+      "source_a": "LoVC16",
+      "source_b": "PVLP135",
+      "union": 3697
+    },
+    {
+      "intersection": 1921,
+      "jaccard": 0.5676713947990544,
+      "source_a": "LoVC16",
+      "source_b": "PVLP151",
+      "union": 3384
+    },
+    {
+      "intersection": 1773,
+      "jaccard": 0.5256448265638897,
+      "source_a": "LoVC16",
+      "source_b": "TmY14",
+      "union": 3373
+    },
+    {
+      "intersection": 2409,
+      "jaccard": 0.5708530805687204,
+      "source_a": "PVLP011",
+      "source_b": "PVLP061",
+      "union": 4220
+    },
+    {
+      "intersection": 1965,
+      "jaccard": 0.5358603763294246,
+      "source_a": "PVLP011",
+      "source_b": "PVLP069",
+      "union": 3667
+    },
+    {
+      "intersection": 2290,
+      "jaccard": 0.5831423478482302,
+      "source_a": "PVLP011",
+      "source_b": "PVLP097",
+      "union": 3927
+    },
+    {
+      "intersection": 2253,
+      "jaccard": 0.596031746031746,
+      "source_a": "PVLP011",
+      "source_b": "PVLP106",
+      "union": 3780
+    },
+    {
+      "intersection": 2428,
+      "jaccard": 0.6184411614875192,
+      "source_a": "PVLP011",
+      "source_b": "PVLP111",
+      "union": 3926
+    },
+    {
+      "intersection": 2438,
+      "jaccard": 0.6714403745524649,
+      "source_a": "PVLP011",
+      "source_b": "PVLP120",
+      "union": 3631
+    },
+    {
+      "intersection": 2440,
+      "jaccard": 0.6033630069238378,
+      "source_a": "PVLP011",
+      "source_b": "PVLP135",
+      "union": 4044
+    },
+    {
+      "intersection": 2554,
+      "jaccard": 0.7033874965574222,
+      "source_a": "PVLP011",
+      "source_b": "PVLP151",
+      "union": 3631
+    },
+    {
+      "intersection": 2187,
+      "jaccard": 0.5696796040635582,
+      "source_a": "PVLP011",
+      "source_b": "TmY14",
+      "union": 3839
+    },
+    {
+      "intersection": 2309,
+      "jaccard": 0.6233801295896328,
+      "source_a": "PVLP061",
+      "source_b": "PVLP069",
+      "union": 3704
+    },
+    {
+      "intersection": 2753,
+      "jaccard": 0.7159947984395318,
+      "source_a": "PVLP061",
+      "source_b": "PVLP097",
+      "union": 3845
+    },
+    {
+      "intersection": 2639,
+      "jaccard": 0.6990728476821192,
+      "source_a": "PVLP061",
+      "source_b": "PVLP106",
+      "union": 3775
+    },
+    {
+      "intersection": 2750,
+      "jaccard": 0.6900878293601004,
+      "source_a": "PVLP061",
+      "source_b": "PVLP111",
+      "union": 3985
+    },
+    {
+      "intersection": 2511,
+      "jaccard": 0.6374714394516374,
+      "source_a": "PVLP061",
+      "source_b": "PVLP120",
+      "union": 3939
+    },
+    {
+      "intersection": 2866,
+      "jaccard": 0.7166791697924482,
+      "source_a": "PVLP061",
+      "source_b": "PVLP135",
+      "union": 3999
+    },
+    {
+      "intersection": 2528,
+      "jaccard": 0.6260525012382367,
+      "source_a": "PVLP061",
+      "source_b": "PVLP151",
+      "union": 4038
+    },
+    {
+      "intersection": 1808,
+      "jaccard": 0.39312894107414653,
+      "source_a": "PVLP061",
+      "source_b": "TmY14",
+      "union": 4599
+    },
+    {
+      "intersection": 2145,
+      "jaccard": 0.6206597222222222,
+      "source_a": "PVLP069",
+      "source_b": "PVLP097",
+      "union": 3456
+    },
+    {
+      "intersection": 2083,
+      "jaccard": 0.6247750449910018,
+      "source_a": "PVLP069",
+      "source_b": "PVLP106",
+      "union": 3334
+    },
+    {
+      "intersection": 2223,
+      "jaccard": 0.6324324324324324,
+      "source_a": "PVLP069",
+      "source_b": "PVLP111",
+      "union": 3515
+    },
+    {
+      "intersection": 2091,
+      "jaccard": 0.6219512195121951,
+      "source_a": "PVLP069",
+      "source_b": "PVLP120",
+      "union": 3362
+    },
+    {
+      "intersection": 2237,
+      "jaccard": 0.6160837234921509,
+      "source_a": "PVLP069",
+      "source_b": "PVLP135",
+      "union": 3631
+    },
+    {
+      "intersection": 2121,
+      "jaccard": 0.615139211136891,
+      "source_a": "PVLP069",
+      "source_b": "PVLP151",
+      "union": 3448
+    },
+    {
+      "intersection": 1404,
+      "jaccard": 0.3504742885671493,
+      "source_a": "PVLP069",
+      "source_b": "TmY14",
+      "union": 4006
+    },
+    {
+      "intersection": 2695,
+      "jaccard": 0.8149380102812217,
+      "source_a": "PVLP097",
+      "source_b": "PVLP106",
+      "union": 3307
+    },
+    {
+      "intersection": 2526,
+      "jaccard": 0.6652620489860416,
+      "source_a": "PVLP097",
+      "source_b": "PVLP111",
+      "union": 3797
+    },
+    {
+      "intersection": 2385,
+      "jaccard": 0.6528880372296743,
+      "source_a": "PVLP097",
+      "source_b": "PVLP120",
+      "union": 3653
+    },
+    {
+      "intersection": 2712,
+      "jaccard": 0.7249398556535686,
+      "source_a": "PVLP097",
+      "source_b": "PVLP135",
+      "union": 3741
+    },
+    {
+      "intersection": 2382,
+      "jaccard": 0.6314952279957582,
+      "source_a": "PVLP097",
+      "source_b": "PVLP151",
+      "union": 3772
+    },
+    {
+      "intersection": 1761,
+      "jaccard": 0.41591875295229097,
+      "source_a": "PVLP097",
+      "source_b": "TmY14",
+      "union": 4234
+    },
+    {
+      "intersection": 2403,
+      "jaccard": 0.6432012847965739,
+      "source_a": "PVLP106",
+      "source_b": "PVLP111",
+      "union": 3736
+    },
+    {
+      "intersection": 2329,
+      "jaccard": 0.660709219858156,
+      "source_a": "PVLP106",
+      "source_b": "PVLP120",
+      "union": 3525
+    },
+    {
+      "intersection": 2570,
+      "jaccard": 0.6947823736144904,
+      "source_a": "PVLP106",
+      "source_b": "PVLP135",
+      "union": 3699
+    },
+    {
+      "intersection": 2324,
+      "jaccard": 0.6374108612177729,
+      "source_a": "PVLP106",
+      "source_b": "PVLP151",
+      "union": 3646
+    },
+    {
+      "intersection": 1700,
+      "jaccard": 0.4135246898564826,
+      "source_a": "PVLP106",
+      "source_b": "TmY14",
+      "union": 4111
+    },
+    {
+      "intersection": 2541,
+      "jaccard": 0.6992294991744634,
+      "source_a": "PVLP111",
+      "source_b": "PVLP120",
+      "union": 3634
+    },
+    {
+      "intersection": 2736,
+      "jaccard": 0.7099117799688636,
+      "source_a": "PVLP111",
+      "source_b": "PVLP135",
+      "union": 3854
+    },
+    {
+      "intersection": 2548,
+      "jaccard": 0.6807373764360138,
+      "source_a": "PVLP111",
+      "source_b": "PVLP151",
+      "union": 3743
+    },
+    {
+      "intersection": 1867,
+      "jaccard": 0.4377491207502931,
+      "source_a": "PVLP111",
+      "source_b": "TmY14",
+      "union": 4265
+    },
+    {
+      "intersection": 2652,
+      "jaccard": 0.7259786476868327,
+      "source_a": "PVLP120",
+      "source_b": "PVLP135",
+      "union": 3653
+    },
+    {
+      "intersection": 2555,
+      "jaccard": 0.7403651115618661,
+      "source_a": "PVLP120",
+      "source_b": "PVLP151",
+      "union": 3451
+    },
+    {
+      "intersection": 1859,
+      "jaccard": 0.466148445336008,
+      "source_a": "PVLP120",
+      "source_b": "TmY14",
+      "union": 3988
+    },
+    {
+      "intersection": 2528,
+      "jaccard": 0.6493706652966864,
+      "source_a": "PVLP135",
+      "source_b": "PVLP151",
+      "union": 3893
+    },
+    {
+      "intersection": 1864,
+      "jaccard": 0.42382901318781263,
+      "source_a": "PVLP135",
+      "source_b": "TmY14",
+      "union": 4398
+    },
+    {
+      "intersection": 1907,
+      "jaccard": 0.47016765285996054,
+      "source_a": "PVLP151",
+      "source_b": "TmY14",
+      "union": 4056
+    }
+  ],
+  "parent_classification": "AUTHORITATIVE_SOURCE_LEVEL_MATCHED_RECURRENCE_PHENOTYPE",
+  "randomizations": 10000,
+  "schema": "moscaquant.sq03f5_result/v1",
+  "status": "COMPLETE",
+  "territory_parameters": {
+    "collapse_repeated_nodes": true,
+    "cycle_policy": "visited-set-collapse",
+    "direction": "downstream",
+    "edge_eligibility": "all directed edges present in the frozen analysis graph",
+    "exclude_source_nodes": true,
+    "max_depth": 2,
+    "node_eligibility": "all nodes reachable under the frozen edge rule"
+  },
+  "territory_sizes": {
+    "AVLP080": 4603,
+    "AVLP234": 2797,
+    "AVLP435": 3382,
+    "AVLP479": 3074,
+    "AVLP500": 2620,
+    "AVLP531": 4507,
+    "AVLP537": 3049,
+    "AVLP538": 4356,
+    "CB0010": 3344,
+    "CB0050": 2773,
+    "CB0766": 2678,
+    "CB1852": 3858,
+    "CB1920": 3331,
+    "DNp04": 3214,
+    "KCg-m": 4302,
+    "LC10": 4011,
+    "LC11": 3968,
+    "LC12": 2698,
+    "LC17": 3250,
+    "LC18": 3136,
+    "LC4": 3615,
+    "LC9": 4193,
+    "LHAD1g1": 4754,
+    "LLPC1": 4100,
+    "LLPC2": 3845,
+    "LLPC3": 3570,
+    "LPC1": 3729,
+    "LPLC1": 4227,
+    "LPLC2": 4355,
+    "LPLC4": 4453,
+    "LT56": 2209,
+    "LoVC16": 2244,
+    "PVLP011": 3124,
+    "PVLP061": 3505,
+    "PVLP069": 2508,
+    "PVLP097": 3093,
+    "PVLP106": 2909,
+    "PVLP111": 3230,
+    "PVLP120": 2945,
+    "PVLP135": 3360,
+    "PVLP151": 3061,
+    "TmY14": 2902
+  },
+  "title": "TURF WAR"
+}
