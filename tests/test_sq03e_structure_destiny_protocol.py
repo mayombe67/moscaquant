@@ -63,3 +63,15 @@ def test_no_fake_population_statistics():
 def test_protocol_does_not_assume_title_is_true():
     text = DOC.read_text()
     assert "The experiment does not assume the title is true." in text
+
+def test_deterministic_implementation_is_frozen():
+    cfg = load()
+    impl = cfg["deterministic_implementation"]
+    assert impl["spearman"]["rank_method"] == "average"
+    assert impl["top_fraction"]["k_rule"] == "ceil(N * 0.01)"
+    assert impl["top_fraction"]["tie_break"] == "edge_id ASC"
+    assert impl["top_fraction"]["exact_k_no_tie_expansion"] is True
+    assert impl["deciles"]["assignment"] == "equal-count bins after ascending sort"
+    assert impl["edge_lookup"]["pre_post_identity_must_match"] is True
+    assert cfg["protocol_amendment"]["timing"] == "BEFORE_ANALYSIS"
+

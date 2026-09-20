@@ -98,5 +98,38 @@
     "simulation_rows_as_independent_biological_samples": false,
     "formal_significance_threshold": false
   },
-  "claim_boundary": "SQ-03E measures descriptive alignment between structural male/female edge differences and modeled dynamic consequences inside the frozen MoscaQuant matched-central-brain system. It does not establish a biological sex mechanism, population-level statistical significance, organism-level behavior, intelligence differences, or financial utility."
+  "claim_boundary": "SQ-03E measures descriptive alignment between structural male/female edge differences and modeled dynamic consequences inside the frozen MoscaQuant matched-central-brain system. It does not establish a biological sex mechanism, population-level statistical significance, organism-level behavior, intelligence differences, or financial utility.",
+  "deterministic_implementation": {
+    "spearman": {
+      "rank_method": "average",
+      "finite_pairs_only": true,
+      "correlation": "Pearson correlation of average ranks",
+      "constant_vector_result": null
+    },
+    "top_fraction": {
+      "k_rule": "ceil(N * 0.01)",
+      "tie_break": "edge_id ASC",
+      "exact_k_no_tie_expansion": true
+    },
+    "deciles": {
+      "assignment": "equal-count bins after ascending sort",
+      "tie_break": "edge_id ASC",
+      "formula": "bin = floor(rank_index * 10 / N) + 1, capped at 10"
+    },
+    "edge_lookup": {
+      "aligned_table_row": "edge_id is interpreted as zero-based row position",
+      "pre_post_identity_must_match": true,
+      "mismatch_is_error": true
+    },
+    "missing_values": {
+      "nonfinite_secondary_predictors_excluded_pairwise": true,
+      "primary_weight_fields_required_finite": true
+    }
+  },
+  "protocol_amendment": {
+    "id": "SQ-03E-A1",
+    "timing": "BEFORE_ANALYSIS",
+    "reason": "Freeze rounding, tie handling, rank-correlation mechanics, and aligned-edge lookup before any SQ-03E association result is calculated.",
+    "scientific_effect": "No predictor, dynamic outcome, top fraction, decile count, or claim boundary changed."
+  }
 }

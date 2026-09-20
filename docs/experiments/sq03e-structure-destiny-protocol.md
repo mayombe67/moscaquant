@@ -156,6 +156,26 @@ However, SQ-03D.1 also established:
 SQ-03E therefore uses only raw `C` and `S` quantities. It does not rehabilitate
 or reuse `A` as an acceptance metric.
 
+## Deterministic implementation amendment SQ-03E-A1
+
+Before analysis, the following implementation details are frozen:
+
+- Spearman correlation is the Pearson correlation of average ranks, using only
+  finite paired values. A constant ranked vector returns null rather than a
+  manufactured coefficient.
+- Top-1% sets contain exactly `ceil(N * 0.01)` edges. Ties are broken by
+  ascending `edge_id`; ties do not expand the set.
+- Structural-difference deciles and total-weight bins are equal-count bins after
+  ascending sort with `edge_id` as the deterministic tie-breaker.
+- `edge_id` is interpreted as the zero-based row position in the frozen aligned
+  Feather table. The stored `pre` and `post` labels must match the SQ-03B/SQ-03D
+  identity or the analysis stops.
+- Nonfinite secondary structural predictors are excluded pairwise from the
+  affected descriptive association only. Primary male/female weight fields must
+  be finite.
+
+No scientific endpoint or threshold changed.
+
 ## Statistical boundary
 
 SQ-03E is a deterministic census.
