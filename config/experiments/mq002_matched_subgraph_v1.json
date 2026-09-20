@@ -1,0 +1,56 @@
+{
+  "schema_version": "moscaquant.data_qualification_protocol/v1",
+  "experiment_id": "MQ-002.1",
+  "program": "MQ-002",
+  "name": "MATCHED SUBGRAPH QUALIFICATION",
+  "lore_name": "THE OTHER FLY",
+  "status": "FROZEN_BEFORE_ACQUISITION",
+  "result_bearing_neural_experiment": false,
+  "identity_check_source_commit": "a23e8e515b60a1c7867d137765d582f93bf784d9",
+  "identity_check_observations": {
+    "mapping_sha256": "94aaadbefedcc314c69fb8ad62a07361c1f78ee39424bad38ac1a6d7ca4d0a12",
+    "mapping_entry_count": 281656,
+    "unique_cross_matched_labels": 8586,
+    "retinal_overlap": {
+      "matched": 3241,
+      "total": 3241
+    },
+    "relay_overlap": {
+      "matched": 2430,
+      "total": 2430
+    },
+    "descending_overlap": {
+      "matched": 1310,
+      "total": 1314
+    }
+  },
+  "official_aligned_edges": {
+    "filename": "mcns_fw_edge_comp.feather",
+    "source": "official flyconnectome/2025malecns companion data",
+    "automatic_acquisition_after_protocol_commit": true
+  },
+  "construction_scope": {
+    "initial_family": "isomorphic_only",
+    "central_brain_only": true,
+    "vnc_excluded": true,
+    "no_inferred_edges": true,
+    "no_shuffled_fill": true,
+    "preserve_unmatched_as_explicit_exclusions": true
+  },
+  "measurements": [
+    "aligned_edge_file_sha256",
+    "aligned_edge_row_count",
+    "columns_and_dtypes",
+    "available_dimorphism_labels",
+    "male_matched_nodes",
+    "female_matched_nodes",
+    "isomorphic_edge_count",
+    "retinal_interface_coverage",
+    "relay_interface_coverage",
+    "descending_interface_coverage",
+    "unmatched_mq001_interface_body_ids",
+    "candidate_matched_subgraph_node_count",
+    "candidate_matched_subgraph_edge_count"
+  ],
+  "claim_boundary": "MQ-002.1 qualifies and constructs metadata for a defensible matched male/female biological subgraph. It performs no neural dynamics and establishes no behavioral, sex-difference, biological-mechanism, or financial result."
+}
