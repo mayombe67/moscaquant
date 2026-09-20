@@ -55,3 +55,40 @@ This does **not** establish literal biological command hierarchy, anatomical gov
 ## Provenance note
 
 The authoritative result artifact was produced once and was not regenerated after its classification was observed. The provenance sidecar was added afterward to bind that original artifact to the execution commit, frozen config, analyzer, protocol, and SQ-03F.5 parent artifacts by SHA-256.
+
+## Effect-size and inference note
+
+The frozen empirical result is strong relative to its matched-source null, but
+statistical extremeness and practical magnitude are separate questions.
+
+For SQ-03F.6, the observed participation-mass HHI is
+`0.0002087914357059647` versus a matched-null median of
+`0.00016403723846293884`, for an effect ratio of
+`1.272829496901932`. The empirical upper-tail p-value is the add-one floor
+for 10,000 randomizations because zero matched-null draws reached or exceeded
+the observed statistic.
+
+External summaries should report the effect ratio alongside the empirical
+p-value rather than presenting the p-value alone. The magnitude of the effect
+requires calibration through replication and causal perturbation; it is not a
+standalone measure of biological, behavioral, or financial importance.
+
+## SQ-03 stopping rule
+
+The SQ-03F localization/convergence chain is closed at SQ-03F.6.
+
+No additional downstream statistic, higher-order partition, target ranking, or
+post-hoc subdivision of this result may be promoted as a new evidentiary claim
+without a separately versioned, prospectively frozen protocol.
+
+A new major SQ-03 claim must begin from one of the following:
+
+1. an independently derived biological comparator or replication cohort;
+2. a prospectively frozen causal perturbation hypothesis;
+3. an independently implemented replication of a frozen SQ-03 result; or
+4. a clearly labeled new exploratory program whose outputs are not treated as
+   confirmatory evidence for the closed SQ-03F chain.
+
+This stopping rule does not retroactively convert the sequential SQ-03 program
+into an independent family of tests. It makes the adaptive sequence explicit
+and prevents continued result-conditioned fishing after THE COMMISSION.

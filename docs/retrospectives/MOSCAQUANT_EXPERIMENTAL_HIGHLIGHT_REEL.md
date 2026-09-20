@@ -331,3 +331,13 @@ Approved internal historical footnote: the detour began with a useful Reddit
 question shortly before the project's separately nicknamed
 **"r/quant neckbeards problem."**
 
+
+## SQ-03 methodological boundary
+
+The SQ-03 comparison currently contains one independently derived connectome
+per side. Its results are therefore pair-specific, not population-level claims.
+
+The SQ-03F chain is closed at **THE COMMISSION**. New higher-order claims require
+a separately frozen causal, replication, or new-comparator protocol. The Family
+Model remains presentation vocabulary only: it cannot upgrade an evidentiary
+classification, and the comedy remains downstream of the evidence.

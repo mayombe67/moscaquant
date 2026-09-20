@@ -81,3 +81,14 @@ SQ-03A compares deterministic model responses of officially cross-matched male a
 
 No market skill, profitability, financial usefulness, WARDEN authority,
 ORACLE authority, or broker authority is assigned by this result.
+
+## Comparative-scope limitation
+
+MQ-001 and MQ-002 provide a biologically grounded paired comparison, but the
+current comparative program contains one connectome per side. Therefore all
+SQ-03 cross-biological findings are scoped to this specific pair.
+
+They do not estimate population-level variation, establish category-wide
+differences, or distinguish a general biological pattern from an
+individual-specimen idiosyncrasy. A broader claim requires additional
+independently derived biological comparators.
