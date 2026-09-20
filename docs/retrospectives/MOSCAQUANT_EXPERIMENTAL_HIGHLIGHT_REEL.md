@@ -224,3 +224,16 @@ Approved internal historical footnote: the detour began with a useful Reddit
 question shortly before the project's separately nicknamed
 **"r/quant neckbeards problem."**
 
+### 19 — Structure Is Not Destiny
+
+**Reference:** SQ-03E — STRUCTURE IS NOT DESTINY
+
+**Science:** Across 114,825 matched candidate edges, structural
+male/female weight difference was only weakly associated with modeled dynamic
+consequence (`rho≈0.061` for `S`,
+`rho≈0.050` for `C`). Frozen top-1%
+structural/dynamic overlap was only 188 edges for `S` and
+184 for `C`.
+
+**Lore:** The wiring diagram arrived with a résumé. The runtime checked its references.
+
