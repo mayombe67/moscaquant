@@ -1,0 +1,65 @@
+{
+  "schema": "moscaquant.sq03f1_no_free_looks/v1",
+  "sidequest_id": "SQ-03F.1",
+  "title": "NO FREE LOOKS",
+  "status": "FROZEN_BEFORE_ANALYSIS",
+  "class": "CONTEXT_COUNT_MATCHED_HOTSPOT_NETWORK_POSITION_TEST",
+  "parent": {
+    "sq03f_result": "artifacts/sidequests/sq03f-hotspot-test-result-v1.json",
+    "sq03f_result_sha256": "7bf440b8b42e4096ffa9828adc4c33d1e57b858d46547cb741a47c79d5ea68a0"
+  },
+  "question": "Do SQ-03F hotspot network-position differences persist when each hotspot is matched to a structurally similar control with the same frozen context count?",
+  "hotspots": {
+    "reuse_sq03f_exact_hotspot_sets": true,
+    "primary": "SQ-03F top 1% by max integrated S",
+    "secondary": "SQ-03F top 1% by max integrated C",
+    "no_reranking": true
+  },
+  "matching": {
+    "ratio": "1:1",
+    "without_replacement": true,
+    "hotspot_sets_analyzed_separately": true,
+    "exclude_all_edges_in_current_hotspot_set": true,
+    "exact_match": [
+      "context_count",
+      "total_weight_decile",
+      "abs_weight_difference_decile"
+    ],
+    "hotspot_order": "reuse SQ-03F dynamic-score DESC, edge_id ASC",
+    "control_choice": "within exact context_count and exact structural bins, minimize absolute total_weight difference; then absolute abs_weight_difference difference; then edge_id ASC",
+    "failure_rule": "if no unused control exists under the exact three-way match, record unmatched; do not relax context_count or either structural bin"
+  },
+  "features": {
+    "primary": [
+      "source_out_degree",
+      "target_in_degree",
+      "source_output_fraction",
+      "target_input_fraction"
+    ],
+    "secondary": [
+      "source_out_strength",
+      "target_in_strength",
+      "endpoint_degree_product"
+    ],
+    "context_count": "matching variable only; not an outcome in SQ-03F.1"
+  },
+  "comparisons": {
+    "report_for_each_feature": [
+      "hotspot median",
+      "matched-control median",
+      "median paired difference",
+      "fraction hotspot > control"
+    ],
+    "matching_diagnostics": [
+      "matched_count",
+      "unmatched_count",
+      "matched_fraction",
+      "context_count_exact_match_check",
+      "structural_bin_exact_match_check"
+    ],
+    "no_p_values": true,
+    "no_significance_threshold": true
+  },
+  "interpretation_rule": "A SQ-03F network-position pattern is considered to survive the context-count control only descriptively if it retains the same direction under SQ-03F.1; no new significance threshold is introduced.",
+  "claim_boundary": "SQ-03F.1 may describe whether SQ-03F local network-position differences remain after exact matching on represented intervention context count and frozen structural bins. It does not establish a biological sex mechanism, biological population effect, organism-level behavior, or causal importance outside the MoscaQuant model."
+}
