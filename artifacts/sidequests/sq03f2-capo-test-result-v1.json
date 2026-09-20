@@ -1,0 +1,263 @@
+{
+  "C_hotspots": {
+    "features": {
+      "focal_edge_output_rank_percentile": {
+        "control_median": 0.8199052132701422,
+        "fraction_hotspot_gt_control": 0.39599651871192343,
+        "hotspot_median": 0.7720588235294118,
+        "median_paired_difference": -0.015716486902927596,
+        "null_pair_count": 0,
+        "valid_pair_count": 1149
+      },
+      "leave_one_edge_out_mean_outgoing_weight": {
+        "control_median": 56.12200282087447,
+        "fraction_hotspot_gt_control": 0.6562228024369017,
+        "hotspot_median": 71.17164179104478,
+        "median_paired_difference": 17.478635098416063,
+        "null_pair_count": 0,
+        "valid_pair_count": 1149
+      },
+      "leave_one_edge_out_source_strength": {
+        "control_median": 11681.5,
+        "fraction_hotspot_gt_control": 0.6161879895561357,
+        "hotspot_median": 18132.0,
+        "median_paired_difference": 5917.5,
+        "null_pair_count": 0,
+        "valid_pair_count": 1149
+      },
+      "source_max_outgoing_weight": {
+        "control_median": 767.0,
+        "fraction_hotspot_gt_control": 0.6553524804177546,
+        "hotspot_median": 1144.5,
+        "median_paired_difference": 344.5,
+        "null_pair_count": 0,
+        "valid_pair_count": 1149
+      },
+      "source_median_outgoing_weight": {
+        "control_median": 22.0,
+        "fraction_hotspot_gt_control": 0.5639686684073107,
+        "hotspot_median": 25.5,
+        "median_paired_difference": 2.25,
+        "null_pair_count": 0,
+        "valid_pair_count": 1149
+      },
+      "source_out_edge_count": {
+        "control_median": 199.0,
+        "fraction_hotspot_gt_control": 0.4917319408181027,
+        "hotspot_median": 214.0,
+        "median_paired_difference": 0.0,
+        "null_pair_count": 0,
+        "valid_pair_count": 1149
+      },
+      "source_output_hhi": {
+        "control_median": 0.02471721679006554,
+        "fraction_hotspot_gt_control": 0.6040034812880766,
+        "hotspot_median": 0.03332256424269035,
+        "median_paired_difference": 0.008276740665816986,
+        "null_pair_count": 0,
+        "valid_pair_count": 1149
+      },
+      "source_top1_output_share": {
+        "control_median": 0.08059574468085107,
+        "fraction_hotspot_gt_control": 0.6022628372497825,
+        "hotspot_median": 0.09500909037593103,
+        "median_paired_difference": 0.019435643545840584,
+        "null_pair_count": 0,
+        "valid_pair_count": 1149
+      },
+      "source_top5_output_share": {
+        "control_median": 0.25083482177525823,
+        "fraction_hotspot_gt_control": 0.618798955613577,
+        "hotspot_median": 0.3194619309522232,
+        "median_paired_difference": 0.06889481668741362,
+        "null_pair_count": 0,
+        "valid_pair_count": 1149
+      }
+    },
+    "hotspot_count": 1149,
+    "matched_count": 1149,
+    "matched_fraction": 1.0,
+    "source_audit": {
+      "control_unique_source_sensitivity": {
+        "medians": {
+          "source_max_outgoing_weight": 602.25,
+          "source_median_outgoing_weight": 20.0,
+          "source_out_edge_count": 135.0,
+          "source_out_strength": 6994.75,
+          "source_output_hhi": 0.030222275805150016,
+          "source_top1_output_share": 0.0937338096812755,
+          "source_top5_output_share": 0.30272504925911903
+        },
+        "unique_source_count": 418
+      },
+      "fraction_hotspot_edges_sharing_source": 0.824194952132289,
+      "hotspot_unique_source_sensitivity": {
+        "medians": {
+          "source_max_outgoing_weight": 684.75,
+          "source_median_outgoing_weight": 20.0,
+          "source_out_edge_count": 155.5,
+          "source_out_strength": 8648.25,
+          "source_output_hhi": 0.02725488180400147,
+          "source_top1_output_share": 0.08734551100324718,
+          "source_top5_output_share": 0.2822290062861138
+        },
+        "unique_source_count": 290
+      },
+      "unique_control_source_count": 418,
+      "unique_hotspot_source_count": 290
+    },
+    "sq03f1_source_out_strength_reproduction": {
+      "control_median": 11930.5,
+      "fraction_hotspot_gt_control": 0.6144473455178416,
+      "hotspot_median": 19113.5,
+      "median_paired_difference": 6009.5
+    },
+    "unmatched": [],
+    "unmatched_count": 0
+  },
+  "S_hotspots": {
+    "features": {
+      "focal_edge_output_rank_percentile": {
+        "control_median": 0.8111075449998663,
+        "fraction_hotspot_gt_control": 0.406794425087108,
+        "hotspot_median": 0.7654037886340976,
+        "median_paired_difference": -0.014010120574868778,
+        "null_pair_count": 0,
+        "valid_pair_count": 1148
+      },
+      "leave_one_edge_out_mean_outgoing_weight": {
+        "control_median": 56.06558533145275,
+        "fraction_hotspot_gt_control": 0.6541811846689896,
+        "hotspot_median": 70.43410714285714,
+        "median_paired_difference": 16.94858580345898,
+        "null_pair_count": 0,
+        "valid_pair_count": 1148
+      },
+      "leave_one_edge_out_source_strength": {
+        "control_median": 11651.25,
+        "fraction_hotspot_gt_control": 0.6054006968641115,
+        "hotspot_median": 17199.25,
+        "median_paired_difference": 5728.0,
+        "null_pair_count": 0,
+        "valid_pair_count": 1148
+      },
+      "source_max_outgoing_weight": {
+        "control_median": 785.75,
+        "fraction_hotspot_gt_control": 0.6541811846689896,
+        "hotspot_median": 1144.5,
+        "median_paired_difference": 343.25,
+        "null_pair_count": 0,
+        "valid_pair_count": 1148
+      },
+      "source_median_outgoing_weight": {
+        "control_median": 22.0,
+        "fraction_hotspot_gt_control": 0.5653310104529616,
+        "hotspot_median": 25.5,
+        "median_paired_difference": 2.0,
+        "null_pair_count": 0,
+        "valid_pair_count": 1148
+      },
+      "source_out_edge_count": {
+        "control_median": 199.0,
+        "fraction_hotspot_gt_control": 0.4895470383275261,
+        "hotspot_median": 214.0,
+        "median_paired_difference": 0.0,
+        "null_pair_count": 0,
+        "valid_pair_count": 1148
+      },
+      "source_output_hhi": {
+        "control_median": 0.0245542272521503,
+        "fraction_hotspot_gt_control": 0.6114982578397212,
+        "hotspot_median": 0.03332256424269035,
+        "median_paired_difference": 0.008376246591964823,
+        "null_pair_count": 0,
+        "valid_pair_count": 1148
+      },
+      "source_top1_output_share": {
+        "control_median": 0.07863072910366282,
+        "fraction_hotspot_gt_control": 0.6062717770034843,
+        "hotspot_median": 0.09840979922992703,
+        "median_paired_difference": 0.020131555602662325,
+        "null_pair_count": 0,
+        "valid_pair_count": 1148
+      },
+      "source_top5_output_share": {
+        "control_median": 0.24970212765957447,
+        "fraction_hotspot_gt_control": 0.6289198606271778,
+        "hotspot_median": 0.33694338497276766,
+        "median_paired_difference": 0.06971825421665259,
+        "null_pair_count": 0,
+        "valid_pair_count": 1148
+      }
+    },
+    "hotspot_count": 1149,
+    "matched_count": 1148,
+    "matched_fraction": 0.999129677980853,
+    "source_audit": {
+      "control_unique_source_sensitivity": {
+        "medians": {
+          "source_max_outgoing_weight": 607.0,
+          "source_median_outgoing_weight": 20.0,
+          "source_out_edge_count": 136.5,
+          "source_out_strength": 7028.25,
+          "source_output_hhi": 0.029978676839634327,
+          "source_top1_output_share": 0.09289410189270614,
+          "source_top5_output_share": 0.30238713538719136
+        },
+        "unique_source_count": 424
+      },
+      "fraction_hotspot_edges_sharing_source": 0.804006968641115,
+      "hotspot_unique_source_sensitivity": {
+        "medians": {
+          "source_max_outgoing_weight": 670.25,
+          "source_median_outgoing_weight": 20.0,
+          "source_out_edge_count": 151.5,
+          "source_out_strength": 8294.5,
+          "source_output_hhi": 0.028050477716244006,
+          "source_top1_output_share": 0.08795055528932455,
+          "source_top5_output_share": 0.2845588056187732
+        },
+        "unique_source_count": 314
+      },
+      "unique_control_source_count": 424,
+      "unique_hotspot_source_count": 314
+    },
+    "sq03f1_source_out_strength_reproduction": {
+      "control_median": 11909.75,
+      "fraction_hotspot_gt_control": 0.6088850174216028,
+      "hotspot_median": 17803.5,
+      "median_paired_difference": 5865.25
+    },
+    "unmatched": [
+      {
+        "abs_weight_difference_decile": 10,
+        "context_count": 10,
+        "edge_id": 55033,
+        "score": 8.270144462585449e-07,
+        "total_weight_decile": 10
+      }
+    ],
+    "unmatched_count": 1
+  },
+  "aligned_edges_sha256": "1cac309c7760d16f5f041a7b924efbf5cdfa3a46570090fb234c2323ed9e313c",
+  "candidate_edge_count": 114825,
+  "claim_boundary": "SQ-03F.2 may describe source-level graph properties associated with the already-frozen hotspot sets under exact SQ-03F.1 matching. It cannot establish biological sex mechanisms, neuron classes, living-fly behavior, population effects, organism-level hierarchy, or financial utility.",
+  "classification": "AUTHORITATIVE_SOURCE_LEVEL_HOTSPOT_DECOMPOSITION",
+  "conservative_graph_edge_count": 639435,
+  "family_model": {
+    "firewall": "Family Model language is downstream of evidence and has no scientific authority.",
+    "presentation_name": "THE CAPO TEST",
+    "translation": "Is the edge the boss, or does it merely belong to a source neuron running a larger operation?"
+  },
+  "implementation_note": "Feature summaries omit a matched pair only when either side is null/non-finite; valid/null pair counts are recorded for every feature.",
+  "protocol_sha256": "b6e2d0362c9b0f2205ca221e404eccda21c67f3bae737142bc1d52b510e801bf",
+  "schema": "moscaquant.sq03f2_result/v1",
+  "sidequest_id": "SQ-03F.2",
+  "source_commit": "c22aef1c9365afe79cbbe6dd0bc63c262d52e405",
+  "source_profile_count": 7924,
+  "sq03b_ledger_sha256": "7b2632de5792973534177b697efdd7c3af0b82a836d9d2b597812dbc0dd1f725",
+  "sq03e_result_sha256": "648b795448d2e82198dd12620e2228824f084d57e87c89f1bb0645d9551d43c8",
+  "sq03f1_result_sha256": "e8ff42d6ef371d74276956515a3f27719e2a6c64be67da8a05fca3cf46e4c3e5",
+  "sq03f_result_sha256": "7bf440b8b42e4096ffa9828adc4c33d1e57b858d46547cb741a47c79d5ea68a0",
+  "title": "THE CAPO TEST"
+}
