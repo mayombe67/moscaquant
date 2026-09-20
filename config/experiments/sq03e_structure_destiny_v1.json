@@ -1,0 +1,102 @@
+{
+  "schema": "moscaquant.sq03e_structure_destiny/v1",
+  "sidequest_id": "SQ-03E",
+  "title": "STRUCTURE IS NOT DESTINY",
+  "status": "FROZEN_BEFORE_ANALYSIS",
+  "class": "STRUCTURE_VS_DYNAMICS_ASSOCIATION_CENSUS",
+  "parents": {
+    "sq03b_ledger": "artifacts/sidequests/sq03b-checkpoints-v1/results.ndjson",
+    "sq03b_ledger_sha256": "7b2632de5792973534177b697efdd7c3af0b82a836d9d2b597812dbc0dd1f725",
+    "sq03d_result": "artifacts/sidequests/sq03d-reciprocity-result-v1.json",
+    "sq03d1_result": "artifacts/sidequests/sq03d1-scalar-verification-result-v1.json",
+    "aligned_edges_sha256": "1cac309c7760d16f5f041a7b924efbf5cdfa3a46570090fb234c2323ed9e313c"
+  },
+  "question": "Do larger male/female structural edge differences predict larger modeled dynamic consequences, or are structural difference and dynamic causal importance only weakly aligned in the frozen matched-central-brain model?",
+  "unit_of_analysis": {
+    "primary": "edge_id",
+    "reason": "Collapse repeated input/anchor observations to one edge-level record so edges appearing in many SQ-03B memberships do not dominate the analysis."
+  },
+  "structural_predictors": {
+    "primary": "abs(weight_m - weight_f)",
+    "secondary": [
+      "abs(t)",
+      "p_corr",
+      "verdict_corr",
+      "total_weight = abs(weight_m) + abs(weight_f)",
+      "relative_weight_difference = abs(weight_m - weight_f) / (abs(weight_m) + abs(weight_f)) when denominator > 0 else 0"
+    ]
+  },
+  "dynamic_outcomes": {
+    "primary": "max integrated_positive_voltage total_effect_magnitude S across all SQ-03D input/anchor observations for the edge",
+    "secondary": [
+      "max integrated_positive_voltage context_residual C",
+      "max peak_voltage total_effect_magnitude S",
+      "max peak_voltage context_residual C",
+      "median integrated_positive_voltage total_effect_magnitude S",
+      "count of represented input/anchor contexts"
+    ],
+    "normalized_asymmetry_A_excluded_from_acceptance": true
+  },
+  "analyses": {
+    "rank_association": {
+      "spearman": true,
+      "p_values": false,
+      "pairs": [
+        [
+          "abs_weight_difference",
+          "max_integrated_total_effect_magnitude"
+        ],
+        [
+          "abs_weight_difference",
+          "max_integrated_context_residual"
+        ],
+        [
+          "abs_t",
+          "max_integrated_total_effect_magnitude"
+        ],
+        [
+          "abs_t",
+          "max_integrated_context_residual"
+        ]
+      ]
+    },
+    "deciles": {
+      "structural_abs_weight_difference_deciles": true,
+      "report_dynamic_median_and_max_per_decile": true
+    },
+    "extreme_overlap": {
+      "top_fraction": 0.01,
+      "compare": [
+        "top structural abs-weight-difference edges vs top dynamic-S edges",
+        "top structural abs-weight-difference edges vs top dynamic-C edges"
+      ],
+      "report_jaccard": true,
+      "report_overlap_count": true
+    },
+    "weight_magnitude_stratification": {
+      "enabled": true,
+      "bins": 10,
+      "purpose": "Check whether any structure-dynamics association is merely a consequence of larger absolute synaptic weights."
+    }
+  },
+  "sq03d1_status_handling": {
+    "formal_result": "FAILED",
+    "reason": "normalized asymmetry ratio A failed the frozen scalar acceptance rule",
+    "preserved_verified_quantities": [
+      "primitive subject metrics",
+      "integrated context residual C",
+      "integrated total effect magnitude S",
+      "peak context residual C",
+      "peak total effect magnitude S"
+    ],
+    "rule": "SQ-03E may use C and S because they reproduced across all 32 SQ-03D.1 verification pairs; normalized asymmetry A is not used as an SQ-03E endpoint."
+  },
+  "statistics": {
+    "deterministic_census": true,
+    "population_p_values": false,
+    "confidence_intervals_for_flies": false,
+    "simulation_rows_as_independent_biological_samples": false,
+    "formal_significance_threshold": false
+  },
+  "claim_boundary": "SQ-03E measures descriptive alignment between structural male/female edge differences and modeled dynamic consequences inside the frozen MoscaQuant matched-central-brain system. It does not establish a biological sex mechanism, population-level statistical significance, organism-level behavior, intelligence differences, or financial utility."
+}
