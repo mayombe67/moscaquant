@@ -1,0 +1,65 @@
+{
+  "schema": "moscaquant.sq03a_result_execution/v1",
+  "sidequest_id": "SQ-03A",
+  "title": "THE OTHER FLY",
+  "status": "FROZEN_BEFORE_RESULT_EXECUTION",
+  "authoritative_result": true,
+  "requires_clean_git_worktree": true,
+  "requires_passing_smoke_artifact": true,
+  "input_labels": [
+    "TmY14",
+    "AN_multi_124",
+    "AVLP532",
+    "CB2576",
+    "DNc01",
+    "LHPV6q1",
+    "LPLC2",
+    "aMe4",
+    "AVLP234",
+    "AVLP435",
+    "CB4116",
+    "SLP230"
+  ],
+  "anchor_labels": [
+    "DNc02",
+    "DNp27",
+    "DNp30"
+  ],
+  "frames": 64,
+  "stimulus": {
+    "frame": 0,
+    "amplitude": 0.5,
+    "duration_frames": 1,
+    "rationale": "Identical to the already-executed non-authoritative engineering smoke; frozen without tuning against MORTY/LILITH comparative outcomes."
+  },
+  "runtime": {
+    "implementation": "brain.hybrid_runtime.HybridRuntime",
+    "dt_ms": 1.0,
+    "tau_ms": 20.0,
+    "threshold": 1.0,
+    "reset_voltage": 0.0
+  },
+  "graph": {
+    "verdict_corr": "isomorphic",
+    "require_weight_m_positive": true,
+    "require_weight_f_positive": true,
+    "normalization": "common_global_max_abs_row_sum"
+  },
+  "replicates_per_subject": 2,
+  "subjects": {
+    "MORTY": "weight_m",
+    "LILITH": "weight_f"
+  },
+  "outputs": {
+    "artifact": "artifacts/sidequests/sq03a-other-fly-result-v1.json"
+  },
+  "predefined_comparisons": [
+    "per-input per-anchor MORTY-minus-LILITH peak-voltage delta",
+    "per-input per-anchor MORTY-minus-LILITH integrated-positive-voltage delta",
+    "per-input per-anchor first-positive-frame comparison",
+    "per-input aggregate response-vector Euclidean distance",
+    "per-input anchor peak-voltage rank-order comparison",
+    "deterministic A/A replay agreement"
+  ],
+  "claim_boundary": "SQ-03A compares deterministic model responses of officially cross-matched male and female Drosophila central-brain edge-weight sets under identical simulation mechanics and standardized stimulation. Differences are model results within this matched subgraph and do not establish sex superiority, intelligence, general behavior, biological mechanism, market skill, profitability, or financial usefulness."
+}

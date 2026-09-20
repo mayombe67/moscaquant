@@ -1,0 +1,27 @@
+{
+  "schema": "moscaquant.sq03a_smoke/v1",
+  "sidequest_id": "SQ-03A",
+  "title": "THE OTHER FLY",
+  "status": "ENGINEERING_SMOKE_ONLY",
+  "authoritative_result": false,
+  "input_label": "TmY14",
+  "frames": 64,
+  "stimulus": {
+    "frame": 0,
+    "amplitude": 0.5
+  },
+  "runtime": {
+    "implementation": "brain.hybrid_runtime.HybridRuntime",
+    "dt_ms": 1.0,
+    "tau_ms": 20.0,
+    "threshold": 1.0,
+    "reset_voltage": 0.0
+  },
+  "weight_normalization": {
+    "method": "common_global_max_abs_row_sum",
+    "description": "Compute one structural scale from the maximum absolute row sum observed across both aligned male and female matrices, then divide both matrices by that same scale."
+  },
+  "replicates_per_subject": 2,
+  "output": "artifacts/sidequests/sq03a-other-fly-smoke-v1.json",
+  "claim_boundary": "Engineering smoke only. Verifies graph construction, paired runtime plumbing, deterministic replay, frozen-label resolution, and artifact shape. It is not an SQ-03A scientific result and must not be used for biological interpretation."
+}

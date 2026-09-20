@@ -1,0 +1,119 @@
+{
+  "schema": "moscaquant.sq03a_other_fly/v1",
+  "sidequest_id": "SQ-03A",
+  "title": "THE OTHER FLY",
+  "subject_a": {
+    "id": "MQ-001",
+    "codename": "MORTY",
+    "weight_column": "weight_m"
+  },
+  "subject_b": {
+    "id": "MQ-002",
+    "codename": "LILITH",
+    "weight_column": "weight_f"
+  },
+  "status": "FROZEN_BEFORE_NEURAL_EXECUTION",
+  "comparison_scope": {
+    "graph_source": "~/moscaquant-data/external/mq002/mcns_fw_edge_comp.feather",
+    "edge_rule": {
+      "verdict_corr": "isomorphic",
+      "weight_m": ">0",
+      "weight_f": ">0"
+    },
+    "node_identity": "official MaleCNS/FlyWire cross-matched labels",
+    "vnc_excluded": true,
+    "optic_lobe_source_reconstruction": false,
+    "inferred_edges": false,
+    "shuffled_fill": false
+  },
+  "frozen_output_anchors": [
+    {
+      "label": "DNc02",
+      "mq001_model_indices": [
+        656
+      ],
+      "mq001_body_ids": [
+        10705
+      ]
+    },
+    {
+      "label": "DNp27",
+      "mq001_model_indices": [
+        51,
+        137122
+      ],
+      "mq001_body_ids": [
+        10063,
+        536048
+      ]
+    },
+    {
+      "label": "DNp30",
+      "mq001_model_indices": [
+        55
+      ],
+      "mq001_body_ids": [
+        10068
+      ]
+    }
+  ],
+  "frozen_input_panel_rule": {
+    "description": "All first-hop presynaptic cross-matched labels that connect to at least two frozen output anchors under the frozen isomorphic, positive-both matched graph.",
+    "minimum_anchor_count": 2,
+    "expected_labels_from_qualification": [
+      "TmY14",
+      "AN_multi_124",
+      "AVLP532",
+      "CB2576",
+      "DNc01",
+      "LHPV6q1",
+      "LPLC2",
+      "aMe4",
+      "AVLP234",
+      "AVLP435",
+      "CB4116",
+      "SLP230"
+    ],
+    "post_execution_selection_allowed": false
+  },
+  "stimulus": {
+    "kind": "standardized matched-node pulse",
+    "same_schedule_both_subjects": true,
+    "same_amplitude_both_subjects": true,
+    "market_semantics": false,
+    "financial_semantics": false
+  },
+  "runtime_rule": {
+    "same_model_equations": true,
+    "same_nonconnectomic_parameters": true,
+    "only_sex_specific_difference": "sex-specific aligned edge weights from the published comparison product, weight_m versus weight_f"
+  },
+  "primary_outputs": [
+    "anchor voltage trace",
+    "anchor first-positive frame",
+    "anchor peak voltage",
+    "anchor integrated positive voltage"
+  ],
+  "comparison_outputs": [
+    "per-input per-anchor response delta",
+    "aggregate response-vector distance",
+    "rank-order stability across anchors",
+    "deterministic replicate agreement"
+  ],
+  "controls": {
+    "aa_replay": true,
+    "identical_input_schedule": true,
+    "identical_nonconnectomic_runtime": true,
+    "shuffled_mosca_retained_as_separate_control_family": true
+  },
+  "prohibited_claims": [
+    "sex superiority",
+    "intelligence difference",
+    "general behavioral difference",
+    "biological mechanism without additional evidence",
+    "market skill",
+    "profitability",
+    "financial usefulness"
+  ],
+  "claim_boundary": "SQ-03A compares deterministic model responses of two independently derived, officially cross-matched Drosophila connectome weight sets inside a preregistered central-brain subgraph. It does not recreate the unavailable female optic-lobe sensory pathway and does not support general biological, behavioral, intelligence, or financial claims."
+}
