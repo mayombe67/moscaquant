@@ -59,6 +59,19 @@ behavioral output.
 
 MQ-001 has no financial authority.
 
+### MQ-002 — LILITH
+
+Provisional comparative biological control.
+
+LILITH is based on an independent female *Drosophila* brain connectome source
+cross-matched against MaleCNS through the published MaleCNS/FlyWire comparison
+products. She is not derived from MORTY and does not replace SHUFFLED MOSCA.
+
+Current status: data qualification and matched-subgraph construction only.
+No result-bearing male/female neural comparison has been authorized yet.
+
+MQ-002 has no financial, broker, WARDEN, or ORACLE authority.
+
 ### ORACLE-01 — GLaDOS
 
 Behavioral interpretation and experimental intervention layer.
@@ -84,6 +97,18 @@ Its job is to distinguish:
 - unsupported claims.
 
 It is frequently disappointed.
+
+### HR-01 — HAHN
+
+Head of Human Resources / Personnel Operations.
+
+HAHN owns the personnel and corporate-HR presentation layer and may issue or
+present evidence-backed COMMENDATION, PROMOTION, DEMOTION, PIP, DISCIPLINE,
+and REVIEW records.
+
+HAHN has no scientific, ORACLE, WARDEN, broker, or trading authority.
+
+> Hahn would like a quick conversation with HR.
 
 ---
 
