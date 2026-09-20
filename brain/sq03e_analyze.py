@@ -235,13 +235,22 @@ def main() -> int:
     if missing:
         raise RuntimeError(f"Aligned Feather missing required columns: {sorted(missing)}")
 
+    conservative_mask = (
+        (aligned["verdict_corr"] == "isomorphic")
+        & (aligned["weight_m"] > 0)
+        & (aligned["weight_f"] > 0)
+    )
+    matched = aligned.loc[conservative_mask].copy()
+    matched["original_feather_row"] = matched.index.astype(int)
+    matched = matched.reset_index(drop=True)
+
     edge_rows = []
 
     for edge_id, contexts in sorted(by_edge.items()):
-        if edge_id < 0 or edge_id >= len(aligned):
-            raise RuntimeError(f"edge_id out of Feather bounds: {edge_id}")
+        if edge_id < 0 or edge_id >= len(matched):
+            raise RuntimeError(f"edge_id out of conservative matched-table bounds: {edge_id}")
 
-        a = aligned.iloc[edge_id]
+        a = matched.iloc[edge_id]
 
         pre = str(a["pre"])
         post = str(a["post"])
@@ -284,6 +293,7 @@ def main() -> int:
 
         edge_rows.append({
             "edge_id": edge_id,
+            "original_feather_row": int(a["original_feather_row"]),
             "pre": pre,
             "post": post,
             "structure": {
@@ -413,6 +423,11 @@ def main() -> int:
         "aligned_edges_sha256": sha256(FEATHER),
         "pair_observation_count": len(pair_rows),
         "unique_edge_count": len(edge_rows),
+        "conservative_matched_edge_table_count": len(matched),
+        "edge_id_indexing": (
+            'zero-based position after verdict_corr=="isomorphic" and '
+            'weight_m>0 and weight_f>0, preserving original Feather order'
+        ),
         "verdict_corr_counts": dict(sorted(verdict_counts.items())),
         "rank_associations": associations,
         "structural_difference_deciles": structural_deciles,

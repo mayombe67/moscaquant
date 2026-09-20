@@ -42,3 +42,15 @@ def test_overlap_summary_jaccard():
     got = overlap_summary(a, b)
     assert got["overlap_count"] == 1
     assert math.isclose(got["jaccard"], 1 / 3)
+
+
+def test_analyzer_uses_conservative_matched_indexing():
+    from pathlib import Path
+    import brain.sq03e_analyze as mod
+
+    text = Path(mod.__file__).read_text()
+    assert '(aligned["verdict_corr"] == "isomorphic")' in text
+    assert '(aligned["weight_m"] > 0)' in text
+    assert '(aligned["weight_f"] > 0)' in text
+    assert 'matched["original_feather_row"]' in text
+    assert 'a = matched.iloc[edge_id]' in text

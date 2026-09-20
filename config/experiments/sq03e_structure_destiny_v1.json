@@ -117,7 +117,10 @@
       "formula": "bin = floor(rank_index * 10 / N) + 1, capped at 10"
     },
     "edge_lookup": {
-      "aligned_table_row": "edge_id is interpreted as zero-based row position",
+      "source_table": "frozen aligned Feather table",
+      "conservative_filter": "verdict_corr == \"isomorphic\" AND weight_m > 0 AND weight_f > 0",
+      "edge_id_semantics": "edge_id is the zero-based positional index within the conservative matched-edge table after applying the frozen filter in original Feather row order",
+      "original_feather_row_preserved_for_audit": true,
       "pre_post_identity_must_match": true,
       "mismatch_is_error": true
     },
@@ -126,10 +129,18 @@
       "primary_weight_fields_required_finite": true
     }
   },
-  "protocol_amendment": {
-    "id": "SQ-03E-A1",
-    "timing": "BEFORE_ANALYSIS",
-    "reason": "Freeze rounding, tie handling, rank-correlation mechanics, and aligned-edge lookup before any SQ-03E association result is calculated.",
-    "scientific_effect": "No predictor, dynamic outcome, top fraction, decile count, or claim boundary changed."
-  }
+  "protocol_amendments": [
+    {
+      "id": "SQ-03E-A1",
+      "timing": "BEFORE_ANALYSIS",
+      "reason": "Freeze rounding, tie handling, rank-correlation mechanics, and aligned-edge lookup before any SQ-03E association result is calculated.",
+      "scientific_effect": "No predictor, dynamic outcome, top fraction, decile count, or claim boundary changed."
+    },
+    {
+      "id": "SQ-03E-A2",
+      "timing": "BEFORE_ANALYSIS",
+      "reason": "Diagnostic replay established that SQ-03B edge_id indexes the conservative matched-edge table, not raw Feather row positions.",
+      "scientific_effect": "Corrects source-row addressing only. No predictor, dynamic outcome, ranking rule, top fraction, decile definition, or claim boundary changed."
+    }
+  ]
 }

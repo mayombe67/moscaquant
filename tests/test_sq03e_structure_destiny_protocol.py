@@ -73,5 +73,16 @@ def test_deterministic_implementation_is_frozen():
     assert impl["top_fraction"]["exact_k_no_tie_expansion"] is True
     assert impl["deciles"]["assignment"] == "equal-count bins after ascending sort"
     assert impl["edge_lookup"]["pre_post_identity_must_match"] is True
-    assert cfg["protocol_amendment"]["timing"] == "BEFORE_ANALYSIS"
+    assert "conservative matched-edge table" in impl["edge_lookup"]["edge_id_semantics"]
+    assert all(a["timing"] == "BEFORE_ANALYSIS" for a in cfg["protocol_amendments"])
 
+
+
+def test_sq03e_a2_preserves_conservative_filter():
+    cfg = load()
+    lookup = cfg["deterministic_implementation"]["edge_lookup"]
+    assert lookup["conservative_filter"] == (
+        'verdict_corr == "isomorphic" AND weight_m > 0 AND weight_f > 0'
+    )
+    assert lookup["original_feather_row_preserved_for_audit"] is True
+    assert any(a["id"] == "SQ-03E-A2" for a in cfg["protocol_amendments"])

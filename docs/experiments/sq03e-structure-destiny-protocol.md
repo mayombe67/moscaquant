@@ -176,6 +176,29 @@ Before analysis, the following implementation details are frozen:
 
 No scientific endpoint or threshold changed.
 
+## Deterministic implementation amendment SQ-03E-A2
+
+Before any SQ-03E statistic was calculated, the first analyzer execution stopped
+on an identity guard. Diagnostic replay showed that `edge_id` is **not** the
+raw Feather row number.
+
+`edge_id` is the zero-based positional index in the conservative matched-edge
+table obtained from the frozen aligned Feather file using:
+
+`verdict_corr == "isomorphic" AND weight_m > 0 AND weight_f > 0`
+
+while preserving original Feather row order.
+
+Example diagnostic:
+
+- SQ-03B ledger `edge_id=2`: `5-HTPLP01 -> AN_AVLP_11`, weights `37/19`;
+- raw Feather row 2: `5-HTPLP01 -> AN01A033`, noise, weights `0/1`;
+- conservative matched position 2: `5-HTPLP01 -> AN_AVLP_11`, weights `37/19`,
+  original Feather row 3.
+
+This amendment changes only source-row addressing. No scientific endpoint,
+ranking rule, threshold, or interpretation changed.
+
 ## Statistical boundary
 
 SQ-03E is a deterministic census.
