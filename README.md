@@ -18,7 +18,7 @@ It is also intentionally ridiculous.
 
 ## Current Status
 
-**Current roadmap phase:** MQ-8 — CORPORATE CULTURE
+**Current roadmap phase:** MQ-9 — OPEN THE PANOPTICON
 
 Completed phases:
 
@@ -31,11 +31,14 @@ Completed phases:
 - MQ-5 — INTERVENTION AND PERTURBATION EXPERIMENTS
 - MQ-6 — DEPLOY THE WARDEN
 - MQ-7 — AWAKEN THE ORACLE
+- MQ-8 — CORPORATE CULTURE
+
+Current:
+
+- MQ-9 — OPEN THE PANOPTICON
 
 Next:
 
-- MQ-8 — CORPORATE CULTURE
-- MQ-9 — OPEN THE PANOPTICON
 - MQ-10 — INTRODUCE THE MONEY
 - MQ-11 — THE CASINO OPENS
 - MQ-12 — CONSEQUENCES
@@ -178,7 +181,7 @@ Public deployment:
 
 `https://moscaquant.com/neuroscope/`
 
-The broader Panopticon spectator environment is planned for roadmap MQ-9.
+The Panopticon baseline is deployed. MQ-9 expands it into the public spectator interface and embodied Containment Chamber.
 
 ---
 
@@ -197,28 +200,27 @@ Git history is the authoritative project record.
 
 ---
 
-## Current Phase — MQ-8
+## Current Phase — MQ-9
 
-MQ-8 adds the corporate-culture layer:
+MQ-9 opens the Panopticon as the public spectator interface and embodied
+Containment Chamber.
 
-- achievements;
-- personnel records;
-- reviews;
-- PIPs;
-- narrative telemetry;
-- science/lore presentation.
+The public experience may visualize and dramatize sanitized scientific,
+behavioral, containment, achievement, personnel, HR, Broadcast, and public-safe
+market state, but presentation remains downstream of canonical evidence.
 
-The entertainment layer may reference real experimental events, but it may not
-rewrite scientific results, experimental history, or containment rules.
+MQ-9 does not grant Panopticon scientific, ORACLE, WARDEN, broker, or trading
+authority.
 
-Expect:
+Current focus:
 
-- WallStreetBets energy;
-- containment-lab bureaucracy;
-- sci-fi references;
-- video-game achievement logic;
-- an increasingly hostile relationship between GLaDOS and Placeholder
-  McDoctorate.
+- public spectator experience;
+- embodied MQ-001 / MORTY containment presentation;
+- SITE-19B containment-room presentation;
+- integration of accepted Panopticon systems into the public experience;
+- preservation of scientific claim boundaries and authority separation.
+
+Presentation may interpret evidence. It may never manufacture it.
 
 ---
 
