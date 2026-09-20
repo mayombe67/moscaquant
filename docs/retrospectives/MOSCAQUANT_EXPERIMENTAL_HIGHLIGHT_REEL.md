@@ -152,11 +152,83 @@ Small global changes to spike threshold and membrane time constant produced larg
 **Science:** the frozen runtime is strongly sensitive to global model mechanics, but the wider-network propagation limit was not overcome by the tested excitability and membrane-persistence changes.\
 **Lore:** We turned every scientifically permitted knob. MORTY got louder. The rest of the brain still declined the meeting.
 
-### 18 — FIND THE DIFFERENCE
-**Reference:** SQ-03B FIND THE DIFFERENCE; SQ-03C CHECK THE RECEIPTS.  
-SQ-03B exposed a long-tailed landscape of single-edge counterfactual sensitivities, but its production run used the validated batched execution path. SQ-03C froze 84 upper-tail jobs and 64 low-tail controls, then reran all 148 one at a time through the original scalar `HybridRuntime`. All 148 passed exact A/A replay and all 148 agreed with the SQ-03B metrics under the already-frozen numerical parity contract.  
-**Science:** the selected SQ-03B upper-tail localization effects survived independent scalar re-execution; the low-tail controls reproduced as well. This rules out the batched engine as the explanation for the verified upper-tail signal, while remaining a computational replication rather than a biological or population-level statistical result.  
-**Lore:** Science accused the batch engine of cooking the books. One hundred forty-eight interrogations later, the machine produced receipts.
+### 18 — THE OTHER FLY
+**Reference:** SQ-03A — THE OTHER FLY.  
+A second independently derived biological connectome entered the experiment as MQ-002 / LILITH, a provisional comparative biological control rather than a shuffled copy of MORTY.  
+**Science:** SQ-03A established the cross-biological comparison framework and the matched structural basis used by the later SQ-03 chain. MQ-002 remained provisional and did not replace randomized or shuffled controls.  
+**Lore:** MORTY spent the opening act believing he was the only fly in the room. Then LILITH walked through the door. *(SCP-style lore rank: EUCLID.)*
+
+### 19 — FIND THE DIFFERENCE
+**Reference:** SQ-03B — FIND THE DIFFERENCE.  
+SQ-03B localized a long-tailed landscape of single-edge counterfactual sensitivities across the frozen matched system and recorded the candidate work in a reusable ledger rather than allowing later experiments to rediscover convenient examples.  
+**Science:** The experiment identified where matched structural differences produced modeled dynamic consequences under the frozen runtime, creating the candidate ledger inherited by later verification and localization work.  
+**Lore:** Placeholder McDoctorate slid two connectomes across the table and said, “Find the difference.” GLaDOS came back with a ledger. *(SCP-style lore rank: EUCLID.)*
+
+### 20 — CHECK THE RECEIPTS
+**Reference:** SQ-03C — CHECK THE RECEIPTS.  
+SQ-03C froze 84 upper-tail jobs and 64 low-tail controls, then reran all 148 one at a time through the original scalar `HybridRuntime`. All 148 passed exact A/A replay and all 148 agreed with the SQ-03B metrics under the already-frozen numerical parity contract.  
+**Science:** The selected SQ-03B localization effects survived independent scalar re-execution, including the low-tail controls. This ruled out the batched engine as the explanation for the verified upper-tail signal while remaining a computational replication rather than a biological population-level result.  
+**Lore:** Science accused the batch engine of cooking the books. One hundred forty-eight interrogations later, the machine produced receipts. *(SCP-style lore rank: KETER.)*
+
+### 21 — SAME KNIFE
+**Reference:** SQ-03D — SAME KNIFE.  
+SQ-03D moved from isolated verified effects into paired structural context and asked whether apparently comparable network relationships behaved symmetrically once embedded in their surrounding graph.  
+**Science:** The reciprocity/context analysis showed that structural similarity alone was not sufficient to guarantee equivalent modeled consequence across paired contexts, motivating a dedicated verification pass rather than a stronger biological claim.  
+**Lore:** Same knife. Different room. Different blood pattern. Placeholder McDoctorate immediately requested another lab report. *(SCP-style lore rank: EUCLID.)*
+
+### 22 — DOUBLE CHECK
+**Reference:** SQ-03D.1 — DOUBLE CHECK.  
+The paired SQ-03D observations were independently scalar-verified against the frozen upstream records rather than accepted because the first analysis looked persuasive.  
+**Science:** SQ-03D.1 served as an independent computational verification layer for the reciprocity/context result, preserving the project rule that discovery and verification should not be the same calculation grading itself.  
+**Lore:** GLaDOS said the knife matched. Placeholder McDoctorate checked the fingerprints anyway. *(SCP-style lore rank: KETER.)*
+
+### 23 — STRUCTURE IS NOT DESTINY
+**Reference:** SQ-03E — STRUCTURE IS NOT DESTINY.  
+Across 114,825 matched candidate edges, structural male/female weight difference was only weakly associated with modeled dynamic consequence (`rho≈0.061` for `S`, `rho≈0.050` for `C`). Frozen top-1% structural/dynamic overlap was only 188 edges for `S` and 184 for `C`.  
+**Science:** Large structural difference was a poor proxy for large modeled consequence inside the frozen comparison. This redirected the next experiments away from “biggest wiring difference wins” and toward where causal leverage was actually concentrated.  
+**Lore:** The wiring diagram arrived with a résumé. The runtime checked its references. *(SCP-style lore rank: KETER.)*
+
+### 24 — HOTSPOT
+**Reference:** SQ-03F — HOTSPOT.  
+With structural magnitude demoted as a simple explanation, SQ-03F asked whether high modeled consequences clustered around particular network locations inside the frozen 114,825-edge candidate set.  
+**Science:** The experiment shifted the unit of attention from individual large structural differences toward repeat localization of high-interest effects, setting up the source-level tests that followed.  
+**Lore:** The city had 114,825 candidate streets. Some neighborhoods kept appearing in the police reports. *(SCP-style lore rank: EUCLID.)*
+
+### 25 — NO FREE LOOKS
+**Reference:** SQ-03F.1 — NO FREE LOOKS.  
+The hotspot program explicitly separated observation from follow-up: interesting sources or patterns could not be promoted into a new claim simply because they looked compelling after inspection.  
+**Science:** SQ-03F.1 hardened the prospective-analysis boundary. Follow-up questions had to be frozen as new experiments rather than obtained by repeatedly looking at the same result until a preferred story appeared.  
+**Lore:** GLaDOS pressed her face against the evidence-room glass. Senator Armstrong closed the blinds. “No free looks.” *(SCP-style lore rank: SAFE.)*
+
+### 26 — CAPO TEST
+**Reference:** SQ-03F.2 — CAPO TEST.  
+The analysis moved from hotspot edges to source-level organization, using frozen source profiles and opportunity-aware comparisons rather than treating high-output sources as automatically interesting.  
+**Science:** CAPO TEST established the source-level framework needed to distinguish recurrent upstream organization from mere opportunity or throughput, creating the basis for the stricter randomized MADE MEN test.  
+**Lore:** We stopped asking which crimes were important and started asking who kept giving the orders. *(SCP-style lore rank: EUCLID.)*
+
+### 27 — MADE MEN
+**Reference:** SQ-03F.3 — MADE MEN.  
+SQ-03F.3 froze the high-interest source definition and tested it under stratified randomization. The implementation also documented its deterministic independent randomization streams rather than rewriting an originally underspecified seed detail after the fact.  
+**Science:** The experiment promoted source-level hotspot structure into a prospective matched-null framework and preserved the exact randomization implementation in a clarification record. The clarification documented what was run; it did not tune or rerun the result.  
+**Lore:** Nobody gets made because GLaDOS likes the cut of their suit. The books had to open first. *(SCP-style lore rank: KETER.)*
+
+### 28 — THE SIT-DOWN
+**Reference:** SQ-03F.4 — THE SIT-DOWN.  
+The frozen `S` and `C` analyses each produced 45 made sources. Their intersection contained 42 sources — 42 of 45 seats occupied by the same names.  
+**Science:** SQ-03F.4 established a highly shared source set across the two frozen views and recorded those 42 shared sources as the authoritative eligible set for the next prospective experiment. It did not yet claim that their downstream territories converged.  
+**Lore:** S sent 45 people to the table. C sent 45. Forty-two chairs were occupied by the same guys. Placeholder McDoctorate still refused to call it a family. *(SCP-style lore rank: KETER.)*
+
+### 29 — TURF WAR
+**Reference:** SQ-03F.5 — TURF WAR.  
+The 42 shared SIT-DOWN sources were frozen before analysis and tested for overlap among their two-hop downstream territories against 10,000 out-degree-decile matched source sets using seed `314159`. Observed mean pairwise Jaccard was `0.5621987198049191` versus a null median of `0.40521662251703366`, an effect ratio of `1.3874029064078843`. The empirical upper-tail p-value was `9.999000099990002e-05`, the add-one floor: zero of 10,000 null draws reached the observed statistic.  
+**Science:** Frozen classification: `GREATER_THAN_NULL_DOWNSTREAM_CONVERGENCE`. Within the frozen MoscaQuant model and source universe, the shared sources occupied downstream territories that overlapped substantially more than expected under the matched-source null. This is not a claim of literal anatomical territory, organism-level organization, or financial/trading usefulness.  
+**Lore:** The SIT-DOWN guys were not merely on the same payroll. They were working the same turf. *(SCP-style lore rank: THAUMIEL.)*
+
+### 30 — THE COMMISSION
+**Reference:** SQ-03F.6 — THE COMMISSION.  
+THE COMMISSION asked whether TURF WAR's convergence was broadly distributed or disproportionately concentrated among downstream targets. Frozen participation-mass HHI was `0.0002087914357059647` versus a matched-null median of `0.00016403723846293884`, an effect ratio of `1.272829496901932`. The upper-tail p-value was again `9.999000099990002e-05`: zero of 10,000 matched-null draws reached the observed concentration. The observed structure contained 7,475 unique downstream targets; 306 were reached by all 42 sources and 3,317 by at least half.  
+**Science:** Frozen classification: `GREATER_THAN_NULL_TARGET_CONCENTRATION`. Combined with TURF WAR, the model-level result is that the 42 shared sources both converge downstream more strongly than expected and concentrate participation among targets more strongly than expected. This does not establish literal biological command hierarchy, consciousness, organism-level functional modules, or financial/trading usefulness.  
+**Lore:** TURF WAR proved the family shared territory. THE COMMISSION found an unusually concentrated table inside it. That pygmy thing in Jersey just filed incorporation papers. *(SCP-style lore rank: THAUMIEL.)*
 
 ## Scientific lessons to keep
 
@@ -203,6 +275,20 @@ These are candidates, not yet the canonical MQ-8 achievement registry: `MISSION 
 - `docs/experiments/sq03c-scalar-verification-protocol.md`
 - `docs/experiments/sq03c-scalar-verification-results.md`
 
+- **SQ-03A — THE OTHER FLY** — independent biological comparator enters the program.
+- **SQ-03B — FIND THE DIFFERENCE** — edge-level localization and candidate ledger.
+- **SQ-03C — CHECK THE RECEIPTS** — scalar verification of selected localization effects.
+- **SQ-03D — SAME KNIFE** — reciprocity/context analysis.
+- **SQ-03D.1 — DOUBLE CHECK** — independent verification of the paired-context result.
+- **SQ-03E — STRUCTURE IS NOT DESTINY** — structural magnitude weakly predicts modeled consequence.
+- **SQ-03F — HOTSPOT** — localization shifts toward recurrent high-interest network regions.
+- **SQ-03F.1 — NO FREE LOOKS** — prospective follow-up boundary.
+- **SQ-03F.2 — CAPO TEST** — source-level organization and opportunity-aware comparison.
+- **SQ-03F.3 — MADE MEN** — stratified randomized source-level test.
+- **SQ-03F.4 — THE SIT-DOWN** — 42 shared sources from two 45-source made sets.
+- **SQ-03F.5 — TURF WAR** — greater-than-null two-hop downstream convergence.
+- **SQ-03F.6 — THE COMMISSION** — greater-than-null downstream target concentration.
+
 ## Closing note
 
 MoscaQuant is still deliberately ridiculous. But the strongest part of the project is no longer the premise. It is the discipline with which the premise has been constrained: frozen baselines, matched controls, replayable state, null-preserving protocols, structural immutability, dynamic tracing, and causal ablation. The humor works because the experiment is allowed to embarrass the story.
@@ -245,15 +331,3 @@ Approved internal historical footnote: the detour began with a useful Reddit
 question shortly before the project's separately nicknamed
 **"r/quant neckbeards problem."**
 
-### 19 — STRUCTURE IS NOT DESTINY
-
-**Reference:** SQ-03E — STRUCTURE IS NOT DESTINY
-
-**Science:** Across 114,825 matched candidate edges, structural
-male/female weight difference was only weakly associated with modeled dynamic
-consequence (`rho≈0.061` for `S`,
-`rho≈0.050` for `C`). Frozen top-1%
-structural/dynamic overlap was only 188 edges for `S` and
-184 for `C`.
-
-**Lore:** The wiring diagram arrived with a résumé. The runtime checked its references.
