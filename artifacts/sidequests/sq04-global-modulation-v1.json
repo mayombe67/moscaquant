@@ -1,0 +1,225 @@
+{
+  "schema_version": "moscaquant.sidequest.global_modulation_result/v1",
+  "sidequest_id": "SQ-04",
+  "name": "GLOBAL MODULATION SENSITIVITY",
+  "source_commit": "f4d2949012abd1a2db33df264fa0ecf3415f1a25",
+  "config_path": "config/experiments/sq04_global_modulation_v1.json",
+  "config_sha256": "f764888910fd49887ec2f2d203eea9424c54aa74fdd13d77cf93ea93bfb0940f",
+  "implementation": {
+    "condition": "A",
+    "frame_count": 16,
+    "dt_ms": 1.0,
+    "reset": 0.0,
+    "release_gain_config_path": "config/sensory/visual-transduction-v1.toml",
+    "release_gain_key": "transduction.release_gain",
+    "release_gain": 0.9981738484618123
+  },
+  "claim_boundary": "SQ-04 measures deterministic sensitivity of the frozen MoscaQuant computational runtime to small global changes in spike threshold and membrane time constant. These parameters are model mechanics. The experiment does not identify or simulate a biological neuromodulatory system, establish biological realism, test learning, or demonstrate financial usefulness.",
+  "rows": [
+    {
+      "variant": {
+        "id": "REFERENCE",
+        "class": "REFERENCE",
+        "threshold": 1.0,
+        "tau_ms": 20.0
+      },
+      "deterministic_AA_replay": true,
+      "result": {
+        "threshold": 1.0,
+        "tau_ms": 20.0,
+        "dt_ms": 1.0,
+        "frame_count": 16,
+        "retinal_hash": "531ad354bf4c297a78a9c349e7579cc3bf3d7e83ce5262d6159edec03a10858b",
+        "neural_hash": "30e898b0cc337ea9fff8048f907336a8aeb049fc2270d20f891a3f94970ed0d8",
+        "relay_hash": "c9778ad19f1a38218dd0d19f4cd5505db2213cc958a95bace5a465dce73b45bd",
+        "wider_hash": "240e9248c840c0d18855fad8c8eefe8a9ea7db23c90106a3175035a99912a771",
+        "retinal_spike_count": 2605,
+        "relay_spike_count": 40,
+        "wider_network_spike_count": 0,
+        "first_relay_spike_time_ms_if_any": 131.0,
+        "first_wider_spike_time_ms_if_any": null,
+        "final_voltage_hash": "c53a6a5e3ec82d226d8467cd372681a9657431906dbe68209075fe72866214da",
+        "final_voltage_max": 0.9837744235992432,
+        "final_voltage_min": -0.36811596155166626
+      },
+      "differs_from_reference": {
+        "retinal_hash": false,
+        "neural_hash": false,
+        "relay_hash": false,
+        "wider_hash": false,
+        "retinal_spike_count": false,
+        "relay_spike_count": false,
+        "wider_network_spike_count": false,
+        "first_relay_spike_time_ms_if_any": false,
+        "first_wider_spike_time_ms_if_any": false,
+        "final_voltage_hash": false,
+        "final_voltage_max": false,
+        "final_voltage_min": false
+      }
+    },
+    {
+      "variant": {
+        "id": "THRESHOLD_LOW_10",
+        "class": "GLOBAL_EXCITABILITY_SENSITIVITY",
+        "threshold": 0.9,
+        "tau_ms": 20.0
+      },
+      "deterministic_AA_replay": true,
+      "result": {
+        "threshold": 0.9,
+        "tau_ms": 20.0,
+        "dt_ms": 1.0,
+        "frame_count": 16,
+        "retinal_hash": "b53815f4931863b22c65a18d1dfbd6ca47a32ff4e88b28247e192c211aa65501",
+        "neural_hash": "643e33b5afc000849ed0f80217ca42e3179b3d82d953532504aa9f5dda6e5603",
+        "relay_hash": "1e747fda7d351e0f29eb4caf7790c991e056bd960856df3de6bdb2227bae2ced",
+        "wider_hash": "240e9248c840c0d18855fad8c8eefe8a9ea7db23c90106a3175035a99912a771",
+        "retinal_spike_count": 3685,
+        "relay_spike_count": 70,
+        "wider_network_spike_count": 0,
+        "first_relay_spike_time_ms_if_any": 48.0,
+        "first_wider_spike_time_ms_if_any": null,
+        "final_voltage_hash": "fef50761c469a7824cfadfc1d3deca0d4dc297c9c1d099f2474acdf569fab659",
+        "final_voltage_max": 0.8732603788375854,
+        "final_voltage_min": -0.4480809271335602
+      },
+      "differs_from_reference": {
+        "retinal_hash": true,
+        "neural_hash": true,
+        "relay_hash": true,
+        "wider_hash": false,
+        "retinal_spike_count": true,
+        "relay_spike_count": true,
+        "wider_network_spike_count": false,
+        "first_relay_spike_time_ms_if_any": true,
+        "first_wider_spike_time_ms_if_any": false,
+        "final_voltage_hash": true,
+        "final_voltage_max": true,
+        "final_voltage_min": true
+      }
+    },
+    {
+      "variant": {
+        "id": "THRESHOLD_HIGH_10",
+        "class": "GLOBAL_EXCITABILITY_SENSITIVITY",
+        "threshold": 1.1,
+        "tau_ms": 20.0
+      },
+      "deterministic_AA_replay": true,
+      "result": {
+        "threshold": 1.1,
+        "tau_ms": 20.0,
+        "dt_ms": 1.0,
+        "frame_count": 16,
+        "retinal_hash": "6f527cc4946ae19a95a66097973a985be13123f3d577034c88f0af104880300d",
+        "neural_hash": "0fbc7460e6d5f92247f9d5af44d7091ae606fa3be322c0f133268638a54c98c9",
+        "relay_hash": "e8f9d25010ff68797500d1b1df785b20bdc9bfe11b9a606ef41aad75f119ec94",
+        "wider_hash": "240e9248c840c0d18855fad8c8eefe8a9ea7db23c90106a3175035a99912a771",
+        "retinal_spike_count": 1816,
+        "relay_spike_count": 17,
+        "wider_network_spike_count": 0,
+        "first_relay_spike_time_ms_if_any": 138.0,
+        "first_wider_spike_time_ms_if_any": null,
+        "final_voltage_hash": "787e3f42ac82f79014e137923370fcb4517ca3ee100227dec2746acc96760cc1",
+        "final_voltage_max": 1.0695981979370117,
+        "final_voltage_min": -0.24041780829429626
+      },
+      "differs_from_reference": {
+        "retinal_hash": true,
+        "neural_hash": true,
+        "relay_hash": true,
+        "wider_hash": false,
+        "retinal_spike_count": true,
+        "relay_spike_count": true,
+        "wider_network_spike_count": false,
+        "first_relay_spike_time_ms_if_any": true,
+        "first_wider_spike_time_ms_if_any": false,
+        "final_voltage_hash": true,
+        "final_voltage_max": true,
+        "final_voltage_min": true
+      }
+    },
+    {
+      "variant": {
+        "id": "TAU_FAST_25",
+        "class": "MEMBRANE_PERSISTENCE_SENSITIVITY",
+        "threshold": 1.0,
+        "tau_ms": 15.0
+      },
+      "deterministic_AA_replay": true,
+      "result": {
+        "threshold": 1.0,
+        "tau_ms": 15.0,
+        "dt_ms": 1.0,
+        "frame_count": 16,
+        "retinal_hash": "19b51dfce1eea731918e5a5656a8c4a1edb195de68aa9220f8ae3ef19443ce7e",
+        "neural_hash": "b3db01b8805f3614622ddd83fb0545f7c309464ab548beaf5addc95000c79242",
+        "relay_hash": "911c11c83e5443cc358c07b425f05c8f6fbbc3fda5dfe8928b06011b05bf6ea7",
+        "wider_hash": "240e9248c840c0d18855fad8c8eefe8a9ea7db23c90106a3175035a99912a771",
+        "retinal_spike_count": 1094,
+        "relay_spike_count": 15,
+        "wider_network_spike_count": 0,
+        "first_relay_spike_time_ms_if_any": 139.0,
+        "first_wider_spike_time_ms_if_any": null,
+        "final_voltage_hash": "2c31c35756965babd4b9cec9b061dbb91d04c3b3b7997cf74465027bf62681dc",
+        "final_voltage_max": 0.960002064704895,
+        "final_voltage_min": -0.21400001645088196
+      },
+      "differs_from_reference": {
+        "retinal_hash": true,
+        "neural_hash": true,
+        "relay_hash": true,
+        "wider_hash": false,
+        "retinal_spike_count": true,
+        "relay_spike_count": true,
+        "wider_network_spike_count": false,
+        "first_relay_spike_time_ms_if_any": true,
+        "first_wider_spike_time_ms_if_any": false,
+        "final_voltage_hash": true,
+        "final_voltage_max": true,
+        "final_voltage_min": true
+      }
+    },
+    {
+      "variant": {
+        "id": "TAU_SLOW_25",
+        "class": "MEMBRANE_PERSISTENCE_SENSITIVITY",
+        "threshold": 1.0,
+        "tau_ms": 25.0
+      },
+      "deterministic_AA_replay": true,
+      "result": {
+        "threshold": 1.0,
+        "tau_ms": 25.0,
+        "dt_ms": 1.0,
+        "frame_count": 16,
+        "retinal_hash": "982ca2afd67a0a74529335ab595f827bf131c0f547dde002fffbe3e0286b8c4c",
+        "neural_hash": "98252b104f1bf33cfd8fcdd3f8a1ab0f996bf4b42d73e93b80827096806f4526",
+        "relay_hash": "fe2facde6c1e01506fe17f73369b63058a3bdee2487db443ca716712baac4540",
+        "wider_hash": "240e9248c840c0d18855fad8c8eefe8a9ea7db23c90106a3175035a99912a771",
+        "retinal_spike_count": 4010,
+        "relay_spike_count": 66,
+        "wider_network_spike_count": 0,
+        "first_relay_spike_time_ms_if_any": 65.0,
+        "first_wider_spike_time_ms_if_any": null,
+        "final_voltage_hash": "b9fba7f0996ad319d79b123088db58fd4e2fad9bd47ea5366cb0c7d1aba15b52",
+        "final_voltage_max": 0.9902892708778381,
+        "final_voltage_min": -0.6128683090209961
+      },
+      "differs_from_reference": {
+        "retinal_hash": true,
+        "neural_hash": true,
+        "relay_hash": true,
+        "wider_hash": false,
+        "retinal_spike_count": true,
+        "relay_spike_count": true,
+        "wider_network_spike_count": false,
+        "first_relay_spike_time_ms_if_any": true,
+        "first_wider_spike_time_ms_if_any": false,
+        "final_voltage_hash": true,
+        "final_voltage_max": true,
+        "final_voltage_min": true
+      }
+    }
+  ]
+}
