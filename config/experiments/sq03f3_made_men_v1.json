@@ -1,0 +1,76 @@
+{
+  "schema": "moscaquant.sq03f3_made_men/v1",
+  "sidequest_id": "SQ-03F.3",
+  "title": "MADE MEN",
+  "status": "FROZEN_BEFORE_ANALYSIS",
+  "class": "SOURCE_HOTSPOT_RECURRENCE_RANDOMIZATION_TEST",
+  "question": "Are SQ-03F hotspot edges concentrated into a smaller set of source neurons than expected after preserving edge-level context opportunity and structural strata?",
+  "universe": {
+    "candidate_edges": 114825,
+    "hotspot_sets": {
+      "S": "reuse exact SQ-03F top-1-percent membership by max integrated S",
+      "C": "reuse exact SQ-03F top-1-percent membership by max integrated C"
+    },
+    "source_identity": "pre neuron label from the conservative matched graph",
+    "context_signature": "ordered pair (input, anchor) from SQ-03D/SQ-03B membership",
+    "no_new_neural_dynamics": true
+  },
+  "primary_observed_metrics": [
+    "unique hotspot source count",
+    "fraction of hotspot edges whose source has >=2 hotspot edges",
+    "maximum hotspot-edge count for any one source",
+    "HHI of hotspot-edge counts across hotspot-producing sources"
+  ],
+  "secondary_observed_metrics": [
+    "median hotspot-edge count per hotspot-producing source",
+    "top-1 source share of hotspot edges",
+    "top-5 source share of hotspot edges",
+    "number of sources represented in >=2 distinct input-anchor context signatures",
+    "maximum distinct input-anchor context signatures for any source"
+  ],
+  "opportunity_audit": [
+    "candidate edge count per source",
+    "sum of candidate-edge context_count per source",
+    "distinct candidate input-anchor context signatures per source"
+  ],
+  "null_model": {
+    "name": "STRATIFIED HOTSPOT-LABEL RANDOMIZATION",
+    "iterations": 10000,
+    "seed": 314159,
+    "strata": [
+      "context_count",
+      "total_weight_decile",
+      "abs_weight_difference_decile"
+    ],
+    "mechanics": "For S and C independently, preserve the exact observed hotspot count within every stratum. Within each stratum, randomly assign the hotspot labels to candidate edges without replacement. Source identities and edge context memberships remain fixed.",
+    "purpose": "Preserves the number of hotspot opportunities in the same context-count and structural strata while asking whether observed hotspot labels cluster into sources more than the stratified edge universe alone would produce."
+  },
+  "randomization_reporting": {
+    "for_each_metric": [
+      "observed value",
+      "null median",
+      "null 5th percentile",
+      "null 95th percentile",
+      "observed / null-median ratio when defined",
+      "descriptive null percentile rank"
+    ],
+    "no_p_values": true,
+    "no_significance_threshold": true,
+    "interpretation": "Null percentile rank is a descriptive randomization reference inside one frozen model, not a biological population probability."
+  },
+  "frozen_interpretation": [
+    "Fewer unique hotspot sources, a larger repeated-source edge fraction, or greater source-count HHI than the stratified null is compatible with hotspot recurrence being concentrated into particular sources beyond edge opportunity alone.",
+    "Agreement with the stratified null is compatible with the repeated-source pattern being explained by source opportunity and the frozen edge-level strata.",
+    "Distinct input-anchor recurrence is descriptive evidence of cross-context reuse inside the model; it does not establish a biological neuron class or general cross-condition mechanism."
+  ],
+  "family_model": {
+    "presentation_name": "MADE MEN",
+    "translation": "Do the same capos keep showing up in different jobs, or do large crews merely get more chances to appear in the books?",
+    "firewall": "Family Model language is presentation-only and downstream of evidence."
+  },
+  "claim_boundary": "SQ-03F.3 may describe source-level recurrence and concentration of frozen model hotspot edges relative to a stratified randomization reference. It does not establish biological cell classes, sex mechanisms, organism behavior, population statistics, or financial utility.",
+  "parent": {
+    "sq03f2_result": "artifacts/sidequests/sq03f2-capo-test-result-v1.json",
+    "sq03f2_result_sha256": "a3ea383ed4803220225f7492e067714c7d351bc9fc15f03eb6feb7cd0378c5c7"
+  }
+}
