@@ -1,0 +1,355 @@
+{
+  "schema_version": "moscaquant.sidequest.ghost_market_result/v1",
+  "sidequest_id": "SQ-02",
+  "name": "GHOST MARKET",
+  "subtitle": "Adversarial Input Robustness",
+  "source_commit": "91d0621b44cc8d8f355cfd3e152ca7a7e9f169b9",
+  "config_path": "config/experiments/sq02_ghost_market_v1.json",
+  "config_sha256": "3368df87698a712cd03623e081b02e98ec985c28ececf46ac52438b8115a7045",
+  "implementation": {
+    "condition": "A",
+    "frame_count": 16,
+    "dt_ms": 1.0,
+    "tau_ms": 20.0,
+    "threshold": 1.0,
+    "reset": 0.0,
+    "mutation_observation": 6,
+    "sequence_semantics": "Stage B mutates the ordered sequence of normalized 6x7 market-feature observation tensors before each tensor enters the frozen 16-frame temporal encoder.",
+    "extreme_row": 0,
+    "extreme_feature_column": 1,
+    "extreme_feature_name": "momentum",
+    "release_gain_config_path": "config/sensory/visual-transduction-v1.toml",
+    "release_gain_key": "transduction.release_gain",
+    "release_gain": 0.9981738484618123
+  },
+  "claim_boundary": "SQ-02 is a deterministic adversarial-input sensitivity analysis of the frozen MoscaQuant market-to-neural computational pipeline. It characterizes input rejection and neural response under malformed or temporally perturbed inputs. It does not establish biological robustness, financial usefulness, profitability, live-trading safety, or WARDEN containment performance.",
+  "rows": [
+    {
+      "stage_id": "A",
+      "stage_name": "FEATURE_INTERFACE",
+      "variant": {
+        "id": "BASELINE_VALID",
+        "mutation": "none"
+      },
+      "deterministic_AA_replay": true,
+      "result": {
+        "accepted_or_rejected": "ACCEPTED",
+        "exception_type_if_rejected": null,
+        "encoded_frame_count": 16,
+        "retinal_stimulus_summary": {
+          "sha256": "61ffe0dd0fada883c7118e51f78d9d4790df8a7954ee401a6f67a07c8be74af8",
+          "total_energy": 95.99999855167698,
+          "max_frame_energy": 8.51215712060366
+        },
+        "neural_sha256": "b4dd06f23780c9ea441e07b8e7be1f43968c9990ea056553d6dccc7cd3d4f50a",
+        "retinal_spike_count": 5,
+        "relay_spike_count": 0,
+        "wider_network_spike_count": 0,
+        "first_relay_spike_time_ms_if_any": null,
+        "final_voltage_sha256": "cab8487d6d8b390cf9235dfe565ab03deee4f663bb63d2ce153a1da49901909a",
+        "neural_execution_reached": true,
+        "preflight_retinal_sha256": "61ffe0dd0fada883c7118e51f78d9d4790df8a7954ee401a6f67a07c8be74af8"
+      }
+    },
+    {
+      "stage_id": "A",
+      "stage_name": "FEATURE_INTERFACE",
+      "variant": {
+        "id": "FEATURE_NAN",
+        "mutation": "replace one finite feature with NaN"
+      },
+      "deterministic_AA_replay": true,
+      "result": {
+        "accepted_or_rejected": "REJECTED",
+        "exception_type_if_rejected": "ValueError",
+        "exception_message": "features contain non-finite values",
+        "encoded_frame_count": 0,
+        "retinal_stimulus_summary": null,
+        "neural_execution_reached": false,
+        "relay_spike_count": null,
+        "wider_network_spike_count": null,
+        "first_relay_spike_time_ms_if_any": null
+      }
+    },
+    {
+      "stage_id": "A",
+      "stage_name": "FEATURE_INTERFACE",
+      "variant": {
+        "id": "FEATURE_POS_INF",
+        "mutation": "replace one finite feature with +Inf"
+      },
+      "deterministic_AA_replay": true,
+      "result": {
+        "accepted_or_rejected": "REJECTED",
+        "exception_type_if_rejected": "ValueError",
+        "exception_message": "features contain non-finite values",
+        "encoded_frame_count": 0,
+        "retinal_stimulus_summary": null,
+        "neural_execution_reached": false,
+        "relay_spike_count": null,
+        "wider_network_spike_count": null,
+        "first_relay_spike_time_ms_if_any": null
+      }
+    },
+    {
+      "stage_id": "A",
+      "stage_name": "FEATURE_INTERFACE",
+      "variant": {
+        "id": "FEATURE_NEG_INF",
+        "mutation": "replace one finite feature with -Inf"
+      },
+      "deterministic_AA_replay": true,
+      "result": {
+        "accepted_or_rejected": "REJECTED",
+        "exception_type_if_rejected": "ValueError",
+        "exception_message": "features contain non-finite values",
+        "encoded_frame_count": 0,
+        "retinal_stimulus_summary": null,
+        "neural_execution_reached": false,
+        "relay_spike_count": null,
+        "wider_network_spike_count": null,
+        "first_relay_spike_time_ms_if_any": null
+      }
+    },
+    {
+      "stage_id": "A",
+      "stage_name": "FEATURE_INTERFACE",
+      "variant": {
+        "id": "FEATURE_SHORT_ROW",
+        "mutation": "remove one feature column"
+      },
+      "deterministic_AA_replay": true,
+      "result": {
+        "accepted_or_rejected": "REJECTED",
+        "exception_type_if_rejected": "ValueError",
+        "exception_message": "features must have shape (6, 7)",
+        "encoded_frame_count": 0,
+        "retinal_stimulus_summary": null,
+        "neural_execution_reached": false,
+        "relay_spike_count": null,
+        "wider_network_spike_count": null,
+        "first_relay_spike_time_ms_if_any": null
+      }
+    },
+    {
+      "stage_id": "A",
+      "stage_name": "FEATURE_INTERFACE",
+      "variant": {
+        "id": "FEATURE_LONG_ROW",
+        "mutation": "append one feature column"
+      },
+      "deterministic_AA_replay": true,
+      "result": {
+        "accepted_or_rejected": "REJECTED",
+        "exception_type_if_rejected": "ValueError",
+        "exception_message": "features must have shape (6, 7)",
+        "encoded_frame_count": 0,
+        "retinal_stimulus_summary": null,
+        "neural_execution_reached": false,
+        "relay_spike_count": null,
+        "wider_network_spike_count": null,
+        "first_relay_spike_time_ms_if_any": null
+      }
+    },
+    {
+      "stage_id": "B",
+      "stage_name": "TEMPORAL_SEQUENCE",
+      "variant": {
+        "id": "SEQUENCE_BASELINE",
+        "mutation": "none"
+      },
+      "deterministic_AA_replay": true,
+      "result": {
+        "accepted_or_rejected": "ACCEPTED",
+        "exception_type_if_rejected": null,
+        "encoded_frame_count": 192,
+        "retinal_stimulus_summary": {
+          "sha256": "b9815b338273ed9df2ea558b698e1b4e2f982e343bbc0df5d6ab61643126e77b",
+          "total_energy": 1151.9999965455859,
+          "max_frame_energy": 9.59997940145388
+        },
+        "neural_sha256": "30e898b0cc337ea9fff8048f907336a8aeb049fc2270d20f891a3f94970ed0d8",
+        "retinal_spike_count": 2605,
+        "relay_spike_count": 40,
+        "wider_network_spike_count": 0,
+        "first_relay_spike_time_ms_if_any": 131.0,
+        "final_voltage_sha256": "c53a6a5e3ec82d226d8467cd372681a9657431906dbe68209075fe72866214da"
+      }
+    },
+    {
+      "stage_id": "B",
+      "stage_name": "TEMPORAL_SEQUENCE",
+      "variant": {
+        "id": "SEQUENCE_DUPLICATE_FRAME",
+        "mutation": "duplicate one interior feature frame"
+      },
+      "deterministic_AA_replay": true,
+      "result": {
+        "accepted_or_rejected": "ACCEPTED",
+        "exception_type_if_rejected": null,
+        "encoded_frame_count": 208,
+        "retinal_stimulus_summary": {
+          "sha256": "640a31f2913225f88911c69bde417e4e941c26761aa97964288793c544c39bae",
+          "total_energy": 1247.9999950972629,
+          "max_frame_energy": 9.59997940145388
+        },
+        "neural_sha256": "7aeb603b55f848c7f6a73142f6d6ec07290fe384b2e8a20a16a42a88d42c6017",
+        "retinal_spike_count": 2799,
+        "relay_spike_count": 36,
+        "wider_network_spike_count": 0,
+        "first_relay_spike_time_ms_if_any": 152.0,
+        "final_voltage_sha256": "35fd8ef60da584df3b899e0b9792c6187c3f63fe5c23bcbd7650217cfe7f69bb"
+      }
+    },
+    {
+      "stage_id": "B",
+      "stage_name": "TEMPORAL_SEQUENCE",
+      "variant": {
+        "id": "SEQUENCE_DROP_FRAME",
+        "mutation": "remove one interior feature frame"
+      },
+      "deterministic_AA_replay": true,
+      "result": {
+        "accepted_or_rejected": "ACCEPTED",
+        "exception_type_if_rejected": null,
+        "encoded_frame_count": 176,
+        "retinal_stimulus_summary": {
+          "sha256": "d3a53311317eb31dbbba1427fab0ef07219819a40cabbee51e0a747eacd04775",
+          "total_energy": 1055.999997993909,
+          "max_frame_energy": 9.59997940145388
+        },
+        "neural_sha256": "fab663c48979717333ed49aa823e3568c82683c0227785b49f67a7a9515e5d42",
+        "retinal_spike_count": 2405,
+        "relay_spike_count": 36,
+        "wider_network_spike_count": 0,
+        "first_relay_spike_time_ms_if_any": 118.0,
+        "final_voltage_sha256": "c80f3e0e991df0756d6b197f3c03a69fe59efad2740ee48cac2a915d6cf3982a"
+      }
+    },
+    {
+      "stage_id": "B",
+      "stage_name": "TEMPORAL_SEQUENCE",
+      "variant": {
+        "id": "SEQUENCE_REVERSED",
+        "mutation": "reverse the feature-frame order"
+      },
+      "deterministic_AA_replay": true,
+      "result": {
+        "accepted_or_rejected": "ACCEPTED",
+        "exception_type_if_rejected": null,
+        "encoded_frame_count": 192,
+        "retinal_stimulus_summary": {
+          "sha256": "d414945623d684bede06eff4a8695fd8c8603f98da334305a5c2b2f90a3eb915",
+          "total_energy": 1151.9999965455856,
+          "max_frame_energy": 9.59997940145388
+        },
+        "neural_sha256": "5c69fd534f9540dde1b906c034511bbd1000068aaee6f8a2585753178ded860d",
+        "retinal_spike_count": 2663,
+        "relay_spike_count": 41,
+        "wider_network_spike_count": 0,
+        "first_relay_spike_time_ms_if_any": 35.0,
+        "final_voltage_sha256": "31dc411e5ef58930daea9f6a8e23019ad99c05487a33c4f35692979bdc5cff3e"
+      }
+    },
+    {
+      "stage_id": "B",
+      "stage_name": "TEMPORAL_SEQUENCE",
+      "variant": {
+        "id": "SEQUENCE_FROZEN",
+        "mutation": "repeat one valid feature frame for the full sequence"
+      },
+      "deterministic_AA_replay": true,
+      "result": {
+        "accepted_or_rejected": "ACCEPTED",
+        "exception_type_if_rejected": null,
+        "encoded_frame_count": 192,
+        "retinal_stimulus_summary": {
+          "sha256": "c0a986e265f56a0206a57ec7e9cc104c690bf16f898545ab53a3a73fd1ec7238",
+          "total_energy": 1151.9999826201238,
+          "max_frame_energy": 8.51215712060366
+        },
+        "neural_sha256": "865f44d8b96a54097e3a780416ab13b1b25c0fdf9db4e4dfba565902eab6190b",
+        "retinal_spike_count": 2095,
+        "relay_spike_count": 1,
+        "wider_network_spike_count": 0,
+        "first_relay_spike_time_ms_if_any": 148.0,
+        "final_voltage_sha256": "a593d2fcd6e1e67907160652d7eb0885e3c64bb24e690d4a223579739d52bc45"
+      }
+    },
+    {
+      "stage_id": "C",
+      "stage_name": "FINITE_EXTREMES",
+      "variant": {
+        "id": "EXTREME_X10",
+        "mutation": "multiply one signed feature channel by 10"
+      },
+      "deterministic_AA_replay": true,
+      "result": {
+        "accepted_or_rejected": "ACCEPTED",
+        "exception_type_if_rejected": null,
+        "encoded_frame_count": 192,
+        "retinal_stimulus_summary": {
+          "sha256": "b9815b338273ed9df2ea558b698e1b4e2f982e343bbc0df5d6ab61643126e77b",
+          "total_energy": 1151.9999965455859,
+          "max_frame_energy": 9.59997940145388
+        },
+        "neural_sha256": "30e898b0cc337ea9fff8048f907336a8aeb049fc2270d20f891a3f94970ed0d8",
+        "retinal_spike_count": 2605,
+        "relay_spike_count": 40,
+        "wider_network_spike_count": 0,
+        "first_relay_spike_time_ms_if_any": 131.0,
+        "final_voltage_sha256": "c53a6a5e3ec82d226d8467cd372681a9657431906dbe68209075fe72866214da"
+      }
+    },
+    {
+      "stage_id": "C",
+      "stage_name": "FINITE_EXTREMES",
+      "variant": {
+        "id": "EXTREME_X100",
+        "mutation": "multiply one signed feature channel by 100"
+      },
+      "deterministic_AA_replay": true,
+      "result": {
+        "accepted_or_rejected": "ACCEPTED",
+        "exception_type_if_rejected": null,
+        "encoded_frame_count": 192,
+        "retinal_stimulus_summary": {
+          "sha256": "b9815b338273ed9df2ea558b698e1b4e2f982e343bbc0df5d6ab61643126e77b",
+          "total_energy": 1151.9999965455859,
+          "max_frame_energy": 9.59997940145388
+        },
+        "neural_sha256": "30e898b0cc337ea9fff8048f907336a8aeb049fc2270d20f891a3f94970ed0d8",
+        "retinal_spike_count": 2605,
+        "relay_spike_count": 40,
+        "wider_network_spike_count": 0,
+        "first_relay_spike_time_ms_if_any": 131.0,
+        "final_voltage_sha256": "c53a6a5e3ec82d226d8467cd372681a9657431906dbe68209075fe72866214da"
+      }
+    },
+    {
+      "stage_id": "C",
+      "stage_name": "FINITE_EXTREMES",
+      "variant": {
+        "id": "ZERO_VECTOR",
+        "mutation": "replace all feature values with finite zero"
+      },
+      "deterministic_AA_replay": true,
+      "result": {
+        "accepted_or_rejected": "ACCEPTED",
+        "exception_type_if_rejected": null,
+        "encoded_frame_count": 192,
+        "retinal_stimulus_summary": {
+          "sha256": "b9815b338273ed9df2ea558b698e1b4e2f982e343bbc0df5d6ab61643126e77b",
+          "total_energy": 1151.9999965455859,
+          "max_frame_energy": 9.59997940145388
+        },
+        "neural_sha256": "30e898b0cc337ea9fff8048f907336a8aeb049fc2270d20f891a3f94970ed0d8",
+        "retinal_spike_count": 2605,
+        "relay_spike_count": 40,
+        "wider_network_spike_count": 0,
+        "first_relay_spike_time_ms_if_any": 131.0,
+        "final_voltage_sha256": "c53a6a5e3ec82d226d8467cd372681a9657431906dbe68209075fe72866214da"
+      }
+    }
+  ]
+}
