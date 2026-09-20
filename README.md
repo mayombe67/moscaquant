@@ -280,8 +280,8 @@ the documented evidence, or evidence of autonomous financial competence.
 
 - **SQ-03A — THE OTHER FLY:** complete and recorded. The accepted result is a
   model-level matched-central-brain comparison only.
-- **SQ-03B — FIND THE DIFFERENCE:** active mechanistic-localization follow-up.
-  It tests frozen single-edge counterfactual equalizations against the
+- **SQ-03B — FIND THE DIFFERENCE:** complete mechanistic-localization follow-up.
+  It tested frozen single-edge counterfactual equalizations against the
   preregistered SQ-03A differences.
 - **OVERWATCH:** canonical telemetry/observability subsystem. It observes,
   records, reports, and produces trend summaries without altering frozen

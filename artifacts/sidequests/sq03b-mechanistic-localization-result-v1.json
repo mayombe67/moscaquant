@@ -1,0 +1,30 @@
+{
+  "aligned_edges_sha256": "1cac309c7760d16f5f041a7b924efbf5cdfa3a46570090fb234c2323ed9e313c",
+  "all_aa_exact": true,
+  "batch_size": 32,
+  "candidate_artifact_sha256": "d1b3b30814aba76c6dcf8e9bf1ea30b7905b285fd18b7cd571d42315f571a729",
+  "candidate_edge_count": 114825,
+  "checkpoint_ledger": "artifacts/sidequests/sq03b-checkpoints-v1/results.ndjson",
+  "claim_boundary": "SQ-03B localizes sensitivity within the frozen matched-central-brain computational model by single-edge counterfactual equalization. Reported effects are model-level sensitivities and do not establish biological mechanism, general sex differences, behavior, intelligence, market skill, profitability, or financial usefulness.",
+  "classification": "AUTHORITATIVE_MODEL_LEVEL_LOCALIZATION_RESULT",
+  "effect_observed_jobs": 469859,
+  "execution_config_sha256": "b90cadbc11fc6f617aef8bfa5da6c46d71518571700b39fa70e350ee6626fb57",
+  "frozen_anchors": [
+    "DNc02",
+    "DNp27",
+    "DNp30"
+  ],
+  "frozen_inputs": [
+    "TmY14",
+    "LPLC2",
+    "AVLP234",
+    "AVLP435"
+  ],
+  "input_edge_subject_jobs": 469860,
+  "protocol_sha256": "14be44be6614d0110481f2a88e68d27dc1b7e7bd05741a84502dab84596d0200",
+  "schema": "moscaquant.sq03b_result/v1",
+  "sidequest_id": "SQ-03B",
+  "source_commit": "d33487934833fc9d252216f814a258c038d19763",
+  "sq03a_artifact_sha256": "8b9f5ccdd1004769002c05c1c1842c7798e760c99342568f32a8583b3aae6c5c",
+  "title": "FIND THE DIFFERENCE"
+}
