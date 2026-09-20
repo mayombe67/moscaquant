@@ -1,0 +1,116 @@
+{
+  "schema": "moscaquant.sq03c_scalar_verification/v1",
+  "sidequest_id": "SQ-03C",
+  "title": "CHECK THE RECEIPTS",
+  "status": "FROZEN_BEFORE_PANEL_SELECTION",
+  "class": "CONFIRMATORY_SCALAR_VERIFICATION_FOLLOWUP",
+  "parents": {
+    "sq03a_result": "artifacts/sidequests/sq03a-other-fly-result-v1.json",
+    "sq03b_result": "artifacts/sidequests/sq03b-mechanistic-localization-result-v1.json",
+    "sq03b_ledger": "artifacts/sidequests/sq03b-checkpoints-v1/results.ndjson",
+    "sq03b_result_sha256": "0bcfbeef18ba43e4a3371cae13f1d05a04fc63fc988084e9bf45a33f6a00a2f8",
+    "sq03b_ledger_sha256": "7b2632de5792973534177b697efdd7c3af0b82a836d9d2b597812dbc0dd1f725"
+  },
+  "question": "Do the strongest SQ-03B single-edge localization effects survive independent re-execution through the original scalar HybridRuntime, while deterministic low-tail controls remain low?",
+  "strata": {
+    "keys": [
+      "input",
+      "subject"
+    ],
+    "expected_count": 8,
+    "expected_inputs": [
+      "TmY14",
+      "LPLC2",
+      "AVLP234",
+      "AVLP435"
+    ],
+    "expected_subjects": [
+      "MORTY",
+      "LILITH"
+    ]
+  },
+  "panel_selection": {
+    "selection_source": "SQ-03B durable checkpoint ledger only",
+    "upper_tail_per_stratum": {
+      "top_by_abs_integrated_positive_voltage_delta": 8,
+      "top_by_abs_peak_voltage_delta": 8,
+      "deduplicate_union": true
+    },
+    "lower_tail_controls_per_stratum": 8,
+    "upper_integrated_rank": [
+      "max absolute integrated_positive_voltage_delta over relevant anchors DESC",
+      "max absolute peak_voltage_delta over relevant anchors DESC",
+      "edge_id ASC"
+    ],
+    "upper_peak_rank": [
+      "max absolute peak_voltage_delta over relevant anchors DESC",
+      "max absolute integrated_positive_voltage_delta over relevant anchors DESC",
+      "edge_id ASC"
+    ],
+    "lower_rank": [
+      "max absolute integrated_positive_voltage_delta over relevant anchors ASC",
+      "max absolute peak_voltage_delta over relevant anchors ASC",
+      "edge_id ASC"
+    ],
+    "no_manual_candidate_addition": true,
+    "no_post_selection_substitution": true
+  },
+  "runtime": {
+    "implementation": "brain.hybrid_runtime.HybridRuntime",
+    "execution_mode": "scalar_one_job_at_a_time",
+    "frames": 64,
+    "stimulus_frame": 0,
+    "stimulus_amplitude": 0.5,
+    "dt_ms": 1.0,
+    "tau_ms": 20.0,
+    "threshold": 1.0,
+    "reset_voltage": 0.0
+  },
+  "controls": {
+    "sq03a_baseline_replay_required": true,
+    "counterfactual_aa_exact_required": true,
+    "same_matched_graph_required": true,
+    "same_common_normalization_required": true,
+    "same_single_edge_equalization_rule_required": true
+  },
+  "verification": {
+    "batched_vs_scalar_rtol": 1e-06,
+    "batched_vs_scalar_atol": 1e-07,
+    "tolerance_source": "Already-frozen SQ-03B engineering parity contract; not selected from SQ-03C outcomes.",
+    "primary_outputs": [
+      "scalar peak_voltage_delta",
+      "scalar integrated_positive_voltage_delta",
+      "scalar first_positive_frame_delta",
+      "batched-vs-scalar metric agreement"
+    ],
+    "descriptive_outputs": [
+      "upper-tail effect retention by stratum",
+      "lower-tail control magnitude by stratum",
+      "rank stability within frozen verification panel"
+    ],
+    "formal_p_value_claim": false
+  },
+  "interpretation": {
+    "allowed": "Confirm or fail replication of selected model-level SQ-03B localization effects under the original scalar runtime.",
+    "not_allowed": [
+      "retroactively declaring an SQ-03B tolerance statistically significant",
+      "biological mechanism claims",
+      "general sex-difference claims",
+      "sex superiority claims",
+      "intelligence claims",
+      "general behavior claims",
+      "market skill claims",
+      "profitability claims",
+      "financial usefulness claims"
+    ]
+  },
+  "stop_conditions": [
+    "SQ-03B result or ledger hash mismatch",
+    "missing frozen panel job",
+    "SQ-03A baseline replay mismatch",
+    "counterfactual A/A replay mismatch",
+    "matched graph or normalization mismatch",
+    "runtime or stimulus parameter mismatch"
+  ],
+  "claim_boundary": "SQ-03C is a confirmatory computational verification of a frozen subset of SQ-03B localization jobs. It tests whether upper-tail and low-tail effects reproduce under the original scalar HybridRuntime. It does not establish a biological mechanism, formal population-level statistical significance, general sex differences, behavior, intelligence, or financial utility."
+}
