@@ -1,4 +1,6 @@
 from __future__ import annotations
+from config.paths import data_path
+
 
 import hashlib
 import json
@@ -29,10 +31,10 @@ from market.normalization import CausalNormalizer
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG_PATH = ROOT / "config" / "experiments" / "sq01_temporal_decoupling_v1.json"
 
-CONNECTOME = Path("/home/wil/moscaquant-data/processed/connectome-baseline-v1.npz")
-RETINA = Path("/home/wil/moscaquant-data/processed/visual-r1-r6-map-v1.npz")
-RELAY = Path("/home/wil/moscaquant-data/processed/visual-relay-map-v1.npz")
-TERRITORIES = Path("/home/wil/moscaquant-data/processed/market-retinal-territories-v1.npz")
+CONNECTOME = data_path('processed', 'connectome-baseline-v1.npz')
+RETINA = data_path('processed', 'visual-r1-r6-map-v1.npz')
+RELAY = data_path('processed', 'visual-relay-map-v1.npz')
+TERRITORIES = data_path('processed', 'market-retinal-territories-v1.npz')
 VISUAL_CONFIG = ROOT / "config" / "sensory" / "visual-transduction-v1.toml"
 
 OUTPUT = ROOT / "artifacts" / "sidequests" / "sq01-temporal-decoupling-v1.json"

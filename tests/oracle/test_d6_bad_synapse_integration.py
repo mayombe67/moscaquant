@@ -1,4 +1,5 @@
 from __future__ import annotations
+from config.paths import data_path
 
 import numpy as np
 from scipy import sparse
@@ -9,9 +10,8 @@ from oracle.d6_bad_synapse import (
 )
 
 
-CONNECTOME = (
-    "/home/wil/moscaquant-data/processed/"
-    "connectome-baseline-v1.npz"
+CONNECTOME = str(
+    data_path("processed", "connectome-baseline-v1.npz")
 )
 
 UPSTREAM = 56393

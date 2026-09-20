@@ -1,4 +1,6 @@
 from __future__ import annotations
+from config.paths import data_path
+
 
 import hashlib
 import json
@@ -25,13 +27,9 @@ from market.features import compute_features
 from market.normalization import CausalNormalizer
 
 
-BASE = Path(
-    "/home/wil/moscaquant-data/processed"
-)
+BASE = data_path('processed')
 
-RAW = Path(
-    "/home/wil/moscaquant-data/raw"
-)
+RAW = data_path('raw')
 
 CONNECTOME = BASE / "connectome-baseline-v1.npz"
 RETINA = BASE / "visual-r1-r6-map-v1.npz"
@@ -53,10 +51,7 @@ ANNOTATIONS = (
     / "body-annotations-male-cns-v1.0-minconf-0.5.feather"
 )
 
-OUTPUT = Path(
-    "/home/wil/moscaquant-data/experiments/"
-    "mq3-2-causal-path-decomposition-v1.json"
-)
+OUTPUT = data_path('experiments', 'mq3-2-causal-path-decomposition-v1.json')
 
 RELEASE_GAIN = 0.9981738484618123
 

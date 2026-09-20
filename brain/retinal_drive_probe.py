@@ -1,3 +1,5 @@
+from config.paths import data_path
+
 from pathlib import Path
 
 import numpy as np
@@ -17,15 +19,9 @@ from market.features import compute_features
 from market.normalization import CausalNormalizer
 
 
-CONNECTOME = Path(
-    "/home/wil/moscaquant-data/processed/"
-    "connectome-baseline-v1.npz"
-)
+CONNECTOME = data_path('processed', 'connectome-baseline-v1.npz')
 
-TERRITORIES = Path(
-    "/home/wil/moscaquant-data/processed/"
-    "market-retinal-territories-v1.npz"
-)
+TERRITORIES = data_path('processed', 'market-retinal-territories-v1.npz')
 
 
 def main():

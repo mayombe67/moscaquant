@@ -1,4 +1,5 @@
 from __future__ import annotations
+from config.paths import data_path
 
 from pathlib import Path
 
@@ -19,20 +20,11 @@ from market.features import compute_features
 from market.normalization import CausalNormalizer
 
 
-BIOLOGICAL = Path(
-    "/home/wil/moscaquant-data/processed/"
-    "connectome-baseline-v1.npz"
-)
+BIOLOGICAL = data_path('processed', 'connectome-baseline-v1.npz')
 
-SHUFFLED = Path(
-    "/home/wil/moscaquant-data/processed/"
-    "connectome-shuffled-mosca-v1.npz"
-)
+SHUFFLED = data_path('processed', 'connectome-shuffled-mosca-v1.npz')
 
-TERRITORIES = Path(
-    "/home/wil/moscaquant-data/processed/"
-    "market-retinal-territories-v1.npz"
-)
+TERRITORIES = data_path('processed', 'market-retinal-territories-v1.npz')
 
 
 def build_normalized_stream(condition: str):

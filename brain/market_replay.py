@@ -1,4 +1,5 @@
 from __future__ import annotations
+from config.paths import data_path
 
 import argparse
 import hashlib
@@ -468,22 +469,14 @@ def main():
     parser.add_argument(
         "--connectome",
         type=Path,
-        default=Path(
-            "/home/wil/moscaquant-data/"
-            "processed/"
-            "connectome-baseline-v1.npz"
-        ),
+        default=data_path('processed', 'connectome-baseline-v1.npz'),
     )
 
     args = parser.parse_args()
 
     connectome_path = args.connectome
 
-    territory_path = Path(
-        "/home/wil/moscaquant-data/"
-        "processed/"
-        "market-retinal-territories-v1.npz"
-    )
+    territory_path = data_path('processed', 'market-retinal-territories-v1.npz')
 
     print(
         "loading frozen connectome..."

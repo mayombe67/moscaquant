@@ -1,4 +1,5 @@
 from __future__ import annotations
+from config.paths import data_path
 
 from pathlib import Path
 
@@ -27,9 +28,8 @@ from oracle.selector import select_d6
 from oracle.state import initial_state
 
 
-CONNECTOME = (
-    "/home/wil/moscaquant-data/processed/"
-    "connectome-baseline-v1.npz"
+CONNECTOME = str(
+    data_path("processed", "connectome-baseline-v1.npz")
 )
 
 ARTIFACT = "connectome-baseline-v1.npz"

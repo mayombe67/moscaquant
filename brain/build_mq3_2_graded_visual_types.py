@@ -1,4 +1,6 @@
 from __future__ import annotations
+from config.paths import data_path
+
 
 import hashlib
 import json
@@ -8,24 +10,13 @@ import numpy as np
 import pandas as pd
 
 
-NEURON_IDS = Path(
-    "/home/wil/moscaquant-data/processed/neuron_ids.npy"
-)
+NEURON_IDS = data_path('processed', 'neuron_ids.npy')
 
-ANNOTATIONS = Path(
-    "/home/wil/moscaquant-data/raw/"
-    "body-annotations-male-cns-v1.0-minconf-0.5.feather"
-)
+ANNOTATIONS = data_path('raw', 'body-annotations-male-cns-v1.0-minconf-0.5.feather')
 
-OUTPUT_NPZ = Path(
-    "/home/wil/moscaquant-data/processed/"
-    "mq3-2-graded-visual-types-v1.npz"
-)
+OUTPUT_NPZ = data_path('processed', 'mq3-2-graded-visual-types-v1.npz')
 
-OUTPUT_JSON = Path(
-    "/home/wil/moscaquant-data/processed/"
-    "mq3-2-graded-visual-types-v1.json"
-)
+OUTPUT_JSON = data_path('processed', 'mq3-2-graded-visual-types-v1.json')
 
 ALLOWED_TYPES = (
     "Tm2",

@@ -1,4 +1,5 @@
 from __future__ import annotations
+from config.paths import data_path
 
 from pathlib import Path
 
@@ -14,15 +15,9 @@ from scipy.spatial.distance import (
 )
 
 
-CONNECTOME = Path(
-    "/home/wil/moscaquant-data/processed/"
-    "connectome-baseline-v1.npz"
-)
+CONNECTOME = data_path('processed', 'connectome-baseline-v1.npz')
 
-DN_ARTIFACT = Path(
-    "/home/wil/moscaquant-data/processed/"
-    "mq3-descending-readout-v1.npz"
-)
+DN_ARTIFACT = data_path('processed', 'mq3-descending-readout-v1.npz')
 
 
 K_MIN = 2

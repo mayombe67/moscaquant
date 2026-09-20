@@ -1,4 +1,6 @@
 from __future__ import annotations
+from config.paths import data_path
+
 
 import hashlib
 import json
@@ -25,9 +27,7 @@ from market.features import compute_features
 from market.normalization import CausalNormalizer
 
 
-BASE = Path(
-    "/home/wil/moscaquant-data/processed"
-)
+BASE = data_path('processed')
 
 CONNECTOME = BASE / "connectome-baseline-v1.npz"
 RETINA = BASE / "visual-r1-r6-map-v1.npz"
@@ -40,10 +40,7 @@ INTERVENTION = (
     / "mq3-2-first-onset-causal-edges-v1.json"
 )
 
-OUTPUT = Path(
-    "/home/wil/moscaquant-data/experiments/"
-    "mq3-2-causal-intervention-v1.json"
-)
+OUTPUT = data_path('experiments', 'mq3-2-causal-intervention-v1.json')
 
 RELEASE_GAIN = 0.9981738484618123
 

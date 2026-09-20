@@ -1,4 +1,6 @@
 from __future__ import annotations
+from config.paths import data_path
+
 
 import hashlib
 import json
@@ -26,13 +28,9 @@ from market.features import compute_features
 from market.normalization import CausalNormalizer
 
 
-BASE = Path(
-    "/home/wil/moscaquant-data/processed"
-)
+BASE = data_path('processed')
 
-OUT = Path(
-    "/home/wil/moscaquant-data/neuroscope"
-)
+OUT = data_path('neuroscope')
 
 CONNECTOME = BASE / "connectome-baseline-v1.npz"
 RETINA = BASE / "visual-r1-r6-map-v1.npz"

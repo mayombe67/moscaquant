@@ -1,4 +1,6 @@
 from __future__ import annotations
+from config.paths import data_path
+
 
 from pathlib import Path
 
@@ -21,9 +23,7 @@ from market.normalization import CausalNormalizer
 from brain.mq3_2_graded_type_subsets import SubsetVisualRuntime
 
 
-BASE = Path(
-    "/home/wil/moscaquant-data/processed"
-)
+BASE = data_path('processed')
 
 CONNECTOME = BASE / "connectome-baseline-v1.npz"
 RETINA = BASE / "visual-r1-r6-map-v1.npz"

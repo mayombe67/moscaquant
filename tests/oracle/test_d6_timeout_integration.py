@@ -1,4 +1,5 @@
 from __future__ import annotations
+from config.paths import data_path
 
 import numpy as np
 
@@ -14,9 +15,8 @@ from oracle.d6_timeout import (
 )
 
 
-CONSENSUS = (
-    "/home/wil/moscaquant-data/processed/"
-    "mq3-dn-consensus-v1.npz"
+CONSENSUS = str(
+    data_path("processed", "mq3-dn-consensus-v1.npz")
 )
 
 

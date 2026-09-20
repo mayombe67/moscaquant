@@ -1,4 +1,5 @@
 from __future__ import annotations
+from config.paths import data_path
 
 import hashlib
 import json
@@ -17,25 +18,13 @@ from scipy.spatial.distance import (
 )
 
 
-CONNECTOME = Path(
-    "/home/wil/moscaquant-data/processed/"
-    "connectome-baseline-v1.npz"
-)
+CONNECTOME = data_path('processed', 'connectome-baseline-v1.npz')
 
-DN_ARTIFACT = Path(
-    "/home/wil/moscaquant-data/processed/"
-    "mq3-descending-readout-v1.npz"
-)
+DN_ARTIFACT = data_path('processed', 'mq3-descending-readout-v1.npz')
 
-OUTPUT_NPZ = Path(
-    "/home/wil/moscaquant-data/processed/"
-    "mq3-dn-consensus-v1.npz"
-)
+OUTPUT_NPZ = data_path('processed', 'mq3-dn-consensus-v1.npz')
 
-OUTPUT_JSON = Path(
-    "/home/wil/moscaquant-data/processed/"
-    "mq3-dn-consensus-v1.json"
-)
+OUTPUT_JSON = data_path('processed', 'mq3-dn-consensus-v1.json')
 
 K = 3
 

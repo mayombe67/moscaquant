@@ -1,4 +1,6 @@
 from __future__ import annotations
+from config.paths import data_path
+
 
 import hashlib
 import json
@@ -9,30 +11,17 @@ import pyarrow.feather as feather
 from scipy import sparse
 
 
-CONNECTOME = Path(
-    "/home/wil/moscaquant-data/processed/connectome-baseline-v1.npz"
-)
+CONNECTOME = data_path('processed', 'connectome-baseline-v1.npz')
 
-RETINA = Path(
-    "/home/wil/moscaquant-data/processed/visual-r1-r6-map-v1.npz"
-)
+RETINA = data_path('processed', 'visual-r1-r6-map-v1.npz')
 
-NEURON_IDS = Path(
-    "/home/wil/moscaquant-data/processed/neuron_ids.npy"
-)
+NEURON_IDS = data_path('processed', 'neuron_ids.npy')
 
-ANNOTATIONS = Path(
-    "/home/wil/moscaquant-data/raw/"
-    "body-annotations-male-cns-v1.0-minconf-0.5.feather"
-)
+ANNOTATIONS = data_path('raw', 'body-annotations-male-cns-v1.0-minconf-0.5.feather')
 
-OUTPUT = Path(
-    "/home/wil/moscaquant-data/processed/visual-relay-map-v1.npz"
-)
+OUTPUT = data_path('processed', 'visual-relay-map-v1.npz')
 
-PROVENANCE = Path(
-    "/home/wil/moscaquant-data/processed/visual-relay-map-v1.json"
-)
+PROVENANCE = data_path('processed', 'visual-relay-map-v1.json')
 
 RELAY_TYPES = (
     "L1",

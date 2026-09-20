@@ -1,4 +1,6 @@
 from __future__ import annotations
+from config.paths import data_path
+
 
 import hashlib
 import json
@@ -29,30 +31,15 @@ from market.features import compute_features
 from market.normalization import CausalNormalizer
 
 
-CONNECTOME = Path(
-    "/home/wil/moscaquant-data/processed/"
-    "connectome-baseline-v1.npz"
-)
+CONNECTOME = data_path('processed', 'connectome-baseline-v1.npz')
 
-RETINA = Path(
-    "/home/wil/moscaquant-data/processed/"
-    "visual-r1-r6-map-v1.npz"
-)
+RETINA = data_path('processed', 'visual-r1-r6-map-v1.npz')
 
-RELAY = Path(
-    "/home/wil/moscaquant-data/processed/"
-    "visual-relay-map-v1.npz"
-)
+RELAY = data_path('processed', 'visual-relay-map-v1.npz')
 
-TERRITORIES = Path(
-    "/home/wil/moscaquant-data/processed/"
-    "market-retinal-territories-v1.npz"
-)
+TERRITORIES = data_path('processed', 'market-retinal-territories-v1.npz')
 
-CONSENSUS = Path(
-    "/home/wil/moscaquant-data/processed/"
-    "mq3-dn-consensus-v1.npz"
-)
+CONSENSUS = data_path('processed', 'mq3-dn-consensus-v1.npz')
 
 TRANSDUCTION_CONFIG = Path(
     "config/sensory/visual-transduction-v1.toml"
@@ -63,10 +50,7 @@ READOUT_CONFIG = Path(
     "mq3-anonymous-market-readout-v1.toml"
 )
 
-OUTPUT = Path(
-    "/home/wil/moscaquant-data/experiments/"
-    "mq3-2-anonymous-market-readout-v1.json"
-)
+OUTPUT = data_path('experiments', 'mq3-2-anonymous-market-readout-v1.json')
 
 
 CHANNELS = (
@@ -285,10 +269,7 @@ def run_replay(
         connectome=connectome,
         retinal_indices=retinal_indices,
         relay_artifact=RELAY,
-        graded_artifact=Path(
-            "/home/wil/moscaquant-data/processed/"
-            "mq3-2-graded-visual-types-v1.npz"
-        ),
+        graded_artifact=data_path('processed', 'mq3-2-graded-visual-types-v1.npz'),
         config=VisualTransductionConfig(
             release_gain=release_gain,
         ),

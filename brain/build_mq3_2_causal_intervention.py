@@ -1,19 +1,14 @@
 from __future__ import annotations
+from config.paths import data_path
 
 import hashlib
 import json
 from pathlib import Path
 
 
-SOURCE = Path(
-    "/home/wil/moscaquant-data/experiments/"
-    "mq3-2-causal-path-decomposition-v1.json"
-)
+SOURCE = data_path('experiments', 'mq3-2-causal-path-decomposition-v1.json')
 
-OUTPUT = Path(
-    "/home/wil/moscaquant-data/processed/"
-    "mq3-2-first-onset-causal-edges-v1.json"
-)
+OUTPUT = data_path('processed', 'mq3-2-first-onset-causal-edges-v1.json')
 
 
 def sha256_file(path: Path) -> str:

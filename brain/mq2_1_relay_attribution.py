@@ -1,4 +1,5 @@
 from __future__ import annotations
+from config.paths import data_path
 
 from pathlib import Path
 import math
@@ -24,30 +25,15 @@ from market.features import compute_features
 from market.normalization import CausalNormalizer
 
 
-CONNECTOME = Path(
-    "/home/wil/moscaquant-data/processed/"
-    "connectome-baseline-v1.npz"
-)
+CONNECTOME = data_path('processed', 'connectome-baseline-v1.npz')
 
-RETINA = Path(
-    "/home/wil/moscaquant-data/processed/"
-    "visual-r1-r6-map-v1.npz"
-)
+RETINA = data_path('processed', 'visual-r1-r6-map-v1.npz')
 
-RELAY = Path(
-    "/home/wil/moscaquant-data/processed/"
-    "visual-relay-map-v1.npz"
-)
+RELAY = data_path('processed', 'visual-relay-map-v1.npz')
 
-TERRITORIES = Path(
-    "/home/wil/moscaquant-data/processed/"
-    "market-retinal-territories-v1.npz"
-)
+TERRITORIES = data_path('processed', 'market-retinal-territories-v1.npz')
 
-NEURON_IDS = Path(
-    "/home/wil/moscaquant-data/processed/"
-    "neuron_ids.npy"
-)
+NEURON_IDS = data_path('processed', 'neuron_ids.npy')
 
 CONFIG = Path(
     "config/sensory/visual-transduction-v1.toml"

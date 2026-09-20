@@ -1,4 +1,5 @@
 from __future__ import annotations
+from config.paths import data_path
 
 import gc
 import json
@@ -16,30 +17,15 @@ from brain.shuffled_connectome_v2 import (
 )
 
 
-BIOLOGICAL = Path(
-    "/home/wil/moscaquant-data/processed/"
-    "connectome-baseline-v1.npz"
-)
+BIOLOGICAL = data_path('processed', 'connectome-baseline-v1.npz')
 
-RETINA = Path(
-    "/home/wil/moscaquant-data/processed/"
-    "visual-r1-r6-map-v1.npz"
-)
+RETINA = data_path('processed', 'visual-r1-r6-map-v1.npz')
 
-RELAY = Path(
-    "/home/wil/moscaquant-data/processed/"
-    "visual-relay-map-v1.npz"
-)
+RELAY = data_path('processed', 'visual-relay-map-v1.npz')
 
-SIGNS = Path(
-    "/home/wil/moscaquant-data/processed/"
-    "transmitter_sign.npy"
-)
+SIGNS = data_path('processed', 'transmitter_sign.npy')
 
-NEURON_IDS = Path(
-    "/home/wil/moscaquant-data/processed/"
-    "neuron_ids.npy"
-)
+NEURON_IDS = data_path('processed', 'neuron_ids.npy')
 
 TRANSDUCTION_CONFIG = Path(
     "config/sensory/visual-transduction-v1.toml"
@@ -49,10 +35,7 @@ ENSEMBLE_CONFIG = Path(
     "config/controls/shuffled-mosca-ensemble-v2.toml"
 )
 
-OUTPUT = Path(
-    "/home/wil/moscaquant-data/experiments/"
-    "mq2-1-shuffled-ensemble-v2.json"
-)
+OUTPUT = data_path('experiments', 'mq2-1-shuffled-ensemble-v2.json')
 
 
 def build_in_memory_control(
