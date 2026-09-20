@@ -1,0 +1,2808 @@
+{
+  "aligned_edges_sha256": "1cac309c7760d16f5f041a7b924efbf5cdfa3a46570090fb234c2323ed9e313c",
+  "all_aa_exact": true,
+  "all_pair_metrics_agree_with_sq03d": false,
+  "all_pairs_verified": false,
+  "all_subject_metrics_agree_with_sq03b": true,
+  "claim_boundary": "SQ-03D.1 can verify that selected SQ-03D context-dependent hotspots survive an independent scalar execution path. It does not establish a biological sex mechanism, population-level statistical significance, organism-level behavior, intelligence differences, or financial utility.",
+  "classification": "AUTHORITATIVE_SCALAR_VERIFICATION_RESULT",
+  "low_tail_control_pair_count": 16,
+  "low_tail_verified_count": 0,
+  "pair_count": 32,
+  "panel_sha256": "0fb664b4e8de6999df3fcc3d36c2e69bff91232ceb4b823ee122789776c84d90",
+  "protocol_sha256": "8775d8d13d543275b7eaad0295775c4f51328a8b879a2b8f0e150265f3519d1b",
+  "results": [
+    {
+      "anchor": "DNc02",
+      "edge_id": 384762,
+      "input": "AVLP234",
+      "pair_metric_agreement": {
+        "integrated_context_residual": true,
+        "integrated_normalized_asymmetry": false,
+        "integrated_total_effect_magnitude": true,
+        "peak_context_residual": true,
+        "peak_normalized_asymmetry": false,
+        "peak_total_effect_magnitude": true
+      },
+      "panel_class": "UPPER_TAIL",
+      "post": "DNc02",
+      "pre": "KCab",
+      "scalar_reconstructed": {
+        "integrated": {
+          "context_residual": 0.0014244859339669347,
+          "delta_lilith": -0.0005094598745927215,
+          "delta_morty": 0.0019339458085596561,
+          "normalized_asymmetry": 0.5829919868767448,
+          "total_effect_magnitude": 0.0024434056831523776
+        },
+        "peak": {
+          "context_residual": 0.00011917937081307173,
+          "delta_lilith": -0.00010061342618428171,
+          "delta_morty": 0.00021979279699735343,
+          "normalized_asymmetry": 0.3719633458726865,
+          "total_effect_magnitude": 0.00032040622318163514
+        }
+      },
+      "sq03d_expected": {
+        "integrated": {
+          "context_residual": 0.0014244900667108595,
+          "delta_lilith": -0.0005094590014778078,
+          "delta_morty": 0.0019339490681886673,
+          "normalized_asymmetry": 0.5829931088446074,
+          "sign_relation": "OPPOSITE",
+          "total_effect_magnitude": 0.002443408069666475
+        },
+        "peak": {
+          "context_residual": 0.00011917988013010472,
+          "delta_lilith": -0.0001006132661132142,
+          "delta_morty": 0.00021979314624331892,
+          "normalized_asymmetry": 0.371964715854335,
+          "sign_relation": "OPPOSITE",
+          "total_effect_magnitude": 0.0003204064123565331
+        }
+      },
+      "subjects": {
+        "LILITH": {
+          "aa_exact": true,
+          "all_metrics_agree_with_sq03b": true,
+          "first_positive_agree_with_sq03b": true,
+          "integrated_agree_with_sq03b": true,
+          "peak_agree_with_sq03b": true,
+          "scalar_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": -0.0005094598745927215,
+            "peak_voltage_delta": -0.00010061342618428171
+          },
+          "sq03b_batched_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": -0.0005094590014778078,
+            "peak_voltage_delta": -0.0001006132661132142
+          }
+        },
+        "MORTY": {
+          "aa_exact": true,
+          "all_metrics_agree_with_sq03b": true,
+          "first_positive_agree_with_sq03b": true,
+          "integrated_agree_with_sq03b": true,
+          "peak_agree_with_sq03b": true,
+          "scalar_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": 0.0019339458085596561,
+            "peak_voltage_delta": 0.00021979279699735343
+          },
+          "sq03b_batched_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": 0.0019339490681886673,
+            "peak_voltage_delta": 0.00021979314624331892
+          }
+        }
+      },
+      "verified": false
+    },
+    {
+      "anchor": "DNc02",
+      "edge_id": 68785,
+      "input": "AVLP234",
+      "pair_metric_agreement": {
+        "integrated_context_residual": true,
+        "integrated_normalized_asymmetry": false,
+        "integrated_total_effect_magnitude": true,
+        "peak_context_residual": true,
+        "peak_normalized_asymmetry": false,
+        "peak_total_effect_magnitude": true
+      },
+      "panel_class": "UPPER_TAIL",
+      "post": "OA-VPM4",
+      "pre": "AVLP234",
+      "scalar_reconstructed": {
+        "integrated": {
+          "context_residual": 0.00019813666585832834,
+          "delta_lilith": 0.001014766632579267,
+          "delta_morty": -0.0008166299667209387,
+          "normalized_asymmetry": 0.10818883574100677,
+          "total_effect_magnitude": 0.0018313965993002057
+        },
+        "peak": {
+          "context_residual": 0.0001386842632200569,
+          "delta_lilith": 0.00016305127064697444,
+          "delta_morty": -2.4367007426917553e-05,
+          "normalized_asymmetry": 0.7399719208036843,
+          "total_effect_magnitude": 0.000187418278073892
+        }
+      },
+      "sq03d_expected": {
+        "integrated": {
+          "context_residual": 0.00019814062397927046,
+          "delta_lilith": 0.0010147684952244163,
+          "delta_morty": -0.0008166278712451458,
+          "normalized_asymmetry": 0.10819101075385014,
+          "sign_relation": "OPPOSITE",
+          "total_effect_magnitude": 0.001831396366469562
+        },
+        "peak": {
+          "context_residual": 0.00013868490350432694,
+          "delta_lilith": 0.00016305159078910947,
+          "delta_morty": -2.436668728478253e-05,
+          "normalized_asymmetry": 0.7399753371421366,
+          "sign_relation": "OPPOSITE",
+          "total_effect_magnitude": 0.000187418278073892
+        }
+      },
+      "subjects": {
+        "LILITH": {
+          "aa_exact": true,
+          "all_metrics_agree_with_sq03b": true,
+          "first_positive_agree_with_sq03b": true,
+          "integrated_agree_with_sq03b": true,
+          "peak_agree_with_sq03b": true,
+          "scalar_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": 0.001014766632579267,
+            "peak_voltage_delta": 0.00016305127064697444
+          },
+          "sq03b_batched_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": 0.0010147684952244163,
+            "peak_voltage_delta": 0.00016305159078910947
+          }
+        },
+        "MORTY": {
+          "aa_exact": true,
+          "all_metrics_agree_with_sq03b": true,
+          "first_positive_agree_with_sq03b": true,
+          "integrated_agree_with_sq03b": true,
+          "peak_agree_with_sq03b": true,
+          "scalar_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": -0.0008166299667209387,
+            "peak_voltage_delta": -2.4367007426917553e-05
+          },
+          "sq03b_batched_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": -0.0008166278712451458,
+            "peak_voltage_delta": -2.436668728478253e-05
+          }
+        }
+      },
+      "verified": false
+    },
+    {
+      "anchor": "DNc02",
+      "edge_id": 384762,
+      "input": "AVLP435",
+      "pair_metric_agreement": {
+        "integrated_context_residual": true,
+        "integrated_normalized_asymmetry": true,
+        "integrated_total_effect_magnitude": true,
+        "peak_context_residual": true,
+        "peak_normalized_asymmetry": true,
+        "peak_total_effect_magnitude": true
+      },
+      "panel_class": "UPPER_TAIL",
+      "post": "DNc02",
+      "pre": "KCab",
+      "scalar_reconstructed": {
+        "integrated": {
+          "context_residual": 0.0002019757030211622,
+          "delta_lilith": -1.529862311144825e-05,
+          "delta_morty": 0.00021727432613261044,
+          "normalized_asymmetry": 0.8684402191985441,
+          "total_effect_magnitude": 0.0002325729492440587
+        },
+        "peak": {
+          "context_residual": 4.9555819714441895e-05,
+          "delta_lilith": -4.629429895430803e-06,
+          "delta_morty": 5.41852496098727e-05,
+          "normalized_asymmetry": 0.842575699319645,
+          "total_effect_magnitude": 5.88146795053035e-05
+        }
+      },
+      "sq03d_expected": {
+        "integrated": {
+          "context_residual": 0.00020197623598505743,
+          "delta_lilith": -1.5298614016501233e-05,
+          "delta_morty": 0.00021727485000155866,
+          "normalized_asymmetry": 0.8684405886020319,
+          "sign_relation": "OPPOSITE",
+          "total_effect_magnitude": 0.0002325734640180599
+        },
+        "peak": {
+          "context_residual": 4.955595386491041e-05,
+          "delta_lilith": -4.629426712199347e-06,
+          "delta_morty": 5.4185380577109754e-05,
+          "normalized_asymmetry": 0.8425761495935107,
+          "sign_relation": "OPPOSITE",
+          "total_effect_magnitude": 5.88148072893091e-05
+        }
+      },
+      "subjects": {
+        "LILITH": {
+          "aa_exact": true,
+          "all_metrics_agree_with_sq03b": true,
+          "first_positive_agree_with_sq03b": true,
+          "integrated_agree_with_sq03b": true,
+          "peak_agree_with_sq03b": true,
+          "scalar_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": -1.529862311144825e-05,
+            "peak_voltage_delta": -4.629429895430803e-06
+          },
+          "sq03b_batched_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": -1.5298614016501233e-05,
+            "peak_voltage_delta": -4.629426712199347e-06
+          }
+        },
+        "MORTY": {
+          "aa_exact": true,
+          "all_metrics_agree_with_sq03b": true,
+          "first_positive_agree_with_sq03b": true,
+          "integrated_agree_with_sq03b": true,
+          "peak_agree_with_sq03b": true,
+          "scalar_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": 0.00021727432613261044,
+            "peak_voltage_delta": 5.41852496098727e-05
+          },
+          "sq03b_batched_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": 0.00021727485000155866,
+            "peak_voltage_delta": 5.4185380577109754e-05
+          }
+        }
+      },
+      "verified": true
+    },
+    {
+      "anchor": "DNp30",
+      "edge_id": 101198,
+      "input": "AVLP435",
+      "pair_metric_agreement": {
+        "integrated_context_residual": true,
+        "integrated_normalized_asymmetry": false,
+        "integrated_total_effect_magnitude": true,
+        "peak_context_residual": true,
+        "peak_normalized_asymmetry": false,
+        "peak_total_effect_magnitude": true
+      },
+      "panel_class": "UPPER_TAIL",
+      "post": "DNp30",
+      "pre": "AVLP580",
+      "scalar_reconstructed": {
+        "integrated": {
+          "context_residual": 8.845399133861065e-05,
+          "delta_lilith": 5.749543197453022e-05,
+          "delta_morty": -0.00014594942331314087,
+          "normalized_asymmetry": 0.43478116570476394,
+          "total_effect_magnitude": 0.0002034448552876711
+        },
+        "peak": {
+          "context_residual": 1.3551762094721198e-06,
+          "delta_lilith": 8.812785381451249e-07,
+          "delta_morty": -2.2364547476172447e-06,
+          "normalized_asymmetry": 0.4346671396365911,
+          "total_effect_magnitude": 3.1177332857623696e-06
+        }
+      },
+      "sq03d_expected": {
+        "integrated": {
+          "context_residual": 8.843629620969296e-05,
+          "delta_lilith": 5.7498225942254066e-05,
+          "delta_morty": -0.00014593452215194702,
+          "normalized_asymmetry": 0.43472005878199044,
+          "sign_relation": "OPPOSITE",
+          "total_effect_magnitude": 0.0002034327480942011
+        },
+        "peak": {
+          "context_residual": 1.354903361061588e-06,
+          "delta_lilith": 8.813185559120029e-07,
+          "delta_morty": -2.236221916973591e-06,
+          "normalized_asymmetry": 0.4346065024161467,
+          "sign_relation": "OPPOSITE",
+          "total_effect_magnitude": 3.1175404728855938e-06
+        }
+      },
+      "subjects": {
+        "LILITH": {
+          "aa_exact": true,
+          "all_metrics_agree_with_sq03b": true,
+          "first_positive_agree_with_sq03b": true,
+          "integrated_agree_with_sq03b": true,
+          "peak_agree_with_sq03b": true,
+          "scalar_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": 5.749543197453022e-05,
+            "peak_voltage_delta": 8.812785381451249e-07
+          },
+          "sq03b_batched_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": 5.7498225942254066e-05,
+            "peak_voltage_delta": 8.813185559120029e-07
+          }
+        },
+        "MORTY": {
+          "aa_exact": true,
+          "all_metrics_agree_with_sq03b": true,
+          "first_positive_agree_with_sq03b": true,
+          "integrated_agree_with_sq03b": true,
+          "peak_agree_with_sq03b": true,
+          "scalar_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": -0.00014594942331314087,
+            "peak_voltage_delta": -2.2364547476172447e-06
+          },
+          "sq03b_batched_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": -0.00014593452215194702,
+            "peak_voltage_delta": -2.236221916973591e-06
+          }
+        }
+      },
+      "verified": false
+    },
+    {
+      "anchor": "DNp27",
+      "edge_id": 440271,
+      "input": "LPLC2",
+      "pair_metric_agreement": {
+        "integrated_context_residual": true,
+        "integrated_normalized_asymmetry": false,
+        "integrated_total_effect_magnitude": true,
+        "peak_context_residual": true,
+        "peak_normalized_asymmetry": false,
+        "peak_total_effect_magnitude": true
+      },
+      "panel_class": "UPPER_TAIL",
+      "post": "DNp27",
+      "pre": "LPLC2",
+      "scalar_reconstructed": {
+        "integrated": {
+          "context_residual": 0.007963401731103659,
+          "delta_lilith": 0.012318772729486227,
+          "delta_morty": -0.020282174460589886,
+          "normalized_asymmetry": 0.24426902950622725,
+          "total_effect_magnitude": 0.03260094719007611
+        },
+        "peak": {
+          "context_residual": 0.0003302349796285853,
+          "delta_lilith": 0.0002247985830763355,
+          "delta_morty": -0.0005550335627049208,
+          "normalized_asymmetry": 0.4234693086391652,
+          "total_effect_magnitude": 0.0007798321457812563
+        }
+      },
+      "sq03d_expected": {
+        "integrated": {
+          "context_residual": 0.007963366340845823,
+          "delta_lilith": 0.01231878949329257,
+          "delta_morty": -0.020282155834138393,
+          "normalized_asymmetry": 0.244267957903212,
+          "sign_relation": "OPPOSITE",
+          "total_effect_magnitude": 0.032600945327430964
+        },
+        "peak": {
+          "context_residual": 0.0003302335535408929,
+          "delta_lilith": 0.0002247991069452837,
+          "delta_morty": -0.0005550326604861766,
+          "normalized_asymmetry": 0.4234676853811514,
+          "sign_relation": "OPPOSITE",
+          "total_effect_magnitude": 0.0007798317674314603
+        }
+      },
+      "subjects": {
+        "LILITH": {
+          "aa_exact": true,
+          "all_metrics_agree_with_sq03b": true,
+          "first_positive_agree_with_sq03b": true,
+          "integrated_agree_with_sq03b": true,
+          "peak_agree_with_sq03b": true,
+          "scalar_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": 0.012318772729486227,
+            "peak_voltage_delta": 0.0002247985830763355
+          },
+          "sq03b_batched_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": 0.01231878949329257,
+            "peak_voltage_delta": 0.0002247991069452837
+          }
+        },
+        "MORTY": {
+          "aa_exact": true,
+          "all_metrics_agree_with_sq03b": true,
+          "first_positive_agree_with_sq03b": true,
+          "integrated_agree_with_sq03b": true,
+          "peak_agree_with_sq03b": true,
+          "scalar_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": -0.020282174460589886,
+            "peak_voltage_delta": -0.0005550335627049208
+          },
+          "sq03b_batched_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": -0.020282155834138393,
+            "peak_voltage_delta": -0.0005550326604861766
+          }
+        }
+      },
+      "verified": false
+    },
+    {
+      "anchor": "DNc02",
+      "edge_id": 440259,
+      "input": "LPLC2",
+      "pair_metric_agreement": {
+        "integrated_context_residual": true,
+        "integrated_normalized_asymmetry": false,
+        "integrated_total_effect_magnitude": true,
+        "peak_context_residual": true,
+        "peak_normalized_asymmetry": false,
+        "peak_total_effect_magnitude": true
+      },
+      "panel_class": "UPPER_TAIL",
+      "post": "DNc02",
+      "pre": "LPLC2",
+      "scalar_reconstructed": {
+        "integrated": {
+          "context_residual": 0.001643206225708127,
+          "delta_lilith": -0.0025730973575264215,
+          "delta_morty": 0.004216303583234549,
+          "normalized_asymmetry": 0.2420252154859414,
+          "total_effect_magnitude": 0.00678940094076097
+        },
+        "peak": {
+          "context_residual": 6.734686030540615e-05,
+          "delta_lilith": -5.107546166982502e-05,
+          "delta_morty": 0.00011842232197523117,
+          "normalized_asymmetry": 0.39733180491868036,
+          "total_effect_magnitude": 0.0001694977836450562
+        }
+      },
+      "sq03d_expected": {
+        "integrated": {
+          "context_residual": 0.001643213676288724,
+          "delta_lilith": -0.0025730954948812723,
+          "delta_morty": 0.004216309171169996,
+          "normalized_asymmetry": 0.2420261800721948,
+          "sign_relation": "OPPOSITE",
+          "total_effect_magnitude": 0.006789404666051269
+        },
+        "peak": {
+          "context_residual": 6.734742783010006e-05,
+          "delta_lilith": -5.1075301598757505e-05,
+          "delta_morty": 0.00011842272942885756,
+          "normalized_asymmetry": 0.3973345732796603,
+          "sign_relation": "OPPOSITE",
+          "total_effect_magnitude": 0.00016949803102761507
+        }
+      },
+      "subjects": {
+        "LILITH": {
+          "aa_exact": true,
+          "all_metrics_agree_with_sq03b": true,
+          "first_positive_agree_with_sq03b": true,
+          "integrated_agree_with_sq03b": true,
+          "peak_agree_with_sq03b": true,
+          "scalar_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": -0.0025730973575264215,
+            "peak_voltage_delta": -5.107546166982502e-05
+          },
+          "sq03b_batched_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": -0.0025730954948812723,
+            "peak_voltage_delta": -5.1075301598757505e-05
+          }
+        },
+        "MORTY": {
+          "aa_exact": true,
+          "all_metrics_agree_with_sq03b": true,
+          "first_positive_agree_with_sq03b": true,
+          "integrated_agree_with_sq03b": true,
+          "peak_agree_with_sq03b": true,
+          "scalar_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": 0.004216303583234549,
+            "peak_voltage_delta": 0.00011842232197523117
+          },
+          "sq03b_batched_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": 0.004216309171169996,
+            "peak_voltage_delta": 0.00011842272942885756
+          }
+        }
+      },
+      "verified": false
+    },
+    {
+      "anchor": "DNc02",
+      "edge_id": 384762,
+      "input": "TmY14",
+      "pair_metric_agreement": {
+        "integrated_context_residual": true,
+        "integrated_normalized_asymmetry": false,
+        "integrated_total_effect_magnitude": true,
+        "peak_context_residual": true,
+        "peak_normalized_asymmetry": false,
+        "peak_total_effect_magnitude": true
+      },
+      "panel_class": "UPPER_TAIL",
+      "post": "DNc02",
+      "pre": "KCab",
+      "scalar_reconstructed": {
+        "integrated": {
+          "context_residual": 4.2268598917871714e-05,
+          "delta_lilith": -5.617830902338028e-05,
+          "delta_morty": 9.844690794125199e-05,
+          "normalized_asymmetry": 0.27336161428015904,
+          "total_effect_magnitude": 0.00015462521696463227
+        },
+        "peak": {
+          "context_residual": 2.7474630769575015e-05,
+          "delta_lilith": -4.3655745685100555e-11,
+          "delta_morty": 2.74746744253207e-05,
+          "normalized_asymmetry": 0.9999968221151128,
+          "total_effect_magnitude": 2.7474718081066385e-05
+        }
+      },
+      "sq03d_expected": {
+        "integrated": {
+          "context_residual": 4.2272498831152916e-05,
+          "delta_lilith": -5.617528222501278e-05,
+          "delta_morty": 9.84477810561657e-05,
+          "normalized_asymmetry": 0.2733906438930223,
+          "sign_relation": "OPPOSITE",
+          "total_effect_magnitude": 0.00015462306328117847
+        },
+        "peak": {
+          "context_residual": 2.7474739908939227e-05,
+          "delta_lilith": -7.275957614183426e-12,
+          "delta_morty": 2.747474718489684e-05,
+          "normalized_asymmetry": 0.9999994703532201,
+          "sign_relation": "OPPOSITE",
+          "total_effect_magnitude": 2.7474754460854456e-05
+        }
+      },
+      "subjects": {
+        "LILITH": {
+          "aa_exact": true,
+          "all_metrics_agree_with_sq03b": true,
+          "first_positive_agree_with_sq03b": true,
+          "integrated_agree_with_sq03b": true,
+          "peak_agree_with_sq03b": true,
+          "scalar_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": -5.617830902338028e-05,
+            "peak_voltage_delta": -4.3655745685100555e-11
+          },
+          "sq03b_batched_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": -5.617528222501278e-05,
+            "peak_voltage_delta": -7.275957614183426e-12
+          }
+        },
+        "MORTY": {
+          "aa_exact": true,
+          "all_metrics_agree_with_sq03b": true,
+          "first_positive_agree_with_sq03b": true,
+          "integrated_agree_with_sq03b": true,
+          "peak_agree_with_sq03b": true,
+          "scalar_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": 9.844690794125199e-05,
+            "peak_voltage_delta": 2.74746744253207e-05
+          },
+          "sq03b_batched_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": 9.84477810561657e-05,
+            "peak_voltage_delta": 2.747474718489684e-05
+          }
+        }
+      },
+      "verified": false
+    },
+    {
+      "anchor": "DNp27",
+      "edge_id": 600154,
+      "input": "TmY14",
+      "pair_metric_agreement": {
+        "integrated_context_residual": true,
+        "integrated_normalized_asymmetry": false,
+        "integrated_total_effect_magnitude": true,
+        "peak_context_residual": true,
+        "peak_normalized_asymmetry": false,
+        "peak_total_effect_magnitude": true
+      },
+      "panel_class": "UPPER_TAIL",
+      "post": "LPLC2",
+      "pre": "TmY14",
+      "scalar_reconstructed": {
+        "integrated": {
+          "context_residual": 3.622472286224365e-05,
+          "delta_lilith": -7.031485438346863e-06,
+          "delta_morty": 4.3256208300590515e-05,
+          "normalized_asymmetry": 0.7203496555300393,
+          "total_effect_magnitude": 5.028769373893738e-05
+        },
+        "peak": {
+          "context_residual": 2.7568603400141e-07,
+          "delta_lilith": -6.405753083527088e-08,
+          "delta_morty": 3.397435648366809e-07,
+          "normalized_asymmetry": 0.682727305488486,
+          "total_effect_magnitude": 4.0380109567195177e-07
+        }
+      },
+      "sq03d_expected": {
+        "integrated": {
+          "context_residual": 3.623729571700096e-05,
+          "delta_lilith": -7.026363164186478e-06,
+          "delta_morty": 4.326365888118744e-05,
+          "normalized_asymmetry": 0.7205663120271859,
+          "sign_relation": "OPPOSITE",
+          "total_effect_magnitude": 5.029002204537392e-05
+        },
+        "peak": {
+          "context_residual": 2.759043127298355e-07,
+          "delta_lilith": -6.397021934390068e-08,
+          "delta_morty": 3.398745320737362e-07,
+          "normalized_asymmetry": 0.6831940040357452,
+          "sign_relation": "OPPOSITE",
+          "total_effect_magnitude": 4.0384475141763687e-07
+        }
+      },
+      "subjects": {
+        "LILITH": {
+          "aa_exact": true,
+          "all_metrics_agree_with_sq03b": true,
+          "first_positive_agree_with_sq03b": true,
+          "integrated_agree_with_sq03b": true,
+          "peak_agree_with_sq03b": true,
+          "scalar_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": -7.031485438346863e-06,
+            "peak_voltage_delta": -6.405753083527088e-08
+          },
+          "sq03b_batched_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": -7.026363164186478e-06,
+            "peak_voltage_delta": -6.397021934390068e-08
+          }
+        },
+        "MORTY": {
+          "aa_exact": true,
+          "all_metrics_agree_with_sq03b": true,
+          "first_positive_agree_with_sq03b": true,
+          "integrated_agree_with_sq03b": true,
+          "peak_agree_with_sq03b": true,
+          "scalar_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": 4.3256208300590515e-05,
+            "peak_voltage_delta": 3.397435648366809e-07
+          },
+          "sq03b_batched_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": 4.326365888118744e-05,
+            "peak_voltage_delta": 3.398745320737362e-07
+          }
+        }
+      },
+      "verified": false
+    },
+    {
+      "anchor": "DNp30",
+      "edge_id": 456803,
+      "input": "LPLC2",
+      "pair_metric_agreement": {
+        "integrated_context_residual": true,
+        "integrated_normalized_asymmetry": false,
+        "integrated_total_effect_magnitude": true,
+        "peak_context_residual": true,
+        "peak_normalized_asymmetry": false,
+        "peak_total_effect_magnitude": true
+      },
+      "panel_class": "UPPER_TAIL",
+      "post": "DNp30",
+      "pre": "LoVC16",
+      "scalar_reconstructed": {
+        "integrated": {
+          "context_residual": 0.0007374081760644913,
+          "delta_lilith": 7.822830229997635e-05,
+          "delta_morty": -0.0008156364783644676,
+          "normalized_asymmetry": 0.8249661380733084,
+          "total_effect_magnitude": 0.000893864780664444
+        },
+        "peak": {
+          "context_residual": 4.687243381340522e-05,
+          "delta_lilith": 4.6478653530357406e-06,
+          "delta_morty": -5.1520299166440964e-05,
+          "normalized_asymmetry": 0.8345017896597258,
+          "total_effect_magnitude": 5.6168164519476704e-05
+        }
+      },
+      "sq03d_expected": {
+        "integrated": {
+          "context_residual": 0.0007374006672762334,
+          "delta_lilith": 7.822929183021188e-05,
+          "delta_morty": -0.0008156299591064453,
+          "normalized_asymmetry": 0.8249628411895117,
+          "sign_relation": "OPPOSITE",
+          "total_effect_magnitude": 0.0008938592509366572
+        },
+        "peak": {
+          "context_residual": 4.6871948143234476e-05,
+          "delta_lilith": 4.647914465749636e-06,
+          "delta_morty": -5.151986260898411e-05,
+          "normalized_asymmetry": 0.83449889926869,
+          "sign_relation": "OPPOSITE",
+          "total_effect_magnitude": 5.616777707473375e-05
+        }
+      },
+      "subjects": {
+        "LILITH": {
+          "aa_exact": true,
+          "all_metrics_agree_with_sq03b": true,
+          "first_positive_agree_with_sq03b": true,
+          "integrated_agree_with_sq03b": true,
+          "peak_agree_with_sq03b": true,
+          "scalar_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": 7.822830229997635e-05,
+            "peak_voltage_delta": 4.6478653530357406e-06
+          },
+          "sq03b_batched_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": 7.822929183021188e-05,
+            "peak_voltage_delta": 4.647914465749636e-06
+          }
+        },
+        "MORTY": {
+          "aa_exact": true,
+          "all_metrics_agree_with_sq03b": true,
+          "first_positive_agree_with_sq03b": true,
+          "integrated_agree_with_sq03b": true,
+          "peak_agree_with_sq03b": true,
+          "scalar_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": -0.0008156364783644676,
+            "peak_voltage_delta": -5.1520299166440964e-05
+          },
+          "sq03b_batched_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": -0.0008156299591064453,
+            "peak_voltage_delta": -5.151986260898411e-05
+          }
+        }
+      },
+      "verified": false
+    },
+    {
+      "anchor": "DNp30",
+      "edge_id": 402471,
+      "input": "LPLC2",
+      "pair_metric_agreement": {
+        "integrated_context_residual": true,
+        "integrated_normalized_asymmetry": false,
+        "integrated_total_effect_magnitude": true,
+        "peak_context_residual": true,
+        "peak_normalized_asymmetry": false,
+        "peak_total_effect_magnitude": true
+      },
+      "panel_class": "UPPER_TAIL",
+      "post": "LoVC16",
+      "pre": "LC17",
+      "scalar_reconstructed": {
+        "integrated": {
+          "context_residual": 0.0007123365066945553,
+          "delta_lilith": 6.668083369731903e-05,
+          "delta_morty": -0.0007790173403918743,
+          "normalized_asymmetry": 0.8423058350122762,
+          "total_effect_magnitude": 0.0008456981740891933
+        },
+        "peak": {
+          "context_residual": 4.6511109758284874e-05,
+          "delta_lilith": 4.228711986797862e-06,
+          "delta_morty": -5.0739821745082736e-05,
+          "normalized_asymmetry": 0.8461406299311456,
+          "total_effect_magnitude": 5.49685337318806e-05
+        }
+      },
+      "sq03d_expected": {
+        "integrated": {
+          "context_residual": 0.00071232725167647,
+          "delta_lilith": 6.668170681223273e-05,
+          "delta_morty": -0.0007790089584887028,
+          "normalized_asymmetry": 0.8423023700078224,
+          "sign_relation": "OPPOSITE",
+          "total_effect_magnitude": 0.0008456906653009355
+        },
+        "peak": {
+          "context_residual": 4.651054223359097e-05,
+          "delta_lilith": 4.228755642543547e-06,
+          "delta_morty": -5.0739297876134515e-05,
+          "normalized_asymmetry": 0.8461376973770184,
+          "sign_relation": "OPPOSITE",
+          "total_effect_magnitude": 5.496805351867806e-05
+        }
+      },
+      "subjects": {
+        "LILITH": {
+          "aa_exact": true,
+          "all_metrics_agree_with_sq03b": true,
+          "first_positive_agree_with_sq03b": true,
+          "integrated_agree_with_sq03b": true,
+          "peak_agree_with_sq03b": true,
+          "scalar_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": 6.668083369731903e-05,
+            "peak_voltage_delta": 4.228711986797862e-06
+          },
+          "sq03b_batched_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": 6.668170681223273e-05,
+            "peak_voltage_delta": 4.228755642543547e-06
+          }
+        },
+        "MORTY": {
+          "aa_exact": true,
+          "all_metrics_agree_with_sq03b": true,
+          "first_positive_agree_with_sq03b": true,
+          "integrated_agree_with_sq03b": true,
+          "peak_agree_with_sq03b": true,
+          "scalar_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": -0.0007790173403918743,
+            "peak_voltage_delta": -5.0739821745082736e-05
+          },
+          "sq03b_batched_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": -0.0007790089584887028,
+            "peak_voltage_delta": -5.0739297876134515e-05
+          }
+        }
+      },
+      "verified": false
+    },
+    {
+      "anchor": "DNc02",
+      "edge_id": 384762,
+      "input": "LPLC2",
+      "pair_metric_agreement": {
+        "integrated_context_residual": true,
+        "integrated_normalized_asymmetry": false,
+        "integrated_total_effect_magnitude": true,
+        "peak_context_residual": true,
+        "peak_normalized_asymmetry": false,
+        "peak_total_effect_magnitude": true
+      },
+      "panel_class": "UPPER_TAIL",
+      "post": "DNc02",
+      "pre": "KCab",
+      "scalar_reconstructed": {
+        "integrated": {
+          "context_residual": 0.0006591230630874634,
+          "delta_lilith": -0.00020576873794198036,
+          "delta_morty": 0.0008648918010294437,
+          "normalized_asymmetry": 0.6156228226368352,
+          "total_effect_magnitude": 0.001070660538971424
+        },
+        "peak": {
+          "context_residual": 0.0001263792801182717,
+          "delta_lilith": -4.656286910176277e-05,
+          "delta_morty": 0.00017294214922003448,
+          "normalized_asymmetry": 0.5757466552905776,
+          "total_effect_magnitude": 0.00021950501832179725
+        }
+      },
+      "sq03d_expected": {
+        "integrated": {
+          "context_residual": 0.0006591309793293476,
+          "delta_lilith": -0.0002057645469903946,
+          "delta_morty": 0.0008648955263197422,
+          "normalized_asymmetry": 0.6156304841848884,
+          "sign_relation": "OPPOSITE",
+          "total_effect_magnitude": 0.0010706600733101368
+        },
+        "peak": {
+          "context_residual": 0.00012637993495445698,
+          "delta_lilith": -4.656270903069526e-05,
+          "delta_morty": 0.00017294264398515224,
+          "normalized_asymmetry": 0.5757487606479137,
+          "sign_relation": "OPPOSITE",
+          "total_effect_magnitude": 0.0002195053530158475
+        }
+      },
+      "subjects": {
+        "LILITH": {
+          "aa_exact": true,
+          "all_metrics_agree_with_sq03b": true,
+          "first_positive_agree_with_sq03b": true,
+          "integrated_agree_with_sq03b": true,
+          "peak_agree_with_sq03b": true,
+          "scalar_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": -0.00020576873794198036,
+            "peak_voltage_delta": -4.656286910176277e-05
+          },
+          "sq03b_batched_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": -0.0002057645469903946,
+            "peak_voltage_delta": -4.656270903069526e-05
+          }
+        },
+        "MORTY": {
+          "aa_exact": true,
+          "all_metrics_agree_with_sq03b": true,
+          "first_positive_agree_with_sq03b": true,
+          "integrated_agree_with_sq03b": true,
+          "peak_agree_with_sq03b": true,
+          "scalar_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": 0.0008648918010294437,
+            "peak_voltage_delta": 0.00017294214922003448
+          },
+          "sq03b_batched_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": 0.0008648955263197422,
+            "peak_voltage_delta": 0.00017294264398515224
+          }
+        }
+      },
+      "verified": false
+    },
+    {
+      "anchor": "DNp30",
+      "edge_id": 528580,
+      "input": "LPLC2",
+      "pair_metric_agreement": {
+        "integrated_context_residual": true,
+        "integrated_normalized_asymmetry": false,
+        "integrated_total_effect_magnitude": true,
+        "peak_context_residual": true,
+        "peak_normalized_asymmetry": false,
+        "peak_total_effect_magnitude": true
+      },
+      "panel_class": "UPPER_TAIL",
+      "post": "LC17",
+      "pre": "PVLP011",
+      "scalar_reconstructed": {
+        "integrated": {
+          "context_residual": 0.000604328466579318,
+          "delta_lilith": 3.4774886444211006e-05,
+          "delta_morty": -0.000639103353023529,
+          "normalized_asymmetry": 0.8967917810443685,
+          "total_effect_magnitude": 0.0006738782394677401
+        },
+        "peak": {
+          "context_residual": 3.241745253035333e-05,
+          "delta_lilith": 2.4443961592623964e-06,
+          "delta_morty": -3.4861848689615726e-05,
+          "normalized_asymmetry": 0.8689551216336959,
+          "total_effect_magnitude": 3.730624484887812e-05
+        }
+      },
+      "sq03d_expected": {
+        "integrated": {
+          "context_residual": 0.000604321132414043,
+          "delta_lilith": 3.4775701351463795e-05,
+          "delta_morty": -0.0006390968337655067,
+          "normalized_asymmetry": 0.8967884888039622,
+          "sign_relation": "OPPOSITE",
+          "total_effect_magnitude": 0.0006738725351169705
+        },
+        "peak": {
+          "context_residual": 3.24169759551296e-05,
+          "delta_lilith": 2.4444361770292744e-06,
+          "delta_morty": -3.4861412132158875e-05,
+          "normalized_asymmetry": 0.8689515833136957,
+          "sign_relation": "OPPOSITE",
+          "total_effect_magnitude": 3.730584830918815e-05
+        }
+      },
+      "subjects": {
+        "LILITH": {
+          "aa_exact": true,
+          "all_metrics_agree_with_sq03b": true,
+          "first_positive_agree_with_sq03b": true,
+          "integrated_agree_with_sq03b": true,
+          "peak_agree_with_sq03b": true,
+          "scalar_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": 3.4774886444211006e-05,
+            "peak_voltage_delta": 2.4443961592623964e-06
+          },
+          "sq03b_batched_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": 3.4775701351463795e-05,
+            "peak_voltage_delta": 2.4444361770292744e-06
+          }
+        },
+        "MORTY": {
+          "aa_exact": true,
+          "all_metrics_agree_with_sq03b": true,
+          "first_positive_agree_with_sq03b": true,
+          "integrated_agree_with_sq03b": true,
+          "peak_agree_with_sq03b": true,
+          "scalar_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": -0.000639103353023529,
+            "peak_voltage_delta": -3.4861848689615726e-05
+          },
+          "sq03b_batched_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": -0.0006390968337655067,
+            "peak_voltage_delta": -3.4861412132158875e-05
+          }
+        }
+      },
+      "verified": false
+    },
+    {
+      "anchor": "DNp27",
+      "edge_id": 402482,
+      "input": "LPLC2",
+      "pair_metric_agreement": {
+        "integrated_context_residual": true,
+        "integrated_normalized_asymmetry": false,
+        "integrated_total_effect_magnitude": true,
+        "peak_context_residual": true,
+        "peak_normalized_asymmetry": false,
+        "peak_total_effect_magnitude": true
+      },
+      "panel_class": "UPPER_TAIL",
+      "post": "PVLP011",
+      "pre": "LC17",
+      "scalar_reconstructed": {
+        "integrated": {
+          "context_residual": 0.00044549768790602684,
+          "delta_lilith": 3.639841452240944e-05,
+          "delta_morty": -0.0004818961024284363,
+          "normalized_asymmetry": 0.8595454386184008,
+          "total_effect_magnitude": 0.0005182945169508457
+        },
+        "peak": {
+          "context_residual": 3.972827107645571e-05,
+          "delta_lilith": 2.983637386932969e-06,
+          "delta_morty": -4.271190846338868e-05,
+          "normalized_asymmetry": 0.8694123319281033,
+          "total_effect_magnitude": 4.569554585032165e-05
+        }
+      },
+      "sq03d_expected": {
+        "integrated": {
+          "context_residual": 0.00044546136632561684,
+          "delta_lilith": 3.640493378043175e-05,
+          "delta_morty": -0.0004818663001060486,
+          "normalized_asymmetry": 0.8595139710632456,
+          "sign_relation": "OPPOSITE",
+          "total_effect_magnitude": 0.0005182712338864803
+        },
+        "peak": {
+          "context_residual": 3.972663398599252e-05,
+          "delta_lilith": 2.983877493534237e-06,
+          "delta_morty": -4.271051147952676e-05,
+          "normalized_asymmetry": 0.8693985165096146,
+          "sign_relation": "OPPOSITE",
+          "total_effect_magnitude": 4.5694388973060995e-05
+        }
+      },
+      "subjects": {
+        "LILITH": {
+          "aa_exact": true,
+          "all_metrics_agree_with_sq03b": true,
+          "first_positive_agree_with_sq03b": true,
+          "integrated_agree_with_sq03b": true,
+          "peak_agree_with_sq03b": true,
+          "scalar_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": 3.639841452240944e-05,
+            "peak_voltage_delta": 2.983637386932969e-06
+          },
+          "sq03b_batched_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": 3.640493378043175e-05,
+            "peak_voltage_delta": 2.983877493534237e-06
+          }
+        },
+        "MORTY": {
+          "aa_exact": true,
+          "all_metrics_agree_with_sq03b": true,
+          "first_positive_agree_with_sq03b": true,
+          "integrated_agree_with_sq03b": true,
+          "peak_agree_with_sq03b": true,
+          "scalar_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": -0.0004818961024284363,
+            "peak_voltage_delta": -4.271190846338868e-05
+          },
+          "sq03b_batched_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": -0.0004818663001060486,
+            "peak_voltage_delta": -4.271051147952676e-05
+          }
+        }
+      },
+      "verified": false
+    },
+    {
+      "anchor": "DNp27",
+      "edge_id": 528580,
+      "input": "LPLC2",
+      "pair_metric_agreement": {
+        "integrated_context_residual": true,
+        "integrated_normalized_asymmetry": false,
+        "integrated_total_effect_magnitude": true,
+        "peak_context_residual": true,
+        "peak_normalized_asymmetry": false,
+        "peak_total_effect_magnitude": true
+      },
+      "panel_class": "UPPER_TAIL",
+      "post": "LC17",
+      "pre": "PVLP011",
+      "scalar_reconstructed": {
+        "integrated": {
+          "context_residual": 0.0003935280255973339,
+          "delta_lilith": 4.793563857674599e-05,
+          "delta_morty": -0.0004414636641740799,
+          "normalized_asymmetry": 0.8041041811571519,
+          "total_effect_magnitude": 0.0004893993027508259
+        },
+        "peak": {
+          "context_residual": 2.6883288228418678e-05,
+          "delta_lilith": 3.5221819416619837e-06,
+          "delta_morty": -3.0405470170080662e-05,
+          "normalized_asymmetry": 0.7923710175958255,
+          "total_effect_magnitude": 3.3927652111742646e-05
+        }
+      },
+      "sq03d_expected": {
+        "integrated": {
+          "context_residual": 0.00039348797872662544,
+          "delta_lilith": 4.7940295189619064e-05,
+          "delta_morty": -0.0004414282739162445,
+          "normalized_asymmetry": 0.8040728472725093,
+          "sign_relation": "OPPOSITE",
+          "total_effect_magnitude": 0.0004893685691058636
+        },
+        "peak": {
+          "context_residual": 2.688153472263366e-05,
+          "delta_lilith": 3.5223638406023383e-06,
+          "delta_morty": -3.0403898563235998e-05,
+          "normalized_asymmetry": 0.7923517893793202,
+          "sign_relation": "OPPOSITE",
+          "total_effect_magnitude": 3.3926262403838336e-05
+        }
+      },
+      "subjects": {
+        "LILITH": {
+          "aa_exact": true,
+          "all_metrics_agree_with_sq03b": true,
+          "first_positive_agree_with_sq03b": true,
+          "integrated_agree_with_sq03b": true,
+          "peak_agree_with_sq03b": true,
+          "scalar_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": 4.793563857674599e-05,
+            "peak_voltage_delta": 3.5221819416619837e-06
+          },
+          "sq03b_batched_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": 4.7940295189619064e-05,
+            "peak_voltage_delta": 3.5223638406023383e-06
+          }
+        },
+        "MORTY": {
+          "aa_exact": true,
+          "all_metrics_agree_with_sq03b": true,
+          "first_positive_agree_with_sq03b": true,
+          "integrated_agree_with_sq03b": true,
+          "peak_agree_with_sq03b": true,
+          "scalar_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": -0.0004414636641740799,
+            "peak_voltage_delta": -3.0405470170080662e-05
+          },
+          "sq03b_batched_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": -0.0004414282739162445,
+            "peak_voltage_delta": -3.0403898563235998e-05
+          }
+        }
+      },
+      "verified": false
+    },
+    {
+      "anchor": "DNp27",
+      "edge_id": 438380,
+      "input": "LPLC2",
+      "pair_metric_agreement": {
+        "integrated_context_residual": true,
+        "integrated_normalized_asymmetry": false,
+        "integrated_total_effect_magnitude": true,
+        "peak_context_residual": true,
+        "peak_normalized_asymmetry": false,
+        "peak_total_effect_magnitude": true
+      },
+      "panel_class": "UPPER_TAIL",
+      "post": "DNp27",
+      "pre": "LLPC1",
+      "scalar_reconstructed": {
+        "integrated": {
+          "context_residual": 0.0003497479483485222,
+          "delta_lilith": 0.00032815802842378616,
+          "delta_morty": -0.0006779059767723083,
+          "normalized_asymmetry": 0.347639858440569,
+          "total_effect_magnitude": 0.0010060640051960945
+        },
+        "peak": {
+          "context_residual": 2.4028136976994574e-05,
+          "delta_lilith": 1.185851579066366e-05,
+          "delta_morty": -3.5886652767658234e-05,
+          "normalized_asymmetry": 0.5032579777709574,
+          "total_effect_magnitude": 4.774516855832189e-05
+        }
+      },
+      "sq03d_expected": {
+        "integrated": {
+          "context_residual": 0.0003497195430099964,
+          "delta_lilith": 0.00032816221937537193,
+          "delta_morty": -0.0006778817623853683,
+          "normalized_asymmetry": 0.34761854287715177,
+          "sign_relation": "OPPOSITE",
+          "total_effect_magnitude": 0.0010060439817607403
+        },
+        "peak": {
+          "context_residual": 2.4026710889302194e-05,
+          "delta_lilith": 1.1858719517476857e-05,
+          "delta_morty": -3.588543040677905e-05,
+          "normalized_asymmetry": 0.5032388455427432,
+          "sign_relation": "OPPOSITE",
+          "total_effect_magnitude": 4.774414992425591e-05
+        }
+      },
+      "subjects": {
+        "LILITH": {
+          "aa_exact": true,
+          "all_metrics_agree_with_sq03b": true,
+          "first_positive_agree_with_sq03b": true,
+          "integrated_agree_with_sq03b": true,
+          "peak_agree_with_sq03b": true,
+          "scalar_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": 0.00032815802842378616,
+            "peak_voltage_delta": 1.185851579066366e-05
+          },
+          "sq03b_batched_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": 0.00032816221937537193,
+            "peak_voltage_delta": 1.1858719517476857e-05
+          }
+        },
+        "MORTY": {
+          "aa_exact": true,
+          "all_metrics_agree_with_sq03b": true,
+          "first_positive_agree_with_sq03b": true,
+          "integrated_agree_with_sq03b": true,
+          "peak_agree_with_sq03b": true,
+          "scalar_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": -0.0006779059767723083,
+            "peak_voltage_delta": -3.5886652767658234e-05
+          },
+          "sq03b_batched_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": -0.0006778817623853683,
+            "peak_voltage_delta": -3.588543040677905e-05
+          }
+        }
+      },
+      "verified": false
+    },
+    {
+      "anchor": "DNp30",
+      "edge_id": 77496,
+      "input": "LPLC2",
+      "pair_metric_agreement": {
+        "integrated_context_residual": true,
+        "integrated_normalized_asymmetry": false,
+        "integrated_total_effect_magnitude": true,
+        "peak_context_residual": true,
+        "peak_normalized_asymmetry": false,
+        "peak_total_effect_magnitude": true
+      },
+      "panel_class": "UPPER_TAIL",
+      "post": "DNp30",
+      "pre": "AVLP340",
+      "scalar_reconstructed": {
+        "integrated": {
+          "context_residual": 0.00032164336880669,
+          "delta_lilith": 0.0005758065381087363,
+          "delta_morty": -0.0008974499069154263,
+          "normalized_asymmetry": 0.21832137228587842,
+          "total_effect_magnitude": 0.0014732564450241625
+        },
+        "peak": {
+          "context_residual": 1.6274409063044004e-05,
+          "delta_lilith": 1.5653336959076114e-05,
+          "delta_morty": -3.192774602212012e-05,
+          "normalized_asymmetry": 0.3420352804805968,
+          "total_effect_magnitude": 4.758108298119623e-05
+        }
+      },
+      "sq03d_expected": {
+        "integrated": {
+          "context_residual": 0.0003216347540728748,
+          "delta_lilith": 0.0005758081679232419,
+          "delta_morty": -0.0008974429219961166,
+          "normalized_asymmetry": 0.2183163184291146,
+          "sign_relation": "OPPOSITE",
+          "total_effect_magnitude": 0.0014732510899193585
+        },
+        "peak": {
+          "context_residual": 1.627387428015936e-05,
+          "delta_lilith": 1.565340608067345e-05,
+          "delta_morty": -3.192728036083281e-05,
+          "normalized_asymmetry": 0.3420268915238496,
+          "sign_relation": "OPPOSITE",
+          "total_effect_magnitude": 4.758068644150626e-05
+        }
+      },
+      "subjects": {
+        "LILITH": {
+          "aa_exact": true,
+          "all_metrics_agree_with_sq03b": true,
+          "first_positive_agree_with_sq03b": true,
+          "integrated_agree_with_sq03b": true,
+          "peak_agree_with_sq03b": true,
+          "scalar_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": 0.0005758065381087363,
+            "peak_voltage_delta": 1.5653336959076114e-05
+          },
+          "sq03b_batched_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": 0.0005758081679232419,
+            "peak_voltage_delta": 1.565340608067345e-05
+          }
+        },
+        "MORTY": {
+          "aa_exact": true,
+          "all_metrics_agree_with_sq03b": true,
+          "first_positive_agree_with_sq03b": true,
+          "integrated_agree_with_sq03b": true,
+          "peak_agree_with_sq03b": true,
+          "scalar_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": -0.0008974499069154263,
+            "peak_voltage_delta": -3.192774602212012e-05
+          },
+          "sq03b_batched_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": -0.0008974429219961166,
+            "peak_voltage_delta": -3.192728036083281e-05
+          }
+        }
+      },
+      "verified": false
+    },
+    {
+      "anchor": "DNp27",
+      "edge_id": 175008,
+      "input": "AVLP234",
+      "pair_metric_agreement": {
+        "integrated_context_residual": true,
+        "integrated_normalized_asymmetry": false,
+        "integrated_total_effect_magnitude": true,
+        "peak_context_residual": true,
+        "peak_normalized_asymmetry": false,
+        "peak_total_effect_magnitude": true
+      },
+      "panel_class": "LOW_TAIL_CONTROL",
+      "post": "AVLP126",
+      "pre": "CB1196",
+      "scalar_reconstructed": {
+        "integrated": {
+          "context_residual": 2.5029294192790985e-09,
+          "delta_lilith": 2.9103830456733704e-10,
+          "delta_morty": -2.7939677238464355e-09,
+          "normalized_asymmetry": 0.8113207547169812,
+          "total_effect_magnitude": 3.0850060284137726e-09
+        },
+        "peak": {
+          "context_residual": 1.2732925824820995e-11,
+          "delta_lilith": 1.8189894035458565e-12,
+          "delta_morty": -1.4551915228366852e-11,
+          "normalized_asymmetry": 0.7777777777777778,
+          "total_effect_magnitude": 1.6370904631912708e-11
+        }
+      },
+      "sq03d_expected": {
+        "integrated": {
+          "context_residual": 0.0,
+          "delta_lilith": 4.656612873077393e-10,
+          "delta_morty": -4.656612873077393e-10,
+          "normalized_asymmetry": 0.0,
+          "sign_relation": "OPPOSITE",
+          "total_effect_magnitude": 9.313225746154785e-10
+        },
+        "peak": {
+          "context_residual": 2.5920599000528455e-11,
+          "delta_lilith": 4.092726157978177e-12,
+          "delta_morty": 2.1827872842550278e-11,
+          "normalized_asymmetry": 1.0,
+          "sign_relation": "SAME",
+          "total_effect_magnitude": 2.5920599000528455e-11
+        }
+      },
+      "subjects": {
+        "LILITH": {
+          "aa_exact": true,
+          "all_metrics_agree_with_sq03b": true,
+          "first_positive_agree_with_sq03b": true,
+          "integrated_agree_with_sq03b": true,
+          "peak_agree_with_sq03b": true,
+          "scalar_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": 2.9103830456733704e-10,
+            "peak_voltage_delta": 1.8189894035458565e-12
+          },
+          "sq03b_batched_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": 4.656612873077393e-10,
+            "peak_voltage_delta": 4.092726157978177e-12
+          }
+        },
+        "MORTY": {
+          "aa_exact": true,
+          "all_metrics_agree_with_sq03b": true,
+          "first_positive_agree_with_sq03b": true,
+          "integrated_agree_with_sq03b": true,
+          "peak_agree_with_sq03b": true,
+          "scalar_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": -2.7939677238464355e-09,
+            "peak_voltage_delta": -1.4551915228366852e-11
+          },
+          "sq03b_batched_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": -4.656612873077393e-10,
+            "peak_voltage_delta": 2.1827872842550278e-11
+          }
+        }
+      },
+      "verified": false
+    },
+    {
+      "anchor": "DNc02",
+      "edge_id": 68143,
+      "input": "AVLP234",
+      "pair_metric_agreement": {
+        "integrated_context_residual": true,
+        "integrated_normalized_asymmetry": false,
+        "integrated_total_effect_magnitude": true,
+        "peak_context_residual": true,
+        "peak_normalized_asymmetry": false,
+        "peak_total_effect_magnitude": true
+      },
+      "panel_class": "LOW_TAIL_CONTROL",
+      "post": "PAM11",
+      "pre": "AVLP227",
+      "scalar_reconstructed": {
+        "integrated": {
+          "context_residual": 2.444721758365631e-09,
+          "delta_lilith": 8.149072527885437e-10,
+          "delta_morty": -3.259629011154175e-09,
+          "normalized_asymmetry": 0.6,
+          "total_effect_magnitude": 4.0745362639427185e-09
+        },
+        "peak": {
+          "context_residual": 1.1641532182693481e-10,
+          "delta_lilith": 1.4551915228366852e-10,
+          "delta_morty": -2.6193447411060333e-10,
+          "normalized_asymmetry": 0.2857142857142857,
+          "total_effect_magnitude": 4.0745362639427185e-10
+        }
+      },
+      "sq03d_expected": {
+        "integrated": {
+          "context_residual": 0.0,
+          "delta_lilith": 1.6298145055770874e-09,
+          "delta_morty": -1.6298145055770874e-09,
+          "normalized_asymmetry": 0.0,
+          "sign_relation": "OPPOSITE",
+          "total_effect_magnitude": 3.259629011154175e-09
+        },
+        "peak": {
+          "context_residual": 2.0372681319713593e-10,
+          "delta_lilith": 2.9103830456733704e-10,
+          "delta_morty": -8.731149137020111e-11,
+          "normalized_asymmetry": 0.5384615384615384,
+          "sign_relation": "OPPOSITE",
+          "total_effect_magnitude": 3.7834979593753815e-10
+        }
+      },
+      "subjects": {
+        "LILITH": {
+          "aa_exact": true,
+          "all_metrics_agree_with_sq03b": true,
+          "first_positive_agree_with_sq03b": true,
+          "integrated_agree_with_sq03b": true,
+          "peak_agree_with_sq03b": true,
+          "scalar_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": 8.149072527885437e-10,
+            "peak_voltage_delta": 1.4551915228366852e-10
+          },
+          "sq03b_batched_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": 1.6298145055770874e-09,
+            "peak_voltage_delta": 2.9103830456733704e-10
+          }
+        },
+        "MORTY": {
+          "aa_exact": true,
+          "all_metrics_agree_with_sq03b": true,
+          "first_positive_agree_with_sq03b": true,
+          "integrated_agree_with_sq03b": true,
+          "peak_agree_with_sq03b": true,
+          "scalar_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": -3.259629011154175e-09,
+            "peak_voltage_delta": -2.6193447411060333e-10
+          },
+          "sq03b_batched_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": -1.6298145055770874e-09,
+            "peak_voltage_delta": -8.731149137020111e-11
+          }
+        }
+      },
+      "verified": false
+    },
+    {
+      "anchor": "DNc02",
+      "edge_id": 59882,
+      "input": "AVLP435",
+      "pair_metric_agreement": {
+        "integrated_context_residual": true,
+        "integrated_normalized_asymmetry": false,
+        "integrated_total_effect_magnitude": true,
+        "peak_context_residual": true,
+        "peak_normalized_asymmetry": false,
+        "peak_total_effect_magnitude": true
+      },
+      "panel_class": "LOW_TAIL_CONTROL",
+      "post": "AVLP532",
+      "pre": "AVLP126",
+      "scalar_reconstructed": {
+        "integrated": {
+          "context_residual": 3.383320290595293e-10,
+          "delta_lilith": 1.0913936421275139e-11,
+          "delta_morty": -3.4924596548080444e-10,
+          "normalized_asymmetry": 0.9393939393939394,
+          "total_effect_magnitude": 3.601599019020796e-10
+        },
+        "peak": {
+          "context_residual": 2.091837814077735e-11,
+          "delta_lilith": 9.094947017729282e-13,
+          "delta_morty": -2.1827872842550278e-11,
+          "normalized_asymmetry": 0.92,
+          "total_effect_magnitude": 2.2737367544323206e-11
+        }
+      },
+      "sq03d_expected": {
+        "integrated": {
+          "context_residual": 0.0,
+          "delta_lilith": 2.9103830456733704e-11,
+          "delta_morty": -2.9103830456733704e-11,
+          "normalized_asymmetry": 0.0,
+          "sign_relation": "OPPOSITE",
+          "total_effect_magnitude": 5.820766091346741e-11
+        },
+        "peak": {
+          "context_residual": 6.45741238258779e-11,
+          "delta_lilith": 6.366462912410498e-12,
+          "delta_morty": 5.820766091346741e-11,
+          "normalized_asymmetry": 1.0,
+          "sign_relation": "SAME",
+          "total_effect_magnitude": 6.45741238258779e-11
+        }
+      },
+      "subjects": {
+        "LILITH": {
+          "aa_exact": true,
+          "all_metrics_agree_with_sq03b": true,
+          "first_positive_agree_with_sq03b": true,
+          "integrated_agree_with_sq03b": true,
+          "peak_agree_with_sq03b": true,
+          "scalar_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": 1.0913936421275139e-11,
+            "peak_voltage_delta": 9.094947017729282e-13
+          },
+          "sq03b_batched_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": 2.9103830456733704e-11,
+            "peak_voltage_delta": 6.366462912410498e-12
+          }
+        },
+        "MORTY": {
+          "aa_exact": true,
+          "all_metrics_agree_with_sq03b": true,
+          "first_positive_agree_with_sq03b": true,
+          "integrated_agree_with_sq03b": true,
+          "peak_agree_with_sq03b": true,
+          "scalar_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": -3.4924596548080444e-10,
+            "peak_voltage_delta": -2.1827872842550278e-11
+          },
+          "sq03b_batched_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": -2.9103830456733704e-11,
+            "peak_voltage_delta": 5.820766091346741e-11
+          }
+        }
+      },
+      "verified": false
+    },
+    {
+      "anchor": "DNp27",
+      "edge_id": 81908,
+      "input": "AVLP435",
+      "pair_metric_agreement": {
+        "integrated_context_residual": true,
+        "integrated_normalized_asymmetry": false,
+        "integrated_total_effect_magnitude": true,
+        "peak_context_residual": true,
+        "peak_normalized_asymmetry": false,
+        "peak_total_effect_magnitude": true
+      },
+      "panel_class": "LOW_TAIL_CONTROL",
+      "post": "CB3099",
+      "pre": "AVLP417,AVLP438",
+      "scalar_reconstructed": {
+        "integrated": {
+          "context_residual": 2.9103830456733704e-09,
+          "delta_lilith": 1.1641532182693481e-10,
+          "delta_morty": -3.026798367500305e-09,
+          "normalized_asymmetry": 0.9259259259259259,
+          "total_effect_magnitude": 3.14321368932724e-09
+        },
+        "peak": {
+          "context_residual": 1.8189894035458565e-11,
+          "delta_lilith": 3.637978807091713e-12,
+          "delta_morty": -2.1827872842550278e-11,
+          "normalized_asymmetry": 0.7142857142857143,
+          "total_effect_magnitude": 2.546585164964199e-11
+        }
+      },
+      "sq03d_expected": {
+        "integrated": {
+          "context_residual": 0.0,
+          "delta_lilith": 1.5133991837501526e-09,
+          "delta_morty": -1.5133991837501526e-09,
+          "normalized_asymmetry": 0.0,
+          "sign_relation": "OPPOSITE",
+          "total_effect_magnitude": 3.026798367500305e-09
+        },
+        "peak": {
+          "context_residual": 2.1827872842550278e-11,
+          "delta_lilith": 2.546585164964199e-11,
+          "delta_morty": -3.637978807091713e-12,
+          "normalized_asymmetry": 0.75,
+          "sign_relation": "OPPOSITE",
+          "total_effect_magnitude": 2.9103830456733704e-11
+        }
+      },
+      "subjects": {
+        "LILITH": {
+          "aa_exact": true,
+          "all_metrics_agree_with_sq03b": true,
+          "first_positive_agree_with_sq03b": true,
+          "integrated_agree_with_sq03b": true,
+          "peak_agree_with_sq03b": true,
+          "scalar_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": 1.1641532182693481e-10,
+            "peak_voltage_delta": 3.637978807091713e-12
+          },
+          "sq03b_batched_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": 1.5133991837501526e-09,
+            "peak_voltage_delta": 2.546585164964199e-11
+          }
+        },
+        "MORTY": {
+          "aa_exact": true,
+          "all_metrics_agree_with_sq03b": true,
+          "first_positive_agree_with_sq03b": true,
+          "integrated_agree_with_sq03b": true,
+          "peak_agree_with_sq03b": true,
+          "scalar_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": -3.026798367500305e-09,
+            "peak_voltage_delta": -2.1827872842550278e-11
+          },
+          "sq03b_batched_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": -1.5133991837501526e-09,
+            "peak_voltage_delta": -3.637978807091713e-12
+          }
+        }
+      },
+      "verified": false
+    },
+    {
+      "anchor": "DNp30",
+      "edge_id": 53674,
+      "input": "LPLC2",
+      "pair_metric_agreement": {
+        "integrated_context_residual": true,
+        "integrated_normalized_asymmetry": false,
+        "integrated_total_effect_magnitude": true,
+        "peak_context_residual": true,
+        "peak_normalized_asymmetry": false,
+        "peak_total_effect_magnitude": true
+      },
+      "panel_class": "LOW_TAIL_CONTROL",
+      "post": "AVLP323",
+      "pre": "AVLP078",
+      "scalar_reconstructed": {
+        "integrated": {
+          "context_residual": 7.741618901491165e-09,
+          "delta_lilith": 1.7462298274040222e-10,
+          "delta_morty": -7.916241884231567e-09,
+          "normalized_asymmetry": 0.9568345323741008,
+          "total_effect_magnitude": 8.09086486697197e-09
+        },
+        "peak": {
+          "context_residual": 5.729816621169448e-10,
+          "delta_lilith": 9.094947017729282e-12,
+          "delta_morty": -5.820766091346741e-10,
+          "normalized_asymmetry": 0.9692307692307692,
+          "total_effect_magnitude": 5.911715561524034e-10
+        }
+      },
+      "sq03d_expected": {
+        "integrated": {
+          "context_residual": 0.0,
+          "delta_lilith": 9.313225746154785e-10,
+          "delta_morty": -9.313225746154785e-10,
+          "normalized_asymmetry": 0.0,
+          "sign_relation": "OPPOSITE",
+          "total_effect_magnitude": 1.862645149230957e-09
+        },
+        "peak": {
+          "context_residual": 6.912159733474255e-11,
+          "delta_lilith": 4.729372449219227e-11,
+          "delta_morty": -1.1641532182693481e-10,
+          "normalized_asymmetry": 0.4222222222222222,
+          "sign_relation": "OPPOSITE",
+          "total_effect_magnitude": 1.6370904631912708e-10
+        }
+      },
+      "subjects": {
+        "LILITH": {
+          "aa_exact": true,
+          "all_metrics_agree_with_sq03b": true,
+          "first_positive_agree_with_sq03b": true,
+          "integrated_agree_with_sq03b": true,
+          "peak_agree_with_sq03b": true,
+          "scalar_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": 1.7462298274040222e-10,
+            "peak_voltage_delta": 9.094947017729282e-12
+          },
+          "sq03b_batched_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": 9.313225746154785e-10,
+            "peak_voltage_delta": 4.729372449219227e-11
+          }
+        },
+        "MORTY": {
+          "aa_exact": true,
+          "all_metrics_agree_with_sq03b": true,
+          "first_positive_agree_with_sq03b": true,
+          "integrated_agree_with_sq03b": true,
+          "peak_agree_with_sq03b": true,
+          "scalar_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": -7.916241884231567e-09,
+            "peak_voltage_delta": -5.820766091346741e-10
+          },
+          "sq03b_batched_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": -9.313225746154785e-10,
+            "peak_voltage_delta": -1.1641532182693481e-10
+          }
+        }
+      },
+      "verified": false
+    },
+    {
+      "anchor": "DNp30",
+      "edge_id": 62689,
+      "input": "LPLC2",
+      "pair_metric_agreement": {
+        "integrated_context_residual": true,
+        "integrated_normalized_asymmetry": false,
+        "integrated_total_effect_magnitude": true,
+        "peak_context_residual": true,
+        "peak_normalized_asymmetry": false,
+        "peak_total_effect_magnitude": true
+      },
+      "panel_class": "LOW_TAIL_CONTROL",
+      "post": "LT56",
+      "pre": "AVLP169",
+      "scalar_reconstructed": {
+        "integrated": {
+          "context_residual": 7.392372936010361e-09,
+          "delta_lilith": 5.820766091346741e-11,
+          "delta_morty": -7.450580596923828e-09,
+          "normalized_asymmetry": 0.9844961240310077,
+          "total_effect_magnitude": 7.508788257837296e-09
+        },
+        "peak": {
+          "context_residual": 5.766196409240365e-10,
+          "delta_lilith": 5.4569682106375694e-12,
+          "delta_morty": -5.820766091346741e-10,
+          "normalized_asymmetry": 0.9814241486068112,
+          "total_effect_magnitude": 5.875335773453116e-10
+        }
+      },
+      "sq03d_expected": {
+        "integrated": {
+          "context_residual": 0.0,
+          "delta_lilith": 9.313225746154785e-10,
+          "delta_morty": -9.313225746154785e-10,
+          "normalized_asymmetry": 0.0,
+          "sign_relation": "OPPOSITE",
+          "total_effect_magnitude": 1.862645149230957e-09
+        },
+        "peak": {
+          "context_residual": 9.822542779147625e-11,
+          "delta_lilith": 4.729372449219227e-11,
+          "delta_morty": -1.4551915228366852e-10,
+          "normalized_asymmetry": 0.5094339622641509,
+          "sign_relation": "OPPOSITE",
+          "total_effect_magnitude": 1.9281287677586079e-10
+        }
+      },
+      "subjects": {
+        "LILITH": {
+          "aa_exact": true,
+          "all_metrics_agree_with_sq03b": true,
+          "first_positive_agree_with_sq03b": true,
+          "integrated_agree_with_sq03b": true,
+          "peak_agree_with_sq03b": true,
+          "scalar_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": 5.820766091346741e-11,
+            "peak_voltage_delta": 5.4569682106375694e-12
+          },
+          "sq03b_batched_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": 9.313225746154785e-10,
+            "peak_voltage_delta": 4.729372449219227e-11
+          }
+        },
+        "MORTY": {
+          "aa_exact": true,
+          "all_metrics_agree_with_sq03b": true,
+          "first_positive_agree_with_sq03b": true,
+          "integrated_agree_with_sq03b": true,
+          "peak_agree_with_sq03b": true,
+          "scalar_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": -7.450580596923828e-09,
+            "peak_voltage_delta": -5.820766091346741e-10
+          },
+          "sq03b_batched_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": -9.313225746154785e-10,
+            "peak_voltage_delta": -1.4551915228366852e-10
+          }
+        }
+      },
+      "verified": false
+    },
+    {
+      "anchor": "DNc02",
+      "edge_id": 470554,
+      "input": "TmY14",
+      "pair_metric_agreement": {
+        "integrated_context_residual": true,
+        "integrated_normalized_asymmetry": false,
+        "integrated_total_effect_magnitude": true,
+        "peak_context_residual": true,
+        "peak_normalized_asymmetry": true,
+        "peak_total_effect_magnitude": true
+      },
+      "panel_class": "LOW_TAIL_CONTROL",
+      "post": "CL063",
+      "pre": "MTe46",
+      "scalar_reconstructed": {
+        "integrated": {
+          "context_residual": 3.6670826375484467e-09,
+          "delta_lilith": -3.958120942115784e-09,
+          "delta_morty": 2.9103830456733704e-10,
+          "normalized_asymmetry": 0.863013698630137,
+          "total_effect_magnitude": 4.249159246683121e-09
+        },
+        "peak": {
+          "context_residual": 6.912159733474255e-11,
+          "delta_lilith": 0.0,
+          "delta_morty": 6.912159733474255e-11,
+          "normalized_asymmetry": 1.0,
+          "total_effect_magnitude": 6.912159733474255e-11
+        }
+      },
+      "sq03d_expected": {
+        "integrated": {
+          "context_residual": 0.0,
+          "delta_lilith": -9.313225746154785e-10,
+          "delta_morty": 9.313225746154785e-10,
+          "normalized_asymmetry": 0.0,
+          "sign_relation": "OPPOSITE",
+          "total_effect_magnitude": 1.862645149230957e-09
+        },
+        "peak": {
+          "context_residual": 1.6007106751203537e-10,
+          "delta_lilith": 5.820766091346741e-11,
+          "delta_morty": 1.0186340659856796e-10,
+          "normalized_asymmetry": 1.0,
+          "sign_relation": "SAME",
+          "total_effect_magnitude": 1.6007106751203537e-10
+        }
+      },
+      "subjects": {
+        "LILITH": {
+          "aa_exact": true,
+          "all_metrics_agree_with_sq03b": true,
+          "first_positive_agree_with_sq03b": true,
+          "integrated_agree_with_sq03b": true,
+          "peak_agree_with_sq03b": true,
+          "scalar_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": -3.958120942115784e-09,
+            "peak_voltage_delta": 0.0
+          },
+          "sq03b_batched_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": -9.313225746154785e-10,
+            "peak_voltage_delta": 5.820766091346741e-11
+          }
+        },
+        "MORTY": {
+          "aa_exact": true,
+          "all_metrics_agree_with_sq03b": true,
+          "first_positive_agree_with_sq03b": true,
+          "integrated_agree_with_sq03b": true,
+          "peak_agree_with_sq03b": true,
+          "scalar_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": 2.9103830456733704e-10,
+            "peak_voltage_delta": 6.912159733474255e-11
+          },
+          "sq03b_batched_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": 9.313225746154785e-10,
+            "peak_voltage_delta": 1.0186340659856796e-10
+          }
+        }
+      },
+      "verified": false
+    },
+    {
+      "anchor": "DNp30",
+      "edge_id": 38950,
+      "input": "TmY14",
+      "pair_metric_agreement": {
+        "integrated_context_residual": true,
+        "integrated_normalized_asymmetry": false,
+        "integrated_total_effect_magnitude": true,
+        "peak_context_residual": true,
+        "peak_normalized_asymmetry": false,
+        "peak_total_effect_magnitude": true
+      },
+      "panel_class": "LOW_TAIL_CONTROL",
+      "post": "SMP493",
+      "pre": "AOTU008",
+      "scalar_reconstructed": {
+        "integrated": {
+          "context_residual": 1.1175870895385742e-08,
+          "delta_lilith": 4.656612873077393e-10,
+          "delta_morty": -1.1641532182693481e-08,
+          "normalized_asymmetry": 0.9230769230769231,
+          "total_effect_magnitude": 1.210719347000122e-08
+        },
+        "peak": {
+          "context_residual": 0.0,
+          "delta_lilith": 0.0,
+          "delta_morty": 0.0,
+          "normalized_asymmetry": 0.0,
+          "total_effect_magnitude": 0.0
+        }
+      },
+      "sq03d_expected": {
+        "integrated": {
+          "context_residual": 0.0,
+          "delta_lilith": 6.51925802230835e-09,
+          "delta_morty": -6.51925802230835e-09,
+          "normalized_asymmetry": 0.0,
+          "sign_relation": "OPPOSITE",
+          "total_effect_magnitude": 1.30385160446167e-08
+        },
+        "peak": {
+          "context_residual": 1.6007106751203537e-10,
+          "delta_lilith": 1.0186340659856796e-10,
+          "delta_morty": 5.820766091346741e-11,
+          "normalized_asymmetry": 1.0,
+          "sign_relation": "SAME",
+          "total_effect_magnitude": 1.6007106751203537e-10
+        }
+      },
+      "subjects": {
+        "LILITH": {
+          "aa_exact": true,
+          "all_metrics_agree_with_sq03b": true,
+          "first_positive_agree_with_sq03b": true,
+          "integrated_agree_with_sq03b": true,
+          "peak_agree_with_sq03b": true,
+          "scalar_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": 4.656612873077393e-10,
+            "peak_voltage_delta": 0.0
+          },
+          "sq03b_batched_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": 6.51925802230835e-09,
+            "peak_voltage_delta": 1.0186340659856796e-10
+          }
+        },
+        "MORTY": {
+          "aa_exact": true,
+          "all_metrics_agree_with_sq03b": true,
+          "first_positive_agree_with_sq03b": true,
+          "integrated_agree_with_sq03b": true,
+          "peak_agree_with_sq03b": true,
+          "scalar_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": -1.1641532182693481e-08,
+            "peak_voltage_delta": 0.0
+          },
+          "sq03b_batched_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": -6.51925802230835e-09,
+            "peak_voltage_delta": 5.820766091346741e-11
+          }
+        }
+      },
+      "verified": false
+    },
+    {
+      "anchor": "DNp30",
+      "edge_id": 78173,
+      "input": "LPLC2",
+      "pair_metric_agreement": {
+        "integrated_context_residual": true,
+        "integrated_normalized_asymmetry": false,
+        "integrated_total_effect_magnitude": true,
+        "peak_context_residual": true,
+        "peak_normalized_asymmetry": false,
+        "peak_total_effect_magnitude": true
+      },
+      "panel_class": "LOW_TAIL_CONTROL",
+      "post": "AVLP001",
+      "pre": "AVLP348",
+      "scalar_reconstructed": {
+        "integrated": {
+          "context_residual": 8.09086486697197e-09,
+          "delta_lilith": 2.9103830456733704e-10,
+          "delta_morty": -8.381903171539307e-09,
+          "normalized_asymmetry": 0.9328859060402684,
+          "total_effect_magnitude": 8.672941476106644e-09
+        },
+        "peak": {
+          "context_residual": 6.257323548197746e-10,
+          "delta_lilith": 1.4551915228366852e-11,
+          "delta_morty": -6.402842700481415e-10,
+          "normalized_asymmetry": 0.9555555555555556,
+          "total_effect_magnitude": 6.548361852765083e-10
+        }
+      },
+      "sq03d_expected": {
+        "integrated": {
+          "context_residual": 0.0,
+          "delta_lilith": 9.313225746154785e-10,
+          "delta_morty": -9.313225746154785e-10,
+          "normalized_asymmetry": 0.0,
+          "sign_relation": "OPPOSITE",
+          "total_effect_magnitude": 1.862645149230957e-09
+        },
+        "peak": {
+          "context_residual": 9.822542779147625e-11,
+          "delta_lilith": 4.729372449219227e-11,
+          "delta_morty": -1.4551915228366852e-10,
+          "normalized_asymmetry": 0.5094339622641509,
+          "sign_relation": "OPPOSITE",
+          "total_effect_magnitude": 1.9281287677586079e-10
+        }
+      },
+      "subjects": {
+        "LILITH": {
+          "aa_exact": true,
+          "all_metrics_agree_with_sq03b": true,
+          "first_positive_agree_with_sq03b": true,
+          "integrated_agree_with_sq03b": true,
+          "peak_agree_with_sq03b": true,
+          "scalar_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": 2.9103830456733704e-10,
+            "peak_voltage_delta": 1.4551915228366852e-11
+          },
+          "sq03b_batched_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": 9.313225746154785e-10,
+            "peak_voltage_delta": 4.729372449219227e-11
+          }
+        },
+        "MORTY": {
+          "aa_exact": true,
+          "all_metrics_agree_with_sq03b": true,
+          "first_positive_agree_with_sq03b": true,
+          "integrated_agree_with_sq03b": true,
+          "peak_agree_with_sq03b": true,
+          "scalar_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": -8.381903171539307e-09,
+            "peak_voltage_delta": -6.402842700481415e-10
+          },
+          "sq03b_batched_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": -9.313225746154785e-10,
+            "peak_voltage_delta": -1.4551915228366852e-10
+          }
+        }
+      },
+      "verified": false
+    },
+    {
+      "anchor": "DNp30",
+      "edge_id": 65187,
+      "input": "LPLC2",
+      "pair_metric_agreement": {
+        "integrated_context_residual": true,
+        "integrated_normalized_asymmetry": false,
+        "integrated_total_effect_magnitude": true,
+        "peak_context_residual": true,
+        "peak_normalized_asymmetry": false,
+        "peak_total_effect_magnitude": true
+      },
+      "panel_class": "LOW_TAIL_CONTROL",
+      "post": "AVLP577",
+      "pre": "AVLP203",
+      "scalar_reconstructed": {
+        "integrated": {
+          "context_residual": 8.09086486697197e-09,
+          "delta_lilith": 2.9103830456733704e-10,
+          "delta_morty": -8.381903171539307e-09,
+          "normalized_asymmetry": 0.9328859060402684,
+          "total_effect_magnitude": 8.672941476106644e-09
+        },
+        "peak": {
+          "context_residual": 3.6561687011271715e-10,
+          "delta_lilith": 1.2732925824820995e-11,
+          "delta_morty": -3.7834979593753815e-10,
+          "normalized_asymmetry": 0.9348837209302325,
+          "total_effect_magnitude": 3.9108272176235914e-10
+        }
+      },
+      "sq03d_expected": {
+        "integrated": {
+          "context_residual": 0.0,
+          "delta_lilith": 9.313225746154785e-10,
+          "delta_morty": -9.313225746154785e-10,
+          "normalized_asymmetry": 0.0,
+          "sign_relation": "OPPOSITE",
+          "total_effect_magnitude": 1.862645149230957e-09
+        },
+        "peak": {
+          "context_residual": 1.0186340659856796e-10,
+          "delta_lilith": 4.3655745685100555e-11,
+          "delta_morty": 5.820766091346741e-11,
+          "normalized_asymmetry": 1.0,
+          "sign_relation": "SAME",
+          "total_effect_magnitude": 1.0186340659856796e-10
+        }
+      },
+      "subjects": {
+        "LILITH": {
+          "aa_exact": true,
+          "all_metrics_agree_with_sq03b": true,
+          "first_positive_agree_with_sq03b": true,
+          "integrated_agree_with_sq03b": true,
+          "peak_agree_with_sq03b": true,
+          "scalar_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": 2.9103830456733704e-10,
+            "peak_voltage_delta": 1.2732925824820995e-11
+          },
+          "sq03b_batched_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": 9.313225746154785e-10,
+            "peak_voltage_delta": 4.3655745685100555e-11
+          }
+        },
+        "MORTY": {
+          "aa_exact": true,
+          "all_metrics_agree_with_sq03b": true,
+          "first_positive_agree_with_sq03b": true,
+          "integrated_agree_with_sq03b": true,
+          "peak_agree_with_sq03b": true,
+          "scalar_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": -8.381903171539307e-09,
+            "peak_voltage_delta": -3.7834979593753815e-10
+          },
+          "sq03b_batched_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": -9.313225746154785e-10,
+            "peak_voltage_delta": 5.820766091346741e-11
+          }
+        }
+      },
+      "verified": false
+    },
+    {
+      "anchor": "DNp30",
+      "edge_id": 531156,
+      "input": "LPLC2",
+      "pair_metric_agreement": {
+        "integrated_context_residual": true,
+        "integrated_normalized_asymmetry": false,
+        "integrated_total_effect_magnitude": true,
+        "peak_context_residual": true,
+        "peak_normalized_asymmetry": false,
+        "peak_total_effect_magnitude": true
+      },
+      "panel_class": "LOW_TAIL_CONTROL",
+      "post": "PVLP081",
+      "pre": "PVLP046",
+      "scalar_reconstructed": {
+        "integrated": {
+          "context_residual": 7.334165275096893e-09,
+          "delta_lilith": 1.1641532182693481e-10,
+          "delta_morty": -7.450580596923828e-09,
+          "normalized_asymmetry": 0.9692307692307692,
+          "total_effect_magnitude": 7.566995918750763e-09
+        },
+        "peak": {
+          "context_residual": 4.5838532969355583e-10,
+          "delta_lilith": 7.275957614183426e-12,
+          "delta_morty": -4.656612873077393e-10,
+          "normalized_asymmetry": 0.9692307692307692,
+          "total_effect_magnitude": 4.729372449219227e-10
+        }
+      },
+      "sq03d_expected": {
+        "integrated": {
+          "context_residual": 0.0,
+          "delta_lilith": 9.313225746154785e-10,
+          "delta_morty": -9.313225746154785e-10,
+          "normalized_asymmetry": 0.0,
+          "sign_relation": "OPPOSITE",
+          "total_effect_magnitude": 1.862645149230957e-09
+        },
+        "peak": {
+          "context_residual": 1.0186340659856796e-10,
+          "delta_lilith": 4.3655745685100555e-11,
+          "delta_morty": 5.820766091346741e-11,
+          "normalized_asymmetry": 1.0,
+          "sign_relation": "SAME",
+          "total_effect_magnitude": 1.0186340659856796e-10
+        }
+      },
+      "subjects": {
+        "LILITH": {
+          "aa_exact": true,
+          "all_metrics_agree_with_sq03b": true,
+          "first_positive_agree_with_sq03b": true,
+          "integrated_agree_with_sq03b": true,
+          "peak_agree_with_sq03b": true,
+          "scalar_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": 1.1641532182693481e-10,
+            "peak_voltage_delta": 7.275957614183426e-12
+          },
+          "sq03b_batched_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": 9.313225746154785e-10,
+            "peak_voltage_delta": 4.3655745685100555e-11
+          }
+        },
+        "MORTY": {
+          "aa_exact": true,
+          "all_metrics_agree_with_sq03b": true,
+          "first_positive_agree_with_sq03b": true,
+          "integrated_agree_with_sq03b": true,
+          "peak_agree_with_sq03b": true,
+          "scalar_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": -7.450580596923828e-09,
+            "peak_voltage_delta": -4.656612873077393e-10
+          },
+          "sq03b_batched_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": -9.313225746154785e-10,
+            "peak_voltage_delta": 5.820766091346741e-11
+          }
+        }
+      },
+      "verified": false
+    },
+    {
+      "anchor": "DNp30",
+      "edge_id": 80745,
+      "input": "LPLC2",
+      "pair_metric_agreement": {
+        "integrated_context_residual": true,
+        "integrated_normalized_asymmetry": false,
+        "integrated_total_effect_magnitude": true,
+        "peak_context_residual": true,
+        "peak_normalized_asymmetry": false,
+        "peak_total_effect_magnitude": true
+      },
+      "panel_class": "LOW_TAIL_CONTROL",
+      "post": "AVLP001",
+      "pre": "AVLP397",
+      "scalar_reconstructed": {
+        "integrated": {
+          "context_residual": 7.159542292356491e-09,
+          "delta_lilith": 2.9103830456733704e-10,
+          "delta_morty": -7.450580596923828e-09,
+          "normalized_asymmetry": 0.924812030075188,
+          "total_effect_magnitude": 7.741618901491165e-09
+        },
+        "peak": {
+          "context_residual": 6.257323548197746e-10,
+          "delta_lilith": 1.4551915228366852e-11,
+          "delta_morty": -6.402842700481415e-10,
+          "normalized_asymmetry": 0.9555555555555556,
+          "total_effect_magnitude": 6.548361852765083e-10
+        }
+      },
+      "sq03d_expected": {
+        "integrated": {
+          "context_residual": 0.0,
+          "delta_lilith": 9.313225746154785e-10,
+          "delta_morty": -9.313225746154785e-10,
+          "normalized_asymmetry": 0.0,
+          "sign_relation": "OPPOSITE",
+          "total_effect_magnitude": 1.862645149230957e-09
+        },
+        "peak": {
+          "context_residual": 1.2732925824820995e-10,
+          "delta_lilith": 4.729372449219227e-11,
+          "delta_morty": -1.7462298274040222e-10,
+          "normalized_asymmetry": 0.5737704918032787,
+          "sign_relation": "OPPOSITE",
+          "total_effect_magnitude": 2.219167072325945e-10
+        }
+      },
+      "subjects": {
+        "LILITH": {
+          "aa_exact": true,
+          "all_metrics_agree_with_sq03b": true,
+          "first_positive_agree_with_sq03b": true,
+          "integrated_agree_with_sq03b": true,
+          "peak_agree_with_sq03b": true,
+          "scalar_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": 2.9103830456733704e-10,
+            "peak_voltage_delta": 1.4551915228366852e-11
+          },
+          "sq03b_batched_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": 9.313225746154785e-10,
+            "peak_voltage_delta": 4.729372449219227e-11
+          }
+        },
+        "MORTY": {
+          "aa_exact": true,
+          "all_metrics_agree_with_sq03b": true,
+          "first_positive_agree_with_sq03b": true,
+          "integrated_agree_with_sq03b": true,
+          "peak_agree_with_sq03b": true,
+          "scalar_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": -7.450580596923828e-09,
+            "peak_voltage_delta": -6.402842700481415e-10
+          },
+          "sq03b_batched_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": -9.313225746154785e-10,
+            "peak_voltage_delta": -1.7462298274040222e-10
+          }
+        }
+      },
+      "verified": false
+    },
+    {
+      "anchor": "DNp30",
+      "edge_id": 512876,
+      "input": "LPLC2",
+      "pair_metric_agreement": {
+        "integrated_context_residual": true,
+        "integrated_normalized_asymmetry": false,
+        "integrated_total_effect_magnitude": true,
+        "peak_context_residual": true,
+        "peak_normalized_asymmetry": false,
+        "peak_total_effect_magnitude": true
+      },
+      "panel_class": "LOW_TAIL_CONTROL",
+      "post": "CB3625",
+      "pre": "PPM1203",
+      "scalar_reconstructed": {
+        "integrated": {
+          "context_residual": 8.207280188798904e-09,
+          "delta_lilith": 1.7462298274040222e-10,
+          "delta_morty": -8.381903171539307e-09,
+          "normalized_asymmetry": 0.9591836734693877,
+          "total_effect_magnitude": 8.556526154279709e-09
+        },
+        "peak": {
+          "context_residual": 7.148628355935216e-10,
+          "delta_lilith": 1.2732925824820995e-11,
+          "delta_morty": -7.275957614183426e-10,
+          "normalized_asymmetry": 0.9656019656019657,
+          "total_effect_magnitude": 7.403286872431636e-10
+        }
+      },
+      "sq03d_expected": {
+        "integrated": {
+          "context_residual": 0.0,
+          "delta_lilith": 9.313225746154785e-10,
+          "delta_morty": -9.313225746154785e-10,
+          "normalized_asymmetry": 0.0,
+          "sign_relation": "OPPOSITE",
+          "total_effect_magnitude": 1.862645149230957e-09
+        },
+        "peak": {
+          "context_residual": 1.5643308870494366e-10,
+          "delta_lilith": 4.729372449219227e-11,
+          "delta_morty": -2.0372681319713593e-10,
+          "normalized_asymmetry": 0.6231884057971014,
+          "sign_relation": "OPPOSITE",
+          "total_effect_magnitude": 2.510205376893282e-10
+        }
+      },
+      "subjects": {
+        "LILITH": {
+          "aa_exact": true,
+          "all_metrics_agree_with_sq03b": true,
+          "first_positive_agree_with_sq03b": true,
+          "integrated_agree_with_sq03b": true,
+          "peak_agree_with_sq03b": true,
+          "scalar_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": 1.7462298274040222e-10,
+            "peak_voltage_delta": 1.2732925824820995e-11
+          },
+          "sq03b_batched_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": 9.313225746154785e-10,
+            "peak_voltage_delta": 4.729372449219227e-11
+          }
+        },
+        "MORTY": {
+          "aa_exact": true,
+          "all_metrics_agree_with_sq03b": true,
+          "first_positive_agree_with_sq03b": true,
+          "integrated_agree_with_sq03b": true,
+          "peak_agree_with_sq03b": true,
+          "scalar_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": -8.381903171539307e-09,
+            "peak_voltage_delta": -7.275957614183426e-10
+          },
+          "sq03b_batched_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": -9.313225746154785e-10,
+            "peak_voltage_delta": -2.0372681319713593e-10
+          }
+        }
+      },
+      "verified": false
+    },
+    {
+      "anchor": "DNp30",
+      "edge_id": 80524,
+      "input": "LPLC2",
+      "pair_metric_agreement": {
+        "integrated_context_residual": true,
+        "integrated_normalized_asymmetry": false,
+        "integrated_total_effect_magnitude": true,
+        "peak_context_residual": true,
+        "peak_normalized_asymmetry": false,
+        "peak_total_effect_magnitude": true
+      },
+      "panel_class": "LOW_TAIL_CONTROL",
+      "post": "AVLP494",
+      "pre": "AVLP394",
+      "scalar_reconstructed": {
+        "integrated": {
+          "context_residual": 7.741618901491165e-09,
+          "delta_lilith": 1.7462298274040222e-10,
+          "delta_morty": -7.916241884231567e-09,
+          "normalized_asymmetry": 0.9568345323741008,
+          "total_effect_magnitude": 8.09086486697197e-09
+        },
+        "peak": {
+          "context_residual": 6.875779945403337e-10,
+          "delta_lilith": 1.0913936421275139e-11,
+          "delta_morty": -6.984919309616089e-10,
+          "normalized_asymmetry": 0.9692307692307692,
+          "total_effect_magnitude": 7.09405867382884e-10
+        }
+      },
+      "sq03d_expected": {
+        "integrated": {
+          "context_residual": 0.0,
+          "delta_lilith": 9.313225746154785e-10,
+          "delta_morty": -9.313225746154785e-10,
+          "normalized_asymmetry": 0.0,
+          "sign_relation": "OPPOSITE",
+          "total_effect_magnitude": 1.862645149230957e-09
+        },
+        "peak": {
+          "context_residual": 2.1464074961841106e-10,
+          "delta_lilith": 4.729372449219227e-11,
+          "delta_morty": -2.6193447411060333e-10,
+          "normalized_asymmetry": 0.6941176470588235,
+          "sign_relation": "OPPOSITE",
+          "total_effect_magnitude": 3.092281986027956e-10
+        }
+      },
+      "subjects": {
+        "LILITH": {
+          "aa_exact": true,
+          "all_metrics_agree_with_sq03b": true,
+          "first_positive_agree_with_sq03b": true,
+          "integrated_agree_with_sq03b": true,
+          "peak_agree_with_sq03b": true,
+          "scalar_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": 1.7462298274040222e-10,
+            "peak_voltage_delta": 1.0913936421275139e-11
+          },
+          "sq03b_batched_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": 9.313225746154785e-10,
+            "peak_voltage_delta": 4.729372449219227e-11
+          }
+        },
+        "MORTY": {
+          "aa_exact": true,
+          "all_metrics_agree_with_sq03b": true,
+          "first_positive_agree_with_sq03b": true,
+          "integrated_agree_with_sq03b": true,
+          "peak_agree_with_sq03b": true,
+          "scalar_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": -7.916241884231567e-09,
+            "peak_voltage_delta": -6.984919309616089e-10
+          },
+          "sq03b_batched_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": -9.313225746154785e-10,
+            "peak_voltage_delta": -2.6193447411060333e-10
+          }
+        }
+      },
+      "verified": false
+    },
+    {
+      "anchor": "DNp30",
+      "edge_id": 275246,
+      "input": "LPLC2",
+      "pair_metric_agreement": {
+        "integrated_context_residual": true,
+        "integrated_normalized_asymmetry": false,
+        "integrated_total_effect_magnitude": true,
+        "peak_context_residual": true,
+        "peak_normalized_asymmetry": false,
+        "peak_total_effect_magnitude": true
+      },
+      "panel_class": "LOW_TAIL_CONTROL",
+      "post": "AVLP340",
+      "pre": "CB3684",
+      "scalar_reconstructed": {
+        "integrated": {
+          "context_residual": 7.159542292356491e-09,
+          "delta_lilith": 2.9103830456733704e-10,
+          "delta_morty": -7.450580596923828e-09,
+          "normalized_asymmetry": 0.924812030075188,
+          "total_effect_magnitude": 7.741618901491165e-09
+        },
+        "peak": {
+          "context_residual": 6.784830475226045e-10,
+          "delta_lilith": 2.000888343900442e-11,
+          "delta_morty": -6.984919309616089e-10,
+          "normalized_asymmetry": 0.9443037974683545,
+          "total_effect_magnitude": 7.185008144006133e-10
+        }
+      },
+      "sq03d_expected": {
+        "integrated": {
+          "context_residual": 0.0,
+          "delta_lilith": 9.313225746154785e-10,
+          "delta_morty": -9.313225746154785e-10,
+          "normalized_asymmetry": 0.0,
+          "sign_relation": "OPPOSITE",
+          "total_effect_magnitude": 1.862645149230957e-09
+        },
+        "peak": {
+          "context_residual": 2.419255906715989e-10,
+          "delta_lilith": 4.9112713895738125e-11,
+          "delta_morty": -2.9103830456733704e-10,
+          "normalized_asymmetry": 0.7112299465240641,
+          "sign_relation": "OPPOSITE",
+          "total_effect_magnitude": 3.4015101846307516e-10
+        }
+      },
+      "subjects": {
+        "LILITH": {
+          "aa_exact": true,
+          "all_metrics_agree_with_sq03b": true,
+          "first_positive_agree_with_sq03b": true,
+          "integrated_agree_with_sq03b": true,
+          "peak_agree_with_sq03b": true,
+          "scalar_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": 2.9103830456733704e-10,
+            "peak_voltage_delta": 2.000888343900442e-11
+          },
+          "sq03b_batched_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": 9.313225746154785e-10,
+            "peak_voltage_delta": 4.9112713895738125e-11
+          }
+        },
+        "MORTY": {
+          "aa_exact": true,
+          "all_metrics_agree_with_sq03b": true,
+          "first_positive_agree_with_sq03b": true,
+          "integrated_agree_with_sq03b": true,
+          "peak_agree_with_sq03b": true,
+          "scalar_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": -7.450580596923828e-09,
+            "peak_voltage_delta": -6.984919309616089e-10
+          },
+          "sq03b_batched_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": -9.313225746154785e-10,
+            "peak_voltage_delta": -2.9103830456733704e-10
+          }
+        }
+      },
+      "verified": false
+    },
+    {
+      "anchor": "DNp30",
+      "edge_id": 59245,
+      "input": "LPLC2",
+      "pair_metric_agreement": {
+        "integrated_context_residual": true,
+        "integrated_normalized_asymmetry": false,
+        "integrated_total_effect_magnitude": true,
+        "peak_context_residual": true,
+        "peak_normalized_asymmetry": false,
+        "peak_total_effect_magnitude": true
+      },
+      "panel_class": "LOW_TAIL_CONTROL",
+      "post": "AVLP079",
+      "pre": "AVLP113",
+      "scalar_reconstructed": {
+        "integrated": {
+          "context_residual": 7.275957614183426e-09,
+          "delta_lilith": 1.7462298274040222e-10,
+          "delta_morty": -7.450580596923828e-09,
+          "normalized_asymmetry": 0.9541984732824428,
+          "total_effect_magnitude": 7.62520357966423e-09
+        },
+        "peak": {
+          "context_residual": 6.893969839438796e-10,
+          "delta_lilith": 9.094947017729282e-12,
+          "delta_morty": -6.984919309616089e-10,
+          "normalized_asymmetry": 0.974293059125964,
+          "total_effect_magnitude": 7.075868779793382e-10
+        }
+      },
+      "sq03d_expected": {
+        "integrated": {
+          "context_residual": 0.0,
+          "delta_lilith": 9.313225746154785e-10,
+          "delta_morty": -9.313225746154785e-10,
+          "normalized_asymmetry": 0.0,
+          "sign_relation": "OPPOSITE",
+          "total_effect_magnitude": 1.862645149230957e-09
+        },
+        "peak": {
+          "context_residual": 2.4374458007514477e-10,
+          "delta_lilith": 4.729372449219227e-11,
+          "delta_morty": -2.9103830456733704e-10,
+          "normalized_asymmetry": 0.7204301075268817,
+          "sign_relation": "OPPOSITE",
+          "total_effect_magnitude": 3.383320290595293e-10
+        }
+      },
+      "subjects": {
+        "LILITH": {
+          "aa_exact": true,
+          "all_metrics_agree_with_sq03b": true,
+          "first_positive_agree_with_sq03b": true,
+          "integrated_agree_with_sq03b": true,
+          "peak_agree_with_sq03b": true,
+          "scalar_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": 1.7462298274040222e-10,
+            "peak_voltage_delta": 9.094947017729282e-12
+          },
+          "sq03b_batched_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": 9.313225746154785e-10,
+            "peak_voltage_delta": 4.729372449219227e-11
+          }
+        },
+        "MORTY": {
+          "aa_exact": true,
+          "all_metrics_agree_with_sq03b": true,
+          "first_positive_agree_with_sq03b": true,
+          "integrated_agree_with_sq03b": true,
+          "peak_agree_with_sq03b": true,
+          "scalar_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": -7.450580596923828e-09,
+            "peak_voltage_delta": -6.984919309616089e-10
+          },
+          "sq03b_batched_delta": {
+            "first_positive_frame_delta": 0,
+            "integrated_positive_voltage_delta": -9.313225746154785e-10,
+            "peak_voltage_delta": -2.9103830456733704e-10
+          }
+        }
+      },
+      "verified": false
+    }
+  ],
+  "schema": "moscaquant.sq03d1_result/v1",
+  "sidequest_id": "SQ-03D.1",
+  "source_commit": "2bf6ecca9793f885c914bbaaa37c374b2282a127",
+  "sq03b_ledger_sha256": "7b2632de5792973534177b697efdd7c3af0b82a836d9d2b597812dbc0dd1f725",
+  "sq03d_result_sha256": "6414426d23ab51d0ec04766fd96859d2e61dc520eadfbd12c05117cb53a998c7",
+  "title": "DOUBLE CHECK THE KNIFE",
+  "upper_tail_pair_count": 16,
+  "upper_tail_verified_count": 1
+}
