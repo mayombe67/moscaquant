@@ -27,6 +27,27 @@ The answer became more scientifically interesting than the premise. Across MQ-2.
 
 **Retrospective rule:** The comedy is downstream of the evidence. Null results stay null. Narrative terms never replace the operational scientific description.
 
+## Narrative lexicon
+
+The retrospective may use **THE FAMILY MODEL** as one of MoscaQuant's recurring
+presentation vocabularies.
+
+Family Model terms translate evidence-backed network or institutional structure
+into organized-crime organizational shorthand. They do not alter the scientific
+record.
+
+Examples:
+
+- a high-throughput source may be described as a **CAPO**;
+- a local subnetwork may be described as a **CREW**;
+- a validated hotspot may become **MADE** only when its stated validation gates
+  have actually been satisfied;
+- a matched-control comparison may be called a **SIT-DOWN**;
+- experiment records remain the **BOOKS** or **RECEIPTS**.
+
+Retrospective rule remains unchanged: **the comedy is downstream of the
+evidence.**
+
 ## Highlight reel
 
 ### 01 — The Neutral Gate That Saved Us From Ourselves

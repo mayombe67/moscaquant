@@ -385,6 +385,32 @@ disciplinary records backed by explicit evidence.
 The HR layer is narrative/institutional state and has no authority over scientific results,
 ORACLE intervention rules, or WARDEN containment.
 
+### Cross-phase presentation lexicon — THE FAMILY MODEL
+
+MoscaQuant's corporate-culture and Panopticon presentation layers may use
+**THE FAMILY MODEL**, an organized-crime organizational metaphor for graph and
+institutional relationships.
+
+It is cross-phase presentation vocabulary, not a separate scientific phase.
+
+The vocabulary includes CREW, CAPO, MADE, EARNER, ENVELOPE, SIT-DOWN,
+NO-SHOW JOB, TERRITORY, BOOKS, and RECEIPTS.
+
+Requirements:
+
+- every Family Model label must remain downstream of evidence;
+- operational scientific names remain visible or recoverable;
+- no Family Model term creates scientific, HR, WARDEN, ORACLE, broker, or
+  trading authority;
+- public presentation must not imply affiliation with or membership in any
+  existing television, film, or crime-fiction canon;
+- the metaphor may recur across experiments when it maps cleanly to the actual
+  network or institutional structure.
+
+This lexicon is especially appropriate for later causal-network work where
+aggregate source influence, local hierarchy, matched comparisons, and
+high-throughput subnetworks become experimentally relevant.
+
 ## MQ-9 — OPEN THE PANOPTICON
 Deploy the public spectator interface and embodied Containment Chamber.
 

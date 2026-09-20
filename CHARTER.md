@@ -1516,6 +1516,46 @@ authoritative for retrospective content.
 
 Git history is the authoritative project record.
 
+## THE FAMILY MODEL — ORGANIZATIONAL POWER METAPHOR
+
+MoscaQuant maintains a presentation-only organized-crime metaphor for describing
+network hierarchy, influence, throughput, and institutional absurdity.
+
+The canonical presentation name is **THE FAMILY MODEL**.
+
+The Family Model creates no scientific fact. It is a narrative vocabulary
+applied only after the underlying evidence exists.
+
+Approved mappings include:
+
+- **CREW** — a local network neighborhood or functionally related subnetwork;
+- **CAPO** — a source neuron or source-level unit with unusually large aggregate
+  outgoing influence or throughput under a defined analysis;
+- **MADE** / **MADE GUY** — a hotspot or mechanism that has survived the
+  explicitly stated validation gates required by its experiment;
+- **EARNER** — an edge, pathway, source, or mechanism producing measurable
+  modeled effect under the relevant frozen protocol;
+- **ENVELOPE** — presentation shorthand for bounded signal, weight, or measured
+  contribution; the underlying scientific quantity SHALL always remain named;
+- **SIT-DOWN** — a controlled comparison, matched-control analysis, or formal
+  adjudication between competing explanations;
+- **NO-SHOW JOB** — a structurally impressive feature that fails to produce the
+  corresponding modeled dynamic effect;
+- **TERRITORY** — downstream reach or represented network neighborhood;
+- **BOOKS** / **RECEIPTS** — public-safe evidence, telemetry, provenance, or
+  experiment records supporting a narrative claim.
+
+The Family Model SHALL NOT redefine biological terminology, statistical
+meaning, causal claims, experimental authority, personnel authority, WARDEN
+authority, ORACLE authority, broker authority, or trading authority.
+
+A Family Model label is never evidence by itself.
+
+Where Family Model language appears beside a scientific result, the operational
+scientific description remains authoritative.
+
+**THE FAMILY EXPLAINS THE RACKET. IT DOES NOT CHANGE THE BOOKS.**
+
 ## HAHN — HUMAN RESOURCES / CORPORATE CULTURE
 
 HAHN is the canonical Human Resources and corporate-culture persona for MQ-8.8.

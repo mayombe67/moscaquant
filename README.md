@@ -16,6 +16,20 @@ It is also intentionally ridiculous.
 
 ---
 
+### Presentation lexicons
+
+MoscaQuant keeps scientific terminology authoritative while allowing recurring
+presentation vocabularies in Panopticon.
+
+One of those vocabularies is **THE FAMILY MODEL**: an organized-crime
+organizational metaphor for network hierarchy and institutional behavior.
+Terms such as CREW, CAPO, EARNER, SIT-DOWN, and RECEIPTS may summarize an
+evidence-backed result, but never replace the underlying scientific quantity or
+claim boundary.
+
+The metaphor is original MoscaQuant presentation language and does not place
+the project inside any external fictional canon.
+
 ## Current Status
 
 **Current roadmap phase:** MQ-9 — OPEN THE PANOPTICON
