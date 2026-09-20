@@ -234,3 +234,20 @@ SEMANTICS_BY_ID.update({
     "ACH-139": {"family": "LORE", "related_achievement_ids": []},
     "ACH-140": {"family": "SECRET_ODDITY", "related_achievement_ids": ["ACH-130"]},
 })
+
+
+# Canonical 152-slot namespace extension — gym / bro-science presentation pack.
+SEMANTICS_BY_ID.update({
+    "ACH-141": {"family": "CONTAINMENT", "related_achievement_ids": ["ACH-145"]},
+    "ACH-142": {"family": "LORE", "related_achievement_ids": ["ACH-149"]},
+    "ACH-143": {"family": "NULL_RESULTS", "related_achievement_ids": ["ACH-136"]},
+    "ACH-144": {"family": "RECORDS", "related_achievement_ids": []},
+    "ACH-145": {"family": "CONTAINMENT", "related_achievement_ids": ["ACH-141"]},
+    "ACH-146": {"family": "CONTROLS", "related_achievement_ids": ["ACH-138"]},
+    "ACH-147": {"family": "COVERAGE", "related_achievement_ids": ["ACH-129"]},
+    "ACH-148": {"family": "CONTRASTS", "related_achievement_ids": []},
+    "ACH-149": {"family": "LORE", "related_achievement_ids": ["ACH-142"]},
+    "ACH-150": {"family": "INTERPRETATION", "related_achievement_ids": ["ACH-135"]},
+    "ACH-151": {"family": "ANOMALOUS_OBSERVANCE", "related_achievement_ids": []},
+    "ACH-152": {"family": "PROVENANCE", "related_achievement_ids": ["ACH-130", "ACH-140"]},
+})

@@ -13,7 +13,7 @@ def achievement_number(achievement_id: str) -> int:
     if not match:
         raise ValueError(f'invalid achievement id: {achievement_id}')
     value = int(match.group(1))
-    if value < 1 or value > 140:
+    if value < 1 or value > 152:
         raise ValueError(f'achievement id outside canonical namespace: {achievement_id}')
     return value
 
@@ -31,6 +31,18 @@ _EXTENDED_CATEGORY_BY_ID = {
     138: Category.LORE,
     139: Category.LORE,
     140: Category.SECRET_ODDITY,
+    141: Category.CONTAINMENT,
+    142: Category.LORE,
+    143: Category.SCIENCE,
+    144: Category.SCIENCE,
+    145: Category.CONTAINMENT,
+    146: Category.SCIENCE,
+    147: Category.SCIENCE,
+    148: Category.SCIENCE,
+    149: Category.LORE,
+    150: Category.ORACLE,
+    151: Category.ANOMALOUS_OBSERVANCE,
+    152: Category.SECRET_ODDITY,
 }
 
 

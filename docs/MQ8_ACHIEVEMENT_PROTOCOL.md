@@ -112,3 +112,17 @@ a separate frozen experimental protocol.
 - public text: `Nice try.`
 
 It is intentionally unreachable and exists as a registry/UI invariant.
+
+
+### Achievement overlap policy — canonical predicates
+
+Every populated achievement must converge on one canonical semantic trigger
+predicate. Sharing a source event is allowed. Sharing a semantic predicate is
+not allowed unless the duplication is explicitly documented as intentional
+comedic overlap.
+
+New or reviewed definitions record predicate identity in
+`achievements/overlap_policy_v1.py`.
+
+The canonical namespace capacity is `ACH-001` through `ACH-152`.
+ACH-128 remains permanently unreachable.
