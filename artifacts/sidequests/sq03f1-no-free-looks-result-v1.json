@@ -1,0 +1,153 @@
+{
+  "C_hotspots": {
+    "context_count_exact_match_check": true,
+    "features": {
+      "endpoint_degree_product": {
+        "control_median": 37149.0,
+        "fraction_hotspot_gt_control": 0.46040034812880765,
+        "hotspot_median": 34920.0,
+        "median_paired_difference": -3623.0
+      },
+      "source_out_degree": {
+        "control_median": 199.0,
+        "fraction_hotspot_gt_control": 0.4917319408181027,
+        "hotspot_median": 214.0,
+        "median_paired_difference": 0.0
+      },
+      "source_out_strength": {
+        "control_median": 11930.5,
+        "fraction_hotspot_gt_control": 0.6144473455178416,
+        "hotspot_median": 19113.5,
+        "median_paired_difference": 6009.5
+      },
+      "source_output_fraction": {
+        "control_median": 0.006411711302768951,
+        "fraction_hotspot_gt_control": 0.402088772845953,
+        "hotspot_median": 0.00436977034853212,
+        "median_paired_difference": -0.0008748011495004687
+      },
+      "target_in_degree": {
+        "control_median": 170.0,
+        "fraction_hotspot_gt_control": 0.48912097476066146,
+        "hotspot_median": 176.0,
+        "median_paired_difference": 0.0
+      },
+      "target_in_strength": {
+        "control_median": 11380.5,
+        "fraction_hotspot_gt_control": 0.525674499564839,
+        "hotspot_median": 11256.0,
+        "median_paired_difference": 771.0
+      },
+      "target_input_fraction": {
+        "control_median": 0.006944072546814474,
+        "fraction_hotspot_gt_control": 0.5013054830287206,
+        "hotspot_median": 0.006568974229408792,
+        "median_paired_difference": 1.3355771028662408e-05
+      }
+    },
+    "hotspot_count": 1149,
+    "matched_count": 1149,
+    "matched_fraction": 1.0,
+    "negative_controls": {
+      "abs_weight_difference": {
+        "control_median": 52.0,
+        "hotspot_median": 52.0,
+        "median_paired_difference": 0.0
+      },
+      "context_count": {
+        "control_median": 6.0,
+        "hotspot_median": 6.0,
+        "median_paired_difference": 0.0
+      }
+    },
+    "structural_bin_exact_match_check": true,
+    "unmatched_count": 0,
+    "unmatched_first100": []
+  },
+  "S_hotspots": {
+    "context_count_exact_match_check": true,
+    "features": {
+      "endpoint_degree_product": {
+        "control_median": 36928.0,
+        "fraction_hotspot_gt_control": 0.46689895470383275,
+        "hotspot_median": 34560.0,
+        "median_paired_difference": -2761.0
+      },
+      "source_out_degree": {
+        "control_median": 199.0,
+        "fraction_hotspot_gt_control": 0.4895470383275261,
+        "hotspot_median": 214.0,
+        "median_paired_difference": 0.0
+      },
+      "source_out_strength": {
+        "control_median": 11909.75,
+        "fraction_hotspot_gt_control": 0.6088850174216028,
+        "hotspot_median": 17803.5,
+        "median_paired_difference": 5865.25
+      },
+      "source_output_fraction": {
+        "control_median": 0.006392813638697931,
+        "fraction_hotspot_gt_control": 0.41202090592334495,
+        "hotspot_median": 0.004394265992707604,
+        "median_paired_difference": -0.0008616558597435938
+      },
+      "target_in_degree": {
+        "control_median": 169.0,
+        "fraction_hotspot_gt_control": 0.4886759581881533,
+        "hotspot_median": 176.0,
+        "median_paired_difference": 0.0
+      },
+      "target_in_strength": {
+        "control_median": 11287.75,
+        "fraction_hotspot_gt_control": 0.5209059233449478,
+        "hotspot_median": 11255.25,
+        "median_paired_difference": 759.0
+      },
+      "target_input_fraction": {
+        "control_median": 0.006919461419795486,
+        "fraction_hotspot_gt_control": 0.5026132404181185,
+        "hotspot_median": 0.006560490390707672,
+        "median_paired_difference": 2.3497727359351496e-05
+      }
+    },
+    "hotspot_count": 1149,
+    "matched_count": 1148,
+    "matched_fraction": 0.999129677980853,
+    "negative_controls": {
+      "abs_weight_difference": {
+        "control_median": 50.0,
+        "hotspot_median": 52.5,
+        "median_paired_difference": 0.0
+      },
+      "context_count": {
+        "control_median": 6.0,
+        "hotspot_median": 6.0,
+        "median_paired_difference": 0.0
+      }
+    },
+    "structural_bin_exact_match_check": true,
+    "unmatched_count": 1,
+    "unmatched_first100": [
+      {
+        "abs_weight_difference_decile": 10,
+        "context_count": 10,
+        "edge_id": 55033,
+        "score": 8.270144462585449e-07,
+        "total_weight_decile": 10
+      }
+    ]
+  },
+  "aligned_edges_sha256": "1cac309c7760d16f5f041a7b924efbf5cdfa3a46570090fb234c2323ed9e313c",
+  "candidate_edge_count": 114825,
+  "claim_boundary": "SQ-03F.1 may describe whether SQ-03F local network-position differences remain after exact matching on represented intervention context count and frozen structural bins. It does not establish a biological sex mechanism, biological population effect, organism-level behavior, or causal importance outside the MoscaQuant model.",
+  "classification": "AUTHORITATIVE_CONTEXT_MATCHED_HOTSPOT_RESULT",
+  "hotspot_k": 1149,
+  "protocol_sha256": "1e943bba498629acb626f5687d9624bb893232953f35b15db63a1cc73d5de660",
+  "schema": "moscaquant.sq03f1_result/v1",
+  "sidequest_id": "SQ-03F.1",
+  "source_commit": "4874eacdccd70b959171eaa39cbe0d886ffa4023",
+  "sq03b_ledger_sha256": "7b2632de5792973534177b697efdd7c3af0b82a836d9d2b597812dbc0dd1f725",
+  "sq03e_result_sha256": "648b795448d2e82198dd12620e2228824f084d57e87c89f1bb0645d9551d43c8",
+  "sq03f_result_sha256": "7bf440b8b42e4096ffa9828adc4c33d1e57b858d46547cb741a47c79d5ea68a0",
+  "title": "NO FREE LOOKS"
+}
