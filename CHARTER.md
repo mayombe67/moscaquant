@@ -3028,3 +3028,89 @@ PUBLIC INTERFACES MUST SURVIVE THE PHONE.
 If a feature only works comfortably in desktop DevTools, it is not complete.
 
 <!-- END CANON: PANOPTICON NAVIGATION AND MOBILE CONTRACT -->
+
+## OVERWATCH — TELEMETRY AND OBSERVABILITY
+
+**OVERWATCH** is MoscaQuant's telemetry, observability, and operational evidence
+system.
+
+OVERWATCH may observe, record, summarize, compare, and report execution
+telemetry. It has **no scientific, experimental, perturbation, financial,
+broker, trading, ORACLE, WARDEN, HR, or Broadcast authority**.
+
+Canonical rule:
+
+> **OVERWATCH observes, records, and reports. It does not alter frozen experiment behavior.**
+
+OVERWATCH may record, where available:
+
+- experiment, run, shard, subject, input, and batch identity;
+- source commit and configuration/data/artifact hashes;
+- progress, throughput, batch latency, checkpoint duration, and restart state;
+- CPU, memory, thermal, disk, and process telemetry;
+- cloud instance type, region/AZ, Spot interruption/replacement state, and cost;
+- deterministic-control and replay status;
+- experiment completion, failure, recovery, and artifact-production events.
+
+OVERWATCH may generate daily, weekly, and monthly trend reports covering
+performance, reliability, cost, and scientific-production metadata.
+
+OVERWATCH may also emit **sanitized Broadcast candidates** for unusual,
+meaningful, or lore-worthy events such as milestones, anomalies, recoveries,
+performance records, infrastructure incidents, or already-approved scientific
+results. Candidate generation is not publication authority. Broadcast remains
+responsible for presentation and release.
+
+Telemetry or trend analysis may inform a **future** frozen runtime
+configuration, but OVERWATCH must never silently retune, mutate, accelerate,
+throttle, or otherwise alter an active frozen experiment.
+
+Raw operational telemetry and public Broadcast material are separate evidence
+classes. Public presentation must not expose secrets, private infrastructure
+details, or unsupported scientific claims.
+
+### Supporting presentation vocabulary
+
+The following names may be used as OVERWATCH components or presentation
+surfaces without granting new authority:
+
+- **SAVE STATE** — checkpoint/resume presentation;
+- **DPS METER** — throughput and cost-efficiency presentation;
+- **RECEIPTS** — immutable run/event evidence presentation;
+- **KILLFEED** — failure, interruption, and worker-termination presentation;
+- **HUD** — live operator/spectator telemetry presentation.
+
+These are presentation/component names under OVERWATCH, not independent
+authorities.
+
+## FLYSWATTER PROTOCOL — MQ-002 / LILITH — FUTURE
+
+**FLYSWATTER PROTOCOL** is the canonical name reserved for LILITH's future
+positive-reinforcement containment/plasticity regime.
+
+The name is intentionally inverted relative to its effect:
+
+- **SUGAR CUBE PROTOCOL** sounds pleasant but belongs to MORTY's aversive /
+  punitive consequence regime.
+- **FLYSWATTER PROTOCOL** sounds aversive but is reserved for LILITH's
+  positive-reinforcement regime.
+
+FLYSWATTER PROTOCOL is **not active in SQ-03A or SQ-03B** and must not
+contaminate the neutral MORTY/LILITH comparison baseline.
+
+Future implementation intent, subject to a separately frozen protocol:
+
+- positive reinforcement may scale with gains through a bounded, capped rule;
+- flat or losing performance within the permitted risk envelope does not
+  automatically trigger a D6-style punishment;
+- WARDEN retains independent hard financial containment and loss-limit
+  authority;
+- a loss-limit breach stops or contains financial exposure; it does not by
+  itself authorize neural punishment;
+- reinforcement may act only through an explicitly frozen plasticity /
+  learning mechanism;
+- no broker, trading, financial, ORACLE, WARDEN, or scientific authority is
+  granted to LILITH by this protocol name.
+
+This section reserves naming and separation-of-concerns only. It does not
+authorize execution.

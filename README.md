@@ -275,3 +275,19 @@ the documented evidence, or evidence of autonomous financial competence.
 ---
 
 **THE MARKET PROVIDES FEEDBACK. WE PROVIDE CONSEQUENCES.**
+
+## Current comparative-science status
+
+- **SQ-03A — THE OTHER FLY:** complete and recorded. The accepted result is a
+  model-level matched-central-brain comparison only.
+- **SQ-03B — FIND THE DIFFERENCE:** active mechanistic-localization follow-up.
+  It tests frozen single-edge counterfactual equalizations against the
+  preregistered SQ-03A differences.
+- **OVERWATCH:** canonical telemetry/observability subsystem. It observes,
+  records, reports, and produces trend summaries without altering frozen
+  experiments.
+- **FLYSWATTER PROTOCOL:** reserved future MQ-002/LILITH positive-reinforcement
+  containment/plasticity protocol. It is not active in SQ-03A or SQ-03B.
+
+Main roadmap remains **MQ-9 — OPEN THE PANOPTICON**, followed by
+**MQ-10 — INTRODUCE THE MONEY**.

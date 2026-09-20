@@ -1106,3 +1106,29 @@ Desktop may add density.
 Mobile must not lose functionality.
 
 <!-- END CANON: MQ-8 UI NAVIGATION INFRASTRUCTURE -->
+
+### Cross-phase infrastructure — OVERWATCH
+
+OVERWATCH is the telemetry/observability track for MoscaQuant. It is
+cross-phase infrastructure and does **not** replace or renumber the main
+roadmap.
+
+Initial implementation should cover local execution telemetry, immutable run
+evidence, checkpoint/recovery events, and daily/weekly/monthly trend reports.
+Later infrastructure may add cloud/Spot instance telemetry, cost attribution,
+shard health, interruption recovery, and sanitized Broadcast candidates.
+
+OVERWATCH remains observational: it may recommend future runtime changes from
+historical evidence, but it may not mutate an active frozen experiment.
+
+### Future MQ-002 containment sidequest — FLYSWATTER PROTOCOL
+
+FLYSWATTER PROTOCOL is reserved for a future LILITH positive-reinforcement
+experiment after neutral comparative baselines are complete and an explicit
+plasticity protocol is frozen.
+
+It is not part of SQ-03A or SQ-03B, does not alter MQ-9 or MQ-10 ordering, and
+does not grant financial or experimental authority. WARDEN retains hard loss
+containment.
+
+The prior working name **Royal Jelly** is non-canonical and must not be used.
