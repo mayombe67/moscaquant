@@ -20,6 +20,7 @@ remain controlling for scientific claims.
 - **SQ03F3 — MADE-MEN** — [protocol](sq03f3-made-men-protocol.md) · [results](sq03f3-made-men-results.md)
 - **SQ03F3 — RANDOMIZATION-STREAM-CLARIFICATION.MD** — [sq03f3-randomization-stream-clarification](sq03f3-randomization-stream-clarification.md)
 - **SQ03F4 — SIT-DOWN** — [protocol](sq03f4-sit-down-protocol.md) · [results](sq03f4-sit-down-results.md)
+- **SQ03F6 — THE COMMISSION** — [protocol](sq03f6-the-commission-protocol.md) · [results](sq03f6-the-commission-results.md)
 - **SQ04 — GLOBAL-MODULATION** — [protocol](sq04-global-modulation-protocol.md) · [results](sq04-global-modulation-results.md)
 - **SQ04 — GLOBAL-MODULATION-RUNNER-IMPLEMENTATION.MD** — [sq04-global-modulation-runner-implementation](sq04-global-modulation-runner-implementation.md)
 
