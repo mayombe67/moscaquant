@@ -1,4 +1,4 @@
-# MQ-002.0 — IDENTITY CHECK Results
+# MQ-002.0 — IDENTITY CHECK // LILITH Results
 
 **Status:** COMPLETE — DATA QUALIFICATION
 
@@ -27,7 +27,7 @@ The identity layer is sufficiently traceable to justify acquiring and
 qualifying the official aligned-edge product.
 
 This is not yet evidence that a matched male/female neural experiment is valid.
-MQ-002 remains provisional.
+MQ-002 // LILITH remains provisional.
 
 ## Claim boundary
 

@@ -25,5 +25,6 @@
     "aligned_edge_file_present_locally",
     "unresolved_interfaces"
   ],
-  "claim_boundary": "MQ-002.0 establishes only the availability and local coverage of published cross-matching data needed to design a future comparative experiment."
+  "claim_boundary": "MQ-002.0 establishes only the availability and local coverage of published cross-matching data needed to design a future comparative experiment.",
+  "codename": "LILITH"
 }

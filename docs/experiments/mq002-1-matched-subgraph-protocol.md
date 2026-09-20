@@ -1,10 +1,10 @@
-# MQ-002.1 — MATCHED SUBGRAPH QUALIFICATION
+# MQ-002.1 — MATCHED SUBGRAPH QUALIFICATION // LILITH
 
 ## THE OTHER FLY
 
 **Status:** FROZEN BEFORE ACQUISITION  
 **Class:** Non-result-bearing data acquisition and construction qualification  
-**Parent:** MQ-002 — provisional comparative biological control
+**Parent:** MQ-002 // LILITH — provisional comparative biological control
 
 ## Identity-check basis
 

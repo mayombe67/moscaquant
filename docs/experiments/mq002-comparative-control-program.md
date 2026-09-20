@@ -1,9 +1,9 @@
-# MQ-002 — THE OTHER FLY
+# MQ-002 // LILITH — THE OTHER FLY
 
 ## Provisional Comparative Biological Control Program
 
 **Canonical status:** Provisional scientific subject program  
-**Designation:** `MQ-002`  
+**Designation:** `MQ-002 // LILITH`  
 **Role:** Comparative biological control for MQ-001  
 **Initial source:** published FlyWire female-brain connectome through official
 MaleCNS/FlyWire cross-matching products.
@@ -25,7 +25,7 @@ These control families complement one another and must not be conflated.
 
 `PROVISIONAL / DATA QUALIFICATION REQUIRED`
 
-MQ-002 is canonically named but is not yet a validated second experimental
+MQ-002 // LILITH is canonically named but is not yet a validated second experimental
 subject.
 
 The first work item is `MQ-002.0 — IDENTITY CHECK`.

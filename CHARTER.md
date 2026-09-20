@@ -359,9 +359,9 @@ If a control wins, the result will be reported.
 
 Management disappointment does not constitute statistical significance.
 
-12.X. MQ-002 — PROVISIONAL COMPARATIVE BIOLOGICAL CONTROL
+12.X. MQ-002 — LILITH / PROVISIONAL COMPARATIVE BIOLOGICAL CONTROL
 
-MQ-002 is the provisional designation for a female Drosophila biological
+MQ-002 // LILITH is the provisional designation for a female Drosophila biological
 comparison subject derived from the published FlyWire female-brain connectome
 and the official MaleCNS/FlyWire cross-matching products.
 
@@ -411,6 +411,10 @@ biological control, not as a validated second Mosca.
 
 The comedy target is MQ-001's institutional predicament and the bureaucracy of
 comparative experimentation, not stereotypes about biological sex.
+
+Canonical codename:
+
+LILITH
 
 Working program name:
 

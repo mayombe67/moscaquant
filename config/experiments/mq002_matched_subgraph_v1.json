@@ -52,5 +52,6 @@
     "candidate_matched_subgraph_node_count",
     "candidate_matched_subgraph_edge_count"
   ],
-  "claim_boundary": "MQ-002.1 qualifies and constructs metadata for a defensible matched male/female biological subgraph. It performs no neural dynamics and establishes no behavioral, sex-difference, biological-mechanism, or financial result."
+  "claim_boundary": "MQ-002.1 qualifies and constructs metadata for a defensible matched male/female biological subgraph. It performs no neural dynamics and establishes no behavioral, sex-difference, biological-mechanism, or financial result.",
+  "codename": "LILITH"
 }

@@ -398,9 +398,9 @@ Permit tiny controlled real-money transactions through WARDEN-01.
 Enable experimental plasticity and persistent aversive learning while
 preserving controls.
 
-### Comparative Biology Sidequest — MQ-002 / THE OTHER FLY
+### Comparative Biology Sidequest — MQ-002 // LILITH / THE OTHER FLY
 
-MQ-002 is a provisional female biological comparator, not a mainline phase and
+MQ-002 // LILITH is a provisional female biological comparator, not a mainline phase and
 not a replacement for SHUFFLED MOSCA.
 
 The first step is data qualification only: verify official MaleCNS/FlyWire

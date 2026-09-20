@@ -1,10 +1,10 @@
-# MQ-002.0 — IDENTITY CHECK
+# MQ-002.0 — IDENTITY CHECK // LILITH
 
 ## Published Male/Female Mapping Qualification Protocol
 
 **Status:** FROZEN BEFORE DISCOVERY  
 **Class:** Non-result-bearing data qualification / feasibility study  
-**Parent program:** MQ-002 — THE OTHER FLY
+**Parent program:** MQ-002 // LILITH — THE OTHER FLY
 
 ## Question
 
