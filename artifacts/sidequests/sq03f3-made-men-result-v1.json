@@ -1,0 +1,222 @@
+{
+  "C_hotspots": {
+    "hotspot_stratum_count": 264,
+    "observed_metrics": {
+      "fraction_hotspot_edges_repeated_source": 0.824194952132289,
+      "max_distinct_context_signatures_one_source": 12,
+      "max_hotspot_edges_one_source": 135,
+      "median_hotspot_edges_per_source": 1.0,
+      "source_count_hhi": 0.028104053852405813,
+      "sources_with_2plus_context_signatures": 283,
+      "top1_source_share": 0.1174934725848564,
+      "top5_source_share": 0.2863359442993908,
+      "unique_hotspot_source_count": 290
+    },
+    "randomization": {
+      "fraction_hotspot_edges_repeated_source": {
+        "descriptive_null_percentile_rank": 1.0,
+        "null_median": 0.7667536988685814,
+        "null_p05": 0.7484769364664926,
+        "null_p95": 0.7850739773716269,
+        "observed": 0.824194952132289,
+        "observed_over_null_median": 1.0749148694665154
+      },
+      "max_distinct_context_signatures_one_source": {
+        "descriptive_null_percentile_rank": 1.0,
+        "null_median": 12.0,
+        "null_p05": 12.0,
+        "null_p95": 12.0,
+        "observed": 12,
+        "observed_over_null_median": 1.0
+      },
+      "max_hotspot_edges_one_source": {
+        "descriptive_null_percentile_rank": 1.0,
+        "null_median": 25.0,
+        "null_p05": 20.0,
+        "null_p95": 32.0,
+        "observed": 135,
+        "observed_over_null_median": 5.4
+      },
+      "median_hotspot_edges_per_source": {
+        "descriptive_null_percentile_rank": 1.0,
+        "null_median": 1.0,
+        "null_p05": 1.0,
+        "null_p95": 1.0,
+        "observed": 1.0,
+        "observed_over_null_median": 1.0
+      },
+      "source_count_hhi": {
+        "descriptive_null_percentile_rank": 1.0,
+        "null_median": 0.00563929280465626,
+        "null_p05": 0.005240792879266111,
+        "null_p95": 0.0060816496881914185,
+        "observed": 0.028104053852405813,
+        "observed_over_null_median": 4.983613163196778
+      },
+      "sources_with_2plus_context_signatures": {
+        "descriptive_null_percentile_rank": 0.0,
+        "null_median": 441.0,
+        "null_p05": 424.0,
+        "null_p95": 459.0,
+        "observed": 283,
+        "observed_over_null_median": 0.6417233560090703
+      },
+      "top1_source_share": {
+        "descriptive_null_percentile_rank": 1.0,
+        "null_median": 0.02175805047867711,
+        "null_p05": 0.017406440382941687,
+        "null_p95": 0.0278503046127067,
+        "observed": 0.1174934725848564,
+        "observed_over_null_median": 5.4
+      },
+      "top5_source_share": {
+        "descriptive_null_percentile_rank": 1.0,
+        "null_median": 0.08529155787641426,
+        "null_p05": 0.07571801566579635,
+        "null_p95": 0.09573542210617927,
+        "observed": 0.2863359442993908,
+        "observed_over_null_median": 3.3571428571428577
+      },
+      "unique_hotspot_source_count": {
+        "descriptive_null_percentile_rank": 0.0,
+        "null_median": 455.0,
+        "null_p05": 438.0,
+        "null_p95": 473.0,
+        "observed": 290,
+        "observed_over_null_median": 0.6373626373626373
+      }
+    }
+  },
+  "S_hotspots": {
+    "hotspot_stratum_count": 264,
+    "observed_metrics": {
+      "fraction_hotspot_edges_repeated_source": 0.804177545691906,
+      "max_distinct_context_signatures_one_source": 12,
+      "max_hotspot_edges_one_source": 140,
+      "median_hotspot_edges_per_source": 1.0,
+      "source_count_hhi": 0.02901452127365454,
+      "sources_with_2plus_context_signatures": 306,
+      "top1_source_share": 0.12184508268059181,
+      "top5_source_share": 0.2950391644908616,
+      "unique_hotspot_source_count": 314
+    },
+    "randomization": {
+      "fraction_hotspot_edges_repeated_source": {
+        "descriptive_null_percentile_rank": 1.0,
+        "null_median": 0.7606614447345518,
+        "null_p05": 0.741514360313316,
+        "null_p95": 0.7798085291557877,
+        "observed": 0.804177545691906,
+        "observed_over_null_median": 1.0572082379862702
+      },
+      "max_distinct_context_signatures_one_source": {
+        "descriptive_null_percentile_rank": 1.0,
+        "null_median": 12.0,
+        "null_p05": 12.0,
+        "null_p95": 12.0,
+        "observed": 12,
+        "observed_over_null_median": 1.0
+      },
+      "max_hotspot_edges_one_source": {
+        "descriptive_null_percentile_rank": 1.0,
+        "null_median": 24.0,
+        "null_p05": 20.0,
+        "null_p95": 31.0,
+        "observed": 140,
+        "observed_over_null_median": 5.833333333333333
+      },
+      "median_hotspot_edges_per_source": {
+        "descriptive_null_percentile_rank": 1.0,
+        "null_median": 1.0,
+        "null_p05": 1.0,
+        "null_p95": 1.0,
+        "observed": 1.0,
+        "observed_over_null_median": 1.0
+      },
+      "source_count_hhi": {
+        "descriptive_null_percentile_rank": 1.0,
+        "null_median": 0.005505979771262104,
+        "null_p05": 0.005128688737548297,
+        "null_p95": 0.005946821733963236,
+        "observed": 0.02901452127365454,
+        "observed_over_null_median": 5.269638189572155
+      },
+      "sources_with_2plus_context_signatures": {
+        "descriptive_null_percentile_rank": 0.0,
+        "null_median": 448.0,
+        "null_p05": 431.0,
+        "null_p95": 466.0,
+        "observed": 306,
+        "observed_over_null_median": 0.6830357142857143
+      },
+      "top1_source_share": {
+        "descriptive_null_percentile_rank": 1.0,
+        "null_median": 0.020887728459530026,
+        "null_p05": 0.017406440382941687,
+        "null_p95": 0.026979982593559618,
+        "observed": 0.12184508268059181,
+        "observed_over_null_median": 5.833333333333333
+      },
+      "top5_source_share": {
+        "descriptive_null_percentile_rank": 1.0,
+        "null_median": 0.0835509138381201,
+        "null_p05": 0.07484769364664925,
+        "null_p95": 0.09399477806788512,
+        "observed": 0.2950391644908616,
+        "observed_over_null_median": 3.5312499999999996
+      },
+      "unique_hotspot_source_count": {
+        "descriptive_null_percentile_rank": 0.0,
+        "null_median": 463.0,
+        "null_p05": 446.0,
+        "null_p95": 481.0,
+        "observed": 314,
+        "observed_over_null_median": 0.6781857451403888
+      }
+    }
+  },
+  "aligned_edges_sha256": "1cac309c7760d16f5f041a7b924efbf5cdfa3a46570090fb234c2323ed9e313c",
+  "candidate_edge_count": 114825,
+  "claim_boundary": "SQ-03F.3 may describe source-level recurrence and concentration of frozen model hotspot edges relative to a stratified randomization reference. It does not establish biological cell classes, sex mechanisms, organism behavior, population statistics, or financial utility.",
+  "classification": "AUTHORITATIVE_SOURCE_RECURRENCE_RANDOMIZATION_RESULT",
+  "family_model": {
+    "firewall": "Family Model language is presentation-only and downstream of evidence.",
+    "presentation_name": "MADE MEN",
+    "translation": "Do the same capos keep showing up in different jobs, or do large crews merely get more chances to appear in the books?"
+  },
+  "hotspot_k": 1149,
+  "null_model": {
+    "iterations": 10000,
+    "seed_C": 314160,
+    "seed_S": 314159,
+    "strata": [
+      "context_count",
+      "total_weight_decile",
+      "abs_weight_difference_decile"
+    ]
+  },
+  "opportunity_audit": {
+    "candidate_edge_count_per_source": {
+      "max": 694,
+      "median": 6.0
+    },
+    "distinct_candidate_context_signatures_per_source": {
+      "max": 12,
+      "median": 4.0
+    },
+    "source_count": 4455,
+    "sum_candidate_context_count_per_source": {
+      "max": 4754,
+      "median": 15.0
+    }
+  },
+  "protocol_sha256": "78696fec6daf50685ed3201de1117377468035c3e0bf7e08a57200614888df6c",
+  "schema": "moscaquant.sq03f3_result/v1",
+  "sidequest_id": "SQ-03F.3",
+  "source_commit": "e2c1b837d5d3f77dffa5babd20eba2fa427ac5bd",
+  "sq03b_ledger_sha256": "7b2632de5792973534177b697efdd7c3af0b82a836d9d2b597812dbc0dd1f725",
+  "sq03e_result_sha256": "648b795448d2e82198dd12620e2228824f084d57e87c89f1bb0645d9551d43c8",
+  "sq03f2_result_sha256": "a3ea383ed4803220225f7492e067714c7d351bc9fc15f03eb6feb7cd0378c5c7",
+  "sq03f_result_sha256": "7bf440b8b42e4096ffa9828adc4c33d1e57b858d46547cb741a47c79d5ea68a0",
+  "title": "MADE MEN"
+}
