@@ -316,6 +316,34 @@ collapse should be separately frozen before execution and should distinguish,
 at minimum, failure of presynaptic spike generation, insufficient convergent
 coincidence, and temporal dispersion. It should not retune MQ-3.2 in place.
 
+
+### MQ-5.TS — The wiring itself survived cross-examination
+
+**Reference:** MQ-5.TS topology-specificity benchmark.
+
+The accepted response was challenged with two randomized topology controls.
+SHUFFLED MOSCA v2 produced `0 / 20` exact Arm-A response-pattern
+reproductions. The much stricter matched-topology Arm C null also produced
+`0 / 20`, despite preserving the preregistered directed-degree, transmitter,
+retinal-interface, and postsynaptic weight constraints.
+
+The preregistered result was:
+
+**`TOPOLOGY-SPECIFIC RESPONSE PATTERN SUPPORTED`**
+
+**Science:** within the frozen MoscaQuant model, the accepted response depends
+on more than the graph statistics preserved by the strict null; the specific
+directed wiring arrangement contributes materially to the response pattern.
+This does not establish biological optimality, universal MaleCNS necessity, or
+financial usefulness.
+
+**Artifact:** `mq5-ts-topology-specificity-v1.json`
+
+**SHA-256:** `903bff56fba99580b93db2a875f4c1996e3976a018bb26d306ef61baf73b2811`
+**Lore:** MORTY survived the management consultant's demand to replace every
+employee with someone having the same résumé, title, and number of meetings.
+Apparently who reports to whom was the part management forgot to preserve.
+
 ## Scientific lessons to keep
 
 - Preregistration beat vibes.

@@ -420,3 +420,32 @@ Companion biological-transfer audit/result:
 
 No result-bearing execution is authorized until this protocol and its control
 configuration are committed.
+
+## Final result
+
+**COMPLETE — TOPOLOGY-SPECIFIC RESPONSE PATTERN SUPPORTED**
+
+The frozen randomized ensemble completed all preregistered seeds:
+
+- Arm B: `20 / 20` completed, `0 / 20` exact Arm-A reproductions;
+- Arm C: `20 / 20` completed, `0 / 20` exact Arm-A reproductions.
+
+Under the preregistered Arm C classification rule, `0 / 20` exact
+reproductions yields:
+
+`TOPOLOGY-SPECIFIC RESPONSE PATTERN SUPPORTED`
+
+The result supports topology-specificity within the frozen MoscaQuant
+computational model under the tested Arm B and strict Arm C null families.
+
+It does not establish biological causal equivalence, uniqueness against every
+possible null family, encoding independence, market prediction, or financial
+usefulness.
+
+Result artifact SHA-256:
+
+`903bff56fba99580b93db2a875f4c1996e3976a018bb26d306ef61baf73b2811`
+
+See:
+
+`docs/experiments/mq5-ts-topology-specificity-results.md`
