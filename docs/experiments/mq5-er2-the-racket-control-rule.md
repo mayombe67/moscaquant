@@ -102,3 +102,42 @@ Before the sit-down, we find another guy with the same neighborhood, similar
 connections, and similar weight on the books — except DETOUR never named him.
 
 No outcomes. No wiretap. Just the org chart.
+
+## Frozen selected control
+
+The V2 selector deterministically selected:
+
+`78481 -> 16087`
+
+Structural comparison against focused edge `116680 -> 12024`:
+
+- hop signature: `(3, 3, 3, 3)` for both;
+- sign: inhibitory / negative for both;
+- presynaptic outdegree: `4` versus `4`;
+- postsynaptic indegree: `37` versus `33`;
+- control weight: `-0.10757946223020554`;
+- focused weight: `-0.13293051719665527`.
+
+Frozen V2 matching distances:
+
+- `log10(abs(weight))`: `0.09189532548319435`;
+- `log1p(pre outdegree)`: `0.0`;
+- `log1p(post indegree)`: `0.1112256351102241`;
+- maximum distance: `0.1112256351102241`;
+- summed distance: `0.20312096059341844`.
+
+No THE RACKET confirmatory outcome was generated or inspected during selection.
+
+The earlier V1 candidate `3671 -> 27236` remains rejected and must not be used
+as the authoritative matched control.
+
+### Lore
+
+The lineup finally has a civilian.
+
+Same neighborhood. Same number of outgoing connections. Similar incoming
+company. Similar weight on the books. DETOUR never named him.
+
+If taking out the civilian causes the same disruption as taking out the suspect,
+the suspect was not special. If only the suspect matters, the case gets much
+stronger.

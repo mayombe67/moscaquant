@@ -205,3 +205,25 @@ distance.
 
 **Lore:** We brought in a guy who looked right on the books, then discovered he
 knew half the city. He was released before questioning.
+
+## MQ-5.ER.2 matched control frozen
+
+THE RACKET matched-control selector V2 selected directed edge:
+
+`78481 -> 16087`
+
+Pre-outcome structural match versus focused edge `116680 -> 12024`:
+
+- same `(3, 3, 3, 3)` hop signature;
+- same negative sign;
+- presynaptic outdegree `4` versus `4`;
+- postsynaptic indegree `37` versus `33`;
+- weight `-0.10757946223020554` versus `-0.13293051719665527`.
+
+No THE RACKET neural outcome was generated or inspected during selection.
+
+The V1 candidate `3671 -> 27236` remains rejected as an insufficiently balanced
+topology match.
+
+**Lore:** The lineup finally has a civilian. Same neighborhood, similar books,
+no one in DETOUR ever named him.

@@ -40,3 +40,20 @@ require_exact_focused_edge = true
 require_exact_original_13_edge_lesion = true
 require_clean_worktree_for_authoritative_run = true
 require_control_edge_rule_frozen_before_result = true
+
+[matched_control]
+selector = "mq5-er2-the-racket-control-v2"
+presynaptic = 78481
+postsynaptic = 16087
+weight = -0.10757946223020554
+hop_signature = [3, 3, 3, 3]
+pre_outdegree = 4
+post_indegree = 37
+confirmatory_outcomes_used = false
+
+[matched_control.matching_distances]
+log10_abs_weight = 0.09189532548319435
+log1p_pre_outdegree = 0.0
+log1p_post_indegree = 0.1112256351102241
+max_distance = 0.1112256351102241
+sum_distance = 0.20312096059341844
