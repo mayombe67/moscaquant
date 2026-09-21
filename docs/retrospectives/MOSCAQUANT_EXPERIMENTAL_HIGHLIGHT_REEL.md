@@ -618,31 +618,47 @@ until a preregistered intervention tests them.
 ## THE STEVEDORES — Preregistered
 
 **Reference:** MQ-5.ER.4 — THE STEVEDORES preregistration.
+
 **Importance:** UNRANKED — result not yet available.
+
 **Science:** Three runtime-aligned recurrent candidates from RETOUR are frozen
 for individual and combined causal intervention against the C13 baseline.
-Outcome-blind structural controls must be frozen before result execution.
-`BUBBLES REPORT` is descriptive telemetry only and cannot upgrade the
-preregistered causal endpoint.
-**Lore:** RETOUR followed Marlo's package to THE DOCKS and kept seeing the
-same three stevedores around the handoff points. That is where this experiment
+Outcome-blind structural controls were selected before any MQ-5.ER.4 neural
+outcome was inspected. `BUBBLES REPORT` is descriptive telemetry only and
+cannot upgrade the preregistered causal endpoint.
+
+RETOUR's focused-recurrence threshold was frozen before its search: the same
+directed edge had to appear in the top-five candidate list for at least **3 of
+the 5 affected targets**. The retained-comparison recurrence was also known
+before this confirmatory run: S1 appeared on `51/129`, S2 on `51`, and S3 on
+`51/129/317/1273`. THE STEVEDORES therefore measures specificity explicitly
+rather than assuming it.
+
+The chain also has a pre-run stopping rule. Null single-edge and combined
+results close this candidate set. A joint-only affected-target result permits
+one separately preregistered pairwise follow-up (`S1+S2`, `S1+S3`, `S2+S3`);
+after that, the combination branch closes absent an independent new
+preregistered hypothesis.
+
+**Lore:** RETOUR followed Marlo's package to THE DOCKS and kept seeing the same
+three stevedores around the handoff points. That is where this experiment
 starts: three recurring names on Lester's board, but nobody gets called guilty
 because they happened to be standing near a container.
 
-THE STEVEDORES now works the case like an actual investigation. We pull `S1`
-off the dock and replay the same C13 operation. Then `S2`. Then `S3`. If the
-package starts arriving late, stops arriving, or the usual recipients change,
-Bubbles writes down exactly what happened. Then we pull all three stevedores at
-once. That arm asks whether the crew can cover one missing worker but struggles
-when the whole shift disappears.
+THE STEVEDORES works the case like an actual investigation. We pull `S1` off
+the dock and replay the same C13 operation. Then `S2`. Then `S3`. If the package
+starts arriving late, stops arriving, or the usual recipients change, Bubbles
+writes down exactly what happened. Then we pull all three stevedores at once to
+see whether the crew can cover one missing worker but struggles when the whole
+shift disappears.
 
 Each suspect also has a structurally matched control worker: somebody with
 nearly the same weight, route depth, and local degree profile who was selected
-before we looked at any MQ-5.ER.4 outcome. In street terms, Lester found three
-guys with very similar job descriptions and said, "Fine. Pull them too." If a
-suspect removal matters while his matched civilian does not, the case gets more
-interesting. If everybody causes the same disruption, McNulty has arrested the
-loading schedule.
+before we looked at any MQ-5.ER.4 outcome. Lester found three guys with very
+similar job descriptions and said, "Fine. Pull them too." If a suspect removal
+matters while his matched civilian does not, the case gets more interesting. If
+everybody causes the same disruption, McNulty has arrested the loading
+schedule.
 
 **Bubbles** is the witness who refuses to embellish. His report contains onset
 changes, disappearances, voltage changes, and waveform differences. He does not
@@ -658,8 +674,11 @@ organization.
 is associated with impaired judgment, divided attention, coordination, and
 reaction time. McNulty has therefore reached the stage where the arrows on the
 corkboard are becoming straighter while the theory connecting them is becoming
-less so. He is increasingly convinced Horseface is involved. Horseface remains
-a hypothesis, not an edge label.
+less so.
+
+McNulty notices that S3 appears on nearly every comparison board and calls that
+"more evidence." Lester informs him that he has just rediscovered the concept of
+poor specificity. Horseface remains a hypothesis, not an edge label.
 
 **Omar** still does not enter the story. He is reserved for an intervention that
 actually earns the causal-disruption entrance. Until then, somewhere offscreen,

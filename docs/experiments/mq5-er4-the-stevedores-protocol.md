@@ -239,3 +239,71 @@ Selected before any MQ-5.ER.4 neural outcome was inspected.
 Selector artifact SHA-256: `7afd63ef205a21e19306b9145b1bbfdd09e8b254f413a59950f77b8c0a9ce20c`
 
 No MQ-5.ER.4 neural outcome was used during control selection.
+
+## Pre-run RETOUR audit clarifications
+
+These facts were already present in the frozen RETOUR result and are recorded
+explicitly here before any MQ-5.ER.4 result execution.
+
+### Focused-recurrence threshold provenance
+
+RETOUR did **not** choose "three of five affected targets" after inspecting its
+result. Its frozen classification rule defined a focused candidate as the same
+directed edge appearing in the top-five candidate list for at least **3 of the
+5 affected targets**.
+
+THE STEVEDORES inherits the three edges that satisfied that frozen discovery
+rule. No MQ-5.ER.4 outcome was used to choose the threshold or the candidates.
+
+### Retained-comparison recurrence was already known
+
+The RETOUR discovery output also showed that the three STEVEDORE candidates
+were not confined to the five affected targets' top-five lists:
+
+- `S1 = 11725 -> 29921` also appeared in retained-comparison targets `51` and
+  `129`.
+- `S2 = 11345 -> 47350` also appeared in retained-comparison target `51`.
+- `S3 = 10647 -> 51642` also appeared in retained-comparison targets `51`,
+  `129`, `317`, and `1273`.
+
+These are top-five discovery recurrences, not causal effects.
+
+Therefore THE STEVEDORES does **not** preregister any of the three candidates as
+affected-set-specific. All four retained targets remain measured, and
+specificity is reported separately from the primary necessity endpoint.
+
+The candidates are intentionally not dropped after seeing retained-target
+recurrence. Removing them now would turn known discovery information into a
+post-hoc selection filter. The confirmatory intervention is instead allowed to
+show whether an edge has:
+
+- affected-target dependency only;
+- shared affected and retained dependency;
+- retained-only dependency; or
+- no tested dependency.
+
+### Chain stopping rule
+
+MQ-5.ER.4 closes this three-candidate confirmatory branch under the following
+precommitted rules:
+
+1. **No single-edge and no combined affected-target dependency:** this
+   STEVEDORE candidate set is closed. No pairwise, higher-order, or replacement
+   edge fishing may be launched from the same result.
+2. **At least one single-edge affected-target dependency:** report the frozen
+   single-edge and specificity classifications. Mechanistic follow-up requires
+   a separately preregistered experiment with a new explicit hypothesis; the
+   current result does not authorize adaptive edge searching.
+3. **Joint-only affected-target dependency** — no single candidate shows
+   dependency for that target, but `C13-ALL` does — permits exactly one
+   predefined follow-up branch testing the three pairwise candidate lesions:
+   `S1+S2`, `S1+S3`, and `S2+S3`, against the same C13 baseline and endpoint.
+   That follow-up must be separately frozen before execution.
+4. After that pairwise follow-up, this candidate-combination branch closes
+   regardless of outcome unless an independent new hypothesis is introduced
+   and preregistered.
+
+A joint-only result is described as **redundancy-compatible** or
+**distributed-routing-compatible** only. It does not prove redundancy.
+
+No blind replacement-candidate search is authorized by MQ-5.ER.4.

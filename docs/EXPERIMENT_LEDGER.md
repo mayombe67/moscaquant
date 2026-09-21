@@ -350,3 +350,19 @@ Result execution is disabled. Financial semantics remain `NOT ASSIGNED`.
 actually moves Marlo's package, whether the crew covers for each other, and
 whether McNulty should have been allowed near the corkboard after midnight.
 Horseface remains a theory. Omar has not entered the experiment.
+
+
+### MQ-5.ER.4 pre-run specificity and stopping-rule audit
+
+Before result execution, the project recorded that RETOUR's focused-recurrence
+threshold (`>=3/5` affected targets) was frozen before the discovery run and
+that all three STEVEDORE candidates also appeared in at least one retained
+comparison target's top-five list. THE STEVEDORES therefore tests necessity and
+specificity separately rather than treating discovery recurrence as
+affected-set specificity.
+
+A stopping rule is now frozen: null single+combined results close this candidate
+set; individual-positive results require a new explicit hypothesis for any
+mechanistic follow-up; joint-only results permit one separately preregistered
+three-pair follow-up (`S1+S2`, `S1+S3`, `S2+S3`), after which the combination
+branch closes absent an independent new hypothesis.
