@@ -177,12 +177,16 @@
   }
 
   
-function feedLabel(sourceMode, frame) {
+function feedMode(sourceMode, frame) {
   const explicitMode = String(frame?.feed_mode || "").toLowerCase();
 
-  if (explicitMode === "reference") return "REFERENCE FEED";
-  if (explicitMode === "live" || sourceMode === "live") return "LIVE FEED";
-  return "DEMO FEED";
+  if (explicitMode === "reference") return "REFERENCE";
+  if (explicitMode === "live") return "LIVE";
+  return sourceMode === "live" ? "LIVE" : "DEMO";
+}
+
+function feedLabel(sourceMode, frame) {
+  return `${feedMode(sourceMode, frame)} FEED`;
 }
 
 function render(frame, sourceMode) {
@@ -191,7 +195,7 @@ function render(frame, sourceMode) {
     drawScene(state);
 
     els.liveBadge.textContent = feedLabel(sourceMode, frame);
-    els.mode.textContent = sourceMode.toUpperCase();
+    els.mode.textContent = feedMode(sourceMode, frame);
     els.frameLabel.textContent = `frame ${frame.frame_index ?? 0}`;
     els.sequenceLabel.textContent =
       `seq ${frame.source_sequence_start ?? "?"}–${frame.source_sequence_end ?? "?"}`;
@@ -220,6 +224,24 @@ function render(frame, sourceMode) {
     } else {
       els.integrity.textContent = "OK";
     }
+
+    const replayMode = String(frame?.replay_mode || frame?.mode || "").toLowerCase();
+    els.replay.textContent = replayMode === "replay" ? "REPLAY" : "OFF";
+  }
+
+  function renderConnecting() {
+    els.liveBadge.textContent = "CONNECTING";
+    els.mode.textContent = "CONNECTING";
+    els.frameLabel.textContent = "frame —";
+    els.sequenceLabel.textContent = "seq —";
+    els.environmentLabel.textContent = "CELL-67.WORLD.v1";
+    els.locomotor.textContent = "—";
+    els.tension.textContent = "—";
+    els.rootY.textContent = "—";
+    els.pitch.textContent = "—";
+    els.integrity.textContent = "WAITING";
+    els.replay.textContent = "—";
+    els.killfeed.innerHTML = "<li>Awaiting authoritative render frame.</li>";
   }
 
   async function poll() {
@@ -236,6 +258,7 @@ function render(frame, sourceMode) {
     }
   }
 
-  render(demoFrame(), "demo");
+  renderConnecting();
+  poll();
   window.setInterval(poll, POLL_MS);
 })();

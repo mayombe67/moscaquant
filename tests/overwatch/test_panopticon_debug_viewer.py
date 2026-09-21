@@ -14,8 +14,10 @@ def test_debug_viewer_files_exist():
 def test_debug_viewer_targets_public_render_frame_endpoint():
     js = (VIEWER / "app.js").read_text(encoding="utf-8")
     assert "/api/panopticon/render-frame" in js
-    assert "DEMO FEED" in js
-    assert "LIVE FEED" in js
+    assert "REFERENCE" in js
+    assert "LIVE" in js
+    assert "DEMO" in js
+    assert "CONNECTING" in js
 
 
 def test_debug_viewer_surfaces_cell67_and_morty():
