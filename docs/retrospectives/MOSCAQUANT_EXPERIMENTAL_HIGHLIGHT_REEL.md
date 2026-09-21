@@ -284,6 +284,38 @@ The accepted MQ-3.2 first-positive causal paths were regrouped by source-relativ
 **Science:** Frozen classification: `THRESHOLDED_ONSET_WITH_SEVERE_DEPTH_ATTENUATION`. The weak downstream response is compatible with a propagation-depth limitation inside the frozen MoscaQuant computational model. The result does not establish a universal MaleCNS biological limit and does not authorize retuning MQ-3.2.  
 **Lore:** MORTY sent twelve guys out with the same order. Nine made it through the first checkpoint. By the second, one exhausted intern was carrying a photocopy of a photocopy while the crew played telephone with the signal. The envelope technically arrived, but there was almost nothing left inside. Placeholder McDoctorate checked the books twice. Senator Armstrong did not turn up the volume. *(SCP-style lore rank: KETER.)*
 
+### Propagation-depth synthesis — MQ-3 + SQ-04 + MQ-3.PD
+This is a retrospective synthesis of existing experiments, not a new result.
+
+Across three independently framed analyses, the frozen model repeatedly showed
+a severe downstream propagation bottleneck:
+
+- MQ-3 localized failure to first-hop bridge neurons that received
+  market-conditioned drive but did not cross the baseline spike threshold;
+- SQ-04 showed that scientifically permitted global threshold and membrane
+  time-constant changes strongly altered relay activity but did not produce
+  wider-network spikes under the tested variants;
+- MQ-3.PD quantified strongly non-uniform depth attenuation, with integrated
+  positive voltage falling from `14.463509513629074` at hop 0 to
+  `0.20703680060515714` at hop 1 and `1.538830129255153e-05` at hop 2.
+  The hop-1/hop-0 retention is approximately `1.43%`, while hop-2/hop-1 is
+  approximately `0.00743%`, so the observed collapse is not well described as
+  one constant attenuation fraction repeated at every hop.
+
+**Jointly supported constraint:** within the frozen MoscaQuant computational
+model and the tested parameter ranges, the propagation ceiling is more specific
+than a simple global-gain shortage or constant-fraction per-hop attenuation.
+
+**Not yet established:** the experiments do not identify threshold crossing,
+convergent coincidence, temporal synchrony, membrane integration, or another
+mechanism as the unique cause. They also do not establish a universal
+MaleCNS biological propagation limit.
+
+**Prospective follow-up boundary:** a mechanistic test of the hop-1 -> hop-2
+collapse should be separately frozen before execution and should distinguish,
+at minimum, failure of presynaptic spike generation, insufficient convergent
+coincidence, and temporal dispersion. It should not retune MQ-3.2 in place.
+
 ## Scientific lessons to keep
 
 - Preregistration beat vibes.
