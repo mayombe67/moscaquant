@@ -158,6 +158,119 @@ DO NOT ADOPT:
 - another project's engineered motor/trading mapping;
 - financial success as evidence of biological validity.
 
+## Adjacent implementation watch — 2026-09-21
+
+### Digital Fly
+
+Reference: https://github.com/freewangfei/digitalfly
+
+Project-reported relevance:
+
+- reports self-sustaining activity when applying a literature-scale unitary EPSP
+  in its own MaleCNS/LIF implementation;
+- reports a lower calibrated non-self-sustaining operating point;
+- reports reliable transmission for roughly one synaptic hop while longer
+  example routes fail to propagate.
+
+MoscaQuant use:
+
+- motivates the frozen-model propagation-depth diagnostic;
+- does **not** authorize importing the project's gain;
+- does **not** establish a general MaleCNS propagation limit.
+
+### fruit-fly-brain-research
+
+Reference: https://github.com/AbijahKaj/fruit-fly-brain-research
+
+Project-reported relevance:
+
+- large MaleCNS visual-circuit implementation;
+- reports loss of direction selectivity under an initial transferred
+  parameterization;
+- reports restored direction selectivity after fitting type-specific temporal
+  and type-pair parameters;
+- reports persistent weakness in a downstream HS-to-posterior-slope-to-DNg02
+  path despite successful upstream motion computation.
+
+MoscaQuant use:
+
+- motivates a temporal-dynamics **shadow benchmark** only;
+- parameters are not adopted into the frozen MoscaQuant model.
+
+### FlyTris
+
+Reference: https://www.thelearningfly.com/projects/flytris/
+
+Project-reported relevance:
+
+- dopamine-gated, compartment-specific plasticity;
+- reports a control in which the behavioral improvement disappears when the
+  modeled mushroom-body contribution is silenced while the surrounding policy
+  remains intact.
+
+MoscaQuant use:
+
+- motivates matched plasticity-null and reinforcement-timing-shuffled twins for
+  MQ-12;
+- the learning law itself is not imported.
+
+### flybrain-snake
+
+Reference: https://github.com/charbelkassab/flybrain-snake
+
+Project-reported relevance:
+
+- compares real MaleCNS wiring with scrambled wiring under matched task/readout
+  conditions;
+- reports large real-vs-scrambled separation;
+- reports fewer DNs retaining sensory information after scrambling.
+
+MoscaQuant use:
+
+- motivates the sharpened four-arm topology-specificity benchmark;
+- does not establish that topology must matter for MoscaQuant.
+
+### fly-trader
+
+Reference: https://github.com/bryceweiner/fly-trader
+
+Project-reported relevance:
+
+- uses a conventional learned model whose predictions are then imitated by a
+  FlyWire-derived substrate;
+- demonstrates useful held-out evaluation and live-execution discipline.
+
+MoscaQuant use:
+
+- architecture is **not adopted**;
+- reinforces the requirement for simple non-connectome performance baselines
+  under identical market conditions.
+
+### FutureBit HashFly
+
+Reference status: adjacent demonstration / no adoption.
+
+Project-reported relevance:
+
+- uses a small MaleCNS-derived photoreceptor subset for simplified SHA-256 work.
+
+MoscaQuant use:
+
+- no current neural-dynamics, topology-validation, or control method is adopted;
+- retained only as an adjacent-project watch item.
+
+### Adjacent-project citation boundary
+
+For every project above:
+
+- write "the project reports..." unless MoscaQuant independently reproduces the
+  result;
+- do not convert project-reported measurements into MaleCNS-wide facts;
+- do not import parameters into frozen experiments without a separately approved
+  benchmark or new protocol;
+- preserve negative and conflicting results.
+
+
 ## MaleCNS / FlyWire comparative connectomics — MQ-002 // LILITH
 
 MQ-002 // LILITH is a provisional comparative biological control built from

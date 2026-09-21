@@ -775,6 +775,33 @@ Permit tiny controlled real-money transactions through WARDEN-01.
 Enable experimental plasticity and persistent aversive learning while
 preserving controls.
 
+### Required plasticity-null twins
+
+When MQ-12 enables result-bearing plasticity, every claimed improvement must
+include matched controls capable of separating modeled learning from wrapper,
+Oracle, or scheduling artifacts.
+
+Required control family:
+
+1. **ACTIVE PLASTICITY** — eligible synapses update under the frozen rule.
+2. **FROZEN SYNAPSES** — identical run, but eligible synapses cannot update.
+3. **REINFORCEMENT-TIMING SHUFFLED** — identical external conditions, with
+   reinforcement timing shuffled under a pre-registered procedure.
+
+Preserve across matched twins, except for the explicitly manipulated variable:
+
+- Oracle proposals;
+- random seeds;
+- market data;
+- external policy;
+- WARDEN rules;
+- decision opportunities;
+- reinforcement schedule for the non-shuffled arms.
+
+An apparent improvement that also appears in frozen or timing-shuffled controls
+must not be attributed to the modeled plasticity mechanism.
+
+
 ### Comparative Biology Sidequest — MQ-002 // LILITH / THE OTHER FLY
 
 MQ-002 // LILITH is a provisional female biological comparator, not a mainline phase and
@@ -814,6 +841,80 @@ MQ-5.6 should include, where practical:
   findings,
 - explicit distinction between software reproducibility and scientific
   robustness.
+
+### Post-MQ-3 — Propagation-Depth Diagnostic
+
+Before interpreting weak downstream DN magnitude as a biological or anatomical
+property, run a separate diagnostic against the frozen MQ-3 causal route(s).
+
+The diagnostic must:
+
+- stimulate the already frozen upstream population without changing the accepted
+  MQ-3 scientific configuration;
+- measure normalized signal / voltage magnitude, spike survival, first-onset
+  frame, active-neuron fraction, and attenuation ratio at hop 0 / 1 / 2 / 3
+  and onward to the accepted responder;
+- run first at the frozen production gain;
+- treat any gain sweep as a separate diagnostic artifact rather than a model
+  update;
+- preserve a negative result if signal collapses before the accepted responder.
+
+This diagnostic is motivated by adjacent MaleCNS implementation work reporting
+short propagation depth under its own dynamics. That external result is a
+research prompt, not evidence about MoscaQuant and not authority to import its
+gain.
+
+Canonical external-reference provenance is maintained in
+`docs/references/upstream.md`.
+
+### Post-MQ-5 — Topology-Specificity Benchmark
+
+The existing null-model requirement is sharpened into a pre-registered
+four-arm topology-specificity benchmark before any strong claim that biological
+topology itself explains an effect:
+
+A. original MaleCNS topology;
+B. degree-preserving shuffled topology;
+C. degree + transmitter/sign-preserving shuffled topology;
+D. original topology with the accepted MQ-3 causal route lesioned.
+
+Where applicable, the arms must preserve the frozen stimulus, dynamics,
+transmitter signs, synapse-count distribution, random seeds, responder
+definitions, and measurement windows.
+
+Primary measurements are:
+
+- responder identity;
+- first-onset frame;
+- responder-voltage fingerprint;
+- stimulus-to-DN information separation;
+- causal-path survival.
+
+Profitability is not a topology-specificity metric.
+
+If A survives while B/C collapse and D specifically removes the response, the
+supported interpretation is anatomical specificity plus causal necessity
+within the frozen MoscaQuant model. If B/C reproduce A, that negative result is
+retained and reported.
+
+This benchmark extends, rather than replaces, the existing MQ-2.1 shuffled
+topology record and the broader null-model requirements below.
+
+### Post-MQ-3 — Temporal-Dynamics Shadow Benchmark
+
+After the accepted frozen causal line is preserved, one shadow benchmark may
+test whether independently sourced cell-type-specific temporal parameters
+materially change transmission through a reduced responder circuit.
+
+The shadow benchmark must:
+
+- remain separate from the accepted MQ-3 runtime;
+- compare route identity, responder ordering, signal timing, and propagation;
+- avoid optimizing trading performance;
+- avoid overwriting or silently retuning the frozen model.
+
+A large transmission change with stable route identity is interpreted as
+dynamics-model sensitivity, not retroactive repair of the accepted experiment.
 
 ### Post-MQ-5 — Expanded Null Models
 
@@ -1040,6 +1141,12 @@ Before broker integration:
 8. evaluate once on a final held-out period,
 9. publish the result whether favorable, null, or negative.
 
+Connectome-specific performance attribution requires at least one simple
+non-connectome baseline evaluated on the same market data, transaction costs,
+decision opportunities, timing, and risk constraints as MQ-001. Positive P&L
+alone is not evidence that the connectome materially contributed.
+
+
 Candidate comparison baselines include:
 
 - buy-and-hold,
@@ -1188,10 +1295,10 @@ See:
 <!-- MOSCAQUANT:SITE19B:ROADMAP:BEGIN -->
 ## Current execution pointer — MQ-9 / OPEN THE PANOPTICON
 
-**Phase:** SITE-19B implementation  
-**Status:** IN PROGRESS  
-**Validation checkpoint:** 554 tests passing  
-**Prospective public launch / MQ-001 birthday:** October 30, 2026  
+**Phase:** SITE-19B implementation
+**Status:** IN PROGRESS
+**Validation checkpoint:** 554 tests passing
+**Prospective public launch / MQ-001 birthday:** October 30, 2026
 **Rollout:** public beta before launch; countdown transitions into launch-day state.
 
 ### SITE-19B foundation — COMPLETE

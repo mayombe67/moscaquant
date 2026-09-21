@@ -29,12 +29,46 @@ The answer became more scientifically interesting than the premise. Across MQ-2.
 
 ## Narrative lexicon
 
-The retrospective may use **THE FAMILY MODEL** as one of MoscaQuant's recurring
-presentation vocabularies.
+The retrospective may use several recurring MoscaQuant presentation
+vocabularies. The vocabulary is broader than **THE FAMILY MODEL** and should
+prefer the project's own cast when a named actor is responsible for the
+narrative action.
 
-Family Model terms translate evidence-backed network or institutional structure
-into organized-crime organizational shorthand. They do not alter the scientific
-record.
+### Cast
+
+- **MQ-001 / MORTY** — primary experimental organism, Employee #0001, and the
+  subject whose accepted telemetry and experiment history drive the retrospective.
+- **MQ-002 / LILITH / THE OTHER FLY** — independently derived provisional
+  biological comparator. She is not a shuffled copy of MORTY and does not replace
+  SHUFFLED MOSCA.
+- **ORACLE-01 / GLaDOS** — proposal, interpretation, and D6 / intervention
+  presentation persona. GLaDOS may propose or dramatize; she does not possess
+  WARDEN authority.
+- **WARDEN-01 / Senator Armstrong** — independent containment and financial
+  authority. If the story is about authorization, denial, limits, or containment,
+  Armstrong is the readable narrative actor.
+- **SCIENCE-01 / Placeholder McDoctorate** — skeptical, non-authoritative
+  scientific-review persona. McDoctorate may question claims, demand controls,
+  and inspect receipts; the persona cannot rewrite evidence.
+- **HAHN** — Human Resources / corporate-culture persona. HAHN owns personnel
+  framing, reviews, PIPs, commendations, promotions, and the corporate dress-code
+  joke; HAHN has no scientific, Oracle, WARDEN, or broker authority.
+- **OVERWATCH** — telemetry and observability surface. OVERWATCH records and
+  exposes state; it is not a character with experimental authority.
+- **PANOPTICON / SITE-19B** — public visualization / containment-site
+  presentation. It may interpret evidence visually but may not manufacture it.
+- **CELL-67** — MORTY's primary contained visual environment and trading-desk
+  presentation.
+- **FLYSWATTER** — reserved future system / project designation. Do not assign
+  capabilities before its own canon exists.
+
+First mention should use the canonical identifier when ambiguity matters.
+Subsequent prose may use the callsign for readability.
+
+### The Family Model
+
+**THE FAMILY MODEL** remains an approved organizational metaphor for
+evidence-backed network or institutional structure. It is not the entire cast.
 
 Examples:
 
@@ -44,6 +78,20 @@ Examples:
   have actually been satisfied;
 - a matched-control comparison may be called a **SIT-DOWN**;
 - experiment records remain the **BOOKS** or **RECEIPTS**.
+
+Family language should describe the structure of the racket. Named cast members
+should describe who did, observed, proposed, blocked, reviewed, or survived
+something.
+
+Narrative authority remains downstream of system authority:
+
+- GLaDOS proposes or interprets;
+- Senator Armstrong authorizes or denies;
+- Placeholder McDoctorate reviews;
+- HAHN administers personnel theater;
+- MORTY and LILITH are experimental subjects;
+- OVERWATCH records;
+- PANOPTICON presents.
 
 Retrospective rule remains unchanged: **the comedy is downstream of the
 evidence.**
