@@ -1,0 +1,60 @@
+# MQ-5.ER.1 — DETOUR
+# Discovery-only trace protocol.
+# No result-bearing neural execution is authorized by this file.
+
+[experiment]
+id = "mq5-er1-detour-v1"
+codename = "DETOUR"
+parent = "mq5-er-encoding-robustness-v1"
+status = "preregistered-discovery-only"
+financial_semantics = false
+
+[parent]
+result_sha256 = "737a316a98d91b95dc1a5fe3ac25e7bf229447ae422ecd23ecf39ea8d4f6bb39"
+arm_c_classification = "RESPONSE PATTERN NOT RETAINED"
+affected_targets = [55, 92, 656, 126002, 137122]
+retained_dependency_targets = [51, 129, 317, 1273]
+
+[conditions]
+names = ["A-BASELINE", "C-BASELINE", "C-LESION13"]
+frame_count = 192
+reuse_frozen_mq5_er_runtime = true
+reuse_frozen_release_gain = true
+reuse_frozen_sensory_gain = true
+reuse_frozen_arm_c_encoder = true
+reuse_frozen_13_edge_lesion = true
+
+[trace]
+record_activity_state = true
+record_effective_synaptic_contribution = true
+record_first_encoding_divergence = true
+record_first_lesion_bypass_divergence = true
+require_dynamic_evidence = true
+static_path_strength_alone_forbidden = true
+
+[candidate_scope]
+posthoc_responder_expansion_forbidden = true
+must_map_to_affected_target = true
+must_occur_no_later_than_target_onset = true
+ranking_rule_frozen = false
+candidate_cap_frozen = false
+tie_rule_frozen = false
+
+[classification]
+allowed = [
+  "NO_CLEAR_DETOUR_CANDIDATES",
+  "DIFFUSE_DETOUR_CANDIDATES",
+  "FOCUSED_DETOUR_CANDIDATES",
+]
+thresholds_frozen = false
+causal_claims_authorized = false
+
+[confirmation]
+required_followup = "mq5-er2-roadblock"
+same_analysis_may_confirm_itself = false
+
+[execution]
+result_execution_enabled = false
+full_connectome_result_trace_enabled = false
+synthetic_tests_allowed = true
+non_result_benchmarking_allowed = true
