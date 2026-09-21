@@ -5,7 +5,7 @@ parent_experiment = "mq5-er3-retour-v1"
 parent_result_sha256 = "90d8198a1c218ad24ef29c2c70b4b7a88fd8b24804516d2fd8f20903b847ff3e"
 financial_semantics = "NOT ASSIGNED"
 frames = 192
-result_execution_enabled = false
+result_execution_enabled = true
 
 affected_targets = [55, 92, 656, 126002, 137122]
 retained_dependency_comparisons = [51, 129, 317, 1273]
