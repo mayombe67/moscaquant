@@ -171,7 +171,48 @@ Mitigation direction:
 
 ## CONF-006 — Null-model diversity is incomplete
 
-Status: `OPEN`
+**Status: OPEN — SUBSTANTIALLY MITIGATED BY MQ-5.TS**
+
+MQ-5.TS materially strengthens the topology-control record beyond the earlier
+single shuffled-connectome family.
+
+The completed benchmark compared Arm A against:
+
+- SHUFFLED MOSCA v2 across `20 / 20` preregistered Arm B seeds; and
+- a strict matched-topology Arm C null across `20 / 20` preregistered seeds.
+
+Arm C preserved exact per-neuron directed degree, transmitter-sign structure,
+the protected retinal interface, postsynaptic signed-weight structure, incoming
+absolute normalization, edge count, duplicate exclusion, and no-new-self-edge
+semantics.
+
+Observed exact Arm-A response-pattern reproductions:
+
+- Arm B: `0 / 20`;
+- Arm C: `0 / 20`.
+
+Preregistered classification:
+
+`TOPOLOGY-SPECIFIC RESPONSE PATTERN SUPPORTED`
+
+This substantially mitigates the concern that topology-specific conclusions
+depend on one weak or overly destructive randomization.
+
+CONF-006 remains open because MQ-5.TS does not exhaust every scientifically
+reasonable null family. Additional cell-class-, spatial-, motif-, or other
+biologically constrained nulls may still be informative if separately
+justified and preregistered.
+
+The accepted MQ-5.TS result must not be generalized into a claim that every
+alternative topology family has been excluded.
+
+Evidence:
+
+- `docs/experiments/mq5-ts-topology-specificity-protocol.md`
+- `docs/experiments/mq5-ts-topology-specificity-results.md`
+- artifact SHA-256: `903bff56fba99580b93db2a875f4c1996e3976a018bb26d306ef61baf73b2811`
+
+
 
 Topology-related conclusions should not depend on only one randomized
 control family.

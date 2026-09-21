@@ -3250,3 +3250,49 @@ Panopticon can be absurd.
 
 The underlying evidence cannot be.
 <!-- MOSCAQUANT:SITE19B:CHARTER:END -->
+
+
+## MQ-5.TS Topology-Specificity Closure
+
+MQ-5.TS completed the post-MQ-5 topology-specificity benchmark under the
+frozen MoscaQuant computational model.
+
+Final randomized result:
+
+- Arm B / SHUFFLED MOSCA v2: `20 / 20` completed;
+- Arm B exact Arm-A response-pattern reproductions: `0 / 20`;
+- Arm C / strict matched-topology null: `20 / 20` completed;
+- Arm C exact Arm-A response-pattern reproductions: `0 / 20`;
+- preregistered classification:
+  `TOPOLOGY-SPECIFIC RESPONSE PATTERN SUPPORTED`.
+
+Arm C preserved exact per-neuron directed indegree and outdegree,
+transmitter-sign structure, retinal-origin interface, postsynaptic signed-weight
+structure, incoming absolute normalization, total edge count, duplicate-edge
+exclusion, and no-new-self-edge semantics.
+
+Accepted interpretation:
+
+> Within the frozen MoscaQuant simulation and the tested null families, the
+> accepted response pattern depends on more than the graph statistics
+> preserved by the strict matched null. The specific arrangement of directed
+> MaleCNS connections contributes materially to the response pattern.
+
+This does not establish unique MaleCNS optimality, exclusion of every
+scientifically reasonable null family, biological causal equivalence, general
+encoding independence, market prediction, trading usefulness, or profitability.
+
+The broader null-model diversity limitation remains open but is
+**substantially mitigated** by MQ-5.TS.
+
+Result artifact SHA-256:
+
+`903bff56fba99580b93db2a875f4c1996e3976a018bb26d306ef61baf73b2811`
+
+Scientific closeout commit:
+
+`48536a7`
+
+Financial semantics remain:
+
+**NOT ASSIGNED**

@@ -1358,3 +1358,37 @@ New major scientific claims still require appropriate frozen protocols, comparat
 replication, causal perturbation or explicitly exploratory framing. SITE-19B presentation work
 does not relax that requirement.
 <!-- MOSCAQUANT:SITE19B:ROADMAP:END -->
+
+
+## MQ-5.TS — Topology Specificity: COMPLETE
+
+The preregistered topology-specificity benchmark is complete.
+
+- Arm B: `20 / 20` completed, `0 / 20` exact Arm-A reproductions.
+- Arm C: `20 / 20` completed, `0 / 20` exact Arm-A reproductions.
+
+Frozen classification:
+
+**TOPOLOGY-SPECIFIC RESPONSE PATTERN SUPPORTED**
+
+MQ-5.TS closes the specific roadmap requirement to challenge the accepted
+response with both SHUFFLED MOSCA v2 and a materially stricter matched-topology
+null.
+
+What remains open includes separately justified cell-class-constrained,
+spatially constrained, motif-preserving, or other biological null families not
+already preserved by Arm C.
+
+Future nulls must be separately preregistered and may refine, but may not
+retroactively rewrite, the accepted MQ-5.TS result.
+
+Encoding robustness remains separate: topology specificity under one frozen
+sensory encoding is not general encoding independence.
+
+Artifact SHA-256:
+
+`903bff56fba99580b93db2a875f4c1996e3976a018bb26d306ef61baf73b2811`
+
+Financial semantics:
+
+**NOT ASSIGNED**
