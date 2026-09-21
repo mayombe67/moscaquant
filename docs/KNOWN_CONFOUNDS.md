@@ -177,6 +177,41 @@ Result artifact SHA-256:
 
 `737a316a98d91b95dc1a5fe3ac25e7bf229447ae422ecd23ecf39ea8d4f6bb39`
 
+### MQ-5.ER.1 update — DETOUR route discovery
+
+MQ-5.ER.1 followed the Arm-C no-jitter result with a frozen three-hop discovery
+search over the five targets whose original 13-edge bundle dependence was no
+longer expressed.
+
+Frozen result:
+
+- classification: `FOCUSED_DETOUR_CANDIDATES`;
+- recurring directed edge: `116680 -> 12024`;
+- affected-target recurrence: `92`, `656`, `137122`;
+- retained-dependency comparison recurrence: `1273`.
+
+This narrows the open mechanism question but does not eliminate CONF-004.
+Because the same focused edge also appears in retained comparison target
+`1273`, DETOUR does not establish that the candidate route is specific to the
+encoding-induced bypass phenomenon.
+
+**CONF-004 remains OPEN — substantially characterized, not eliminated.**
+
+Still open include:
+
+- prospective causal testing of the focused DETOUR edge;
+- affected-target specificity versus broader shared-route use;
+- sensory-gain variation;
+- broader representation families.
+
+Required confirmatory follow-up:
+
+`MQ-5.ER.2 — ROADBLOCK`
+
+DETOUR result SHA-256:
+
+`4b06c0181514f01715319dfacfa91569202067e583db7ef9fda5f35818eb4611`
+
 ## CONF-005 — Limited causally validated descending-neuron subset
 
 Status: `OPEN`

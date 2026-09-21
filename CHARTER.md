@@ -3315,3 +3315,41 @@ the accepted causal organization.
 
 This is a computational-model result and does not assign biological,
 intentional, financial, or trading semantics.
+
+## MQ-5.ER.1 DETOUR Discovery Closure
+
+MQ-5.ER.1 completed the frozen three-hop discovery protocol with classification:
+
+`FOCUSED_DETOUR_CANDIDATES`
+
+The exact directed edge `116680 -> 12024` recurred in the top-five candidate
+lists for affected targets `92`, `656`, and `137122`.
+
+The same edge also appeared for retained-dependency comparison target `1273`.
+
+Accepted interpretation:
+
+> Within the frozen MoscaQuant computational model and the preregistered DETOUR
+> discovery rule, one directed edge recurred across at least three affected
+> targets strongly enough to qualify as a focused detour candidate.
+
+Claim boundary:
+
+- DETOUR does not establish that `116680 -> 12024` is necessary;
+- DETOUR does not establish that it is sufficient;
+- DETOUR does not establish that it is specific to the five affected targets;
+- DETOUR does not establish biological, intentional, financial, trading, or
+  predictive meaning;
+- causal claims remain unauthorized until prospective intervention.
+
+Required follow-up:
+
+`MQ-5.ER.2 — ROADBLOCK`
+
+Authoritative DETOUR result SHA-256:
+
+`4b06c0181514f01715319dfacfa91569202067e583db7ef9fda5f35818eb4611`
+
+Financial semantics remain:
+
+**NOT ASSIGNED**

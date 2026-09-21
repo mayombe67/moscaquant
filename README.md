@@ -274,6 +274,7 @@ A few approved project moments:
   effect.
 - **ROUTING TABLES** — dynamic tracing and cumulative lesions reconstructed
   nearly the entire measured downstream effect.
+- **DETOUR FOUND THE SAME GUY** — the full three-hop search turned a diffuse pilot into a focused recurring edge candidate, while 1273 kept causality honest.
 
 This was supposed to be funny.
 

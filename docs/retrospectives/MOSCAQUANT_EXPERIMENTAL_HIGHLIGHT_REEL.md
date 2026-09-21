@@ -549,3 +549,18 @@ SHA-256:
 > approved chain of command.
 
 Financial semantics: **NOT ASSIGNED**.
+
+### 32 — DETOUR Found the Same Guy
+**Reference:** MQ-5.ER.1 DETOUR; frozen three-hop discovery result.  
+**Importance:** BOSS  
+The two-hop engineering pilot produced `DIFFUSE_DETOUR_CANDIDATES`, but the
+authoritative three-hop search produced `FOCUSED_DETOUR_CANDIDATES`. Exact
+directed edge `116680 -> 12024` recurred for affected targets `92`, `656`, and
+`137122`, satisfying the preregistered focused-recurrence rule. Retained
+comparison target `1273` also carried the same edge, so specificity and
+causality remain unresolved.  
+**Science:** the result demonstrates why the reduced pilot could not substitute
+for the frozen full search and yields a prospectively testable ROADBLOCK
+candidate without converting discovery into causality.  
+**Lore:** Federal agents finally got three affected witnesses to name the same
+guy. Then 1273 walked in and said, "Yeah, I know him too."

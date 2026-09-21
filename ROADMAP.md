@@ -1407,3 +1407,47 @@ Encoding independence is therefore **not** claimed.
 Result SHA-256:
 
 `737a316a98d91b95dc1a5fe3ac25e7bf229447ae422ecd23ecf39ea8d4f6bb39`
+
+## MQ-5.ER.1 — DETOUR: COMPLETE
+
+MQ-5.ER.1 completed the preregistered three-hop discovery search motivated by
+the five Arm-C targets whose original 13-edge bundle dependence disappeared
+when entropy-dependent temporal jitter was removed.
+
+Frozen classification:
+
+**`FOCUSED_DETOUR_CANDIDATES`**
+
+Focused recurring directed edge:
+
+`116680 -> 12024`
+
+The edge appeared in the top-five candidate lists for affected targets `92`,
+`656`, and `137122`, satisfying the frozen focused-recurrence rule.
+
+Important comparison boundary:
+
+- retained-dependency target `1273` also contained `116680 -> 12024` in its
+  top-five list;
+- DETOUR therefore does **not** establish affected-target specificity;
+- DETOUR remains discovery-only and does not establish necessity,
+  sufficiency, or causality.
+
+Authoritative result SHA-256:
+
+`4b06c0181514f01715319dfacfa91569202067e583db7ef9fda5f35818eb4611`
+
+Financial semantics:
+
+**NOT ASSIGNED**
+
+### Next: MQ-5.ER.2 — ROADBLOCK
+
+ROADBLOCK is the required prospective confirmatory follow-up.
+
+It must freeze its intervention design before inspecting confirmatory outcomes
+and test the DETOUR-focused edge against the affected targets and retained
+comparison target `1273`.
+
+The two-hop laptop pilots are engineering records only and may not supply
+ROADBLOCK candidates.

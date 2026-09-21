@@ -38,9 +38,10 @@ It answers a different question from the Highlight Reel:
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | MQ-5.TS | Topology specificity | Confirmatory | COMPLETE | Yes | Specific wiring arrangement supported under frozen tested nulls | `mq5-ts-topology-specificity-v1.json` / `903bff56fba99580b93db2a875f4c1996e3976a018bb26d306ef61baf73b2811` | closeout `48536a7` |
 | MQ-5.ER | Encoding robustness | Confirmatory | COMPLETE | Yes | Selective encoding robustness; Arm C altered causal dependency | `mq5-er-encoding-robustness-v1.json` / `737a316a98d91b95dc1a5fe3ac25e7bf229447ae422ecd23ecf39ea8d4f6bb39` | historical closeout commit: not recorded here yet |
-| MQ-5.ER.1 | DETOUR | Discovery | PREREGISTERED | Yes when executed under frozen 3-hop protocol | Full result deferred pending suitable execution environment | none | streaming runner checkpoint `6efa04f24b0db1120975829756d25f5189d716a0` |
+| MQ-5.ER.1 | DETOUR | Discovery | COMPLETE | Yes | `FOCUSED_DETOUR_CANDIDATES`; focused edge `116680 -> 12024`; ROADBLOCK required | `mq5-er1-detour-v1.json` / `4b06c0181514f01715319dfacfa91569202067e583db7ef9fda5f35818eb4611` | closeout `faa29a6` |
 | MQ-5.ER.1-VR1 | DETOUR known-parent replay | Verification | COMPLETE | No | Arm A/C stimulus hashes and onset vectors exactly reproduced; no candidate scoring | none | `6efa04f24b0db1120975829756d25f5189d716a0` |
-| MQ-5.ER.1-LP | DETOUR laptop pilot | Engineering pilot | PREREGISTERED | No | Two-hop feasibility run only; cannot supply ROADBLOCK candidates | pilot artifact not yet produced | pending |
+| MQ-5.ER.1-LP | DETOUR laptop pilot R1 | Engineering pilot | COMPLETE | No | `DIFFUSE_DETOUR_CANDIDATES`; two-hop non-authoritative pilot; cannot supply ROADBLOCK candidates | `mq5-er1-detour-laptop-pilot-v1.json` / `a1f1e6f5cffc707253479298dc8a44cc902b005b23f2d8805304ce84b22cad0f` | result HEAD `68e5067` |
+| MQ-5.ER.1-LP-R2 | DETOUR laptop pilot R2 | Engineering pilot | COMPLETE | No | Hardened-scorer replication; reproduced R1 classification/candidate ordering | `mq5-er1-detour-laptop-pilot-r2-v1.json` / `fe854e49f85ec8f4e54828bc96413d7333003d0b64a294e815efe6804e143aaa` | result HEAD `fa2af08` |
 
 ## MQ-5.ER.1-VR1 verification details
 
