@@ -1,6 +1,6 @@
 # MQ-5.ER.2 — THE RACKET matched-control selection rule
 
-**Status:** FROZEN RULE — CONTROL NOT YET SELECTED
+**Status:** V2 FROZEN RULE — CONTROL NOT YET SELECTED
 **Result-bearing RACKET execution:** disabled
 
 ## Purpose
@@ -35,15 +35,41 @@ for targets:
 
 `(92, 656, 137122, 1273)`
 
-## Deterministic ranking
+## V1 engineering finding and pre-outcome correction
 
-Among eligible edges, choose lexicographically by:
+The first frozen selector rule ranked absolute weight distance before degree
+similarity. Its first selected edge was `3671 -> 27236`.
 
-1. minimum absolute difference in `log10(abs(weight))`;
-2. minimum absolute difference in `log1p(presynaptic outdegree)`;
-3. minimum absolute difference in `log1p(postsynaptic indegree)`;
-4. lower postsynaptic neuron ID;
-5. lower presynaptic neuron ID.
+That edge matched the focused edge almost exactly in weight but had a
+presynaptic outdegree of `282` versus `4` for the focused edge, and a
+postsynaptic indegree of `104` versus `33`.
+
+No THE RACKET neural outcome had been generated or inspected.
+
+The V1 selected edge was therefore rejected as an insufficiently balanced
+topology match, and the selector objective was corrected prospectively before
+confirmatory execution.
+
+## Deterministic V2 ranking
+
+For every eligible edge, compute three log-scale structural distances:
+
+- absolute difference in `log10(abs(weight))`;
+- absolute difference in `log1p(presynaptic outdegree)`;
+- absolute difference in `log1p(postsynaptic indegree)`.
+
+Choose lexicographically by:
+
+1. minimum **maximum** of the three log-scale distances;
+2. minimum **sum** of the three log-scale distances;
+3. minimum absolute-weight distance;
+4. minimum presynaptic-outdegree distance;
+5. minimum postsynaptic-indegree distance;
+6. lower postsynaptic neuron ID;
+7. lower presynaptic neuron ID.
+
+This prevents an almost-perfect match on one covariate from dominating an
+extreme mismatch on another.
 
 No neural activity, onset, voltage, responder fingerprint, RACKET arm, or
 RACKET result may enter this ranking.

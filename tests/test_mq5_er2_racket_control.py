@@ -12,21 +12,37 @@ def test_control_selector_contract_is_frozen():
     assert MAX_HOPS == 3
 
 
-def test_structural_match_distance_prefers_closer_weight_first():
-    exact = _score_match(
-        candidate_weight=0.01,
-        focused_weight=0.01,
-        candidate_pre_out=10,
-        focused_pre_out=10,
-        candidate_post_in=20,
-        focused_post_in=20,
-    )
-    farther = _score_match(
+def test_balanced_distance_penalizes_single_large_degree_mismatch():
+    balanced = _score_match(
         candidate_weight=0.02,
         focused_weight=0.01,
-        candidate_pre_out=10,
+        candidate_pre_out=12,
         focused_pre_out=10,
-        candidate_post_in=20,
+        candidate_post_in=22,
         focused_post_in=20,
     )
-    assert exact < farther
+    extreme_degree = _score_match(
+        candidate_weight=0.010001,
+        focused_weight=0.01,
+        candidate_pre_out=280,
+        focused_pre_out=10,
+        candidate_post_in=100,
+        focused_post_in=20,
+    )
+
+    balanced_key = (
+        balanced["max_distance"],
+        balanced["sum_distance"],
+        balanced["log10_abs_weight"],
+        balanced["log1p_pre_outdegree"],
+        balanced["log1p_post_indegree"],
+    )
+    extreme_key = (
+        extreme_degree["max_distance"],
+        extreme_degree["sum_distance"],
+        extreme_degree["log10_abs_weight"],
+        extreme_degree["log1p_pre_outdegree"],
+        extreme_degree["log1p_post_indegree"],
+    )
+
+    assert balanced_key < extreme_key

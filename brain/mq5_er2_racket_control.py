@@ -87,7 +87,7 @@ def _score_match(
     focused_pre_out: int,
     candidate_post_in: int,
     focused_post_in: int,
-) -> tuple[float, float, float]:
+) -> dict[str, float]:
     eps = 1e-30
     weight_distance = abs(
         math.log10(abs(candidate_weight) + eps) - math.log10(abs(focused_weight) + eps)
@@ -98,7 +98,16 @@ def _score_match(
     post_in_distance = abs(
         math.log1p(candidate_post_in) - math.log1p(focused_post_in)
     )
-    return (weight_distance, pre_out_distance, post_in_distance)
+
+    distances = (weight_distance, pre_out_distance, post_in_distance)
+
+    return {
+        "log10_abs_weight": weight_distance,
+        "log1p_pre_outdegree": pre_out_distance,
+        "log1p_post_indegree": post_in_distance,
+        "max_distance": max(distances),
+        "sum_distance": sum(distances),
+    }
 
 
 def select_control() -> dict:
@@ -172,12 +181,20 @@ def select_control() -> dict:
                 focused_post_in=focused_post_in,
             )
 
-            # Lexicographic structural match:
-            # 1) nearest log absolute weight
-            # 2) nearest log presynaptic outdegree
-            # 3) nearest log postsynaptic indegree
+            # Balanced lexicographic structural match:
+            # 1) minimize the worst log-scale mismatch across all 3 covariates
+            # 2) minimize total log-scale mismatch
+            # 3) then prefer closer weight, pre-outdegree, post-indegree
             # 4) deterministic edge-id tie break
-            key = (*distances, post, pre)
+            key = (
+                distances["max_distance"],
+                distances["sum_distance"],
+                distances["log10_abs_weight"],
+                distances["log1p_pre_outdegree"],
+                distances["log1p_post_indegree"],
+                post,
+                pre,
+            )
 
             if best is None or key < best["key"]:
                 best = {
@@ -188,16 +205,14 @@ def select_control() -> dict:
                     "signature": signature,
                     "pre_outdegree": int(outdegree[pre]),
                     "post_indegree": int(indegree[post]),
-                    "weight_distance": distances[0],
-                    "pre_outdegree_distance": distances[1],
-                    "post_indegree_distance": distances[2],
+                    "distances": distances,
                 }
 
     if best is None:
         raise RuntimeError("no eligible topology-matched control edge found")
 
     return {
-        "selector": "mq5-er2-the-racket-control-v1",
+        "selector": "mq5-er2-the-racket-control-v2",
         "kind": "PRE-OUTCOME STRUCTURAL CONTROL SELECTION",
         "confirmatory_outcomes_used": False,
         "focused_edge": {
@@ -217,17 +232,15 @@ def select_control() -> dict:
             "pre_outdegree": best["pre_outdegree"],
             "post_indegree": best["post_indegree"],
         },
-        "matching_distances": {
-            "log10_abs_weight": best["weight_distance"],
-            "log1p_pre_outdegree": best["pre_outdegree_distance"],
-            "log1p_post_indegree": best["post_indegree_distance"],
-        },
+        "matching_distances": dict(best["distances"]),
         "exclusions": {
             "focused_edge": True,
             "all_detour_top5_edges": True,
             "opposite_sign_edges": True,
         },
         "tie_break": [
+            "minimum maximum log-scale covariate distance",
+            "minimum summed log-scale covariate distance",
             "minimum log10 absolute-weight distance",
             "minimum log1p presynaptic-outdegree distance",
             "minimum log1p postsynaptic-indegree distance",

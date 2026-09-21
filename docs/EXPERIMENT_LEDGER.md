@@ -189,3 +189,19 @@ THE RACKET is the prospective confirmatory follow-up to DETOUR.
 **Lore:** DETOUR found the guy everybody named. THE RACKET finds out whether
 he actually runs the operation — or whether somebody put him out front to take
 the heat.
+
+## MQ-5.ER.2 control-selector V1 correction
+
+The first pre-outcome matched-control selector chose edge `3671 -> 27236`.
+Although its weight nearly matched `116680 -> 12024`, its structural degrees
+were poorly balanced (`pre outdegree 282 vs 4`; `post indegree 104 vs 33`).
+
+No THE RACKET neural outcome had been generated or inspected.
+
+The V1 control candidate was rejected before confirmatory execution. The V2
+selector now minimizes the worst log-scale mismatch across weight,
+presynaptic outdegree, and postsynaptic indegree before minimizing total
+distance.
+
+**Lore:** We brought in a guy who looked right on the books, then discovered he
+knew half the city. He was released before questioning.
