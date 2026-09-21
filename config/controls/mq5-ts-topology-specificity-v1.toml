@@ -1,0 +1,97 @@
+[experiment]
+id = "mq5-ts-topology-specificity-v1"
+status = "pre-registered"
+condition = "A"
+release_gain = 0.9981738484618123
+frames = 192
+financial_semantics = false
+
+[arms]
+A = "original_malecns"
+B = "shuffled_mosca_v2"
+C = "strict_degree_sign_matched_edge_swap"
+D = "accepted_mq3_2_causal_route_lesion"
+
+[companion_biological_comparator]
+id = "mq5-ts-bio-other-deck-v1"
+subject = "MQ-002"
+callsign = "LILITH"
+required_follow_on = true
+included_in_primary_topology_classification = false
+official_crossmatch_only = true
+forbid_inferred_anatomy = true
+forbid_manufactured_optic_lobe = true
+forbid_manufactured_vnc = true
+require_route_mapping_audit = true
+fully_crossmatched_only_for_dynamic_comparison = true
+financial_semantics = false
+
+[ensemble.B]
+seed_start = 20262000
+seed_count = 20
+no_seed_selection_after_results = true
+no_early_stopping = true
+
+[ensemble.C]
+seed_start = 20263000
+seed_count = 20
+no_seed_selection_after_results = true
+no_early_stopping = true
+
+[arm_c]
+preserve_retinal_origin_edges_exactly = true
+preserve_exact_indegree_per_neuron = true
+preserve_exact_outdegree_per_neuron = true
+preserve_transmitter_sign = true
+preserve_incoming_sign_counts_per_target = true
+preserve_signed_row_weight_multiset = true
+preserve_incoming_absolute_normalization = true
+preserve_edge_count = true
+forbid_new_duplicate_edges = true
+forbid_new_self_edges = true
+swap_method = "same-source-sign-directed-double-edge-swap"
+weight_assignment = "deterministic-within-target-and-sign"
+accepted_swaps_per_eligible_edge = 1.0
+max_attempt_multiplier = 20
+stop_if_target_not_reached = true
+
+[classification]
+arm_c_exact_reproduction_max_for_supported = 1
+arm_c_exact_reproduction_min_for_frequent = 10
+fingerprint_normalized_l2_match_tolerance = 1e-9
+exact_reproduction_requires_all_three_matches = true
+mutual_information_determines_classification = false
+causal_path_survival_determines_classification = false
+
+[metrics]
+responder_identity = true
+first_onset_timing = true
+responder_voltage_fingerprint = true
+stimulus_dn_mutual_information = true
+causal_path_survival = true
+
+[mutual_information]
+stimulus_bins = 8
+dn_bins = 8
+stimulus_min = 0.0
+stimulus_max = 1.0
+dn_min = 0.0
+dn_max = 1.0
+lags = [0, 1, 2, 3, 4]
+
+[controls]
+same_stimulus = true
+same_runtime_dynamics = true
+same_transduction = true
+same_graded_population = true
+same_dn_consensus = true
+same_responder_universe = true
+same_measurement_window = true
+deterministic_duplicate_replay_A = true
+deterministic_duplicate_replay_D = true
+no_result_dependent_retuning = true
+no_financial_metrics = true
+
+[output]
+artifact = "mq5-ts-topology-specificity-v1.json"
+companion_biological_artifact = "mq5-ts-bio-other-deck-v1.json"
