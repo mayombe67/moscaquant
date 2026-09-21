@@ -173,3 +173,40 @@ def post_step_snapshot(
             dtype=np.float64,
         ).tolist(),
     }
+
+
+def project_traced_edges(
+    connectome,
+    traced_edges: Iterable[TracedEdge],
+) -> list[TracedEdge]:
+    """
+    Project a frozen endpoint/hop template onto a condition-specific topology.
+
+    This is required for C-LESION13: endpoints remain part of the preregistered
+    search template, but a lesioned edge must contribute exactly zero rather
+    than retaining its original baseline weight.
+    """
+    matrix = sparse.csr_matrix(connectome, copy=False)
+    matrix.sum_duplicates()
+    matrix.sort_indices()
+
+    projected = []
+
+    for edge in traced_edges:
+        observed = float(
+            matrix[
+                int(edge.postsynaptic),
+                int(edge.presynaptic),
+            ]
+        )
+
+        projected.append(
+            TracedEdge(
+                presynaptic=int(edge.presynaptic),
+                postsynaptic=int(edge.postsynaptic),
+                weight=observed,
+                hop_from_target=int(edge.hop_from_target),
+            )
+        )
+
+    return projected

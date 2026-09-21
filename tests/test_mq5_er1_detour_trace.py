@@ -123,3 +123,35 @@ def test_static_topology_inventory_does_not_rank_candidates():
     assert edges
     assert not hasattr(edges[0], "score")
     assert not hasattr(edges[0], "candidate_rank")
+
+
+def test_project_traced_edges_zeroes_lesioned_edge():
+    from brain.mq5_er1_detour_trace import (
+        build_backward_edge_cone,
+        project_traced_edges,
+    )
+
+    matrix = toy_connectome()
+    edges = build_backward_edge_cone(
+        matrix,
+        [5],
+        max_hops=1,
+    )
+
+    lesioned = matrix.copy().tolil()
+    lesioned[5, 3] = 0.0
+    lesioned = lesioned.tocsr()
+    lesioned.eliminate_zeros()
+
+    projected = project_traced_edges(
+        lesioned,
+        edges,
+    )
+
+    weights = {
+        (edge.presynaptic, edge.postsynaptic): edge.weight
+        for edge in projected
+    }
+
+    assert weights[(3, 5)] == 0.0
+    assert np.isclose(weights[(4, 5)], -0.25)

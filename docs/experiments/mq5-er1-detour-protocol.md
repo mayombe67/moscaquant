@@ -325,3 +325,86 @@ sufficiency.
 
 All promoted candidates remain hypotheses until preregistered intervention in
 MQ-5.ER.2 — ROADBLOCK.
+
+## Instrumentation amendment 3 — condition-specific topology projection
+
+The frozen candidate search uses endpoint/hop templates derived from the
+original connectome, but dynamic contribution must use the topology actually
+present in each condition.
+
+This matters for `C-LESION13`: a frozen 13-edge lesion endpoint may still lie
+inside a target's preregistered 3-hop search template, but its dynamic
+contribution in the lesioned condition must be exactly zero.
+
+Accordingly, DETOUR projects each frozen traced-edge endpoint/hop template onto
+the condition-specific connectome before recording contribution.
+
+A static inventory utility is also authorized before result execution. It may
+report only topology counts and storage estimates:
+
+- per-target edge/neuron counts;
+- per-hop edge counts;
+- union edge/neuron counts;
+- raw storage estimates.
+
+It may not instantiate the neural runtime, encode A/C outcomes, score
+candidates, or expose DETOUR classifications.
+
+This inventory is used only to choose a numerically neutral storage layout for
+the final runner.
+
+## Instrumentation amendment 4 — factorized streaming runner
+
+Static inventory showed that the preregistered 3-hop incoming cones approach
+whole-connectome scale by hop 3. DETOUR therefore uses a factorized streaming
+implementation that preserves the frozen score exactly without materializing
+per-edge time series.
+
+For an original-connectome edge with weight `w` and presynaptic effective
+activity `a_t`, the frozen score terms factor as:
+
+`L1(C-edge - A-edge) = |w| × Σ |a_C(t) - a_A(t)|`
+
+and, for the C-LESION13 topology,
+
+`L1(C-lesion edge) = |w_lesion| × Σ |a_C-lesion(t)|`
+
+through the frozen C-baseline target onset, inclusive.
+
+Therefore the runner may accumulate per-neuron activity prefixes and calculate
+edge scores only while streaming the frozen 3-hop topology. This is
+algebraically equivalent to storing each edge's entire 192-frame contribution
+series.
+
+### Scratch storage
+
+Arm-A effective activity may be written to a temporary float32 memory-mapped
+file solely so Arm-C activity can be differenced frame-by-frame without holding
+two whole activity histories in RAM.
+
+The scratch file is temporary, is not a scientific result artifact, and is
+deleted at the end of the run.
+
+### Parent replay gate
+
+Before DETOUR candidate scoring, the runner must reproduce the already-known
+parent Arm-A and Arm-C first-positive onset vectors exactly and verify the
+frozen Arm-A and Arm-C stimulus hashes.
+
+This replay gate is allowed before result authorization because it checks only
+already-observed parent facts and numerical neutrality of the instrumentation.
+It must not emit DETOUR candidate scores or classifications.
+
+### Result gate
+
+Candidate scoring and DETOUR classification remain disabled until
+`result_execution_enabled = true` is separately authorized after:
+
+- unit tests pass;
+- full regression passes;
+- parent replay verification passes;
+- the runner and this amendment are committed;
+- the working tree is clean.
+
+DETOUR remains discovery-only. ROADBLOCK remains the required confirmatory
+experiment.

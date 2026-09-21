@@ -76,3 +76,17 @@ score = "l1_c_minus_a_times_l1_c_lesion13"
 temporal_window = "frame_0_through_c_baseline_target_onset_inclusive"
 focused_min_targets_same_directed_edge = 3
 ranking = "score_desc_hop_asc_post_asc_pre_asc"
+
+[static_inventory]
+enabled = true
+neural_runtime_forbidden = true
+candidate_scoring_forbidden = true
+classification_forbidden = true
+report_topology_counts_only = true
+
+[runner]
+implementation = "factorized_streaming"
+arm_a_activity_scratch = "temporary_float32_memmap"
+parent_replay_gate_required = true
+candidate_scoring_requires_result_authorization = true
+result_artifact = "mq5-er1-detour-v1.json"
