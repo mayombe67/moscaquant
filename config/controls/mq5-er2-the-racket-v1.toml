@@ -5,7 +5,7 @@ parent_experiment = "mq5-er1-detour-v1"
 prior_placeholder_codename = "ROADBLOCK"
 financial_semantics = "NOT ASSIGNED"
 frames = 192
-result_execution_enabled = false
+result_execution_enabled = true
 
 focused_edge_pre = 116680
 focused_edge_post = 12024
