@@ -1,0 +1,18 @@
+# MoscaQuant Panopticon public render-frame endpoint
+#
+# Include/merge this inside the TLS server block that serves moscaquant.com.
+# Adjust the alias path to the deployed public-feed directory.
+#
+# This endpoint serves ONLY sanitized render-frame JSON written by
+# overwatch.public_feed.write_latest_render_frame(...).
+#
+# WARDEN, raw OVERWATCH telemetry and private runtime endpoints must not be
+# proxied through this location.
+
+location = /api/panopticon/render-frame {
+    alias /var/lib/moscaquant/panopticon/latest-render-frame.json;
+    default_type application/json;
+    add_header Cache-Control "no-store, no-cache, must-revalidate";
+    add_header X-Content-Type-Options "nosniff";
+    add_header Access-Control-Allow-Origin "https://moscaquant.com";
+}
