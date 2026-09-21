@@ -1392,3 +1392,18 @@ Artifact SHA-256:
 Financial semantics:
 
 **NOT ASSIGNED**
+
+## MQ-5.ER — Encoding Robustness: COMPLETE
+
+MQ-5.ER tested the accepted response under frozen alternative sensory
+encodings. Asset-to-retinal-territory remapping was strictly preserved across
+all eleven non-identity confirmatory mappings. Fixed cadence and removal of
+momentum-dependent motion retained the accepted causal response with altered
+expression. Removal of entropy-dependent temporal jitter retained all nine
+responders but changed bundle-level causal dependence for five targets.
+
+Encoding independence is therefore **not** claimed.
+
+Result SHA-256:
+
+`737a316a98d91b95dc1a5fe3ac25e7bf229447ae422ecd23ecf39ea8d4f6bb39`

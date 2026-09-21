@@ -454,3 +454,26 @@ No MQ-5.ER result-bearing run is authorized by this commit.
 
 The next action is implementation-level encoder inventory and feasibility
 mapping.
+
+## Final result
+
+MQ-5.ER completed under the frozen response-classification contract.
+
+- Arm A: `RESPONSE PATTERN PRESERVED`
+- Arm B: `RESPONSE RETAINED WITH ALTERED EXPRESSION`
+- Arm C: `RESPONSE PATTERN NOT RETAINED`
+- Arm D family: `ASSET-TERRITORY ROBUST ACROSS TESTED REMAPS`
+- Arm E: `RESPONSE RETAINED WITH ALTERED EXPRESSION`
+
+Arm C retained all nine frozen responders but lost frozen bundle-level causal
+expression for targets `55`, `92`, `656`, `126002`, and `137122`.
+
+All eleven non-identity Arm D confirmatory mappings were individually
+`RESPONSE PATTERN PRESERVED`.
+
+Authoritative result artifact SHA-256:
+
+`737a316a98d91b95dc1a5fe3ac25e7bf229447ae422ecd23ecf39ea8d4f6bb39`
+
+See `docs/experiments/mq5-er-encoding-robustness-results.md` for the formal
+result summary and claim boundaries.

@@ -147,6 +147,36 @@ Mitigation direction:
 
 ---
 
+### MQ-5.ER update — broader encoding robustness
+
+MQ-5.ER materially expanded CONF-004 beyond the prior normalization-only test.
+
+Frozen result:
+
+- fixed cadence: response retained with altered expression;
+- zero entropy-dependent temporal jitter: response pattern not retained;
+- all eleven balanced non-identity asset/ticker-to-retinal-territory remaps:
+  response pattern preserved;
+- no momentum-dependent temporal motion: response retained with altered
+  expression.
+
+The no-jitter arm retained all nine frozen responders but lost the accepted
+13-edge bundle-level causal effect for five targets (`55`, `92`, `656`,
+`126002`, `137122`).
+
+**CONF-004 therefore remains OPEN.** The confound is now substantially
+characterized rather than eliminated: some tested encoding choices are robust,
+while at least one tested temporal-irregularity encoding choice changes the
+accepted causal organization.
+
+Still open include sensory-gain variation, broader representation families,
+and the mechanistic identity of alternative routes recruited when
+entropy-dependent temporal jitter is removed.
+
+Result artifact SHA-256:
+
+`737a316a98d91b95dc1a5fe3ac25e7bf229447ae422ecd23ecf39ea8d4f6bb39`
+
 ## CONF-005 — Limited causally validated descending-neuron subset
 
 Status: `OPEN`

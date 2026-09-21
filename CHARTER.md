@@ -3296,3 +3296,22 @@ Scientific closeout commit:
 Financial semantics remain:
 
 **NOT ASSIGNED**
+
+## MQ-5.ER Encoding-Robustness Closure
+
+The accepted MoscaQuant response is robust to several tested sensory-encoding
+changes but is not encoding-independent.
+
+Balanced asset-to-retinal-territory reassignment did not alter the strict
+accepted response across the tested confirmatory remaps. Removing
+volatility-dependent cadence or momentum-dependent temporal motion altered
+response expression while preserving the accepted bundle-level causal
+dependency. Removing entropy-dependent temporal jitter changed that causal
+dependency for five of nine accepted responder targets.
+
+This supports a model in which some representation choices modulate expression
+while at least one tested temporal-irregularity representation participates in
+the accepted causal organization.
+
+This is a computational-model result and does not assign biological,
+intentional, financial, or trading semantics.

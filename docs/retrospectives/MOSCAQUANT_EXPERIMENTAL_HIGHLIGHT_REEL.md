@@ -96,6 +96,24 @@ Narrative authority remains downstream of system authority:
 Retrospective rule remains unchanged: **the comedy is downstream of the
 evidence.**
 
+
+## Sparse highlight-importance markers
+
+Most Highlight Reel entries intentionally carry **no importance rank**.
+Ranks are reserved for findings that need to stand out as the reel grows.
+
+The retrospective-only hierarchy is:
+
+`ASSOCIATE < SOLDIER < LIEUTENANT < UNDERBOSS < BOSS < KINGPIN`
+
+These labels indicate narrative/project prominence only. They are not evidence
+grades, confidence scores, statistical significance, effect sizes, or
+scientific classifications.
+
+This hierarchy is deliberately separate from the existing Family Model terms
+such as `MADE`, `CAPO`, `SIT-DOWN`, `TURF WAR`, and `THE COMMISSION`, which
+already have experiment-specific canonical meanings.
+
 ## Highlight reel
 
 ### 01 — The Neutral Gate That Saved Us From Ourselves
@@ -318,6 +336,7 @@ coincidence, and temporal dispersion. It should not retune MQ-3.2 in place.
 
 
 ### MQ-5.TS — The wiring itself survived cross-examination
+**Importance:** **BOSS** *(retrospective lore only)*
 
 **Reference:** MQ-5.TS topology-specificity benchmark.
 
@@ -455,3 +474,78 @@ The SQ-03F chain is closed at **THE COMMISSION**. New higher-order claims requir
 a separately frozen causal, replication, or new-comparator protocol. The Family
 Model remains presentation vocabulary only: it cannot upgrade an evidentiary
 classification, and the comedy remains downstream of the evidence.
+
+### MQ-5.ER — CHANGE THE TRANSLATOR
+**Importance:** **BOSS** *(retrospective lore only)*
+
+**Question.** Does the accepted MoscaQuant response survive reasonable changes
+to the market-to-sensory encoding while the neural substrate, runtime,
+responder targets, sensory gain, episode length, and classification contract
+remain frozen?
+
+**Frozen result.**
+
+- **Arm A — frozen encoder:** `RESPONSE PATTERN PRESERVED`.
+- **Arm B — fixed temporal cadence:** `RESPONSE RETAINED WITH ALTERED EXPRESSION`.
+  All nine accepted responders remained present and the frozen 13-edge lesion
+  bundle remained causally expressed across all nine, but onset timing and the
+  voltage fingerprint changed.
+- **Arm C — zero entropy-dependent temporal jitter:** `RESPONSE PATTERN NOT
+  RETAINED`. All nine accepted responders remained present, but the frozen
+  13-edge lesion bundle ceased to delay five targets: `55`, `92`, `656`,
+  `126002`, and `137122`.
+- **Arm D — balanced asset/ticker-to-retinal-territory remaps:** all eleven
+  non-identity confirmatory mappings were individually
+  `RESPONSE PATTERN PRESERVED`, yielding
+  `ASSET-TERRITORY ROBUST ACROSS TESTED REMAPS`.
+- **Arm E — no momentum-dependent temporal motion:** `RESPONSE RETAINED WITH
+  ALTERED EXPRESSION`. The exact Arm-A onset vector remained intact and the
+  causal bundle remained expressed across all nine responders, while the
+  voltage fingerprint changed.
+
+**Fingerprint diagnostics versus Arm A.**
+
+- Arm B normalized L2: `0.46395110314356997`
+- Arm C normalized L2: `0.23144747739534738`
+- Arm E normalized L2: `0.052037829631433274`
+
+Arm C is especially informative because its voltage fingerprint was *closer*
+to Arm A than Arm B's, yet Arm C failed the causal-retention criterion while
+Arm B did not. Similar response shape therefore did not imply preservation of
+the accepted causal mechanism.
+
+**Conservative interpretation.** The accepted response is highly robust to the
+tested asset-to-retinal-territory assignments. Volatility-dependent cadence
+and momentum-dependent motion affect response expression without eliminating
+the frozen bundle-level causal dependency. Removing entropy-dependent temporal
+jitter changes that causal dependency for five of the nine accepted responder
+targets. This supports robustness to some encoding choices while directly
+showing that the accepted mechanism is **not encoding-independent**.
+
+The result does **not** show that the network "understands entropy," identify
+the replacement routes responsible for the no-jitter response, establish
+biological encoding independence, or imply market prediction, trading
+usefulness, or profitability.
+
+**Result artifact.**
+
+`~/moscaquant-data/experiments/mq5-er-encoding-robustness-v1.json`
+
+SHA-256:
+
+`737a316a98d91b95dc1a5fe3ac25e7bf229447ae422ecd23ecf39ea8d4f6bb39`
+
+**Retrospective lesson.**
+
+> Same responders does not mean same mechanism.
+
+**Lore:**
+
+> Management relocated every asset to a different retinal cubicle and Morty
+> continued working without filing a ticket. They removed the momentum
+> animation and he barely noticed. They standardized the meeting cadence and
+> he complained but kept using the same org chart. Then someone removed
+> temporal chaos and five departments quietly stopped reporting through the
+> approved chain of command.
+
+Financial semantics: **NOT ASSIGNED**.
