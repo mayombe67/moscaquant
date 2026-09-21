@@ -1,0 +1,43 @@
+{
+  "arm_A": {
+    "causal_edge_survival_count": 13,
+    "exact_payload_equal": true,
+    "first_positive_onsets": {
+      "126002": 147,
+      "1273": 147,
+      "129": 148,
+      "137122": 146,
+      "317": 147,
+      "51": 149,
+      "55": 146,
+      "656": 145,
+      "92": 145
+    },
+    "payload_sha256": "03f0149a7c2bbd05869eda3cf799d2368eeab4dd493c4f0c44d8147d6ae51b9c",
+    "payload_size_bytes": 43261
+  },
+  "arm_D": {
+    "causal_edge_survival_count": 0,
+    "exact_payload_equal": true,
+    "first_positive_onsets": {
+      "126002": 148,
+      "1273": 152,
+      "129": 149,
+      "137122": 150,
+      "317": 149,
+      "51": 150,
+      "55": 147,
+      "656": 148,
+      "92": 146
+    },
+    "payload_sha256": "d321ed9288404db49d41c45110c0b97b891869fec08212c3ed97c89f14548ed3",
+    "payload_size_bytes": 42065
+  },
+  "artifact": "mq5-ts-a-d-duplicate-replay-gate-v1",
+  "financial_semantics_used": false,
+  "freeze_commit": "66702b829317f8721807a939136ac36bf956dd7d",
+  "randomized_arm_executed": false,
+  "result_bearing_B_seed_executed": false,
+  "result_bearing_C_seed_executed": false,
+  "status": "A_D_DUPLICATE_REPLAY_PASS"
+}

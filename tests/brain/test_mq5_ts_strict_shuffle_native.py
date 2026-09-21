@@ -233,3 +233,60 @@ def test_native_accepts_preexisting_self_edge_without_creating_new_ones():
 
     assert report["no_new_self_edges"]
     assert all(report.values()), report
+def test_native_long_churn_preserves_invariants_and_reaches_target():
+    # Regression for repeated native erase/insert churn.
+    n = 64
+    degree = 12
+
+    rows = []
+    cols = []
+
+    for post in range(n):
+        for offset in range(1, degree + 1):
+            rows.append(post)
+            cols.append((post + offset) % n)
+
+    rows = np.asarray(rows, dtype=np.int32)
+    cols = np.asarray(cols, dtype=np.int32)
+
+    data = np.linspace(
+        0.001,
+        1.0,
+        len(rows),
+        dtype=np.float32,
+    )
+
+    graph = sparse.csr_matrix(
+        (
+            data,
+            (rows, cols),
+        ),
+        shape=(n, n),
+        dtype=np.float32,
+    )
+    graph.sum_duplicates()
+    graph.sort_indices()
+
+    signs = np.ones(n, dtype=np.float32)
+    protected = np.asarray([], dtype=np.int32)
+
+    shuffled, diagnostics = build_strict_matched_control_native(
+        graph,
+        signs,
+        protected,
+        seed=991337777,
+        accepted_swaps_per_eligible_edge=20.0,
+        max_attempt_multiplier=100,
+    )
+
+    assert diagnostics.accepted_swaps == diagnostics.target_accepted_swaps
+    assert diagnostics.target_accepted_swaps == graph.nnz * 20
+
+    report = strict_invariant_report(
+        graph,
+        shuffled,
+        signs,
+        protected,
+    )
+
+    assert all(report.values()), report

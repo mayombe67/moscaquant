@@ -22,7 +22,6 @@ _NATIVE_SOURCE = r"""
 #include <limits.h>
 
 #define EMPTY_KEY UINT64_MAX
-#define TOMBSTONE_KEY (UINT64_MAX - 1ULL)
 
 static inline uint64_t mix64(uint64_t x) {
     x += 0x9e3779b97f4a7c15ULL;
@@ -72,22 +71,13 @@ static inline int table_insert(
     uint64_t key
 ) {
     uint64_t slot = mix64(key) & mask;
-    uint64_t first_tombstone = EMPTY_KEY;
 
     for (;;) {
         const uint64_t existing = table[slot];
 
         if (existing == key) return 0;
 
-        if (
-            existing == TOMBSTONE_KEY
-            && first_tombstone == EMPTY_KEY
-        ) {
-            first_tombstone = slot;
-        }
-
         if (existing == EMPTY_KEY) {
-            if (first_tombstone != EMPTY_KEY) slot = first_tombstone;
             table[slot] = key;
             return 1;
         }
@@ -101,20 +91,41 @@ static inline int table_erase(
     uint64_t mask,
     uint64_t key
 ) {
-    uint64_t slot = mix64(key) & mask;
+    uint64_t hole = mix64(key) & mask;
 
     for (;;) {
-        const uint64_t existing = table[slot];
+        const uint64_t existing = table[hole];
 
         if (existing == EMPTY_KEY) return 0;
+        if (existing == key) break;
 
-        if (existing == key) {
-            table[slot] = TOMBSTONE_KEY;
-            return 1;
+        hole = (hole + 1ULL) & mask;
+    }
+
+    uint64_t scan = (hole + 1ULL) & mask;
+
+    while (table[scan] != EMPTY_KEY) {
+        const uint64_t moved_key = table[scan];
+        const uint64_t home = mix64(moved_key) & mask;
+
+        const uint64_t distance_to_scan = (
+            scan - home
+        ) & mask;
+
+        const uint64_t distance_to_hole = (
+            hole - home
+        ) & mask;
+
+        if (distance_to_hole < distance_to_scan) {
+            table[hole] = moved_key;
+            hole = scan;
         }
 
-        slot = (slot + 1ULL) & mask;
+        scan = (scan + 1ULL) & mask;
     }
+
+    table[hole] = EMPTY_KEY;
+    return 1;
 }
 
 static uint64_t next_power_of_two(uint64_t value) {
