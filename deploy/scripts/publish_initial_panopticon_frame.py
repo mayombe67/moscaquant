@@ -27,10 +27,30 @@ def main() -> None:
             subject_id="MQ-001",
             payload={
                 "motor": {
+                    # Explicit MotorStateV1 field names.
+                    # This is a deployment reference pose used only to prove the
+                    # public RenderFrameV1 -> Panopticon semantic-rig path.
+                    "head_yaw_deg": 6.0,
+                    "head_pitch_deg": -3.0,
+                    "left_antenna_deg": 10.0,
+                    "right_antenna_deg": -8.0,
+                    "left_wing_deg": 22.0,
+                    "right_wing_deg": -18.0,
+                    "left_wing_velocity": 0.0,
+                    "right_wing_velocity": 0.0,
+                    "body_pitch_deg": 0.0,
+                    "body_roll_deg": 0.0,
+                    "body_yaw_deg": 0.0,
                     "locomotor_drive": 0.0,
                     "grooming_drive": 0.0,
                     "courtship_drive": 0.0,
                     "escape_drive": 0.0,
+                    "left_foreleg": [14.0],
+                    "right_foreleg": [-12.0],
+                    "left_midleg": [-8.0],
+                    "right_midleg": [9.0],
+                    "left_hindleg": [7.0],
+                    "right_hindleg": [-6.0],
                 },
                 "source": "deployment_reference",
             },
