@@ -450,3 +450,17 @@ Frozen known C-LESION13 onsets:
 
 These values are parent-experiment facts and are not new DETOUR results.
 Replay aborts if the lesion condition deviates from this vector.
+
+## Result execution record
+
+The frozen authoritative 3-hop DETOUR run completed successfully.
+
+- classification: `FOCUSED_DETOUR_CANDIDATES`
+- result artifact SHA-256:
+  `4b06c0181514f01715319dfacfa91569202067e583db7ef9fda5f35818eb4611`
+- focused recurring directed edge: `116680 -> 12024`
+- affected-target recurrence: 92, 656, 137122
+- retained comparison recurrence: 1273
+- required follow-up: MQ-5.ER.2 ROADBLOCK
+
+This remains discovery-only and does not authorize a causal interpretation.

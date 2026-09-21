@@ -155,3 +155,20 @@ Its only purpose is to estimate local runtime/compute cost.
 
 **Lore:** Federal agents are walking the route with rubber evidence bags before
 the real raid.
+
+## MQ-5.ER.1 — DETOUR authoritative result
+
+MQ-5.ER.1 completed under the frozen 3-hop protocol.
+
+- Classification: `FOCUSED_DETOUR_CANDIDATES`
+- Artifact SHA-256: `4b06c0181514f01715319dfacfa91569202067e583db7ef9fda5f35818eb4611`
+- Result Git HEAD: `04c24ef3396a0f6461504308592cbe6538d0dfb3`
+- Focused recurring edge: `116680 -> 12024`
+- Affected targets containing that edge: 92, 656, 137122
+- Retained comparison target also containing that edge: 1273
+- Required follow-up: MQ-5.ER.2 ROADBLOCK
+- Causal claims: not authorized
+- Financial semantics: NOT ASSIGNED
+
+**Lore:** Federal agents finally got three affected witnesses to name the same
+guy. Then 1273 walked in and said, "Yeah, I know him too."
