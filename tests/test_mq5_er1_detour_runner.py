@@ -4,6 +4,7 @@ import numpy as np
 from scipy import sparse
 
 from brain.mq5_er1_detour_runner import (
+    _deterministic_row_top_k,
     _push_top_candidate,
     classify_family,
     score_target_streaming,
@@ -208,3 +209,35 @@ def test_streaming_depth_parameter_preserves_default_three_hops():
 
     assert (1, 2) in default_edges
     assert (1, 2) not in two_hop_edges
+
+
+def test_deterministic_row_top_k_honors_presynaptic_tie_break():
+    pres = np.array([99, 70, 40, 10, 60, 20, 30, 80], dtype=np.int64)
+    eligible = np.arange(8, dtype=np.int64)
+    scores = np.ones(8, dtype=np.float64)
+
+    chosen, chosen_scores = _deterministic_row_top_k(
+        pres=pres,
+        eligible=eligible,
+        scores=scores,
+        k=5,
+    )
+
+    assert chosen_scores.tolist() == [1.0] * 5
+    assert pres[chosen].tolist() == [10, 20, 30, 40, 60]
+
+
+def test_deterministic_row_top_k_prefers_score_before_presynaptic_id():
+    pres = np.array([1, 2, 3, 4, 5, 6], dtype=np.int64)
+    eligible = np.arange(6, dtype=np.int64)
+    scores = np.array([0.5, 3.0, 3.0, 2.0, 1.0, 3.0], dtype=np.float64)
+
+    chosen, chosen_scores = _deterministic_row_top_k(
+        pres=pres,
+        eligible=eligible,
+        scores=scores,
+        k=3,
+    )
+
+    assert chosen_scores.tolist() == [3.0, 3.0, 3.0]
+    assert pres[chosen].tolist() == [2, 3, 6]

@@ -386,6 +386,21 @@ def _push_top_candidate(heap, row):
         heapq.heapreplace(heap, item)
 
 
+def _deterministic_row_top_k(
+    *,
+    pres: np.ndarray,
+    eligible: np.ndarray,
+    scores: np.ndarray,
+    k: int,
+) -> tuple[np.ndarray, np.ndarray]:
+    """Keep a row-local top-k under the frozen deterministic rank rule."""
+    eligible_pres = pres[eligible].astype(np.int64, copy=False)
+    order = np.lexsort((eligible_pres, -scores))
+    if eligible.size > int(k):
+        order = order[: int(k)]
+    return eligible[order], scores[order]
+
+
 def score_target_streaming(
     *,
     original: sparse.csr_matrix,
@@ -453,13 +468,12 @@ def score_target_streaming(
             if eligible.size:
                 scores = enc[eligible] * lesion_part[eligible]
 
-                if eligible.size > TOP_K_PER_TARGET:
-                    take = np.argpartition(
-                        scores,
-                        -TOP_K_PER_TARGET,
-                    )[-TOP_K_PER_TARGET:]
-                    eligible = eligible[take]
-                    scores = scores[take]
+                eligible, scores = _deterministic_row_top_k(
+                    pres=pres,
+                    eligible=eligible,
+                    scores=scores,
+                    k=TOP_K_PER_TARGET,
+                )
 
                 for local_idx, score in zip(
                     eligible.tolist(),

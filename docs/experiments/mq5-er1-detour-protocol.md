@@ -408,3 +408,25 @@ Candidate scoring and DETOUR classification remain disabled until
 
 DETOUR remains discovery-only. ROADBLOCK remains the required confirmatory
 experiment.
+
+## Implementation hardening amendment — deterministic equal-score pruning
+
+Before authoritative MQ-5.ER.1 result execution, the streaming scorer's
+row-local top-K optimization was hardened.
+
+The earlier implementation used `numpy.argpartition` to discard candidates
+below a row-local top-K boundary. `argpartition` does not promise which members
+of an exact-score tie are retained. That could violate the already-frozen
+deterministic ordering rule when more than five equal-score eligible edges
+occurred in one postsynaptic row.
+
+The implementation now retains row-local candidates under the exact frozen
+ordering that applies within a row: score descending, then presynaptic neuron
+ID ascending.
+
+Hop and postsynaptic neuron ID are constant within a row, so this reduction is
+lossless for the frozen global top-5 merge.
+
+This amendment changes implementation determinism only. It does not change the
+candidate score, thresholds, search depth, target set, onset window, top-K
+value, classification rule, or authoritative DETOUR protocol.

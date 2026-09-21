@@ -103,3 +103,12 @@ The laptop-pilot wrapper reuses the authoritative DETOUR factorized scorer with
 an explicit two-hop parameter. The authoritative runner's default remains
 three hops. Pilot execution remains disabled pending a separate authorization
 checkpoint.
+
+## DETOUR scorer hardening
+
+Before authoritative 3-hop DETOUR execution, the streaming scorer was hardened
+so exact-score ties cannot be arbitrarily reduced by `numpy.argpartition`.
+The frozen score and ranking rules are unchanged.
+
+**Lore:** Witnesses with identical stories are now lined up by badge number
+instead of whichever five happen to get shoved into the squad car first.
