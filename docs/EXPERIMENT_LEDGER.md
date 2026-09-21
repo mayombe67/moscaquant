@@ -271,3 +271,25 @@ contribution is not necessarily net effective runtime contribution.
 **Lore:** THE RACKET got **Keyser Söze'd**. The focused edge is now **THE
 NO-SHOW** — on the books, repeatedly named, and apparently not doing the job
 the discovery accounting said he was doing.
+
+## MQ-5.ER.3 RETOUR preregistered
+
+RETOUR is a discovery-only successor to DETOUR and THE RACKET.
+
+It preserves DETOUR's 3-hop dynamic discovery framework but adds a frozen
+runtime-alignment gate: ordinary retina-to-relay edges whose connectome
+coefficient is exactly mirrored by the frozen relay artifact and subsequently
+removed by retinal double-count correction are not eligible candidate edges.
+
+Mandatory negative controls:
+
+- `116680 -> 12024` — THE NO-SHOW
+- `78481 -> 16087` — THE RACKET matched control
+
+Both must classify as `DETERMINISTICALLY_CANCELED_RETINA_RELAY` and must be
+absent from all RETOUR candidate lists.
+
+Result execution is disabled. Financial semantics remain `NOT ASSIGNED`.
+
+**Lore:** The accountants are going back through the books. Reversed paychecks
+do not count as employees anymore.

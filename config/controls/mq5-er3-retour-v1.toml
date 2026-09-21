@@ -1,0 +1,59 @@
+experiment_id = "mq5-er3-retour-v1"
+codename = "RETOUR"
+kind = "discovery"
+parent_discovery = "mq5-er1-detour-v1"
+parent_confirmatory = "mq5-er2-the-racket-v1"
+financial_semantics = "NOT ASSIGNED"
+frames = 192
+max_backward_hops = 3
+top_k_per_target = 5
+result_execution_enabled = false
+
+affected_targets = [55, 92, 656, 126002, 137122]
+retained_dependency_comparisons = [51, 129, 317, 1273]
+all_targets = [51, 55, 92, 129, 317, 656, 1273, 126002, 137122]
+
+[eligibility]
+require_dynamic_difference_l1_gt = 1e-12
+require_c13_absolute_contribution_l1_gt = 1e-12
+require_intervention_addressable = true
+exclude_exactly_canceled_retina_relay_edges = true
+retina_relay_weight_rtol = 1e-6
+retina_relay_weight_atol = 1e-12
+abort_on_retina_relay_weight_mismatch = true
+
+[ranking]
+primary = "descending_dynamic_score"
+secondary = "fewer_hops"
+tertiary = "lower_postsynaptic_id"
+quaternary = "lower_presynaptic_id"
+
+[classification]
+focused_min_recurrence_targets = 3
+focused_total_affected_targets = 5
+focused_label = "FOCUSED_RETOUR_CANDIDATES"
+diffuse_label = "DIFFUSE_RETOUR_CANDIDATES"
+none_label = "NO_CLEAR_RETOUR_CANDIDATES"
+
+[negative_controls.no_show]
+presynaptic = 116680
+postsynaptic = 12024
+required_status = "DETERMINISTICALLY_CANCELED_RETINA_RELAY"
+must_not_appear_in_candidate_lists = true
+
+[negative_controls.matched_control]
+presynaptic = 78481
+postsynaptic = 16087
+required_status = "DETERMINISTICALLY_CANCELED_RETINA_RELAY"
+must_not_appear_in_candidate_lists = true
+
+[integrity]
+require_arm_a_stimulus_hash_replay = true
+require_arm_c_stimulus_hash_replay = true
+require_arm_a_known_onsets = true
+require_arm_c_known_onsets = true
+require_c13_known_onsets = true
+require_exact_original_13_edge_lesion = true
+require_clean_worktree_for_authoritative_run = true
+require_result_artifact_absent = true
+require_separate_authorization_commit = true

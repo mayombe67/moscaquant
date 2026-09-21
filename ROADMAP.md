@@ -1451,3 +1451,10 @@ comparison target `1273`.
 
 The two-hop laptop pilots are engineering records only and may not supply
 THE RACKET candidates.
+
+## MQ-5.ER.3 — RETOUR
+
+Preregistered discovery follow-up to THE RACKET. Correct DETOUR candidate
+eligibility for frozen retinal double-count removal, verify THE NO-SHOW as a
+negative control, then rerun the 3-hop discovery search under runtime-aligned
+candidate semantics.
