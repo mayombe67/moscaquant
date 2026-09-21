@@ -1,0 +1,68 @@
+[experiment]
+id = "mq5-er-encoding-robustness-v1"
+title = "MQ-5.ER Encoding Robustness — CHANGE THE TRANSLATOR"
+status = "protocol-design-only"
+financial_semantics = false
+frames = 192
+
+[reference]
+arm = "A"
+encoding = "frozen-current-encoder"
+release_gain = 0.9981738484618123
+require_duplicate_replay = true
+
+[arms.B]
+name = "fixed-temporal-cadence"
+authorized_for_result_execution = false
+changes = ["volatility-dependent-cadence"]
+exact_parameter_pending_implementation_freeze = true
+
+[arms.C]
+name = "zero-entropy-jitter"
+authorized_for_result_execution = false
+changes = ["entropy-dependent-temporal-jitter"]
+
+[arms.D]
+name = "matched-retinal-territory-remap"
+authorized_for_result_execution = false
+changes = ["feature-to-retinal-territory-assignment"]
+preserve_territory_sizes = true
+preserve_retinal_population = true
+deterministic_permutation_pending_freeze = true
+
+[arms.E]
+name = "motion-rule-alternative"
+authorized_for_result_execution = false
+changes = ["motion-rule"]
+exact_rule_pending_implementation_freeze = true
+
+[substrate]
+topology = "original-malecns"
+responder_universe = "accepted-mq3.2"
+causal_artifact = "mq3-2-first-onset-causal-edges-v1"
+topology_changes_allowed = false
+neural_dynamics_changes_allowed = false
+sensory_gain_changes_allowed = false
+
+[metrics]
+responder_identity = true
+first_positive_voltage_onset = true
+responder_voltage_fingerprint = true
+accepted_causal_route_expression = true
+stimulus_to_dn_information = true
+encoding_level_diagnostics = true
+
+[classification]
+preservation_tolerances_frozen = false
+allow_result_dependent_retuning = false
+allow_responder_reselection = false
+allow_failed_arm_replacement = false
+
+[execution]
+result_execution_enabled = false
+require_clean_git = true
+require_frozen_implementation_commit = true
+require_arm_a_duplicate_replay = true
+
+[artifact]
+result = "experiments/mq5-er-encoding-robustness-v1.json"
