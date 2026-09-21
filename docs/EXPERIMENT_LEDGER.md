@@ -293,3 +293,29 @@ Result execution is disabled. Financial semantics remain `NOT ASSIGNED`.
 
 **Lore:** The accountants are going back through the books. Reversed paychecks
 do not count as employees anymore.
+
+## MQ-5.ER.3 RETOUR result
+
+RETOUR completed as **DISCOVERY ONLY** with classification
+`FOCUSED_RETOUR_CANDIDATES`.
+
+After enforcing the preregistered runtime-alignment rule, `1732` dynamically
+eligible retina-to-relay candidate checks were excluded. THE NO-SHOW
+`116680 -> 12024` and the matched-control edge `78481 -> 16087` were both
+classified `DETERMINISTICALLY_CANCELED_RETINA_RELAY` and were absent from all
+candidate lists.
+
+Three runtime-aligned directed edges recurred across at least 3 / 5 affected
+targets:
+
+- `11725 -> 29921`
+- `11345 -> 47350`
+- `10647 -> 51642`
+
+Result SHA-256:
+`90d8198a1c218ad24ef29c2c70b4b7a88fd8b24804516d2fd8f20903b847ff3`
+
+No causal claim is authorized. A preregistered intervention is required.
+
+**Lore:** RETOUR followed the package to THE DOCKS. The recurrent candidates
+are THE STEVEDORES. Horseface remains a hypothesis; Omar has not appeared.

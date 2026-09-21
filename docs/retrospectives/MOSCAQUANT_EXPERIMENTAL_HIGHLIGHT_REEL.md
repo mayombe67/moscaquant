@@ -583,3 +583,34 @@ pulled him out of the operation and nothing changed. The investigation got
 
 The suspect is now **THE NO-SHOW**: on the books, looks important, collects the
 paycheck, but the operation does not notice when he disappears.
+
+## RETOUR — Follow the Package
+
+**Importance:** BOSS
+
+THE RACKET revealed that DETOUR's favorite suspect had a no-show job. RETOUR
+fixed the books and ran the trail again.
+
+The old suspect disappeared exactly as required. So did the matched civilian.
+RETOUR rejected `1732` candidate checks that belonged to the canceled
+retina-to-relay bookkeeping class.
+
+And then three new names kept showing up.
+
+`11725 -> 29921`
+
+`11345 -> 47350`
+
+`10647 -> 51642`
+
+Each appeared across three of the five affected targets.
+
+**Lore:** The package reached THE DOCKS. Somebody on the inside is shifting
+containers. The three recurrent candidates are THE STEVEDORES.
+
+Horseface is currently just McNulty's theory on the board.
+
+Omar has not shown up yet.
+
+**Science:** focused runtime-aligned discovery candidates only. No causal claim
+until a preregistered intervention tests them.

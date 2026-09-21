@@ -385,3 +385,23 @@ for candidate ranking.
 
 This finding does not retroactively alter the frozen MQ-5.ER.1 DETOUR artifact
 or MQ-5.ER.2 THE RACKET result.
+
+### RETOUR correction result
+
+MQ-5.ER.3 RETOUR implemented the correction required by the DETOUR retinal
+pre-cancellation scoring confound.
+
+Ordinary retina-to-relay candidate edges whose connectome weights exactly match
+the frozen relay representation are excluded from candidate emission. The
+preregistered negative controls `116680 -> 12024` and `78481 -> 16087` both
+passed this rule with exact zero coefficient delta.
+
+The correction removed `1732` dynamically eligible candidate checks in the
+authoritative run, and the prior focused edge did not reappear.
+
+**Status:** MITIGATED FOR RETOUR-STYLE CONNECTOME-EDGE DISCOVERY.
+
+Remaining limitation: this does not test interventions on the frozen direct
+retinal relay representation itself, and does not prove that newly identified
+runtime-aligned candidates are causal. Those require separate preregistered
+intervention experiments.
