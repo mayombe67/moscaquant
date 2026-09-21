@@ -844,6 +844,8 @@ MQ-5.6 should include, where practical:
 
 ### Post-MQ-3 — Propagation-Depth Diagnostic
 
+**Status:** COMPLETE — THRESHOLDED ONSET WITH SEVERE DEPTH ATTENUATION SUPPORTED.
+
 Before interpreting weak downstream DN magnitude as a biological or anatomical
 property, run a separate diagnostic against the frozen MQ-3 causal route(s).
 
