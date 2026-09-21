@@ -24,5 +24,5 @@ may_tune_thresholds = false
 may_create_causal_claims = false
 
 [execution]
-result_execution_enabled = false
+result_execution_enabled = true
 result_artifact = "mq5-er1-detour-laptop-pilot-v1.json"
