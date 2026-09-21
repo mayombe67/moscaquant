@@ -614,3 +614,53 @@ Omar has not shown up yet.
 
 **Science:** focused runtime-aligned discovery candidates only. No causal claim
 until a preregistered intervention tests them.
+
+## THE STEVEDORES — Preregistered
+
+**Reference:** MQ-5.ER.4 — THE STEVEDORES preregistration.
+**Importance:** UNRANKED — result not yet available.
+**Science:** Three runtime-aligned recurrent candidates from RETOUR are frozen
+for individual and combined causal intervention against the C13 baseline.
+Outcome-blind structural controls must be frozen before result execution.
+`BUBBLES REPORT` is descriptive telemetry only and cannot upgrade the
+preregistered causal endpoint.
+**Lore:** RETOUR followed Marlo's package to THE DOCKS and kept seeing the
+same three stevedores around the handoff points. That is where this experiment
+starts: three recurring names on Lester's board, but nobody gets called guilty
+because they happened to be standing near a container.
+
+THE STEVEDORES now works the case like an actual investigation. We pull `S1`
+off the dock and replay the same C13 operation. Then `S2`. Then `S3`. If the
+package starts arriving late, stops arriving, or the usual recipients change,
+Bubbles writes down exactly what happened. Then we pull all three stevedores at
+once. That arm asks whether the crew can cover one missing worker but struggles
+when the whole shift disappears.
+
+Each suspect also has a structurally matched control worker: somebody with
+nearly the same weight, route depth, and local degree profile who was selected
+before we looked at any MQ-5.ER.4 outcome. In street terms, Lester found three
+guys with very similar job descriptions and said, "Fine. Pull them too." If a
+suspect removal matters while his matched civilian does not, the case gets more
+interesting. If everybody causes the same disruption, McNulty has arrested the
+loading schedule.
+
+**Bubbles** is the witness who refuses to embellish. His report contains onset
+changes, disappearances, voltage changes, and waveform differences. He does not
+name the kingpin, infer motives, or announce that anybody "understands" the
+market. Somehow the guy from the street has the cleanest epistemology in the
+unit.
+
+**Lester** keeps the investigation attached to the frozen protocol and reminds
+everyone that recurring on a graph is not the same thing as running an
+organization.
+
+**McNulty BAC meter: ~0.08% (fictional).** In real-world terms, around this level
+is associated with impaired judgment, divided attention, coordination, and
+reaction time. McNulty has therefore reached the stage where the arrows on the
+corkboard are becoming straighter while the theory connecting them is becoming
+less so. He is increasingly convinced Horseface is involved. Horseface remains
+a hypothesis, not an edge label.
+
+**Omar** still does not enter the story. He is reserved for an intervention that
+actually earns the causal-disruption entrance. Until then, somewhere offscreen,
+a whistle remains scientifically unjustified.

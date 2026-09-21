@@ -319,3 +319,34 @@ No causal claim is authorized. A preregistered intervention is required.
 
 **Lore:** RETOUR followed the package to THE DOCKS. The recurrent candidates
 are THE STEVEDORES. Horseface remains a hypothesis; Omar has not appeared.
+
+## MQ-5.ER.4 THE STEVEDORES preregistered
+
+Confirmatory causal follow-up to MQ-5.ER.3 RETOUR.
+
+Frozen candidate edges:
+
+- `11725 -> 29921`
+- `11345 -> 47350`
+- `10647 -> 51642`
+
+Primary baseline is Arm C + original frozen 13-edge lesion (`C13`).
+
+Planned interventions:
+
+- each candidate lesioned individually on top of C13;
+- all three candidates lesioned together on top of C13;
+- one outcome-blind structurally matched control per candidate, frozen before
+  result execution.
+
+Primary dependency endpoint remains later first-positive onset or target absence.
+
+A descriptive `BUBBLES REPORT` records observable target and waveform changes
+without assigning causality or mechanism.
+
+Result execution is disabled. Financial semantics remain `NOT ASSIGNED`.
+
+**Lore:** THE DOCKS had three recurring handlers. THE STEVEDORES asks which one
+actually moves Marlo's package, whether the crew covers for each other, and
+whether McNulty should have been allowed near the corkboard after midnight.
+Horseface remains a theory. Omar has not entered the experiment.

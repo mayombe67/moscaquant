@@ -1,0 +1,134 @@
+experiment_id = "mq5-er4-the-stevedores-v1"
+codename = "THE STEVEDORES"
+kind = "confirmatory"
+parent_experiment = "mq5-er3-retour-v1"
+parent_result_sha256 = "90d8198a1c218ad24ef29c2c70b4b7a88fd8b24804516d2fd8f20903b847ff3e"
+financial_semantics = "NOT ASSIGNED"
+frames = 192
+result_execution_enabled = false
+
+affected_targets = [55, 92, 656, 126002, 137122]
+retained_dependency_comparisons = [51, 129, 317, 1273]
+all_targets = [51, 55, 92, 129, 317, 656, 1273, 126002, 137122]
+
+[c13_onsets]
+"51" = 150
+"55" = 145
+"92" = 141
+"129" = 149
+"317" = 156
+"656" = 141
+"1273" = 149
+"126002" = 151
+"137122" = 151
+
+[[candidates]]
+id = "S1"
+presynaptic = 11725
+postsynaptic = 29921
+affected_targets = [55, 126002, 137122]
+weight = -0.23459716141223907
+hop_signature = [3, 3, 3]
+presynaptic_outdegree = 17
+postsynaptic_indegree = 88
+
+[[candidates]]
+id = "S2"
+presynaptic = 11345
+postsynaptic = 47350
+affected_targets = [92, 656, 126002]
+weight = -0.3401360511779785
+hop_signature = [3, 2, 3]
+presynaptic_outdegree = 21
+postsynaptic_indegree = 38
+
+[[candidates]]
+id = "S3"
+presynaptic = 10647
+postsynaptic = 51642
+affected_targets = [55, 92, 656]
+weight = 0.35854342579841614
+hop_signature = [3, 2, 2]
+presynaptic_outdegree = 47
+postsynaptic_indegree = 61
+
+[endpoint]
+later_onset_or_absence_only = true
+earlier_onset_is_dependency = false
+
+[classification]
+single_complete = "SINGLE_EDGE_CAUSAL_SUPPORT_COMPLETE"
+single_partial = "SINGLE_EDGE_CAUSAL_SUPPORT_PARTIAL"
+single_none = "SINGLE_EDGE_CAUSAL_SUPPORT_NOT_OBSERVED"
+combined_complete = "COMBINED_SET_CAUSAL_SUPPORT_COMPLETE"
+combined_partial = "COMBINED_SET_CAUSAL_SUPPORT_PARTIAL"
+combined_none = "COMBINED_SET_CAUSAL_SUPPORT_NOT_OBSERVED"
+affected_specific = "AFFECTED_SET_SPECIFIC_WITHIN_TESTED_TARGETS"
+shared = "SHARED_WITH_RETAINED_DEPENDENCY_TARGETS"
+retained_only = "RETAINED_ONLY_OR_NONPRIMARY_PATTERN"
+specificity_none = "SPECIFICITY_NOT_ESTABLISHED"
+
+[secondary]
+fingerprint_l2 = true
+fingerprint_cosine = true
+peak_positive_voltage = true
+integrated_positive_voltage = true
+unexpected_responder_check = true
+emit_bubbles_report = true
+
+[matched_controls]
+required = true
+selection_outcome_blind = true
+require_intervention_addressable = true
+same_hop_signature_where_feasible = true
+match_abs_weight = true
+match_pre_outdegree = true
+match_post_indegree = true
+freeze_before_result_execution = true
+
+[integrity]
+expected_arm_c_stimulus_sha256 = "e8af8077d7d4c13431f7ad3fa05d81e2009263d9a5cb0e7dd800e889ea61ec8a"
+require_exact_c13_onsets = true
+require_exact_original_13_edge_lesion = true
+require_candidate_weight_freeze = true
+require_matched_control_freeze = true
+require_clean_worktree = true
+require_tracked_files = true
+require_result_artifact_absent = true
+require_separate_authorization_commit = true
+
+# Frozen pre-outcome matched controls.
+# Selector artifact SHA-256: 7afd63ef205a21e19306b9145b1bbfdd09e8b254f413a59950f77b8c0a9ce20c
+
+[[matched_control_edges]]
+candidate_id = "S1"
+presynaptic = 19300
+postsynaptic = 26090
+weight = -0.22811059653759003
+hop_signature = [3, 3, 3]
+presynaptic_outdegree = 17
+postsynaptic_indegree = 88
+max_log_mismatch = 0.012177292670455864
+sum_log_mismatch = 0.012177292670455864
+
+[[matched_control_edges]]
+candidate_id = "S2"
+presynaptic = 16922
+postsynaptic = 34070
+weight = -0.33714285492897034
+hop_signature = [3, 2, 3]
+presynaptic_outdegree = 22
+postsynaptic_indegree = 40
+max_log_mismatch = 0.021719249693236353
+sum_log_mismatch = 0.044863110230704994
+
+[[matched_control_edges]]
+candidate_id = "S3"
+presynaptic = 12775
+postsynaptic = 57635
+weight = 0.3538961112499237
+hop_signature = [3, 2, 2]
+presynaptic_outdegree = 46
+postsynaptic_indegree = 62
+max_log_mismatch = 0.009143379439869648
+sum_log_mismatch = 0.021758212679050648

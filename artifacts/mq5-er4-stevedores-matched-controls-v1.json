@@ -1,0 +1,50 @@
+{
+  "controls": {
+    "S1": {
+      "hop_signature": [
+        3,
+        3,
+        3
+      ],
+      "max_log_mismatch": 0.012177292670455864,
+      "postsynaptic": 26090,
+      "postsynaptic_indegree": 88,
+      "presynaptic": 19300,
+      "presynaptic_outdegree": 17,
+      "sum_log_mismatch": 0.012177292670455864,
+      "weight": -0.22811059653759003
+    },
+    "S2": {
+      "hop_signature": [
+        3,
+        2,
+        3
+      ],
+      "max_log_mismatch": 0.021719249693236353,
+      "postsynaptic": 34070,
+      "postsynaptic_indegree": 40,
+      "presynaptic": 16922,
+      "presynaptic_outdegree": 22,
+      "sum_log_mismatch": 0.044863110230704994,
+      "weight": -0.33714285492897034
+    },
+    "S3": {
+      "hop_signature": [
+        3,
+        2,
+        2
+      ],
+      "max_log_mismatch": 0.009143379439869648,
+      "postsynaptic": 57635,
+      "postsynaptic_indegree": 62,
+      "presynaptic": 12775,
+      "presynaptic_outdegree": 46,
+      "sum_log_mismatch": 0.021758212679050648,
+      "weight": 0.3538961112499237
+    }
+  },
+  "experiment": "mq5-er4-the-stevedores-v1",
+  "kind": "PRE-OUTCOME STRUCTURAL CONTROL FREEZE",
+  "neural_outcomes_used": false,
+  "selector_version": "V1-exact-hop-signature"
+}
