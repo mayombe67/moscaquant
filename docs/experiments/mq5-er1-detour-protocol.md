@@ -209,3 +209,43 @@ lesion bundle ceased to affect targets:
 This motivates DETOUR. It does not pre-decide the mechanism.
 
 **Science first. Lulz close second.**
+
+## Instrumentation amendment 1 — read-only dynamic trace plumbing
+
+The frozen MQ-3.2 physiology runtime already exposes a `synaptic_modifier`
+hook after effective presynaptic activity has been computed and after ordinary
+connectome aggregation, but before the remainder of the frozen voltage update.
+
+DETOUR will use that hook only as a read-only observer.
+
+The initial instrumentation module:
+
+`brain/mq5_er1_detour_trace.py`
+
+provides:
+
+- deterministic construction of a bounded incoming-edge topology cone;
+- read-only recording of effective presynaptic activity;
+- per-edge contribution computed as frozen connectome weight times effective
+  presynaptic activity;
+- the postsynaptic aggregate visible at the hook;
+- post-step voltage/spike snapshots for explicitly selected neurons.
+
+The observer must return the supplied synaptic array unchanged.
+
+This amendment does **not** freeze or execute the DETOUR candidate-selection
+rule. In particular it does not freeze:
+
+- backward-cone hop depth for the full experiment;
+- candidate score;
+- candidate ranking;
+- candidate cap;
+- tie handling;
+- focused/diffuse classification thresholds.
+
+Those remain intentionally unresolved until trace feasibility and exact
+observer neutrality are tested on synthetic/toy data and bounded non-result
+benchmarks.
+
+No frozen A/C neural outcome may be inspected through this instrumentation
+before those rules are subsequently frozen.

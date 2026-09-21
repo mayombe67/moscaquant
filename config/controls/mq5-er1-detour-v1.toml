@@ -58,3 +58,12 @@ result_execution_enabled = false
 full_connectome_result_trace_enabled = false
 synthetic_tests_allowed = true
 non_result_benchmarking_allowed = true
+
+[trace_implementation]
+module = "brain.mq5_er1_detour_trace"
+read_only_synaptic_observer = true
+per_edge_contribution_rule = "weight_times_effective_presynaptic_activity"
+post_step_voltage_snapshot = true
+post_step_spike_snapshot = true
+candidate_generation_enabled = false
+full_experiment_hop_depth_frozen = false
