@@ -249,3 +249,79 @@ benchmarks.
 
 No frozen A/C neural outcome may be inspected through this instrumentation
 before those rules are subsequently frozen.
+
+## Instrumentation amendment 2 — candidate rule freeze
+
+Before any full frozen A/C DETOUR outcome is inspected, the candidate-generation
+rule is frozen as follows.
+
+### Search depth
+
+The dynamic search space is the deterministic incoming-edge cone extending at
+most **3 directed synaptic hops backward** from each frozen responder target.
+
+This is a bounded local mechanism search, not an unrestricted connectome-wide
+path discovery.
+
+### Temporal window
+
+For each affected responder, only dynamic edge contributions from frame 0
+through that responder's **C-BASELINE first-positive onset, inclusive**, may
+contribute to candidate scoring.
+
+Post-onset activity cannot promote a candidate.
+
+### Eligibility
+
+A directed edge is eligible only when both are true within the frozen temporal
+window:
+
+1. its time-resolved dynamic contribution differs between A-BASELINE and
+   C-BASELINE by more than `1e-12` in integrated L1 magnitude; and
+2. it carries more than `1e-12` integrated absolute dynamic contribution in
+   C-LESION13.
+
+Thus static graph strength alone cannot create a candidate.
+
+### Discovery score
+
+For each eligible edge:
+
+`score = L1(C-BASELINE - A-BASELINE) × L1(C-LESION13)`
+
+where each L1 term is integrated over frames 0 through the target's C-baseline
+onset, inclusive.
+
+This score is a discovery heuristic only. It does not estimate causal effect
+size.
+
+### Ranking and cap
+
+For each affected responder independently:
+
+1. descending discovery score;
+2. fewer backward hops;
+3. lower postsynaptic model index;
+4. lower presynaptic model index.
+
+Exactly the first **5** candidates are retained when at least five exist.
+
+This ordering is also the frozen tie rule.
+
+### Discovery family classification
+
+- `NO_CLEAR_DETOUR_CANDIDATES`: no eligible candidate for any affected target.
+- `FOCUSED_DETOUR_CANDIDATES`: at least one exact directed edge appears in the
+  retained top-5 candidate lists for at least **3 of the 5** affected targets.
+- `DIFFUSE_DETOUR_CANDIDATES`: one or more eligible candidates exist, but the
+  focused recurrence rule is not met.
+
+These labels are descriptive discovery outputs only.
+
+### Confirmation boundary
+
+No DETOUR score, recurrence count, or family label establishes necessity or
+sufficiency.
+
+All promoted candidates remain hypotheses until preregistered intervention in
+MQ-5.ER.2 — ROADBLOCK.
