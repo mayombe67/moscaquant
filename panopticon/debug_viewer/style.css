@@ -1,0 +1,64 @@
+:root {
+  color-scheme: dark;
+  --bg: #090b0d;
+  --panel: #11151a;
+  --line: #2b323a;
+  --text: #e8ecef;
+  --muted: #8e99a4;
+  --accent: #d9ff62;
+  --danger: #ff7272;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+.viewer { max-width: 1440px; margin: 0 auto; padding: 18px; }
+.topbar {
+  display: flex; justify-content: space-between; align-items: end;
+  gap: 16px; margin-bottom: 16px;
+}
+.eyebrow { color: var(--muted); font-size: 12px; letter-spacing: .12em; }
+h1 { margin: 4px 0 0; font-size: 28px; }
+h2 { margin: 0 0 10px; font-size: 14px; letter-spacing: .08em; }
+.status-stack { display: flex; gap: 8px; flex-wrap: wrap; justify-content: end; }
+.badge {
+  border: 1px solid var(--accent); color: var(--accent);
+  padding: 7px 10px; font-size: 12px;
+}
+.badge.muted { border-color: var(--line); color: var(--muted); }
+.grid {
+  display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 16px;
+}
+.scene-card, .hud section {
+  border: 1px solid var(--line); background: var(--panel);
+}
+.scene-card { min-width: 0; }
+canvas {
+  display: block; width: 100%; height: auto; aspect-ratio: 16/9;
+  background: #07090b;
+}
+.scene-footer {
+  display: flex; justify-content: space-between; gap: 12px;
+  padding: 10px 12px; color: var(--muted); font-size: 12px;
+}
+.hud { display: grid; gap: 12px; align-content: start; }
+.hud section { padding: 14px; }
+.metric {
+  display: flex; justify-content: space-between; gap: 16px;
+  border-top: 1px solid var(--line); padding: 8px 0;
+  font-size: 12px;
+}
+.metric span { color: var(--muted); }
+.killfeed {
+  margin: 0; padding-left: 18px; color: var(--muted);
+  font-size: 12px; line-height: 1.5;
+}
+footer { color: var(--muted); font-size: 11px; margin-top: 14px; }
+@media (max-width: 840px) {
+  .grid { grid-template-columns: 1fr; }
+  .topbar { align-items: start; flex-direction: column; }
+  .status-stack { justify-content: start; }
+}

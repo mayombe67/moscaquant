@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>MoscaQuant SITE-19B Debug Viewer</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main class="viewer" data-mode="demo">
+    <header class="topbar">
+      <div>
+        <div class="eyebrow">SITE-19B // PANOPTICON DEBUG</div>
+        <h1>CELL-67</h1>
+      </div>
+      <div class="status-stack">
+        <span id="liveBadge" class="badge">DEMO FEED</span>
+        <span id="modifierBadge" class="badge muted">NO ACTIVE MODIFIER</span>
+      </div>
+    </header>
+
+    <section class="grid">
+      <div class="scene-card">
+        <canvas id="scene" width="960" height="540" aria-label="CELL-67 debug scene"></canvas>
+        <div class="scene-footer">
+          <span id="frameLabel">frame 0</span>
+          <span id="sequenceLabel">seq 0</span>
+          <span id="environmentLabel">CELL-67.v1</span>
+        </div>
+      </div>
+
+      <aside class="hud">
+        <section>
+          <h2>MQ-001 / MORTY</h2>
+          <div class="metric"><span>Locomotor</span><strong id="locomotor">0.00</strong></div>
+          <div class="metric"><span>Tether tension</span><strong id="tension">0.00 N</strong></div>
+          <div class="metric"><span>Root Y</span><strong id="rootY">0.000 m</strong></div>
+          <div class="metric"><span>Body pitch</span><strong id="pitch">0.0°</strong></div>
+        </section>
+
+        <section>
+          <h2>OVERWATCH</h2>
+          <div class="metric"><span>Mode</span><strong id="mode">DEMO</strong></div>
+          <div class="metric"><span>Integrity</span><strong id="integrity">OK</strong></div>
+          <div class="metric"><span>Replay</span><strong id="replay">LIVE</strong></div>
+        </section>
+
+        <section>
+          <h2>KILLFEED</h2>
+          <ol id="killfeed" class="killfeed">
+            <li>Awaiting authoritative stream.</li>
+          </ol>
+        </section>
+      </aside>
+    </section>
+
+    <footer>
+      Debug/reference viewer only. Presentation is downstream of evidence.
+    </footer>
+  </main>
+  <script src="./app.js"></script>
+</body>
+</html>
