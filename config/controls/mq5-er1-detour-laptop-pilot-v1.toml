@@ -1,0 +1,28 @@
+# MQ-5.ER.1-LP — DETOUR Laptop Pilot
+# Explicitly non-authoritative engineering pilot.
+
+[experiment]
+id = "mq5-er1-detour-laptop-pilot-v1"
+parent = "mq5-er1-detour-v1"
+kind = "engineering-pilot"
+authoritative = false
+financial_semantics = false
+
+[scope]
+max_backward_hops = 2
+reuse_parent_conditions = true
+reuse_parent_targets = true
+reuse_parent_onset_windows = true
+reuse_parent_candidate_score = true
+reuse_parent_top_k = true
+reuse_parent_tie_rule = true
+
+[restrictions]
+may_amend_parent_protocol = false
+may_supply_roadblock_candidates = false
+may_tune_thresholds = false
+may_create_causal_claims = false
+
+[execution]
+result_execution_enabled = false
+result_artifact = "mq5-er1-detour-laptop-pilot-v1.json"
