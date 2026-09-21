@@ -1,0 +1,43 @@
+[experiment]
+id = "mq3-pd-propagation-depth-v1"
+phase = "POST-MQ-3 DIAGNOSTIC"
+condition = "A"
+purpose = "measure signal survival across frozen MQ-3.2 causal-path depth"
+
+[path_basis]
+artifact = "mq3-2-causal-path-decomposition-v1"
+frame_selection = "first_positive"
+path_selection = "all reported first-positive activity-supported paths"
+hop_definition = "source-relative directed edge distance within frozen paths"
+
+[gain]
+frozen_release_gain = 0.9981738484618123
+diagnostic_multipliers = [0.50, 0.75, 1.00, 1.25, 1.50]
+
+[metrics]
+integrated_positive_voltage = true
+episode_mean_positive_voltage = true
+maximum_voltage = true
+integrated_effective_activity = true
+episode_mean_effective_activity = true
+active_neuron_fraction = true
+spike_count = true
+first_positive_frame = true
+first_effective_frame = true
+survival_vs_hop0 = true
+survival_vs_previous_hop = true
+
+[controls]
+frozen_gain_run_first = true
+connectome_unchanged = true
+retinal_mapping_unchanged = true
+graded_population_unchanged = true
+market_condition_unchanged = true
+causal_paths_unchanged = true
+financial_semantics_used = false
+gain_sweep_is_diagnostic_only = true
+
+[interpretation]
+biological_limit_claim_permitted = false
+frozen_model_may_be_modified_by_result = false
+negative_result_must_be_preserved = true
