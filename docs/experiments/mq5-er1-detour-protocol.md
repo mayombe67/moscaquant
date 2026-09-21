@@ -430,3 +430,23 @@ lossless for the frozen global top-5 merge.
 This amendment changes implementation determinism only. It does not change the
 candidate score, thresholds, search depth, target set, onset window, top-K
 value, classification rule, or authoritative DETOUR protocol.
+
+## Known-parent replay hardening — C-LESION13 onset vector
+
+The known-parent replay now verifies the already-observed Arm C-LESION13
+first-positive onset vector in addition to Arm A and Arm C baseline onsets.
+
+Frozen known C-LESION13 onsets:
+
+- 51 -> 150
+- 55 -> 145
+- 92 -> 141
+- 129 -> 149
+- 317 -> 156
+- 656 -> 141
+- 1273 -> 149
+- 126002 -> 151
+- 137122 -> 151
+
+These values are parent-experiment facts and are not new DETOUR results.
+Replay aborts if the lesion condition deviates from this vector.

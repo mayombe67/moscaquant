@@ -112,3 +112,14 @@ The frozen score and ranking rules are unchanged.
 
 **Lore:** Witnesses with identical stories are now lined up by badge number
 instead of whichever five happen to get shoved into the squad car first.
+
+## DETOUR known-replay lesion verification
+
+The DETOUR replay gate now checks the frozen C-LESION13 onset vector as well as
+Arm A and Arm C baseline replay.
+
+This is verification of already-known parent-experiment behavior, not a new
+DETOUR result.
+
+**Lore:** Internal Affairs now checks the getaway car too, not just the
+suspects standing in the lineup.

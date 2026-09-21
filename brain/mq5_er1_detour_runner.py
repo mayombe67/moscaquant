@@ -87,6 +87,18 @@ A_BASELINE_ONSETS = {
     137122: 146,
 }
 
+C_LESION13_ONSETS = {
+    51: 150,
+    55: 145,
+    92: 141,
+    129: 149,
+    317: 156,
+    656: 141,
+    1273: 149,
+    126002: 151,
+    137122: 151,
+}
+
 MAX_BACKWARD_HOPS = 3
 TOP_K_PER_TARGET = 5
 ACTIVITY_EPSILON = 1e-12
@@ -358,6 +370,12 @@ def verify_known_replay(
         stimuli=c_stimuli,
         capture=lesion_capture,
     )
+
+    if lesion_result["onsets"] != C_LESION13_ONSETS:
+        raise RuntimeError(
+            "Arm C-LESION13 replay onset mismatch: "
+            f"{lesion_result['onsets']}"
+        )
 
     return {
         "a_result": a_result,

@@ -4,6 +4,7 @@ import numpy as np
 from scipy import sparse
 
 from brain.mq5_er1_detour_runner import (
+    C_LESION13_ONSETS,
     _deterministic_row_top_k,
     _push_top_candidate,
     classify_family,
@@ -241,3 +242,17 @@ def test_deterministic_row_top_k_prefers_score_before_presynaptic_id():
 
     assert chosen_scores.tolist() == [3.0, 3.0, 3.0]
     assert pres[chosen].tolist() == [2, 3, 6]
+
+
+def test_known_c_lesion13_onset_vector_is_frozen():
+    assert C_LESION13_ONSETS == {
+        51: 150,
+        55: 145,
+        92: 141,
+        129: 149,
+        317: 156,
+        656: 141,
+        1273: 149,
+        126002: 151,
+        137122: 151,
+    }
