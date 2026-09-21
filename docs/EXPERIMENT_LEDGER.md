@@ -136,3 +136,22 @@ against R1 under the hardened implementation.
 R2 cannot supply MQ-5.ER.2 ROADBLOCK candidates.
 
 **Lore:** Same neighborhood, same warrant, better paperwork.
+
+## MQ-5.ER.1 3-hop synthetic stress benchmark
+
+Before deciding whether to run the frozen authoritative 3-hop DETOUR locally,
+a non-result engineering benchmark may exercise the same streaming scorer at
+three hops using synthetic all-ones activity summaries.
+
+The benchmark:
+
+- uses the real connectome topology and frozen lesion-edge set;
+- uses the same 3-hop streaming traversal/scoring code path;
+- does **not** use Arm A, Arm C, or C-LESION13 dynamic activity;
+- emits no candidate identities;
+- cannot produce or alter a DETOUR scientific classification.
+
+Its only purpose is to estimate local runtime/compute cost.
+
+**Lore:** Federal agents are walking the route with rubber evidence bags before
+the real raid.
