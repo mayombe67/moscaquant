@@ -564,3 +564,22 @@ for the frozen full search and yields a prospectively testable ROADBLOCK
 candidate without converting discovery into causality.  
 **Lore:** Federal agents finally got three affected witnesses to name the same
 guy. Then 1273 walked in and said, "Yeah, I know him too."
+
+## THE RACKET Got Keyser Söze'd
+
+**Experiment:** MQ-5.ER.2 — THE RACKET
+
+**Science:** DETOUR's focused edge `116680 -> 12024` produced no preregistered
+causal-support signal when directly lesioned, either alone or on top of the
+original 13-edge lesion. The matched control also produced no effect. A
+post-result audit showed both edges were retina-to-relay edges whose ordinary
+connectome contribution is subject to frozen retinal double-count removal.
+
+**Importance:** BOSS
+
+**Lore:** DETOUR found the same guy in three witness statements. THE RACKET
+pulled him out of the operation and nothing changed. The investigation got
+**Keyser Söze'd**.
+
+The suspect is now **THE NO-SHOW**: on the books, looks important, collects the
+paycheck, but the operation does not notice when he disappears.

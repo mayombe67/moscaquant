@@ -247,3 +247,27 @@ amendment.
 
 **Lore:** We have the suspect and we have the civilian. Now both get the same
 treatment before anybody starts telling stories.
+
+## MQ-5.ER.2 THE RACKET result
+
+Confirmatory result:
+
+- classification: `RACKET_CAUSAL_SUPPORT_NOT_OBSERVED`
+- primary dependency count: `0 / 3`
+- matched-control calibration: `NO_PRIMARY_DEPENDENCY_IN_EITHER_INTERVENTION`
+- target-set specificity: `SPECIFICITY_NOT_ESTABLISHED`
+- result SHA-256: `3c5e18e63330d99c591536a59db9e6d40c5e5e8dca0789b576fa573e6e0bbfb1`
+- financial semantics: `NOT ASSIGNED`
+
+All four intervention arms had normalized responder fingerprint distance `0.0`
+from their corresponding reference condition.
+
+Post-result integrity audit found both the focused edge `116680 -> 12024` and
+matched control `78481 -> 16087` are retina-to-relay edges. Their ordinary
+connectome contributions are subject to the frozen retinal double-count-removal
+path. This identifies a DETOUR discovery-method issue: pre-cancellation
+contribution is not necessarily net effective runtime contribution.
+
+**Lore:** THE RACKET got **Keyser Söze'd**. The focused edge is now **THE
+NO-SHOW** — on the books, repeatedly named, and apparently not doing the job
+the discovery accounting said he was doing.

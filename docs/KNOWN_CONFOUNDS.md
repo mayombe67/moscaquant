@@ -356,3 +356,32 @@ gates.
 Financial semantics remain:
 
 `NOT ASSIGNED`
+
+## DETOUR retinal pre-cancellation scoring
+
+**Status:** OPEN — methodological correction required before future DETOUR-style
+candidate discovery.
+
+MQ-5.ER.2 post-result audit demonstrated that DETOUR can nominate
+retina-to-relay edges whose ordinary connectome contribution is later canceled
+by the frozen retinal double-count-removal path.
+
+Observed example:
+
+- focused candidate: `116680 -> 12024`
+- presynaptic endpoint: frozen retina
+- postsynaptic endpoint: frozen relay
+- THE RACKET causal-support classification:
+  `RACKET_CAUSAL_SUPPORT_NOT_OBSERVED`
+
+Matched-control edge `78481 -> 16087` had the same retina-to-relay structural
+relationship and likewise produced no measurable intervention effect.
+
+**Required correction:** future DETOUR-style discovery must measure net
+effective runtime contribution after retinal cancellation, or explicitly
+exclude ordinary retina-to-relay contributions that are deterministically
+removed by the runtime. Pre-cancellation contribution alone is not sufficient
+for candidate ranking.
+
+This finding does not retroactively alter the frozen MQ-5.ER.1 DETOUR artifact
+or MQ-5.ER.2 THE RACKET result.
