@@ -1,8 +1,8 @@
 # MQ-5.ER — Encoding Robustness
 # CHANGE THE TRANSLATOR
 
-**Status:** PRE-REGISTERED DESIGN / IMPLEMENTATION NOT YET AUTHORIZED  
-**Scope:** frozen MoscaQuant computational model  
+**Status:** PRE-REGISTERED DESIGN / IMPLEMENTATION NOT YET AUTHORIZED
+**Scope:** frozen MoscaQuant computational model
 **Financial semantics:** NOT ASSIGNED
 
 ## Question
@@ -106,11 +106,15 @@ Purpose:
 Test whether accepted responses depend specifically on volatility controlling
 the temporal sampling cadence.
 
-The exact fixed cadence must be frozen before outcome generation.
+The fixed cadence is frozen prospectively at `2.5` cycles per observation,
+the midpoint of the existing `1.0` to `4.0` cadence domain and the value
+corresponding to normalized volatility `0.0`.
 
 ### Arm C — ZERO ENTROPY JITTER
 
-Disable only the entropy-dependent temporal jitter component.
+Disable only the entropy-dependent temporal jitter contribution by setting
+its phase-jitter multiplier to exactly `0.0`. The normalized entropy feature
+value itself remains unchanged.
 
 Hold constant:
 
@@ -132,48 +136,76 @@ If current implementation couples entropy jitter inseparably to another timing
 rule, this arm must not execute until the coupling is explicitly resolved in
 the protocol.
 
-### Arm D — MATCHED RETINAL TERRITORY REMAP
+### Arm D — BALANCED ASSET/TICKER-TERRITORY REMAP FAMILY
 
-Change only the assignment of market feature channels to retinal territories.
+Change only the assignment of the six asset/ticker rows to retinal territories.
 
-The remap must:
+The seven feature columns within every asset row remain unchanged.
+
+Arm D reuses the frozen balanced twelve-mapping design already implemented by
+the ticker/territory control:
+
+- six rotations of identity;
+- six rotations of reversed identity;
+- identity serves as the reference member;
+- eleven non-identity mappings are confirmatory alternatives;
+- every mapping is a permutation of the six asset rows;
+- across all twelve mappings, each asset appears in each territory exactly
+  twice.
+
+The remap family must:
 
 - preserve the exact retinal population;
-- preserve territory sizes;
-- preserve the number of feature channels;
-- preserve each feature's temporal values;
-- preserve total delivered sensory magnitude per frame;
+- preserve territory geometry and sizes;
+- preserve all seven within-row feature values;
 - preserve temporal encoding;
 - preserve sensory gain;
-- use a prospectively frozen deterministic permutation;
-- avoid selecting a permutation based on neural outcomes.
+- preserve the full twelve-mapping balanced design;
+- avoid selecting or dropping mappings based on neural outcomes.
 
 Purpose:
 
-Test whether the accepted response depends on the particular hand-designed
-feature-to-retina spatial assignment.
+Test whether the accepted response depends on the hand-designed
+asset/ticker-to-retinal-territory assignment.
 
-This is an encoding robustness test, not a topology null.
+Arm D is an encoding robustness test, not a topology null.
 
-### Arm E — MOTION-RULE ALTERNATIVE
+### Arm E — NO MOMENTUM-DEPENDENT TEMPORAL MOTION
 
-Replace only the frozen temporal/spatial motion rule with one prospectively
-specified deterministic alternative that preserves:
+Disable only the hand-designed temporal translation of momentum into coherent
+horizontal motion.
 
-- feature values;
-- feature identities;
+The frozen encoder normally applies:
+
+`1 + 0.25 * momentum * motion_phase * geometry.x`
+
+before per-frame energy renormalization.
+
+Arm E freezes:
+
+`motion_weight = 1.0`
+
+for every neuron and frame while leaving the normalized momentum feature itself
+unchanged.
+
+Hold constant:
+
+- base spatial feature pattern;
+- feature values and identities;
 - retinal territories;
-- timing/cadence;
-- entropy-jitter rule;
-- total per-frame sensory magnitude within predefined numerical tolerance;
-- sensory gain.
-
-The exact alternative motion rule must be defined from implementation-level
-encoder semantics before result execution.
+- volatility-dependent cadence;
+- entropy-dependent jitter;
+- spatial energy normalization;
+- mean territory energy;
+- sensory gain;
+- neural substrate.
 
 Purpose:
 
-Test whether accepted responses depend on the particular motion construction.
+Test whether accepted responses require the specific momentum-to-horizontal-
+motion encoding rule.
+
+This arm does not claim to test every reasonable alternative motion encoding.
 
 ## Sensory gain
 
@@ -273,6 +305,22 @@ The frozen reference targets are:
 - the 9 accepted MQ-3.2 responders;
 - the 13 accepted first-onset causal relationships;
 - the accepted 192-frame evaluation episode.
+
+## Arm D mapping-family classification
+
+Arm D is classified across all eleven non-identity remaps:
+
+- `ASSET-TERRITORY ROBUST ACROSS TESTED REMAPS`:
+  all `11 / 11` satisfy the frozen response-preservation criteria;
+- `MIXED ASSET-TERRITORY DEPENDENCE`:
+  between `1 / 11` and `10 / 11` satisfy the criteria;
+- `ASSET-TERRITORY ASSIGNMENT DEPENDENCE SUPPORTED`:
+  `0 / 11` satisfy the criteria.
+
+No remap may be dropped, replaced, or rerun with a different mapping because of
+its neural outcome.
+
+These labels describe only the frozen tested mapping family.
 
 ## Classification philosophy
 
@@ -375,9 +423,9 @@ Before any result-bearing execution:
 2. map each proposed arm to exact code-level semantics;
 3. determine whether B, C, D, and E are truly one-factor changes;
 4. implement deterministic encoding-only fixtures;
-5. freeze exact B cadence;
-6. freeze exact D retinal permutation;
-7. freeze exact E motion rule;
+5. verify the frozen Arm B cadence of `2.5` cycles;
+6. verify the frozen twelve-mapping Arm D balanced asset/territory family;
+7. verify Arm E's frozen `motion_weight = 1.0` semantics;
 8. freeze preservation tolerances;
 9. add tests proving held-constant components are unchanged;
 10. commit implementation and configuration;

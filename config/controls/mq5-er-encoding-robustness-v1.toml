@@ -4,6 +4,7 @@ title = "MQ-5.ER Encoding Robustness — CHANGE THE TRANSLATOR"
 status = "protocol-design-only"
 financial_semantics = false
 frames = 192
+amendment = "mq5-er-encoding-robustness-amendment-v1"
 
 [reference]
 arm = "A"
@@ -15,26 +16,36 @@ require_duplicate_replay = true
 name = "fixed-temporal-cadence"
 authorized_for_result_execution = false
 changes = ["volatility-dependent-cadence"]
-exact_parameter_pending_implementation_freeze = true
+fixed_cycles = 2.5
+exact_parameter_pending_implementation_freeze = false
 
 [arms.C]
 name = "zero-entropy-jitter"
 authorized_for_result_execution = false
 changes = ["entropy-dependent-temporal-jitter"]
+jitter_phase_multiplier = 0.0
+normalized_entropy_feature_unchanged = true
 
 [arms.D]
-name = "matched-retinal-territory-remap"
+name = "balanced-asset-territory-remap-family"
 authorized_for_result_execution = false
-changes = ["feature-to-retinal-territory-assignment"]
+changes = ["asset-row-to-retinal-territory-assignment"]
 preserve_territory_sizes = true
 preserve_retinal_population = true
-deterministic_permutation_pending_freeze = true
+mapping_family = "ticker-territory-balanced-12"
+mapping_count_total = 12
+identity_mapping_count = 1
+nonidentity_mapping_count = 11
+each_asset_each_territory_count = 2
+deterministic_permutation_pending_freeze = false
 
 [arms.E]
-name = "motion-rule-alternative"
+name = "no-momentum-dependent-temporal-motion"
 authorized_for_result_execution = false
-changes = ["motion-rule"]
-exact_rule_pending_implementation_freeze = true
+changes = ["momentum-to-horizontal-temporal-motion"]
+motion_weight = 1.0
+normalized_momentum_feature_unchanged = true
+exact_rule_pending_implementation_freeze = false
 
 [substrate]
 topology = "original-malecns"
