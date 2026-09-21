@@ -318,3 +318,49 @@ financial, or trading claims.
 
 See `docs/experiments/sq03f6-the-commission-results.md` for the recorded result
 and provenance boundary.
+
+
+<!-- MOSCAQUANT:SITE19B:README:BEGIN -->
+## Current phase — SITE-19B / OPEN THE PANOPTICON
+
+MoscaQuant has entered **SITE-19B**: the experimental system is now being instrumented for
+real-time public observation through **Panopticon**.
+
+**Current program:** `MQ-9 — OPEN THE PANOPTICON`  
+**Prospective public launch / MQ-001 birthday:** **October 30, 2026**  
+**Public rollout:** Panopticon beta precedes launch with an `EMPLOYEE ACTIVATION WINDOW`
+countdown.  
+**Validation status at this transition:** **554 tests passing**.
+
+### Completed Panopticon foundations
+
+- OVERWATCH telemetry envelope and sanitized public projection
+- runtime collectors and event emitters
+- local and object-storage contracts
+- immutable segmented telemetry storage
+- RECEIPTS integrity verification
+- behavioral/internal-state telemetry
+- 2D portrait reaction contract
+- model-derived motor telemetry
+- `CELL-67.BIRTHDAY.v1`
+- beta / launch countdown contract
+- Anomalous Observances / **BLACKSITE HOLIDAYS**
+- Containment Modifier / **PANOPTICON REFERENDUM** unlock system
+
+### Building now
+
+The current implementation focus is the live containment surface:
+
+- `CELL-67` constraint, contact and physics telemetry
+- motor intent versus achieved physical pose
+- neural → motor → pose integration
+- real-time 3D CELL-67 rendering
+- public-safe live telemetry transport and HUD
+- deterministic replay / historical state reconstruction
+
+The live page remains **signal-first**. Detailed lore, modifier collections, referendum history,
+achievements, lineage, sponsor history, meme history and RECEIPTS belong on deeper Panopticon
+surfaces rather than competing with the primary containment view.
+
+> Comedy is downstream of evidence.
+<!-- MOSCAQUANT:SITE19B:README:END -->
