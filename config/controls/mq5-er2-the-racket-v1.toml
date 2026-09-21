@@ -57,3 +57,11 @@ log1p_pre_outdegree = 0.0
 log1p_post_indegree = 0.1112256351102241
 max_distance = 0.1112256351102241
 sum_distance = 0.20312096059341844
+
+[matched_control_intervention]
+enabled = true
+control_only_arm = "CC"
+control_plus_13_arm = "C13C"
+primary_control_comparison = "C13C_vs_C13"
+same_dependency_endpoint_as_focused_edge = true
+target_set_specificity_separate_from_edge_specificity = true

@@ -227,3 +227,23 @@ topology match.
 
 **Lore:** The lineup finally has a civilian. Same neighborhood, similar books,
 no one in DETOUR ever named him.
+
+## MQ-5.ER.2 matched-control intervention amendment
+
+Frozen pre-outcome amendment: the structurally matched control
+`78481 -> 16087` is now an actual intervention control.
+
+Added arms:
+
+- `CC`: Arm C baseline + matched-control edge lesion.
+- `C13C`: original 13-edge lesion + matched-control edge lesion.
+
+The primary focused-edge necessity test remains `C13R` versus `C13`. The
+matched-control calibration uses the same endpoint in `C13C` versus `C13`.
+Target-set specificity and matched-edge specificity are reported separately.
+
+No MQ-5.ER.2 neural outcome had been generated or inspected before this
+amendment.
+
+**Lore:** We have the suspect and we have the civilian. Now both get the same
+treatment before anybody starts telling stories.

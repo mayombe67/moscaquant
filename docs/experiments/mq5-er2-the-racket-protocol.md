@@ -238,3 +238,60 @@ If multiple downstream targets stop responding, somebody really was giving
 orders through him.
 
 The jokes remain downstream of the evidence.
+
+## Pre-outcome matched-control intervention amendment
+
+This amendment is frozen before any MQ-5.ER.2 neural outcome is generated.
+
+The matched-control edge selected under the frozen V2 structural rule is
+`78481 -> 16087`. The control must be used as an intervention, not merely
+reported as a structural descriptor.
+
+Two additional arms are therefore part of the confirmatory design:
+
+- **CC** = Arm C baseline + matched-control edge lesion only.
+- **C13C** = original frozen 13-edge lesion + matched-control edge lesion.
+
+The complete intervention set is:
+
+- **C0** — Arm C baseline, no lesion.
+- **C13** — original frozen 13-edge lesion only.
+- **CR** — focused RACKET edge `116680 -> 12024` lesioned only.
+- **C13R** — original 13-edge lesion + focused RACKET edge.
+- **CC** — matched-control edge `78481 -> 16087` lesioned only.
+- **C13C** — original 13-edge lesion + matched-control edge.
+
+The preregistered primary necessity endpoint remains **C13R versus C13**:
+for a target, focused-edge dependency is observed only if C13R has a later
+first-positive onset than C13 or the target is present in C13 and absent within
+192 frames in C13R. Earlier onset is not evidence of necessity.
+
+The matched-control calibration comparison is **C13C versus C13**, using the
+same endpoint definition. It asks whether a structurally similar non-candidate
+edge produces the same kind of dependency signal.
+
+Interpretation is constrained as follows:
+
+- focused-edge dependency with no matched-control dependency strengthens the
+  case that the focused DETOUR candidate is not merely one interchangeable
+  perturbation of similar structural size;
+- focused-edge and matched-control dependency together indicate a
+  non-specific or shared perturbation effect within this tested control;
+- matched-control dependency without focused-edge dependency argues against
+  interpreting the focused edge as the relevant causal dependency;
+- neither comparison establishes uniqueness, sufficiency, biological
+  causality, cognition, financial semantics, or market-predictive value.
+
+Target-set specificity and matched-edge specificity are separate axes and must
+not be collapsed into one label.
+
+No threshold, target set, lesion, encoder, runtime parameter, or classification
+rule may be retuned from MQ-5.ER.1 outcomes or from any MQ-5.ER.2 result.
+
+### Lore
+
+The suspect gets pulled out of the room. Then the civilian gets pulled out of
+the room under the same rules.
+
+If the whole operation falls apart either way, the cops learned nothing from
+the lineup. If only the suspect matters, now the sit-down gets interesting.
