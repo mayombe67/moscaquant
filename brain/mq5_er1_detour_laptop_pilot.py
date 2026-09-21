@@ -27,7 +27,7 @@ from config.paths import data_path
 CONFIG = Path("config/controls/mq5-er1-detour-laptop-pilot-v1.toml")
 OUTPUT = data_path(
     "experiments",
-    "mq5-er1-detour-laptop-pilot-v1.json",
+    "mq5-er1-detour-laptop-pilot-r2-v1.json",
 )
 MAX_BACKWARD_HOPS = 2
 
@@ -151,7 +151,7 @@ def run_pilot() -> dict:
             )
 
         payload = {
-            "experiment": "mq5-er1-detour-laptop-pilot-v1",
+            "experiment": "mq5-er1-detour-laptop-pilot-r2-v1",
             "parent_experiment": "mq5-er1-detour-v1",
             "status": "ENGINEERING PILOT — NON-AUTHORITATIVE",
             "authoritative": False,

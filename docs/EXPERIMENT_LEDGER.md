@@ -123,3 +123,16 @@ DETOUR result.
 
 **Lore:** Internal Affairs now checks the getaway car too, not just the
 suspects standing in the lineup.
+
+## MQ-5.ER.1-LP-R2 — hardened-scorer replication
+
+A second two-hop laptop pilot is authorized only as an engineering replication
+after deterministic tie-handling hardening and C-LESION13 replay verification.
+
+R2 uses the same two-hop scope and the same non-authoritative claim boundary as
+R1. Its purpose is to compare candidate ordering and pilot classification
+against R1 under the hardened implementation.
+
+R2 cannot supply MQ-5.ER.2 ROADBLOCK candidates.
+
+**Lore:** Same neighborhood, same warrant, better paperwork.
