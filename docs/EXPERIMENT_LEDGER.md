@@ -96,3 +96,10 @@ only and do not modify status, authority, classification, or claim boundaries.
   for two hops only. Federal agents will handle hop three.
 - **Engineering incident:** The first DETOUR inventory attempt caused the
   surveillance laptop to flee the scene. No scientific result was generated.
+
+## MQ-5.ER.1-LP implementation note
+
+The laptop-pilot wrapper reuses the authoritative DETOUR factorized scorer with
+an explicit two-hop parameter. The authoritative runner's default remains
+three hops. Pilot execution remains disabled pending a separate authorization
+checkpoint.

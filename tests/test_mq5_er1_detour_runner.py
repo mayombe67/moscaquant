@@ -166,3 +166,45 @@ def test_classification_focused_only_on_three_target_edge_recurrence():
         }
 
     assert classify_family(by_target) == "FOCUSED_DETOUR_CANDIDATES"
+
+
+def test_streaming_depth_parameter_preserves_default_three_hops():
+    matrix = np.zeros((5, 5), dtype=np.float32)
+    matrix[4, 3] = 1.0
+    matrix[3, 2] = 1.0
+    matrix[2, 1] = 1.0
+    csr = sparse.csr_matrix(matrix)
+
+    divergence = np.ones(5, dtype=np.float64)
+    persistence = np.ones(5, dtype=np.float64)
+
+    default_result = score_target_streaming(
+        original=csr,
+        lesioned_edges=set(),
+        target=4,
+        onset=1,
+        divergence_snapshot=divergence,
+        lesion_snapshot=persistence,
+    )
+
+    two_hop_result = score_target_streaming(
+        original=csr,
+        lesioned_edges=set(),
+        target=4,
+        onset=1,
+        divergence_snapshot=divergence,
+        lesion_snapshot=persistence,
+        max_backward_hops=2,
+    )
+
+    default_edges = {
+        (r["presynaptic"], r["postsynaptic"])
+        for r in default_result["top_candidates"]
+    }
+    two_hop_edges = {
+        (r["presynaptic"], r["postsynaptic"])
+        for r in two_hop_result["top_candidates"]
+    }
+
+    assert (1, 2) in default_edges
+    assert (1, 2) not in two_hop_edges

@@ -394,13 +394,14 @@ def score_target_streaming(
     onset: int,
     divergence_snapshot: np.ndarray,
     lesion_snapshot: np.ndarray,
+    max_backward_hops: int = MAX_BACKWARD_HOPS,
 ):
     frontier = np.asarray([int(target)], dtype=np.int32)
     visited_posts: set[int] = set()
     heap = []
     edge_visits = 0
 
-    for hop in range(1, MAX_BACKWARD_HOPS + 1):
+    for hop in range(1, int(max_backward_hops) + 1):
         next_nodes = []
 
         for post_raw in frontier:

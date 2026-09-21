@@ -72,3 +72,16 @@ absence is not a result of the preregistered MQ-5.ER.1 DETOUR experiment.
 
 The authoritative scientific question remains deferred until the frozen 3-hop
 run is executed unchanged.
+
+## Pilot runner implementation
+
+The pilot runner is:
+
+`brain/mq5_er1_detour_laptop_pilot.py`
+
+It reuses the frozen DETOUR replay/scoring machinery and differs only by
+passing `max_backward_hops = 2`.
+
+The authoritative DETOUR runner retains its default `MAX_BACKWARD_HOPS = 3`.
+
+Pilot result execution remains disabled until a separate authorization commit.
