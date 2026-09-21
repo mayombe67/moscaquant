@@ -78,6 +78,7 @@ def write_latest_render_frame(
             os.fsync(handle.fileno())
 
         os.replace(temp_name, destination)
+        os.chmod(destination, 0o640)
     except Exception:
         try:
             os.unlink(temp_name)
