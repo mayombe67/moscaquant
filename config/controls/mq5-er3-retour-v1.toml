@@ -7,7 +7,7 @@ financial_semantics = "NOT ASSIGNED"
 frames = 192
 max_backward_hops = 3
 top_k_per_target = 5
-result_execution_enabled = false
+result_execution_enabled = true
 
 affected_targets = [55, 92, 656, 126002, 137122]
 retained_dependency_comparisons = [51, 129, 317, 1273]
