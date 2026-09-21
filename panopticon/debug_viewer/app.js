@@ -176,12 +176,21 @@
     ctx.fillText("MQ-001", x - 28, y - 50);
   }
 
-  function render(frame, sourceMode) {
+  
+function feedLabel(sourceMode, frame) {
+  const explicitMode = String(frame?.feed_mode || "").toLowerCase();
+
+  if (explicitMode === "reference") return "REFERENCE FEED";
+  if (explicitMode === "live" || sourceMode === "live") return "LIVE FEED";
+  return "DEMO FEED";
+}
+
+function render(frame, sourceMode) {
     lastFrame = frame;
     const state = extractState(frame);
     drawScene(state);
 
-    els.liveBadge.textContent = sourceMode === "live" ? "LIVE FEED" : "DEMO FEED";
+    els.liveBadge.textContent = feedLabel(sourceMode, frame);
     els.mode.textContent = sourceMode.toUpperCase();
     els.frameLabel.textContent = `frame ${frame.frame_index ?? 0}`;
     els.sequenceLabel.textContent =
