@@ -3124,3 +3124,129 @@ Future implementation intent, subject to a separately frozen protocol:
 
 This section reserves naming and separation-of-concerns only. It does not
 authorize execution.
+
+
+<!-- MOSCAQUANT:SITE19B:CHARTER:BEGIN -->
+## SITE-19B / Panopticon governing rules
+
+The following rules are frozen for the SITE-19B implementation phase.
+
+### Observation before intervention
+
+**OVERWATCH observes, records and reports. It does not silently alter frozen experiment
+behavior.**
+
+OVERWATCH has no independent scientific, perturbation, trading, Oracle, Warden, HR or
+publication authority. Presentation systems remain downstream of recorded evidence.
+
+### Presentation versus scientific state
+
+The 2D MORTY status portrait may convert telemetry into an expressive visual interpretation.
+Those expressions are presentation metadata, not claims of subjective human emotion.
+
+When validated/model-derived motor state exists, the 3D MORTY body must use that state rather
+than substitute canned reaction animations.
+
+The intended physical chain is:
+
+```text
+input / experiment / market state
+        ↓
+neural state
+        ↓
+motor intent / motor state
+        ↓
+physical constraints and contacts
+        ↓
+achieved pose
+        ↓
+Panopticon 3D
+```
+
+A frontend may interpolate pose for rendering. It must not manufacture a scientific motor
+response merely because an event name sounds dramatic.
+
+### CELL-67
+
+The canonical containment environment is `CELL-67`.
+
+Environment configuration and environment telemetry are distinct. Changes to tether geometry,
+collision surfaces, desk geometry or other physical constraints require explicit environment
+versioning.
+
+Normal CELL-67 remains a containment environment even when presentation is intentionally made
+more comfortable, humorous or personalized.
+
+`CELL-67.BIRTHDAY.v1` is an explicit temporary exploratory environment for MQ-001 launch day.
+It removes the normal tether, enables room roaming and supplies interactive birthday props.
+The normal environment is restored afterward.
+
+### SAVE STATE and persistence
+
+Transient presentation reactions must not silently become persistent state.
+
+Persistent effects such as experimentally defined scars, plasticity, learned state, motor
+baseline or other checkpoint-relevant state must survive only when backed by the corresponding
+state/checkpoint telemetry.
+
+Lineage and lore rank do not constitute scientific evidence.
+
+### Anomalous Observances / BLACKSITE HOLIDAYS
+
+MoscaQuant observances are secular.
+
+Every observance declares one science-effect class:
+
+- `PRESENTATION_ONLY`
+- `EXPLORATORY`
+- `EXPERIMENTAL`
+
+An `EXPERIMENTAL` observance requires a frozen protocol. A holiday name, community vote,
+sponsorship or presentation theme cannot authorize a scientific perturbation.
+
+### Containment Modifiers / PANOPTICON REFERENDUM
+
+Containment modifiers are an unlockable presentation/protocol system, not a public settings
+menu.
+
+Each referendum publicly discloses **exactly three** eligible candidates.
+
+The complete hidden catalog and its size remain classified.
+
+The winning modifier becomes permanently `UNLOCKED` unless explicitly retired. Losing
+candidates return to `CLASSIFIED` and may reappear later.
+
+An active modifier must be clearly visible in the HUD and/or 3D CELL-67 presentation, while
+the main Panopticon page remains compact and signal-first.
+
+### Sponsorship boundary
+
+Individuals or companies may sponsor approved observances, referenda, unlocked modifier
+reactivations, presentation assets or independently governed research.
+
+Sponsors may not:
+
+- buy a scientific conclusion;
+- suppress an unfavorable result;
+- bypass a frozen protocol;
+- alter Warden authority;
+- alter result retention;
+- expose the classified modifier catalog;
+- silently change experimental conditions.
+
+**A sponsor may fund science. A sponsor may not buy the answer.**
+
+### Public/private boundary
+
+Public Panopticon receives sanitized projections of recorded telemetry.
+
+Credentials, account identifiers, private infrastructure, execution-sensitive Warden
+internals, licensed/restricted data and other private operational details remain outside the
+public projection.
+
+### Scientific framing
+
+Panopticon can be absurd.
+
+The underlying evidence cannot be.
+<!-- MOSCAQUANT:SITE19B:CHARTER:END -->

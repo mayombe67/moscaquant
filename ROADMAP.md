@@ -1183,3 +1183,69 @@ See:
 - `docs/experiments/sq03f6-the-commission-results.md`
 - `artifacts/sidequests/sq03f6-the-commission-result-v1.json`
 - `artifacts/sidequests/sq03f6-the-commission-provenance-v1.json`
+
+
+<!-- MOSCAQUANT:SITE19B:ROADMAP:BEGIN -->
+## Current execution pointer — MQ-9 / OPEN THE PANOPTICON
+
+**Phase:** SITE-19B implementation  
+**Status:** IN PROGRESS  
+**Validation checkpoint:** 554 tests passing  
+**Prospective public launch / MQ-001 birthday:** October 30, 2026  
+**Rollout:** public beta before launch; countdown transitions into launch-day state.
+
+### SITE-19B foundation — COMPLETE
+
+- [x] OVERWATCH telemetry v1
+- [x] sanitized public projection boundary
+- [x] runtime collectors
+- [x] runtime event integration
+- [x] storage abstraction
+- [x] segmented immutable object storage contract
+- [x] RECEIPTS integrity verification
+- [x] behavioral/internal-state telemetry
+- [x] 2D portrait reaction contract
+- [x] motor telemetry
+- [x] `CELL-67.BIRTHDAY.v1`
+- [x] Panopticon beta / launch countdown contract
+- [x] Anomalous Observances / BLACKSITE HOLIDAYS v1
+- [x] Containment Modifiers / PANOPTICON REFERENDUM v1
+
+### SITE-19B proper — CURRENT
+
+- [ ] freeze canonical CELL-67 coordinate system, units and rig/channel identifiers
+- [ ] model motor intent separately from achieved physical movement
+- [ ] add constraint/contact/tether telemetry
+- [ ] add CELL-67 physical-environment versioning
+- [ ] define high-frequency motor/pose sampling and public downsampling
+- [ ] implement neural → motor → pose integration
+- [ ] implement 3D CELL-67 rig and interpolation
+- [ ] represent normal tether/chain as a physical constraint rather than canned animation
+- [ ] connect 2D portrait to live behavioral/reinforcement telemetry
+- [ ] expose active modifier visibly in HUD / 3D presentation
+- [ ] add public-safe live telemetry transport
+- [ ] add deterministic replay / historical reconstruction
+- [ ] add unlocked-modifier collection and referendum detail surfaces
+- [ ] add achievement / lore overlays without altering scientific content
+- [ ] add second-monitor presentation/meme deck downstream of science
+
+### Launch path
+
+- [ ] Panopticon public beta
+- [ ] live `EMPLOYEE ACTIVATION WINDOW` countdown
+- [ ] launch transition on October 30, 2026
+- [ ] activate `BLACKSITE HOLIDAY #001`
+- [ ] activate `CELL-67.BIRTHDAY.v1`
+- [ ] record roaming / cake / party-hat interactions from actual motor/environment events
+- [ ] restore canonical CELL-67 after the birthday privilege window
+- [ ] preserve launch-day session for replay
+
+### Beyond SITE-19B
+
+`MQ-10 — INTRODUCE THE MONEY` remains downstream of Panopticon infrastructure and the existing
+Warden/financial containment boundary.
+
+New major scientific claims still require appropriate frozen protocols, comparators,
+replication, causal perturbation or explicitly exploratory framing. SITE-19B presentation work
+does not relax that requirement.
+<!-- MOSCAQUANT:SITE19B:ROADMAP:END -->
