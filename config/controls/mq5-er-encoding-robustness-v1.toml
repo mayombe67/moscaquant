@@ -79,7 +79,7 @@ require_bundle_causal_expression_all_targets = true
 posthoc_responder_discovery_forbidden = true
 
 [execution]
-result_execution_enabled = false
+result_execution_enabled = true
 require_clean_git = true
 require_frozen_implementation_commit = true
 require_arm_a_duplicate_replay = true
