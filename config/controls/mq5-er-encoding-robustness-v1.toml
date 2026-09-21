@@ -5,6 +5,7 @@ status = "protocol-design-only"
 financial_semantics = false
 frames = 192
 amendment = "mq5-er-encoding-robustness-amendment-v1"
+response_contract_amendment = "mq5-er-response-contract-amendment-v1"
 
 [reference]
 arm = "A"
@@ -64,10 +65,18 @@ stimulus_to_dn_information = true
 encoding_level_diagnostics = true
 
 [classification]
-preservation_tolerances_frozen = false
+preservation_tolerances_frozen = true
 allow_result_dependent_retuning = false
 allow_responder_reselection = false
 allow_failed_arm_replacement = false
+target_count = 9
+target_indices = [51, 55, 92, 129, 317, 656, 1273, 126002, 137122]
+arm_a_onsets = [149, 146, 145, 148, 147, 145, 147, 147, 146]
+strict_onset_match = "exact"
+fingerprint_normalized_l2_max = 1e-9
+require_all_targets_present = true
+require_bundle_causal_expression_all_targets = true
+posthoc_responder_discovery_forbidden = true
 
 [execution]
 result_execution_enabled = false
@@ -77,3 +86,26 @@ require_arm_a_duplicate_replay = true
 
 [artifact]
 result = "experiments/mq5-er-encoding-robustness-v1.json"
+
+[verification]
+encoding_artifact = "artifacts/mq5-er-encoding-real-artifact-verification-v1.json"
+encoding_artifact_sha256 = "15340cae365c291424f88ac3206e7ddc3f16885a52e89aece96d347bba741acb"
+normalized_episode_sha256 = "0e813cad7c9fe7af487c0373cfaae81e6f691420686d2794be9766bdee836a46"
+retinal_support_count = 3241
+retinal_support_sha256 = "7d9bdb9fd14c6c87bbe1a62ed65f30bc56657c1f17cf1b5b79d3e4092f61613e"
+arm_a_stimulus_sha256 = "9c06a18293dd7dd27b1a1717785e2da25518d4b0081e5266794c3166a3f471e9"
+arm_b_stimulus_sha256 = "50da7b3f749629ba96ed74e40ff065db9b6c9040f141cb452ec91412083a2ba0"
+arm_c_stimulus_sha256 = "e8af8077d7d4c13431f7ad3fa05d81e2009263d9a5cb0e7dd800e889ea61ec8a"
+arm_e_stimulus_sha256 = "b6b3e67336d5a5e169cdbb20227a6119af93f26e149f270790d706133866fee2"
+
+[causal_expression]
+mode = "frozen-13-edge-bundle-lesion"
+criterion = "lesion onset strictly later than encoding baseline or responder absent"
+require_all_9_targets = true
+individual_edge_necessity_claim = false
+
+[arm_d_family_classification]
+preserved_11_of_11 = "ASSET-TERRITORY ROBUST ACROSS TESTED REMAPS"
+retained_11_of_11_but_not_all_preserved = "ASSET-TERRITORY RETAINED BUT ALTERED ACROSS TESTED REMAPS"
+retained_1_to_10_of_11 = "MIXED ASSET-TERRITORY DEPENDENCE"
+retained_0_of_11 = "ASSET-TERRITORY ASSIGNMENT DEPENDENCE SUPPORTED"
