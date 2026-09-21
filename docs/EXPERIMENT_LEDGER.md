@@ -173,3 +173,19 @@ MQ-5.ER.1 completed under the frozen 3-hop protocol.
 
 **Lore:** Federal agents finally got three affected witnesses to name the same
 guy. Then 1273 walked in and said, "Yeah, I know him too."
+
+## MQ-5.ER.2 — THE RACKET preregistration
+
+THE RACKET is the prospective confirmatory follow-up to DETOUR.
+
+- focused edge: `116680 -> 12024`
+- primary targets: `92`, `656`, `137122`
+- key retained comparison: `1273`
+- primary causal comparison: C13R versus C13
+- result execution: disabled
+- financial semantics: NOT ASSIGNED
+- prior placeholder codename: ROADBLOCK
+
+**Lore:** DETOUR found the guy everybody named. THE RACKET finds out whether
+he actually runs the operation — or whether somebody put him out front to take
+the heat.

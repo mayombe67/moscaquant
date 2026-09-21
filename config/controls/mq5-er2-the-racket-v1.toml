@@ -1,0 +1,42 @@
+experiment_id = "mq5-er2-the-racket-v1"
+codename = "THE RACKET"
+kind = "confirmatory"
+parent_experiment = "mq5-er1-detour-v1"
+prior_placeholder_codename = "ROADBLOCK"
+financial_semantics = "NOT ASSIGNED"
+frames = 192
+result_execution_enabled = false
+
+focused_edge_pre = 116680
+focused_edge_post = 12024
+
+primary_targets = [92, 656, 137122]
+affected_negative_comparisons = [55, 126002]
+retained_dependency_comparisons = [51, 129, 317, 1273]
+all_targets = [51, 55, 92, 129, 317, 656, 1273, 126002, 137122]
+
+[arms]
+c0 = "arm_c_baseline"
+c13 = "arm_c_original_13_edge_lesion"
+cr = "arm_c_racket_edge_lesion"
+c13r = "arm_c_original_13_edge_plus_racket_edge_lesion"
+
+[primary_endpoint]
+comparison = "C13R_vs_C13"
+dependency_rule = "later_first_positive_onset_or_loss_within_192_frames"
+earlier_onset_counts_as_dependency = false
+
+[classification]
+complete_primary_dependency_count = 3
+partial_primary_dependency_min = 1
+partial_primary_dependency_max = 2
+not_observed_primary_dependency_count = 0
+
+[integrity]
+require_arm_c_stimulus_hash_replay = true
+require_c0_known_onsets = true
+require_c13_known_onsets = true
+require_exact_focused_edge = true
+require_exact_original_13_edge_lesion = true
+require_clean_worktree_for_authoritative_run = true
+require_control_edge_rule_frozen_before_result = true

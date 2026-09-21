@@ -1441,13 +1441,13 @@ Financial semantics:
 
 **NOT ASSIGNED**
 
-### Next: MQ-5.ER.2 — ROADBLOCK
+### Next: MQ-5.ER.2 — THE RACKET
 
-ROADBLOCK is the required prospective confirmatory follow-up.
+THE RACKET is the required prospective confirmatory follow-up.
 
 It must freeze its intervention design before inspecting confirmatory outcomes
 and test the DETOUR-focused edge against the affected targets and retained
 comparison target `1273`.
 
 The two-hop laptop pilots are engineering records only and may not supply
-ROADBLOCK candidates.
+THE RACKET candidates.
