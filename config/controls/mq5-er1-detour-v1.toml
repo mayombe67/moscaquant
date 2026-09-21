@@ -54,7 +54,7 @@ required_followup = "mq5-er2-roadblock"
 same_analysis_may_confirm_itself = false
 
 [execution]
-result_execution_enabled = false
+result_execution_enabled = true
 full_connectome_result_trace_enabled = false
 synthetic_tests_allowed = true
 non_result_benchmarking_allowed = true
