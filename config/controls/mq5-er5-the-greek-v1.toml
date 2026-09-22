@@ -3,7 +3,7 @@ codename = "THE GREEK"
 financial_semantics = "NOT ASSIGNED"
 kind = "discovery"
 frames = 192
-result_execution_enabled = false
+result_execution_enabled = true
 
 parent_experiment = "mq5-er4-the-stevedores-v1"
 parent_result_sha256 = "4de3cd6f52782908fc7afad853a5db0e0a1595923de1965c0b47606b5329f5dc"
