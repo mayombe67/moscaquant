@@ -1,0 +1,23 @@
+{
+  "attempt_1_preserved_interrupted": true,
+  "attempt_2_prepared": true,
+  "attempt_2_result_execution": false,
+  "attempt_id": "attempt-2",
+  "authorization_record_durable": true,
+  "authorized_command": "--run-frozen",
+  "campaign": "WRATH-OF-THE-MACHINE",
+  "encounter": "AKSIS_ARCHON_PRIME_THE_GREEK",
+  "errors": [],
+  "execution_id": "wotm-the-greek-20260922T201928Z",
+  "financial_semantics": "NOT ASSIGNED",
+  "generated_at": "2026-09-22T23:03:47.632394+00:00",
+  "job_definition_arn": "arn:aws:batch:us-east-2:249215389153:job-definition/moscaquant-rasputin-wrath-aksis:1",
+  "launch_authorized": true,
+  "previous_attempt_id": "attempt-1",
+  "prior_completion_absent": true,
+  "result_destination": "s3://moscaquant-rasputin-artifacts-249215389153/raid/wrath-of-the-machine/wotm-the-greek-20260922T201928Z/",
+  "run_frozen_invoked_for_attempt_2": false,
+  "runtime_timeout_seconds": 21600,
+  "schema_version": "moscaquant.rasputin.wotm-aksis-attempt2-authorization.v1",
+  "scientific_authority_granted": false
+}
