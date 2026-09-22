@@ -3416,3 +3416,59 @@ protocol under execution pressure; it creates no scientific evidence.
 
 Completion of PROJECT RASPUTIN is defined by the successful end-to-end raid
 described in the canonical Roadmap and infrastructure design document.
+
+#### RSP-00 — THE INVESTIGATION
+
+**Status:** COMPLETE
+
+Before PROJECT RASPUTIN implementation begins, MoscaQuant SHALL distinguish an
+actual scientific-runtime capacity failure from a failure of the surrounding
+execution environment.
+
+The incident that triggered the immediate RASPUTIN campaign was investigated
+before any cloud infrastructure was used.
+
+Observed evidence for the September 21, 2026 incident:
+
+- GNOME Terminal emitted GTK widget assertion failures;
+- `gnome-terminal-server` then terminated with `status=11/SEGV`;
+- no contemporaneous THE GREEK result artifact was produced;
+- no THE GREEK process remained after the terminal failure;
+- no evidence from the captured incident log established that THE GREEK itself
+  exhausted memory, crashed Python, or completed.
+
+**Classification:** `NON-RESULT — EXECUTION SESSION FAILURE`
+
+The failed session SHALL NOT be interpreted as evidence for or against the
+MQ-5.ER.5 hypothesis.
+
+The incident changes infrastructure requirements, not experimental meaning.
+
+RASPUTIN therefore SHALL ensure that authoritative scientific execution is
+independent of the lifetime of an interactive GUI terminal and SHALL provide,
+at minimum:
+
+- supervised / detached execution;
+- durable logs outside the interactive session;
+- explicit run-state tracking;
+- crash-independent artifact handling;
+- provenance for infrastructure failure and retries;
+- authoritative result acceptance only after all frozen execution gates pass.
+
+Historical OOM incidents on Habitat remain relevant capacity evidence, but they
+are distinct from this specific terminal-segfault incident and SHALL NOT be
+conflated with it.
+
+**Operational lesson:** parity and scale are insufficient if the execution
+substrate itself is fragile.
+
+**Scientific lesson:** infrastructure failure is not scientific evidence.
+
+**Lore canon:** the console did not die in vain.
+
+GNOME Terminal is recorded as the first infrastructure casualty of
+**AWAKEN RASPUTIN**. Its failure exposed the need for supervised,
+session-independent scientific execution and directly hardened the design of
+PROJECT RASPUTIN.
+
+This memorial is narrative canon only. It creates no scientific result.
