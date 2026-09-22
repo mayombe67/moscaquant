@@ -1458,3 +1458,178 @@ Preregistered discovery follow-up to THE RACKET. Correct DETOUR candidate
 eligibility for frozen retinal double-count removal, verify THE NO-SHOW as a
 negative control, then rerun the 3-hop discovery search under runtime-aligned
 candidate semantics.
+
+## PROJECT RASPUTIN — AWAKEN RASPUTIN
+
+**Status:** NEXT INFRASTRUCTURE CAMPAIGN
+
+**Mission:** build a production-grade elastic execution plane capable of
+running MoscaQuant science at the scale demanded by the hypothesis rather than
+the scale tolerated by Habitat.
+
+**Scientific boundary:** infrastructure may change execution capacity, never
+experimental meaning.
+
+### RSP-01 — STRIKE: SERAPH'S SHIELD
+
+**Technical objective:** establish the secure infrastructure foundation.
+
+- Terraform modules and environment layout;
+- remote Terraform state with locking and encryption;
+- AWS identity through short-lived credentials / federation;
+- least-privilege IAM roles for control plane, workers, and artifact access;
+- encrypted artifact storage;
+- container registry;
+- budget alarms and explicit cost guardrails;
+- no scientific worker requires inbound administrative access.
+
+**Storyline:** Zavala secures the perimeter before anybody wakes the Warmind.
+
+**Exit gate:** infrastructure can be planned, applied, destroyed, and recreated
+without manual snowflake state.
+
+### RSP-02 — STRIKE: OFF-WORLD RECOVERY
+
+**Technical objective:** make a scientific run immutable and transportable.
+
+- build the MoscaQuant execution image;
+- pin the runtime by OCI image digest;
+- checkout / embed the exact Git SHA;
+- stage frozen input artifacts by SHA-256;
+- define the provider-neutral run manifest;
+- verify every required input before execution;
+- publish logs, result artifacts, and provenance to deterministic namespaces.
+
+**Storyline:** recover everything RASPUTIN needs before asking it to think.
+
+**Exit gate:** a run bundle can be reconstructed from recorded provenance
+without relying on Habitat's mutable local environment.
+
+### RSP-03 — STRIKE: WARMIND NETWORK
+
+**Technical objective:** create the elastic batch execution fabric.
+
+- AWS Batch / Spot-backed compute environment;
+- diversified instance families rather than a single hard-coded instance type;
+- CPU, memory, and parallel runtime profiles;
+- deterministic job definitions;
+- queueing and fan-out support;
+- automatic scale-to-zero;
+- Spot interruption signaling;
+- clean termination after job completion.
+
+**Storyline:** reconnect the bunkers. RASPUTIN gets a network instead of one
+heroic laptop core.
+
+**Exit gate:** the same frozen job can execute on multiple approved runtime
+profiles without changing its scientific configuration.
+
+### RSP-04 — STRIKE: THE TYRANT'S TEST
+
+**Technical objective:** prove runtime parity before granting scientific
+authority.
+
+- execute an accepted deterministic local fixture on Habitat;
+- execute the same fixture through RASPUTIN;
+- compare frozen stimulus identity;
+- compare selected neural outputs / accepted deterministic metrics;
+- compare artifact/configuration hashes;
+- record runtime metadata;
+- fail closed on unexplained divergence.
+
+**Storyline:** waking the Warmind is not enough. It has to prove it is the same
+machine scientifically.
+
+**Exit gate:** at least one RASPUTIN runtime class is marked
+`AUTHORITATIVE_RUNTIME_ACCEPTED`.
+
+### RSP-05 — STRIKE: ABHORRENT IMPERATIVE
+
+**Technical objective:** prove failure handling under hostile infrastructure
+conditions.
+
+- terminate a Spot worker during a controlled test;
+- verify incomplete work cannot become an accepted result;
+- verify retries are idempotent;
+- verify duplicate execution cannot overwrite accepted artifacts silently;
+- verify resumable jobs resume only when the experiment explicitly permits it;
+- verify budget termination remains an infrastructure failure, not a scientific
+  stopping rule;
+- verify final manifests preserve interruption and retry history.
+
+**Storyline:** RASPUTIN is ordered to survive the ugly case before being trusted
+with the real one.
+
+**Exit gate:** forced interruption leaves provenance intact and scientific state
+fail-closed.
+
+### RSP-06 — STRIKE: SERAPH STATION
+
+**Technical objective:** make the platform observable and operable.
+
+- structured run IDs;
+- searchable logs;
+- CPU / memory / wall-time telemetry;
+- Spot interruption metrics;
+- cost attribution per run;
+- artifact and manifest lookup;
+- queue and worker visibility;
+- one-command status, logs, artifact, and termination workflows;
+- alarms for failed parity, failed upload, runaway cost, and orphan workers.
+
+**Storyline:** the Warmind can see the battlefield and the operators can see the
+Warmind.
+
+**Exit gate:** an operator can explain where a run is, what it costs, what code
+it is running, what inputs it consumed, and why it failed without SSHing into a
+worker.
+
+### RAID — WRATH OF THE MACHINE
+
+**Raid objective:** complete the first authoritative end-to-end scientific run
+through RASPUTIN.
+
+Target workload:
+
+**MQ-5.ER.5 — THE GREEK**
+
+The raid SHALL:
+
+1. select an accepted RASPUTIN runtime profile;
+2. launch from the frozen Git SHA;
+3. verify every frozen input/config artifact before execution;
+4. execute THE GREEK without altering its scientific contract;
+5. capture logs and resource telemetry;
+6. write the result artifact;
+7. calculate and record the result SHA-256;
+8. publish the full execution manifest;
+9. verify successful artifact retrieval;
+10. tear the worker environment down cleanly.
+
+#### RAID BOSS — AKSIS, ARCHON PRIME
+
+AKSIS represents the final integration problem: immutable build, cloud identity,
+artifact provenance, elastic scheduling, Spot failure handling, observability,
+scientific parity, and clean teardown must all work as one system.
+
+The boss is defeated only when THE GREEK completes authoritatively on RASPUTIN
+and the entire run can be reconstructed from provenance without relying on
+unrecorded manual state.
+
+**PROJECT RASPUTIN COMPLETE** requires:
+
+- all six strikes closed;
+- runtime parity accepted;
+- forced-failure behavior validated;
+- THE GREEK authoritative result captured;
+- result and execution-manifest hashes recorded;
+- infrastructure teardown verified;
+- no change to THE GREEK scientific semantics.
+
+After the raid, RASPUTIN becomes reusable infrastructure for later MoscaQuant
+science and scale-out execution.
+
+THE WEAVE remains a separate scientific decision. It may begin only if the
+completed evidence justifies it.
+
+**Scale changes runtime architecture, not experimental meaning.**

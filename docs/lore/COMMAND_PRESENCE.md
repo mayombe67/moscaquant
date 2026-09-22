@@ -28,3 +28,45 @@ Bubbles remains an observational character and can disappear from the narrative
 when telemetry is not needed. McNulty remains the hypothesis generator.
 Lester remains method discipline. Omar remains reserved for causally validated
 disruption.
+
+## AWAKEN RASPUTIN
+
+THE GREEK did not receive an outcome on Habitat. The execution substrate hit
+its practical limit before the investigation could close.
+
+That event produces no scientific evidence.
+
+It does, however, close the command-presence arc.
+
+**DANIELS / ZAVALA BLEED: 100%**
+
+Zavala's first directive at full command presence is to wake **RASPUTIN**.
+
+The campaign proceeds through six strikes:
+
+1. **SERAPH'S SHIELD** — secure the execution perimeter.
+2. **OFF-WORLD RECOVERY** — make the workload immutable and transportable.
+3. **WARMIND NETWORK** — give RASPUTIN elastic workers.
+4. **THE TYRANT'S TEST** — prove scientific runtime parity.
+5. **ABHORRENT IMPERATIVE** — survive forced infrastructure failure without
+   corrupting scientific state.
+6. **SERAPH STATION** — establish full operational visibility.
+
+The campaign ends with:
+
+**RAID — WRATH OF THE MACHINE**
+
+**RAID BOSS — AKSIS, ARCHON PRIME**
+
+The raid is not won because a cloud job returned exit code zero. It is won only
+when THE GREEK completes under the frozen contract and the run's code, inputs,
+environment, telemetry, outputs, hashes, failure history, and teardown are all
+accounted for.
+
+This is the infrastructure expression of the same MoscaQuant rule used
+throughout the science:
+
+**Do not move the goalposts. Build a better apparatus.**
+
+THE WEAVE does not activate because Habitat failed or because RASPUTIN wakes.
+Its activation remains evidence-dependent.

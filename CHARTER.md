@@ -3353,3 +3353,66 @@ Authoritative DETOUR result SHA-256:
 Financial semantics remain:
 
 **NOT ASSIGNED**
+
+### PROJECT RASPUTIN — Elastic Scientific Execution Plane
+
+**Canonical status:** PLANNED / INFRASTRUCTURE PRIORITY
+
+PROJECT RASPUTIN is MoscaQuant's provider-neutral elastic execution plane.
+
+RASPUTIN exists so compute capacity does not become a hidden experimental
+constraint.
+
+Canonical invariant:
+
+**RASPUTIN may change horsepower. It may never change experimental meaning.**
+
+RASPUTIN SHALL preserve the existing separation between:
+
+- scientific configuration;
+- experiment configuration;
+- runtime / machine configuration.
+
+Before any RASPUTIN runtime profile may produce authoritative scientific
+results, it SHALL pass the frozen runtime-parity acceptance gate.
+
+Provider-specific infrastructure is an implementation adapter below RASPUTIN.
+The first target is AWS using Spot capacity for batch scientific execution.
+
+RASPUTIN is intended to scale across:
+
+- single large CPU / memory experiments;
+- repeated-seed robustness studies;
+- matched-null populations;
+- embarrassingly parallel experimental sweeps;
+- ensemble and population perturbation studies;
+- checkpointable long-running workloads when the frozen experiment permits
+  resumable execution;
+- later MoscaQuant service deployment through a separate application authority
+  path.
+
+Scientific jobs and application deployments may share infrastructure primitives
+but SHALL NOT share scientific authority, IAM boundaries, result namespaces, or
+acceptance gates.
+
+The immediate canonical quest is:
+
+**AWAKEN RASPUTIN**
+
+Its first production scientific workload is the already-frozen MQ-5.ER.5 —
+THE GREEK.
+
+Habitat non-completion is an execution-layer limitation, not an experimental
+result. THE GREEK's frozen hypothesis, targets, search depth, ranking,
+classification thresholds, stopping rule, and claim boundaries SHALL NOT be
+changed merely to make cloud execution convenient.
+
+At the start of PROJECT RASPUTIN:
+
+**DANIELS / ZAVALA BLEED: 100%**
+
+This is narrative canon only. The transformation represents preservation of
+protocol under execution pressure; it creates no scientific evidence.
+
+Completion of PROJECT RASPUTIN is defined by the successful end-to-end raid
+described in the canonical Roadmap and infrastructure design document.
