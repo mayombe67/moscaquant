@@ -307,3 +307,36 @@ A joint-only result is described as **redundancy-compatible** or
 **distributed-routing-compatible** only. It does not prove redundancy.
 
 No blind replacement-candidate search is authorized by MQ-5.ER.4.
+
+
+## Result closeout
+
+Authoritative result artifact:
+`/home/wil/moscaquant-data/experiments/mq5-er4-the-stevedores-v1.json`
+
+SHA-256:
+`4de3cd6f52782908fc7afad853a5db0e0a1595923de1965c0b47606b5329f5dc`
+
+Result commit:
+`7134cbc81d1b40174646424e5da0ecf2ed69d98f`
+
+Frozen primary outcome:
+
+- S1: `SINGLE_EDGE_CAUSAL_SUPPORT_NOT_OBSERVED`
+- S2: `SINGLE_EDGE_CAUSAL_SUPPORT_NOT_OBSERVED`
+- S3: `SINGLE_EDGE_CAUSAL_SUPPORT_NOT_OBSERVED`
+- S1+S2+S3: `COMBINED_SET_CAUSAL_SUPPORT_NOT_OBSERVED`
+- affected-target dependency count under combined lesion: `0/5`
+- redundancy-compatible pattern: not observed for any frozen affected target
+- specificity: not established because no preregistered dependency was observed
+
+Secondary descriptive telemetry showed that S3 changed positive-voltage amplitude
+for some targets while preserving all frozen first-positive onsets. In
+particular, target `92` showed a reduced integrated positive voltage under the
+S3 lesion, but onset remained frame `141`. This is descriptive waveform
+sensitivity, not evidence for the preregistered necessity endpoint.
+
+Per the pre-run stopping rule, this three-candidate STEVEDORE branch is closed.
+No pairwise follow-up is authorized because the combined lesion was null on the
+frozen affected-target dependency endpoint. Any deeper investigation requires a
+new independent hypothesis and a new preregistration.
