@@ -615,71 +615,89 @@ Omar has not shown up yet.
 **Science:** focused runtime-aligned discovery candidates only. No causal claim
 until a preregistered intervention tests them.
 
-## THE STEVEDORES — Preregistered
+## THE STEVEDORES — The Shift Wasn't Moving the Package
 
-**Reference:** MQ-5.ER.4 — THE STEVEDORES preregistration.
+**Reference:** MQ-5.ER.4 — THE STEVEDORES confirmatory result.
+
+**Importance:** BOSS
+
+**Science:** RETOUR produced three recurrent runtime-aligned candidates, but
+confirmatory intervention found no preregistered first-positive-onset dependency
+for S1, S2, or S3 individually, and no dependency when all three were removed
+together. The combined lesion affected `0/5` frozen affected targets on the
+primary endpoint, so no redundancy-compatible pattern was observed and
+specificity was not established.
+
+S3 did change secondary positive-voltage amplitude for some responders while
+leaving every frozen onset unchanged. That is recorded as descriptive waveform
+sensitivity only. Under the precommitted stopping rule, the three-candidate
+STEVEDORE branch is closed; deeper work requires a new independent hypothesis.
+
+**Lore:** We pulled one stevedore. Package arrived on time. We pulled the
+second. Package arrived on time. We pulled the third. Still on time. Then
+Lester cleared the entire shift off the dock and the package still showed up
+when it was supposed to.
+
+That is when the case changes.
+
+The stevedores were around the handoffs, and one of them could lean on the
+container hard enough to change what the package looked like, but they were not
+the thing keeping the shipment on schedule. McNulty has been staring at
+Horseface. Lester has started staring past Horseface.
+
+Bubbles has filed his last report for this branch and returned to the street
+until somebody actually needs an observer again.
+
+Enter **Cedric Daniels** as protocol command. His job is not to solve the case;
+his job is to stop McNulty from turning a clean null into probable cause. As
+long as the unit keeps following frozen protocol, Daniels remains Daniels.
+Every clean preregistration, every respected stopping rule, every refusal to
+fish after a null moves him one step closer to **Commander Zavala**.
+
+McNulty, meanwhile, has written one new phrase on the board:
+
+**THE GREEK**
+
+Lester: "Now you finally have a new question."
+
+No Omar whistle. The disruption never earned it.
+
+
+## THE GREEK — Preregistered
+
+**Reference:** MQ-5.ER.5 — THE GREEK preregistration.
 
 **Importance:** UNRANKED — result not yet available.
 
-**Science:** Three runtime-aligned recurrent candidates from RETOUR are frozen
-for individual and combined causal intervention against the C13 baseline.
-Outcome-blind structural controls were selected before any MQ-5.ER.4 neural
-outcome was inspected. `BUBBLES REPORT` is descriptive telemetry only and
-cannot upgrade the preregistered causal endpoint.
+**Science:** THE STEVEDORES closed the three-edge branch: removing S1, S2, S3,
+or all three together did not move the frozen onset endpoint. THE GREEK asks a
+different question rather than searching for replacement edges: whether a
+shared upstream or parallel coordinator structure reaches multiple affected
+responders before their C13 onsets. The search is limited to three reverse hops,
+top five candidates, frozen ranking, explicit retained-target coverage, and a
+stopping rule that forbids threshold or hop-depth expansion after seeing the
+result. Discovery only; no causal claim is authorized.
 
-RETOUR's focused-recurrence threshold was frozen before its search: the same
-directed edge had to appear in the top-five candidate list for at least **3 of
-the 5 affected targets**. The retained-comparison recurrence was also known
-before this confirmatory run: S1 appeared on `51/129`, S2 on `51`, and S3 on
-`51/129/317/1273`. THE STEVEDORES therefore measures specificity explicitly
-rather than assuming it.
+**Lore:** The package kept moving after the dock shift was cleared, so Lester
+moves the board upstream. Horseface is no longer enough of an explanation.
+McNulty writes **THE GREEK** in the center and immediately starts drawing arrows
+to people who have not been identified.
 
-The chain also has a pre-run stopping rule. Null single-edge and combined
-results close this candidate set. A joint-only affected-target result permits
-one separately preregistered pairwise follow-up (`S1+S2`, `S1+S3`, `S2+S3`);
-after that, the combination branch closes absent an independent new
-preregistered hypothesis.
+Daniels walks in before the marker can touch the corkboard.
 
-**Lore:** RETOUR followed Marlo's package to THE DOCKS and kept seeing the same
-three stevedores around the handoff points. That is where this experiment
-starts: three recurring names on Lester's board, but nobody gets called guilty
-because they happened to be standing near a container.
+"Whether we wanted it or not, we've stepped into a war with hidden routing
+redundancy."
 
-THE STEVEDORES works the case like an actual investigation. We pull `S1` off
-the dock and replay the same C13 operation. Then `S2`. Then `S3`. If the package
-starts arriving late, stops arriving, or the usual recipients change, Bubbles
-writes down exactly what happened. Then we pull all three stevedores at once to
-see whether the crew can cover one missing worker but struggles when the whole
-shift disappears.
+The room goes quiet.
 
-Each suspect also has a structurally matched control worker: somebody with
-nearly the same weight, route depth, and local degree profile who was selected
-before we looked at any MQ-5.ER.4 outcome. Lester found three guys with very
-similar job descriptions and said, "Fine. Pull them too." If a suspect removal
-matters while his matched civilian does not, the case gets more interesting. If
-everybody causes the same disruption, McNulty has arrested the loading
-schedule.
+McNulty: "Cedric, what the hell was that?"
 
-**Bubbles** is the witness who refuses to embellish. His report contains onset
-changes, disappearances, voltage changes, and waveform differences. He does not
-name the kingpin, infer motives, or announce that anybody "understands" the
-market. Somehow the guy from the street has the cleanest epistemology in the
-unit.
+Daniels: "A reminder that the protocol is frozen."
 
-**Lester** keeps the investigation attached to the frozen protocol and reminds
-everyone that recurring on a graph is not the same thing as running an
-organization.
+Lester quietly writes **5%** next to Daniels' name.
 
-**McNulty BAC meter: ~0.08% (fictional).** In real-world terms, around this level
-is associated with impaired judgment, divided attention, coordination, and
-reaction time. McNulty has therefore reached the stage where the arrows on the
-corkboard are becoming straighter while the theory connecting them is becoming
-less so.
+The team now understands the rule: every time the investigation follows the
+evidence without moving the goalposts, Daniels sounds a little more like
+Commander Zavala. Nobody discusses it directly. They just obey the protocol.
 
-McNulty notices that S3 appears on nearly every comparison board and calls that
-"more evidence." Lester informs him that he has just rediscovered the concept of
-poor specificity. Horseface remains a hypothesis, not an edge label.
-
-**Omar** still does not enter the story. He is reserved for an intervention that
-actually earns the causal-disruption entrance. Until then, somewhere offscreen,
-a whistle remains scientifically unjustified.
+Bubbles is back on the street until we need descriptive telemetry again.

@@ -1,0 +1,31 @@
+experiment_id = "mq5-er5-the-greek-v1"
+codename = "THE GREEK"
+financial_semantics = "NOT ASSIGNED"
+kind = "discovery"
+frames = 192
+result_execution_enabled = false
+
+parent_experiment = "mq5-er4-the-stevedores-v1"
+parent_result_sha256 = "4de3cd6f52782908fc7afad853a5db0e0a1595923de1965c0b47606b5329f5dc"
+arm_c_stimulus_sha256 = "e8af8077d7d4c13431f7ad3fa05d81e2009263d9a5cb0e7dd800e889ea61ec8a"
+
+affected_targets = [55, 92, 656, 126002, 137122]
+retained_dependency_comparisons = [51, 129, 317, 1273]
+all_targets = [51, 55, 92, 129, 317, 656, 1273, 126002, 137122]
+
+max_backward_hops = 3
+top_k = 5
+focused_min_affected_coverage = 4
+
+[classification]
+focused_label = "GREEK_FOCUSED_COORDINATOR_CANDIDATE"
+distributed_label = "GREEK_DISTRIBUTED_COORDINATOR_PATTERN"
+none_label = "NO_CLEAR_GREEK_COORDINATOR"
+
+[stopping_rule]
+focused_requires_new_preregistered_causal_test = true
+distributed_requires_new_preregistered_causal_test = true
+none_closes_branch = true
+allow_threshold_lowering_after_result = false
+allow_hop_expansion_after_result = false
+allow_top_k_expansion_after_result = false

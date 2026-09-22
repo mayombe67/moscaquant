@@ -366,3 +366,36 @@ set; individual-positive results require a new explicit hypothesis for any
 mechanistic follow-up; joint-only results permit one separately preregistered
 three-pair follow-up (`S1+S2`, `S1+S3`, `S2+S3`), after which the combination
 branch closes absent an independent new hypothesis.
+
+
+### MQ-5.ER.4 result — THE STEVEDORES
+
+Authoritative artifact SHA-256: `4de3cd6f52782908fc7afad853a5db0e0a1595923de1965c0b47606b5329f5dc`.
+
+S1, S2, and S3 each returned
+`SINGLE_EDGE_CAUSAL_SUPPORT_NOT_OBSERVED`; the joint S1+S2+S3 lesion returned
+`COMBINED_SET_CAUSAL_SUPPORT_NOT_OBSERVED` with `0/5` affected-target
+dependencies. No redundancy-compatible pattern was observed.
+
+S3 did alter secondary positive-voltage amplitude for a subset of responders
+without changing first-positive onset. That observation remains descriptive
+only and does not upgrade the frozen causal endpoint.
+
+The STEVEDORES candidate branch closes here under the precommitted stopping
+rule. Any further work must begin from a new independent hypothesis.
+
+
+### MQ-5.ER.5 preregistration — THE GREEK
+
+THE STEVEDORES branch is closed under its frozen stopping rule. THE GREEK opens
+a new discovery question rather than searching for replacement stevedores:
+whether C13 onset timing is preserved by a shared upstream or parallel routing
+structure that reaches multiple affected responders before their frozen
+onsets.
+
+The discovery searches coordinator **nodes**, not replacement edges, within
+three reverse hops. Ranking, retained-target reporting, top-5 limit, and branch
+closure rules are frozen before result execution. No causal intervention is
+authorized by MQ-5.ER.5 itself.
+
+Financial semantics remain `NOT ASSIGNED`.
