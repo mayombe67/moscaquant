@@ -250,6 +250,7 @@ def shortest_path_first_hops(
     target: int,
     max_hops: int,
 ) -> set[int]:
+    # Frozen reference implementation retained for equivalence testing.
     if candidate == target:
         return set()
 
@@ -298,6 +299,98 @@ def shortest_path_first_hops(
     return set(start_nodes)
 
 
+def shortest_distances_to_target(
+    graph: sparse.csr_matrix,
+    target: int,
+    max_hops: int,
+) -> dict[int, int]:
+    # Exact bounded shortest-path distances into target for the frozen orientation.
+    csr = graph.tocsr()
+    distances = {int(target): 0}
+    frontier = [int(target)]
+
+    for depth in range(1, max_hops + 1):
+        next_frontier = []
+        for post in frontier:
+            start, end = csr.indptr[post], csr.indptr[post + 1]
+            pres = csr.indices[start:end]
+            for pre in pres:
+                pre = int(pre)
+                if pre not in distances:
+                    distances[pre] = depth
+                    next_frontier.append(pre)
+        frontier = next_frontier
+        if not frontier:
+            break
+
+    distances.pop(int(target), None)
+    return distances
+
+
+def build_first_hop_cache(
+    graph: sparse.csr_matrix,
+    targets: tuple[int, ...],
+    max_hops: int,
+):
+    # Precompute data the frozen reference recomputes per candidate/target pair.
+    csc = graph.tocsc()
+
+    to_target = {
+        int(target): shortest_distances_to_target(
+            graph, int(target), max_hops
+        )
+        for target in targets
+    }
+
+    branch_masks: dict[int, dict[int, np.ndarray]] = {}
+    n_nodes = graph.shape[0]
+
+    for target in targets:
+        reverse = reverse_shortest_distances(
+            graph, int(target), max_hops - 1
+        )
+        masks: dict[int, np.ndarray] = {}
+        for best_depth in range(1, max_hops + 1):
+            wanted = best_depth - 1
+            mask = np.zeros(n_nodes, dtype=np.bool_)
+            matching = [
+                int(node)
+                for node, distance in reverse.items()
+                if int(distance) == wanted
+            ]
+            if matching:
+                mask[np.asarray(matching, dtype=np.int32)] = True
+            masks[best_depth] = mask
+        branch_masks[int(target)] = masks
+
+    return csc, to_target, branch_masks
+
+
+def shortest_path_first_hops_cached(
+    csc: sparse.csc_matrix,
+    candidate: int,
+    target: int,
+    *,
+    to_target: dict[int, dict[int, int]],
+    branch_masks: dict[int, dict[int, np.ndarray]],
+) -> set[int]:
+    if candidate == target:
+        return set()
+
+    best_depth = to_target[int(target)].get(int(candidate))
+    if best_depth is None:
+        return set()
+
+    start, end = csc.indptr[int(candidate)], csc.indptr[int(candidate) + 1]
+    children = csc.indices[start:end]
+    if len(children) == 0:
+        return set()
+
+    mask = branch_masks[int(target)][int(best_depth)]
+    selected = children[mask[children]]
+    return {int(x) for x in selected}
+
+
 def build_candidate_rows(graph, positive_activity):
     all_targets = AFFECTED_TARGETS + RETAINED_TARGETS
     distances = {
@@ -306,6 +399,14 @@ def build_candidate_rows(graph, positive_activity):
         )
         for target in all_targets
     }
+
+    first_hop_csc, first_hop_to_target, first_hop_branch_masks = (
+        build_first_hop_cache(
+            graph,
+            AFFECTED_TARGETS,
+            MAX_BACKWARD_HOPS,
+        )
+    )
 
     stevedore_nodes = {
         11725, 29921, 11345, 47350, 10647, 51642
@@ -348,8 +449,12 @@ def build_candidate_rows(graph, positive_activity):
                     else max(latest_affected_onset, target_onset)
                 )
                 branch_nodes.update(
-                    shortest_path_first_hops(
-                        graph, int(node), int(target), MAX_BACKWARD_HOPS
+                    shortest_path_first_hops_cached(
+                        first_hop_csc,
+                        int(node),
+                        int(target),
+                        to_target=first_hop_to_target,
+                        branch_masks=first_hop_branch_masks,
                     )
                 )
 
