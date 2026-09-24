@@ -1,0 +1,127 @@
+{
+  "boundaries": {
+    "financial_semantics": false,
+    "panopticon_can_generate_scientific_state": false,
+    "result_execution_authorized_by_schema": false
+  },
+  "canonical_parent": "SQ-05 \u2014 TWO BETRAYALS",
+  "classification_contract": {
+    "betrayal_i_control_arm": "BETRAYAL_I_SHAM",
+    "betrayal_i_reference_arm": "INTACT",
+    "betrayal_ii_reference_arm": "INTACT",
+    "both_layouts_required_for_betrayal_ii_exact_reproduction": true,
+    "cue_transition_source_arm": "INTACT",
+    "cue_transition_source_replicate": 1,
+    "failed_or_missing_seed_status": "INCOMPLETE_OR_INVALID",
+    "intact_reference_replicate": 1,
+    "max_abs_max_for_exact_reproduction": 1e-12,
+    "normalized_l2_max_for_exact_reproduction": 1e-09
+  },
+  "manifest": {
+    "artifact": "sq05-two-betrayals-v1",
+    "path": "${MOSCAQUANT_DATA_ROOT}/experiments/sq05-two-betrayals-v1.json",
+    "required_sections": [
+      "status",
+      "provenance",
+      "authorization",
+      "cue_transition",
+      "betrayal_i",
+      "betrayal_ii",
+      "sidecar",
+      "claim_boundaries"
+    ],
+    "single_overall_winner_forbidden": true
+  },
+  "schema_id": "moscaquant.sq05-two-betrayals-result.v1",
+  "sidecar": {
+    "allow_pickle": false,
+    "arrays": {
+      "channel_mean_positive_voltage": {
+        "dtype": "float64",
+        "shape": [
+          52,
+          3,
+          192
+        ]
+      },
+      "channel_positive_fraction": {
+        "dtype": "float64",
+        "shape": [
+          52,
+          3,
+          192
+        ]
+      },
+      "channel_spike_count": {
+        "dtype": "int32",
+        "shape": [
+          52,
+          3,
+          192
+        ]
+      },
+      "channel_spike_rate": {
+        "dtype": "float64",
+        "shape": [
+          52,
+          3,
+          192
+        ]
+      },
+      "dn_indices": {
+        "dtype": "int32",
+        "shape": [
+          1191
+        ]
+      },
+      "episode_arm": {
+        "dtype": "unicode",
+        "shape": [
+          52
+        ]
+      },
+      "episode_layout": {
+        "dtype": "unicode",
+        "shape": [
+          52
+        ]
+      },
+      "episode_replicate": {
+        "dtype": "int8",
+        "shape": [
+          52
+        ]
+      },
+      "episode_seed": {
+        "dtype": "int64",
+        "shape": [
+          52
+        ]
+      },
+      "primary_positive_voltage": {
+        "dtype": "float32",
+        "shape": [
+          52,
+          192,
+          1191
+        ]
+      },
+      "primary_spikes": {
+        "dtype": "uint8",
+        "shape": [
+          52,
+          192,
+          1191
+        ]
+      }
+    },
+    "episode_count_expected": 52,
+    "episode_order": {
+      "deterministic": "INTACT, BETRAYAL_I_LESIONED, BETRAYAL_I_SHAM; within each arm LR then RL; two exact duplicate replicates per layout",
+      "randomized": "BETRAYAL_II_SHUFFLED seeds 20265100..20265119 ascending; LR then RL; one episode per layout"
+    },
+    "format": "numpy_npz_compressed",
+    "path": "${MOSCAQUANT_DATA_ROOT}/experiments/sq05-two-betrayals-v1.npz"
+  },
+  "status": "implementation-freeze-candidate"
+}

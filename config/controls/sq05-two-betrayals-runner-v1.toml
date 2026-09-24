@@ -1,0 +1,95 @@
+[experiment]
+id = "sq05-two-betrayals-runner-v1"
+canonical_parent = "SQ-05 — TWO BETRAYALS"
+status = "authoritative-runner-implementation-freeze-candidate"
+narrative_label = "ASSAULT ON THE CONTROL ROOM"
+narrative_label_scientific = false
+financial_semantics = false
+
+[execution]
+mode = "local"
+capacity_decision = "HABITAT_LOCAL_CAPACITY_SUPPORTED"
+result_execution_authorized = false
+authorization_file = "config/controls/sq05-two-betrayals-execution-authorization-v1.json"
+result_command = "python -m brain.sq05_two_betrayals_runner --run-frozen"
+preflight_command = "python -m brain.sq05_two_betrayals_runner --preflight-only"
+clean_git_required = true
+tracked_authorization_required = true
+implementation_commit_must_be_ancestor = true
+
+[capacity_evidence]
+host_total_ram_gib = 7.433
+host_available_ram_at_assessment_gib = 3.787
+data_root_disk_free_gib = 413.052
+neutral_benchmark_frames = 192
+neutral_benchmark_wall_seconds = 4.703143
+neutral_benchmark_peak_rss_gib = 0.240925
+projected_neural_minutes = 4.08
+historical_full_connectome_local_success = true
+rasputin_required = false
+capacity_values_are_scientific_endpoints = false
+
+[inputs]
+core_prereg_sha256 = "871f1216fe8a6160c937615b9d48a881209201aeb102a6993cf2e54bf37b5196"
+result_schema_sha256 = "bf1069e457eff0e828e890d74ae1b5831e2204e2bc070edd2fe5732311acd33f"
+sham_file_sha256 = "d43488defc7b27705fe6765db50c8519c65cdaf6ac9a4443aa599c9dd1879f0d"
+connectome_sha256 = "e00e3f2a9828c921fe1f093cc567bf45a85adad0526176be0aa1b8be09336eeb"
+retina_sha256 = "c4655220e1aee4eab580a534df009f0a7493f075c42285b430ad1365ae37917f"
+transmitter_sha256 = "0a8b1abe338e17afde197f7ef2d9a6b86cc67a2b51d0f50d9610108f809af69f"
+consensus_sha256 = "2e1272b6db6219290af96a828f52764d0f60d937336508251d0a4d6c46fb31f5"
+relay_sha256 = "a3df2746ec69d10a2739a05f3ec55c4bd5f15b10b9a6167aee41c15a647e3478"
+graded_sha256 = "1c514bf58bf69b24bfba28489344d0fe3e0f7590d649e0ef446c33898d38e379"
+mq5_ts_runtime_sha256 = "b4792f626868742b0e6382d837c7676e103084171b5142aa52b211f5cc53e526"
+mq3_2_operator_sha256 = "007aa507ac22b07811bff5ae8102a0916c88549aa3011fa22fa57c70598c6a87"
+betrayal_i_sha256 = "c62767cac434f380104c8da5cd9b73dcee89fefbeea0a0efe17ca9bd812c8664"
+betrayal_ii_sha256 = "46c164d8e2c4c87f3ed6da70bf40bafe20352ebe098c5803eece489209158460"
+stimulus_sha256 = "90bf95fc7bf1baab5f8a77ba4dce9182a5ad5909ca6a3ca37a0cf10c946f623a"
+fail_closed_on_hash_mismatch = true
+
+[episode_plan]
+deterministic_arms = ["INTACT", "BETRAYAL_I_LESIONED", "BETRAYAL_I_SHAM"]
+deterministic_replicates_per_layout = 2
+layouts = ["LR", "RL"]
+randomized_arm = "BETRAYAL_II_SHUFFLED"
+randomized_seed_count = 20
+randomized_seeds = [20265100, 20265101, 20265102, 20265103, 20265104, 20265105, 20265106, 20265107, 20265108, 20265109, 20265110, 20265111, 20265112, 20265113, 20265114, 20265115, 20265116, 20265117, 20265118, 20265119]
+deterministic_episode_count = 12
+randomized_episode_count = 40
+expected_total_episode_count = 52
+build_each_betrayal_ii_seed_once = true
+reuse_betrayal_ii_topology_for_both_layouts = true
+no_early_stopping = true
+no_failed_seed_replacement = true
+
+[result]
+manifest = "${MOSCAQUANT_DATA_ROOT}/experiments/sq05-two-betrayals-v1.json"
+sidecar = "${MOSCAQUANT_DATA_ROOT}/experiments/sq05-two-betrayals-v1.npz"
+sidecar_format = "compressed_npz"
+write_final_manifest_only_after_analysis = true
+existing_result_refuses_before_execution = true
+
+[classification]
+cue_transition_arm = "INTACT"
+cue_transition_replicate = 1
+betrayal_i_reference_arm = "INTACT"
+betrayal_i_control_arm = "BETRAYAL_I_SHAM"
+betrayal_ii_reference_arm = "INTACT"
+betrayal_ii_reference_replicate = 1
+primary_normalized_l2_exact_max = 1e-9
+primary_max_abs_exact_max = 1e-12
+channel_normalized_l2_exact_max = 1e-9
+channel_max_abs_exact_max = 1e-12
+failed_or_missing_betrayal_ii_seed_status = "INCOMPLETE_OR_INVALID"
+single_overall_winner_forbidden = true
+
+[boundaries]
+preflight_runs_neural_dynamics = false
+preflight_builds_randomized_topology = false
+implementation_freeze_authorizes_execution = false
+fruit_recognition_claim = false
+hunger_claim = false
+threat_perception_claim = false
+fear_claim = false
+behavior_claim = false
+biological_causality_claim = false
+financial_semantics_claim = false
