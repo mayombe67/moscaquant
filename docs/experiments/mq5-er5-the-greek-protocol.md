@@ -1,6 +1,6 @@
 # MQ-5.ER.5 — THE GREEK
 
-Status: **PREREGISTERED DISCOVERY — RESULT EXECUTION DISABLED**
+Status: **COMPLETED — AUTHORITATIVE DISCOVERY RESULT SEALED**
 
 Financial semantics: `NOT ASSIGNED`
 
@@ -184,3 +184,24 @@ Lester understands exactly what he means.
 
 Bubbles is off-duty from the experiment until descriptive street-level
 telemetry is needed again.
+
+## Authoritative result closeout
+
+MQ-5.ER.5 completed through the accepted RASPUTIN execution path.
+
+Frozen classification:
+
+`GREEK_FOCUSED_COORDINATOR_CANDIDATE`
+
+Top-ranked candidate: node `1952`.
+
+The complete authoritative interpretation and provenance are recorded in:
+
+`docs/experiments/mq5-er5-the-greek-result.md`
+
+Result SHA-256:
+
+`1ed37ae6d4e19cd39409a2bb714ed7394236d2a273316005c6ae596e5d837790`
+
+This post-result status update does not modify any frozen discovery parameter,
+ranking rule, classification rule, stopping rule, or claim boundary.
