@@ -1,0 +1,116 @@
+{
+  "artifact": "sq05-two-betrayals-result-seal-v1",
+  "authoritative_outputs": {
+    "dense_sidecar": {
+      "logical_path": "${MOSCAQUANT_DATA_ROOT}/experiments/sq05-two-betrayals-v1.npz",
+      "schema_sha256": "bf1069e457eff0e828e890d74ae1b5831e2204e2bc070edd2fe5732311acd33f",
+      "sha256": "b3fbe9f28d07aa5d8dfe707eed99e4b7b48b28364e1afc37875e8442fbeb7a8e",
+      "size_bytes": 11567206
+    },
+    "execution_log": {
+      "byte_identical_to_result_manifest": true,
+      "logical_path": "${MOSCAQUANT_DATA_ROOT}/experiments/sq05-two-betrayals-v1.execution.log",
+      "sha256": "72bbef6b8cd996f81a371938af9fd3f024ef381bce8cf458c378dc55b05646b1",
+      "size_bytes": 318264
+    },
+    "result_manifest": {
+      "logical_path": "${MOSCAQUANT_DATA_ROOT}/experiments/sq05-two-betrayals-v1.json",
+      "sha256": "72bbef6b8cd996f81a371938af9fd3f024ef381bce8cf458c378dc55b05646b1",
+      "size_bytes": 318264
+    }
+  },
+  "canonical_parent": "SQ-05 \u2014 TWO BETRAYALS",
+  "claim_boundaries": {
+    "behavior": false,
+    "biological_causality": false,
+    "danger": false,
+    "fear": false,
+    "financial_value": false,
+    "fruit_recognition": false,
+    "hunger": false,
+    "market_prediction": false,
+    "population_level_significance": false,
+    "threat_perception": false
+  },
+  "execution": {
+    "betrayal_ii_completed_seed_count": 20,
+    "betrayal_ii_episode_count": 40,
+    "betrayal_ii_failed_seed_count": 0,
+    "betrayal_ii_seed_first": 20265100,
+    "betrayal_ii_seed_last": 20265119,
+    "betrayal_ii_topology_build_count": 20,
+    "capacity_decision": "HABITAT_LOCAL_CAPACITY_SUPPORTED",
+    "completed_episode_count": 52,
+    "deterministic_duplicate_pairs_exact": 6,
+    "deterministic_episode_count": 12,
+    "expected_episode_count": 52,
+    "mode": "local"
+  },
+  "frozen_inputs": {
+    "core_prereg_sha256": "871f1216fe8a6160c937615b9d48a881209201aeb102a6993cf2e54bf37b5196",
+    "execution_authorization_sha256": "a25cc8731298d91be5b1be7fd634a206070e94b6bf3d55300bc0b6723d43e0c9",
+    "result_schema_sha256": "bf1069e457eff0e828e890d74ae1b5831e2204e2bc070edd2fe5732311acd33f",
+    "runner_config_sha256": "ca9570a5b912bb320c8d9287eea0878578fede2c51ebcdebf32eed9afd28f3cb",
+    "runner_sha256": "06f640dd6c829d917bb537298f8e54048066455b92f6932dc09fe5abdef4867e",
+    "sham_sha256": "d43488defc7b27705fe6765db50c8519c65cdaf6ac9a4443aa599c9dd1879f0d"
+  },
+  "independent_verification": {
+    "all_betrayal_ii_topology_invariants": "PASS",
+    "classifications_recomputed_from_sidecar": true,
+    "deterministic_duplicate_pairs": "6/6 EXACT",
+    "execution_log_sha256": "72bbef6b8cd996f81a371938af9fd3f024ef381bce8cf458c378dc55b05646b1",
+    "result_json_sha256": "72bbef6b8cd996f81a371938af9fd3f024ef381bce8cf458c378dc55b05646b1",
+    "result_mutation": false,
+    "sidecar_npz_sha256": "b3fbe9f28d07aa5d8dfe707eed99e4b7b48b28364e1afc37875e8442fbeb7a8e",
+    "sidecar_schema_and_episode_order": "PASS",
+    "status": "PASS",
+    "verifier_sha256": "5d4701202dcf55f6677f1431b67a2ea25c53939db0170f3f0bc09df81bb74d13"
+  },
+  "narrative_label": "THE MAW",
+  "narrative_label_scientific": false,
+  "outcomes": {
+    "betrayal_i": {
+      "LR": {
+        "lesion_distance": 3.8240768866345015e-05,
+        "lesion_exceeds_sham": true,
+        "sham_distance": 0.0
+      },
+      "RL": {
+        "lesion_distance": 0.1276743202466753,
+        "lesion_exceeds_sham": true,
+        "sham_distance": 0.0
+      },
+      "interpretive_caution": "The preregistered status is satisfied in both layouts, but lesion-effect magnitude is strongly layout-dependent.",
+      "status": "LESION_EFFECT_EXCEEDS_SHAM_BOTH_LAYOUTS"
+    },
+    "betrayal_ii": {
+      "completed_seed_count": 20,
+      "exact_reproduction_count": 0,
+      "expected_seed_count": 20,
+      "failed_seed_count": 0,
+      "interpretive_caution": "Zero of the 20 preregistered strict matched null topologies exactly reproduced INTACT across both layouts. This does not claim that no possible shuffled topology can reproduce the response and carries no population-level significance claim.",
+      "status": "STRICT_NULL_RARELY_REPRODUCES_INTACT_RESPONSE"
+    },
+    "cue_transition": {
+      "LR_responds": true,
+      "RL_responds": true,
+      "status": "BOTH_LAYOUTS_RESPOND_TO_CUE_B"
+    }
+  },
+  "reporting": {
+    "report_outcomes_separately": true,
+    "single_overall_winner": null,
+    "single_overall_winner_forbidden": true
+  },
+  "repository_authority": {
+    "branch": "science/sq05-protocol",
+    "execution_authorization_commit": "1184680ee21cd9a4c97b405262a90500ed4fedb0",
+    "implementation_commit": "1472ebf7e3cde6c1f0c98f0462446640710027b7"
+  },
+  "status": "sealed",
+  "storage_policy": {
+    "copy_dense_result_artifacts_into_git": false,
+    "result_files_remain_external_immutable_artifacts": true,
+    "seal_by_sha256": true
+  }
+}
