@@ -1,0 +1,67 @@
+[experiment]
+id = "mq5-ts-arm-c-mixing-depth-v1"
+status = "pre-registered"
+scope = "structural_null_characterization_only"
+narrative_label = "WARTHOG RUN"
+narrative_label_scientific = false
+parent_public_commit = "d29c08a60b561ce47631a372a4af7f89d2249c5b"
+reopens_parent_result = false
+neural_execution = false
+financial_semantics = false
+
+[inputs]
+path_resolution = "MOSCAQUANT_DATA_ROOT_relative"
+connectome = "processed/connectome-baseline-v1.npz"
+connectome_sha256 = "e00e3f2a9828c921fe1f093cc567bf45a85adad0526176be0aa1b8be09336eeb"
+transmitter = "processed/transmitter_sign.npy"
+transmitter_sha256 = "0a8b1abe338e17afde197f7ef2d9a6b86cc67a2b51d0f50d9610108f809af69f"
+retina = "processed/visual-r1-r6-map-v1.npz"
+retina_sha256 = "c4655220e1aee4eab580a534df009f0a7493f075c42285b430ad1365ae37917f"
+fail_closed_on_hash_mismatch = true
+
+[backend]
+constructor = "brain.mq5_ts_strict_shuffle_native.build_strict_matched_control_native"
+verifier = "brain.mq5_ts_strict_shuffle_verify.verify_strict_matched_control_scalable"
+max_attempt_multiplier = 20
+reuse_production_arm_c_backend = true
+reference_backend_full_connectome_forbidden = true
+require_same_seed_prefix_determinism_test_before_execution = true
+
+[design]
+depths = [0.5, 1.0, 2.0, 4.0]
+seeds = [20264000, 20264001, 20264002]
+paired_seed_trajectories = true
+no_early_stopping = true
+no_seed_replacement = true
+expected_build_count = 12
+
+[metrics]
+eligible_edge_identity_retention_fraction = true
+eligible_edge_changed_fraction = true
+baseline_edge_jaccard = true
+within_seed_checkpoint_to_deep_overlap = true
+cross_seed_checkpoint_to_other_deep_mean_overlap = true
+seed_memory_excess = true
+deep_pairwise_overlap = true
+baseline_self_edge_count = true
+candidate_self_edge_count = true
+invariant_report = true
+construction_wall_time_non_scientific = true
+neural_metrics_forbidden = true
+
+[decision]
+deep_reference_depth = 4.0
+current_depth = 1.0
+prospective_alternate_depth = 2.0
+seed_memory_excess_tolerance = 0.01
+require_all_three_seeds = true
+classification_current = "CURRENT_1X_ADEQUATE_FOR_SQ05"
+classification_alternate = "SQ05_REQUIRES_2X_PROSPECTIVE_DEPTH"
+classification_no_adequate = "NO_ADEQUATE_DEPTH_WITHIN_TESTED_RANGE"
+classification_invalid = "INCOMPLETE_OR_INVALID"
+
+[boundaries]
+does_not_reinterpret_mq5_ts = true
+does_not_modify_mq5_ts_artifact = true
+does_not_authorize_sq05_by_itself = true
+expanded_depth_requires_new_freeze = true
