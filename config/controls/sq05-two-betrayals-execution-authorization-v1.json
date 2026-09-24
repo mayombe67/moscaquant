@@ -1,0 +1,58 @@
+{
+  "artifact": "sq05-two-betrayals-execution-authorization-v1",
+  "canonical_parent": "SQ-05 \u2014 TWO BETRAYALS",
+  "capacity_decision": "HABITAT_LOCAL_CAPACITY_SUPPORTED",
+  "claim_boundaries": {
+    "behavior": false,
+    "biological_causality": false,
+    "fear": false,
+    "financial_semantics": false,
+    "fruit_recognition": false,
+    "hunger": false,
+    "threat_perception": false
+  },
+  "core_prereg_sha256": "871f1216fe8a6160c937615b9d48a881209201aeb102a6993cf2e54bf37b5196",
+  "execution_mode": "local",
+  "execution_plan": {
+    "betrayal_ii_episode_count": 40,
+    "betrayal_ii_seed_count": 20,
+    "betrayal_ii_seed_first": 20265100,
+    "betrayal_ii_seed_last": 20265119,
+    "betrayal_ii_topology_build_count": 20,
+    "deterministic_episode_count": 12,
+    "expected_neural_episode_count": 52,
+    "layouts": [
+      "LR",
+      "RL"
+    ],
+    "no_early_stopping": true,
+    "no_failed_seed_replacement": true,
+    "reuse_each_betrayal_ii_topology_for_both_layouts": true
+  },
+  "fail_closed_requirements": {
+    "all_frozen_dependency_hashes_must_match": true,
+    "authorization_must_be_tracked": true,
+    "existing_result_refuses_execution": true,
+    "git_worktree_must_be_clean": true,
+    "implementation_commit_must_be_ancestor_of_execution_head": true
+  },
+  "human_boundary": {
+    "authorization_commit_does_not_automatically_execute": true,
+    "automatic_background_execution": false,
+    "explicit_run_frozen_command_still_required": true
+  },
+  "implementation_commit": "1472ebf7e3cde6c1f0c98f0462446640710027b7",
+  "narrative_label": "ASSAULT ON THE CONTROL ROOM",
+  "narrative_label_scientific": false,
+  "result_execution_enabled": true,
+  "result_paths": {
+    "manifest": "/home/wil/moscaquant-data/experiments/sq05-two-betrayals-v1.json",
+    "sidecar": "/home/wil/moscaquant-data/experiments/sq05-two-betrayals-v1.npz"
+  },
+  "result_schema_sha256": "bf1069e457eff0e828e890d74ae1b5831e2204e2bc070edd2fe5732311acd33f",
+  "runner_config_sha256": "ca9570a5b912bb320c8d9287eea0878578fede2c51ebcdebf32eed9afd28f3cb",
+  "runner_sha256": "06f640dd6c829d917bb537298f8e54048066455b92f6932dc09fe5abdef4867e",
+  "scope": "exact frozen SQ-05 result execution only",
+  "sham_sha256": "d43488defc7b27705fe6765db50c8519c65cdaf6ac9a4443aa599c9dd1879f0d",
+  "status": "execution-authorization-review-candidate"
+}
