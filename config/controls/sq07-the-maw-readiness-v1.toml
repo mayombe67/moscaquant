@@ -1,0 +1,50 @@
+[readiness]
+id = "sq07-the-maw-readiness-v1"
+canonical_parent = "SQ-07 — THE MAW"
+status = "pre-execution-readiness-candidate"
+scientific_semantics = false
+expected_branch = "science/sq07-the-maw"
+
+scientific_readiness_state = "READY"
+human_execution_authorization_state = "ABSENT"
+result_execution_state = "NOT_STARTED"
+may_execute = false
+
+[universe]
+expected_mask_count = 8192
+expected_condition_count = 32768
+expected_shard_count = 512
+conditions_per_shard = 64
+masks_per_shard = 16
+conditions_per_mask = 4
+
+condition_plan_sha256 = "850ae560ab1b25c65f9932615f8ea1851781881c4492672767bcda692667becb"
+shard_plan_sha256 = "9039b8e708c2ffdb74436e5c6fdc8f7d2f38f3f3fb27fd7478dd2cc8101d2a55"
+
+[authority]
+execution_implementation_commit = "e6c740cc5020b219f0ee98c285a309645e1260c0"
+implementation_commit_must_be_ancestor_of_readiness_head = true
+git_worktree_must_be_clean = true
+authorization_must_be_absent = true
+result_root_must_be_absent = true
+
+[hashes]
+preregistration = "0ff34f0f4c2c1315b766ecc1acf66e2e6c24650aba87ae033e5a71a2b707a84a"
+sharding_contract = "ede14b0add5d13e723c443be241504dea36d4bb0424e3f718b199b8c1c665d8a"
+condition_planner = "38b8e628492a475f63c40c332232b36c929512dfae8341f5b64afd1597f5411f"
+shard_planner = "7cde07ad921543cdb9dba95f3299ccb4a1cfbb20f32a3a75fc678a2df61ef1af"
+subset_operator = "693ae8c2455361351802d0ac0c9cee4ada3bb8a25a60043264de5da14da00a5e"
+episode_executor = "a4b85e45779ab98c9a1275a0e97ced9f1abb48bfadd974319bfcecf4305be9d8"
+evidence_schema = "c1065506a90b26856896e0a522c7023738de13b0ac5af7a17cea7973774d2f01"
+evidence_writer = "255427764b0f0b49273c27c44f000ecb50628fc7d129ec8dc9fcfddeb0af3e11"
+shard_runner_config = "a6e77226e50999b3dbc0ada7c64a8b5905ce638f92339406d724d9aa54e403ad"
+shard_runner = "bd736984acad6bbdceb812ca84ee6d413acaaa0f864f4a48899f9fbfacf87312"
+shard_runner_test = "f4028b709bbdc8679a2ceb70a9c3ec98b52e5ffe0f0826abc4bac6a8ab0c9c2d"
+
+[boundaries]
+readiness_may_authorize_execution = false
+readiness_may_execute_neurons = false
+readiness_may_create_authorization = false
+readiness_may_create_results = false
+readiness_may_classify_results = false
+readiness_may_select_conditions = false
