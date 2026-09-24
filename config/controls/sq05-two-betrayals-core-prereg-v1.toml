@@ -1,0 +1,149 @@
+[experiment]
+id = "sq05-two-betrayals-core-prereg-v1"
+canonical_parent = "SQ-05 — TWO BETRAYALS"
+status = "core-preregistration-freeze-candidate"
+neural_execution_authorized = false
+topology_construction_authorized = false
+result_execution_authorized = false
+financial_semantics = false
+
+[inputs]
+baseline_connectome_sha256 = "e00e3f2a9828c921fe1f093cc567bf45a85adad0526176be0aa1b8be09336eeb"
+retina_sha256 = "c4655220e1aee4eab580a534df009f0a7493f075c42285b430ad1365ae37917f"
+dn_consensus_sha256 = "2e1272b6db6219290af96a828f52764d0f60d937336508251d0a4d6c46fb31f5"
+betrayal_i_module_sha256 = "c62767cac434f380104c8da5cd9b73dcee89fefbeea0a0efe17ca9bd812c8664"
+betrayal_i_config_sha256 = "f47cedd4abe927879190e5930ca85617f3bfa91f2359bcc3bfe4c8c6d5fa3e6d"
+betrayal_ii_module_sha256 = "46c164d8e2c4c87f3ed6da70bf40bafe20352ebe098c5803eece489209158460"
+betrayal_ii_config_sha256 = "ed64ef507461edeaffc6e8928a97e0dda17188cd29bbbc5d930c874ae1ab2c70"
+stimulus_module_sha256 = "90bf95fc7bf1baab5f8a77ba4dce9182a5ad5909ca6a3ca37a0cf10c946f623a"
+stimulus_config_sha256 = "8603d100a61a55499b543e2585bccc7dc9a9c94343ec5801af37cd2ddd1a80e7"
+stimulus_schedule_sha256_lr = "61e5b3de5ea61947f1053fc513b7a6d8f2fb17af7efca4af038e8c4024d1c3c7"
+stimulus_schedule_sha256_rl = "e044055d99fe8a19d69b4eee7bd02ba5279641c99b48d0c99cb468a5bd8f20ab"
+
+[arms]
+intact = "BASELINE_CONNECTOME"
+betrayal_i = "BETRAYAL_I_LESIONED"
+betrayal_i_sham = "BETRAYAL_I_SHAM"
+betrayal_ii = "BETRAYAL_II_SHUFFLED"
+
+[layouts]
+required = ["LR", "RL"]
+classification_requires_both = true
+one_layout_only_forbidden = true
+
+[betrayal_i_sham]
+artifact = "config/controls/sq05-betrayal-i-sham-v1.json"
+canonical_edge_set_sha256 = "4a96cc329bb98a6cce66315280d80dcf9389c1ea7e39934b5d40d31ab4cc6879"
+edge_count = 13
+zero_exact_frozen_edge_weights = true
+derive_at_execution = false
+
+[betrayal_ii_randomization]
+mixing_depth = 1.0
+max_attempt_multiplier = 20
+seed_count = 20
+seeds = [20265100, 20265101, 20265102, 20265103, 20265104, 20265105, 20265106, 20265107, 20265108, 20265109, 20265110, 20265111, 20265112, 20265113, 20265114, 20265115, 20265116, 20265117, 20265118, 20265119]
+seed_selection_rule = "first collision-free audited candidate block after BLOCK_A collision"
+historical_or_engineering_seed_reuse = false
+build_each_seed_once = true
+reuse_each_seed_topology_for_both_layouts = true
+no_early_stopping = true
+no_failed_seed_replacement = true
+failed_or_missing_seed_makes_result_incomplete = true
+
+[primary_population]
+artifact = "processed/mq3-dn-consensus-v1.npz"
+selection_basis = "pre-existing anatomy-only consensus"
+included_clusters = ["DN-C0", "DN-C1", "DN-C2"]
+assigned_neuron_count = 1191
+excluded_unassigned_count = 123
+neuron_order = "ascending_model_index"
+post_result_population_selection_forbidden = true
+
+[primary_fingerprint]
+quantity = "positive_membrane_voltage"
+definition = "max(voltage, 0)"
+shape_per_layout = "192x1191"
+layouts = ["LR", "RL"]
+store_full_trace = true
+
+[channel_summary]
+channels = ["DN-C0", "DN-C1", "DN-C2"]
+quantity = "per_frame_mean_positive_voltage"
+store_full_192_frame_trace = true
+secondary_metrics = ["positive_neuron_fraction", "spike_count", "spike_rate_per_neuron"]
+
+[cue_transition]
+a_reference_frames = [80, 95]
+b_blocks = ["96..111", "112..127", "128..143", "144..159", "160..175", "176..191"]
+numeric_tolerance = 1e-12
+status_both_layouts = "BOTH_LAYOUTS_RESPOND_TO_CUE_B"
+status_one_layout = "LAYOUT_DEPENDENT_CUE_B_RESPONSE"
+status_no_layouts = "NO_DN_CUE_B_RESPONSE"
+definition = "a layout responds when any DN-C channel block mean differs from its A-reference mean by more than numeric_tolerance"
+
+[distance]
+metric = "symmetric_normalized_l2"
+formula = "norm(x-y) / max(norm(x)+norm(y), 1e-12)"
+also_record_max_abs = true
+
+[betrayal_i_classification]
+comparison = "distance_from_INTACT_primary_fingerprint"
+rule_both_layouts = "LESION_EFFECT_EXCEEDS_SHAM_BOTH_LAYOUTS"
+rule_one_layout = "LAYOUT_DEPENDENT_LESION_EFFECT"
+rule_neither = "LESION_NOT_SEPARATED_FROM_SHAM"
+criterion = "B1 distance > sham distance, evaluated separately in LR and RL"
+claim_boundary = "model response difference relative to matched sham; not hunger, danger, fear, or behavior"
+
+[betrayal_ii_exact_reproduction]
+normalized_l2_max = 1e-9
+max_abs_max = 1e-12
+requires_both_layouts = true
+requires_primary_fingerprint = true
+requires_channel_summary = true
+
+[betrayal_ii_classification]
+seed_count = 20
+rare_exact_min = 0
+rare_exact_max = 1
+mixed_exact_min = 2
+mixed_exact_max = 9
+frequent_exact_min = 10
+frequent_exact_max = 20
+rare_label = "STRICT_NULL_RARELY_REPRODUCES_INTACT_RESPONSE"
+mixed_label = "MIXED_STRICT_NULL_REPRODUCTION"
+frequent_label = "STRICT_NULL_FREQUENTLY_REPRODUCES_INTACT_RESPONSE"
+population_significance_claim = false
+
+[lesion_specific_secondary]
+accepted_responder_indices = [51, 55, 92, 129, 317, 656, 1273, 126002, 137122]
+responder_count = 9
+metrics = ["responder_identity", "first_positive_onset", "full_positive_voltage_fingerprint"]
+primary_endpoint = false
+reason = "response-selected under earlier MQ-3.2 Condition-A work; retained only as a prespecified lesion-specific secondary diagnostic"
+
+[determinism]
+fresh_state_each_arm_layout = true
+intact_duplicate_replay_required = true
+betrayal_i_duplicate_replay_required = true
+sham_duplicate_replay_required = true
+duplicate_replay_must_be_exact = true
+
+[interpretation]
+single_overall_winner_forbidden = true
+report_cue_transition_status_separately = true
+report_betrayal_i_status_separately = true
+report_betrayal_ii_status_separately = true
+fruit_recognition_claim = false
+hunger_claim = false
+threat_perception_claim = false
+fear_claim = false
+behavior_claim = false
+biological_causality_claim = false
+financial_semantics_claim = false
+
+[execution_boundary]
+capacity_assessment_required_before_execution = true
+authoritative_runner_not_frozen_here = true
+result_schema_not_frozen_here = true
+execution_authorization_not_frozen_here = true
