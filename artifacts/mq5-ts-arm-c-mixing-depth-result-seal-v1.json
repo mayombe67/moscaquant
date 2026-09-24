@@ -1,0 +1,105 @@
+{
+  "audit": {
+    "all_invariants_passed": true,
+    "all_targets_reached": true,
+    "build_count": 12,
+    "classification_matches_result": true,
+    "classification_recomputed": "CURRENT_1X_ADEQUATE_FOR_SQ05",
+    "failure_count": 0,
+    "no_new_self_edges_passed": true
+  },
+  "authorization": {
+    "commit": "ddb1e3b9ae0cb55a1baefcd3edbc62ff6cb69984",
+    "execution_mode": "local",
+    "implementation_commit": "c4409caea38136553c9c12ad89b853ae62a358f7",
+    "sha256": "4d73b87dcca2372064d747d77b275ff25bcfa9e5c234119b737f4db5a176cc7e"
+  },
+  "claim_boundary": {
+    "does_not_establish": [
+      "perfect random-graph mixing",
+      "mathematical stationarity",
+      "convergence of every graph statistic",
+      "biological realism",
+      "optimality of the null",
+      "neural-response equivalence",
+      "financial or predictive value"
+    ],
+    "sq05_consequence": "SQ-05 may prospectively reuse the existing 1.0x Arm C depth, subject to its own implementation freeze.",
+    "supports": "Under the frozen Arm-C constructor and tested 4.0x deep reference, 1.0x seed-memory excess is within the preregistered 0.01 tolerance for all three seeds."
+  },
+  "classification": "CURRENT_1X_ADEQUATE_FOR_SQ05",
+  "commit_created": false,
+  "config_sha256": "e446b223337fd9c57bc03de2190f8683b4dad4d22cf501171f929aecb0929436",
+  "descriptive_structural_metrics": {
+    "deep_pairwise_overlap": {
+      "20264000:20264001": 0.006919343267627269,
+      "20264000:20264002": 0.00688109302759528,
+      "20264001:20264002": 0.0068749526516392245
+    },
+    "mean_baseline_retention_fraction_by_depth": {
+      "0.5": 0.37836412588469487,
+      "1.0": 0.1526641389958968,
+      "2.0": 0.03214652381518741,
+      "4.0": 0.007318180893155099
+    },
+    "mean_changed_fraction_by_depth": {
+      "0.5": 0.6216358741153051,
+      "1.0": 0.8473358610041032,
+      "2.0": 0.9678534761848127,
+      "4.0": 0.9926818191068448
+    }
+  },
+  "execution_log": "${MOSCAQUANT_DATA_ROOT}/experiments/mq5-ts-arm-c-mixing-depth-v1.execution.log",
+  "execution_log_bytes_unchanged_during_seal_review": true,
+  "execution_log_sha256": "1f7580b5a24d94a1e6b7b66f389558382a90198e90525c24284f76b6e6eece62",
+  "experiment_id": "mq5-ts-arm-c-mixing-depth-v1",
+  "financial_semantics": "NOT ASSIGNED",
+  "frozen_design": {
+    "depths": [
+      0.5,
+      1.0,
+      2.0,
+      4.0
+    ],
+    "expected_build_count": 12,
+    "no_early_stopping": true,
+    "no_seed_replacement": true,
+    "seed_memory_excess_tolerance": 0.01,
+    "seeds": [
+      20264000,
+      20264001,
+      20264002
+    ]
+  },
+  "input_sha256": {
+    "connectome": "e00e3f2a9828c921fe1f093cc567bf45a85adad0526176be0aa1b8be09336eeb",
+    "retina": "c4655220e1aee4eab580a534df009f0a7493f075c42285b430ad1365ae37917f",
+    "transmitter": "0a8b1abe338e17afde197f7ef2d9a6b86cc67a2b51d0f50d9610108f809af69f"
+  },
+  "narrative_label": "WARTHOG RUN",
+  "post_result_observation": {
+    "all_2x_seed_memory_excess_gt_1x": true,
+    "fixed_endpoint_nonmonotonic_signal": true,
+    "followup_boundary": "Any fixed-lag, longer-chain, multi-chain, motif, community, spectral, or other expanded mixing analysis requires a new prospective protocol and may not rewrite this result.",
+    "interpretation": "The 2.0x checkpoints are closer in trajectory lag to their same-seed 4.0x endpoints than the 1.0x checkpoints. The higher 2.0x seed-memory excess therefore does not alter the frozen 1.0x classification and does not establish that 2.0x is less randomized."
+  },
+  "push_performed": false,
+  "result_artifact": "${MOSCAQUANT_DATA_ROOT}/experiments/mq5-ts-arm-c-mixing-depth-v1.json",
+  "result_bytes_unchanged_during_seal_review": true,
+  "result_sha256": "fe5d9c718a80aee41ed66af43bbd1c091250c972eb9ad7f41bdb2de5df7aff31",
+  "schema_version": "moscaquant.mq5-ts-arm-c-mixing-depth-result-seal.v1",
+  "scope": "structural_null_characterization_only",
+  "seed_memory_excess": {
+    "1.0": {
+      "20264000": 0.005022006207880981,
+      "20264001": 0.0050031157519142624,
+      "20264002": 0.005013929853518399
+    },
+    "2.0": {
+      "20264000": 0.025851491213767334,
+      "20264001": 0.025860271560277745,
+      "20264002": 0.025891227659444738
+    }
+  },
+  "status": "COMPLETED_RESULT_SEALED"
+}
