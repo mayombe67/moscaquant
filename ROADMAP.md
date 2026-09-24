@@ -1633,3 +1633,24 @@ THE WEAVE remains a separate scientific decision. It may begin only if the
 completed evidence justifies it.
 
 **Scale changes runtime architecture, not experimental meaning.**
+
+## MQ-5.ER.5 — THE GREEK: COMPLETE
+
+The authoritative RASPUTIN execution of THE GREEK completed and was sealed
+before interpretation.
+
+Classification:
+
+`GREEK_FOCUSED_COORDINATOR_CANDIDATE`
+
+Top-ranked discovery candidate: node `1952`.
+
+All five emitted candidates covered `5/5` affected and `4/4` retained comparison
+targets. The discovery branch therefore advances to a separately preregistered
+causal-test design; MQ-5.ER.5 itself authorizes no intervention.
+
+Result SHA-256:
+
+`1ed37ae6d4e19cd39409a2bb714ed7394236d2a273316005c6ae596e5d837790`
+
+Financial semantics remain `NOT ASSIGNED`.

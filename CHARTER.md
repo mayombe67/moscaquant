@@ -3472,3 +3472,28 @@ session-independent scientific execution and directly hardened the design of
 PROJECT RASPUTIN.
 
 This memorial is narrative canon only. It creates no scientific result.
+
+#### THE GREEK discovery resolution
+
+MQ-5.ER.5 — THE GREEK is now resolved at the frozen discovery stage.
+
+The first successful authoritative RASPUTIN execution produced the sealed
+classification:
+
+`GREEK_FOCUSED_COORDINATOR_CANDIDATE`
+
+Node `1952` ranked first under the preregistered deterministic ordering, with
+full `5/5` affected-target and `4/4` retained-target coverage. The remaining
+four emitted candidates also covered the complete affected and retained sets.
+
+This completes the already-frozen discovery run and demonstrates the intended
+RASPUTIN property: compute scale changed without changing the scientific
+question.
+
+The result does not establish unique control or causal necessity/sufficiency.
+Any intervention on `1952` or the other emitted candidates requires a new,
+separately preregistered experiment.
+
+Authoritative result SHA-256: `1ed37ae6d4e19cd39409a2bb714ed7394236d2a273316005c6ae596e5d837790`.
+
+Financial semantics remain `NOT ASSIGNED`.

@@ -701,3 +701,37 @@ evidence without moving the goalposts, Daniels sounds a little more like
 Commander Zavala. Nobody discusses it directly. They just obey the protocol.
 
 Bubbles is back on the street until we need descriptive telemetry again.
+
+## THE GREEK — Found, Not Convicted
+
+**Reference:** MQ-5.ER.5 authoritative result.
+
+**Importance:** BOSS
+
+**Science:** The sealed three-hop discovery search returned
+`GREEK_FOCUSED_COORDINATOR_CANDIDATE`. Node `1952` ranked first, with full `5/5`
+affected-target coverage and `4/4` retained-target coverage; the remaining four
+emitted candidates (`2641`, `1963`, `1944`, `23640`) also covered the complete
+affected and retained sets. The result therefore satisfies the frozen focused
+coordinator discovery rule, but it is not a causal verdict and it is not
+affected-set-specific. A new preregistration is required before any candidate
+perturbation.
+
+**Provenance:** Attempt 9 completed through PROJECT RASPUTIN / WRATH OF THE
+MACHINE and was independently sealed before interpretation. Result SHA-256:
+`1ed37ae6d4e19cd39409a2bb714ed7394236d2a273316005c6ae596e5d837790`.
+
+**Lore:** Two days of infrastructure later, Lester finally gets to turn the
+corkboard around. McNulty points at `1952` and says, "That's him."
+
+Daniels/Zavala does not look impressed.
+
+"That's a candidate."
+
+McNulty: "It covers all five."
+
+"It also covers all four controls."
+
+McNulty slowly lowers the marker.
+
+The Titan opens the chest anyway.

@@ -399,3 +399,43 @@ closure rules are frozen before result execution. No causal intervention is
 authorized by MQ-5.ER.5 itself.
 
 Financial semantics remain `NOT ASSIGNED`.
+
+### MQ-5.ER.5 result — THE GREEK
+
+Authoritative result status: **SEALED / COMPLETED**
+
+Classification:
+
+`GREEK_FOCUSED_COORDINATOR_CANDIDATE`
+
+The frozen discovery rule found a focused upstream coordinator candidate.
+Node `1952` ranked first and covered all five affected responders, while also
+covering all four retained comparison responders. The complete deterministic
+top five was:
+
+`1952, 2641, 1963, 1944, 23640`
+
+All five covered `5/5` affected and `4/4` retained targets.
+
+This result supports the preregistered discovery conclusion that a focused
+coordinator candidate exists under the frozen three-hop search and timing rule.
+It does not establish unique control or causal necessity/sufficiency.
+
+Eligible candidate count: `17340`
+
+Authoritative result SHA-256:
+
+`1ed37ae6d4e19cd39409a2bb714ed7394236d2a273316005c6ae596e5d837790`
+
+Result seal SHA-256:
+
+`63fb631e661ff054e28869f0c784eddea088ab8c3307a0c82bc5d55a40b94ee9`
+
+Frozen scientific execution SHA:
+
+`4978062b48b557ad9f8f327308ce4aeca0a49ae3`
+
+Per the preregistered stopping rule, any candidate intervention must be a new,
+separately preregistered causal experiment with matched controls.
+
+Financial semantics remain `NOT ASSIGNED`.
