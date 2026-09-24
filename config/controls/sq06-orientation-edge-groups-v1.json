@@ -1,0 +1,167 @@
+{
+  "artifact": "sq06-orientation-edge-groups-v1",
+  "canonical_parent": "SQ-06 \u2014 SILENT CARTOGRAPHER",
+  "derivation": {
+    "independent_discovery": false,
+    "prospective_use": "future validation only",
+    "source": "sealed SQ-05 post-result descriptive orientation audit",
+    "sq05_reinterpretation": false
+  },
+  "groups": {
+    "LR_OBSERVED": [
+      {
+        "accepted_responder": 656,
+        "matched_sham_edge": {
+          "postsynaptic": 878,
+          "presynaptic": 43417
+        },
+        "target_edge": {
+          "postsynaptic": 656,
+          "presynaptic": 43417
+        }
+      },
+      {
+        "accepted_responder": 55,
+        "matched_sham_edge": {
+          "postsynaptic": 4356,
+          "presynaptic": 44274
+        },
+        "target_edge": {
+          "postsynaptic": 55,
+          "presynaptic": 44274
+        }
+      },
+      {
+        "accepted_responder": 51,
+        "matched_sham_edge": {
+          "postsynaptic": 4356,
+          "presynaptic": 55548
+        },
+        "target_edge": {
+          "postsynaptic": 51,
+          "presynaptic": 55548
+        }
+      },
+      {
+        "accepted_responder": 55,
+        "matched_sham_edge": {
+          "postsynaptic": 5433,
+          "presynaptic": 55925
+        },
+        "target_edge": {
+          "postsynaptic": 55,
+          "presynaptic": 55925
+        }
+      },
+      {
+        "accepted_responder": 1273,
+        "matched_sham_edge": {
+          "postsynaptic": 98715,
+          "presynaptic": 56393
+        },
+        "target_edge": {
+          "postsynaptic": 68045,
+          "presynaptic": 56393
+        }
+      },
+      {
+        "accepted_responder": 92,
+        "matched_sham_edge": {
+          "postsynaptic": 4131,
+          "presynaptic": 64717
+        },
+        "target_edge": {
+          "postsynaptic": 92,
+          "presynaptic": 64717
+        }
+      },
+      {
+        "accepted_responder": 1273,
+        "matched_sham_edge": {
+          "postsynaptic": 107,
+          "presynaptic": 68045
+        },
+        "target_edge": {
+          "postsynaptic": 1273,
+          "presynaptic": 68045
+        }
+      },
+      {
+        "accepted_responder": 51,
+        "matched_sham_edge": {
+          "postsynaptic": 137444,
+          "presynaptic": 87441
+        },
+        "target_edge": {
+          "postsynaptic": 51,
+          "presynaptic": 87441
+        }
+      },
+      {
+        "accepted_responder": 129,
+        "matched_sham_edge": {
+          "postsynaptic": 6648,
+          "presynaptic": 92657
+        },
+        "target_edge": {
+          "postsynaptic": 129,
+          "presynaptic": 92657
+        }
+      },
+      {
+        "accepted_responder": 129,
+        "matched_sham_edge": {
+          "postsynaptic": 6008,
+          "presynaptic": 93484
+        },
+        "target_edge": {
+          "postsynaptic": 129,
+          "presynaptic": 93484
+        }
+      }
+    ],
+    "RL_OBSERVED": [
+      {
+        "accepted_responder": 137122,
+        "matched_sham_edge": {
+          "postsynaptic": 369,
+          "presynaptic": 65084
+        },
+        "target_edge": {
+          "postsynaptic": 137122,
+          "presynaptic": 65084
+        }
+      },
+      {
+        "accepted_responder": 317,
+        "matched_sham_edge": {
+          "postsynaptic": 5803,
+          "presynaptic": 128590
+        },
+        "target_edge": {
+          "postsynaptic": 317,
+          "presynaptic": 128590
+        }
+      },
+      {
+        "accepted_responder": 126002,
+        "matched_sham_edge": {
+          "postsynaptic": 3587,
+          "presynaptic": 135589
+        },
+        "target_edge": {
+          "postsynaptic": 126002,
+          "presynaptic": 135589
+        }
+      }
+    ]
+  },
+  "source_artifacts": {
+    "sq05_result_sha256": "72bbef6b8cd996f81a371938af9fd3f024ef381bce8cf458c378dc55b05646b1",
+    "sq05_seal_commit": "2146c9f4e6f929985a92c9787ef3e018b127c14a",
+    "sq05_sham_path": "config/controls/sq05-betrayal-i-sham-v1.json",
+    "sq05_sham_sha256": "d43488defc7b27705fe6765db50c8519c65cdaf6ac9a4443aa599c9dd1879f0d",
+    "targeted_edges_path": "${MOSCAQUANT_DATA_ROOT}/processed/mq3-2-first-onset-causal-edges-v1.json",
+    "targeted_edges_sha256": "23cc19a39c30e554671bdf92b904865311d2f7df4dd9ef82af1eaf66638c3a2b"
+  }
+}

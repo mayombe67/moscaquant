@@ -1,0 +1,102 @@
+[experiment]
+id = "sq06-silent-cartographer-v1"
+canonical_parent = "SQ-06 — SILENT CARTOGRAPHER"
+status = "preregistration-review-candidate"
+purpose = "prospective validation of the orientation-partition pattern observed descriptively after sealed SQ-05"
+parent_seal_commit = "2146c9f4e6f929985a92c9787ef3e018b127c14a"
+narrative_label = "SILENT CARTOGRAPHER"
+narrative_label_scientific = false
+financial_semantics = false
+
+[provenance]
+sq05_result_sha256 = "72bbef6b8cd996f81a371938af9fd3f024ef381bce8cf458c378dc55b05646b1"
+sq05_sidecar_sha256 = "b3fbe9f28d07aa5d8dfe707eed99e4b7b48b28364e1afc37875e8442fbeb7a8e"
+sq05_result_seal_sha256 = "fbd902de5ddae4913af337e3d9a1a77ed55750edfe808a6863d8fb24c949f48a"
+targeted_edges_sha256 = "23cc19a39c30e554671bdf92b904865311d2f7df4dd9ef82af1eaf66638c3a2b"
+sq05_sham_sha256 = "d43488defc7b27705fe6765db50c8519c65cdaf6ac9a4443aa599c9dd1879f0d"
+stimulus_module_sha256 = "90bf95fc7bf1baab5f8a77ba4dce9182a5ad5909ca6a3ca37a0cf10c946f623a"
+stimulus_config_sha256 = "8603d100a61a55499b543e2585bccc7dc9a9c94343ec5801af37cd2ddd1a80e7"
+dn_consensus_sha256 = "2e1272b6db6219290af96a828f52764d0f60d937336508251d0a4d6c46fb31f5"
+
+[post_result_origin]
+grouping_is_derived_from_sq05_outcome = true
+grouping_is_independent_discovery = false
+future_test_is_prospective_validation = true
+sq05_result_may_not_be_rewritten = true
+
+[groups]
+artifact = "config/controls/sq06-orientation-edge-groups-v1.json"
+lr_observed_edge_count = 10
+rl_observed_edge_count = 3
+lr_observed_responders = [51, 55, 92, 129, 656, 1273]
+rl_observed_responders = [317, 126002, 137122]
+groups_are_disjoint = true
+union_is_exact_historical_13_edge_lesion = true
+
+[stimulus]
+reuse_sq05_frozen_stimulus = true
+layouts = ["LR", "RL"]
+both_layouts_required = true
+total_frames = 192
+fresh_runtime_each_episode = true
+
+[population]
+artifact = "processed/mq3-dn-consensus-v1.npz"
+assigned_dn_count = 1191
+channels = ["DN-C0", "DN-C1", "DN-C2"]
+post_result_population_selection_forbidden = true
+
+[arms]
+names = [
+  "INTACT",
+  "FULL13_TARGETED",
+  "FULL13_SHAM",
+  "LR_GROUP_TARGETED",
+  "LR_GROUP_SHAM",
+  "RL_GROUP_TARGETED",
+  "RL_GROUP_SHAM",
+]
+duplicate_replicates_per_layout = 2
+expected_episode_count = 28
+
+[primary_fingerprint]
+quantity = "positive_membrane_voltage"
+shape_per_episode = "192x1191"
+normalized_l2_exact_max = 1e-9
+max_abs_exact_max = 1e-12
+exact_duplicate_replay_required = true
+
+[primary_hypotheses]
+full13_positive_control = "FULL13_TARGETED lesion distance > FULL13_SHAM distance from INTACT, evaluated separately in LR and RL"
+subset_sham_guard = "LR_GROUP_SHAM and RL_GROUP_SHAM each exactly reproduce INTACT in both layouts"
+lr_recapitulation = "in LR, LR_GROUP_TARGETED exactly reproduces FULL13_TARGETED"
+lr_cross_group_null = "in LR, RL_GROUP_TARGETED exactly reproduces INTACT"
+rl_recapitulation = "in RL, RL_GROUP_TARGETED exactly reproduces FULL13_TARGETED"
+rl_cross_group_null = "in RL, LR_GROUP_TARGETED exactly reproduces INTACT"
+all_primary_conditions_required_for_exact_partition = true
+
+[secondary_descriptive]
+record_per_dn_effect = true
+record_dn_channel_effect = true
+record_phase_localization = true
+record_accepted_nine = true
+new_target_selection_forbidden = true
+single_neuron_followup_claim_forbidden = true
+
+[reporting]
+report_each_primary_condition_separately = true
+single_overall_winner_forbidden = true
+minimum_meaningful_effect_floor = "NOT_DEFINED"
+no_post_result_threshold_invention = true
+
+[boundaries]
+does_not_rewrite_sq05 = true
+does_not_reinterpret_mq3_2 = true
+does_not_claim_biological_orientation_circuit = true
+does_not_claim_behavior = true
+does_not_claim_fear = true
+does_not_claim_hunger = true
+does_not_claim_threat_perception = true
+does_not_claim_financial_value = true
+preregistration_does_not_authorize_neural_execution = true
+preregistration_does_not_authorize_result_execution = true
