@@ -1,0 +1,49 @@
+[experiment]
+id = "sq07-the-maw-shard-runner-v1"
+canonical_parent = "SQ-07 — THE MAW"
+status = "authoritative-shard-runner-freeze-candidate"
+narrative_label = "THE THROAT"
+narrative_label_scientific = false
+neural_execution_authorized = false
+result_execution_authorized = false
+
+[execution]
+mode = "local"
+expected_shard_count = 512
+expected_total_episode_count = 32768
+conditions_per_shard = 64
+masks_per_shard = 16
+max_shards_per_invocation = 1
+fresh_runtime_each_episode = true
+no_adaptive_selection = true
+no_result_driven_pruning = true
+no_early_stopping = true
+partial_shard_result_write_forbidden = true
+existing_shard_output_refuses_execution = true
+
+[human_command_authority]
+authorization_scope = "complete_sq07_run"
+human_execution_authorization_required = true
+automated_authorization_forbidden = true
+ai_generated_authorization_forbidden = true
+ci_success_is_not_execution_authorization = true
+test_success_is_not_execution_authorization = true
+runner_presence_is_not_execution_authorization = true
+authorization_must_be_explicit_and_run_specific = true
+authorization_may_not_be_inferred_from_prior_runs = true
+
+authorization_file_must_be_git_tracked = true
+authorization_commit_must_equal_execution_head = true
+implementation_commit_must_be_ancestor_of_execution_head = true
+implementation_commit_must_precede_authorization_commit = true
+clean_git_worktree_required = true
+
+[boundaries]
+runner_may_classify_results = false
+runner_may_select_conditions = false
+runner_may_change_shard_membership = false
+runner_may_change_condition_order = false
+runner_may_reinterpret_sq05 = false
+runner_may_reinterpret_sq06 = false
+runner_may_claim_behavior = false
+runner_may_claim_biological_orientation_circuit = false
