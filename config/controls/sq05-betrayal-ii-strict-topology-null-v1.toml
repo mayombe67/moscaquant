@@ -1,0 +1,56 @@
+[experiment]
+id = "sq05-betrayal-ii-strict-topology-null-v1"
+canonical_parent = "SQ-05 — TWO BETRAYALS"
+arm = "BETRAYAL_II_SHUFFLED"
+status = "implementation-freeze-candidate"
+scope = "strict_matched_topology_null_only"
+narrative_label = "THE SECOND BETRAYAL"
+narrative_label_scientific = false
+neural_execution_authorized = false
+result_execution_authorized = false
+financial_semantics = false
+
+[warthog_authority]
+seal = "artifacts/mq5-ts-arm-c-mixing-depth-result-seal-v1.json"
+seal_sha256 = "a070680ea01a1c73272ec6179ef1e7e8103af32d7058fe14a8ebb088d937733e"
+result_sha256 = "fe5d9c718a80aee41ed66af43bbd1c091250c972eb9ad7f41bdb2de5df7aff31"
+execution_log_sha256 = "1f7580b5a24d94a1e6b7b66f389558382a90198e90525c24284f76b6e6eece62"
+required_classification = "CURRENT_1X_ADEQUATE_FOR_SQ05"
+
+[backend]
+adapter = "brain.sq05_betrayal_ii.build_betrayal_ii"
+constructor = "brain.mq5_ts_strict_shuffle_native.build_strict_matched_control_native"
+constructor_sha256 = "81283fe0790e6f27ea6c879fc10a9dcb952b44f32fb2857cfef1a3f62dce2316"
+verifier = "brain.mq5_ts_strict_shuffle_verify.verify_strict_matched_control_scalable"
+verifier_sha256 = "4ba7154447de204ea00af548aa46805f53b953057fbe4e5f134a2d59cd113460"
+accepted_swaps_per_eligible_edge = 1.0
+max_attempt_multiplier = 20
+reference_backend_full_connectome_forbidden = true
+
+[inputs]
+connectome = "processed/connectome-baseline-v1.npz"
+connectome_sha256 = "e00e3f2a9828c921fe1f093cc567bf45a85adad0526176be0aa1b8be09336eeb"
+transmitter = "processed/transmitter_sign.npy"
+transmitter_sha256 = "0a8b1abe338e17afde197f7ef2d9a6b86cc67a2b51d0f50d9610108f809af69f"
+retina = "processed/visual-r1-r6-map-v1.npz"
+retina_sha256 = "c4655220e1aee4eab580a534df009f0a7493f075c42285b430ad1365ae37917f"
+future_sq05_runner_must_verify_hashes = true
+
+[seed_policy]
+exact_seed_frozen_here = false
+seed_source = "future_prospectively_frozen_sq05_protocol"
+fresh_seed_required = true
+forbid_mq5_ts_result_seed_range = "20263000..20263019"
+forbid_warthog_characterization_seeds = [20264000, 20264001, 20264002]
+seed_count_frozen_here = false
+
+[boundaries]
+does_not_choose_sq05_seed = true
+does_not_choose_sq05_trial = true
+does_not_define_betrayal_i_lesion = true
+does_not_define_sq05_stimulus = true
+does_not_run_neural_dynamics = true
+does_not_authorize_result_execution = true
+does_not_reinterpret_warthog = true
+does_not_reinterpret_mq5_ts = true
+panopticon_cannot_generate_scientific_state = true

@@ -1,0 +1,49 @@
+[experiment]
+id = "sq05-betrayal-i-causal-route-lesion-v1"
+canonical_parent = "SQ-05 — TWO BETRAYALS"
+arm = "BETRAYAL_I_LESIONED"
+status = "implementation-freeze-candidate"
+scope = "inherited_validated_causal_route_lesion"
+narrative_label = "THE FIRST BETRAYAL"
+narrative_label_scientific = false
+neural_execution_authorized = false
+result_execution_authorized = false
+financial_semantics = false
+
+[inherited_lesion]
+artifact = "processed/mq3-2-first-onset-causal-edges-v1.json"
+artifact_sha256 = "23cc19a39c30e554671bdf92b904865311d2f7df4dd9ef82af1eaf66638c3a2b"
+edge_count = 13
+target_count = 9
+operator = "brain.mq3_2_causal_intervention.zero_edges"
+operator_source_sha256 = "007aa507ac22b07811bff5ae8102a0916c88549aa3011fa22fa57c70598c6a87"
+historical_selection_post_hoc = true
+historical_purpose = "confirmatory in-model causal intervention"
+sq05_adoption = "prospective"
+regenerate_or_reselect_edges = false
+
+[method]
+action = "zero_exact_frozen_edge_weights"
+modify_only_weight_values = true
+copy_before_modify = true
+eliminate_zero_entries = true
+verify_only_exact_13_edges_changed = true
+
+[scientific_control]
+future_sq05_sham_required = true
+historical_sham_rule = "same_presynaptic_neuron_nearest_positive_weight"
+historical_sham_source = "config/controls/mq3-2-causal-intervention-v1.toml"
+historical_sham_source_sha256 = "05f70516c9994f19fb294c43e918b73689e95d49f620e2dfe9bb869c243d03c9"
+showcase_primary_arm = false
+exact_sq05_sham_edges_frozen_here = false
+
+[boundaries]
+not_a_hunger_circuit_claim = true
+not_a_danger_circuit_claim = true
+does_not_define_sq05_stimuli = true
+does_not_define_sq05_timing = true
+does_not_define_sq05_endpoints = true
+does_not_execute_neural_dynamics = true
+does_not_authorize_result_execution = true
+does_not_reinterpret_mq3_2 = true
+does_not_reinterpret_mq5_ts = true

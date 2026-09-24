@@ -1,0 +1,78 @@
+[experiment]
+id = "sq05-two-betrayals-stimulus-v1"
+canonical_parent = "SQ-05 — TWO BETRAYALS"
+status = "stimulus-freeze-candidate"
+neural_execution_authorized = false
+result_execution_authorized = false
+financial_semantics = false
+
+[retina]
+artifact = "processed/visual-r1-r6-map-v1.npz"
+artifact_sha256 = "c4655220e1aee4eab580a534df009f0a7493f075c42285b430ad1365ae37917f"
+population_size = 166700
+placed_receptors = 3241
+unique_columns = 800
+left_receptors = 1085
+right_receptors = 2156
+
+[timing]
+dt_ms = 1.0
+total_frames = 192
+frame_block = 16
+baseline_start = 0
+baseline_end_inclusive = 31
+cue_a_onset = 32
+cue_a_only_end_inclusive = 95
+cue_b_onset = 96
+overlap_end_inclusive = 191
+
+[cue_a]
+scientific_id = "CUE_A_LOCALIZED_VISUAL"
+radius = 0
+active_receptors_per_layout = 6
+presentation_shorthand = "fruit-associated"
+presentation_shorthand_scientific = false
+
+[cue_b]
+scientific_id = "CUE_B_EXPANDING_VISUAL"
+radius_schedule_by_block = [0, 1, 2, 3, 4, 4]
+presentation_shorthand = "looming-threat"
+presentation_shorthand_scientific = false
+geometry_note = "nested abs(h1-center_h1)<=r and abs(h2-center_h2)<=r coordinate window; not exact biological angular radius"
+
+[energy]
+source_constant = "brain.market_replay.SENSORY_GAIN"
+source_file_sha256 = "9f6e9f324206bba8c5ec04b8f10527e6cbdeb9d58ecaab8b2eb5434de2d5b4c7"
+per_active_cue_per_frame = 12.626497881530927
+normalization = "equal_total_retinal_drive_per_active_cue_per_frame"
+overlap_total_drive_multiplier = 2.0
+
+[layouts.LR]
+cue_a_center = "L/25/32"
+cue_b_center = "R/21/29"
+cue_b_receptor_counts_by_block = [6, 36, 97, 187, 318, 318]
+schedule_sha256 = "61e5b3de5ea61947f1053fc513b7a6d8f2fb17af7efca4af038e8c4024d1c3c7"
+
+[layouts.RL]
+cue_a_center = "R/21/29"
+cue_b_center = "L/25/32"
+cue_b_receptor_counts_by_block = [6, 45, 134, 238, 367, 367]
+schedule_sha256 = "e044055d99fe8a19d69b4eee7bd02ba5279641c99b48d0c99cb468a5bd8f20ab"
+
+[controls]
+layout_counterbalance_required = true
+both_layouts_required_before_classification = true
+same_schedule_all_neural_arms = true
+
+[boundaries]
+not_fruit_recognition = true
+not_olfactory_stimulation = true
+not_hunger_induction = true
+not_threat_perception = true
+not_fear_induction = true
+not_biological_looming_detector_claim = true
+does_not_choose_betrayal_ii_seed = true
+does_not_freeze_lesion_sham_edges = true
+does_not_freeze_neural_endpoint = true
+does_not_authorize_neural_execution = true
+does_not_authorize_result_execution = true

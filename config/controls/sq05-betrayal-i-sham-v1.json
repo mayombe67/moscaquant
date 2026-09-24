@@ -1,0 +1,90 @@
+{
+  "artifact": "sq05-betrayal-i-sham-v1",
+  "canonical_parent": "SQ-05 — TWO BETRAYALS",
+  "arm": "BETRAYAL_I_SHAM",
+  "status": "preregistration-freeze-candidate",
+  "showcase_primary_arm": false,
+  "selection": {
+    "rule": "same_presynaptic_neuron_nearest_positive_weight",
+    "source_mq3_2_result_sha256": "0a400d4e9efc415266d51b9ad68eedfaf8318e684a1e504fb005f9609cc5917e",
+    "source_causal_artifact_sha256": "23cc19a39c30e554671bdf92b904865311d2f7df4dd9ef82af1eaf66638c3a2b",
+    "source_baseline_sha256": "e00e3f2a9828c921fe1f093cc567bf45a85adad0526176be0aa1b8be09336eeb",
+    "historical_selection_before_outcome": true,
+    "exact_historical_reproduction_confirmed_before_sq05_outcomes": true,
+    "derive_at_execution": false
+  },
+  "edge_count": 13,
+  "canonical_edge_set_sha256": "4a96cc329bb98a6cce66315280d80dcf9389c1ea7e39934b5d40d31ab4cc6879",
+  "edges": [
+    {
+        "postsynaptic": 878,
+        "presynaptic": 43417,
+        "weight": 0.0006591957644559443
+    },
+    {
+        "postsynaptic": 4356,
+        "presynaptic": 44274,
+        "weight": 0.00013991884770803154
+    },
+    {
+        "postsynaptic": 4356,
+        "presynaptic": 55548,
+        "weight": 0.00013991884770803154
+    },
+    {
+        "postsynaptic": 5433,
+        "presynaptic": 55925,
+        "weight": 0.00016412275726906955
+    },
+    {
+        "postsynaptic": 98715,
+        "presynaptic": 56393,
+        "weight": 0.004950494971126318
+    },
+    {
+        "postsynaptic": 4131,
+        "presynaptic": 64717,
+        "weight": 0.00014202528109308332
+    },
+    {
+        "postsynaptic": 369,
+        "presynaptic": 65084,
+        "weight": 0.00023729295935481787
+    },
+    {
+        "postsynaptic": 107,
+        "presynaptic": 68045,
+        "weight": 0.000545681337825954
+    },
+    {
+        "postsynaptic": 137444,
+        "presynaptic": 87441,
+        "weight": 0.00014233356341719627
+    },
+    {
+        "postsynaptic": 6648,
+        "presynaptic": 92657,
+        "weight": 0.00031565656536258757
+    },
+    {
+        "postsynaptic": 6008,
+        "presynaptic": 93484,
+        "weight": 0.00015220700879581273
+    },
+    {
+        "postsynaptic": 5803,
+        "presynaptic": 128590,
+        "weight": 0.0005770340212620795
+    },
+    {
+        "postsynaptic": 3587,
+        "presynaptic": 135589,
+        "weight": 0.0006313795456662774
+    }
+],
+  "boundaries": {
+    "neural_execution_authorized": false,
+    "result_execution_authorized": false,
+    "not_a_behavioral_sham_claim": true
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "artifact": "sq06-silent-cartographer-result-seal-v1",
+  "authoritative_outputs": {
+    "dense_sidecar": {
+      "logical_path": "${MOSCAQUANT_DATA_ROOT}/experiments/sq06-silent-cartographer-v1.npz",
+      "schema_sha256": "a0fe8b814a17e2c416576381c25aaf1d1b4ea0432af7c3112d617c5f1366eb37",
+      "sha256": "f10b9769bd799a390295ced25b99c2a98e3efe49c823c2a5a79595d28fcc0feb",
+      "size_bytes": 122579
+    },
+    "execution_log": {
+      "byte_identical_to_result_manifest": true,
+      "logical_path": "${MOSCAQUANT_DATA_ROOT}/experiments/sq06-silent-cartographer-v1.execution.log",
+      "sha256": "f9fe6e3ea23edc86869e7e47fa88ab11c25a607b8fe4fce6b5cdec2c8c0a58a9",
+      "size_bytes": 124818
+    },
+    "result_manifest": {
+      "logical_path": "${MOSCAQUANT_DATA_ROOT}/experiments/sq06-silent-cartographer-v1.json",
+      "sha256": "f9fe6e3ea23edc86869e7e47fa88ab11c25a607b8fe4fce6b5cdec2c8c0a58a9",
+      "size_bytes": 124818
+    }
+  },
+  "canonical_parent": "SQ-06 \u2014 SILENT CARTOGRAPHER",
+  "claim_boundaries": {
+    "behavior": false,
+    "biological_causality": false,
+    "biological_orientation_circuit": false,
+    "danger": false,
+    "fear": false,
+    "financial_value": false,
+    "fruit_recognition": false,
+    "hunger": false,
+    "market_prediction": false,
+    "population_level_significance": false,
+    "threat_perception": false
+  },
+  "execution": {
+    "completed_episode_count": 28,
+    "deterministic_duplicate_pairs_exact": 14,
+    "expected_episode_count": 28,
+    "mode": "local",
+    "random_topology_build_count": 0,
+    "stored_DN_spike_count": 0
+  },
+  "frozen_inputs": {
+    "execution_authorization_sha256": "577b35ed143c0d55d0d3945a3ee5193072048ce26c59228886bd237c00b9f716",
+    "orientation_groups_sha256": "2fac74225e9874dfe13f919bfc47062065ba85b1ed1b61cce424f9a2c777c38d",
+    "orientation_operator_sha256": "0ea1d6f3188f03e4a90da36898b9cb46a6546c830aebf9fb5f51508d66cce0ce",
+    "physiology_constrained_visual_transduction_sha256": "bf754a29155ade789349fbdfc3c579f1b2c8dbea3c63804f2cf3d858d0a2f605",
+    "preregistration_sha256": "3182a91b08dacc278ba180999f0358eea812da94ec5e2eeff9ed834498820f92",
+    "result_schema_sha256": "a0fe8b814a17e2c416576381c25aaf1d1b4ea0432af7c3112d617c5f1366eb37",
+    "runner_config_sha256": "bbd6cde905af20a60216cc6cf29fdd7f18de980c7e653a8d0674c63f52af0bbd",
+    "runner_sha256": "39d4da93386b37c97ee4c276e388776d1e479046818764e6fc2ac8097a9803d8",
+    "visual_transduction_sha256": "015cc699f49e16bb59f6e7e5f04f92cca7bfc1a3c7057e73fe54398c755831f6"
+  },
+  "independent_verification": {
+    "all_primary_conditions_satisfied": true,
+    "duplicate_pairs_verified": 14,
+    "episodes_verified": 28,
+    "execution_log_sha256": "f9fe6e3ea23edc86869e7e47fa88ab11c25a607b8fe4fce6b5cdec2c8c0a58a9",
+    "result_json_sha256": "f9fe6e3ea23edc86869e7e47fa88ab11c25a607b8fe4fce6b5cdec2c8c0a58a9",
+    "result_mutation": false,
+    "runner_imported": false,
+    "sidecar_npz_sha256": "f10b9769bd799a390295ced25b99c2a98e3efe49c823c2a5a79595d28fcc0feb",
+    "status": "PASS",
+    "verifier_sha256": "70dabe8ef0cecabb3c7d672d89de88bf8fdf16e9fe99e144006d42db53983d00"
+  },
+  "narrative_label": "SILENT CARTOGRAPHER",
+  "narrative_label_scientific": false,
+  "outcomes": {
+    "all_primary_conditions_satisfied": true,
+    "exact_partition": {
+      "lr_cross_group_null": true,
+      "lr_recapitulation": true,
+      "rl_cross_group_null": true,
+      "rl_recapitulation": true
+    },
+    "full13_positive_control": {
+      "LR": {
+        "sham_distance": 0.0,
+        "target_distance": 3.8240768866345015e-05,
+        "target_exceeds_sham": true
+      },
+      "RL": {
+        "sham_distance": 0.0,
+        "target_distance": 0.1276743202466753,
+        "target_exceeds_sham": true
+      }
+    },
+    "interpretive_boundary": "The SQ-05 outcome-derived 10-edge/3-edge grouping prospectively satisfied every preregistered SQ-06 primary condition under the frozen model and 1191-DN positive-voltage endpoint. This is not independent discovery and does not establish a biological orientation circuit or behavior.",
+    "minimum_meaningful_effect_floor": "NOT_DEFINED",
+    "subset_sham_guard": {
+      "all_four_group_layout_comparisons_exact": true
+    }
+  },
+  "reporting": {
+    "independent_discovery": false,
+    "prospective_validation_of_sq05_derived_grouping": true,
+    "report_primary_conditions_separately": true,
+    "single_overall_winner": null,
+    "single_overall_winner_forbidden": true
+  },
+  "repository_authority": {
+    "branch": "science/sq06-silent-cartographer",
+    "execution_authorization_commit": "4973de1b4bdcde1ae1077c2f7902d8059036d254",
+    "implementation_commit": "133731606203b666c8e554510401d67e3999264d"
+  },
+  "status": "sealed",
+  "storage_policy": {
+    "copy_dense_result_artifacts_into_git": false,
+    "result_files_remain_external_immutable_artifacts": true,
+    "seal_by_sha256": true
+  }
+}
