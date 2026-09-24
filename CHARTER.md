@@ -3356,7 +3356,7 @@ Financial semantics remain:
 
 ### PROJECT RASPUTIN — Elastic Scientific Execution Plane
 
-**Canonical status:** PLANNED / INFRASTRUCTURE PRIORITY
+**Canonical status:** OPERATIONAL — FIRST AUTHORITATIVE WORKLOAD COMPLETE
 
 PROJECT RASPUTIN is MoscaQuant's provider-neutral elastic execution plane.
 
@@ -3495,5 +3495,10 @@ Any intervention on `1952` or the other emitted candidates requires a new,
 separately preregistered experiment.
 
 Authoritative result SHA-256: `1ed37ae6d4e19cd39409a2bb714ed7394236d2a273316005c6ae596e5d837790`.
+
+This establishes the first accepted authoritative RASPUTIN production path:
+frozen science was executed on elastic infrastructure without changing the
+scientific contract. It does not silently upgrade unrecorded RSP campaign
+stages or convert infrastructure evidence into scientific evidence.
 
 Financial semantics remain `NOT ASSIGNED`.

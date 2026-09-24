@@ -439,3 +439,96 @@ Per the preregistered stopping rule, any candidate intervention must be a new,
 separately preregistered causal experiment with matched controls.
 
 Financial semantics remain `NOT ASSIGNED`.
+
+## SQ-05 — TWO BETRAYALS — sealed result
+
+SQ-05 completed as a preregistered, local authoritative result using the frozen
+192-frame dual-cue visual sequence, the inherited 13-edge causal-route lesion,
+its frozen matched sham, and the frozen 20-seed strict matched-topology null.
+
+Authoritative result status: **SEALED / COMPLETED**
+
+Primary result components:
+
+- Cue B produced a measured model response in both frozen retinal layouts.
+- The inherited 13-edge targeted lesion exceeded the matched sham in both
+  layouts.
+- The strict matched-topology null reproduced the intact response in `0 / 20`
+  seeds.
+- All six deterministic arm/layout duplicate pairs replayed exactly.
+- No single overall winner is defined.
+
+Frozen lesion-versus-intact normalized symmetric L2 distance:
+
+- `LR`: `3.8240768866345015e-05`
+- `RL`: `0.1276743202466753`
+
+Authoritative result SHA-256:
+
+`72bbef6b8cd996f81a371938af9fd3f024ef381bce8cf458c378dc55b05646b1`
+
+Authoritative sidecar SHA-256:
+
+`b3fbe9f28d07aa5d8dfe707eed99e4b7b48b28364e1afc37875e8442fbeb7a8e`
+
+Result seal SHA-256:
+
+`fbd902de5ddae4913af337e3d9a1a77ed55750edfe808a6863d8fb24c949f48a`
+
+Seal commit:
+
+`2146c9f4e6f929985a92c9787ef3e018b127c14a`
+
+The lesion predates SQ-05 and retains its historical `post_hoc = true`
+discovery provenance from MQ-3.2. SQ-05 prospectively adopted the already-fixed
+lesion; it did not prospectively discover those 13 edges.
+
+SQ-05 supports model/network-response claims only. It does not establish fruit
+recognition, hunger, threat perception, fear, behavior, biological causality,
+population-level significance, market prediction, or financial value.
+
+## SQ-06 — SILENT CARTOGRAPHER — sealed result
+
+SQ-06 prospectively tested an orientation grouping that had been observed only
+after the sealed SQ-05 result. The grouping was frozen before SQ-06 execution:
+
+- `LR_OBSERVED`: 10 of the historical 13 targeted edges;
+- `RL_OBSERVED`: the remaining 3 targeted edges.
+
+Authoritative result status: **SEALED / COMPLETED**
+
+All six preregistered primary conditions were satisfied:
+
+- `FULL13_TARGETED` exceeded `FULL13_SHAM` relative to intact in both layouts;
+- `LR_GROUP_SHAM` and `RL_GROUP_SHAM` exactly reproduced intact in both layouts;
+- in `LR`, `LR_GROUP_TARGETED` exactly reproduced `FULL13_TARGETED`;
+- in `LR`, `RL_GROUP_TARGETED` exactly reproduced `INTACT`;
+- in `RL`, `RL_GROUP_TARGETED` exactly reproduced `FULL13_TARGETED`;
+- in `RL`, `LR_GROUP_TARGETED` exactly reproduced `INTACT`.
+
+Execution completed `28 / 28` episodes with `14 / 14` exact duplicate
+arm/layout pairs. The stored DN spike count across all 28 episodes was `0`; the
+primary endpoint was subthreshold positive membrane voltage.
+
+The exact partition result is **prospective validation of an SQ-05-derived
+grouping**. It is not independent discovery and does not establish a biological
+orientation circuit or behavior.
+
+Authoritative result SHA-256:
+
+`f9fe6e3ea23edc86869e7e47fa88ab11c25a607b8fe4fce6b5cdec2c8c0a58a9`
+
+Authoritative sidecar SHA-256:
+
+`f10b9769bd799a390295ced25b99c2a98e3efe49c823c2a5a79595d28fcc0feb`
+
+Result seal SHA-256:
+
+`de7129a812a4520706512234be19543a51df64fa9879f50bee8d8a2045b5b816`
+
+Seal commit:
+
+`ba16e60ca798997ad1b1a7a9f06322f3679abe14`
+
+No minimum meaningful-effect floor was defined, no post-result threshold is
+introduced here, and no single overall winner is defined.

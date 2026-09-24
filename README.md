@@ -194,8 +194,29 @@ measured effect to approximately **2.8e-7 of the intact magnitude**.
 
 These results are model-specific and replay-specific.
 
-They are experimental groundwork for roadmap MQ-12 and do **not** constitute
-completion of MQ-12.
+Later sealed work added three further milestones:
+
+- **PROJECT RASPUTIN** demonstrated an authoritative elastic scientific
+  execution path by completing MQ-5.ER.5 — THE GREEK from its frozen scientific
+  contract while recording immutable code, image, input, execution, result, and
+  seal provenance. Infrastructure changed compute capacity, not experimental
+  meaning.
+- **SQ-05 — TWO BETRAYALS** prospectively reused the inherited 13-edge
+  causal-route lesion under a frozen visual sequence and matched controls. The
+  lesion exceeded its sham in both retinal layouts, while the 20-seed strict
+  matched-topology null reproduced the intact response in `0 / 20` seeds. SQ-05
+  defines no single overall winner and no population-level significance claim.
+- **SQ-06 — SILENT CARTOGRAPHER** prospectively tested an orientation grouping
+  derived from the sealed SQ-05 post-result audit. All six preregistered primary
+  conditions passed: each subgroup exactly recapitulated the full lesion in its
+  corresponding layout and was exactly null in the opposite layout, with all
+  subgroup shams reproducing intact. The run completed `28 / 28` episodes with
+  `14 / 14` exact duplicate pairs and zero stored DN spikes. This is prospective
+  validation of an SQ-05-derived grouping, not independent discovery or a
+  biological orientation-circuit claim.
+
+These results are experimental groundwork for roadmap MQ-12 and do **not**
+constitute completion of MQ-12.
 
 ---
 

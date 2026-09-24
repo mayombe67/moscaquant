@@ -1461,11 +1461,16 @@ candidate semantics.
 
 ## PROJECT RASPUTIN — AWAKEN RASPUTIN
 
-**Status:** NEXT INFRASTRUCTURE CAMPAIGN
+**Status:** OPERATIONAL — FIRST AUTHORITATIVE WORKLOAD COMPLETE
 
 **Mission:** build a production-grade elastic execution plane capable of
 running MoscaQuant science at the scale demanded by the hypothesis rather than
 the scale tolerated by Habitat.
+
+The campaign map below remains the canonical design and acceptance structure.
+Its first production raid has now completed authoritatively with THE GREEK.
+This status records an operational accepted path; it does not imply an
+unrecorded closeout for any individual strike.
 
 **Scientific boundary:** infrastructure may change execution capacity, never
 experimental meaning.

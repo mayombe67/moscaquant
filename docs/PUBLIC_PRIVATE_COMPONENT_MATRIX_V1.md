@@ -4,6 +4,9 @@
 | --- | --- | --- | --- |
 | Scientific protocols | Yes | Optional mirrors | Required for reproducible claims |
 | Published configs | Yes | Deployment overrides | Secrets/host details stay private |
+| Authoritative scientific execution contract | Yes | Provider-specific implementation | Runtime acceptance and scientific invariants are public |
+| Execution provenance / immutable digests | Yes | Raw operational extras may also exist | Published execution claims remain auditable |
+| RASPUTIN provider IaC / operator internals | No | Yes | Operations private; scientific contract public |
 | Result summaries | Yes | Raw/private extras optional | Published claims need evidence |
 | Provenance / RECEIPTS | Yes | Private raw receipts may also exist | Public claims remain auditable |
 | OVERWATCH schemas | Yes | Production transport | Contract public, operations private |

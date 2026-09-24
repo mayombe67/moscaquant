@@ -8,6 +8,8 @@
 
 **First production scientific workload:** MQ-5.ER.5 — THE GREEK
 
+**Operational status:** **OPERATIONAL — FIRST AUTHORITATIVE WORKLOAD COMPLETE**
+
 **Governing invariant:** **RASPUTIN may change horsepower. It may never change
 experimental meaning.**
 
@@ -150,10 +152,41 @@ Operators must be able to answer without logging into a worker:
 | RAID | WRATH OF THE MACHINE | authoritative THE GREEK production run |
 | BOSS | AKSIS, ARCHON PRIME | complete end-to-end platform integration |
 
+## Authoritative scientific execution chain
+
+The first production scientific workload has now completed through the accepted
+RASPUTIN path.
+
+MQ-5.ER.5 — THE GREEK bound the authoritative result to:
+
+1. frozen scientific execution Git SHA
+   `4978062b48b557ad9f8f327308ce4aeca0a49ae3`;
+2. immutable OCI image digest
+   `sha256:635403f4e527b5e98c68887884fb4198a9946b9cc8714b50ba0220a33f6f8796`;
+3. accepted AWS Batch execution under the frozen runtime contract;
+4. authoritative result SHA-256
+   `1ed37ae6d4e19cd39409a2bb714ed7394236d2a273316005c6ae596e5d837790`;
+5. result seal SHA-256
+   `63fb631e661ff054e28869f0c784eddea088ab8c3307a0c82bc5d55a40b94ee9`.
+
+Provider-specific identifiers and private operations are implementation
+details. The public scientific requirement is the content-addressed trust
+chain: frozen code and scientific inputs enter an accepted runtime, and an
+immutable result plus provenance emerge without changing the experiment.
+
+The public repository documents the contract and evidence needed to audit that
+claim. Private `moscaquant-ops` remains authoritative for provider-specific
+deployment implementation, operational controls, credentials, and secrets.
+
 ## Completion rule
 
-RASPUTIN is not considered awake because infrastructure exists.
+RASPUTIN is not considered awake merely because infrastructure exists.
 
-RASPUTIN is awake when a parity-approved runtime completes THE GREEK from its
-frozen scientific contract, emits verifiable evidence and provenance, and
-tears itself down without hidden manual state.
+The operational wake condition is satisfied when a parity-approved runtime
+completes a frozen scientific workload, emits verifiable evidence and
+provenance, and leaves no hidden manual scientific state. THE GREEK satisfied
+that condition for the first authoritative production workload.
+
+That milestone establishes an operational authoritative execution path. It does
+not, by itself, assert that every historical RSP campaign stage has a separate
+public closeout unless that stage's acceptance evidence is also recorded.

@@ -2,9 +2,35 @@
 
 ## Purpose
 
-The cloud deployment provides a stable runtime and a public read-only science surface without changing accepted MoscaQuant scientific behavior.
+This document describes deployment of the **public web / read-only science
+surface**.
+
+It is not the authoritative scientific-execution specification for PROJECT
+RASPUTIN. That contract is documented separately in
+`docs/infrastructure/PROJECT_RASPUTIN.md`.
+
+The public cloud deployment provides a stable web runtime and a public
+read-only science surface without changing accepted MoscaQuant scientific
+behavior.
 
 Cloud migration is infrastructure work, not a new experimental MQ phase.
+
+## Deployment-plane separation
+
+MoscaQuant has two distinct cloud concerns:
+
+```text
+PUBLIC WEB PLANE
+source revision -> commit-addressed web release -> Nginx/TLS -> read-only public surface
+
+AUTHORITATIVE SCIENCE PLANE
+frozen science -> immutable execution image -> accepted RASPUTIN runtime
+              -> content-addressed result + provenance
+```
+
+The two planes may share generic cloud primitives, but they do not share
+scientific authority. A website deployment cannot create or reclassify a
+scientific result, and a RASPUTIN worker is not a public application authority.
 
 ## Public architecture
 

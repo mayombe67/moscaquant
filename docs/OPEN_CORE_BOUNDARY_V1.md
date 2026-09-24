@@ -25,6 +25,8 @@ The public repository should contain the scientific core and verification surfac
 - scientific model interfaces;
 - experiment protocols;
 - frozen configs appropriate for publication;
+- authoritative scientific execution contracts and runtime-parity criteria;
+- content-addressed execution provenance required to substantiate published results;
 - result summaries and provenance;
 - tests required to validate public claims;
 - OVERWATCH event schemas/contracts;
@@ -72,7 +74,7 @@ Private systems may include:
 - Broadcast/social automation;
 - production live-stream transport;
 - commercial analytics;
-- cloud/deployment overlays;
+- provider-specific cloud/deployment overlays, IaC state and operator tooling;
 - production monitoring endpoints;
 - broker/execution adapters;
 - private Warden enforcement wiring;
@@ -109,6 +111,33 @@ commercial UX
 
 If a future claim depends specifically on the proprietary neural-to-rig mapping, the relevant
 mapping methodology must be published sufficiently for that claim to be evaluated.
+
+## RASPUTIN public/private boundary
+
+PROJECT RASPUTIN follows the same open-core rule as the rest of MoscaQuant.
+
+Public science includes enough execution information to evaluate an
+authoritative result:
+
+- frozen scientific Git revision;
+- scientific configuration and input identities;
+- runtime-parity / acceptance contract;
+- immutable execution-image digest where it substantiates the run;
+- authoritative execution/result identifiers appropriate for publication;
+- result and seal hashes;
+- failure semantics relevant to scientific validity.
+
+Private operations may retain:
+
+- Terraform state and provider-specific deployment composition;
+- credentials, account mappings and secret material;
+- private host inventories;
+- operator convenience tooling;
+- internal monitoring details not needed to evaluate a public claim.
+
+The private implementation may change **how much compute** is available. It may
+not silently change the scientific question, inputs, stopping rule,
+classification rule, or accepted result.
 
 ## Product boundary
 
