@@ -1,0 +1,181 @@
+[experiment]
+id = "sq07-the-maw-v1"
+canonical_parent = "SQ-07 — THE MAW"
+status = "preregistration-review-candidate"
+purpose = "prospective exhaustive intervention mapping of the frozen 13-edge SQ-06 partition"
+parent_seal_commit = "ba16e60ca798997ad1b1a7a9f06322f3679abe14"
+narrative_label = "THE MAW"
+narrative_label_scientific = false
+financial_semantics = false
+
+[provenance]
+sq06_result_seal_sha256 = "de7129a812a4520706512234be19543a51df64fa9879f50bee8d8a2045b5b816"
+sq06_result_document_sha256 = "8e29e1941b79ef4367b634ecff17fbac646a20ee87da38fe07197efbcd3765ec"
+sq06_groups_sha256 = "2fac74225e9874dfe13f919bfc47062065ba85b1ed1b61cce424f9a2c777c38d"
+sq06_preregistration_sha256 = "3182a91b08dacc278ba180999f0358eea812da94ec5e2eeff9ed834498820f92"
+sq06_runner_config_sha256 = "bbd6cde905af20a60216cc6cf29fdd7f18de980c7e653a8d0674c63f52af0bbd"
+sq07_edge_registry_sha256 = "0e9502f3147d2f833d00ce2c05af258b973f7391a43c9d89f695556d8823dedd"
+
+[post_result_origin]
+edge_universe_is_derived_from_sq06 = true
+sq06_partition_was_derived_from_sq05 = true
+independent_discovery = false
+future_test_is_prospective_exhaustive_validation = true
+sq05_result_may_not_be_rewritten = true
+sq06_result_may_not_be_rewritten = true
+
+[edge_universe]
+registry = "config/controls/sq07-the-maw-edge-registry-v1.json"
+edge_count = 13
+lr_observed_indices = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+rl_observed_indices = [10, 11, 12]
+union_is_exact_historical_13_edge_lesion = true
+groups_are_disjoint = true
+
+[mask_contract]
+representation = "13-character binary string"
+zero_means = "target edge remains intact"
+one_means = "target edge is lesioned"
+character_index_matches_edge_index = true
+enumeration = "lexicographic ascending"
+intact_mask = "0000000000000"
+full13_mask = "1111111111111"
+lr_group_mask = "1111111111000"
+rl_group_mask = "0000000000111"
+mask_count_per_layout = 8192
+adaptive_mask_selection_forbidden = true
+mask_pruning_forbidden = true
+early_stop_forbidden = true
+
+[stimulus]
+reuse_sq06_frozen_stimulus_runtime = true
+layouts = ["LR", "RL"]
+both_layouts_required = true
+total_frames = 192
+fresh_runtime_each_episode = true
+
+[population]
+artifact = "processed/mq3-dn-consensus-v1.npz"
+assigned_dn_count = 1191
+channels = ["DN-C0", "DN-C1", "DN-C2"]
+post_result_population_selection_forbidden = true
+
+[execution_universe]
+replicates = [1, 2]
+duplicate_replicates_per_mask_layout = 2
+exact_duplicate_replay_required = true
+expected_unique_masks_per_layout = 8192
+expected_mask_layout_conditions = 16384
+expected_total_episode_count = 32768
+all_conditions_required = true
+missing_condition_replacement_forbidden = true
+topology_randomization_required = false
+
+[primary_fingerprint]
+quantity = "positive_membrane_voltage"
+shape_per_episode = "192x1191"
+storage_dtype = "float32"
+normalized_l2_exact_max = 1e-9
+max_abs_exact_max = 1e-12
+minimum_meaningful_effect_floor = "NOT_DEFINED"
+no_post_result_threshold_invention = true
+
+[anchor_classification]
+classes = ["EXACT_INTACT", "EXACT_FULL13", "INTERMEDIATE"]
+same_layout_intact_and_full13_must_not_be_exact_equivalent = true
+anchor_collapse_requires_fail_closed = true
+exact_intact = "normalized L2 and max-absolute distance from same-layout INTACT are both within frozen exactness tolerances"
+exact_full13 = "normalized L2 and max-absolute distance from same-layout FULL13 are both within frozen exactness tolerances"
+intermediate = "not EXACT_INTACT and not EXACT_FULL13"
+intermediate_has_no_preassigned_biological_meaning = true
+
+[sq06_replication_guards]
+lr_active_mask = "1111111111000"
+lr_inactive_mask = "0000000000111"
+rl_active_mask = "0000000000111"
+rl_inactive_mask = "1111111111000"
+lr_active_must_exactly_recapitulate_full13 = true
+lr_inactive_must_exactly_reproduce_intact = true
+rl_active_must_exactly_recapitulate_full13 = true
+rl_inactive_must_exactly_reproduce_intact = true
+
+[inactive_subset_closure]
+include_empty_subset = true
+lr_inactive_group_indices = [10, 11, 12]
+lr_inactive_subset_count = 8
+rl_inactive_group_indices = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+rl_inactive_subset_count = 1024
+closure_pass = "every mask whose lesioned edges are a subset of the layout-inactive group is EXACT_INTACT"
+hidden_subset_effect = "at least one such mask is not EXACT_INTACT"
+
+[minimal_recapitulators]
+target_class = "EXACT_FULL13"
+minimality = "a mask is inclusion-minimal iff it is EXACT_FULL13 and no strict submask is EXACT_FULL13"
+hamming_weight_only_minimality_forbidden = true
+enumerate_all_inclusion_minimal_masks = true
+report_edge_intersection = true
+report_edge_union = true
+report_per_edge_frequency = true
+report_hamming_weight_distribution = true
+
+[primary_flags]
+sq06_partition_replicated = "all four SQ-06 group-level replication guards pass"
+inactive_subset_closure_supported = "inactive-subset closure passes in both layouts"
+inactive_subset_effect_present = "inactive-subset closure fails in at least one layout"
+all_minimal_full13_recapitulators_active_only = "for each layout, every inclusion-minimal EXACT_FULL13 mask is a subset of that layout's SQ-06 active group"
+mixed_group_minimal_recapitulator_present = "at least one inclusion-minimal EXACT_FULL13 mask contains edges from both frozen groups"
+strict_subset_separability_supported = "SQ06_PARTITION_REPLICATED and INACTIVE_SUBSET_CLOSURE_SUPPORTED and ALL_MINIMAL_FULL13_RECAPITULATORS_ACTIVE_ONLY and not MIXED_GROUP_MINIMAL_RECAPITULATOR_PRESENT"
+single_overall_winner_forbidden = true
+
+[secondary_descriptive]
+report_exact_intact_count_by_layout_and_hamming_weight = true
+report_exact_full13_count_by_layout_and_hamming_weight = true
+report_intermediate_count_by_layout_and_hamming_weight = true
+report_per_mask_anchor_distances = true
+record_channel_summaries = true
+record_spikes = true
+spike_result_is_secondary_descriptive = true
+new_target_selection_forbidden = true
+
+[evidence]
+preserve_primary_fingerprint_for_every_episode = true
+preserve_spikes_for_every_episode = true
+content_addressed_sharding_permitted = true
+shard_size_is_operational_not_scientific = true
+every_shard_requires_sha256 = true
+authoritative_manifest_must_cover_every_mask_layout_replicate = true
+independent_recomputation_from_preserved_evidence_required = true
+runner_summary_alone_is_not_sufficient_evidence = true
+
+[reporting]
+report_each_primary_flag_separately = true
+report_each_layout_separately = true
+single_overall_winner_forbidden = true
+minimum_meaningful_effect_floor = "NOT_DEFINED"
+no_post_result_threshold_invention = true
+null_and_mixed_results_are_valid_outcomes = true
+
+[human_command_authority]
+human_execution_authorization_required = true
+automated_authorization_forbidden = true
+ai_generated_authorization_forbidden = true
+ci_success_is_not_execution_authorization = true
+test_success_is_not_execution_authorization = true
+runner_presence_is_not_execution_authorization = true
+authorization_must_be_explicit_and_run_specific = true
+authorization_may_not_be_inferred_from_prior_runs = true
+
+[boundaries]
+does_not_rewrite_sq05 = true
+does_not_rewrite_sq06 = true
+does_not_reinterpret_mq3_2 = true
+does_not_claim_independent_discovery = true
+does_not_claim_biological_orientation_circuit = true
+does_not_claim_behavior = true
+does_not_claim_fear = true
+does_not_claim_hunger = true
+does_not_claim_threat_perception = true
+does_not_claim_population_level_biological_significance = true
+does_not_claim_financial_value = true
+preregistration_does_not_authorize_neural_execution = true
+preregistration_does_not_authorize_result_execution = true

@@ -1,0 +1,215 @@
+{
+  "artifact": "sq07-the-maw-edge-registry-v1",
+  "canonical_parent": "SQ-07 \u2014 THE MAW",
+  "edges": [
+    {
+      "accepted_responder": 656,
+      "edge_id": "E00",
+      "edge_index": 0,
+      "matched_sham_edge": {
+        "postsynaptic": 878,
+        "presynaptic": 43417
+      },
+      "sq06_group": "LR_OBSERVED",
+      "target_edge": {
+        "postsynaptic": 656,
+        "presynaptic": 43417
+      }
+    },
+    {
+      "accepted_responder": 55,
+      "edge_id": "E01",
+      "edge_index": 1,
+      "matched_sham_edge": {
+        "postsynaptic": 4356,
+        "presynaptic": 44274
+      },
+      "sq06_group": "LR_OBSERVED",
+      "target_edge": {
+        "postsynaptic": 55,
+        "presynaptic": 44274
+      }
+    },
+    {
+      "accepted_responder": 51,
+      "edge_id": "E02",
+      "edge_index": 2,
+      "matched_sham_edge": {
+        "postsynaptic": 4356,
+        "presynaptic": 55548
+      },
+      "sq06_group": "LR_OBSERVED",
+      "target_edge": {
+        "postsynaptic": 51,
+        "presynaptic": 55548
+      }
+    },
+    {
+      "accepted_responder": 55,
+      "edge_id": "E03",
+      "edge_index": 3,
+      "matched_sham_edge": {
+        "postsynaptic": 5433,
+        "presynaptic": 55925
+      },
+      "sq06_group": "LR_OBSERVED",
+      "target_edge": {
+        "postsynaptic": 55,
+        "presynaptic": 55925
+      }
+    },
+    {
+      "accepted_responder": 1273,
+      "edge_id": "E04",
+      "edge_index": 4,
+      "matched_sham_edge": {
+        "postsynaptic": 98715,
+        "presynaptic": 56393
+      },
+      "sq06_group": "LR_OBSERVED",
+      "target_edge": {
+        "postsynaptic": 68045,
+        "presynaptic": 56393
+      }
+    },
+    {
+      "accepted_responder": 92,
+      "edge_id": "E05",
+      "edge_index": 5,
+      "matched_sham_edge": {
+        "postsynaptic": 4131,
+        "presynaptic": 64717
+      },
+      "sq06_group": "LR_OBSERVED",
+      "target_edge": {
+        "postsynaptic": 92,
+        "presynaptic": 64717
+      }
+    },
+    {
+      "accepted_responder": 1273,
+      "edge_id": "E06",
+      "edge_index": 6,
+      "matched_sham_edge": {
+        "postsynaptic": 107,
+        "presynaptic": 68045
+      },
+      "sq06_group": "LR_OBSERVED",
+      "target_edge": {
+        "postsynaptic": 1273,
+        "presynaptic": 68045
+      }
+    },
+    {
+      "accepted_responder": 51,
+      "edge_id": "E07",
+      "edge_index": 7,
+      "matched_sham_edge": {
+        "postsynaptic": 137444,
+        "presynaptic": 87441
+      },
+      "sq06_group": "LR_OBSERVED",
+      "target_edge": {
+        "postsynaptic": 51,
+        "presynaptic": 87441
+      }
+    },
+    {
+      "accepted_responder": 129,
+      "edge_id": "E08",
+      "edge_index": 8,
+      "matched_sham_edge": {
+        "postsynaptic": 6648,
+        "presynaptic": 92657
+      },
+      "sq06_group": "LR_OBSERVED",
+      "target_edge": {
+        "postsynaptic": 129,
+        "presynaptic": 92657
+      }
+    },
+    {
+      "accepted_responder": 129,
+      "edge_id": "E09",
+      "edge_index": 9,
+      "matched_sham_edge": {
+        "postsynaptic": 6008,
+        "presynaptic": 93484
+      },
+      "sq06_group": "LR_OBSERVED",
+      "target_edge": {
+        "postsynaptic": 129,
+        "presynaptic": 93484
+      }
+    },
+    {
+      "accepted_responder": 137122,
+      "edge_id": "E10",
+      "edge_index": 10,
+      "matched_sham_edge": {
+        "postsynaptic": 369,
+        "presynaptic": 65084
+      },
+      "sq06_group": "RL_OBSERVED",
+      "target_edge": {
+        "postsynaptic": 137122,
+        "presynaptic": 65084
+      }
+    },
+    {
+      "accepted_responder": 317,
+      "edge_id": "E11",
+      "edge_index": 11,
+      "matched_sham_edge": {
+        "postsynaptic": 5803,
+        "presynaptic": 128590
+      },
+      "sq06_group": "RL_OBSERVED",
+      "target_edge": {
+        "postsynaptic": 317,
+        "presynaptic": 128590
+      }
+    },
+    {
+      "accepted_responder": 126002,
+      "edge_id": "E12",
+      "edge_index": 12,
+      "matched_sham_edge": {
+        "postsynaptic": 3587,
+        "presynaptic": 135589
+      },
+      "sq06_group": "RL_OBSERVED",
+      "target_edge": {
+        "postsynaptic": 126002,
+        "presynaptic": 135589
+      }
+    }
+  ],
+  "group_index_ranges": {
+    "LR_OBSERVED": [
+      0,
+      9
+    ],
+    "RL_OBSERVED": [
+      10,
+      12
+    ]
+  },
+  "mask_contract": {
+    "character_index_semantics": "mask13[i] corresponds to edges[i]",
+    "enumeration": "lexicographic ascending",
+    "full13_mask": "1111111111111",
+    "intact_mask": "0000000000000",
+    "length": 13,
+    "one": "target edge is lesioned",
+    "representation": "13-character binary string",
+    "subset_count": 8192,
+    "zero": "target edge remains intact"
+  },
+  "purpose": "Frozen coordinate system for exhaustive 13-edge subset enumeration",
+  "source": {
+    "derivation": "LR_OBSERVED in frozen source order followed by RL_OBSERVED in frozen source order",
+    "path": "config/controls/sq06-orientation-edge-groups-v1.json",
+    "sha256": "2fac74225e9874dfe13f919bfc47062065ba85b1ed1b61cce424f9a2c777c38d"
+  }
+}
