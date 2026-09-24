@@ -105,6 +105,12 @@ def build_strict_matched_control_reference(
         for post, pre in zip(rows.tolist(), cols.tolist())
     }
 
+    # Frozen Arm-C rule is baseline-relative:
+    # x -> x may appear after shuffling only if that exact edge existed in
+    # the original graph. Track original self-edge eligibility separately
+    # from the mutable current graph.
+    baseline_self = np.asarray(matrix.diagonal()) != 0
+
     rng = np.random.default_rng(seed)
 
     accepted = 0
@@ -139,7 +145,14 @@ def build_strict_matched_control_reference(
             continue
 
         # a -> x, b -> y becomes b -> x, a -> y.
-        if b == x or a == y:
+        #
+        # A proposed x -> x / y -> y edge is legal only when that exact
+        # self-edge existed in the original graph. This mirrors the native
+        # production backend and the preregistered "no NEW self-edge" rule.
+        if (
+            (b == x and not baseline_self[x])
+            or (a == y and not baseline_self[y])
+        ):
             rejected_self += 1
             continue
 

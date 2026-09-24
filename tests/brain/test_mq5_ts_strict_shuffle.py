@@ -178,3 +178,65 @@ def test_incoming_absolute_normalization_is_order_independent():
 
     assert report["row_signed_weight_multiset"]
     assert report["incoming_absolute_normalization"]
+
+def test_reference_recreates_only_baseline_self_edges(monkeypatch):
+    import brain.mq5_ts_strict_shuffle as shuffle_module
+
+    # Two original self-edges are first swapped away, then the exact same
+    # baseline self-edges are recreated. The frozen rule permits this because
+    # those exact x->x edges existed in the source graph.
+    graph = sparse.csr_matrix(
+        (
+            np.asarray([0.25, 0.5], dtype=np.float32),
+            (
+                np.asarray([0, 2], dtype=np.int32),
+                np.asarray([0, 2], dtype=np.int32),
+            ),
+        ),
+        shape=(3, 3),
+        dtype=np.float32,
+    )
+    graph.sort_indices()
+
+    signs = np.ones(3, dtype=np.float32)
+    protected = np.asarray([], dtype=np.int32)
+
+    class FixedPairRng:
+        def choice(self, values, size, replace):
+            assert size == 2
+            assert replace is False
+            return np.asarray(values[:2], dtype=np.int64)
+
+    monkeypatch.setattr(
+        shuffle_module.np.random,
+        "default_rng",
+        lambda seed: FixedPairRng(),
+    )
+
+    shuffled, diagnostics = (
+        shuffle_module.build_strict_matched_control_reference(
+            graph,
+            signs,
+            protected,
+            seed=123,
+            accepted_swaps_per_eligible_edge=1.0,
+            max_attempt_multiplier=2,
+        )
+    )
+
+    assert diagnostics.target_accepted_swaps == 2
+    assert diagnostics.accepted_swaps == 2
+
+    report = shuffle_module.strict_invariant_report(
+        graph,
+        shuffled,
+        signs,
+        protected,
+    )
+    assert report["no_new_self_edges"]
+    assert all(report.values()), report
+
+    # Two deterministic swaps return the exact baseline edge set.
+    assert np.array_equal(shuffled.indptr, graph.indptr)
+    assert np.array_equal(shuffled.indices, graph.indices)
+    assert np.array_equal(shuffled.data, graph.data)
