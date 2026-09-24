@@ -1,0 +1,186 @@
+{
+  "artifact": "sq07-the-maw-evidence-schema-v1",
+  "canonical_parent": "SQ-07 — THE MAW",
+  "status": "evidence-contract-review-candidate",
+  "scientific_semantics": false,
+
+  "authority_chain": {
+    "preregistration_sha256": "0ff34f0f4c2c1315b766ecc1acf66e2e6c24650aba87ae033e5a71a2b707a84a",
+    "condition_plan_sha256": "850ae560ab1b25c65f9932615f8ea1851781881c4492672767bcda692667becb",
+    "sharding_contract_sha256": "ede14b0add5d13e723c443be241504dea36d4bb0424e3f718b199b8c1c665d8a",
+    "shard_plan_sha256": "9039b8e708c2ffdb74436e5c6fdc8f7d2f38f3f3fb27fd7478dd2cc8101d2a55",
+
+    "condition_planner_source_sha256": "38b8e628492a475f63c40c332232b36c929512dfae8341f5b64afd1597f5411f",
+    "shard_planner_source_sha256": "7cde07ad921543cdb9dba95f3299ccb4a1cfbb20f32a3a75fc678a2df61ef1af",
+    "subset_operator_source_sha256": "693ae8c2455361351802d0ac0c9cee4ada3bb8a25a60043264de5da14da00a5e",
+    "episode_executor_source_sha256": "a4b85e45779ab98c9a1275a0e97ced9f1abb48bfadd974319bfcecf4305be9d8"
+  },
+
+  "shard_contract": {
+    "conditions_per_shard": 64,
+    "masks_per_shard": 16,
+    "replicates_per_mask_layout": 2,
+    "layouts": ["LR", "RL"],
+    "fresh_runtime_each_episode": true,
+    "exact_duplicate_replay_required": true
+  },
+
+  "manifest": {
+    "format": "json",
+    "required_sections": [
+      "status",
+      "schema_version",
+      "shard_identity",
+      "provenance",
+      "completeness",
+      "timing",
+      "sidecar",
+      "claim_boundaries"
+    ],
+
+    "required_shard_identity_fields": [
+      "shard_id",
+      "shard_index",
+      "parent_plan_sha256",
+      "shard_plan_sha256",
+      "sharding_contract_sha256",
+      "condition_membership_sha256",
+      "start_ordinal",
+      "end_ordinal_exclusive",
+      "condition_count",
+      "mask_count",
+      "first_condition_id",
+      "last_condition_id",
+      "condition_ids"
+    ],
+
+    "required_sidecar_fields": [
+      "path",
+      "sha256",
+      "schema_id",
+      "written"
+    ],
+
+    "sidecar_must_be_content_addressed": true,
+    "sidecar_must_exist_before_manifest_commit": true,
+    "atomic_manifest_write_required": true,
+    "atomic_sidecar_write_required": true
+  },
+
+  "sidecar": {
+    "schema_id": "moscaquant.sq07-the-maw-shard-evidence.v1",
+    "format": "numpy_npz_compressed",
+    "episode_count": 64,
+
+    "arrays": {
+      "condition_ordinal": {
+        "dtype": "int32",
+        "shape": [64]
+      },
+      "condition_id": {
+        "dtype": "unicode",
+        "shape": [64]
+      },
+      "condition_mask13": {
+        "dtype": "unicode",
+        "shape": [64]
+      },
+      "condition_layout": {
+        "dtype": "unicode",
+        "shape": [64]
+      },
+      "condition_replicate": {
+        "dtype": "int8",
+        "shape": [64]
+      },
+
+      "dn_indices": {
+        "dtype": "int32",
+        "shape": [1191]
+      },
+
+      "primary_positive_voltage": {
+        "dtype": "float32",
+        "shape": [64, 192, 1191]
+      },
+      "primary_spikes": {
+        "dtype": "uint8",
+        "shape": [64, 192, 1191]
+      },
+
+      "channel_mean_positive_voltage": {
+        "dtype": "float64",
+        "shape": [64, 3, 192]
+      },
+      "channel_positive_fraction": {
+        "dtype": "float64",
+        "shape": [64, 3, 192]
+      },
+      "channel_spike_count": {
+        "dtype": "int32",
+        "shape": [64, 3, 192]
+      },
+      "channel_spike_rate": {
+        "dtype": "float64",
+        "shape": [64, 3, 192]
+      },
+
+      "episode_started_at_utc": {
+        "dtype": "unicode",
+        "shape": [64]
+      },
+      "episode_completed_at_utc": {
+        "dtype": "unicode",
+        "shape": [64]
+      },
+      "episode_elapsed_seconds": {
+        "dtype": "float64",
+        "shape": [64]
+      }
+    }
+  },
+
+  "completeness": {
+    "all_64_conditions_required": true,
+    "condition_ids_must_exactly_equal_shard_membership": true,
+    "condition_order_must_equal_canonical_shard_order": true,
+    "duplicate_condition_ids_forbidden": true,
+    "missing_condition_ids_forbidden": true,
+    "unexpected_condition_ids_forbidden": true,
+
+    "all_16_masks_required": true,
+    "whole_mask_quartets_required": true,
+    "both_layouts_required_per_mask": true,
+    "both_replicates_required_per_mask_layout": true,
+
+    "duplicate_replay_verification_required": true,
+    "duplicate_replay_uses_all_six_episode_arrays": true
+  },
+
+  "recomputation": {
+    "preserve_primary_fingerprint_for_every_episode": true,
+    "preserve_spikes_for_every_episode": true,
+    "independent_recomputation_from_preserved_evidence_required": true,
+    "runner_summary_alone_is_not_sufficient_evidence": true
+  },
+
+  "timing": {
+    "shard_started_at_utc_required": true,
+    "shard_completed_at_utc_required": true,
+    "shard_elapsed_seconds_required": true,
+    "per_episode_timing_required": true,
+    "timing_has_scientific_semantics": false
+  },
+
+  "claim_boundaries": {
+    "evidence_layer_may_classify_results": false,
+    "evidence_layer_may_select_conditions": false,
+    "evidence_layer_may_stop_early_based_on_results": false,
+    "evidence_layer_may_authorize_neural_execution": false,
+    "evidence_layer_may_authorize_result_execution": false,
+    "evidence_layer_may_reinterpret_sq05_or_sq06": false,
+
+    "single_overall_winner": null,
+    "minimum_meaningful_effect_floor": "NOT_DEFINED"
+  }
+}
