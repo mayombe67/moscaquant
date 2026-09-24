@@ -1,0 +1,52 @@
+[artifact]
+id = "sq07-the-maw-sharding-v1"
+canonical_parent = "SQ-07 — THE MAW"
+status = "operational-sharding-review-candidate"
+scientific_semantics = false
+
+[parent_plan]
+condition_plan_sha256 = "850ae560ab1b25c65f9932615f8ea1851781881c4492672767bcda692667becb"
+condition_count = 32768
+mask_count = 8192
+conditions_per_mask = 4
+
+[partition]
+conditions_per_shard = 64
+masks_per_shard = 16
+expected_shard_count = 512
+contiguous_canonical_ordinals = true
+whole_mask_quartets_required = true
+partial_mask_across_shards_forbidden = true
+empty_shards_forbidden = true
+
+[identity]
+shard_id_format = "sq07-shard-{index:03d}"
+first_shard_index = 0
+last_shard_index = 511
+condition_membership_must_be_explicit = true
+condition_membership_sha256_required = true
+parent_plan_sha256_required = true
+
+[completeness]
+all_parent_conditions_required = true
+condition_duplication_across_shards_forbidden = true
+condition_omission_forbidden = true
+condition_substitution_forbidden = true
+union_must_exactly_equal_parent_plan = true
+pairwise_shard_intersection_must_be_empty = true
+
+[operational_boundaries]
+shard_membership_has_scientific_meaning = false
+shard_index_has_scientific_meaning = false
+shard_size_has_scientific_meaning = false
+reordering_within_scientific_condition_identity_forbidden = true
+adaptive_condition_selection_forbidden = true
+mask_pruning_forbidden = true
+early_stopping_based_on_results_forbidden = true
+sharding_does_not_authorize_neural_execution = true
+sharding_does_not_authorize_result_execution = true
+
+[storage_planning]
+basis = "conservative SQ-05 compressed bytes per episode plus SQ-06 raw array bytes per episode"
+historical_runtime_duration_available = false
+runtime_measurement_required_during_future_execution = true
