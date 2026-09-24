@@ -1,0 +1,70 @@
+{
+  "artifact": "mq5-ts-arm-c-mixing-depth-execution-authorization-v1",
+  "config_sha256": "e446b223337fd9c57bc03de2190f8683b4dad4d22cf501171f929aecb0929436",
+  "execution_mode": "local",
+  "experiment_id": "mq5-ts-arm-c-mixing-depth-v1",
+  "implementation_commit": "c4409caea38136553c9c12ad89b853ae62a358f7",
+  "narrative_label": "WARTHOG RUN",
+  "native_sha256": "81283fe0790e6f27ea6c879fc10a9dcb952b44f32fb2857cfef1a3f62dce2316",
+  "prospective_runtime_decision": {
+    "non_result_runtime_benchmark": {
+      "acceptance_rate": 0.520722,
+      "all_scalable_invariants_passed": true,
+      "attempted_swaps": 4910192,
+      "conservative_1_5x_minutes": 21.7,
+      "conservative_2x_minutes": 28.9,
+      "construction_seconds": 3.437,
+      "depth": 0.1,
+      "eligible_edges": 25568467,
+      "experiment_artifact_written": false,
+      "linear_total_estimate_minutes": 14.5,
+      "process_peak_rss_gib": 1.22,
+      "seed": 991337701,
+      "seed_is_preregistered": false,
+      "swap_used_delta_mib": 5.16,
+      "target_accepted_swaps": 2556846,
+      "verification_seconds": 7.878,
+      "warthog_run_seed_builds": 0
+    },
+    "rasputin_recruited": false,
+    "reason": "Measured local full-connectome capacity and runtime are sufficient; cloud reinforcement is not justified by observed load.",
+    "selected_runtime": "Habitat/local",
+    "static_capacity_observation": {
+      "host_available_ram_at_assessment_gib": 3.37,
+      "host_total_ram_gib": 7.43,
+      "static_decision": "RUNTIME_BENCHMARK_REQUIRED_BEFORE_MODE_SELECTION",
+      "temp_disk_free_gib": 413.19,
+      "very_conservative_static_peak_model_gib": 2.92
+    }
+  },
+  "result_execution_enabled": true,
+  "review_boundary": {
+    "authorization_file_untracked_during_review": true,
+    "commit_in_this_gate": false,
+    "execution_requires_later_clean_tracked_state": true,
+    "execution_requires_later_push_verification": true,
+    "push_in_this_gate": false,
+    "result_execution_during_review": false
+  },
+  "runner_sha256": "10e9aa54a563e02d521a51208187b2727fc3015818836f7bd34b68bbd68d9015",
+  "scientific_scope": {
+    "financial_semantics": "NOT ASSIGNED",
+    "frozen_build_count": 12,
+    "frozen_depths": [
+      0.5,
+      1.0,
+      2.0,
+      4.0
+    ],
+    "frozen_seed_count": 3,
+    "frozen_seeds": [
+      20264000,
+      20264001,
+      20264002
+    ],
+    "neural_execution": false,
+    "structural_only": true
+  },
+  "sq05_context": "TWO BETRAYALS / BETRAYAL II topology-null preparation",
+  "verifier_sha256": "4ba7154447de204ea00af548aa46805f53b953057fbe4e5f134a2d59cd113460"
+}
