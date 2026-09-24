@@ -735,3 +735,116 @@ McNulty: "It covers all five."
 McNulty slowly lowers the marker.
 
 The Titan opens the chest anyway.
+
+## TWO BETRAYALS — The Knife Worked, the Shuffle Didn't
+
+**Reference:** SQ-05 — TWO BETRAYALS sealed result.
+
+**Importance:** BOSS
+
+**Science:** Under the frozen SQ-05 stimulus and runtime, both layouts produced
+the preregistered Cue B response and the inherited 13-edge lesion exceeded its
+matched sham in both layouts. LR normalized L2 distance from intact was
+`3.8240768866345015e-05` for the lesion versus `0` for sham; RL was
+`0.1276743202466753` versus `0`. The strict matched-topology null reproduced
+the intact response in `0/20` frozen topology seeds, and all six deterministic
+arm/layout duplicate pairs were exact. No minimum meaningful-effect floor was
+preregistered and no overall winner was defined. The 13-edge lesion itself came
+from historical post-hoc discovery and was prospectively adopted here; SQ-05
+did not prospectively discover it.
+
+**Provenance:** Sealed at commit
+`2146c9f4e6f929985a92c9787ef3e018b127c14a`. Authoritative result JSON
+SHA-256:
+`72bbef6b8cd996f81a371938af9fd3f024ef381bce8cf458c378dc55b05646b1`;
+NPZ SHA-256:
+`b3fbe9f28d07aa5d8dfe707eed99e4b7b48b28364e1afc37875e8442fbeb7a8e`.
+Result-seal SHA-256:
+`fbd902de5ddae4913af337e3d9a1a77ed55750edfe808a6863d8fb24c949f48a`.
+
+**Lore:** McNulty walks in carrying thirteen names from an old case.
+
+Daniels looks at the board.
+
+"You don't get to call them guilty just because you already know their faces."
+
+So the same knife goes through two layouts. The shams do nothing. Then the
+dealer rebuilds the neighborhood twenty times under the strict null and never
+manages to counterfeit the intact response.
+
+Somewhere on the radio, Sergeant Johnson cuts in:
+
+"Son, if you're gonna betray the Covenant twice, at least make the second one a
+proper control."
+
+McNulty stares at Daniels.
+
+"Who the hell keeps giving that man our frequency?"
+
+Daniels does not answer.
+
+
+## SILENT CARTOGRAPHER — The Map Split Cleanly
+
+**Reference:** SQ-06 — SILENT CARTOGRAPHER sealed result.
+
+**Importance:** BOSS
+
+**Science:** The grouping derived after SQ-05 was frozen before execution as a
+10-edge LR group and a 3-edge RL group. All six
+preregistered primary conditions passed. Under LR, the 10-edge group exactly recapitulated
+FULL13 while the 3-edge group was exactly intact. Under RL, the 3-edge group
+exactly recapitulated FULL13 while the 10-edge group was exactly intact. Both
+subgroup shams were exact intact. All `28/28` episodes completed and all
+`14/14` deterministic duplicate pairs were exact across the stored arrays.
+Every stored DN spike count was zero, so the demonstrated partition is on the
+1191-DN subthreshold positive-voltage endpoint. This is prospective validation
+of an SQ-05-derived grouping, not independent discovery, and it does not
+establish a biological orientation circuit or behavior. No minimum
+meaningful-effect floor was defined and no overall winner was selected.
+
+**Provenance:** Sealed at commit
+`ba16e60ca798997ad1b1a7a9f06322f3679abe14`. Authoritative result JSON
+SHA-256:
+`f9fe6e3ea23edc86869e7e47fa88ab11c25a607b8fe4fce6b5cdec2c8c0a58a9`;
+NPZ SHA-256:
+`f10b9769bd799a390295ced25b99c2a98e3efe49c823c2a5a79595d28fcc0feb`.
+Result-seal SHA-256:
+`de7129a812a4520706512234be19543a51df64fa9879f50bee8d8a2045b5b816`.
+The independent Gate 5 verifier recomputed the primary result from the NPZ
+without importing the runner and passed.
+
+**Lore:** The Cartographer finally turns on.
+
+There are thirteen routes on the wall.
+
+Ten light up when the map faces left.
+
+Three light up when the map faces right.
+
+Then the room rotates.
+
+The first ten go dark enough to become indistinguishable from intact. The other
+three reproduce the entire wound.
+
+McNulty slowly puts the marker down.
+
+Lester looks at the map.
+
+Daniels looks at McNulty.
+
+And Johnson, who apparently has been standing behind everybody for the last
+five minutes, says:
+
+"Gentlemen, we didn't discover the island today. We brought back the map and
+proved we could read it twice."
+
+McNulty reaches toward the board and starts writing **ORIENTATION CIRCUIT**.
+
+Daniels erases it before he finishes the second word.
+
+"Prospective validation."
+
+Johnson nods.
+
+"Now that's how you clear a level."
