@@ -1,0 +1,68 @@
+[experiment]
+id = "sq06-silent-cartographer-runner-v1"
+canonical_parent = "SQ-06 — SILENT CARTOGRAPHER"
+status = "authoritative-runner-implementation-freeze-candidate"
+narrative_label = "THE SILENT CARTOGRAPHER"
+narrative_label_scientific = false
+financial_semantics = false
+result_execution_authorized = false
+
+[execution]
+mode = "local"
+neural_execution_authorized = false
+result_execution_authorized = false
+topology_randomization_required = false
+fresh_runtime_each_episode = true
+separate_authorization_required = true
+
+[episode_plan]
+arms = [
+  "INTACT",
+  "FULL13_TARGETED",
+  "FULL13_SHAM",
+  "LR_GROUP_TARGETED",
+  "LR_GROUP_SHAM",
+  "RL_GROUP_TARGETED",
+  "RL_GROUP_SHAM",
+]
+layouts = ["LR", "RL"]
+replicates = [1, 2]
+expected_total_episode_count = 28
+exact_duplicate_replay_required = true
+
+[primary]
+quantity = "positive_membrane_voltage"
+normalized_l2_exact_max = 1e-9
+max_abs_exact_max = 1e-12
+minimum_meaningful_effect_floor = "NOT_DEFINED"
+single_overall_winner_forbidden = true
+
+[frozen_inputs]
+preregistration_sha256 = "3182a91b08dacc278ba180999f0358eea812da94ec5e2eeff9ed834498820f92"
+orientation_groups_sha256 = "2fac74225e9874dfe13f919bfc47062065ba85b1ed1b61cce424f9a2c777c38d"
+orientation_operator_sha256 = "0ea1d6f3188f03e4a90da36898b9cb46a6546c830aebf9fb5f51508d66cce0ce"
+sq05_runner_sha256 = "06f640dd6c829d917bb537298f8e54048066455b92f6932dc09fe5abdef4867e"
+sq05_betrayal_i_sha256 = "c62767cac434f380104c8da5cd9b73dcee89fefbeea0a0efe17ca9bd812c8664"
+sq05_sham_sha256 = "d43488defc7b27705fe6765db50c8519c65cdaf6ac9a4443aa599c9dd1879f0d"
+sq05_stimulus_sha256 = "90bf95fc7bf1baab5f8a77ba4dce9182a5ad5909ca6a3ca37a0cf10c946f623a"
+dn_consensus_sha256 = "2e1272b6db6219290af96a828f52764d0f60d937336508251d0a4d6c46fb31f5"
+connectome_sha256 = "e00e3f2a9828c921fe1f093cc567bf45a85adad0526176be0aa1b8be09336eeb"
+retina_sha256 = "c4655220e1aee4eab580a534df009f0a7493f075c42285b430ad1365ae37917f"
+physiology_constrained_visual_transduction_sha256 = "bf754a29155ade789349fbdfc3c579f1b2c8dbea3c63804f2cf3d858d0a2f605"
+visual_transduction_sha256 = "015cc699f49e16bb59f6e7e5f04f92cca7bfc1a3c7057e73fe54398c755831f6"
+result_schema_sha256 = "a0fe8b814a17e2c416576381c25aaf1d1b4ea0432af7c3112d617c5f1366eb37"
+
+[outputs]
+manifest = "${MOSCAQUANT_DATA_ROOT}/experiments/sq06-silent-cartographer-v1.json"
+sidecar = "${MOSCAQUANT_DATA_ROOT}/experiments/sq06-silent-cartographer-v1.npz"
+write_only_after_all_28_episodes_complete = true
+
+[boundaries]
+sq05_result_rewrite_forbidden = true
+post_result_threshold_invention_forbidden = true
+biological_orientation_circuit_claim_forbidden = true
+behavior_claim_forbidden = true
+fear_claim_forbidden = true
+hunger_claim_forbidden = true
+threat_perception_claim_forbidden = true
+financial_value_claim_forbidden = true
