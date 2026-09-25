@@ -93,10 +93,10 @@ EXPECTED_HASHES = {
         "a6e77226e50999b3dbc0ada7c64a8b5905ce638f92339406d724d9aa54e403ad"
     ),
     "shard_runner": (
-        "bd736984acad6bbdceb812ca84ee6d413acaaa0f864f4a48899f9fbfacf87312"
+        "45eddddc2edd7c73a9e40f05cc85c0faa3d2d96eb8addfdc1466dad688f2688f"
     ),
     "shard_runner_test": (
-        "f4028b709bbdc8679a2ceb70a9c3ec98b52e5ffe0f0826abc4bac6a8ab0c9c2d"
+        "a6f212b0ba008e7f9fb32820bec546ad40aaa439ddf0829160836285f3cf2d0f"
     ),
 }
 

@@ -91,6 +91,11 @@ AUTHORIZATION_STATEMENT = (
     "I explicitly authorize execution of this frozen SQ-07 THE MAW run."
 )
 
+ALLOWED_EXECUTION_MODES = frozenset({
+    "local",
+    "aws_batch",
+})
+
 
 class Refusal(RuntimeError):
     pass
@@ -98,6 +103,19 @@ class Refusal(RuntimeError):
 
 def refuse(message: str) -> None:
     raise Refusal(message)
+
+
+def validate_execution_mode(value: object) -> str:
+    if not isinstance(value, str):
+        refuse("SQ-07 authorization execution_mode must be string")
+
+    if value not in ALLOWED_EXECUTION_MODES:
+        refuse(
+            "SQ-07 authorization execution_mode must be "
+            "local or aws_batch"
+        )
+
+    return value
 
 
 def sha256_file(path: Path) -> str:
@@ -318,7 +336,6 @@ def verify_execution_authorization(
         "human_execution_authorized": True,
         "neural_execution_enabled": True,
         "result_execution_enabled": True,
-        "execution_mode": "local",
         "expected_shard_count": EXPECTED_SHARD_COUNT,
         "expected_episode_count": EXPECTED_EPISODE_COUNT,
         "condition_plan_sha256": EXPECTED_CONDITION_PLAN_SHA256,
@@ -336,6 +353,8 @@ def verify_execution_authorization(
     for key, value in required.items():
         if auth.get(key) != value:
             refuse(f"SQ-07 authorization field drift: {key}")
+
+    validate_execution_mode(auth.get("execution_mode"))
 
     runner_sha = sha256_file(Path(__file__))
     config_sha = sha256_file(RUNNER_CONFIG)

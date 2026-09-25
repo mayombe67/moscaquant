@@ -320,3 +320,31 @@ def test_runner_has_no_cli_execution_surface():
 
     for token in forbidden:
         assert token not in source
+
+def test_execution_mode_allowlist_is_explicit():
+    assert r.validate_execution_mode("local") == "local"
+    assert r.validate_execution_mode("aws_batch") == "aws_batch"
+
+    assert r.ALLOWED_EXECUTION_MODES == frozenset({
+        "local",
+        "aws_batch",
+    })
+
+
+@pytest.mark.parametrize(
+    "value",
+    [
+        None,
+        "",
+        "cloud",
+        "aws",
+        "batch",
+        "spot",
+        "ec2",
+        True,
+        1,
+    ],
+)
+def test_execution_mode_refuses_everything_outside_allowlist(value):
+    with pytest.raises(r.Refusal, match="execution_mode"):
+        r.validate_execution_mode(value)

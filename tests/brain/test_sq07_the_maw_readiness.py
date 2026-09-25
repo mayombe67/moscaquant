@@ -38,7 +38,7 @@ def test_frozen_execution_stack_hashes_are_exact():
     )
 
     assert deps["file_sha256"]["shard_runner"] == (
-        "bd736984acad6bbdceb812ca84ee6d413acaaa0f864f4a48899f9fbfacf87312"
+        "45eddddc2edd7c73a9e40f05cc85c0faa3d2d96eb8addfdc1466dad688f2688f"
     )
 
 
