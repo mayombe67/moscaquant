@@ -848,3 +848,109 @@ Daniels erases it before he finishes the second word.
 Johnson nods.
 
 "Now that's how you clear a level."
+
+## THE MAW — Every Door in the Maze
+
+**Reference:** SQ-07 — THE MAW sealed result.
+
+**Importance:** BOSS
+
+**Science:** SQ-07 exhaustively tested all `8,192` binary subsets of the frozen
+13-edge intervention universe under both LR and RL layouts, with two
+deterministic replicates per condition: `32,768` episodes total. The directional
+partition prospectively validated by SQ-06 survived the entire subset universe.
+Under LR, all `8/8` subsets composed only of the frozen RL group were exactly
+INTACT. Under RL, all `1,024/1,024` subsets composed only of the frozen LR group
+were exactly INTACT. No hidden inactive-group subset effect appeared and no
+mixed-group inclusion-minimal FULL13 recapitulator was found.
+
+The unique LR inclusion-minimal FULL13 recapitulator was
+`1111011111000`, Hamming weight `9`. Relative to the frozen ten-edge LR active
+group, E04 is omitted. Under this frozen computational endpoint, that means E04
+was not required when the other nine members of that subset were lesioned; it
+is not a claim of biological dispensability or necessity.
+
+The unique RL inclusion-minimal FULL13 recapitulator was
+`0000000000111`, Hamming weight `3`: exactly the frozen three-edge RL active
+group. No strict RL submask reached FULL13.
+
+The complete class counts were:
+
+- LR — `8` EXACT_INTACT, `16` EXACT_FULL13, `8,168` INTERMEDIATE.
+- RL — `1,024` EXACT_INTACT, `1,024` EXACT_FULL13, `6,144` INTERMEDIATE.
+
+`INTERMEDIATE` remains only a computational endpoint class. No minimum
+meaningful-effect floor was defined and there is no single overall scientific
+winner.
+
+**Provenance:** Sealed at commit
+`3ac47b287b7fcdcb873f8ea8ccb58071860ed814`. Authoritative analysis JSON
+SHA-256:
+`2db405151cc8771ccd0c50080bcd6a83ca3824e5487c666d22e01db8bed6d80c`.
+Independent RASPUTIN reduction SHA-256:
+`107e2780602c3ab8531afdf15dda4057a093ed4716bb1a7e2236c7536e38adf7`.
+Repository result-seal SHA-256:
+`837660a1905db83bf30199c6d0a7b073bb1194696ca509ca88a8bc7ef6aa25b3`.
+
+RASPUTIN independently reduced all `512/512` canonical shard summaries and
+recomputed all `32,768/32,768` episodes' classifications with bounded-memory,
+content-addressed verification. The independent result agreed with the frozen
+analysis result. The verifier did not import the SQ-07 analysis module or the
+SQ-06 classifier.
+
+**Lore:** The Cartographer's map is still pinned to the wall.
+
+Thirteen doors.
+
+Ten on one side. Three on the other.
+
+McNulty points at the map.
+
+"So we know which hallway matters?"
+
+Daniels shakes his head.
+
+"We know what happened when we tested the groups. That's not the same thing as
+checking every door."
+
+The lights go out.
+
+RASPUTIN starts opening them.
+
+One.
+
+Two.
+
+Four thousand.
+
+Eight thousand one hundred ninety-two.
+
+Then the room rotates and it does the whole thing again.
+
+When the lights return, the inactive hallways are still quiet. No secret route
+has appeared between the two groups.
+
+Lester circles nine of the ten LR edges.
+
+"One of these wasn't required for the exact endpoint."
+
+McNulty reaches for the marker.
+
+Daniels grabs his wrist before he can write **BIOLOGICAL CIRCUIT**.
+
+"Computational endpoint."
+
+McNulty sighs.
+
+Across the room, Johnson looks at the three RL edges, all still circled.
+
+"Three doors on this side. Needed every one."
+
+He looks toward the exit.
+
+"And gentlemen?"
+
+"The Maw is clear."
+
+Nobody celebrates until the hashes match.
+

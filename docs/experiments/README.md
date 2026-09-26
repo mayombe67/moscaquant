@@ -24,6 +24,10 @@ remain controlling for scientific claims.
 - **SQ04 — GLOBAL-MODULATION** — [protocol](sq04-global-modulation-protocol.md) · [results](sq04-global-modulation-results.md)
 - **SQ04 — GLOBAL-MODULATION-RUNNER-IMPLEMENTATION.MD** — [sq04-global-modulation-runner-implementation](sq04-global-modulation-runner-implementation.md)
 
+- **SQ05 — TWO BETRAYALS** — [protocol](sq05-two-betrayals-core-prereg.md) · [results](sq05-two-betrayals-result.md)
+- **SQ06 — SILENT CARTOGRAPHER** — [protocol](sq06-silent-cartographer-prereg.md) · [results](sq06-silent-cartographer-result.md)
+- **SQ07 — THE MAW** — [protocol](sq07-the-maw-prereg.md) · [cloud execution amendment](sq07-the-maw-cloud-execution-amendment.md) · [results](sq07-the-maw-result.md)
+
 ## Result artifacts
 
 Authoritative JSON artifacts for SQ-03 are stored under
