@@ -1,0 +1,136 @@
+{
+  "$id": "moscaquant.sq07-the-maw-result-seal.v1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "authoritative_analysis": {
+      "properties": {
+        "analysis_git_sha": {
+          "const": "2455b7f3312d254147a67a85fb774767a52c5589"
+        },
+        "sha256": {
+          "const": "2db405151cc8771ccd0c50080bcd6a83ca3824e5487c666d22e01db8bed6d80c"
+        }
+      },
+      "required": [
+        "sha256",
+        "analysis_git_sha"
+      ],
+      "type": "object"
+    },
+    "claim_boundaries": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "execution": {
+      "properties": {
+        "episodes": {
+          "const": 32768
+        },
+        "layouts": {
+          "const": [
+            "LR",
+            "RL"
+          ]
+        },
+        "masks": {
+          "const": 8192
+        },
+        "shards": {
+          "const": 512
+        }
+      },
+      "required": [
+        "shards",
+        "episodes",
+        "masks",
+        "layouts"
+      ],
+      "type": "object"
+    },
+    "experiment": {
+      "properties": {
+        "codename": {
+          "const": "THE MAW"
+        },
+        "id": {
+          "const": "SQ-07"
+        },
+        "run_id": {
+          "const": "sq07-maw-20260924-01"
+        },
+        "status": {
+          "const": "SEALED_RESULT"
+        }
+      },
+      "required": [
+        "id",
+        "codename",
+        "run_id",
+        "status"
+      ],
+      "type": "object"
+    },
+    "independent_verification": {
+      "properties": {
+        "episodes_verified": {
+          "const": 32768
+        },
+        "reduction_sha256": {
+          "const": "107e2780602c3ab8531afdf15dda4057a093ed4716bb1a7e2236c7536e38adf7"
+        },
+        "reported_result_agreement": {
+          "const": true
+        },
+        "shard_summary_count": {
+          "const": 512
+        },
+        "shards_verified": {
+          "const": 512
+        },
+        "status": {
+          "const": "PASS"
+        }
+      },
+      "required": [
+        "status",
+        "reduction_sha256",
+        "shard_summary_count",
+        "shards_verified",
+        "episodes_verified",
+        "reported_result_agreement"
+      ],
+      "type": "object"
+    },
+    "result": {
+      "required": [
+        "flags",
+        "class_counts",
+        "minimal_full13_recapitulators",
+        "single_overall_winner",
+        "minimum_meaningful_effect_floor"
+      ],
+      "type": "object"
+    },
+    "schema_version": {
+      "const": "moscaquant.sq07-the-maw-result-seal.v1"
+    },
+    "storage_policy": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "schema_version",
+    "experiment",
+    "execution",
+    "authoritative_analysis",
+    "independent_verification",
+    "result",
+    "claim_boundaries",
+    "storage_policy"
+  ],
+  "title": "SQ-07 THE MAW Result Seal v1",
+  "type": "object"
+}

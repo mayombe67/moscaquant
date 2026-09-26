@@ -1,0 +1,122 @@
+{
+  "authoritative_analysis": {
+    "acquisition_science_git_sha": "a4f5278d4f964c89b7b53bb9453a4355fd14b8a2",
+    "analysis_git_sha": "2455b7f3312d254147a67a85fb774767a52c5589",
+    "artifact": "/home/wil/moscaquant-data/experiments/sq07-the-maw-v1/runs/sq07-maw-20260924-01/analysis/sq07-the-maw-analysis-result-v1.json",
+    "sha256": "2db405151cc8771ccd0c50080bcd6a83ca3824e5487c666d22e01db8bed6d80c"
+  },
+  "claim_boundaries": [
+    "Results apply to the frozen SQ-07 computational model and endpoint.",
+    "SQ-07 does not establish a biological orientation circuit.",
+    "SQ-07 does not establish fruit recognition, hunger, danger perception, fear, or behavior.",
+    "SQ-07 does not establish population-level biological significance.",
+    "SQ-07 does not establish financial value.",
+    "INTERMEDIATE is a computational classification and has no independent biological or minimum-effect interpretation.",
+    "Historically derived edge/group structure is not converted into independent biological discovery by SQ-07."
+  ],
+  "execution": {
+    "deterministic_replicates": 2,
+    "episodes": 32768,
+    "layouts": [
+      "LR",
+      "RL"
+    ],
+    "masks": 8192,
+    "shards": 512
+  },
+  "experiment": {
+    "codename": "THE MAW",
+    "id": "SQ-07",
+    "run_id": "sq07-maw-20260924-01",
+    "status": "SEALED_RESULT"
+  },
+  "independent_verification": {
+    "adapter_id": "moscaquant.sq07-the-maw.verify.v1",
+    "analysis_module_imported": false,
+    "cloud_source_plan_sha256": "dbea1986fceeca4b600a905abbf8815e06ed9369bc24d70609dcb0046104c41c",
+    "episodes_verified": 32768,
+    "frozen_science_verifier_reference_git_sha": "ebc2d02",
+    "frozen_scientific_functions_ast_identical": [
+      "symmetric_normalized_l2",
+      "max_abs_difference",
+      "exact",
+      "classify",
+      "strict_submasks",
+      "minimal_full13",
+      "inactive_masks",
+      "contained_in_active_group",
+      "mixed_group"
+    ],
+    "method": "RASPUTIN bounded-memory independent evidence verification",
+    "rasputin_ops_git_sha": "918f0c16e3c5e7c0438a18f18bfab84725c8c280",
+    "reduction_artifact": "/home/wil/moscaquant-data/experiments/sq07-the-maw-v1/runs/sq07-maw-20260924-01/verification/rasputin-v1/sq07-the-maw-independent-reduction-v1.json",
+    "reduction_sha256": "107e2780602c3ab8531afdf15dda4057a093ed4716bb1a7e2236c7536e38adf7",
+    "remote_verification_log_sha256": "b1a8c1803c48189a7cc64bde443d6a7d9ed8a9a673620350c6cf99451d7ea12b",
+    "reported_result_agreement": true,
+    "science_preseal_git_sha": "70dff9eb75876f668db73229292fd392e6f122ec",
+    "shard_summary_count": 512,
+    "shard_summary_universe_artifact": "/home/wil/moscaquant-data/experiments/sq07-the-maw-v1/runs/sq07-maw-20260924-01/verification/rasputin-v1/sq07-rasputin-summary-universe-v1.txt",
+    "shard_summary_universe_sha256": "8e1dece1f47ba4fc1a78264a10368b8daa566623996566ca1a148710b2b1edbc",
+    "shards_verified": 512,
+    "sq06_classifier_imported": false,
+    "status": "PASS",
+    "verification_context_sha256": "a4756f41962f9cd95e6cce6f555c2a73fc44c4ffd0bcf3d7983cd8eedcd2219e"
+  },
+  "interpretation": {
+    "LR": "Under the frozen SQ-07 computational endpoint, the unique inclusion-minimal LR FULL13 recapitulator is mask 1111011111000 (Hamming weight 9). Relative to the frozen 10-edge LR active group, E04 is omitted.",
+    "RL": "Under the frozen SQ-07 computational endpoint, the unique inclusion-minimal RL FULL13 recapitulator is mask 0000000000111 (Hamming weight 3), exactly the frozen 3-edge RL active group.",
+    "inactive_subset_closure": "All preregistered inactive-group subsets reproduced the INTACT endpoint under their corresponding layout."
+  },
+  "result": {
+    "class_counts": {
+      "LR": {
+        "EXACT_FULL13": 16,
+        "EXACT_INTACT": 8,
+        "INTERMEDIATE": 8168
+      },
+      "RL": {
+        "EXACT_FULL13": 1024,
+        "EXACT_INTACT": 1024,
+        "INTERMEDIATE": 6144
+      }
+    },
+    "flags": {
+      "ALL_MINIMAL_FULL13_RECAPITULATORS_ACTIVE_ONLY": true,
+      "INACTIVE_SUBSET_CLOSURE_SUPPORTED": true,
+      "INACTIVE_SUBSET_EFFECT_PRESENT": false,
+      "MIXED_GROUP_MINIMAL_RECAPITULATOR_PRESENT": false,
+      "SQ06_PARTITION_REPLICATED": true,
+      "STRICT_SUBSET_SEPARABILITY_SUPPORTED": true
+    },
+    "inactive_subset_failures": {
+      "LR": 0,
+      "RL": 0
+    },
+    "minimal_full13_recapitulators": {
+      "LR": [
+        {
+          "active_group_only": true,
+          "hamming_weight": 9,
+          "mask13": "1111011111000",
+          "mixed_group": false
+        }
+      ],
+      "RL": [
+        {
+          "active_group_only": true,
+          "hamming_weight": 3,
+          "mask13": "0000000000111",
+          "mixed_group": false
+        }
+      ]
+    },
+    "minimum_meaningful_effect_floor": "NOT_DEFINED",
+    "single_overall_winner": null
+  },
+  "schema_version": "moscaquant.sq07-the-maw-result-seal.v1",
+  "storage_policy": {
+    "dense_result_artifacts": "${MOSCAQUANT_DATA_ROOT}/experiments/sq07-the-maw-v1/runs/sq07-maw-20260924-01/",
+    "dense_results_committed_to_git": false,
+    "repository_seal_committed_to_git": true
+  }
+}
