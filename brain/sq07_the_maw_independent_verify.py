@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import gc
 import hashlib
 import json
 from pathlib import Path
@@ -361,6 +362,7 @@ def accepted_cloud_manifests(
             )
 
         verify_shard_evidence(manifest)
+        gc.collect()
 
         if shard_index in accepted:
             refuse(
@@ -381,8 +383,6 @@ def accepted_cloud_manifests(
 def load_sidecar(
     manifest_path: Path,
 ) -> dict[str, np.ndarray]:
-    verify_shard_evidence(manifest_path)
-
     manifest = json.loads(
         manifest_path.read_text(
             encoding="utf-8"
@@ -399,10 +399,7 @@ def load_sidecar(
         allow_pickle=False,
     ) as z:
         return {
-            key: np.array(
-                z[key],
-                copy=True,
-            )
+            key: np.asarray(z[key])
             for key in (
                 "condition_mask13",
                 "condition_layout",
@@ -463,9 +460,14 @@ def extract_anchor(
                 "anchor duplicates differ"
             )
 
-        result[layout] = (
-            found[layout][1]
+        result[layout] = np.array(
+            found[layout][1],
+            copy=True,
         )
+
+    del found
+    del z
+    gc.collect()
 
     return result
 
@@ -549,6 +551,13 @@ def classify_shard(
             )
 
         mask_count += 1
+
+    del voltage
+    del reps
+    del layouts
+    del masks
+    del z
+    gc.collect()
 
     return mask_count
 
