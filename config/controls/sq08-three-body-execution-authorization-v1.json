@@ -1,0 +1,236 @@
+{
+  "authorized_work_units": [
+    {
+      "condition_id": "sq08:000:r1",
+      "edge_zeroed": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      },
+      "mask": "000",
+      "ordinal": 0,
+      "replicate": 1
+    },
+    {
+      "condition_id": "sq08:000:r2",
+      "edge_zeroed": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      },
+      "mask": "000",
+      "ordinal": 1,
+      "replicate": 2
+    },
+    {
+      "condition_id": "sq08:001:r1",
+      "edge_zeroed": {
+        "A": 0,
+        "B": 0,
+        "C": 1
+      },
+      "mask": "001",
+      "ordinal": 2,
+      "replicate": 1
+    },
+    {
+      "condition_id": "sq08:001:r2",
+      "edge_zeroed": {
+        "A": 0,
+        "B": 0,
+        "C": 1
+      },
+      "mask": "001",
+      "ordinal": 3,
+      "replicate": 2
+    },
+    {
+      "condition_id": "sq08:010:r1",
+      "edge_zeroed": {
+        "A": 0,
+        "B": 1,
+        "C": 0
+      },
+      "mask": "010",
+      "ordinal": 4,
+      "replicate": 1
+    },
+    {
+      "condition_id": "sq08:010:r2",
+      "edge_zeroed": {
+        "A": 0,
+        "B": 1,
+        "C": 0
+      },
+      "mask": "010",
+      "ordinal": 5,
+      "replicate": 2
+    },
+    {
+      "condition_id": "sq08:011:r1",
+      "edge_zeroed": {
+        "A": 0,
+        "B": 1,
+        "C": 1
+      },
+      "mask": "011",
+      "ordinal": 6,
+      "replicate": 1
+    },
+    {
+      "condition_id": "sq08:011:r2",
+      "edge_zeroed": {
+        "A": 0,
+        "B": 1,
+        "C": 1
+      },
+      "mask": "011",
+      "ordinal": 7,
+      "replicate": 2
+    },
+    {
+      "condition_id": "sq08:100:r1",
+      "edge_zeroed": {
+        "A": 1,
+        "B": 0,
+        "C": 0
+      },
+      "mask": "100",
+      "ordinal": 8,
+      "replicate": 1
+    },
+    {
+      "condition_id": "sq08:100:r2",
+      "edge_zeroed": {
+        "A": 1,
+        "B": 0,
+        "C": 0
+      },
+      "mask": "100",
+      "ordinal": 9,
+      "replicate": 2
+    },
+    {
+      "condition_id": "sq08:101:r1",
+      "edge_zeroed": {
+        "A": 1,
+        "B": 0,
+        "C": 1
+      },
+      "mask": "101",
+      "ordinal": 10,
+      "replicate": 1
+    },
+    {
+      "condition_id": "sq08:101:r2",
+      "edge_zeroed": {
+        "A": 1,
+        "B": 0,
+        "C": 1
+      },
+      "mask": "101",
+      "ordinal": 11,
+      "replicate": 2
+    },
+    {
+      "condition_id": "sq08:110:r1",
+      "edge_zeroed": {
+        "A": 1,
+        "B": 1,
+        "C": 0
+      },
+      "mask": "110",
+      "ordinal": 12,
+      "replicate": 1
+    },
+    {
+      "condition_id": "sq08:110:r2",
+      "edge_zeroed": {
+        "A": 1,
+        "B": 1,
+        "C": 0
+      },
+      "mask": "110",
+      "ordinal": 13,
+      "replicate": 2
+    },
+    {
+      "condition_id": "sq08:111:r1",
+      "edge_zeroed": {
+        "A": 1,
+        "B": 1,
+        "C": 1
+      },
+      "mask": "111",
+      "ordinal": 14,
+      "replicate": 1
+    },
+    {
+      "condition_id": "sq08:111:r2",
+      "edge_zeroed": {
+        "A": 1,
+        "B": 1,
+        "C": 1
+      },
+      "mask": "111",
+      "ordinal": 15,
+      "replicate": 2
+    }
+  ],
+  "codename": "THREE BODY PROBLEM",
+  "control_plane_git_sha": "a3635efc4f3e74ff9f6053d0d287bc4909e0675b",
+  "execution_boundary": {
+    "analysis_authority": false,
+    "authorization_only": true,
+    "mechanism_interpretation_authority": false,
+    "result_reclassification_authority": false
+  },
+  "execution_contract": {
+    "all_work_units_required": true,
+    "arbitrary_condition_execution": false,
+    "authorized_condition_ids": [
+      "sq08:000:r1",
+      "sq08:000:r2",
+      "sq08:001:r1",
+      "sq08:001:r2",
+      "sq08:010:r1",
+      "sq08:010:r2",
+      "sq08:011:r1",
+      "sq08:011:r2",
+      "sq08:100:r1",
+      "sq08:100:r2",
+      "sq08:101:r1",
+      "sq08:101:r2",
+      "sq08:110:r1",
+      "sq08:110:r2",
+      "sq08:111:r1",
+      "sq08:111:r2"
+    ],
+    "implicit_resume": false,
+    "independent_verification_required": true,
+    "manifest_regeneration_at_execution": false,
+    "overwrite_existing_evidence": false,
+    "work_unit_count": 16
+  },
+  "execution_manifest_sha256": "9a472f6548f777ceec327b8449ffcfee27d275478792a59097d28e95121c9dfe",
+  "experiment": "SQ-08",
+  "frozen_artifact_hashes": {
+    "analysis": "25c8e8754b042a8a4d4aa2620e97368f77bf8d1481de62f1e69518cbc6ce3366",
+    "analysis_contract": "d7ba169544942504eb7ed32a3b72a248eb7611a44b8e23e7c1f4560732c78e03",
+    "episode": "489f3449c939ebe49aeef94775282bc5822f94f2f4fa577b8de1d20d22a60864",
+    "evidence": "5b5349ac797b4a7fbab7b17c48214338a5d07e4415f90e19d8c0af81f966e7d4",
+    "evidence_schema": "9f9e4465eb26b1bf5c85befcc624a0d1b9f84ffe8359281b212ff0883d47cdc2",
+    "execution_manifest": "9a472f6548f777ceec327b8449ffcfee27d275478792a59097d28e95121c9dfe",
+    "frontier_freezer": "1c1fe51745ea5675b15ef973532ffdeab07cad3b810573a07b5d5b323c66c08c",
+    "independent_verify": "2170e1c7454e5de277d55cdb35b7b86b3edcd794814e9604e2f3cb90b62f13dc",
+    "prereg": "fdc3a1e8e3a4eec8e8542b740ba67de2452b59554263ba4e72c2426489336947",
+    "readout": "88bc82e29bcc4ffb1f9f3891bac17a293177017c47b4a73ec1210a5ad16189e9",
+    "topology_amendment": "7244f193b3c1a9690b453a5b055e5090d649f1fc52f943c4b170fe1c8ca580fd",
+    "topology_calibration": "1f5e5bb25c9bd0a403f0f47d5b4c5870a53cfbbe0f5ebcfb945ad73d4859c075",
+    "topology_freezer": "466fe731c664c8207615c4b57c8f712e2b13dbfeeda7709057d9414d661535b8",
+    "topology_frontier": "ad87e904c13698552d3e52fb58e9558aefe4e0898a2ef6bb45b3c64652196361"
+  },
+  "schema_version": "moscaquant.sq08-three-body-execution-authorization/v1",
+  "science_git_sha": "e4a58df478d7681b612ed9deb85b5ddfe1268acc",
+  "status": "AUTHORIZED_FOR_FROZEN_EXECUTION"
+}
