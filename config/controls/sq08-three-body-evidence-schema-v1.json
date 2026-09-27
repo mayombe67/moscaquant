@@ -1,0 +1,113 @@
+{
+  "schema_version": "moscaquant.sq08-three-body-evidence/v1",
+  "experiment": "SQ-08",
+  "codename": "THREE BODY PROBLEM",
+
+  "condition_masks": [
+    "000",
+    "001",
+    "010",
+    "011",
+    "100",
+    "101",
+    "110",
+    "111"
+  ],
+
+  "body_order": ["A", "B", "C"],
+
+  "body_responders": [
+    137122,
+    317,
+    126002
+  ],
+
+  "three_way_direct_frontier": [
+    7,
+    72,
+    129,
+    411,
+    470,
+    1472,
+    1574,
+    1662,
+    1919,
+    2009,
+    2327,
+    3712,
+    4068,
+    14273,
+    16349,
+    18196,
+    130134,
+    131527
+  ],
+
+  "per_episode_arrays": {
+    "primary_positive_voltage": {
+      "shape": [192, 1191],
+      "dtype": "float32",
+      "required": true
+    },
+
+    "primary_spikes": {
+      "shape": [192, 1191],
+      "dtype": "uint8",
+      "required": true
+    },
+
+    "body_responder_voltage": {
+      "shape": [192, 3],
+      "dtype": "float32",
+      "required": true
+    },
+
+    "body_responder_spikes": {
+      "shape": [192, 3],
+      "dtype": "uint8",
+      "required": true
+    },
+
+    "frontier_voltage": {
+      "shape": [192, 18],
+      "dtype": "float32",
+      "required": true
+    },
+
+    "frontier_spikes": {
+      "shape": [192, 18],
+      "dtype": "uint8",
+      "required": true
+    }
+  },
+
+  "secondary_arrays": {
+    "channel_spike_count": {
+      "required": true
+    },
+
+    "channel_spike_rate": {
+      "required": true
+    }
+  },
+
+  "required_metadata": [
+    "condition_mask",
+    "replicate_id",
+    "science_git_sha",
+    "connectome_sha256",
+    "topology_frontier_sha256",
+    "evidence_schema_sha256"
+  ],
+
+  "integrity": {
+    "preserve_every_episode": true,
+    "hash_every_episode_artifact": true,
+    "fail_on_missing_array": true,
+    "fail_on_shape_mismatch": true,
+    "fail_on_dtype_mismatch": true,
+    "fail_on_duplicate_condition_replicate": true
+  },
+
+  "claim_boundary": "Evidence preservation only; this schema does not interpret mechanism."
+}

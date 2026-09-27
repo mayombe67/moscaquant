@@ -1,0 +1,221 @@
+{
+  "codename": "THREE BODY PROBLEM",
+  "conditions": [
+    {
+      "body_state": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      },
+      "condition_id": "sq08:000:r1",
+      "mask": "000",
+      "ordinal": 0,
+      "replicate": 1
+    },
+    {
+      "body_state": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      },
+      "condition_id": "sq08:000:r2",
+      "mask": "000",
+      "ordinal": 1,
+      "replicate": 2
+    },
+    {
+      "body_state": {
+        "A": 0,
+        "B": 0,
+        "C": 1
+      },
+      "condition_id": "sq08:001:r1",
+      "mask": "001",
+      "ordinal": 2,
+      "replicate": 1
+    },
+    {
+      "body_state": {
+        "A": 0,
+        "B": 0,
+        "C": 1
+      },
+      "condition_id": "sq08:001:r2",
+      "mask": "001",
+      "ordinal": 3,
+      "replicate": 2
+    },
+    {
+      "body_state": {
+        "A": 0,
+        "B": 1,
+        "C": 0
+      },
+      "condition_id": "sq08:010:r1",
+      "mask": "010",
+      "ordinal": 4,
+      "replicate": 1
+    },
+    {
+      "body_state": {
+        "A": 0,
+        "B": 1,
+        "C": 0
+      },
+      "condition_id": "sq08:010:r2",
+      "mask": "010",
+      "ordinal": 5,
+      "replicate": 2
+    },
+    {
+      "body_state": {
+        "A": 0,
+        "B": 1,
+        "C": 1
+      },
+      "condition_id": "sq08:011:r1",
+      "mask": "011",
+      "ordinal": 6,
+      "replicate": 1
+    },
+    {
+      "body_state": {
+        "A": 0,
+        "B": 1,
+        "C": 1
+      },
+      "condition_id": "sq08:011:r2",
+      "mask": "011",
+      "ordinal": 7,
+      "replicate": 2
+    },
+    {
+      "body_state": {
+        "A": 1,
+        "B": 0,
+        "C": 0
+      },
+      "condition_id": "sq08:100:r1",
+      "mask": "100",
+      "ordinal": 8,
+      "replicate": 1
+    },
+    {
+      "body_state": {
+        "A": 1,
+        "B": 0,
+        "C": 0
+      },
+      "condition_id": "sq08:100:r2",
+      "mask": "100",
+      "ordinal": 9,
+      "replicate": 2
+    },
+    {
+      "body_state": {
+        "A": 1,
+        "B": 0,
+        "C": 1
+      },
+      "condition_id": "sq08:101:r1",
+      "mask": "101",
+      "ordinal": 10,
+      "replicate": 1
+    },
+    {
+      "body_state": {
+        "A": 1,
+        "B": 0,
+        "C": 1
+      },
+      "condition_id": "sq08:101:r2",
+      "mask": "101",
+      "ordinal": 11,
+      "replicate": 2
+    },
+    {
+      "body_state": {
+        "A": 1,
+        "B": 1,
+        "C": 0
+      },
+      "condition_id": "sq08:110:r1",
+      "mask": "110",
+      "ordinal": 12,
+      "replicate": 1
+    },
+    {
+      "body_state": {
+        "A": 1,
+        "B": 1,
+        "C": 0
+      },
+      "condition_id": "sq08:110:r2",
+      "mask": "110",
+      "ordinal": 13,
+      "replicate": 2
+    },
+    {
+      "body_state": {
+        "A": 1,
+        "B": 1,
+        "C": 1
+      },
+      "condition_id": "sq08:111:r1",
+      "mask": "111",
+      "ordinal": 14,
+      "replicate": 1
+    },
+    {
+      "body_state": {
+        "A": 1,
+        "B": 1,
+        "C": 1
+      },
+      "condition_id": "sq08:111:r2",
+      "mask": "111",
+      "ordinal": 15,
+      "replicate": 2
+    }
+  ],
+  "execution_contract": {
+    "body_order": [
+      "A",
+      "B",
+      "C"
+    ],
+    "condition_masks": [
+      "000",
+      "001",
+      "010",
+      "011",
+      "100",
+      "101",
+      "110",
+      "111"
+    ],
+    "replicates": [
+      1,
+      2
+    ],
+    "work_unit_count": 16
+  },
+  "experiment": "SQ-08",
+  "frozen_inputs": {
+    "connectome_sha256": "e00e3f2a9828c921fe1f093cc567bf45a85adad0526176be0aa1b8be09336eeb",
+    "evidence_schema_sha256": "9f9e4465eb26b1bf5c85befcc624a0d1b9f84ffe8359281b212ff0883d47cdc2",
+    "topology_calibration_sha256": "1f5e5bb25c9bd0a403f0f47d5b4c5870a53cfbbe0f5ebcfb945ad73d4859c075",
+    "topology_frontier_sha256": "ad87e904c13698552d3e52fb58e9558aefe4e0898a2ef6bb45b3c64652196361"
+  },
+  "integrity": {
+    "all_16_work_units_required": true,
+    "both_replicates_required_per_mask": true,
+    "condition_id_must_match_mask_and_replicate": true,
+    "duplicate_condition_ids_forbidden": true,
+    "extra_conditions_forbidden": true,
+    "missing_conditions_forbidden": true
+  },
+  "schema_version": "moscaquant.sq08-three-body-execution-manifest/v1",
+  "science_git_sha": "72df8cac118ba25fde495c6ed76bab3c94ea3284",
+  "status": "FROZEN_PRE_EXECUTION"
+}
