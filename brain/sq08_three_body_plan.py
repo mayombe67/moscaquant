@@ -205,7 +205,7 @@ def main() -> None:
         print(
             f'{row["ordinal"]:02d}',
             row["condition_id"],
-            row["body_state"],
+            row["edge_zeroed"],
         )
 
     print("output:", OUTPUT)
