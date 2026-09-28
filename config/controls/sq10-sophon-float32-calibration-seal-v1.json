@@ -1,0 +1,30 @@
+{
+  "calibration_artifact": {
+    "path": "artifacts/experiments/sq10-sophon/sq10-sophon-float32-calibration-v1.json",
+    "sha256": "1e536aeec177ed1e9149737a68d2a56e7a529049c17b97bc2bdad630aa31ffd2"
+  },
+  "calibration_contract": {
+    "path": "config/experiments/sq10-sophon-float32-calibration-contract-v1.json",
+    "sha256": "a742a60ca7d09b4f2d5281d3f3473d3b3335c41d42a347bb3dbe75adba602a3e"
+  },
+  "codename": "SOPHON",
+  "experiment": "SQ-10",
+  "integrity": {
+    "calibration_preceded_neural_execution": true,
+    "experimental_evidence_consumed": false,
+    "tolerance_rule_changed_after_calibration": false
+  },
+  "protocol_freeze_git_sha": "19cbeedc0e33b0573b0a3dfd41fdcf9fa953d952",
+  "result": {
+    "candidate": 2.3191865584498705e-06,
+    "case_count": 5760,
+    "frozen_absolute_tolerance": 3.814697265625e-06,
+    "frozen_relative_tolerance": 0.0,
+    "max_abs_residual": 2.898983198062338e-07,
+    "max_float32_p5_ulp": 2.384185791015625e-07,
+    "residual_guard": 2.3191865584498705e-06,
+    "ulp_guard": 1.9073486328125e-06
+  },
+  "schema_version": "moscaquant.sq10-sophon-float32-calibration-seal/v1",
+  "status": "SEALED_PRE_NEURAL_EXECUTION"
+}

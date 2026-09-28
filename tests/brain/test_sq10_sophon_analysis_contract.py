@@ -108,7 +108,7 @@ def test_primary_test_uses_p2_and_p5():
     )
 
 
-def test_numerical_tolerance_is_not_yet_selectable():
+def test_numerical_tolerance_is_frozen_prospectively():
     d = load()
 
     numerical = d[
@@ -119,17 +119,17 @@ def test_numerical_tolerance_is_not_yet_selectable():
 
     assert (
         numerical["status"]
-        == "PENDING_SYNTHETIC_FLOAT32_CALIBRATION"
+        == "FROZEN_FROM_SYNTHETIC_FLOAT32_CALIBRATION"
     )
 
     assert (
         numerical["absolute_tolerance"]
-        is None
+        == 3.814697265625e-06
     )
 
     assert (
         numerical["relative_tolerance"]
-        is None
+        == 0.0
     )
 
     assert (
@@ -137,6 +137,41 @@ def test_numerical_tolerance_is_not_yet_selectable():
             "calibration_must_precede_neural_execution"
         ]
         is True
+    )
+
+    assert (
+        numerical[
+            "calibration_protocol_git_sha"
+        ]
+        == "19cbeedc0e33b0573b0a3dfd41fdcf9fa953d952"
+    )
+
+
+def test_below_resolution_class_is_explicit():
+    d = load()
+
+    classes = {
+        row["class"]
+        for row in d[
+            "prospective_interpretation_classes"
+        ]
+    }
+
+    assert (
+        "DIRECT_EFFECT_BELOW_CALIBRATED_RESOLUTION"
+        in classes
+    )
+
+    assert (
+        d["primary_test"]
+        ["classification_order"]
+        == [
+            "NO_RESPONDER_DIVERGENCE",
+            "SOURCE_STATE_DIVERGES_BEFORE_OR_AT_RESPONDER",
+            "DIRECT_PREDICTION_RESIDUAL_EXCEEDS_TOLERANCE",
+            "DIRECT_EFFECT_BELOW_CALIBRATED_RESOLUTION",
+            "DIRECT_LOCAL_AT_FIRST_DIVERGENCE",
+        ]
     )
 
 

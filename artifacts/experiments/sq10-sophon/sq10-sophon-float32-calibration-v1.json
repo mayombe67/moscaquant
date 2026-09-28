@@ -1,0 +1,112 @@
+{
+  "calibration": {
+    "candidate": 2.3191865584498705e-06,
+    "case_count": 5760,
+    "frozen_absolute_tolerance": 3.814697265625e-06,
+    "frozen_relative_tolerance": 0.0,
+    "max_abs_residual": 2.898983198062338e-07,
+    "max_float32_p5_ulp": 2.384185791015625e-07,
+    "per_body": {
+      "A": {
+        "calibration_case_count": 1920,
+        "edge_weight": 0.0002288853283971548,
+        "max_abs_residual": 1.8253837197335088e-07,
+        "max_float32_p5_ulp": 2.384185791015625e-07,
+        "responder": 137122,
+        "row_nnz": 2830,
+        "source": 65084,
+        "source_csr_position": 1908,
+        "worst_case": {
+          "lesioned_p5": 1.773937463760376,
+          "lesioned_synaptic": 0.3714786469936371,
+          "observed_delta": 2.384185791015625e-07,
+          "pattern": "all_one",
+          "pre_voltage": 2.0,
+          "predicted_delta": 5.588020712821162e-08,
+          "residual": 1.8253837197335088e-07,
+          "retained_p5": 1.773937702178955,
+          "retained_synaptic": 0.37147870659828186,
+          "source_activity": 0.000244140625,
+          "stimulus": -0.5
+        }
+      },
+      "B": {
+        "calibration_case_count": 1920,
+        "edge_weight": 0.0005941770505160093,
+        "max_abs_residual": 2.898983198062338e-07,
+        "max_float32_p5_ulp": 2.384185791015625e-07,
+        "responder": 317,
+        "row_nnz": 841,
+        "source": 128590,
+        "source_csr_position": 671,
+        "worst_case": {
+          "lesioned_p5": -2.1593637466430664,
+          "lesioned_synaptic": 0.24309499561786652,
+          "observed_delta": 5.91278076171875e-05,
+          "pattern": "ramp_mod_257",
+          "pre_voltage": -2.0,
+          "predicted_delta": 5.9417705936993734e-05,
+          "residual": -2.898983198062338e-07,
+          "retained_p5": -2.159304618835449,
+          "retained_synaptic": 0.2431544065475464,
+          "source_activity": 0.10000000149011612,
+          "stimulus": -0.5
+        }
+      },
+      "C": {
+        "calibration_case_count": 1920,
+        "edge_weight": 0.0006234414177015424,
+        "max_abs_residual": 2.616223881493629e-07,
+        "max_float32_p5_ulp": 2.384185791015625e-07,
+        "responder": 126002,
+        "row_nnz": 897,
+        "source": 135589,
+        "source_csr_position": 767,
+        "worst_case": {
+          "lesioned_p5": -2.1689810752868652,
+          "lesioned_synaptic": 0.23347796499729156,
+          "observed_delta": 0.0006237030029296875,
+          "pattern": "all_half",
+          "pre_voltage": -2.0,
+          "predicted_delta": 0.0006234413805415381,
+          "residual": 2.616223881493629e-07,
+          "retained_p5": -2.1683573722839355,
+          "retained_synaptic": 0.23410139977931976,
+          "source_activity": 0.9999999403953552,
+          "stimulus": -0.5
+        }
+      }
+    },
+    "residual_guard": 2.3191865584498705e-06,
+    "ulp_guard": 1.9073486328125e-06,
+    "worst_case": {
+      "body": "B",
+      "lesioned_p5": -2.1593637466430664,
+      "lesioned_synaptic": 0.24309499561786652,
+      "observed_delta": 5.91278076171875e-05,
+      "pattern": "ramp_mod_257",
+      "pre_voltage": -2.0,
+      "predicted_delta": 5.9417705936993734e-05,
+      "residual": -2.898983198062338e-07,
+      "retained_p5": -2.159304618835449,
+      "retained_synaptic": 0.2431544065475464,
+      "source_activity": 0.10000000149011612,
+      "stimulus": -0.5
+    }
+  },
+  "codename": "SOPHON",
+  "experiment": "SQ-10",
+  "inputs": {
+    "connectome_sha256": "e00e3f2a9828c921fe1f093cc567bf45a85adad0526176be0aa1b8be09336eeb",
+    "contract": "config/experiments/sq10-sophon-float32-calibration-contract-v1.json",
+    "contract_sha256": "a742a60ca7d09b4f2d5281d3f3473d3b3335c41d42a347bb3dbe75adba602a3e"
+  },
+  "integrity": {
+    "neural_runtime_executed": false,
+    "sq10_evidence_consumed": false,
+    "tolerance_rule_was_predeclared": true
+  },
+  "schema_version": "moscaquant.sq10-sophon-float32-calibration/v1",
+  "science_git_sha": "19cbeedc0e33b0573b0a3dfd41fdcf9fa953d952",
+  "status": "CALIBRATION_COMPLETE_NO_NEURAL_EXECUTION"
+}
