@@ -14,6 +14,12 @@ def text():
     return PREREG.read_text()
 
 
+def normalized_text():
+    return " ".join(
+        PREREG.read_text().split()
+    )
+
+
 def test_dark_forest_is_pre_execution():
     t = text()
 
@@ -97,7 +103,7 @@ def test_dark_forest_requires_exact_replay():
 
 
 def test_dark_forest_calibrates_before_execution():
-    t = text()
+    t = normalized_text()
 
     assert (
         "Before neural execution"
@@ -105,7 +111,8 @@ def test_dark_forest_calibrates_before_execution():
     )
 
     assert (
-        "must not inspect SQ-11 neural evidence"
+        "The qualification is not permitted "
+        "to inspect SQ-11 neural evidence."
         in t
     )
 
@@ -170,7 +177,7 @@ def test_dark_forest_freezes_decomposition():
 
 
 def test_dark_forest_forbids_post_result_rules():
-    t = text()
+    t = normalized_text()
 
     assert (
         "No additional conditions or numerical rules "
@@ -180,7 +187,7 @@ def test_dark_forest_forbids_post_result_rules():
 
 
 def test_dark_forest_preserves_claim_boundary():
-    t = text()
+    t = normalized_text()
 
     assert (
         "A direct-local computational mechanism "
