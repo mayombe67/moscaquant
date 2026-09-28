@@ -1,0 +1,42 @@
+{
+  "schema_version": "moscaquant.sq11-dark-forest-replay-qualification/v2",
+  "experiment": "SQ-11",
+  "codename": "DARK FOREST",
+  "status": "FROZEN_PRE_QUALIFICATION",
+  "supersedes_for_execution": "sq11-dark-forest-replay-qualification/v1",
+  "reason": "v1 qualified retained BODY rows only. v2 prospectively qualifies both retained and structurally lesioned CSR accumulation paths before any SQ-11 neural execution.",
+  "neural_evidence_allowed": false,
+  "target": {
+    "connectome_path": "/home/wil/moscaquant-data/processed/connectome-baseline-v1.npz",
+    "connectome_sha256": "e00e3f2a9828c921fe1f093cc567bf45a85adad0526176be0aa1b8be09336eeb",
+    "sources": [65084, 128590, 135589],
+    "responders": [137122, 317, 126002],
+    "expected_row_nnz": [2830, 841, 897],
+    "expected_body_positions": [1908, 671, 767],
+    "expected_body_flat_positions": [1908, 3501, 4438]
+  },
+  "qualification": {
+    "activity_case_count": 96,
+    "mask_count": 8,
+    "row_count": 3,
+    "row_case_mask_comparisons": 2304,
+    "masks": [
+      "000",
+      "001",
+      "010",
+      "011",
+      "100",
+      "101",
+      "110",
+      "111"
+    ],
+    "reference_operation": "SciPy CSR matvec using independently reconstructed rows with each lesioned BODY entry structurally omitted",
+    "candidate_operation": "explicit float32 multiply/add replay in original CSR order with lesioned BODY entries skipped entirely",
+    "equality_rule": "exact float32 equality",
+    "required_mismatch_count": 0,
+    "absolute_tolerance": 0.0,
+    "relative_tolerance": 0.0
+  },
+  "failure_rule": "Any retained or lesioned row mismatch fails qualification. No tolerance or alternate accumulation rule may be introduced after qualification.",
+  "execution_gate": "SQ-11 neural execution is forbidden unless v2 qualification passes and is sealed."
+}
