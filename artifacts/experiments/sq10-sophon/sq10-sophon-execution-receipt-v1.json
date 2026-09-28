@@ -1,0 +1,37 @@
+{
+  "all_deterministic_duplicate_pairs_exact": true,
+  "analysis": {
+    "authorized_here": false,
+    "performed": false
+  },
+  "authorization": {
+    "git_commit": "1715d39e243c5960213d536baf1fa26c8c66ba9a",
+    "path": "config/controls/sq10-sophon-execution-authorization-v1.json",
+    "sha256": "6194e09f7c62bb4a3d6580445464494db17cca6e188fbd1a999849a671f59ec2"
+  },
+  "codename": "SOPHON",
+  "evidence": {
+    "overwrite_performed": false,
+    "path": "artifacts/experiments/sq10-sophon/sq10-sophon-evidence-v1.npz",
+    "sha256": "4b2b6ce2b16aae51aa222853786ee1308d51b944913000e8d810cd72930d9360"
+  },
+  "execution_control_plane_git_sha": "a35713bb78698a7fc5233c4d14d90331af7c674c",
+  "execution_manifest_sha256": "59246348becc4d501dd6ef18b629be304a702f73ab95d2e9e1d4299d4d23b2d9",
+  "experiment": "SQ-10",
+  "independent_verification": {
+    "post_publication": "PASS",
+    "pre_publication": "PASS"
+  },
+  "launch_seal": {
+    "path": "config/controls/sq10-sophon-launch-seal-v1.json",
+    "sha256": "3596e201dea47b582f3b64bef3d749cd266d8e03b5b7a1b28b402403eef91349"
+  },
+  "launcher": {
+    "path": "brain/sq10_sophon_execute.py",
+    "sha256": "e0bbb6faf7e8aac76cccaeb02a777df675c8b935e894446a7cd6fbc7318cce84"
+  },
+  "schema_version": "moscaquant.sq10-sophon-execution-receipt/v1",
+  "science_git_sha": "af0db6776cb478e75947292236abd82b3953a778",
+  "status": "FROZEN_EXECUTION_COMPLETE",
+  "work_units_executed": 16
+}
