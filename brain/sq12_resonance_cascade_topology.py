@@ -449,6 +449,31 @@ def build_payload() -> dict:
             "".join(parents)
         ] += 1
 
+    excluded_body_records = []
+
+    for node in sorted(
+        topology["excluded_body_nodes"]
+    ):
+        parents = topology[
+            "memberships"
+        ][node]
+
+        excluded_body_records.append({
+            "node": node,
+            "body_parents": parents,
+            "incoming_body_weights": {
+                body: topology["targets"][body][node]
+                for body in parents
+            },
+            "reason_excluded": (
+                "node is itself a frozen immediate "
+                "BODY responder and therefore belongs "
+                "to the already-characterized local "
+                "boundary rather than the SQ-12 "
+                "downstream scan population"
+            ),
+        })
+
     return {
         "schema_version":
             (
@@ -483,6 +508,15 @@ def build_payload() -> dict:
             ),
         },
         "source_artifacts": {
+            "topology_freezer_path":
+                str(
+                    Path(__file__).resolve()
+                    .relative_to(ROOT)
+                ),
+            "topology_freezer_sha256":
+                sha256_file(
+                    Path(__file__).resolve()
+                ),
             "connectome_path":
                 str(CONNECTOME),
             "connectome_sha256":
@@ -513,6 +547,8 @@ def build_payload() -> dict:
                         "excluded_body_nodes"
                     ]
                 ),
+            "records":
+                excluded_body_records,
         },
         "scan_population": {
             "node_count":

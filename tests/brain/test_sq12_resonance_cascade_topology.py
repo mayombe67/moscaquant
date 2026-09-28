@@ -112,6 +112,14 @@ def test_body_responders_are_excluded():
         "excluded_body_nodes"
     ] == {1}
 
+    assert topology[
+        "memberships"
+    ][1] == ["A"]
+
+    assert topology[
+        "targets"
+    ]["A"][1] == 1.0
+
     assert 1 not in topology["scan"]
 
     assert topology["scan"] == {3}
