@@ -1,0 +1,51 @@
+{
+  "authority": {
+    "analysis_authorized": false,
+    "neural_execution_authorized": false,
+    "post_result_tolerance_authorized": false,
+    "qualification_only": true
+  },
+  "codename": "DARK FOREST",
+  "experiment": "SQ-11",
+  "geometry": {
+    "body_positions": [
+      1908,
+      671,
+      767
+    ],
+    "flat_entry_count": 4568,
+    "presynaptic_union_count": 4393,
+    "row_nnz": [
+      2830,
+      841,
+      897
+    ]
+  },
+  "preregistration": {
+    "commit": "f8efca347e4165f123f0de43019eca7d26b05dc4"
+  },
+  "qualification_protocol": {
+    "contract_path": "config/experiments/sq11-dark-forest-replay-qualification-contract-v1.json",
+    "contract_sha256": "4b2d5950e9bf90823dad7cbecc06c02a05a0fc38c040af2888487eaadc61e71d",
+    "git_commit": "b2e4b265c172f55aab01761b0eef524938d9664f",
+    "instrumentation_path": "brain/sq11_dark_forest_instrumentation.py",
+    "instrumentation_sha256": "0051e2d240e6ca494b3bd766998ccb8374a0f678f8c723387e8891cec6aacc1f",
+    "qualification_path": "brain/sq11_dark_forest_replay_qualification.py",
+    "qualification_sha256": "50b2dcb98f8fafce04e2c09b8a50bc361638980d70141fb780848662e66fc273",
+    "replay_path": "brain/sq11_dark_forest_replay.py",
+    "replay_sha256": "2dd78e3b8d85ca6828ef2220c863ee51c42d2925aab57d652c10a06ff900f107"
+  },
+  "qualification_result": {
+    "absolute_tolerance": 0.0,
+    "case_count": 96,
+    "criterion": "exact float32 equality",
+    "mismatch_count": 0,
+    "path": "artifacts/experiments/sq11-dark-forest/sq11-dark-forest-replay-qualification-v1.json",
+    "relative_tolerance": 0.0,
+    "row_case_comparisons": 288,
+    "sha256": "84377ef502e7f8e86c6dacb7a476ee06df784a9869383df4ba734de56d9f5231",
+    "status": "PASS"
+  },
+  "schema_version": "moscaquant.sq11-dark-forest-replay-qualification-seal/v1",
+  "status": "SEALED_QUALIFICATION_PASS"
+}
