@@ -44,11 +44,15 @@
   },
   "neural_execution_authorized": false,
   "required_measurements": {
-    "direct_edge_contribution": {
-      "definition": "source_effective_activity_pre_synaptic * frozen_edge_weight",
-      "required": true,
-      "storage_or_derivation": "must be stored directly or exactly derivable from preserved evidence fields"
-    },
+    "derived": [
+      "potential_direct_edge_drive",
+      "actual_direct_edge_contribution",
+      "removed_direct_edge_contribution"
+    ],
+    "edge": [
+      "body_edge_weight",
+      "condition_edge_zeroed"
+    ],
     "responder": [
       "responder_voltage_pre_threshold",
       "responder_fired",

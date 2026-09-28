@@ -1,17 +1,104 @@
 {
-  "schema_version": "moscaquant.sq10-sophon-evidence-schema.draft-v1",
-  "experiment_id": "SQ-10",
-  "codename": "SOPHON",
-  "status": "DRAFT_NOT_PREREGISTERED",
-  "neural_execution_authorized": false,
-
-  "dimensions": {
-    "condition_count": 8,
-    "replicates_per_condition": 2,
-    "frame_count": 192,
-    "body_pair_count": 3
+  "arrays": {
+    "body_edge_weight": {
+      "dtype": "float32",
+      "notes": "exact verified baseline connectome value for each frozen BODY edge",
+      "phase": "STATIC",
+      "shape": [
+        "body_pair"
+      ]
+    },
+    "condition_edge_zeroed": {
+      "dtype": "uint8",
+      "notes": "explicit expansion of condition mask; 0=edge retained,1=edge zeroed",
+      "phase": "STATIC",
+      "shape": [
+        "episode",
+        "body_pair"
+      ]
+    },
+    "condition_mask": {
+      "dtype": "str",
+      "shape": [
+        "episode"
+      ]
+    },
+    "condition_replicate": {
+      "dtype": "int8",
+      "shape": [
+        "episode"
+      ]
+    },
+    "responder_fired": {
+      "dtype": "uint8",
+      "phase": "P6",
+      "shape": [
+        "episode",
+        "frame",
+        "body_pair"
+      ]
+    },
+    "responder_spikes_post_commit": {
+      "dtype": "uint8",
+      "phase": "P7",
+      "shape": [
+        "episode",
+        "frame",
+        "body_pair"
+      ]
+    },
+    "responder_voltage_post_reset": {
+      "dtype": "float32",
+      "phase": "P7",
+      "shape": [
+        "episode",
+        "frame",
+        "body_pair"
+      ]
+    },
+    "responder_voltage_pre_threshold": {
+      "dtype": "float32",
+      "phase": "P5",
+      "shape": [
+        "episode",
+        "frame",
+        "body_pair"
+      ]
+    },
+    "source_effective_activity_pre_synaptic": {
+      "dtype": "float32",
+      "phase": "P2",
+      "shape": [
+        "episode",
+        "frame",
+        "body_pair"
+      ]
+    },
+    "source_spikes_pre_step": {
+      "dtype": "uint8",
+      "phase": "P0",
+      "shape": [
+        "episode",
+        "frame",
+        "body_pair"
+      ]
+    },
+    "source_voltage_pre_step": {
+      "dtype": "float32",
+      "phase": "P0",
+      "shape": [
+        "episode",
+        "frame",
+        "body_pair"
+      ]
+    }
   },
-
+  "claim_boundary": [
+    "schema draft only",
+    "no neural execution authorized",
+    "no mechanistic result implied"
+  ],
+  "codename": "SOPHON",
   "coordinates": {
     "condition_masks": [
       "000",
@@ -24,120 +111,122 @@
       "111"
     ],
     "mask_semantics": "0=retained,1=zeroed",
-    "sources": [
-      65084,
-      128590,
-      135589
-    ],
     "responders": [
       137122,
       317,
       126002
+    ],
+    "sources": [
+      65084,
+      128590,
+      135589
     ]
   },
-
-  "arrays": {
-    "condition_mask": {
-      "shape": ["episode"],
-      "dtype": "str"
-    },
-    "condition_replicate": {
-      "shape": ["episode"],
-      "dtype": "int8"
-    },
-
-    "source_voltage_pre_step": {
-      "shape": ["episode", "frame", "body_pair"],
-      "dtype": "float32",
-      "phase": "P0"
-    },
-    "source_spikes_pre_step": {
-      "shape": ["episode", "frame", "body_pair"],
-      "dtype": "uint8",
-      "phase": "P0"
-    },
-    "source_effective_activity_pre_synaptic": {
-      "shape": ["episode", "frame", "body_pair"],
-      "dtype": "float32",
-      "phase": "P2"
-    },
-
-    "responder_voltage_pre_threshold": {
-      "shape": ["episode", "frame", "body_pair"],
-      "dtype": "float32",
-      "phase": "P5"
-    },
-    "responder_fired": {
-      "shape": ["episode", "frame", "body_pair"],
-      "dtype": "uint8",
-      "phase": "P6"
-    },
-    "responder_voltage_post_reset": {
-      "shape": ["episode", "frame", "body_pair"],
-      "dtype": "float32",
-      "phase": "P7"
-    },
-    "responder_spikes_post_commit": {
-      "shape": ["episode", "frame", "body_pair"],
-      "dtype": "uint8",
-      "phase": "P7"
-    }
-  },
-
   "derivations": {
-    "direct_edge_contribution": {
+    "actual_direct_edge_contribution": {
+      "expression": "potential_direct_edge_drive * (1 - condition_edge_zeroed)",
+      "inputs": [
+        "potential_direct_edge_drive",
+        "condition_edge_zeroed"
+      ],
+      "meaning": "direct contribution actually present in the executed lesion condition",
       "required": true,
-      "expression": "source_effective_activity_pre_synaptic * frozen_edge_weight",
-      "source_field": "source_effective_activity_pre_synaptic",
-      "edge_weight_source": "frozen BODY edge registry",
+      "result_dtype": "float64",
       "result_shape": [
         "episode",
         "frame",
         "body_pair"
+      ]
+    },
+    "potential_direct_edge_drive": {
+      "expression": "float64(source_effective_activity_pre_synaptic) * float64(body_edge_weight)",
+      "inputs": [
+        "source_effective_activity_pre_synaptic",
+        "body_edge_weight"
       ],
+      "meaning": "source drive available through the frozen BODY edge if retained",
+      "required": true,
       "result_dtype": "float64",
-      "notes": "Derive after promoting stored activity and frozen weight to float64."
+      "result_shape": [
+        "episode",
+        "frame",
+        "body_pair"
+      ]
+    },
+    "removed_direct_edge_contribution": {
+      "expression": "potential_direct_edge_drive * condition_edge_zeroed",
+      "inputs": [
+        "potential_direct_edge_drive",
+        "condition_edge_zeroed"
+      ],
+      "meaning": "counterfactual direct drive suppressed by the executed lesion",
+      "required": true,
+      "result_dtype": "float64",
+      "result_shape": [
+        "episode",
+        "frame",
+        "body_pair"
+      ]
     }
   },
-
+  "dimensions": {
+    "body_pair_count": 3,
+    "condition_count": 8,
+    "frame_count": 192,
+    "replicates_per_condition": 2
+  },
+  "experiment_id": "SQ-10",
+  "neural_execution_authorized": false,
   "required_measurement_closure": {
-    "source_voltage_pre_step": {
-      "mode": "stored",
-      "field": "source_voltage_pre_step"
+    "actual_direct_edge_contribution": {
+      "derivation": "actual_direct_edge_contribution",
+      "mode": "derived"
     },
-    "source_spikes_pre_step": {
-      "mode": "stored",
-      "field": "source_spikes_pre_step"
+    "body_edge_weight": {
+      "field": "body_edge_weight",
+      "mode": "stored"
     },
-    "source_effective_activity_pre_synaptic": {
-      "mode": "stored",
-      "field": "source_effective_activity_pre_synaptic"
+    "condition_edge_zeroed": {
+      "field": "condition_edge_zeroed",
+      "mode": "stored"
     },
-    "responder_voltage_pre_threshold": {
-      "mode": "stored",
-      "field": "responder_voltage_pre_threshold"
+    "potential_direct_edge_drive": {
+      "derivation": "potential_direct_edge_drive",
+      "mode": "derived"
+    },
+    "removed_direct_edge_contribution": {
+      "derivation": "removed_direct_edge_contribution",
+      "mode": "derived"
     },
     "responder_fired": {
-      "mode": "stored",
-      "field": "responder_fired"
-    },
-    "responder_voltage_post_reset": {
-      "mode": "stored",
-      "field": "responder_voltage_post_reset"
+      "field": "responder_fired",
+      "mode": "stored"
     },
     "responder_spikes_post_commit": {
-      "mode": "stored",
-      "field": "responder_spikes_post_commit"
+      "field": "responder_spikes_post_commit",
+      "mode": "stored"
     },
-    "direct_edge_contribution": {
-      "mode": "derived",
-      "derivation": "direct_edge_contribution"
+    "responder_voltage_post_reset": {
+      "field": "responder_voltage_post_reset",
+      "mode": "stored"
+    },
+    "responder_voltage_pre_threshold": {
+      "field": "responder_voltage_pre_threshold",
+      "mode": "stored"
+    },
+    "source_effective_activity_pre_synaptic": {
+      "field": "source_effective_activity_pre_synaptic",
+      "mode": "stored"
+    },
+    "source_spikes_pre_step": {
+      "field": "source_spikes_pre_step",
+      "mode": "stored"
+    },
+    "source_voltage_pre_step": {
+      "field": "source_voltage_pre_step",
+      "mode": "stored"
     }
   },
-
-  "claim_boundary": [
-    "schema draft only",
-    "no neural execution authorized",
-    "no mechanistic result implied"
-  ]
+  "schema_version": "moscaquant.sq10-sophon-evidence-schema.draft-v1",
+  "status": "DRAFT_NOT_PREREGISTERED"
 }

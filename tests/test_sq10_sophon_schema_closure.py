@@ -33,14 +33,25 @@ def test_all_required_measurements_have_schema_closure():
     contract = load(CONTRACT)
     schema = load(SCHEMA)
 
-    required = set(contract["required_measurements"]["source"])
-    required |= set(contract["required_measurements"]["responder"])
-    required.add("direct_edge_contribution")
+    required = set()
 
-    closure = schema["required_measurement_closure"]
+    for group in (
+        "source",
+        "responder",
+        "edge",
+        "derived",
+    ):
+        required |= set(
+            contract[
+                "required_measurements"
+            ][group]
+        )
+
+    closure = schema[
+        "required_measurement_closure"
+    ]
 
     assert set(closure) == required
-
 
 def test_stored_measurements_reference_real_fields():
     schema = load(SCHEMA)
@@ -68,20 +79,49 @@ def test_derived_measurements_reference_real_derivations():
         assert mapping["derivation"] in derivations, measurement
 
 
-def test_direct_edge_contribution_inputs_are_preserved():
+def test_edge_derivation_inputs_are_closed():
     schema = load(SCHEMA)
 
-    derivation = schema["derivations"]["direct_edge_contribution"]
+    arrays = schema["arrays"]
+    derivations = schema["derivations"]
 
     assert (
-        derivation["source_field"]
-        == "source_effective_activity_pre_synaptic"
+        derivations[
+            "potential_direct_edge_drive"
+        ]["inputs"]
+        == [
+            "source_effective_activity_pre_synaptic",
+            "body_edge_weight",
+        ]
     )
 
     assert (
-        derivation["source_field"]
-        in schema["arrays"]
+        "source_effective_activity_pre_synaptic"
+        in arrays
     )
+    assert "body_edge_weight" in arrays
+
+    assert (
+        derivations[
+            "actual_direct_edge_contribution"
+        ]["inputs"]
+        == [
+            "potential_direct_edge_drive",
+            "condition_edge_zeroed",
+        ]
+    )
+
+    assert (
+        derivations[
+            "removed_direct_edge_contribution"
+        ]["inputs"]
+        == [
+            "potential_direct_edge_drive",
+            "condition_edge_zeroed",
+        ]
+    )
+
+    assert "condition_edge_zeroed" in arrays
 
 
 def test_phase_assignments_match_runtime_clock_audit():
