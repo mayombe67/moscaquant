@@ -62,6 +62,13 @@ RECEIPT = (
     "sq10-sophon-execution-receipt-v1.json"
 )
 
+LAUNCH_SEAL = (
+    ROOT
+    / "config/controls/"
+    "sq10-sophon-launch-seal-v1.json"
+)
+
+
 EXPECTED_AUTHORIZATION_SHA256 = (
     "6194e09f7c62bb4a3d6580445464494d"
     "b17cca6e188fbd1a999849a671f59ec2"
@@ -337,7 +344,205 @@ def verify_authorization_commit() -> None:
         )
 
 
+def validate_launch_seal_payload(
+    payload: dict,
+    *,
+    observed_launcher_sha: str,
+) -> None:
+    if (
+        payload.get("schema_version")
+        != "moscaquant.sq10-sophon-launch-seal/v1"
+    ):
+        refuse(
+            "SQ-10 launch seal schema drift"
+        )
+
+    if (
+        payload.get("status")
+        != "SEALED_FOR_FROZEN_EXECUTION"
+    ):
+        refuse(
+            "SQ-10 launch seal status drift"
+        )
+
+    if (
+        payload.get(
+            "execution_performed"
+        )
+        is not False
+    ):
+        refuse(
+            "launch seal unexpectedly "
+            "claims prior execution"
+        )
+
+    authorization = payload.get(
+        "authorization",
+        {},
+    )
+
+    if (
+        authorization.get("sha256")
+        != EXPECTED_AUTHORIZATION_SHA256
+    ):
+        refuse(
+            "launch seal authorization "
+            "SHA drift"
+        )
+
+    if (
+        authorization.get("path")
+        != str(
+            AUTHORIZATION.relative_to(
+                ROOT
+            )
+        )
+    ):
+        refuse(
+            "launch seal authorization "
+            "path drift"
+        )
+
+    if (
+        payload.get(
+            "execution_manifest_sha256"
+        )
+        != EXPECTED_MANIFEST_SHA256
+    ):
+        refuse(
+            "launch seal manifest "
+            "SHA drift"
+        )
+
+    launcher = payload.get(
+        "launcher",
+        {},
+    )
+
+    if (
+        launcher.get("path")
+        != str(
+            Path(__file__).relative_to(
+                ROOT
+            )
+        )
+    ):
+        refuse(
+            "launch seal launcher "
+            "path drift"
+        )
+
+    if (
+        launcher.get("sha256")
+        != observed_launcher_sha
+    ):
+        refuse(
+            "launch seal launcher "
+            "SHA drift"
+        )
+
+    commit = launcher.get(
+        "git_commit"
+    )
+
+    if (
+        not isinstance(commit, str)
+        or len(commit) != 40
+    ):
+        refuse(
+            "launch seal launcher "
+            "commit drift"
+        )
+
+    destination = payload.get(
+        "evidence_destination",
+        {},
+    )
+
+    if (
+        destination.get("path")
+        != str(
+            EVIDENCE.relative_to(
+                ROOT
+            )
+        )
+    ):
+        refuse(
+            "launch seal evidence "
+            "destination drift"
+        )
+
+    if (
+        destination.get(
+            "overwrite_existing"
+        )
+        is not False
+    ):
+        refuse(
+            "launch seal unexpectedly "
+            "allows evidence overwrite"
+        )
+
+
+def verify_launch_seal() -> dict:
+    if not LAUNCH_SEAL.is_file():
+        refuse(
+            "SQ-10 launch seal missing"
+        )
+
+    payload = json.loads(
+        LAUNCH_SEAL.read_text(
+            encoding="utf-8",
+        )
+    )
+
+    launcher_sha = sha256_file(
+        Path(__file__)
+    )
+
+    validate_launch_seal_payload(
+        payload,
+        observed_launcher_sha=
+            launcher_sha,
+    )
+
+    launcher_commit = payload[
+        "launcher"
+    ][
+        "git_commit"
+    ]
+
+    git(
+        "cat-file",
+        "-e",
+        f"{launcher_commit}^{{commit}}",
+    )
+
+    result = subprocess.run(
+        [
+            "git",
+            "merge-base",
+            "--is-ancestor",
+            launcher_commit,
+            "HEAD",
+        ],
+        cwd=ROOT,
+    )
+
+    if result.returncode != 0:
+        refuse(
+            "HEAD does not descend from "
+            "sealed launcher revision"
+        )
+
+    return payload
+
+
 def verify_execution_preconditions() -> dict:
+    launch_seal = (
+        verify_launch_seal()
+    )
+
     authorization = (
         load_authorization()
     )
@@ -410,6 +615,9 @@ def verify_execution_preconditions() -> dict:
         )
 
     return {
+        "launch_seal":
+            launch_seal,
+
         "authorization":
             authorization,
         "repository":
@@ -822,6 +1030,19 @@ def main() -> None:
 
         "execution_manifest_sha256":
             EXPECTED_MANIFEST_SHA256,
+
+        "launch_seal": {
+            "path":
+                str(
+                    LAUNCH_SEAL.relative_to(
+                        ROOT
+                    )
+                ),
+            "sha256":
+                sha256_file(
+                    LAUNCH_SEAL
+                ),
+        },
 
         "launcher": {
             "path":

@@ -106,3 +106,111 @@ def test_launcher_does_not_import_analyzer():
         "analyze("
         not in source
     )
+
+
+def test_valid_launch_seal_contract():
+    from brain.sq10_sophon_execute import (
+        EVIDENCE,
+        EXPECTED_AUTHORIZATION_COMMIT,
+        ROOT,
+        validate_launch_seal_payload,
+    )
+
+    launcher_sha = "b" * 64
+
+    payload = {
+        "schema_version":
+            "moscaquant.sq10-sophon-launch-seal/v1",
+        "status":
+            "SEALED_FOR_FROZEN_EXECUTION",
+        "execution_performed":
+            False,
+        "authorization": {
+            "path":
+                "config/controls/"
+                "sq10-sophon-execution-authorization-v1.json",
+            "sha256":
+                EXPECTED_AUTHORIZATION_SHA256,
+            "git_commit":
+                EXPECTED_AUTHORIZATION_COMMIT,
+        },
+        "execution_manifest_sha256":
+            EXPECTED_MANIFEST_SHA256,
+        "launcher": {
+            "path":
+                "brain/sq10_sophon_execute.py",
+            "sha256":
+                launcher_sha,
+            "git_commit":
+                "c" * 40,
+        },
+        "evidence_destination": {
+            "path":
+                str(
+                    EVIDENCE.relative_to(
+                        ROOT
+                    )
+                ),
+            "overwrite_existing":
+                False,
+        },
+    }
+
+    validate_launch_seal_payload(
+        payload,
+        observed_launcher_sha=
+            launcher_sha,
+    )
+
+
+def test_launch_seal_rejects_wrong_launcher_sha():
+    from brain.sq10_sophon_execute import (
+        EVIDENCE,
+        ROOT,
+        validate_launch_seal_payload,
+    )
+
+    payload = {
+        "schema_version":
+            "moscaquant.sq10-sophon-launch-seal/v1",
+        "status":
+            "SEALED_FOR_FROZEN_EXECUTION",
+        "execution_performed":
+            False,
+        "authorization": {
+            "path":
+                "config/controls/"
+                "sq10-sophon-execution-authorization-v1.json",
+            "sha256":
+                EXPECTED_AUTHORIZATION_SHA256,
+        },
+        "execution_manifest_sha256":
+            EXPECTED_MANIFEST_SHA256,
+        "launcher": {
+            "path":
+                "brain/sq10_sophon_execute.py",
+            "sha256":
+                "0" * 64,
+            "git_commit":
+                "c" * 40,
+        },
+        "evidence_destination": {
+            "path":
+                str(
+                    EVIDENCE.relative_to(
+                        ROOT
+                    )
+                ),
+            "overwrite_existing":
+                False,
+        },
+    }
+
+    with pytest.raises(
+        ExecutionRefusal
+    ):
+        validate_launch_seal_payload(
+            payload,
+            observed_launcher_sha=
+                "1" * 64,
+        )
