@@ -1,0 +1,80 @@
+{
+  "schema_version": "moscaquant.sq10-sophon-measurement-contract.draft-v1",
+  "experiment_id": "SQ-10",
+  "codename": "SOPHON",
+  "status": "DRAFT_NOT_PREREGISTERED",
+  "neural_execution_authorized": false,
+  "mask_semantics": {
+    "0": "edge retained",
+    "1": "edge zeroed"
+  },
+  "conditions": [
+    "000",
+    "001",
+    "010",
+    "011",
+    "100",
+    "101",
+    "110",
+    "111"
+  ],
+  "body_pairs": [
+    {
+      "label": "A",
+      "inherited_edge_id": "E10",
+      "source": 65084,
+      "responder": 137122
+    },
+    {
+      "label": "B",
+      "inherited_edge_id": "E11",
+      "source": 128590,
+      "responder": 317
+    },
+    {
+      "label": "C",
+      "inherited_edge_id": "E12",
+      "source": 135589,
+      "responder": 126002
+    }
+  ],
+  "required_measurements": {
+    "source": [
+      "voltage",
+      "spikes",
+      "effective_graded_activity"
+    ],
+    "responder": [
+      "voltage",
+      "spikes"
+    ],
+    "direct_edge_contribution": {
+      "required": true,
+      "storage_or_derivation": "TO_BE_FROZEN_AFTER_RUNTIME_TIMING_AUDIT"
+    }
+  },
+  "timing_semantics": {
+    "status": "UNRESOLVED",
+    "required_phases": [
+      "effective_activity_calculation",
+      "synaptic_matrix_multiplication",
+      "voltage_decay",
+      "synaptic_and_stimulus_integration",
+      "threshold_evaluation",
+      "spike_commit",
+      "voltage_reset"
+    ]
+  },
+  "schema_closure": {
+    "required": true,
+    "rule": "every preregistered measurement must map to an evidence field or explicit deterministic derivation",
+    "authorization_blocked_until_closed": true
+  },
+  "analysis_constraints": [
+    "analyze all three BODY pairs symmetrically",
+    "analyze all eight masks symmetrically",
+    "no post-result ranking",
+    "no mechanistic claim from timing alone",
+    "distinguish observation from interpretation"
+  ]
+}
