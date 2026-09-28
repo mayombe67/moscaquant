@@ -1,0 +1,55 @@
+{
+  "activity_case_count": 96,
+  "artifacts": {
+    "qualification_contract_sha256": "e9d89680cfdc80ee9fe27096b06d95d9be795604e59c78da55abbbaaee5c2a4b",
+    "qualification_implementation_sha256": "88ae0c7ffae18ff1b1cbe57882ed6f1bb6c002b967af2129624d921da1899341",
+    "replay_implementation_sha256": "76245bfab248c0d4bf374da94ad79485f2e0e386d86707de9e52bad26ff772e5"
+  },
+  "codename": "DARK FOREST",
+  "connectome": {
+    "path": "/home/wil/moscaquant-data/processed/connectome-baseline-v1.npz",
+    "sha256": "e00e3f2a9828c921fe1f093cc567bf45a85adad0526176be0aa1b8be09336eeb"
+  },
+  "criterion": {
+    "absolute_tolerance": 0.0,
+    "equality": "exact float32",
+    "lesioned_entry_semantics": "structurally skipped",
+    "relative_tolerance": 0.0,
+    "required_mismatch_count": 0
+  },
+  "experiment": "SQ-11",
+  "first_mismatches": [],
+  "geometry": {
+    "body_flat_positions": [
+      1908,
+      3501,
+      4438
+    ],
+    "body_positions": [
+      1908,
+      671,
+      767
+    ],
+    "flat_entry_count": 4568,
+    "presynaptic_union_count": 4393,
+    "row_nnz": [
+      2830,
+      841,
+      897
+    ]
+  },
+  "mask_count": 8,
+  "mismatch_count": 0,
+  "neural_execution_performed": false,
+  "row_case_mask_comparisons": 2304,
+  "row_count": 3,
+  "schema_version": "moscaquant.sq11-dark-forest-replay-qualification-result/v2",
+  "software": {
+    "numpy": "2.5.3",
+    "python": "3.12.3",
+    "scipy": "1.18.1"
+  },
+  "sq11_neural_evidence_inspected": false,
+  "status": "PASS",
+  "supersedes_for_execution": "sq11-dark-forest-replay-qualification-result/v1"
+}

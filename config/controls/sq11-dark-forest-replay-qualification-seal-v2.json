@@ -1,0 +1,59 @@
+{
+  "authority": {
+    "analysis_authorized": false,
+    "execution_authoritative_replay_version": 2,
+    "neural_execution_authorized": false,
+    "post_result_tolerance_authorized": false,
+    "qualification_only": true
+  },
+  "codename": "DARK FOREST",
+  "experiment": "SQ-11",
+  "geometry": {
+    "body_flat_positions": [
+      1908,
+      3501,
+      4438
+    ],
+    "body_positions": [
+      1908,
+      671,
+      767
+    ],
+    "flat_entry_count": 4568,
+    "presynaptic_union_count": 4393,
+    "row_nnz": [
+      2830,
+      841,
+      897
+    ]
+  },
+  "preregistration": {
+    "commit": "f8efca347e4165f123f0de43019eca7d26b05dc4"
+  },
+  "qualification_protocol": {
+    "contract_path": "config/experiments/sq11-dark-forest-replay-qualification-contract-v2.json",
+    "contract_sha256": "e9d89680cfdc80ee9fe27096b06d95d9be795604e59c78da55abbbaaee5c2a4b",
+    "git_commit": "9b3281ea3225b5a37f26739012fec91caabdb164",
+    "qualification_path": "brain/sq11_dark_forest_replay_qualification_v2.py",
+    "qualification_sha256": "88ae0c7ffae18ff1b1cbe57882ed6f1bb6c002b967af2129624d921da1899341",
+    "replay_path": "brain/sq11_dark_forest_replay_v2.py",
+    "replay_sha256": "76245bfab248c0d4bf374da94ad79485f2e0e386d86707de9e52bad26ff772e5"
+  },
+  "qualification_result": {
+    "absolute_tolerance": 0.0,
+    "activity_case_count": 96,
+    "criterion": "exact float32 equality",
+    "lesioned_entry_semantics": "structurally skipped",
+    "mask_count": 8,
+    "mismatch_count": 0,
+    "path": "artifacts/experiments/sq11-dark-forest/sq11-dark-forest-replay-qualification-v2.json",
+    "relative_tolerance": 0.0,
+    "row_case_mask_comparisons": 2304,
+    "row_count": 3,
+    "sha256": "a2b4256529ef5c7002fc32e9cd4c877918d320fd736fa7961ba66f869d70e325",
+    "status": "PASS"
+  },
+  "schema_version": "moscaquant.sq11-dark-forest-replay-qualification-seal/v2",
+  "status": "SEALED_QUALIFICATION_PASS",
+  "supersedes_for_execution": "sq11-dark-forest-replay-qualification-seal/v1"
+}
