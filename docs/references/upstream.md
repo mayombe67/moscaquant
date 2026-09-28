@@ -271,6 +271,54 @@ For every project above:
 - preserve negative and conflicting results.
 
 
+
+### virtual-fly
+
+Reference:
+
+https://github.com/shute2004/virtual-fly
+
+Reviewed canonical-v1 lineage:
+
+`f9c86c904d67ff974f3c43d37aab3619bc93fc1b`
+
+Project-reported canonical-v1 relevance:
+
+- complete MaleCNS simulation coupled to a FlyBody / MuJoCo environment;
+- local synaptic plasticity uses eligibility state plus class-DAN-mediated
+  dopaminergic modulation;
+- task events may stimulate DAN populations but do not directly write weights;
+- canonical training changed stored synaptic state;
+- frozen initial and post-training evaluation produced the same reported
+  behavioral outcome;
+- frozen evaluation disables both plasticity and task-triggered DAN
+  stimulation;
+- canonical checkpoints preserve global learned weights but do not represent a
+  complete persistent biological individual state.
+
+MoscaQuant adaptation boundary:
+
+- import no virtual-fly learning rate, eligibility constant, dopamine
+  parameter, timing constant, weight-update magnitude, behavioral curriculum,
+  or biological-validity claim;
+- do not replace the frozen MoscaQuant runtime with the virtual-fly runtime;
+- adapt only the experimental decomposition between reinforcement signal,
+  eligibility state, persistent weight mutation, and frozen qualification;
+- preserve MoscaQuant's immutable structural baseline plus derived
+  subject-specific plasticity state;
+- require future persistent MQ subjects to checkpoint every protocol-defined
+  persistent state variable capable of affecting later computation.
+
+Future MQ-12 CONSEQUENCES implication:
+
+Training and qualification must be distinct phases.
+
+Qualification of a learned checkpoint should run with new reinforcement
+stimulation disabled and further plasticity disabled, unless a separately
+preregistered question explicitly requires either mechanism to remain active.
+
+External weight mutation alone is not evidence of improved learned behavior.
+
 ## MaleCNS / FlyWire comparative connectomics — MQ-002 // LILITH
 
 MQ-002 // LILITH is a provisional comparative biological control built from

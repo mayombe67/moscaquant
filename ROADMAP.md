@@ -775,20 +775,32 @@ Permit tiny controlled real-money transactions through WARDEN-01.
 Enable experimental plasticity and persistent aversive learning while
 preserving controls.
 
-### Required plasticity-null twins
+### Required plasticity causal decomposition
 
-When MQ-12 enables result-bearing plasticity, every claimed improvement must
-include matched controls capable of separating modeled learning from wrapper,
-Oracle, or scheduling artifacts.
+When MQ-12 enables result-bearing plasticity, every claimed adaptive effect must
+separate at least three mechanistic layers:
 
-Required control family:
+1. reinforcement / modulatory signal;
+2. eligibility mechanism;
+3. persistent weight mutation.
 
-1. **ACTIVE PLASTICITY** — eligible synapses update under the frozen rule.
-2. **FROZEN SYNAPSES** — identical run, but eligible synapses cannot update.
-3. **REINFORCEMENT-TIMING SHUFFLED** — identical external conditions, with
-   reinforcement timing shuffled under a pre-registered procedure.
+The required matched-control family is:
 
-Preserve across matched twins, except for the explicitly manipulated variable:
+1. **FULL ADAPTATION** — reinforcement ON, eligibility ON, weight updates ON.
+2. **MUTATION LOCK** — reinforcement ON, eligibility ON, weight updates OFF.
+3. **ELIGIBILITY LOCK** — reinforcement ON, eligibility OFF, weight updates OFF.
+4. **REINFORCEMENT NULL** — reinforcement OFF, eligibility ON, weight updates ON.
+5. **HARD NULL** — reinforcement OFF, eligibility OFF, weight updates OFF.
+6. **REINFORCEMENT-TIMING SHUFFLED** — reinforcement timing shuffled under a
+   separately frozen deterministic procedure, with eligibility and weight
+   updates otherwise enabled.
+
+This is a MoscaQuant experimental adaptation.
+
+It does not import another project's learning rule or parameters.
+
+Preserve across matched conditions, except for the explicitly manipulated
+mechanistic layer:
 
 - Oracle proposals;
 - random seeds;
@@ -796,10 +808,68 @@ Preserve across matched twins, except for the explicitly manipulated variable:
 - external policy;
 - WARDEN rules;
 - decision opportunities;
-- reinforcement schedule for the non-shuffled arms.
+- non-shuffled reinforcement opportunities;
+- structural MaleCNS baseline;
+- runtime configuration.
 
-An apparent improvement that also appears in frozen or timing-shuffled controls
-must not be attributed to the modeled plasticity mechanism.
+An apparent adaptive effect that is reproduced by MUTATION LOCK,
+ELIGIBILITY LOCK, HARD NULL, or timing-shuffled controls must not be attributed
+to persistent modeled learning without a separately supported mechanism.
+
+### Frozen post-learning qualification
+
+Training and qualification are distinct experimental phases.
+
+After a candidate learned state is sealed, its primary qualification should,
+unless a separately preregistered hypothesis requires otherwise:
+
+- load the sealed candidate state read-only;
+- disable further plasticity;
+- disable new reinforcement / punishment stimulation;
+- preserve the frozen qualification inputs and external policy;
+- compare against preregistered matched controls;
+- emit a new immutable qualification artifact.
+
+A training-phase phenotype that disappears during frozen qualification is not
+by itself evidence that persistent learned state altered later behavior.
+
+### One True Morty lineage contract
+
+Future persistent MQ-001 candidate lineages must not share learned mutable state
+after their experimental fork.
+
+Each candidate begins from an explicitly identified immutable baseline or sealed
+parent checkpoint and receives its own subject-specific mutable state.
+
+A candidate promoted as the **One True Morty** must preserve every
+protocol-defined persistent variable capable of affecting future computation,
+not merely learned synaptic multipliers.
+
+The checkpoint contract must distinguish:
+
+- immutable structural MaleCNS baseline;
+- subject-specific plasticity overlays;
+- persistent modulatory or scar state where the frozen protocol defines it as
+  persistent;
+- persistent eligibility state only when a frozen protocol explicitly defines
+  eligibility as surviving the relevant boundary;
+- recovery counters and other adaptive bookkeeping that can alter future
+  computation;
+- parent checkpoint and lineage provenance;
+- randomization / experiment provenance needed for deterministic replay.
+
+Episode-local membrane, spike, refractory, trace, or eligibility state must not
+silently become persistent merely because an implementation can serialize it.
+
+WARDEN state, broker state, Panopticon presentation state, HR/lore state, and
+other authority or presentation layers are not part of the neural subject
+checkpoint unless a future protocol explicitly defines a scientifically
+relevant read-only reference to them.
+
+Promotion to One True Morty is a provenance designation.
+
+It is not evidence of biological individuality, intelligence, consciousness,
+market skill, or financial usefulness.
 
 
 ### Comparative Biology Sidequest — MQ-002 // LILITH / THE OTHER FLY
