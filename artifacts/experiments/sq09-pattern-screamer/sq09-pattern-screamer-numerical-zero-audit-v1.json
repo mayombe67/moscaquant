@@ -1,0 +1,206 @@
+{
+  "claim_boundary": "arithmetic audit only; no mechanistic inference",
+  "float_info": {
+    "float32_mantissa_bits": 23,
+    "float64_mantissa_bits": 52,
+    "longdouble_mantissa_bits": 63
+  },
+  "purpose": "post-result numerical-hygiene audit of the SQ-08 three-way factorial residual",
+  "regions": {
+    "body": {
+      "canonical_equals_grouped_bitwise": true,
+      "float32_vs_float64_difference": {
+        "dtype": "float64",
+        "l2": 9.94539168471725e-11,
+        "max_abs": 2.9103830456733704e-11,
+        "nonzero_count": 55,
+        "shape": [
+          192,
+          3
+        ]
+      },
+      "float64_canonical": {
+        "dtype": "float64",
+        "l2": 0.0,
+        "max_abs": 0.0,
+        "nonzero_count": 0,
+        "shape": [
+          192,
+          3
+        ]
+      },
+      "float64_grouped": {
+        "dtype": "float64",
+        "l2": 0.0,
+        "max_abs": 0.0,
+        "nonzero_count": 0,
+        "shape": [
+          192,
+          3
+        ]
+      },
+      "float64_order_difference": {
+        "dtype": "float64",
+        "l2": 0.0,
+        "max_abs": 0.0,
+        "nonzero_count": 0,
+        "shape": [
+          192,
+          3
+        ]
+      },
+      "longdouble_canonical": {
+        "dtype": "float128",
+        "l2": 0.0,
+        "max_abs": 0.0,
+        "nonzero_count": 0,
+        "shape": [
+          192,
+          3
+        ]
+      },
+      "longdouble_is_literal_zero": true,
+      "native_float32": {
+        "dtype": "float32",
+        "l2": 9.94539168471725e-11,
+        "max_abs": 2.9103830456733704e-11,
+        "nonzero_count": 55,
+        "shape": [
+          192,
+          3
+        ]
+      }
+    },
+    "frontier": {
+      "canonical_equals_grouped_bitwise": true,
+      "float32_vs_float64_difference": {
+        "dtype": "float64",
+        "l2": 0.0,
+        "max_abs": 0.0,
+        "nonzero_count": 0,
+        "shape": [
+          192,
+          18
+        ]
+      },
+      "float64_canonical": {
+        "dtype": "float64",
+        "l2": 0.0,
+        "max_abs": 0.0,
+        "nonzero_count": 0,
+        "shape": [
+          192,
+          18
+        ]
+      },
+      "float64_grouped": {
+        "dtype": "float64",
+        "l2": 0.0,
+        "max_abs": 0.0,
+        "nonzero_count": 0,
+        "shape": [
+          192,
+          18
+        ]
+      },
+      "float64_order_difference": {
+        "dtype": "float64",
+        "l2": 0.0,
+        "max_abs": 0.0,
+        "nonzero_count": 0,
+        "shape": [
+          192,
+          18
+        ]
+      },
+      "longdouble_canonical": {
+        "dtype": "float128",
+        "l2": 0.0,
+        "max_abs": 0.0,
+        "nonzero_count": 0,
+        "shape": [
+          192,
+          18
+        ]
+      },
+      "longdouble_is_literal_zero": true,
+      "native_float32": {
+        "dtype": "float32",
+        "l2": 0.0,
+        "max_abs": 0.0,
+        "nonzero_count": 0,
+        "shape": [
+          192,
+          18
+        ]
+      }
+    },
+    "primary": {
+      "canonical_equals_grouped_bitwise": true,
+      "float32_vs_float64_difference": {
+        "dtype": "float64",
+        "l2": 9.94539168471725e-11,
+        "max_abs": 2.9103830456733704e-11,
+        "nonzero_count": 55,
+        "shape": [
+          192,
+          1191
+        ]
+      },
+      "float64_canonical": {
+        "dtype": "float64",
+        "l2": 0.0,
+        "max_abs": 0.0,
+        "nonzero_count": 0,
+        "shape": [
+          192,
+          1191
+        ]
+      },
+      "float64_grouped": {
+        "dtype": "float64",
+        "l2": 0.0,
+        "max_abs": 0.0,
+        "nonzero_count": 0,
+        "shape": [
+          192,
+          1191
+        ]
+      },
+      "float64_order_difference": {
+        "dtype": "float64",
+        "l2": 0.0,
+        "max_abs": 0.0,
+        "nonzero_count": 0,
+        "shape": [
+          192,
+          1191
+        ]
+      },
+      "longdouble_canonical": {
+        "dtype": "float128",
+        "l2": 0.0,
+        "max_abs": 0.0,
+        "nonzero_count": 0,
+        "shape": [
+          192,
+          1191
+        ]
+      },
+      "longdouble_is_literal_zero": true,
+      "native_float32": {
+        "dtype": "float32",
+        "l2": 9.94539168471725e-11,
+        "max_abs": 2.9103830456733704e-11,
+        "nonzero_count": 55,
+        "shape": [
+          192,
+          1191
+        ]
+      }
+    }
+  },
+  "schema_version": "moscaquant.sq09-pattern-screamer-zero-audit/v1",
+  "source_npz": "/home/wil/projects/moscaquant/artifacts/external-review/sq08-three-body/sq08-three-body-evidence-v1.npz",
+  "source_npz_sha256": "e95f054e827cf1232ef72019692e4bcfc099214a654e1a3267f0f41cfc66abfb"
+}

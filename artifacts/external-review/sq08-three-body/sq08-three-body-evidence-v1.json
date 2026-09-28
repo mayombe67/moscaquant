@@ -1,0 +1,55 @@
+{
+  "claim_boundary": "evidence preservation only; no mechanistic interpretation",
+  "codename": "THREE BODY PROBLEM",
+  "coordinates": {
+    "body_responders": [
+      137122,
+      317,
+      126002
+    ],
+    "frontier": [
+      7,
+      72,
+      129,
+      411,
+      470,
+      1472,
+      1574,
+      1662,
+      1919,
+      2009,
+      2327,
+      3712,
+      4068,
+      14273,
+      16349,
+      18196,
+      130134,
+      131527
+    ]
+  },
+  "duplicate_pair_count": 8,
+  "duplicate_pairs_exact": true,
+  "episode_count": 16,
+  "experiment": "SQ-08",
+  "run_metadata": {
+    "authorization_sha256": "612567a35a7354690a777a7af55aaf72220a28414efbe067fb2dc7b551311787",
+    "aws_batch_job_attempt": 1,
+    "aws_batch_job_id": "23cd19ed-731e-4234-992f-ac23cebda140",
+    "claim_boundary": "execution provenance only; no mechanistic interpretation",
+    "execution_class": "AUTHORITATIVE-SQ08-THREE-BODY",
+    "execution_group_count": 1,
+    "execution_manifest_sha256": "9a472f6548f777ceec327b8449ffcfee27d275478792a59097d28e95121c9dfe",
+    "generated_at_utc": "2026-09-27T23:56:17.079016Z",
+    "logical_work_unit_count": 16,
+    "ops_git_sha": "acc92902003f73dd9d14f9f38090debb990264d2",
+    "run_id": "sq08-three-body-20260927-01",
+    "science_git_sha": "e4a58df478d7681b612ed9deb85b5ddfe1268acc"
+  },
+  "schema_version": "moscaquant.sq08-three-body-evidence/v1",
+  "sidecar": {
+    "path": "sq08-three-body-evidence-v1.npz",
+    "sha256": "e95f054e827cf1232ef72019692e4bcfc099214a654e1a3267f0f41cfc66abfb"
+  },
+  "status": "COMPLETE_EVIDENCE"
+}

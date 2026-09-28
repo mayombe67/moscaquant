@@ -1,0 +1,183 @@
+{
+  "body_responder_three_way": {
+    "classification": "THREE_WAY_EXACT_ZERO",
+    "max_abs_difference": 2.2604140781368187e-13,
+    "symmetric_normalized_l2": 2.189019117311117e-10
+  },
+  "claim_boundary": "computational factorial analysis only; no biological or behavioral inference",
+  "codename": "THREE BODY PROBLEM",
+  "experiment": "SQ-08",
+  "frontier_three_way": {
+    "classification": "THREE_WAY_EXACT_ZERO",
+    "max_abs_difference": 0.0,
+    "node_count": 18,
+    "nodes": [
+      {
+        "first_nonzero_frame": null,
+        "max_abs_i_abc": 0.0,
+        "node": 7,
+        "position": 0,
+        "three_way_nonzero": false
+      },
+      {
+        "first_nonzero_frame": null,
+        "max_abs_i_abc": 0.0,
+        "node": 72,
+        "position": 1,
+        "three_way_nonzero": false
+      },
+      {
+        "first_nonzero_frame": null,
+        "max_abs_i_abc": 0.0,
+        "node": 129,
+        "position": 2,
+        "three_way_nonzero": false
+      },
+      {
+        "first_nonzero_frame": null,
+        "max_abs_i_abc": 0.0,
+        "node": 411,
+        "position": 3,
+        "three_way_nonzero": false
+      },
+      {
+        "first_nonzero_frame": null,
+        "max_abs_i_abc": 0.0,
+        "node": 470,
+        "position": 4,
+        "three_way_nonzero": false
+      },
+      {
+        "first_nonzero_frame": null,
+        "max_abs_i_abc": 0.0,
+        "node": 1472,
+        "position": 5,
+        "three_way_nonzero": false
+      },
+      {
+        "first_nonzero_frame": null,
+        "max_abs_i_abc": 0.0,
+        "node": 1574,
+        "position": 6,
+        "three_way_nonzero": false
+      },
+      {
+        "first_nonzero_frame": null,
+        "max_abs_i_abc": 0.0,
+        "node": 1662,
+        "position": 7,
+        "three_way_nonzero": false
+      },
+      {
+        "first_nonzero_frame": null,
+        "max_abs_i_abc": 0.0,
+        "node": 1919,
+        "position": 8,
+        "three_way_nonzero": false
+      },
+      {
+        "first_nonzero_frame": null,
+        "max_abs_i_abc": 0.0,
+        "node": 2009,
+        "position": 9,
+        "three_way_nonzero": false
+      },
+      {
+        "first_nonzero_frame": null,
+        "max_abs_i_abc": 0.0,
+        "node": 2327,
+        "position": 10,
+        "three_way_nonzero": false
+      },
+      {
+        "first_nonzero_frame": null,
+        "max_abs_i_abc": 0.0,
+        "node": 3712,
+        "position": 11,
+        "three_way_nonzero": false
+      },
+      {
+        "first_nonzero_frame": null,
+        "max_abs_i_abc": 0.0,
+        "node": 4068,
+        "position": 12,
+        "three_way_nonzero": false
+      },
+      {
+        "first_nonzero_frame": null,
+        "max_abs_i_abc": 0.0,
+        "node": 14273,
+        "position": 13,
+        "three_way_nonzero": false
+      },
+      {
+        "first_nonzero_frame": null,
+        "max_abs_i_abc": 0.0,
+        "node": 16349,
+        "position": 14,
+        "three_way_nonzero": false
+      },
+      {
+        "first_nonzero_frame": null,
+        "max_abs_i_abc": 0.0,
+        "node": 18196,
+        "position": 15,
+        "three_way_nonzero": false
+      },
+      {
+        "first_nonzero_frame": null,
+        "max_abs_i_abc": 0.0,
+        "node": 130134,
+        "position": 16,
+        "three_way_nonzero": false
+      },
+      {
+        "first_nonzero_frame": null,
+        "max_abs_i_abc": 0.0,
+        "node": 131527,
+        "position": 17,
+        "three_way_nonzero": false
+      }
+    ],
+    "symmetric_normalized_l2": 0.0
+  },
+  "mask_semantics": "0=retained,1=zeroed",
+  "primary_three_way": {
+    "classification": "THREE_WAY_EXACT_ZERO",
+    "max_abs_difference": 2.2604140781368187e-13,
+    "symmetric_normalized_l2": 1.460225602318303e-10
+  },
+  "schema_version": "moscaquant.sq08-three-body-analysis/v1",
+  "spikes": {
+    "body_total_spikes_by_mask": {
+      "000": 0,
+      "001": 0,
+      "010": 0,
+      "011": 0,
+      "100": 0,
+      "101": 0,
+      "110": 0,
+      "111": 0
+    },
+    "frontier_total_spikes_by_mask": {
+      "000": 0,
+      "001": 0,
+      "010": 0,
+      "011": 0,
+      "100": 0,
+      "101": 0,
+      "110": 0,
+      "111": 0
+    },
+    "primary_total_spikes_by_mask": {
+      "000": 0,
+      "001": 0,
+      "010": 0,
+      "011": 0,
+      "100": 0,
+      "101": 0,
+      "110": 0,
+      "111": 0
+    }
+  }
+}
