@@ -1,0 +1,381 @@
+{
+  "authorized_work_units": [
+    {
+      "condition_id": "sq11:000:r1",
+      "edge_zeroed": [
+        0,
+        0,
+        0
+      ],
+      "mask": "000",
+      "ordinal": 0,
+      "replicate": 1
+    },
+    {
+      "condition_id": "sq11:000:r2",
+      "edge_zeroed": [
+        0,
+        0,
+        0
+      ],
+      "mask": "000",
+      "ordinal": 1,
+      "replicate": 2
+    },
+    {
+      "condition_id": "sq11:001:r1",
+      "edge_zeroed": [
+        0,
+        0,
+        1
+      ],
+      "mask": "001",
+      "ordinal": 2,
+      "replicate": 1
+    },
+    {
+      "condition_id": "sq11:001:r2",
+      "edge_zeroed": [
+        0,
+        0,
+        1
+      ],
+      "mask": "001",
+      "ordinal": 3,
+      "replicate": 2
+    },
+    {
+      "condition_id": "sq11:010:r1",
+      "edge_zeroed": [
+        0,
+        1,
+        0
+      ],
+      "mask": "010",
+      "ordinal": 4,
+      "replicate": 1
+    },
+    {
+      "condition_id": "sq11:010:r2",
+      "edge_zeroed": [
+        0,
+        1,
+        0
+      ],
+      "mask": "010",
+      "ordinal": 5,
+      "replicate": 2
+    },
+    {
+      "condition_id": "sq11:011:r1",
+      "edge_zeroed": [
+        0,
+        1,
+        1
+      ],
+      "mask": "011",
+      "ordinal": 6,
+      "replicate": 1
+    },
+    {
+      "condition_id": "sq11:011:r2",
+      "edge_zeroed": [
+        0,
+        1,
+        1
+      ],
+      "mask": "011",
+      "ordinal": 7,
+      "replicate": 2
+    },
+    {
+      "condition_id": "sq11:100:r1",
+      "edge_zeroed": [
+        1,
+        0,
+        0
+      ],
+      "mask": "100",
+      "ordinal": 8,
+      "replicate": 1
+    },
+    {
+      "condition_id": "sq11:100:r2",
+      "edge_zeroed": [
+        1,
+        0,
+        0
+      ],
+      "mask": "100",
+      "ordinal": 9,
+      "replicate": 2
+    },
+    {
+      "condition_id": "sq11:101:r1",
+      "edge_zeroed": [
+        1,
+        0,
+        1
+      ],
+      "mask": "101",
+      "ordinal": 10,
+      "replicate": 1
+    },
+    {
+      "condition_id": "sq11:101:r2",
+      "edge_zeroed": [
+        1,
+        0,
+        1
+      ],
+      "mask": "101",
+      "ordinal": 11,
+      "replicate": 2
+    },
+    {
+      "condition_id": "sq11:110:r1",
+      "edge_zeroed": [
+        1,
+        1,
+        0
+      ],
+      "mask": "110",
+      "ordinal": 12,
+      "replicate": 1
+    },
+    {
+      "condition_id": "sq11:110:r2",
+      "edge_zeroed": [
+        1,
+        1,
+        0
+      ],
+      "mask": "110",
+      "ordinal": 13,
+      "replicate": 2
+    },
+    {
+      "condition_id": "sq11:111:r1",
+      "edge_zeroed": [
+        1,
+        1,
+        1
+      ],
+      "mask": "111",
+      "ordinal": 14,
+      "replicate": 1
+    },
+    {
+      "condition_id": "sq11:111:r2",
+      "edge_zeroed": [
+        1,
+        1,
+        1
+      ],
+      "mask": "111",
+      "ordinal": 15,
+      "replicate": 2
+    }
+  ],
+  "codename": "DARK FOREST",
+  "control_plane_git_sha": "d3ecd378e3f13738b68b8f475d2127a3282e110e",
+  "execution_boundary": {
+    "analysis_authority": false,
+    "authorization_only": true,
+    "condition_selection_authority": false,
+    "execution_performed": false,
+    "mechanism_interpretation_authority": false,
+    "result_reclassification_authority": false,
+    "tolerance_modification_authority": false
+  },
+  "execution_contract": {
+    "all_work_units_required": true,
+    "analysis_after_verification_only": true,
+    "arbitrary_condition_execution": false,
+    "authorized_condition_ids": [
+      "sq11:000:r1",
+      "sq11:000:r2",
+      "sq11:001:r1",
+      "sq11:001:r2",
+      "sq11:010:r1",
+      "sq11:010:r2",
+      "sq11:011:r1",
+      "sq11:011:r2",
+      "sq11:100:r1",
+      "sq11:100:r2",
+      "sq11:101:r1",
+      "sq11:101:r2",
+      "sq11:110:r1",
+      "sq11:110:r2",
+      "sq11:111:r1",
+      "sq11:111:r2"
+    ],
+    "baseline_binding_required": true,
+    "both_replicates_required_per_mask": true,
+    "frame_count": 192,
+    "implicit_resume": false,
+    "independent_verification_required": true,
+    "layout": "RL",
+    "manifest_regeneration_at_execution": false,
+    "overwrite_existing_evidence": false,
+    "overwrite_existing_receipt": false,
+    "persisted_reverification_required": true,
+    "replay_absolute_tolerance": 0.0,
+    "replay_float_dtype": "float32",
+    "replay_relative_tolerance": 0.0,
+    "replay_version": 2,
+    "structural_lesion_required": true,
+    "work_unit_count": 16,
+    "zero_multiplication_equivalent": false
+  },
+  "execution_manifest_sha256": "f3397d6a498460ff4785df54fd7d31cd8595f5057057ca34431268e2219ee496",
+  "experiment": "SQ-11",
+  "readiness": {
+    "git_commit": "37c1dba5f88df123bca92e6bc6da009ed9c63707",
+    "source_sha256": "078fe3b1114a50ce3c859ea43c015f2fc9c8e068a32d0bc56129acd231db6674"
+  },
+  "schema_version": "moscaquant.sq11-dark-forest-execution-authorization/v1",
+  "science_git_sha": "f8efca347e4165f123f0de43019eca7d26b05dc4",
+  "status": "AUTHORIZED_FOR_FROZEN_EXECUTION",
+  "verified_dependency_closure": {
+    "body_topology": {
+      "body_edge_weight": [
+        0.0002288853283971548,
+        0.0005941770505160093,
+        0.0006234414177015424
+      ],
+      "body_flat_positions": [
+        1908,
+        3501,
+        4438
+      ],
+      "body_positions": [
+        1908,
+        671,
+        767
+      ],
+      "presynaptic_union_count": 4393,
+      "responder_indices": [
+        137122,
+        317,
+        126002
+      ],
+      "row_entry_count": 4568,
+      "row_offsets": [
+        0,
+        2830,
+        3671,
+        4568
+      ],
+      "source_indices": [
+        65084,
+        128590,
+        135589
+      ]
+    },
+    "output_destinations": {
+      "evidence": {
+        "exists_before_execution": false,
+        "overwrite_existing": false,
+        "path": "/home/wil/projects/moscaquant/artifacts/experiments/sq11-dark-forest/sq11-dark-forest-evidence-v2.npz"
+      },
+      "publication_receipt": {
+        "exists_before_execution": false,
+        "overwrite_existing": false,
+        "path": "/home/wil/projects/moscaquant/artifacts/experiments/sq11-dark-forest/sq11-dark-forest-publication-receipt-v2.json"
+      }
+    },
+    "physical_inputs": {
+      "connectome": {
+        "path": "/home/wil/moscaquant-data/processed/connectome-baseline-v1.npz",
+        "sha256": "e00e3f2a9828c921fe1f093cc567bf45a85adad0526176be0aa1b8be09336eeb"
+      },
+      "graded": {
+        "path": "/home/wil/moscaquant-data/processed/mq3-2-graded-visual-types-v1.npz",
+        "sha256": "1c514bf58bf69b24bfba28489344d0fe3e0f7590d649e0ef446c33898d38e379"
+      },
+      "relay": {
+        "path": "/home/wil/moscaquant-data/processed/visual-relay-map-v1.npz",
+        "sha256": "a3df2746ec69d10a2739a05f3ec55c4bd5f15b10b9a6167aee41c15a647e3478"
+      },
+      "retina": {
+        "path": "/home/wil/moscaquant-data/processed/visual-r1-r6-map-v1.npz",
+        "sha256": "c4655220e1aee4eab580a534df009f0a7493f075c42285b430ad1365ae37917f"
+      },
+      "stimulus": {
+        "frame_count": 192,
+        "layout": "RL",
+        "schedule_sha256": "e044055d99fe8a19d69b4eee7bd02ba5279641c99b48d0c99cb468a5bd8f20ab"
+      }
+    },
+    "replay_qualification": {
+      "absolute_tolerance": 0.0,
+      "authoritative_version": 2,
+      "body_rows": 3,
+      "condition_masks": 8,
+      "exact_float32_comparisons": 2304,
+      "mismatch_count": 0,
+      "neural_execution_performed": false,
+      "relative_tolerance": 0.0,
+      "result_path": "artifacts/experiments/sq11-dark-forest/sq11-dark-forest-replay-qualification-v2.json",
+      "result_sha256": "a2b4256529ef5c7002fc32e9cd4c877918d320fd736fa7961ba66f869d70e325",
+      "seal_path": "config/controls/sq11-dark-forest-replay-qualification-seal-v2.json",
+      "seal_sha256": "19529383757e243f9881140edca30b13aea10760b582dd2fb1cda09198f225ab",
+      "sq11_neural_evidence_inspected": false,
+      "status": "QUALIFIED_FOR_SQ11_EXECUTION",
+      "synthetic_activity_cases": 96
+    },
+    "repo_artifact_hashes": {
+      "frozen_code.brain/market_replay.py": "9f6e9f324206bba8c5ec04b8f10527e6cbdeb9d58ecaab8b2eb5434de2d5b4c7",
+      "frozen_code.brain/market_sensory.py": "f9794acaf3758ab49c3efac7fce9db0dfbfdde9492ac9accb2eaa98796107f33",
+      "frozen_code.brain/market_temporal.py": "b1263d1925e21a35a5504088df33782db9a2b3c83d3f241530e748acebb96638",
+      "frozen_code.brain/mq3_2_causal_intervention.py": "007aa507ac22b07811bff5ae8102a0916c88549aa3011fa22fa57c70598c6a87",
+      "frozen_code.brain/mq5_ts_metrics.py": "902340008c70d382f02da488158ffa499e85cf184e74fda40f49400a0035fcfa",
+      "frozen_code.brain/mq5_ts_runtime.py": "b4792f626868742b0e6382d837c7676e103084171b5142aa52b211f5cc53e526",
+      "frozen_code.brain/mq5_ts_strict_shuffle.py": "15f4b2cef19a5bdbc5b0e5e7c6b0c1b5735da8bb3bafe2e3777603c3bf450b46",
+      "frozen_code.brain/mq5_ts_strict_shuffle_native.py": "81283fe0790e6f27ea6c879fc10a9dcb952b44f32fb2857cfef1a3f62dce2316",
+      "frozen_code.brain/mq5_ts_strict_shuffle_verify.py": "4ba7154447de204ea00af548aa46805f53b953057fbe4e5f134a2d59cd113460",
+      "frozen_code.brain/physiology_constrained_visual_transduction.py": "bf754a29155ade789349fbdfc3c579f1b2c8dbea3c63804f2cf3d858d0a2f605",
+      "frozen_code.brain/runtime.py": "c4494870235475ff59267107fa390c518d9261b3ab827dfea85fd73809185af7",
+      "frozen_code.brain/shuffled_connectome_v2.py": "6f9be084bb79276818d1c49fc926c64dd4c6261471b2ee8320c8a9cb3da699fe",
+      "frozen_code.brain/sq05_betrayal_i.py": "c62767cac434f380104c8da5cd9b73dcee89fefbeea0a0efe17ca9bd812c8664",
+      "frozen_code.brain/sq05_betrayal_ii.py": "46c164d8e2c4c87f3ed6da70bf40bafe20352ebe098c5803eece489209158460",
+      "frozen_code.brain/sq05_stimulus.py": "90bf95fc7bf1baab5f8a77ba4dce9182a5ad5909ca6a3ca37a0cf10c946f623a",
+      "frozen_code.brain/sq05_two_betrayals_runner.py": "06f640dd6c829d917bb537298f8e54048066455b92f6932dc09fe5abdef4867e",
+      "frozen_code.brain/sq07_the_maw_subset.py": "693ae8c2455361351802d0ac0c9cee4ada3bb8a25a60043264de5da14da00a5e",
+      "frozen_code.brain/sq08_three_body_episode.py": "489f3449c939ebe49aeef94775282bc5822f94f2f4fa577b8de1d20d22a60864",
+      "frozen_code.brain/sq08_three_body_plan.py": "8cd38b236050d7289924516788909179c716d00cf4c7552896e6a0e75b9a7563",
+      "frozen_code.brain/sq08_three_body_readout.py": "88bc82e29bcc4ffb1f9f3891bac17a293177017c47b4a73ec1210a5ad16189e9",
+      "frozen_code.brain/sq10_sophon_episode.py": "eed8bb610a24fc08aff17ef91a474b3019c27f5fbf9eca73136109864d70cace",
+      "frozen_code.brain/sq10_sophon_instrumentation.py": "60ec01ef4c3dc04d40de84e592edfbde019a0014fe86bb34d59c8ae18a5ee426",
+      "frozen_code.brain/sq10_sophon_plan.py": "10ddd51efb31c69a6f9897c2c0957ebf9dc041dfd3be8b863db6fe67a668479b",
+      "frozen_code.brain/sq11_dark_forest_episode.py": "afe26a930696df6230408320cae7fe908f605aac8984fa96fd4d765668a49dfc",
+      "frozen_code.brain/sq11_dark_forest_evidence.py": "a4320d8ae9455edef0ac806c1f31ed68b722ea0f0fa19a868022038c2a2ee17f",
+      "frozen_code.brain/sq11_dark_forest_independent_verify.py": "2188d3bc6086af523ee763cc5ccefcb6b66aca9180592126d0cd5fb71932b756",
+      "frozen_code.brain/sq11_dark_forest_instrumentation.py": "0051e2d240e6ca494b3bd766998ccb8374a0f678f8c723387e8891cec6aacc1f",
+      "frozen_code.brain/sq11_dark_forest_plan.py": "b4cdd9a9969f7ccc3b3f23e775264dd2348af7a87a69ad1e874e67d82ccebbb0",
+      "frozen_code.brain/sq11_dark_forest_publish.py": "72e21fec7d0f83ec9bfe20c96bfa8f26865264a1ba209343eceaf84fcdbb0990",
+      "frozen_code.brain/sq11_dark_forest_replay_qualification_v2.py": "88ae0c7ffae18ff1b1cbe57882ed6f1bb6c002b967af2129624d921da1899341",
+      "frozen_code.brain/sq11_dark_forest_replay_v2.py": "76245bfab248c0d4bf374da94ad79485f2e0e386d86707de9e52bad26ff772e5",
+      "frozen_code.brain/visual_transduction.py": "015cc699f49e16bb59f6e7e5f04f92cca7bfc1a3c7057e73fe54398c755831f6",
+      "frozen_contracts.evidence_schema_v2": "1c167ed7e0934316e4f4ed677769d115f0c55510036d5292dde82939ff7212e3",
+      "frozen_contracts.measurement_contract_v2": "952ad633e3f9fbd8ef8fab8982268698a3138254bcb013e4563610cf2afaec52",
+      "frozen_contracts.preregistration": "294026ce43c3fb6440a4cb348d4cea0da18a5ae263cfd345486401e2e2fa72ff",
+      "frozen_contracts.replay_qualification_contract_v2": "e9d89680cfdc80ee9fe27096b06d95d9be795604e59c78da55abbbaaee5c2a4b",
+      "frozen_contracts.replay_qualification_result_v2": "a2b4256529ef5c7002fc32e9cd4c877918d320fd736fa7961ba66f869d70e325",
+      "frozen_contracts.replay_qualification_seal_v2": "19529383757e243f9881140edca30b13aea10760b582dd2fb1cda09198f225ab"
+    },
+    "runtime_parameters": {
+      "dt_ms": 1.0,
+      "frame_count": 192,
+      "layout": "RL",
+      "release_gain": 0.9981738484618123,
+      "replay_absolute_tolerance": 0.0,
+      "replay_float_dtype": "float32",
+      "replay_relative_tolerance": 0.0,
+      "replay_version": 2,
+      "tau_ms": 20.0,
+      "threshold": 1.0
+    }
+  }
+}
