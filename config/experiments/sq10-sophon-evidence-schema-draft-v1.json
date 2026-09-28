@@ -1,0 +1,143 @@
+{
+  "schema_version": "moscaquant.sq10-sophon-evidence-schema.draft-v1",
+  "experiment_id": "SQ-10",
+  "codename": "SOPHON",
+  "status": "DRAFT_NOT_PREREGISTERED",
+  "neural_execution_authorized": false,
+
+  "dimensions": {
+    "condition_count": 8,
+    "replicates_per_condition": 2,
+    "frame_count": 192,
+    "body_pair_count": 3
+  },
+
+  "coordinates": {
+    "condition_masks": [
+      "000",
+      "001",
+      "010",
+      "011",
+      "100",
+      "101",
+      "110",
+      "111"
+    ],
+    "mask_semantics": "0=retained,1=zeroed",
+    "sources": [
+      65084,
+      128590,
+      135589
+    ],
+    "responders": [
+      137122,
+      317,
+      126002
+    ]
+  },
+
+  "arrays": {
+    "condition_mask": {
+      "shape": ["episode"],
+      "dtype": "str"
+    },
+    "condition_replicate": {
+      "shape": ["episode"],
+      "dtype": "int8"
+    },
+
+    "source_voltage_pre_step": {
+      "shape": ["episode", "frame", "body_pair"],
+      "dtype": "float32",
+      "phase": "P0"
+    },
+    "source_spikes_pre_step": {
+      "shape": ["episode", "frame", "body_pair"],
+      "dtype": "uint8",
+      "phase": "P0"
+    },
+    "source_effective_activity_pre_synaptic": {
+      "shape": ["episode", "frame", "body_pair"],
+      "dtype": "float32",
+      "phase": "P2"
+    },
+
+    "responder_voltage_pre_threshold": {
+      "shape": ["episode", "frame", "body_pair"],
+      "dtype": "float32",
+      "phase": "P5"
+    },
+    "responder_fired": {
+      "shape": ["episode", "frame", "body_pair"],
+      "dtype": "uint8",
+      "phase": "P6"
+    },
+    "responder_voltage_post_reset": {
+      "shape": ["episode", "frame", "body_pair"],
+      "dtype": "float32",
+      "phase": "P7"
+    },
+    "responder_spikes_post_commit": {
+      "shape": ["episode", "frame", "body_pair"],
+      "dtype": "uint8",
+      "phase": "P7"
+    }
+  },
+
+  "derivations": {
+    "direct_edge_contribution": {
+      "required": true,
+      "expression": "source_effective_activity_pre_synaptic * frozen_edge_weight",
+      "source_field": "source_effective_activity_pre_synaptic",
+      "edge_weight_source": "frozen BODY edge registry",
+      "result_shape": [
+        "episode",
+        "frame",
+        "body_pair"
+      ],
+      "result_dtype": "float64",
+      "notes": "Derive after promoting stored activity and frozen weight to float64."
+    }
+  },
+
+  "required_measurement_closure": {
+    "source_voltage_pre_step": {
+      "mode": "stored",
+      "field": "source_voltage_pre_step"
+    },
+    "source_spikes_pre_step": {
+      "mode": "stored",
+      "field": "source_spikes_pre_step"
+    },
+    "source_effective_activity_pre_synaptic": {
+      "mode": "stored",
+      "field": "source_effective_activity_pre_synaptic"
+    },
+    "responder_voltage_pre_threshold": {
+      "mode": "stored",
+      "field": "responder_voltage_pre_threshold"
+    },
+    "responder_fired": {
+      "mode": "stored",
+      "field": "responder_fired"
+    },
+    "responder_voltage_post_reset": {
+      "mode": "stored",
+      "field": "responder_voltage_post_reset"
+    },
+    "responder_spikes_post_commit": {
+      "mode": "stored",
+      "field": "responder_spikes_post_commit"
+    },
+    "direct_edge_contribution": {
+      "mode": "derived",
+      "derivation": "direct_edge_contribution"
+    }
+  },
+
+  "claim_boundary": [
+    "schema draft only",
+    "no neural execution authorized",
+    "no mechanistic result implied"
+  ]
+}
