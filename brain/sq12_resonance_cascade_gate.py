@@ -48,7 +48,7 @@ EXPECTED = {
         "8d53b0abc03f8453c9fe6c5d19ede9c37"
     ),
     "runtime": (
-        "bf754a29155ade789349fb5f3c579f1"
+        "bf754a29155ade789349fbdfc3c579f1"
         "b2c8dbea3c63804f2cf3d858d0a2f605"
     ),
     "graded": (
