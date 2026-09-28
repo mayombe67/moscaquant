@@ -1,0 +1,234 @@
+{
+  "analysis_boundary": {
+    "analysis_performed": false,
+    "classification_performed": false,
+    "post_result_tolerance_allowed": false,
+    "replay_tolerance": {
+      "absolute": 0.0,
+      "relative": 0.0
+    }
+  },
+  "codename": "DARK FOREST",
+  "coordinates": {
+    "body_flat_positions": [
+      1908,
+      3501,
+      4438
+    ],
+    "body_pair_count": 3,
+    "body_positions": [
+      1908,
+      671,
+      767
+    ],
+    "flat_entry_count": 4568,
+    "presynaptic_union_count": 4393,
+    "responder_indices": [
+      137122,
+      317,
+      126002
+    ],
+    "row_nnz": [
+      2830,
+      841,
+      897
+    ],
+    "row_offsets": [
+      0,
+      2830,
+      3671,
+      4568
+    ],
+    "source_indices": [
+      65084,
+      128590,
+      135589
+    ]
+  },
+  "dynamic_measurements": {
+    "local_effective_activity_pre_synaptic": {
+      "dtype": "float32",
+      "phase": "P2",
+      "semantics": "Effective activity for the complete frozen presynaptic union of the three BODY responder CSR rows.",
+      "shape": [
+        16,
+        192,
+        4393
+      ]
+    },
+    "responder_fired": {
+      "dtype": "uint8",
+      "phase": "P6",
+      "shape": [
+        16,
+        192,
+        3
+      ]
+    },
+    "responder_spikes_post_commit": {
+      "dtype": "uint8",
+      "phase": "P7",
+      "shape": [
+        16,
+        192,
+        3
+      ]
+    },
+    "responder_synaptic_p3": {
+      "dtype": "float32",
+      "phase": "P3",
+      "semantics": "Aggregate synaptic vector value captured in the frozen synaptic_modifier callback before retinal subtraction and voltage integration.",
+      "shape": [
+        16,
+        192,
+        3
+      ]
+    },
+    "responder_voltage_post_reset": {
+      "dtype": "float32",
+      "phase": "P7",
+      "shape": [
+        16,
+        192,
+        3
+      ]
+    },
+    "responder_voltage_pre_threshold": {
+      "dtype": "float32",
+      "phase": "P5",
+      "shape": [
+        16,
+        192,
+        3
+      ]
+    },
+    "source_effective_activity_pre_synaptic": {
+      "dtype": "float32",
+      "phase": "P2",
+      "shape": [
+        16,
+        192,
+        3
+      ]
+    },
+    "source_spikes_pre_step": {
+      "dtype": "uint8",
+      "phase": "P0",
+      "shape": [
+        16,
+        192,
+        3
+      ]
+    },
+    "source_voltage_pre_step": {
+      "dtype": "float32",
+      "phase": "P0",
+      "shape": [
+        16,
+        192,
+        3
+      ]
+    }
+  },
+  "execution": {
+    "frame_count": 192,
+    "layout": "RL",
+    "masks": [
+      "000",
+      "001",
+      "010",
+      "011",
+      "100",
+      "101",
+      "110",
+      "111"
+    ],
+    "neural_execution_authorized_here": false,
+    "replicates": [
+      1,
+      2
+    ],
+    "work_unit_count": 16
+  },
+  "experiment": "SQ-11",
+  "integrity_requirements": [
+    "All eight masks must occur exactly twice in canonical mask-major replicate order.",
+    "r1 and r2 must be exactly equal on every dynamic measurement declared deterministic.",
+    "condition_edge_zeroed must exactly equal the three mask bits.",
+    "row_indices[body_flat_positions] must equal source_indices.",
+    "row_weights[body_flat_positions] must exactly equal body_edge_weight.",
+    "presynaptic_union_indices[row_union_positions] must exactly equal row_indices.",
+    "row geometry must match the qualified 2830/841/897 CSR rows.",
+    "No analysis-derived quantities are stored as primary evidence."
+  ],
+  "provenance": {
+    "preregistration_commit": "f8efca347e4165f123f0de43019eca7d26b05dc4",
+    "qualification_result": {
+      "path": "artifacts/experiments/sq11-dark-forest/sq11-dark-forest-replay-qualification-v1.json",
+      "sha256": "84377ef502e7f8e86c6dacb7a476ee06df784a9869383df4ba734de56d9f5231"
+    },
+    "qualification_seal": {
+      "path": "config/controls/sq11-dark-forest-replay-qualification-seal-v1.json",
+      "sha256": "24c790f142c8829840aa6e6938c306326363a1d2a2005817522b93dd0ac9d8f7"
+    },
+    "qualified_instrument_commit": "fef20822d5b9c1c57df581fe5e282c967f17430f"
+  },
+  "schema_version": "moscaquant.sq11-dark-forest-measurement-contract/v1",
+  "static_replay_measurements": {
+    "body_edge_weight": {
+      "dtype": "float32",
+      "semantics": "BODY weight recovered from row_weights at body_flat_positions.",
+      "shape": [
+        3
+      ]
+    },
+    "body_flat_positions": {
+      "dtype": "int64",
+      "shape": [
+        3
+      ]
+    },
+    "body_positions": {
+      "dtype": "int64",
+      "shape": [
+        3
+      ]
+    },
+    "presynaptic_union_indices": {
+      "dtype": "int64",
+      "semantics": "Sorted unique presynaptic coordinates used by local P2 storage.",
+      "shape": [
+        4393
+      ]
+    },
+    "row_indices": {
+      "dtype": "int64",
+      "semantics": "Original CSR column indices in original accumulation order.",
+      "shape": [
+        4568
+      ]
+    },
+    "row_offsets": {
+      "dtype": "int64",
+      "semantics": "CSR-style boundaries for the three flattened responder rows.",
+      "shape": [
+        4
+      ]
+    },
+    "row_union_positions": {
+      "dtype": "int64",
+      "semantics": "Mapping from each flat CSR entry to its stored presynaptic-union coordinate.",
+      "shape": [
+        4568
+      ]
+    },
+    "row_weights": {
+      "dtype": "float32",
+      "semantics": "Original CSR float32 data in original accumulation order.",
+      "shape": [
+        4568
+      ]
+    }
+  },
+  "status": "FROZEN_PRE_EXECUTION"
+}

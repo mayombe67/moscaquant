@@ -1,0 +1,223 @@
+{
+  "arrays": {
+    "body_edge_weight": {
+      "dtype": "float32",
+      "shape": [
+        3
+      ]
+    },
+    "body_flat_positions": {
+      "dtype": "int64",
+      "shape": [
+        3
+      ]
+    },
+    "body_positions": {
+      "dtype": "int64",
+      "shape": [
+        3
+      ]
+    },
+    "condition_edge_zeroed": {
+      "dtype": "uint8",
+      "shape": [
+        16,
+        3
+      ]
+    },
+    "condition_id": {
+      "dtype": "<U11",
+      "shape": [
+        16
+      ]
+    },
+    "condition_mask": {
+      "dtype": "<U3",
+      "shape": [
+        16
+      ]
+    },
+    "condition_ordinal": {
+      "dtype": "int32",
+      "shape": [
+        16
+      ]
+    },
+    "condition_replicate": {
+      "dtype": "int8",
+      "shape": [
+        16
+      ]
+    },
+    "local_effective_activity_pre_synaptic": {
+      "dtype": "float32",
+      "shape": [
+        16,
+        192,
+        4393
+      ]
+    },
+    "presynaptic_union_indices": {
+      "dtype": "int64",
+      "shape": [
+        4393
+      ]
+    },
+    "responder_fired": {
+      "dtype": "uint8",
+      "shape": [
+        16,
+        192,
+        3
+      ]
+    },
+    "responder_indices": {
+      "dtype": "int64",
+      "shape": [
+        3
+      ]
+    },
+    "responder_spikes_post_commit": {
+      "dtype": "uint8",
+      "shape": [
+        16,
+        192,
+        3
+      ]
+    },
+    "responder_synaptic_p3": {
+      "dtype": "float32",
+      "shape": [
+        16,
+        192,
+        3
+      ]
+    },
+    "responder_voltage_post_reset": {
+      "dtype": "float32",
+      "shape": [
+        16,
+        192,
+        3
+      ]
+    },
+    "responder_voltage_pre_threshold": {
+      "dtype": "float32",
+      "shape": [
+        16,
+        192,
+        3
+      ]
+    },
+    "row_indices": {
+      "dtype": "int64",
+      "shape": [
+        4568
+      ]
+    },
+    "row_offsets": {
+      "dtype": "int64",
+      "shape": [
+        4
+      ]
+    },
+    "row_union_positions": {
+      "dtype": "int64",
+      "shape": [
+        4568
+      ]
+    },
+    "row_weights": {
+      "dtype": "float32",
+      "shape": [
+        4568
+      ]
+    },
+    "source_effective_activity_pre_synaptic": {
+      "dtype": "float32",
+      "shape": [
+        16,
+        192,
+        3
+      ]
+    },
+    "source_indices": {
+      "dtype": "int64",
+      "shape": [
+        3
+      ]
+    },
+    "source_spikes_pre_step": {
+      "dtype": "uint8",
+      "shape": [
+        16,
+        192,
+        3
+      ]
+    },
+    "source_voltage_pre_step": {
+      "dtype": "float32",
+      "shape": [
+        16,
+        192,
+        3
+      ]
+    }
+  },
+  "canonical_condition_order": [
+    "sq11:000:r1",
+    "sq11:000:r2",
+    "sq11:001:r1",
+    "sq11:001:r2",
+    "sq11:010:r1",
+    "sq11:010:r2",
+    "sq11:011:r1",
+    "sq11:011:r2",
+    "sq11:100:r1",
+    "sq11:100:r2",
+    "sq11:101:r1",
+    "sq11:101:r2",
+    "sq11:110:r1",
+    "sq11:110:r2",
+    "sq11:111:r1",
+    "sq11:111:r2"
+  ],
+  "codename": "DARK FOREST",
+  "experiment": "SQ-11",
+  "npz": {
+    "body_pair_count": 3,
+    "episode_count": 16,
+    "flat_entry_count": 4568,
+    "frame_count": 192,
+    "presynaptic_union_count": 4393
+  },
+  "provenance": {
+    "preregistration_commit": "f8efca347e4165f123f0de43019eca7d26b05dc4",
+    "qualification_result": {
+      "path": "artifacts/experiments/sq11-dark-forest/sq11-dark-forest-replay-qualification-v1.json",
+      "sha256": "84377ef502e7f8e86c6dacb7a476ee06df784a9869383df4ba734de56d9f5231"
+    },
+    "qualification_seal": {
+      "path": "config/controls/sq11-dark-forest-replay-qualification-seal-v1.json",
+      "sha256": "24c790f142c8829840aa6e6938c306326363a1d2a2005817522b93dd0ac9d8f7"
+    },
+    "qualified_instrument_commit": "fef20822d5b9c1c57df581fe5e282c967f17430f"
+  },
+  "schema_version": "moscaquant.sq11-dark-forest-evidence-schema/v1",
+  "status": "FROZEN_PRE_EXECUTION",
+  "verification_requirements": {
+    "binary_uint8_fields": true,
+    "body_edge_location": true,
+    "canonical_condition_order": true,
+    "exact_body_coordinates": true,
+    "exact_dtypes": true,
+    "exact_duplicate_pairs": true,
+    "exact_key_set": true,
+    "exact_lesion_masks": true,
+    "exact_row_geometry": true,
+    "exact_shapes": true,
+    "finite_float_arrays": true,
+    "replay_qualification_required": true,
+    "row_union_round_trip": true
+  }
+}
