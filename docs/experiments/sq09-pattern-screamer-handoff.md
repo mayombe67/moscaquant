@@ -1,4 +1,4 @@
-# SQ-09 — THREE'S COMPANY
+# SQ-09 — PATTERN SCREAMER
 
 ## Status
 
@@ -56,8 +56,33 @@ prospectively frozen.
 
 ## Codename
 
-THREE'S COMPANY
+PATTERN SCREAMER
 
 Science first.
 
-Sitcom second.
+Containment second.
+
+## SQ-08 source-side limitation
+
+A post-result contract audit established that SQ-08 did not preserve the
+preregistered source-side state of BODY A, BODY B, and BODY C.
+
+All three BODY sources are frozen Tm4 graded neurons:
+
+- 65084
+- 128590
+- 135589
+
+They are absent from the frozen DN consensus and are not represented by a
+dedicated field in the SQ-08 evidence schema.
+
+PATTERN SCREAMER must therefore distinguish:
+
+- analyses possible from already-preserved SQ-08 evidence; and
+- questions requiring new prospective measurement.
+
+Existing SQ-08 evidence may not be regenerated and described as original
+SQ-08 evidence.
+
+Any direct source-side dynamical test requires a new frozen measurement
+contract before execution.

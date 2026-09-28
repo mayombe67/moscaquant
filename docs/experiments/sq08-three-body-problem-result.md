@@ -2,7 +2,7 @@
 
 ## Status
 
-COMPLETE — AUTHORITATIVE RESULT
+AUTHORITATIVE PRIMARY RESULT — PROTOCOL DEVIATION DOCUMENTED
 
 SQ-08 completed its frozen eight-condition Boolean cube under the authorized
 AWS Batch execution.
@@ -460,7 +460,7 @@ interaction to reproduce the frozen SQ-08 response.
 
 The explanation lies in lower-order structure.
 
-SQ-08 — THREE BODY PROBLEM is complete.
+The SQ-08 primary factorial result is complete and authoritative. The preregistered mechanistic readout set was incomplete because BODY-source state was not preserved; see `sq08-source-side-readout-deviation.md`.
 
 Science first.
 
