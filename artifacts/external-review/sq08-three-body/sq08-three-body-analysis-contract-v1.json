@@ -1,0 +1,134 @@
+{
+  "claim_boundaries": [
+    "no consciousness claim",
+    "no intention claim",
+    "no perception claim",
+    "no behavioral claim",
+    "no organism-level control claim",
+    "no biological necessity or sufficiency claim",
+    "no market prediction claim",
+    "no post-result threshold invention"
+  ],
+  "codename": "THREE BODY PROBLEM",
+  "declared_readouts": {
+    "body_responder_voltage": {
+      "role": "mechanistic trajectory",
+      "shape_per_condition": [
+        192,
+        3
+      ]
+    },
+    "frontier_voltage": {
+      "role": "primary structural convergence trajectory",
+      "shape_per_condition": [
+        192,
+        18
+      ]
+    },
+    "primary_positive_voltage": {
+      "role": "primary frozen endpoint representation",
+      "shape_per_condition": [
+        192,
+        1191
+      ]
+    }
+  },
+  "exactness": {
+    "comparison": "Y111 versus pairwise-complete reconstruction",
+    "max_abs_difference_max": 1e-12,
+    "symmetric_normalized_l2_max": 1e-09,
+    "three_way_classification": {
+      "THREE_WAY_EXACT_ZERO": "both exactness criteria pass",
+      "THREE_WAY_NONZERO": "one or both exactness criteria fail"
+    }
+  },
+  "experiment": "SQ-08",
+  "factorial_terms": {
+    "I_AB": "Y110 - Y100 - Y010 + Y000",
+    "I_ABC": "Y111 - Y110 - Y101 - Y011 + Y100 + Y010 + Y001 - Y000",
+    "I_AC": "Y101 - Y100 - Y001 + Y000",
+    "I_BC": "Y011 - Y010 - Y001 + Y000",
+    "M_A": "Y100 - Y000",
+    "M_B": "Y010 - Y000",
+    "M_C": "Y001 - Y000"
+  },
+  "frontier_temporal_analysis": {
+    "first_nonzero_frame": {
+      "allowed_only_if_three_way_term_is_not_exact_zero": true,
+      "selection_rule": "earliest frame at which the node-wise I_ABC value is nonzero under exact stored numeric representation"
+    },
+    "no_post_result_effect_threshold": true,
+    "node_count": 18,
+    "node_selection_after_results_forbidden": true,
+    "report_each_node": true
+  },
+  "mask_semantics": {
+    "0": "frozen BODY edge retained",
+    "1": "frozen BODY edge zeroed",
+    "bit_order": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  "mechanism_classification": {
+    "UNRESOLVED_is_valid": true,
+    "allowed_labels": [
+      "SERIAL_COMPATIBLE",
+      "PARALLEL_CONVERGENCE_COMPATIBLE",
+      "JOINT_THRESHOLD_COMPATIBLE",
+      "INTERACTION_DEPENDENT",
+      "UNRESOLVED"
+    ],
+    "evidence_hierarchy": [
+      "factorial structure",
+      "path localization",
+      "topology compatibility",
+      "endpoint relation"
+    ]
+  },
+  "pairwise_complete_reconstruction": {
+    "expression": "Y000 + M_A + M_B + M_C + I_AB + I_AC + I_BC",
+    "identity": "Y111 - Y111_pairwise = I_ABC"
+  },
+  "replicate_policy": {
+    "analyze_one_canonical_copy_after_duplicate_validation": true,
+    "must_be_bit_exact_before_analysis": true,
+    "replicates": [
+      1,
+      2
+    ]
+  },
+  "required_masks": [
+    "000",
+    "001",
+    "010",
+    "011",
+    "100",
+    "101",
+    "110",
+    "111"
+  ],
+  "schema_version": "moscaquant.sq08-three-body-analysis-contract/v1",
+  "spike_readouts": {
+    "body_responder_spikes": {
+      "shape_per_condition": [
+        192,
+        3
+      ]
+    },
+    "frontier_spikes": {
+      "shape_per_condition": [
+        192,
+        18
+      ]
+    },
+    "interpretation": "reported alongside post-reset voltage; spike absence and unavailable evidence must never be conflated",
+    "primary_spikes": {
+      "shape_per_condition": [
+        192,
+        1191
+      ]
+    }
+  }
+}
