@@ -1,0 +1,67 @@
+{
+  "schema_version": "moscaquant.sq11-dark-forest-replay-qualification/v1",
+  "experiment": "SQ-11",
+  "codename": "DARK FOREST",
+  "status": "FROZEN_PRE_QUALIFICATION",
+  "purpose": "Prospectively qualify the standalone explicit float32 CSR-row replay against SciPy CSR matvec before SQ-11 neural execution.",
+  "neural_evidence_allowed": false,
+  "target": {
+    "connectome_path": "/home/wil/moscaquant-data/processed/connectome-baseline-v1.npz",
+    "connectome_sha256": "e00e3f2a9828c921fe1f093cc567bf45a85adad0526176be0aa1b8be09336eeb",
+    "sources": [
+      65084,
+      128590,
+      135589
+    ],
+    "responders": [
+      137122,
+      317,
+      126002
+    ],
+    "expected_row_nnz": [
+      2830,
+      841,
+      897
+    ],
+    "expected_body_positions": [
+      1908,
+      671,
+      767
+    ]
+  },
+  "qualification": {
+    "case_count": 96,
+    "row_count": 3,
+    "row_case_comparisons": 288,
+    "reference_operation": "SciPy CSR selected responder rows @ synthetic full-population float32 activity",
+    "candidate_operation": "explicit float32 multiply then explicit float32 accumulation in original CSR row order",
+    "equality_rule": "exact float32 equality",
+    "required_mismatch_count": 0,
+    "relative_tolerance": 0.0,
+    "absolute_tolerance": 0.0
+  },
+  "activity_bank": {
+    "cases_0_to_7": [
+      "all zero",
+      "all one",
+      "ascending float32 ramp [0,1]",
+      "descending float32 ramp [1,0]",
+      "alternating 0/1",
+      "all 2^-20",
+      "index modulo 17 equals zero",
+      "BODY sources only equal one"
+    ],
+    "cases_8_to_95": {
+      "generator": "uint32 LCG-derived deterministic mantissa values",
+      "range": "[0,1)",
+      "scales_cycle": [
+        1.0,
+        0.5,
+        0.00390625,
+        0.0000152587890625
+      ]
+    }
+  },
+  "failure_rule": "Any single float32 mismatch fails qualification. No tolerance may be introduced after qualification.",
+  "execution_gate": "SQ-11 neural execution is forbidden unless this qualification passes and the resulting artifact is sealed."
+}
