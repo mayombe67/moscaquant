@@ -874,6 +874,22 @@ The unique RL inclusion-minimal FULL13 recapitulator was
 `0000000000111`, Hamming weight `3`: exactly the frozen three-edge RL active
 group. No strict RL submask reached FULL13.
 
+Later SQ-08 / SQ-09 decomposition resolved what this minimality means. The
+three preserved BODY main effects are additive, confined to distinct inherited
+responders, and have literal-zero pairwise and three-way interaction terms.
+
+A retrospective classifier audit showed that all seven strict RL submasks fail
+SQ-07's frozen max-absolute `EXACT_FULL13` gate. Even the smallest omitted main
+effect exceeds that tolerance by approximately `293,749x`.
+
+The three-edge requirement therefore does not require a cooperative
+three-edge mechanism.
+
+`BOOKKEEPING_NOT_TEAMWORK`
+
+Classifier-closure SHA-256:
+`e8cd6e3aea9d2f5b81cf16d91ce4317a5da350f0c05010c92f4d9b1dc194358c`.
+
 The complete class counts were:
 
 - LR — `8` EXACT_INTACT, `16` EXACT_FULL13, `8,168` INTERMEDIATE.

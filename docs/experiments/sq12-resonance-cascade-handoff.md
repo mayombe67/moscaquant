@@ -55,7 +55,22 @@ recapitulation endpoint.
 
 SQ-08 THREE BODY PROBLEM tested interaction among the three-edge RL core.
 
-SQ-09 PATTERN SCREAMER localized the first responder effects.
+SQ-09 PATTERN SCREAMER showed that the preserved main effects were confined
+to the inherited BODY responder identities and that pairwise and three-way
+factorial interaction terms were literal zero.
+
+A subsequent retrospective classifier-closure audit showed that SQ-07's
+three-edge RL minimality requires no interaction term: all seven strict RL
+submasks are excluded by the frozen `EXACT_FULL13` max-absolute gate because
+each omits at least one nonzero local contribution.
+
+Canonical short form:
+
+`BOOKKEEPING_NOT_TEAMWORK`
+
+Classifier-closure SHA-256:
+
+`e8cd6e3aea9d2f5b81cf16d91ce4317a5da350f0c05010c92f4d9b1dc194358c`
 
 SQ-10 SOPHON showed that those effects were below its prospective numerical
 resolution.

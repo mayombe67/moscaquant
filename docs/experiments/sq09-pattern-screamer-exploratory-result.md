@@ -145,7 +145,19 @@ Lower-order presence audit SHA-256:
 
 ## Support localization
 
-Within the preserved 1,191-neuron primary DN field:
+The immediate responder identities were not discovered by PATTERN SCREAMER.
+
+They were inherited from the already-frozen SQ-06 / SQ-07 edge registry:
+
+- BODY A -> 137122
+- BODY B -> 317
+- BODY C -> 126002
+
+The new retrospective observation is support confinement: within the preserved
+1,191-neuron primary DN field, each main effect remained confined to its
+inherited immediate responder.
+
+Specifically:
 
 - `M_A` changes exactly one DN: 137122
 - `M_B` changes exactly one DN: 317
@@ -190,6 +202,49 @@ unmeasured state variables.
 
 ## Relation to SQ-07
 
+SQ-07 classified a candidate fingerprint against the frozen INTACT and FULL13
+references using two simultaneous numerical gates:
+
+- symmetric normalized L2 <= `1e-9`;
+- maximum absolute difference <= `1e-12`.
+
+A retrospective closed-form audit now resolves why all three RL BODY edges were
+required for `EXACT_FULL13`.
+
+Because the preserved SQ-09 decomposition has:
+
+- nonzero `M_A`, `M_B`, and `M_C`;
+- literal-zero `I_AB`, `I_AC`, `I_BC`, and `I_ABC`;
+- disjoint primary support for the three main effects;
+
+any strict submask of `111` necessarily omits at least one nonzero local
+contribution.
+
+The smallest of the three main effects is BODY C, with maximum absolute
+amplitude:
+
+`2.9374905352597125e-07`
+
+That is:
+
+`293749.05352597125 x`
+
+the frozen SQ-07 maximum-absolute tolerance of `1e-12`.
+
+Therefore all seven strict RL submasks are excluded from `EXACT_FULL13` by the
+max-absolute gate alone.
+
+No interaction term is required to explain the three-edge inclusion-minimal
+result.
+
+Retrospective classifier-closure SHA-256:
+
+`e8cd6e3aea9d2f5b81cf16d91ce4317a5da350f0c05010c92f4d9b1dc194358c`
+
+Canonical short form:
+
+`BOOKKEEPING_NOT_TEAMWORK`
+
 SQ-07 classified a candidate fingerprint by exact comparison against the
 frozen INTACT and FULL13 references.
 
@@ -218,28 +273,42 @@ inactive group.
 
 ## Exploratory interpretation
 
-The combined SQ-07 / SQ-08 / SQ-09 evidence is consistent with a simple
-explanation for the apparent three-edge requirement:
+The combined SQ-07 / SQ-08 / SQ-09 evidence supports a simpler explanation for
+the apparent three-edge requirement.
 
-the three RL edges produce three independent local corrections.
+The identities of the three immediate responders were inherited from the
+frozen edge registry. PATTERN SCREAMER did not independently discover those
+edge-to-responder assignments.
 
-No pairwise cooperation is required.
+What the preserved evidence newly shows is that:
 
-No irreducible three-way cooperation is required.
+- each main effect is confined to its inherited responder in the primary DN
+  field;
+- the three preserved main effects combine additively;
+- all pairwise interaction terms are literal zero;
+- the three-way interaction term is literal zero.
 
-Under an exact-reproduction endpoint, all three independent discrepancies must
-be corrected before the candidate fingerprint can equal the FULL13 reference.
+The retrospective classifier-closure audit further shows that every strict RL
+submask necessarily fails SQ-07's frozen `EXACT_FULL13` max-absolute gate.
 
-Thus the statement:
+Therefore:
 
 "all three edges are required"
 
 does not imply:
 
-"all three edges interact."
+"all three edges cooperate."
 
-It is consistent instead with three independent contributions evaluated by an
-exact-match classifier.
+The three-edge minimality is completely explained by an exact-reproduction
+classifier requiring three separately nonzero, additive local contributions to
+all be present.
+
+No pairwise or irreducible three-way interaction is required to explain the
+SQ-07 RL result.
+
+Canonical short form:
+
+`BOOKKEEPING_NOT_TEAMWORK`
 
 ## Claim boundary
 
@@ -298,18 +367,24 @@ but omitted from the frozen evidence schema.
 
 ## Canonical summary
 
-Three edges.
+Three edges with inherited responder identities.
 
-Three independent local effects.
+Three nonzero local effects confined to those responders.
 
 Zero pairwise interaction.
 
 Zero three-way interaction.
 
-An exact endpoint requires all three corrections.
+Seven strict RL submasks excluded from `EXACT_FULL13`.
+
+The weakest omitted contribution still exceeds the frozen max-absolute
+classifier tolerance by approximately `293,749x`.
+
+The apparent three-edge dependency is bookkeeping, not teamwork.
 
 PATTERN SCREAMER converts the apparent three-body mystery into an additive
-three-component computational result.
+three-component computational result without promoting inherited responder
+identity into a new discovery.
 
 Science first.
 
