@@ -17,8 +17,20 @@
         "body_pair"
       ]
     },
+    "condition_id": {
+      "dtype": "str",
+      "shape": [
+        "episode"
+      ]
+    },
     "condition_mask": {
       "dtype": "str",
+      "shape": [
+        "episode"
+      ]
+    },
+    "condition_ordinal": {
+      "dtype": "int32",
       "shape": [
         "episode"
       ]
@@ -35,6 +47,12 @@
       "shape": [
         "episode",
         "frame",
+        "body_pair"
+      ]
+    },
+    "responder_indices": {
+      "dtype": "int64",
+      "shape": [
         "body_pair"
       ]
     },
@@ -71,6 +89,12 @@
       "shape": [
         "episode",
         "frame",
+        "body_pair"
+      ]
+    },
+    "source_indices": {
+      "dtype": "int64",
+      "shape": [
         "body_pair"
       ]
     },
