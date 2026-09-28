@@ -30,3 +30,6 @@ runs/
 .idea/
 .DS_Store
 artifacts/sidequests/sq03b-checkpoints-v1/
+
+# SQ-08 external-review authoritative evidence
+!artifacts/external-review/sq08-three-body/sq08-three-body-evidence-v1.npz
