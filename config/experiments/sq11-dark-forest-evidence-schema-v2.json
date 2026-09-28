@@ -1,0 +1,261 @@
+{
+  "arrays": {
+    "body_edge_weight": {
+      "dtype": "float32",
+      "shape": [
+        3
+      ]
+    },
+    "body_flat_positions": {
+      "dtype": "int64",
+      "shape": [
+        3
+      ]
+    },
+    "body_positions": {
+      "dtype": "int64",
+      "shape": [
+        3
+      ]
+    },
+    "condition_edge_zeroed": {
+      "dtype": "uint8",
+      "semantics": "Per-episode BODY lesion bits. 0 retains the corresponding CSR entry; 1 structurally omits that entry from replay.",
+      "shape": [
+        16,
+        3
+      ]
+    },
+    "condition_id": {
+      "dtype": "<U11",
+      "shape": [
+        16
+      ]
+    },
+    "condition_mask": {
+      "dtype": "<U3",
+      "shape": [
+        16
+      ]
+    },
+    "condition_ordinal": {
+      "dtype": "int32",
+      "shape": [
+        16
+      ]
+    },
+    "condition_replicate": {
+      "dtype": "int8",
+      "shape": [
+        16
+      ]
+    },
+    "local_effective_activity_pre_synaptic": {
+      "dtype": "float32",
+      "shape": [
+        16,
+        192,
+        4393
+      ]
+    },
+    "presynaptic_union_indices": {
+      "dtype": "int64",
+      "shape": [
+        4393
+      ]
+    },
+    "responder_fired": {
+      "dtype": "uint8",
+      "shape": [
+        16,
+        192,
+        3
+      ]
+    },
+    "responder_indices": {
+      "dtype": "int64",
+      "shape": [
+        3
+      ]
+    },
+    "responder_spikes_post_commit": {
+      "dtype": "uint8",
+      "shape": [
+        16,
+        192,
+        3
+      ]
+    },
+    "responder_synaptic_p3": {
+      "dtype": "float32",
+      "shape": [
+        16,
+        192,
+        3
+      ]
+    },
+    "responder_voltage_post_reset": {
+      "dtype": "float32",
+      "shape": [
+        16,
+        192,
+        3
+      ]
+    },
+    "responder_voltage_pre_threshold": {
+      "dtype": "float32",
+      "shape": [
+        16,
+        192,
+        3
+      ]
+    },
+    "row_indices": {
+      "dtype": "int64",
+      "shape": [
+        4568
+      ]
+    },
+    "row_offsets": {
+      "dtype": "int64",
+      "shape": [
+        4
+      ]
+    },
+    "row_union_positions": {
+      "dtype": "int64",
+      "shape": [
+        4568
+      ]
+    },
+    "row_weights": {
+      "dtype": "float32",
+      "shape": [
+        4568
+      ]
+    },
+    "source_effective_activity_pre_synaptic": {
+      "dtype": "float32",
+      "shape": [
+        16,
+        192,
+        3
+      ]
+    },
+    "source_indices": {
+      "dtype": "int64",
+      "shape": [
+        3
+      ]
+    },
+    "source_spikes_pre_step": {
+      "dtype": "uint8",
+      "shape": [
+        16,
+        192,
+        3
+      ]
+    },
+    "source_voltage_pre_step": {
+      "dtype": "float32",
+      "shape": [
+        16,
+        192,
+        3
+      ]
+    }
+  },
+  "canonical_condition_order": [
+    "sq11:000:r1",
+    "sq11:000:r2",
+    "sq11:001:r1",
+    "sq11:001:r2",
+    "sq11:010:r1",
+    "sq11:010:r2",
+    "sq11:011:r1",
+    "sq11:011:r2",
+    "sq11:100:r1",
+    "sq11:100:r2",
+    "sq11:101:r1",
+    "sq11:101:r2",
+    "sq11:110:r1",
+    "sq11:110:r2",
+    "sq11:111:r1",
+    "sq11:111:r2"
+  ],
+  "codename": "DARK FOREST",
+  "experiment": "SQ-11",
+  "npz": {
+    "body_pair_count": 3,
+    "episode_count": 16,
+    "flat_entry_count": 4568,
+    "frame_count": 192,
+    "presynaptic_union_count": 4393
+  },
+  "provenance": {
+    "binding_commit": "b74cb77da016cf47ac6698116534716907f8a8b6",
+    "execution_authoritative_replay": {
+      "absolute_tolerance": 0.0,
+      "criterion": "exact float32 equality",
+      "lesioned_entry_semantics": "structurally skipped",
+      "protocol_git_commit": "9b3281ea3225b5a37f26739012fec91caabdb164",
+      "qualification_comparisons": 2304,
+      "qualification_mismatches": 0,
+      "qualification_path": "brain/sq11_dark_forest_replay_qualification_v2.py",
+      "qualification_result": {
+        "path": "artifacts/experiments/sq11-dark-forest/sq11-dark-forest-replay-qualification-v2.json",
+        "sha256": "a2b4256529ef5c7002fc32e9cd4c877918d320fd736fa7961ba66f869d70e325"
+      },
+      "qualification_seal": {
+        "path": "config/controls/sq11-dark-forest-replay-qualification-seal-v2.json",
+        "sha256": "19529383757e243f9881140edca30b13aea10760b582dd2fb1cda09198f225ab"
+      },
+      "qualification_sha256": "88ae0c7ffae18ff1b1cbe57882ed6f1bb6c002b967af2129624d921da1899341",
+      "relative_tolerance": 0.0,
+      "replay_path": "brain/sq11_dark_forest_replay_v2.py",
+      "replay_sha256": "76245bfab248c0d4bf374da94ad79485f2e0e386d86707de9e52bad26ff772e5",
+      "version": 2
+    },
+    "historical_v1_evidence_schema": {
+      "path": "config/experiments/sq11-dark-forest-evidence-schema-v1.json",
+      "sha256": "a4f32ddb1ff0bb74bb43a94b3b31e10fa51c3463a660e8084fe12b3dc50784ae"
+    },
+    "historical_v1_measurement_contract": {
+      "path": "config/experiments/sq11-dark-forest-measurement-contract-v1.json",
+      "sha256": "f0677282fbf32161a1f5c543a4cffe0ea929c458e06c8721177508973c6d5cc7"
+    },
+    "preregistration_commit": "f8efca347e4165f123f0de43019eca7d26b05dc4"
+  },
+  "replay_semantics": {
+    "absolute_tolerance": 0.0,
+    "authoritative_version": 2,
+    "condition_edge_zeroed_0": "BODY CSR entry retained",
+    "condition_edge_zeroed_1": "BODY CSR entry structurally omitted",
+    "equality_rule": "exact float32 equality",
+    "lesioned_body_entry_operation": "skip",
+    "relative_tolerance": 0.0,
+    "zero_multiplication_equivalent": false
+  },
+  "schema_version": "moscaquant.sq11-dark-forest-evidence-schema/v2",
+  "status": "FROZEN_PRE_EXECUTION",
+  "supersedes_for_execution": "moscaquant.sq11-dark-forest-evidence-schema/v1",
+  "verification_requirements": {
+    "binary_uint8_fields": true,
+    "body_edge_location": true,
+    "canonical_condition_order": true,
+    "exact_body_coordinates": true,
+    "exact_dtypes": true,
+    "exact_duplicate_pairs": true,
+    "exact_key_set": true,
+    "exact_lesion_masks": true,
+    "exact_row_geometry": true,
+    "exact_runtime_p3_replay": true,
+    "exact_shapes": true,
+    "execution_authoritative_replay_v2": true,
+    "finite_float_arrays": true,
+    "replay_qualification_required": true,
+    "row_union_round_trip": true,
+    "structural_lesion_semantics": true,
+    "zero_multiplication_forbidden": true
+  }
+}
