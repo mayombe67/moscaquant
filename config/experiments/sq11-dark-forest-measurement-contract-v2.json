@@ -1,0 +1,276 @@
+{
+  "analysis_boundary": {
+    "analysis_performed": false,
+    "classification_performed": false,
+    "execution_authoritative_replay_version": 2,
+    "lesioned_entry_semantics": "structurally skipped",
+    "post_result_tolerance_allowed": false,
+    "replay_tolerance": {
+      "absolute": 0.0,
+      "relative": 0.0
+    }
+  },
+  "codename": "DARK FOREST",
+  "coordinates": {
+    "body_flat_positions": [
+      1908,
+      3501,
+      4438
+    ],
+    "body_pair_count": 3,
+    "body_positions": [
+      1908,
+      671,
+      767
+    ],
+    "flat_entry_count": 4568,
+    "presynaptic_union_count": 4393,
+    "responder_indices": [
+      137122,
+      317,
+      126002
+    ],
+    "row_nnz": [
+      2830,
+      841,
+      897
+    ],
+    "row_offsets": [
+      0,
+      2830,
+      3671,
+      4568
+    ],
+    "source_indices": [
+      65084,
+      128590,
+      135589
+    ]
+  },
+  "dynamic_measurements": {
+    "local_effective_activity_pre_synaptic": {
+      "dtype": "float32",
+      "phase": "P2",
+      "semantics": "Effective activity for the complete frozen presynaptic union of the three BODY responder CSR rows.",
+      "shape": [
+        16,
+        192,
+        4393
+      ]
+    },
+    "responder_fired": {
+      "dtype": "uint8",
+      "phase": "P6",
+      "shape": [
+        16,
+        192,
+        3
+      ]
+    },
+    "responder_spikes_post_commit": {
+      "dtype": "uint8",
+      "phase": "P7",
+      "shape": [
+        16,
+        192,
+        3
+      ]
+    },
+    "responder_synaptic_p3": {
+      "dtype": "float32",
+      "phase": "P3",
+      "semantics": "Aggregate synaptic vector value captured in the frozen synaptic_modifier callback before retinal subtraction and voltage integration.",
+      "shape": [
+        16,
+        192,
+        3
+      ]
+    },
+    "responder_voltage_post_reset": {
+      "dtype": "float32",
+      "phase": "P7",
+      "shape": [
+        16,
+        192,
+        3
+      ]
+    },
+    "responder_voltage_pre_threshold": {
+      "dtype": "float32",
+      "phase": "P5",
+      "shape": [
+        16,
+        192,
+        3
+      ]
+    },
+    "source_effective_activity_pre_synaptic": {
+      "dtype": "float32",
+      "phase": "P2",
+      "shape": [
+        16,
+        192,
+        3
+      ]
+    },
+    "source_spikes_pre_step": {
+      "dtype": "uint8",
+      "phase": "P0",
+      "shape": [
+        16,
+        192,
+        3
+      ]
+    },
+    "source_voltage_pre_step": {
+      "dtype": "float32",
+      "phase": "P0",
+      "shape": [
+        16,
+        192,
+        3
+      ]
+    }
+  },
+  "execution": {
+    "frame_count": 192,
+    "layout": "RL",
+    "masks": [
+      "000",
+      "001",
+      "010",
+      "011",
+      "100",
+      "101",
+      "110",
+      "111"
+    ],
+    "neural_execution_authorized_here": false,
+    "replicates": [
+      1,
+      2
+    ],
+    "work_unit_count": 16
+  },
+  "experiment": "SQ-11",
+  "integrity_requirements": [
+    "All eight masks must occur exactly twice in canonical mask-major replicate order.",
+    "r1 and r2 must be exactly equal on every dynamic measurement declared deterministic.",
+    "condition_edge_zeroed must exactly equal the three mask bits.",
+    "row_indices[body_flat_positions] must equal source_indices.",
+    "row_weights[body_flat_positions] must exactly equal body_edge_weight.",
+    "presynaptic_union_indices[row_union_positions] must exactly equal row_indices.",
+    "row geometry must match the qualified 2830/841/897 CSR rows.",
+    "No analysis-derived quantities are stored as primary evidence.",
+    "condition_edge_zeroed == 1 requires structural omission of the corresponding BODY entry from replay accumulation.",
+    "A lesioned BODY entry must never be modeled as multiplication by zero.",
+    "All retained and lesioned local replay values must exactly equal captured runtime P3 float32 values before primary mechanistic classification.",
+    "Execution-authoritative replay qualification must be v2 with 2304 comparisons and zero mismatches."
+  ],
+  "provenance": {
+    "binding_commit": "b74cb77da016cf47ac6698116534716907f8a8b6",
+    "execution_authoritative_replay": {
+      "absolute_tolerance": 0.0,
+      "criterion": "exact float32 equality",
+      "lesioned_entry_semantics": "structurally skipped",
+      "protocol_git_commit": "9b3281ea3225b5a37f26739012fec91caabdb164",
+      "qualification_comparisons": 2304,
+      "qualification_mismatches": 0,
+      "qualification_path": "brain/sq11_dark_forest_replay_qualification_v2.py",
+      "qualification_result": {
+        "path": "artifacts/experiments/sq11-dark-forest/sq11-dark-forest-replay-qualification-v2.json",
+        "sha256": "a2b4256529ef5c7002fc32e9cd4c877918d320fd736fa7961ba66f869d70e325"
+      },
+      "qualification_seal": {
+        "path": "config/controls/sq11-dark-forest-replay-qualification-seal-v2.json",
+        "sha256": "19529383757e243f9881140edca30b13aea10760b582dd2fb1cda09198f225ab"
+      },
+      "qualification_sha256": "88ae0c7ffae18ff1b1cbe57882ed6f1bb6c002b967af2129624d921da1899341",
+      "relative_tolerance": 0.0,
+      "replay_path": "brain/sq11_dark_forest_replay_v2.py",
+      "replay_sha256": "76245bfab248c0d4bf374da94ad79485f2e0e386d86707de9e52bad26ff772e5",
+      "version": 2
+    },
+    "historical_v1_evidence_schema": {
+      "path": "config/experiments/sq11-dark-forest-evidence-schema-v1.json",
+      "sha256": "a4f32ddb1ff0bb74bb43a94b3b31e10fa51c3463a660e8084fe12b3dc50784ae"
+    },
+    "historical_v1_measurement_contract": {
+      "path": "config/experiments/sq11-dark-forest-measurement-contract-v1.json",
+      "sha256": "f0677282fbf32161a1f5c543a4cffe0ea929c458e06c8721177508973c6d5cc7"
+    },
+    "preregistration_commit": "f8efca347e4165f123f0de43019eca7d26b05dc4"
+  },
+  "replay_semantics": {
+    "absolute_tolerance": 0.0,
+    "authoritative_version": 2,
+    "condition_edge_zeroed": {
+      "0": "BODY entry retained",
+      "1": "BODY entry structurally omitted"
+    },
+    "forbidden_substitution": "A lesioned BODY edge must not be represented as a retained CSR entry multiplied by zero.",
+    "lesioned_body_edge": "BODY CSR entry is structurally omitted and must be skipped entirely during replay.",
+    "relative_tolerance": 0.0,
+    "replay_equality": "exact float32 equality",
+    "retained_body_edge": "BODY CSR entry participates in float32 multiplication and accumulation in original CSR order."
+  },
+  "schema_version": "moscaquant.sq11-dark-forest-measurement-contract/v2",
+  "static_replay_measurements": {
+    "body_edge_weight": {
+      "dtype": "float32",
+      "semantics": "BODY weight recovered from row_weights at body_flat_positions.",
+      "shape": [
+        3
+      ]
+    },
+    "body_flat_positions": {
+      "dtype": "int64",
+      "shape": [
+        3
+      ]
+    },
+    "body_positions": {
+      "dtype": "int64",
+      "shape": [
+        3
+      ]
+    },
+    "presynaptic_union_indices": {
+      "dtype": "int64",
+      "semantics": "Sorted unique presynaptic coordinates used by local P2 storage.",
+      "shape": [
+        4393
+      ]
+    },
+    "row_indices": {
+      "dtype": "int64",
+      "semantics": "Original CSR column indices in original accumulation order.",
+      "shape": [
+        4568
+      ]
+    },
+    "row_offsets": {
+      "dtype": "int64",
+      "semantics": "CSR-style boundaries for the three flattened responder rows.",
+      "shape": [
+        4
+      ]
+    },
+    "row_union_positions": {
+      "dtype": "int64",
+      "semantics": "Mapping from each flat CSR entry to its stored presynaptic-union coordinate.",
+      "shape": [
+        4568
+      ]
+    },
+    "row_weights": {
+      "dtype": "float32",
+      "semantics": "Original CSR float32 data in original accumulation order.",
+      "shape": [
+        4568
+      ]
+    }
+  },
+  "status": "FROZEN_PRE_EXECUTION",
+  "supersedes_for_execution": "moscaquant.sq11-dark-forest-measurement-contract/v1"
+}
