@@ -1,13 +1,32 @@
 {
-  "schema_version": "moscaquant.sq10-sophon-measurement-contract.draft-v1",
-  "experiment_id": "SQ-10",
+  "analysis_constraints": [
+    "analyze all three BODY pairs symmetrically",
+    "analyze all eight masks symmetrically",
+    "no post-result ranking",
+    "no mechanistic claim from timing alone",
+    "distinguish observation from interpretation"
+  ],
+  "body_pairs": [
+    {
+      "inherited_edge_id": "E10",
+      "label": "A",
+      "responder": 137122,
+      "source": 65084
+    },
+    {
+      "inherited_edge_id": "E11",
+      "label": "B",
+      "responder": 317,
+      "source": 128590
+    },
+    {
+      "inherited_edge_id": "E12",
+      "label": "C",
+      "responder": 126002,
+      "source": 135589
+    }
+  ],
   "codename": "SOPHON",
-  "status": "DRAFT_NOT_PREREGISTERED",
-  "neural_execution_authorized": false,
-  "mask_semantics": {
-    "0": "edge retained",
-    "1": "edge zeroed"
-  },
   "conditions": [
     "000",
     "001",
@@ -18,63 +37,53 @@
     "110",
     "111"
   ],
-  "body_pairs": [
-    {
-      "label": "A",
-      "inherited_edge_id": "E10",
-      "source": 65084,
-      "responder": 137122
-    },
-    {
-      "label": "B",
-      "inherited_edge_id": "E11",
-      "source": 128590,
-      "responder": 317
-    },
-    {
-      "label": "C",
-      "inherited_edge_id": "E12",
-      "source": 135589,
-      "responder": 126002
-    }
-  ],
-  "required_measurements": {
-    "source": [
-      "voltage",
-      "spikes",
-      "effective_graded_activity"
-    ],
-    "responder": [
-      "voltage",
-      "spikes"
-    ],
-    "direct_edge_contribution": {
-      "required": true,
-      "storage_or_derivation": "TO_BE_FROZEN_AFTER_RUNTIME_TIMING_AUDIT"
-    }
+  "experiment_id": "SQ-10",
+  "mask_semantics": {
+    "0": "edge retained",
+    "1": "edge zeroed"
   },
-  "timing_semantics": {
-    "status": "UNRESOLVED",
-    "required_phases": [
-      "effective_activity_calculation",
-      "synaptic_matrix_multiplication",
-      "voltage_decay",
-      "synaptic_and_stimulus_integration",
-      "threshold_evaluation",
-      "spike_commit",
-      "voltage_reset"
+  "neural_execution_authorized": false,
+  "required_measurements": {
+    "direct_edge_contribution": {
+      "definition": "source_effective_activity_pre_synaptic * frozen_edge_weight",
+      "required": true,
+      "storage_or_derivation": "must be stored directly or exactly derivable from preserved evidence fields"
+    },
+    "responder": [
+      "responder_voltage_pre_threshold",
+      "responder_fired",
+      "responder_voltage_post_reset",
+      "responder_spikes_post_commit"
+    ],
+    "source": [
+      "source_voltage_pre_step",
+      "source_spikes_pre_step",
+      "source_effective_activity_pre_synaptic"
     ]
   },
+  "runtime_clock_audit": "docs/experiments/sq10-sophon-runtime-clock-audit.md",
   "schema_closure": {
+    "authorization_blocked_until_closed": true,
     "required": true,
-    "rule": "every preregistered measurement must map to an evidence field or explicit deterministic derivation",
-    "authorization_blocked_until_closed": true
+    "rule": "every preregistered measurement must map to an evidence field or explicit deterministic derivation"
   },
-  "analysis_constraints": [
-    "analyze all three BODY pairs symmetrically",
-    "analyze all eight masks symmetrically",
-    "no post-result ranking",
-    "no mechanistic claim from timing alone",
-    "distinguish observation from interpretation"
-  ]
+  "schema_version": "moscaquant.sq10-sophon-measurement-contract.draft-v1",
+  "status": "DRAFT_NOT_PREREGISTERED",
+  "timing_semantics": {
+    "phases": {
+      "P0": "committed pre-step voltage and spikes",
+      "P1": "raw effective_activity calculation",
+      "P2": "effective activity after optional activity_modifier; actual vector supplied to connectome",
+      "P3": "connectome matrix multiplication",
+      "P4": "voltage decay",
+      "P5": "synaptic/stimulus/release integration complete; immediately before threshold evaluation",
+      "P6": "threshold firing decision",
+      "P7": "spike commit and fired-neuron voltage reset"
+    },
+    "responder_post_step_measurement_phase": "P7",
+    "responder_pre_threshold_measurement_phase": "P5",
+    "source_transmission_measurement_phase": "P2",
+    "sq08_capture_phase": "P7",
+    "status": "RESOLVED_FROM_RUNTIME_CLOCK_AUDIT"
+  }
 }
