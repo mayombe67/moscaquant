@@ -1,0 +1,34 @@
+{
+  "authorization": {
+    "git_commit": "ca11b692b207e4e4dd51323b9e656ed07ad836bc",
+    "path": "config/controls/sq11-dark-forest-execution-authorization-v1.json",
+    "sha256": "7fde9c5bfb7e5d8caabd62fe90bfc61010e232db1d2a34dc4c88abfd86041578"
+  },
+  "codename": "DARK FOREST",
+  "destinations": {
+    "evidence": {
+      "overwrite_existing": false,
+      "path": "artifacts/experiments/sq11-dark-forest/sq11-dark-forest-evidence-v2.npz"
+    },
+    "publication_receipt": {
+      "overwrite_existing": false,
+      "path": "artifacts/experiments/sq11-dark-forest/sq11-dark-forest-publication-receipt-v2.json"
+    }
+  },
+  "execution_boundary": {
+    "analysis_authority": false,
+    "condition_selection_authority": false,
+    "execution_performed": false,
+    "launch_only": true,
+    "tolerance_modification_authority": false
+  },
+  "execution_manifest_sha256": "f3397d6a498460ff4785df54fd7d31cd8595f5057057ca34431268e2219ee496",
+  "experiment": "SQ-11",
+  "launcher": {
+    "git_commit": "8932994af6bb3e6592ae74b093a0e499e5aec3f1",
+    "path": "brain/sq11_dark_forest_execute.py",
+    "sha256": "31dfb5619e6870d64f321f6d5466b78e6ee57b9c24222b6d3bd5c564de2e08b8"
+  },
+  "schema_version": "moscaquant.sq11-dark-forest-launch-seal/v1",
+  "status": "SEALED_FOR_FROZEN_EXECUTION"
+}
