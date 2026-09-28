@@ -1,0 +1,137 @@
+{
+  "schema_version": "moscaquant.sq10-sophon-float32-calibration-contract/v1",
+  "experiment": "SQ-10",
+  "codename": "SOPHON",
+  "status": "FROZEN_PRE_CALIBRATION",
+  "neural_execution_authorized": false,
+
+  "purpose": "Prospectively calibrate the numerical residual expected when comparing a retained BODY edge against the same CSR row with that edge removed.",
+
+  "prohibitions": [
+    "must not execute the neural runtime",
+    "must not call runtime.step",
+    "must not consume SQ-10 experimental evidence",
+    "must not inspect SQ-10 neural results",
+    "must not select tolerance after experimental acquisition"
+  ],
+
+  "topology": {
+    "use_real_connectome_rows": true,
+    "matrix_dtype": "float32",
+    "require_sorted_csr_indices": true,
+
+    "body": {
+      "A": {
+        "source": 65084,
+        "responder": 137122,
+        "row_nnz": 2830,
+        "source_csr_position": 1908
+      },
+      "B": {
+        "source": 128590,
+        "responder": 317,
+        "row_nnz": 841,
+        "source_csr_position": 671
+      },
+      "C": {
+        "source": 135589,
+        "responder": 126002,
+        "row_nnz": 897,
+        "source_csr_position": 767
+      }
+    }
+  },
+
+  "synthetic_activity": {
+    "range": [0.0, 1.0],
+
+    "source_levels_float32": [
+      0.0,
+      0.000244140625,
+      0.00390625,
+      0.0625,
+      0.10000000149011612,
+      0.25,
+      0.5,
+      0.75,
+      0.9999999403953552,
+      1.0
+    ],
+
+    "background_patterns": [
+      "all_zero",
+      "all_one",
+      "all_half",
+      "alternating_zero_one",
+      "alternating_quarter_threequarter",
+      "ramp_mod_257",
+      "lcg16",
+      "sparse_stride_7"
+    ]
+  },
+
+  "synthetic_membrane_state": {
+    "pre_step_voltage_float32": [
+      -2.0,
+      -1.0,
+      -0.25,
+      0.0,
+      0.25,
+      0.75,
+      0.9999999403953552,
+      2.0
+    ],
+
+    "direct_stimulus_float32": [
+      -0.5,
+      0.0,
+      0.5
+    ],
+
+    "relay_release": "BODY responders must be verified outside the frozen relay population; otherwise calibration refuses"
+  },
+
+  "operation_order": [
+    "retained_synaptic = retained CSR row @ synthetic float32 activity",
+    "lesioned_synaptic = same CSR row with only tested BODY entry removed @ identical activity",
+    "retained_P5 = float32(pre_voltage)",
+    "retained_P5 *= runtime_decay",
+    "retained_P5 += float32(retained_synaptic)",
+    "retained_P5 += float32(stimulus)",
+    "lesioned_P5 = float32(pre_voltage)",
+    "lesioned_P5 *= runtime_decay",
+    "lesioned_P5 += float32(lesioned_synaptic)",
+    "lesioned_P5 += float32(stimulus)",
+    "observed_delta = float64(retained_P5) - float64(lesioned_P5)",
+    "predicted_delta = float64(source_activity) * float64(frozen_edge_weight)",
+    "residual = observed_delta - predicted_delta"
+  ],
+
+  "tolerance_rule": {
+    "calibration_statistic": "maximum absolute residual over every BODY edge and every declared synthetic case",
+
+    "residual_safety_multiplier": 8.0,
+
+    "ulp_guard": {
+      "definition": "maximum absolute float32 spacing of every retained and lesioned P5 value observed during calibration",
+      "multiplier": 8.0
+    },
+
+    "candidate": "max(8 * max_abs_residual, 8 * max_float32_P5_ulp)",
+
+    "absolute_tolerance": "smallest positive power of two greater than or equal to candidate",
+
+    "relative_tolerance": 0.0,
+
+    "rule_frozen_before_calibration": true
+  },
+
+  "expected_case_count": 5760,
+
+  "claim_boundary": [
+    "numerical calibration only",
+    "no neural execution",
+    "no SQ-10 result evidence consumed",
+    "no mechanistic conclusion implied"
+  ]
+}
