@@ -1,0 +1,380 @@
+{
+  "body_edges": {
+    "A": {
+      "frozen_weight": 0.0002288853283971548,
+      "responder": 137122,
+      "responder_row_nnz": 2830,
+      "source": 65084,
+      "source_csr_position": 1908
+    },
+    "B": {
+      "frozen_weight": 0.0005941770505160093,
+      "responder": 317,
+      "responder_row_nnz": 841,
+      "source": 128590,
+      "source_csr_position": 671
+    },
+    "C": {
+      "frozen_weight": 0.0006234414177015424,
+      "responder": 126002,
+      "responder_row_nnz": 897,
+      "source": 135589,
+      "source_csr_position": 767
+    }
+  },
+  "codename": "SOPHON",
+  "conditions": [
+    {
+      "condition_id": "sq10:000:r1",
+      "edge_zeroed": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      },
+      "mask": "000",
+      "ordinal": 0,
+      "replicate": 1
+    },
+    {
+      "condition_id": "sq10:000:r2",
+      "edge_zeroed": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      },
+      "mask": "000",
+      "ordinal": 1,
+      "replicate": 2
+    },
+    {
+      "condition_id": "sq10:001:r1",
+      "edge_zeroed": {
+        "A": 0,
+        "B": 0,
+        "C": 1
+      },
+      "mask": "001",
+      "ordinal": 2,
+      "replicate": 1
+    },
+    {
+      "condition_id": "sq10:001:r2",
+      "edge_zeroed": {
+        "A": 0,
+        "B": 0,
+        "C": 1
+      },
+      "mask": "001",
+      "ordinal": 3,
+      "replicate": 2
+    },
+    {
+      "condition_id": "sq10:010:r1",
+      "edge_zeroed": {
+        "A": 0,
+        "B": 1,
+        "C": 0
+      },
+      "mask": "010",
+      "ordinal": 4,
+      "replicate": 1
+    },
+    {
+      "condition_id": "sq10:010:r2",
+      "edge_zeroed": {
+        "A": 0,
+        "B": 1,
+        "C": 0
+      },
+      "mask": "010",
+      "ordinal": 5,
+      "replicate": 2
+    },
+    {
+      "condition_id": "sq10:011:r1",
+      "edge_zeroed": {
+        "A": 0,
+        "B": 1,
+        "C": 1
+      },
+      "mask": "011",
+      "ordinal": 6,
+      "replicate": 1
+    },
+    {
+      "condition_id": "sq10:011:r2",
+      "edge_zeroed": {
+        "A": 0,
+        "B": 1,
+        "C": 1
+      },
+      "mask": "011",
+      "ordinal": 7,
+      "replicate": 2
+    },
+    {
+      "condition_id": "sq10:100:r1",
+      "edge_zeroed": {
+        "A": 1,
+        "B": 0,
+        "C": 0
+      },
+      "mask": "100",
+      "ordinal": 8,
+      "replicate": 1
+    },
+    {
+      "condition_id": "sq10:100:r2",
+      "edge_zeroed": {
+        "A": 1,
+        "B": 0,
+        "C": 0
+      },
+      "mask": "100",
+      "ordinal": 9,
+      "replicate": 2
+    },
+    {
+      "condition_id": "sq10:101:r1",
+      "edge_zeroed": {
+        "A": 1,
+        "B": 0,
+        "C": 1
+      },
+      "mask": "101",
+      "ordinal": 10,
+      "replicate": 1
+    },
+    {
+      "condition_id": "sq10:101:r2",
+      "edge_zeroed": {
+        "A": 1,
+        "B": 0,
+        "C": 1
+      },
+      "mask": "101",
+      "ordinal": 11,
+      "replicate": 2
+    },
+    {
+      "condition_id": "sq10:110:r1",
+      "edge_zeroed": {
+        "A": 1,
+        "B": 1,
+        "C": 0
+      },
+      "mask": "110",
+      "ordinal": 12,
+      "replicate": 1
+    },
+    {
+      "condition_id": "sq10:110:r2",
+      "edge_zeroed": {
+        "A": 1,
+        "B": 1,
+        "C": 0
+      },
+      "mask": "110",
+      "ordinal": 13,
+      "replicate": 2
+    },
+    {
+      "condition_id": "sq10:111:r1",
+      "edge_zeroed": {
+        "A": 1,
+        "B": 1,
+        "C": 1
+      },
+      "mask": "111",
+      "ordinal": 14,
+      "replicate": 1
+    },
+    {
+      "condition_id": "sq10:111:r2",
+      "edge_zeroed": {
+        "A": 1,
+        "B": 1,
+        "C": 1
+      },
+      "mask": "111",
+      "ordinal": 15,
+      "replicate": 2
+    }
+  ],
+  "evidence_destination": {
+    "must_not_exist_before_execution": true,
+    "overwrite_existing": false,
+    "path": "artifacts/experiments/sq10-sophon/sq10-sophon-evidence-v1.npz"
+  },
+  "execution_boundary": {
+    "analysis_authority": false,
+    "authorization_granted": false,
+    "manifest_only": true,
+    "mechanism_interpretation_authority": false,
+    "result_reclassification_authority": false
+  },
+  "execution_contract": {
+    "all_work_units_required": true,
+    "analysis_after_verification_only": true,
+    "arbitrary_condition_execution": false,
+    "body_order": [
+      "A",
+      "B",
+      "C"
+    ],
+    "both_replicates_required_per_mask": true,
+    "condition_masks": [
+      "000",
+      "001",
+      "010",
+      "011",
+      "100",
+      "101",
+      "110",
+      "111"
+    ],
+    "frame_count": 192,
+    "implicit_resume": false,
+    "independent_verification_required": true,
+    "layout": "RL",
+    "manifest_regeneration_at_execution": false,
+    "overwrite_existing_evidence": false,
+    "replicates": [
+      1,
+      2
+    ],
+    "runtime_parameters": {
+      "dt_ms": 1.0,
+      "release_gain": 0.9981738484618123,
+      "tau_ms": 20.0,
+      "threshold": 1.0
+    },
+    "work_unit_count": 16
+  },
+  "experiment": "SQ-10",
+  "frozen_code": {
+    "base_visual_transduction": {
+      "path": "brain/visual_transduction.py",
+      "sha256": "015cc699f49e16bb59f6e7e5f04f92cca7bfc1a3c7057e73fe54398c755831f6"
+    },
+    "calibration_implementation": {
+      "path": "brain/sq10_sophon_float32_calibration.py",
+      "sha256": "eb350bf31bae3f2ea97d64bd6da98b437535b2023c0434be3203e6bf68854870"
+    },
+    "evidence_packer": {
+      "path": "brain/sq10_sophon_evidence.py",
+      "sha256": "417851c0df28f84dd10a84185e69980d2e3bfc0fcb4904237d64e3e729b73f61"
+    },
+    "independent_verifier": {
+      "path": "brain/sq10_sophon_independent_verify.py",
+      "sha256": "e92e07d5a489f5fa115f110aace1d9ada707dd92900bc50b70ce4cb6bfde242e"
+    },
+    "physiology_runtime": {
+      "path": "brain/physiology_constrained_visual_transduction.py",
+      "sha256": "bf754a29155ade789349fbdfc3c579f1b2c8dbea3c63804f2cf3d858d0a2f605"
+    },
+    "prospective_analyzer": {
+      "path": "brain/sq10_sophon_analysis.py",
+      "sha256": "baf3bd680873e2946b6a0c2078ad572921fde86dc764bcdda9efed770f300acb"
+    },
+    "sophon_episode": {
+      "path": "brain/sq10_sophon_episode.py",
+      "sha256": "eed8bb610a24fc08aff17ef91a474b3019c27f5fbf9eca73136109864d70cace"
+    },
+    "sophon_instrumentation": {
+      "path": "brain/sq10_sophon_instrumentation.py",
+      "sha256": "60ec01ef4c3dc04d40de84e592edfbde019a0014fe86bb34d59c8ae18a5ee426"
+    },
+    "sophon_plan": {
+      "path": "brain/sq10_sophon_plan.py",
+      "sha256": "10ddd51efb31c69a6f9897c2c0957ebf9dc041dfd3be8b863db6fe67a668479b"
+    },
+    "sq08_body_lesion": {
+      "path": "brain/sq08_three_body_episode.py",
+      "sha256": "489f3449c939ebe49aeef94775282bc5822f94f2f4fa577b8de1d20d22a60864"
+    },
+    "stimulus_builder": {
+      "path": "brain/sq05_two_betrayals_runner.py",
+      "sha256": "06f640dd6c829d917bb537298f8e54048066455b92f6932dc09fe5abdef4867e"
+    },
+    "stimulus_integrity": {
+      "path": "brain/sq05_stimulus.py",
+      "sha256": "90bf95fc7bf1baab5f8a77ba4dce9182a5ad5909ca6a3ca37a0cf10c946f623a"
+    },
+    "zero_edges": {
+      "path": "brain/mq3_2_causal_intervention.py",
+      "sha256": "007aa507ac22b07811bff5ae8102a0916c88549aa3011fa22fa57c70598c6a87"
+    }
+  },
+  "frozen_contracts": {
+    "analysis_contract": {
+      "path": "config/experiments/sq10-sophon-analysis-contract-draft-v1.json",
+      "sha256": "ba8749b6deb829e190ba2a7ef13d810242af6de48d9283977945c5f1adf4728f"
+    },
+    "calibration_artifact": {
+      "path": "artifacts/experiments/sq10-sophon/sq10-sophon-float32-calibration-v1.json",
+      "sha256": "1e536aeec177ed1e9149737a68d2a56e7a529049c17b97bc2bdad630aa31ffd2"
+    },
+    "calibration_contract": {
+      "path": "config/experiments/sq10-sophon-float32-calibration-contract-v1.json",
+      "sha256": "a742a60ca7d09b4f2d5281d3f3473d3b3335c41d42a347bb3dbe75adba602a3e"
+    },
+    "calibration_seal": {
+      "path": "config/controls/sq10-sophon-float32-calibration-seal-v1.json",
+      "sha256": "5742a7e750f0ac66831fa0f4838eda0d84e096966f95c4bdfb427ea79c2fc0f1"
+    },
+    "evidence_schema": {
+      "path": "config/experiments/sq10-sophon-evidence-schema-draft-v1.json",
+      "sha256": "0557c1b20c60420f5c717f3c88ef7ea811fc8bd2908381845a05570db64922e0"
+    },
+    "measurement_contract": {
+      "path": "config/experiments/sq10-sophon-measurement-contract-draft-v1.json",
+      "sha256": "944e21c3df15d2c0cbe8c0530bdb9d1eb206b1e9462dca84bfbf57837c3b198d"
+    }
+  },
+  "integrity": {
+    "body_lesion_must_modify_only_selected_edges": true,
+    "condition_id_must_match_mask_and_replicate": true,
+    "deterministic_replicates_are_integrity_checks_not_n": true,
+    "duplicate_condition_ids_forbidden": true,
+    "extra_conditions_forbidden": true,
+    "missing_conditions_forbidden": true,
+    "post_result_contrast_selection_forbidden": true,
+    "post_result_reclassification_forbidden": true,
+    "post_result_tolerance_selection_forbidden": true,
+    "responder_measurement_phase": "P5_PRE_THRESHOLD",
+    "source_measurement_phase": "P2_PRE_SYNAPTIC"
+  },
+  "neural_execution_authorized": false,
+  "numerical_acceptance": {
+    "absolute_tolerance": 3.814697265625e-06,
+    "calibration_rule_frozen_before_execution": true,
+    "relative_tolerance": 0.0
+  },
+  "physical_inputs": {
+    "connectome": {
+      "logical_name": "connectome-baseline-v1.npz",
+      "sha256": "e00e3f2a9828c921fe1f093cc567bf45a85adad0526176be0aa1b8be09336eeb"
+    },
+    "graded": {
+      "logical_name": "mq3-2-graded-visual-types-v1.npz",
+      "sha256": "1c514bf58bf69b24bfba28489344d0fe3e0f7590d649e0ef446c33898d38e379"
+    },
+    "relay": {
+      "logical_name": "visual-relay-map-v1.npz",
+      "sha256": "a3df2746ec69d10a2739a05f3ec55c4bd5f15b10b9a6167aee41c15a647e3478"
+    },
+    "retina": {
+      "logical_name": "visual-r1-r6-map-v1.npz",
+      "sha256": "c4655220e1aee4eab580a534df009f0a7493f075c42285b430ad1365ae37917f"
+    },
+    "stimulus": {
+      "frame_count": 192,
+      "layout": "RL",
+      "schedule_sha256": "e044055d99fe8a19d69b4eee7bd02ba5279641c99b48d0c99cb468a5bd8f20ab"
+    }
+  },
+  "schema_version": "moscaquant.sq10-sophon-execution-manifest/v1",
+  "science_git_sha": "af0db6776cb478e75947292236abd82b3953a778",
+  "status": "FROZEN_PRE_EXECUTION"
+}
