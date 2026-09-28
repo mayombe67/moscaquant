@@ -1,0 +1,258 @@
+{
+  "analysis_only": true,
+  "classification_counts": {
+    "DIRECT_TERM_EXACT_FLOAT32": 4,
+    "DIRECT_TERM_WITH_FLOAT32_ROUNDING_PATH": 8
+  },
+  "codename": "DARK FOREST",
+  "contrasts": [
+    {
+      "body_edge_weight_f32": 0.0002288853283971548,
+      "body_source_exact_through_p3": true,
+      "classification": "DIRECT_TERM_EXACT_FLOAT32",
+      "direct_term_f32": 1.2836295915086282e-10,
+      "edge": "A",
+      "first_p3_divergence_frame": 125,
+      "lesioned_mask": "100",
+      "responder_row_source_exact_through_p3": true,
+      "retained_mask": "000",
+      "rounding_path_residual": 0.0,
+      "runtime_delta": 1.2836295915086282e-10,
+      "source_p2": 5.608177957583393e-07
+    },
+    {
+      "body_edge_weight_f32": 0.0002288853283971548,
+      "body_source_exact_through_p3": true,
+      "classification": "DIRECT_TERM_EXACT_FLOAT32",
+      "direct_term_f32": 1.2836295915086282e-10,
+      "edge": "A",
+      "first_p3_divergence_frame": 125,
+      "lesioned_mask": "101",
+      "responder_row_source_exact_through_p3": true,
+      "retained_mask": "001",
+      "rounding_path_residual": 0.0,
+      "runtime_delta": 1.2836295915086282e-10,
+      "source_p2": 5.608177957583393e-07
+    },
+    {
+      "body_edge_weight_f32": 0.0002288853283971548,
+      "body_source_exact_through_p3": true,
+      "classification": "DIRECT_TERM_EXACT_FLOAT32",
+      "direct_term_f32": 1.2836295915086282e-10,
+      "edge": "A",
+      "first_p3_divergence_frame": 125,
+      "lesioned_mask": "110",
+      "responder_row_source_exact_through_p3": true,
+      "retained_mask": "010",
+      "rounding_path_residual": 0.0,
+      "runtime_delta": 1.2836295915086282e-10,
+      "source_p2": 5.608177957583393e-07
+    },
+    {
+      "body_edge_weight_f32": 0.0002288853283971548,
+      "body_source_exact_through_p3": true,
+      "classification": "DIRECT_TERM_EXACT_FLOAT32",
+      "direct_term_f32": 1.2836295915086282e-10,
+      "edge": "A",
+      "first_p3_divergence_frame": 125,
+      "lesioned_mask": "111",
+      "responder_row_source_exact_through_p3": true,
+      "retained_mask": "011",
+      "rounding_path_residual": 0.0,
+      "runtime_delta": 1.2836295915086282e-10,
+      "source_p2": 5.608177957583393e-07
+    },
+    {
+      "body_edge_weight_f32": 0.0005941770505160093,
+      "body_source_exact_through_p3": true,
+      "classification": "DIRECT_TERM_WITH_FLOAT32_ROUNDING_PATH",
+      "direct_term_f32": 5.276063319570312e-08,
+      "edge": "B",
+      "first_p3_divergence_frame": 124,
+      "lesioned_mask": "010",
+      "responder_row_source_exact_through_p3": true,
+      "retained_mask": "000",
+      "rounding_path_residual": -2.6645352591003757e-15,
+      "runtime_delta": 5.276063053116786e-08,
+      "source_p2": 8.879615052137524e-05
+    },
+    {
+      "body_edge_weight_f32": 0.0005941770505160093,
+      "body_source_exact_through_p3": true,
+      "classification": "DIRECT_TERM_WITH_FLOAT32_ROUNDING_PATH",
+      "direct_term_f32": 5.276063319570312e-08,
+      "edge": "B",
+      "first_p3_divergence_frame": 124,
+      "lesioned_mask": "011",
+      "responder_row_source_exact_through_p3": true,
+      "retained_mask": "001",
+      "rounding_path_residual": -2.6645352591003757e-15,
+      "runtime_delta": 5.276063053116786e-08,
+      "source_p2": 8.879615052137524e-05
+    },
+    {
+      "body_edge_weight_f32": 0.0005941770505160093,
+      "body_source_exact_through_p3": true,
+      "classification": "DIRECT_TERM_WITH_FLOAT32_ROUNDING_PATH",
+      "direct_term_f32": 5.276063319570312e-08,
+      "edge": "B",
+      "first_p3_divergence_frame": 124,
+      "lesioned_mask": "110",
+      "responder_row_source_exact_through_p3": true,
+      "retained_mask": "100",
+      "rounding_path_residual": -2.6645352591003757e-15,
+      "runtime_delta": 5.276063053116786e-08,
+      "source_p2": 8.879615052137524e-05
+    },
+    {
+      "body_edge_weight_f32": 0.0005941770505160093,
+      "body_source_exact_through_p3": true,
+      "classification": "DIRECT_TERM_WITH_FLOAT32_ROUNDING_PATH",
+      "direct_term_f32": 5.276063319570312e-08,
+      "edge": "B",
+      "first_p3_divergence_frame": 124,
+      "lesioned_mask": "111",
+      "responder_row_source_exact_through_p3": true,
+      "retained_mask": "101",
+      "rounding_path_residual": -2.6645352591003757e-15,
+      "runtime_delta": 5.276063053116786e-08,
+      "source_p2": 8.879615052137524e-05
+    },
+    {
+      "body_edge_weight_f32": 0.0006234414177015424,
+      "body_source_exact_through_p3": true,
+      "classification": "DIRECT_TERM_WITH_FLOAT32_ROUNDING_PATH",
+      "direct_term_f32": 2.3104451633685665e-14,
+      "edge": "C",
+      "first_p3_divergence_frame": 127,
+      "lesioned_mask": "001",
+      "responder_row_source_exact_through_p3": true,
+      "retained_mask": "000",
+      "rounding_path_residual": 3.3034284942917713e-19,
+      "runtime_delta": 2.3104781976535094e-14,
+      "source_p2": 3.705953946497864e-11
+    },
+    {
+      "body_edge_weight_f32": 0.0006234414177015424,
+      "body_source_exact_through_p3": true,
+      "classification": "DIRECT_TERM_WITH_FLOAT32_ROUNDING_PATH",
+      "direct_term_f32": 2.3104451633685665e-14,
+      "edge": "C",
+      "first_p3_divergence_frame": 127,
+      "lesioned_mask": "011",
+      "responder_row_source_exact_through_p3": true,
+      "retained_mask": "010",
+      "rounding_path_residual": 3.3034284942917713e-19,
+      "runtime_delta": 2.3104781976535094e-14,
+      "source_p2": 3.705953946497864e-11
+    },
+    {
+      "body_edge_weight_f32": 0.0006234414177015424,
+      "body_source_exact_through_p3": true,
+      "classification": "DIRECT_TERM_WITH_FLOAT32_ROUNDING_PATH",
+      "direct_term_f32": 2.3104451633685665e-14,
+      "edge": "C",
+      "first_p3_divergence_frame": 127,
+      "lesioned_mask": "101",
+      "responder_row_source_exact_through_p3": true,
+      "retained_mask": "100",
+      "rounding_path_residual": 3.3034284942917713e-19,
+      "runtime_delta": 2.3104781976535094e-14,
+      "source_p2": 3.705953946497864e-11
+    },
+    {
+      "body_edge_weight_f32": 0.0006234414177015424,
+      "body_source_exact_through_p3": true,
+      "classification": "DIRECT_TERM_WITH_FLOAT32_ROUNDING_PATH",
+      "direct_term_f32": 2.3104451633685665e-14,
+      "edge": "C",
+      "first_p3_divergence_frame": 127,
+      "lesioned_mask": "111",
+      "responder_row_source_exact_through_p3": true,
+      "retained_mask": "110",
+      "rounding_path_residual": 3.3034284942917713e-19,
+      "runtime_delta": 2.3104781976535094e-14,
+      "source_p2": 3.705953946497864e-11
+    }
+  ],
+  "experiment": "SQ-11",
+  "interpretation_boundary": {
+    "background_dependence_observed_at_first_p3_divergence": false,
+    "claim_scope": "Frozen SQ-11 computational endpoint only; no biological mechanism claim.",
+    "source_state_divergence_observed": false
+  },
+  "matched_contrast_count": 12,
+  "max_absolute_rounding_path_residual": 2.6645352591003757e-15,
+  "neural_execution_performed": false,
+  "per_edge": {
+    "A": {
+      "classifications": [
+        "DIRECT_TERM_EXACT_FLOAT32"
+      ],
+      "contrast_count": 4,
+      "first_p3_divergence_frames": [
+        125
+      ],
+      "rounding_path_residuals": [
+        0.0
+      ]
+    },
+    "B": {
+      "classifications": [
+        "DIRECT_TERM_WITH_FLOAT32_ROUNDING_PATH"
+      ],
+      "contrast_count": 4,
+      "first_p3_divergence_frames": [
+        124
+      ],
+      "rounding_path_residuals": [
+        -2.6645352591003757e-15
+      ]
+    },
+    "C": {
+      "classifications": [
+        "DIRECT_TERM_WITH_FLOAT32_ROUNDING_PATH"
+      ],
+      "contrast_count": 4,
+      "first_p3_divergence_frames": [
+        127
+      ],
+      "rounding_path_residuals": [
+        3.3034284942917713e-19
+      ]
+    }
+  },
+  "provenance": {
+    "analyzer": {
+      "git_commit": "70555d2b2c73694f5f6b16942f3aacd00b8e4154",
+      "path": "brain/sq11_dark_forest_analysis.py",
+      "sha256": "2fccbffe3a59aedcda3633f165f211dfa4b30ce5e2e5f037e831fe6f6003907f"
+    },
+    "evidence": {
+      "git_commit": "06c31e216683025a49db6b2a1e7252aff37addb1",
+      "path": "artifacts/experiments/sq11-dark-forest/sq11-dark-forest-evidence-v2.npz",
+      "sha256": "cef49b5e581d6c9b2f21aafc701d06e8d53b0abc03f8453c9fe6c5d19ede9c37"
+    },
+    "execution_receipt": {
+      "path": "artifacts/experiments/sq11-dark-forest/sq11-dark-forest-publication-receipt-v2.json",
+      "sha256": "2f0f7aeb6d0183d8dd918abd81563ac187eb70e2b3f6ea1559856625bf090eff",
+      "status": "FROZEN_EXECUTION_COMPLETE"
+    },
+    "replay_v2": {
+      "path": "brain/sq11_dark_forest_replay_v2.py",
+      "sha256": "76245bfab248c0d4bf374da94ad79485f2e0e386d86707de9e52bad26ff772e5"
+    }
+  },
+  "schema_version": "moscaquant.sq11-dark-forest-analysis/v1",
+  "status": "ANALYSIS_COMPLETE",
+  "verification": {
+    "baseline_binding_verified": true,
+    "independent_verifier": "PASS",
+    "post_publication_duplicate_field_comparisons": 80,
+    "replay_v2": {
+      "exact_float32_comparisons": 9216,
+      "mismatch_count": 0,
+      "status": "PASS"
+    }
+  }
+}
