@@ -1,0 +1,49 @@
+{
+  "apotheosis": {
+    "name": "FUNCTIONAL TRANSMISSIBILITY BEFORE STRUCTURAL REACHABILITY",
+    "number": 27,
+    "rule": "A structural path is not a causal transmission path unless the upstream perturbation changes a state variable the runtime can actually transmit."
+  },
+  "causal_chain": [
+    "SQ-11 establishes nonzero local BODY responder perturbations.",
+    "The three BODY responders are outside the frozen graded population.",
+    "Non-graded neurons transmit through spike state only in the frozen runtime.",
+    "BODY source P2 effective activity is identical across all eight BODY masks.",
+    "BODY responder firing is identical across all eight BODY masks for all 192 frames.",
+    "BODY responder committed spike state is identical across all eight BODY masks for all 192 frames.",
+    "Therefore the known local perturbation never changes a state variable that can leave the immediate BODY boundary during the frozen window."
+  ],
+  "claim_boundary": "Frozen MoscaQuant computational runtime and 192-frame episode only; no biological, organism-level, behavioral, cognitive, market, or financial claim.",
+  "classification": "TRANSMISSION_GATE_CLOSED_192_FRAMES",
+  "codename": "RESONANCE CASCADE",
+  "downstream_neural_execution_required": false,
+  "experiment": "SQ-12",
+  "frame_window": 192,
+  "neural_execution_performed_by_sq12": false,
+  "provenance": {
+    "binding_commit": "cbf239e044de0e40ac9e5b5d6f80be82fbd712b3",
+    "independent_verification": {
+      "path": "artifacts/experiments/sq12-resonance-cascade/sq12-transmission-gate-verification-v1.json",
+      "sha256": "8cf58f322a397e6a5bd0798d64c450661655f0e2afa9b49fed000c93c716c353"
+    },
+    "topology": {
+      "path": "config/controls/sq12-resonance-cascade-topology-v1.json",
+      "sha256": "eae563550ea12bcb6be7a4612edb7856dcdf26291b6f2c7b0d90eb2bc025ae7e"
+    },
+    "transmission_gate": {
+      "path": "artifacts/experiments/sq12-resonance-cascade/sq12-transmission-gate-audit-v1.json",
+      "sha256": "916cb99c1bec589467c6ab6fbff79289d0d0d52c6e2110e95b4d7964f24dd065"
+    }
+  },
+  "schema_version": "moscaquant.sq12-resonance-cascade-result-seal/v1",
+  "status": "SEALED_DEDUCTIVE_CLOSURE",
+  "structural_context": {
+    "convergence_panel": 401,
+    "downstream_scan_population": 8874,
+    "excluded_immediate_body_responders": [
+      317,
+      126002
+    ],
+    "raw_one_hop_union": 8876
+  }
+}

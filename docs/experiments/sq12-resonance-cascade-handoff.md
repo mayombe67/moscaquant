@@ -2,12 +2,20 @@
 
 ## Status
 
-**PLANNING / HANDOFF ONLY**
+**HISTORICAL HANDOFF — SUPERSEDED BY SEALED SQ-12 RESULT**
 
-No SQ-12 neural execution is authorized by this document.
+This document preserves the original pre-result planning state.
 
-No measurement, endpoint, downstream population, threshold, or classification
-rule is frozen here.
+SQ-12 subsequently closed without new neural execution under the classification:
+
+`TRANSMISSION_GATE_CLOSED_192_FRAMES`
+
+Canonical result:
+
+`docs/experiments/sq12-resonance-cascade-result.md`
+
+The original planning statements below remain historical rather than being
+rewritten after the result.
 
 ## Inherited scientific state
 

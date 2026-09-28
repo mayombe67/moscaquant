@@ -633,3 +633,62 @@ SQ-12 remains unpreregistered and unauthorized at this ledger update.
 
 Financial semantics remain `NOT ASSIGNED`.
 
+## SQ-12 — RESONANCE CASCADE — sealed result
+
+SQ-12 resolved whether the now-understood BODY responder perturbations propagate
+beyond the immediate responder boundary.
+
+Authoritative result status: **SEALED / COMPLETED**
+
+No new SQ-12 neural execution was required.
+
+The prospectively frozen structural calibration identified:
+
+- raw direct one-hop BODY descendant union: `8,876`;
+- immediate BODY responders excluded from downstream scan: `2`;
+- frozen downstream scan population: `8,874`;
+- frozen multi-BODY convergence panel: `401`.
+
+The frozen runtime permits positive subthreshold voltage transmission only for
+the graded Tm2/Tm3/Tm4 population. The three BODY responders are non-graded and
+therefore propagate through spike state only.
+
+Across all eight sealed BODY masks and all `192` frames:
+
+- source P2 effective-activity mismatches: `0`;
+- responder firing mismatches: `0`;
+- responder committed-spike mismatches: `0`;
+- BODY responder graded overlap: `0`.
+
+Primary classification:
+
+`TRANSMISSION_GATE_CLOSED_192_FRAMES`
+
+Independent verification:
+
+`PASS`
+
+The known local perturbation therefore never changes a state variable capable
+of leaving the immediate BODY boundary during the frozen window.
+
+A new 8,874-node neural execution was not scientifically required.
+
+### APOTHEOSIS #27 — Functional Transmissibility Before Structural Reachability
+
+A structural path is not a causal transmission path unless the upstream
+perturbation changes a state variable the runtime can actually transmit.
+
+Topology SHA-256:
+
+`eae563550ea12bcb6be7a4612edb7856dcdf26291b6f2c7b0d90eb2bc025ae7e`
+
+Transmission-gate SHA-256:
+
+`916cb99c1bec589467c6ab6fbff79289d0d0d52c6e2110e95b4d7964f24dd065`
+
+Independent-verification SHA-256:
+
+`8cf58f322a397e6a5bd0798d64c450661655f0e2afa9b49fed000c93c716c353`
+
+Financial semantics remain `NOT ASSIGNED`.
+

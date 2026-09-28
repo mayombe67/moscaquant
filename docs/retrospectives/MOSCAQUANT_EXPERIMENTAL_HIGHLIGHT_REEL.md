@@ -1075,3 +1075,76 @@ The next folder on the desk reads:
 
 `SQ-12 — RESONANCE CASCADE`
 
+
+
+## RESONANCE CASCADE — The Cascade That Never Opened
+
+**Reference:** SQ-12 — RESONANCE CASCADE sealed result.
+
+**Importance:** BOSS
+
+**Science:** SQ-12 froze an outcome-blind direct one-hop structural universe of
+`8,874` downstream nodes beyond the already-characterized BODY boundary.
+
+Then it stopped before executing them.
+
+The frozen runtime revealed why.
+
+The three BODY responders are non-graded. They can carry their subthreshold
+voltage differences internally, but their outgoing effective activity is
+spike-only.
+
+Across every BODY lesion mask and every frame preserved by SQ-11, BODY source
+effective activity remained exact and BODY responder firing/spike state remained
+exact.
+
+The local perturbations therefore existed but never became transmissible.
+
+Classification:
+
+`TRANSMISSION_GATE_CLOSED_192_FRAMES`
+
+Independent verification passed.
+
+No new SQ-12 neural execution was required.
+
+**APOTHEOSIS #27 — FUNCTIONAL TRANSMISSIBILITY BEFORE STRUCTURAL REACHABILITY**
+
+A structural path is not a causal transmission path unless the upstream
+perturbation changes a state variable the runtime can actually transmit.
+
+**Lore:** GLaDOS wheels an enormous monitor into the lab.
+
+`8,874 DOWNSTREAM NEURONS READY`
+
+McDoctorate looks at the runtime.
+
+Then at the monitor.
+
+Then back at the runtime.
+
+"Don't run it."
+
+GLaDOS: "I prepared graphs."
+
+"The signal can't leave the room."
+
+Senator Armstrong checks the containment diagram.
+
+"So all those downstream roads exist?"
+
+"Yes."
+
+"And the perturbation?"
+
+"Doesn't have a car."
+
+Armstrong stamps the folder:
+
+`CASCADE CONTAINED`
+
+GLaDOS quietly closes matplotlib.
+
+Science first.
+
+Lulz a very close second.
