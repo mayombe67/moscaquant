@@ -1148,3 +1148,87 @@ GLaDOS quietly closes matplotlib.
 Science first.
 
 Lulz a very close second.
+
+
+## SURFACE TENSION — Not Even Close
+
+**Reference:** SQ-13 — SURFACE TENSION sealed result.
+
+**Importance:** BOSS
+
+**Science:** SQ-12 established that the three local BODY perturbations never
+changed a transmissible spike state.
+
+SQ-13 asked whether that closed gate was at least close to opening.
+
+Across twelve matched contrasts, `800` exact P5 differences were observed.
+
+Not one changed the firing decision.
+
+The closest observed state belonged to BODY B at frame `191`.
+
+Its retained responder voltage was only:
+
+`0.0004356971476227045`
+
+against a firing threshold of:
+
+`1.0`
+
+The remaining decision margin was:
+
+`0.9995643028523773`
+
+while the matched BODY perturbation was:
+
+`0.00010991192539222538`
+
+A descriptive separation of approximately:
+
+`9,094.23x`
+
+Independent verification reproduced the result without importing the primary
+analyzer.
+
+No new neural execution was required.
+
+**APOTHEOSIS #28 — MEASURE THE MARGIN BEFORE MOVING THE GOALPOSTS**
+
+A nonzero perturbation does not imply a near-threshold system.
+
+Measure the frozen decision margin before inventing a parameter sweep intended
+to manufacture a binary positive.
+
+**Lore:** GLaDOS studies the voltage readout.
+
+"So technically it moved."
+
+McDoctorate checks the firing threshold.
+
+"Yes."
+
+"Toward the threshold?"
+
+"Technically."
+
+"How close?"
+
+McDoctorate turns the monitor around.
+
+`9094x`
+
+GLaDOS is silent.
+
+Senator Armstrong slowly removes his hand from the gain knob.
+
+MORTY receives no additional voltage.
+
+Hahn updates the performance review:
+
+`SHOWED INITIATIVE`
+
+`ACHIEVED NOTHING`
+
+Science first.
+
+Lulz a very close second.

@@ -692,3 +692,55 @@ Independent-verification SHA-256:
 
 Financial semantics remain `NOT ASSIGNED`.
 
+## SQ-13 — SURFACE TENSION — sealed result
+
+SQ-13 measured how close the local BODY perturbations came to changing the
+binary responder firing decision underlying the sealed SQ-12 transmission-gate
+null.
+
+Authoritative result status: **SEALED / COMPLETED**
+
+No new neural execution was performed.
+
+Across the 12 preregistered matched contrasts:
+
+- P5-divergent frame/contrast observations: `800`;
+- firing-state contradictions: `0`;
+- primary classification:
+  `GATE_CLOSED_WITH_POSITIVE_DECISION_MARGIN`.
+
+The closest observed state occurred for BODY B, contrast `000 -> 010`, at frame
+`191`:
+
+- retained P5: `0.0004356971476227045`;
+- lesioned P5: `0.0003257852222304791`;
+- absolute P5 difference: `0.00010991192539222538`;
+- nearest distance to the frozen `1.0` threshold:
+  `0.9995643028523773`;
+- descriptive margin/effect scale separation:
+  `9094.229759740716`.
+
+The scale separation is descriptive and does not define a causal intervention
+multiplier.
+
+The endpoint occurring at the final stored frame does not authorize
+extrapolation beyond the frozen 192-frame window.
+
+Independent verification reproduced the classification and primary endpoint.
+
+### APOTHEOSIS #28 — Measure the Margin Before Moving the Goalposts
+
+A nonzero perturbation does not imply a near-threshold system. Before proposing
+a counterfactual intended to flip a binary outcome, measure the observed
+distance to the decision boundary under the frozen model.
+
+Analysis SHA-256:
+
+`85cf6ec5d47c0571cacc435933e54b8cc6fcdf8bc54f6959731cd3052565b2d0`
+
+Independent-verification SHA-256:
+
+`67002ac7d88fff46c2e0688b3b684c6ff6f9c6cfc5ed76640d87c17e2bd499e0`
+
+Financial semantics remain `NOT ASSIGNED`.
+
