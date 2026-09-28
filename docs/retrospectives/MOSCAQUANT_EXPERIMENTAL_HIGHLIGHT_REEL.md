@@ -988,3 +988,74 @@ McNulty: "It covers all five."
 McNulty slowly lowers the marker.
 
 The Titan opens the chest anyway.
+
+## DARK FOREST — The Ghosts Were Floating Point
+
+**Reference:** SQ-11 — DARK FOREST sealed result.
+
+**Importance:** BOSS
+
+**Science:** SQ-10 SOPHON found three immediate BODY responder effects below
+its prospectively calibrated numerical resolution. SQ-11 preserved the complete
+local P2 presynaptic state and replayed the exact structural-lesion float32 CSR
+arithmetic to determine what those effects actually were.
+
+Across 12 preregistered matched contrasts, source state remained exact through
+the first responder divergence and the result was invariant to the state of the
+other two BODY lesions.
+
+BODY A was exactly its isolated float32 direct contribution in all four
+backgrounds.
+
+BODY B and BODY C were also direct local BODY effects, but structural removal
+changed their float32 CSR accumulation path, producing deterministic residuals
+of `-2.6645352591003757e-15` and `3.3034284942917713e-19`, respectively.
+
+Replay-v2 reconstructed all `9,216` stored responder-row values exactly with
+`0` mismatches.
+
+The residuals are numerical effects inside the frozen computational model, not
+evidence of hidden biological interaction.
+
+**Provenance:** Final analysis frozen at
+`054a6c2b3fc06898f4d20cb31e6cd0ca9a9e6e26`.
+
+Evidence SHA-256:
+`cef49b5e581d6c9b2f21aafc701d06e8d53b0abc03f8453c9fe6c5d19ede9c37`.
+
+Analysis SHA-256:
+`b97a43514f9c3ec1f61675444fab284e61e5dd5341f926745e3390f5fe693779`.
+
+**Lore:** McDoctorate stares at the three impossible numbers for an
+uncomfortably long time.
+
+GLaDOS: "So the network was hiding something."
+
+McDoctorate: "No."
+
+GLaDOS: "A microscopic emergent interaction?"
+
+McDoctorate: "No."
+
+GLaDOS: "An anomaly?"
+
+McDoctorate turns the monitor around.
+
+`9,216 / 9,216 EXACT`
+
+McDoctorate: "Floating point."
+
+MORTY remains attached to the apparatus, blissfully unaware that several days
+of increasingly elaborate containment procedures have culminated in a lesson
+about addition order.
+
+Senator Armstrong stamps the file:
+
+`NOT AN SCP`
+
+Hahn schedules a retrospective.
+
+The next folder on the desk reads:
+
+`SQ-12 — RESONANCE CASCADE`
+

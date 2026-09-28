@@ -572,3 +572,64 @@ Per the preregistered stopping rule, any candidate intervention must be a new,
 separately preregistered causal experiment with matched controls.
 
 Financial semantics remain `NOT ASSIGNED`.
+
+## SQ-11 — DARK FOREST — sealed result
+
+SQ-11 prospectively resolved the sub-resolution BODY responder effects left
+unresolved by SQ-10 SOPHON.
+
+Authoritative result status: **SEALED / COMPLETED**
+
+Across the 12 preregistered one-edge matched contrasts:
+
+- BODY A classified `DIRECT_TERM_EXACT_FLOAT32` in `4 / 4` backgrounds;
+- BODY B classified `DIRECT_TERM_WITH_FLOAT32_ROUNDING_PATH` in `4 / 4`;
+- BODY C classified `DIRECT_TERM_WITH_FLOAT32_ROUNDING_PATH` in `4 / 4`;
+- source-state divergence occurred in `0 / 12` contrasts;
+- no background dependence was observed at first P3 divergence.
+
+First P3 responder divergence occurred at:
+
+- BODY B: frame `124`;
+- BODY A: frame `125`;
+- BODY C: frame `127`.
+
+The qualified structural-omission float32 CSR replay reproduced all `9,216`
+stored responder-row values exactly with `0` mismatches.
+
+BODY A's observed responder delta equals its isolated float32 direct BODY term
+exactly.
+
+BODY B and BODY C contain tiny deterministic residuals attributable to the
+float32 CSR accumulation path:
+
+- BODY B: `-2.6645352591003757e-15`
+- BODY C: `3.3034284942917713e-19`
+
+These residuals do not establish recurrent neural interaction or a biological
+mechanism.
+
+Final analysis freeze commit:
+
+`054a6c2b3fc06898f4d20cb31e6cd0ca9a9e6e26`
+
+Authoritative evidence SHA-256:
+
+`cef49b5e581d6c9b2f21aafc701d06e8d53b0abc03f8453c9fe6c5d19ede9c37`
+
+Publication receipt SHA-256:
+
+`2f0f7aeb6d0183d8dd918abd81563ac187eb70e2b3f6ea1559856625bf090eff`
+
+Analysis SHA-256:
+
+`b97a43514f9c3ec1f61675444fab284e61e5dd5341f926745e3390f5fe693779`
+
+The next planned scientific question is SQ-12 — RESONANCE CASCADE: whether the
+now-resolved local perturbations extinguish, propagate proportionally, or
+develop additional downstream network dynamics.
+
+SQ-12 remains unpreregistered and unauthorized at this ledger update.
+
+Financial semantics remain `NOT ASSIGNED`.
+
