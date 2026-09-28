@@ -1,0 +1,157 @@
+{
+  "schema_version": "moscaquant.sq10-sophon-analysis-contract.draft-v1",
+  "experiment": "SQ-10",
+  "codename": "SOPHON",
+  "status": "DRAFT_NUMERICAL_TOLERANCE_UNRESOLVED",
+  "neural_execution_authorized": false,
+
+  "scientific_question": "Why does removal of each frozen Tm4 source-to-responder BODY edge produce its corresponding isolated responder correction?",
+
+  "body_order": ["A", "B", "C"],
+
+  "body_pairs": {
+    "A": {
+      "edge_id": "E10",
+      "source": 65084,
+      "responder": 137122,
+      "mask_bit": 0
+    },
+    "B": {
+      "edge_id": "E11",
+      "source": 128590,
+      "responder": 317,
+      "mask_bit": 1
+    },
+    "C": {
+      "edge_id": "E12",
+      "source": 135589,
+      "responder": 126002,
+      "mask_bit": 2
+    }
+  },
+
+  "replicate_gate": {
+    "required": true,
+    "rule": "r1 and r2 must be exactly array-equal for every stored dynamic measurement within each mask",
+    "failure_action": "REFUSE_ANALYSIS",
+    "canonical_analysis_replicate_after_gate": 1,
+    "reason": "replicates are deterministic verification duplicates and must not be double-weighted"
+  },
+
+  "matched_contrasts": [
+    {"body": "A", "retained": "000", "lesioned": "100"},
+    {"body": "A", "retained": "001", "lesioned": "101"},
+    {"body": "A", "retained": "010", "lesioned": "110"},
+    {"body": "A", "retained": "011", "lesioned": "111"},
+
+    {"body": "B", "retained": "000", "lesioned": "010"},
+    {"body": "B", "retained": "001", "lesioned": "011"},
+    {"body": "B", "retained": "100", "lesioned": "110"},
+    {"body": "B", "retained": "101", "lesioned": "111"},
+
+    {"body": "C", "retained": "000", "lesioned": "001"},
+    {"body": "C", "retained": "010", "lesioned": "011"},
+    {"body": "C", "retained": "100", "lesioned": "101"},
+    {"body": "C", "retained": "110", "lesioned": "111"}
+  ],
+
+  "primary_test": {
+    "observation": "responder_voltage_pre_threshold",
+    "phase": "P5",
+
+    "first_divergence_definition": "earliest frame at which retained and lesioned P5 responder float32 values are not exactly equal",
+
+    "observed_signed_delta": "float64(retained_P5) - float64(lesioned_P5)",
+
+    "predicted_direct_delta": "potential_direct_edge_drive from the retained condition at the same frame",
+
+    "residual": "observed_signed_delta - predicted_direct_delta",
+
+    "source_invariance_requirement": {
+      "observation": "source_effective_activity_pre_synaptic",
+      "phase": "P2",
+      "rule": "tested source must remain exactly equal between retained and lesioned conditions through and including the first responder-divergence frame"
+    },
+
+    "numerical_acceptance": {
+      "status": "PENDING_SYNTHETIC_FLOAT32_CALIBRATION",
+      "absolute_tolerance": null,
+      "relative_tolerance": null,
+      "calibration_must_precede_neural_execution": true
+    }
+  },
+
+  "secondary_tests": {
+    "target_source_divergence": {
+      "measurement": "source_effective_activity_pre_synaptic",
+      "definition": "first exact retained-versus-lesioned P2 divergence frame for the tested source"
+    },
+
+    "off_target_source_coupling": {
+      "measurement": "source_effective_activity_pre_synaptic",
+      "definition": "first exact retained-versus-lesioned P2 divergence frame for each of the other two BODY sources"
+    },
+
+    "off_target_responder_coupling": {
+      "measurement": "responder_voltage_pre_threshold",
+      "definition": "first exact retained-versus-lesioned P5 divergence frame for each of the other two BODY responders"
+    },
+
+    "post_reset_consistency": {
+      "measurements": [
+        "responder_fired",
+        "responder_voltage_post_reset",
+        "responder_spikes_post_commit"
+      ],
+      "phase": "P6/P7",
+      "role": "supporting timing and threshold-state interpretation only"
+    }
+  },
+
+  "prospective_interpretation_classes": [
+    {
+      "class": "DIRECT_LOCAL_AT_FIRST_DIVERGENCE",
+      "requirements": [
+        "responder P5 divergence exists",
+        "tested source P2 remains invariant through first responder divergence",
+        "first-divergence residual satisfies preregistered numerical tolerance"
+      ]
+    },
+    {
+      "class": "SOURCE_STATE_DIVERGES_BEFORE_OR_AT_RESPONDER",
+      "requirements": [
+        "tested source P2 diverges before or at first responder P5 divergence"
+      ]
+    },
+    {
+      "class": "DIRECT_PREDICTION_RESIDUAL_EXCEEDS_TOLERANCE",
+      "requirements": [
+        "tested source P2 remains invariant through first responder divergence",
+        "first-divergence residual exceeds preregistered numerical tolerance"
+      ]
+    },
+    {
+      "class": "NO_RESPONDER_DIVERGENCE",
+      "requirements": [
+        "no responder P5 divergence exists over 192 frames"
+      ]
+    }
+  ],
+
+  "integrity": {
+    "all_12_matched_contrasts_required": true,
+    "all_8_masks_required": true,
+    "both_replicates_required": true,
+    "post_result_contrast_selection_forbidden": true,
+    "post_result_tolerance_selection_forbidden": true,
+    "result_ranking_forbidden": true,
+    "missing_contrast_forbidden": true
+  },
+
+  "claim_boundary": [
+    "contract draft only",
+    "numerical tolerance unresolved",
+    "no neural execution authorized",
+    "no mechanistic conclusion implied"
+  ]
+}
