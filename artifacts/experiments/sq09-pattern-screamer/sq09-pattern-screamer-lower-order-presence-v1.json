@@ -1,0 +1,245 @@
+{
+  "claim_boundary": "exploratory lower-order presence/absence audit only; no ranking and no mechanistic inference",
+  "mask_semantics": "0=retained,1=zeroed",
+  "regions": {
+    "body": {
+      "I_AB": {
+        "first_nonzero_frame": null,
+        "l2": 0.0,
+        "literal_nonzero_count": 0,
+        "literal_zero": true,
+        "max_abs": 0.0,
+        "shape": [
+          192,
+          3
+        ]
+      },
+      "I_ABC": {
+        "first_nonzero_frame": null,
+        "l2": 0.0,
+        "literal_nonzero_count": 0,
+        "literal_zero": true,
+        "max_abs": 0.0,
+        "shape": [
+          192,
+          3
+        ]
+      },
+      "I_AC": {
+        "first_nonzero_frame": null,
+        "l2": 0.0,
+        "literal_nonzero_count": 0,
+        "literal_zero": true,
+        "max_abs": 0.0,
+        "shape": [
+          192,
+          3
+        ]
+      },
+      "I_BC": {
+        "first_nonzero_frame": null,
+        "l2": 0.0,
+        "literal_nonzero_count": 0,
+        "literal_zero": true,
+        "max_abs": 0.0,
+        "shape": [
+          192,
+          3
+        ]
+      },
+      "M_A": {
+        "first_nonzero_frame": 125,
+        "l2": 2.2637745393570062e-05,
+        "literal_nonzero_count": 67,
+        "literal_zero": false,
+        "max_abs": 5.830753194491223e-06,
+        "shape": [
+          192,
+          3
+        ]
+      },
+      "M_B": {
+        "first_nonzero_frame": 124,
+        "l2": 0.0005522625330273663,
+        "literal_nonzero_count": 68,
+        "literal_zero": false,
+        "max_abs": 0.00010991192539222538,
+        "shape": [
+          192,
+          3
+        ]
+      },
+      "M_C": {
+        "first_nonzero_frame": 127,
+        "l2": 8.509092912011771e-07,
+        "literal_nonzero_count": 65,
+        "literal_zero": false,
+        "max_abs": 2.9374905352597125e-07,
+        "shape": [
+          192,
+          3
+        ]
+      }
+    },
+    "frontier": {
+      "I_AB": {
+        "first_nonzero_frame": null,
+        "l2": 0.0,
+        "literal_nonzero_count": 0,
+        "literal_zero": true,
+        "max_abs": 0.0,
+        "shape": [
+          192,
+          18
+        ]
+      },
+      "I_ABC": {
+        "first_nonzero_frame": null,
+        "l2": 0.0,
+        "literal_nonzero_count": 0,
+        "literal_zero": true,
+        "max_abs": 0.0,
+        "shape": [
+          192,
+          18
+        ]
+      },
+      "I_AC": {
+        "first_nonzero_frame": null,
+        "l2": 0.0,
+        "literal_nonzero_count": 0,
+        "literal_zero": true,
+        "max_abs": 0.0,
+        "shape": [
+          192,
+          18
+        ]
+      },
+      "I_BC": {
+        "first_nonzero_frame": null,
+        "l2": 0.0,
+        "literal_nonzero_count": 0,
+        "literal_zero": true,
+        "max_abs": 0.0,
+        "shape": [
+          192,
+          18
+        ]
+      },
+      "M_A": {
+        "first_nonzero_frame": null,
+        "l2": 0.0,
+        "literal_nonzero_count": 0,
+        "literal_zero": true,
+        "max_abs": 0.0,
+        "shape": [
+          192,
+          18
+        ]
+      },
+      "M_B": {
+        "first_nonzero_frame": null,
+        "l2": 0.0,
+        "literal_nonzero_count": 0,
+        "literal_zero": true,
+        "max_abs": 0.0,
+        "shape": [
+          192,
+          18
+        ]
+      },
+      "M_C": {
+        "first_nonzero_frame": null,
+        "l2": 0.0,
+        "literal_nonzero_count": 0,
+        "literal_zero": true,
+        "max_abs": 0.0,
+        "shape": [
+          192,
+          18
+        ]
+      }
+    },
+    "primary": {
+      "I_AB": {
+        "first_nonzero_frame": null,
+        "l2": 0.0,
+        "literal_nonzero_count": 0,
+        "literal_zero": true,
+        "max_abs": 0.0,
+        "shape": [
+          192,
+          1191
+        ]
+      },
+      "I_ABC": {
+        "first_nonzero_frame": null,
+        "l2": 0.0,
+        "literal_nonzero_count": 0,
+        "literal_zero": true,
+        "max_abs": 0.0,
+        "shape": [
+          192,
+          1191
+        ]
+      },
+      "I_AC": {
+        "first_nonzero_frame": null,
+        "l2": 0.0,
+        "literal_nonzero_count": 0,
+        "literal_zero": true,
+        "max_abs": 0.0,
+        "shape": [
+          192,
+          1191
+        ]
+      },
+      "I_BC": {
+        "first_nonzero_frame": null,
+        "l2": 0.0,
+        "literal_nonzero_count": 0,
+        "literal_zero": true,
+        "max_abs": 0.0,
+        "shape": [
+          192,
+          1191
+        ]
+      },
+      "M_A": {
+        "first_nonzero_frame": 125,
+        "l2": 2.2637745393570062e-05,
+        "literal_nonzero_count": 67,
+        "literal_zero": false,
+        "max_abs": 5.830753194491223e-06,
+        "shape": [
+          192,
+          1191
+        ]
+      },
+      "M_B": {
+        "first_nonzero_frame": 124,
+        "l2": 0.0005522625330273663,
+        "literal_nonzero_count": 68,
+        "literal_zero": false,
+        "max_abs": 0.00010991192539222538,
+        "shape": [
+          192,
+          1191
+        ]
+      },
+      "M_C": {
+        "first_nonzero_frame": 127,
+        "l2": 8.509092912011771e-07,
+        "literal_nonzero_count": 65,
+        "literal_zero": false,
+        "max_abs": 2.9374905352597125e-07,
+        "shape": [
+          192,
+          1191
+        ]
+      }
+    }
+  },
+  "schema_version": "moscaquant.sq09-pattern-screamer-lower-order-presence/v1",
+  "source_npz_sha256": "e95f054e827cf1232ef72019692e4bcfc099214a654e1a3267f0f41cfc66abfb"
+}

@@ -1,0 +1,47 @@
+{
+  "body_positions_in_primary": {
+    "126002": [
+      1060
+    ],
+    "137122": [
+      1154
+    ],
+    "317": [
+      53
+    ]
+  },
+  "body_responder_indices": [
+    137122,
+    317,
+    126002
+  ],
+  "claim_boundary": "support-localization audit only; no mechanistic inference",
+  "schema_version": "moscaquant.sq09-pattern-screamer-support-audit/v1",
+  "source_npz_sha256": "e95f054e827cf1232ef72019692e4bcfc099214a654e1a3267f0f41cfc66abfb",
+  "terms": {
+    "M_A": {
+      "body_effect_equals_primary_slice": true,
+      "changed_primary_column_count": 1,
+      "changed_primary_nodes": [
+        137122
+      ],
+      "nonzero_values_outside_body_responders": 0
+    },
+    "M_B": {
+      "body_effect_equals_primary_slice": true,
+      "changed_primary_column_count": 1,
+      "changed_primary_nodes": [
+        317
+      ],
+      "nonzero_values_outside_body_responders": 0
+    },
+    "M_C": {
+      "body_effect_equals_primary_slice": true,
+      "changed_primary_column_count": 1,
+      "changed_primary_nodes": [
+        126002
+      ],
+      "nonzero_values_outside_body_responders": 0
+    }
+  }
+}
