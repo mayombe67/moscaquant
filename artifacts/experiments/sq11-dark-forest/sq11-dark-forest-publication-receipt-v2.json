@@ -1,0 +1,47 @@
+{
+  "all_deterministic_duplicate_pairs_exact": true,
+  "analysis": {
+    "authorized_here": false,
+    "performed": false
+  },
+  "authorization": {
+    "git_commit": "ca11b692b207e4e4dd51323b9e656ed07ad836bc",
+    "path": "config/controls/sq11-dark-forest-execution-authorization-v1.json",
+    "sha256": "7fde9c5bfb7e5d8caabd62fe90bfc61010e232db1d2a34dc4c88abfd86041578"
+  },
+  "codename": "DARK FOREST",
+  "evidence": {
+    "overwrite_performed": false,
+    "path": "artifacts/experiments/sq11-dark-forest/sq11-dark-forest-evidence-v2.npz",
+    "sha256": "cef49b5e581d6c9b2f21aafc701d06e8d53b0abc03f8453c9fe6c5d19ede9c37"
+  },
+  "execution_authorized_here": false,
+  "execution_control_plane_git_sha": "fea329949fda946a116cc3fac1225bca14084395",
+  "execution_manifest_sha256": "f3397d6a498460ff4785df54fd7d31cd8595f5057057ca34431268e2219ee496",
+  "experiment": "SQ-11",
+  "independent_verification": {
+    "baseline_binding_verified": true,
+    "post_publication": "PASS",
+    "pre_publication": "PASS"
+  },
+  "launch_seal": {
+    "path": "config/controls/sq11-dark-forest-launch-seal-v1.json",
+    "sha256": "d1d2d8bcf92201d781e8a9d654205d392189ce02c3941525520e76bf2cdcdb70"
+  },
+  "launcher": {
+    "git_commit": "8932994af6bb3e6592ae74b093a0e499e5aec3f1",
+    "path": "brain/sq11_dark_forest_execute.py",
+    "sha256": "31dfb5619e6870d64f321f6d5466b78e6ee57b9c24222b6d3bd5c564de2e08b8"
+  },
+  "replay": {
+    "absolute_tolerance": 0.0,
+    "dtype": "float32",
+    "relative_tolerance": 0.0,
+    "structural_lesion_semantics": true,
+    "version": 2
+  },
+  "schema_version": "moscaquant.sq11-dark-forest-execution-receipt/v1",
+  "science_git_sha": "f8efca347e4165f123f0de43019eca7d26b05dc4",
+  "status": "FROZEN_EXECUTION_COMPLETE",
+  "work_units_executed": 16
+}
