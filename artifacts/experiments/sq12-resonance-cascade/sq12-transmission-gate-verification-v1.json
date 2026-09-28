@@ -1,0 +1,64 @@
+{
+  "claim_boundary": "frozen MoscaQuant computational runtime only; no biological, behavioral, cognitive, organism-level, market, or financial claim",
+  "codename": "RESONANCE CASCADE",
+  "conclusion": "Within the frozen 192-frame runtime, the BODY perturbations change local responder state but never change a transmissible BODY responder state. Downstream neural execution is not required to establish closure of this propagation question.",
+  "evidence_exactness": {
+    "responder_fired": {
+      "per_mask": {
+        "000": 0,
+        "001": 0,
+        "010": 0,
+        "011": 0,
+        "100": 0,
+        "101": 0,
+        "110": 0,
+        "111": 0
+      },
+      "total_mismatches_vs_000": 0
+    },
+    "responder_spikes_post_commit": {
+      "per_mask": {
+        "000": 0,
+        "001": 0,
+        "010": 0,
+        "011": 0,
+        "100": 0,
+        "101": 0,
+        "110": 0,
+        "111": 0
+      },
+      "total_mismatches_vs_000": 0
+    },
+    "source_effective_activity_pre_synaptic": {
+      "per_mask": {
+        "000": 0,
+        "001": 0,
+        "010": 0,
+        "011": 0,
+        "100": 0,
+        "101": 0,
+        "110": 0,
+        "111": 0
+      },
+      "total_mismatches_vs_000": 0
+    }
+  },
+  "experiment": "SQ-12",
+  "graded_boundary": {
+    "all_body_responders_non_graded": true,
+    "body_responder_count": 3,
+    "graded_overlap": []
+  },
+  "neural_execution_performed": false,
+  "provenance_sha256": {
+    "evidence": "cef49b5e581d6c9b2f21aafc701d06e8d53b0abc03f8453c9fe6c5d19ede9c37",
+    "gate": "916cb99c1bec589467c6ab6fbff79289d0d0d52c6e2110e95b4d7964f24dd065",
+    "graded": "1c514bf58bf69b24bfba28489344d0fe3e0f7590d649e0ef446c33898d38e379",
+    "runtime": "bf754a29155ade789349fbdfc3c579f1b2c8dbea3c63804f2cf3d858d0a2f605",
+    "topology": "eae563550ea12bcb6be7a4612edb7856dcdf26291b6f2c7b0d90eb2bc025ae7e"
+  },
+  "runtime_semantics_verified": true,
+  "schema_version": "moscaquant.sq12-resonance-cascade-transmission-gate-verification/v1",
+  "status": "INDEPENDENT_VERIFICATION_PASS",
+  "verified_classification": "TRANSMISSION_GATE_CLOSED_192_FRAMES"
+}
