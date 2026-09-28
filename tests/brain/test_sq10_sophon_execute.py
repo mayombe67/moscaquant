@@ -214,3 +214,24 @@ def test_launch_seal_rejects_wrong_launcher_sha():
             observed_launcher_sha=
                 "1" * 64,
         )
+
+
+def test_actual_launch_seal_binds_this_launcher():
+    from brain.sq10_sophon_execute import (
+        LAUNCH_SEAL,
+        verify_launch_seal,
+    )
+
+    assert LAUNCH_SEAL.is_file()
+
+    payload = verify_launch_seal()
+
+    assert (
+        payload["launcher"]["sha256"]
+        == sha256_file(
+            Path(
+                "brain/"
+                "sq10_sophon_execute.py"
+            )
+        )
+    )

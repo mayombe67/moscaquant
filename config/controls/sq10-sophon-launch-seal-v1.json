@@ -1,0 +1,26 @@
+{
+  "analysis": {
+    "authorized_here": false,
+    "performed": false
+  },
+  "authorization": {
+    "git_commit": "1715d39",
+    "path": "config/controls/sq10-sophon-execution-authorization-v1.json",
+    "sha256": "6194e09f7c62bb4a3d6580445464494db17cca6e188fbd1a999849a671f59ec2"
+  },
+  "codename": "SOPHON",
+  "evidence_destination": {
+    "overwrite_existing": false,
+    "path": "artifacts/experiments/sq10-sophon/sq10-sophon-evidence-v1.npz"
+  },
+  "execution_manifest_sha256": "59246348becc4d501dd6ef18b629be304a702f73ab95d2e9e1d4299d4d23b2d9",
+  "execution_performed": false,
+  "experiment": "SQ-10",
+  "launcher": {
+    "git_commit": "3985e67932f18da00dcdc44b137a1e4af9195405",
+    "path": "brain/sq10_sophon_execute.py",
+    "sha256": "e0bbb6faf7e8aac76cccaeb02a777df675c8b935e894446a7cd6fbc7318cce84"
+  },
+  "schema_version": "moscaquant.sq10-sophon-launch-seal/v1",
+  "status": "SEALED_FOR_FROZEN_EXECUTION"
+}
