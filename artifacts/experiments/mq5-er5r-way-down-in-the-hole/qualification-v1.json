@@ -1,0 +1,23 @@
+{
+  "arm_c_stimulus_sha256": "e8af8077d7d4c13431f7ad3fa05d81e2009263d9a5cb0e7dd800e889ea61ec8a",
+  "c13_onsets": {
+    "51": 150,
+    "55": 145,
+    "92": 141,
+    "129": 149,
+    "317": 156,
+    "656": 141,
+    "1273": 149,
+    "126002": 151,
+    "137122": 151
+  },
+  "candidate_discovery": false,
+  "candidate_identities_exposed": false,
+  "codename": "WAY DOWN IN THE HOLE",
+  "experiment": "mq5-er5r-way-down-in-the-hole-v1",
+  "financial_semantics": "NOT ASSIGNED",
+  "orientation_audit_sha256": "5e441e0027dd40363705ebcf914d5f3d53245efbde2bc91129cd8cbfac82b11f",
+  "orientation_contract": "PASS",
+  "result_execution": false,
+  "status": "KNOWN-REPLAY-VERIFIED"
+}
