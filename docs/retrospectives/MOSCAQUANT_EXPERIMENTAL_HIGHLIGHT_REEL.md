@@ -1402,3 +1402,26 @@ without manufacturing a qualification receipt.
 **Lore:** Checking the prop gun does not clear the whole crime scene.
 
 [Source review and remaining execution gates](../experiments/mq5-er6r-the-corner-source-review.md).
+
+## THE CORNER — the inspector left footprints
+
+**Importance:** CONTROL-PLANE CORRECTION / APOTHEOSIS #34
+
+The image-release controller refused a clean-worktree precondition. Inspection
+reproduced a trap: importing its helper could create Python bytecode before
+the controller checked Git status, and a later broad source-inclusion rule
+exposed that generated cache to the gate. Verification could dirty the very
+evidence it wanted to inspect. The operator's full changed-path list remains
+unobserved; the reproduced defect does not exclude another local change.
+
+**APOTHEOSIS #34 — VERIFICATION MUST PRESERVE ITS PRECONDITIONS**
+
+Suppress incidental mutations during verification, keep generated artifacts
+outside source-integrity checks, and prove that real source edits remain
+visible. Three tests exercise actual temporary Git repositories instead of
+mocking away the ignore-rule boundary. All 17 focused controller tests pass.
+The failure occurred before AWS publication; no scientific outcome was produced.
+
+**Lore:** The inspector cannot plant footprints and call them evidence.
+
+See [the canonical ledger entry](../EXPERIMENT_LEDGER.md).

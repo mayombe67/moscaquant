@@ -962,3 +962,25 @@ Mock wiring, native synthetic runtime behavior, frozen-data acceptance, and
 authoritative durable handoff are distinct evidence boundaries. Passing one
 cannot qualify the others. THE CORNER adds native-runtime contract tests and
 a readiness inventory that never grants qualification or execution authority.
+
+### APOTHEOSIS #34 — Verification Must Preserve Its Preconditions
+
+THE CORNER's first image-release invocation refused at its clean-worktree gate.
+An independently reproduced control-plane defect showed that verification
+could create helper-import bytecode before inspecting cleanliness; a broad
+source-inclusion rule made those generated caches visible as untracked files.
+The operator's precise changed-path list was not yet inspected, so additional
+local changes remain possible.
+
+Verification must not invalidate the state it is about to verify. Imports,
+caches, probes, logs, and receipts need deliberate mutation boundaries.
+Exclude disposable generated files while retaining checks on authoritative
+source and contracts. Reproduce real repository rules in executable acceptance
+regressions whenever those rules affect the gate.
+
+The correction suppresses bytecode writes before helper import, restores cache
+exclusions after source inclusion, and reports actual changed paths on refusal.
+Three real-Git regressions prove clean startup, existing-cache exclusion, and
+continued visibility of actual source/contract edits; 14 existing controller
+tests also pass. The refused invocation reached no AWS publication. This is
+operational evidence only; no neural result or scientific endpoint changed.
