@@ -1,0 +1,105 @@
+{
+  "apotheosis": {
+    "inherited": {
+      "name": "DIRECTION IS PART OF THE MODEL",
+      "number": 29
+    },
+    "operational_lessons": [
+      {
+        "name": "THE SHELL IS NOT THE PROTOCOL",
+        "number": 30
+      },
+      {
+        "name": "WRITE PATHS ARE PART OF THE RUNTIME CONTRACT",
+        "number": 31
+      }
+    ]
+  },
+  "authority_chain": {
+    "authorization_v2_sha256": "f2ec1a7f23ff804c0c90e815cd2196205e6c9d807eed75d9da1db36d62c5c5a5",
+    "image_lock_v2_sha256": "08f7524668a29e27fce74413a979d8c639e40adc56e3a0860be89834ac74fc10",
+    "runtime_acceptance_v2_sha256": "bb63d7763269ea5d59c3d3835eddab52ff11c53c742fccbf368f3b3b9cf1b74e"
+  },
+  "claim_boundary": {
+    "biological_identity": false,
+    "causal_necessity": false,
+    "causal_sufficiency": false,
+    "cognition": false,
+    "corrected_upstream_discovery": true,
+    "financial_usefulness": false,
+    "intent": false,
+    "market_understanding": false,
+    "predictive_value": false,
+    "profitability": false,
+    "unique_control": false
+  },
+  "classification": "GREEK_FOCUSED_COORDINATOR_CANDIDATE",
+  "codename": "WAY DOWN IN THE HOLE",
+  "correction_provenance": {
+    "historical_greek_result_seal_sha256": "63fb631e661ff054e28869f0c784eddea088ab8c3307a0c82bc5d55a40b94ee9",
+    "historical_greek_result_sha256": "1ed37ae6d4e19cd39409a2bb714ed7394236d2a273316005c6ae596e5d837790",
+    "orientation_audit_sha256": "5e441e0027dd40363705ebcf914d5f3d53245efbde2bc91129cd8cbfac82b11f",
+    "orientation_contract": "PASS"
+  },
+  "execution": {
+    "attempt_id": "attempt-1",
+    "aws_batch_job_id": "68b50445-6937-4f97-8042-98c99745f355",
+    "aws_batch_status": "SUCCEEDED",
+    "cloudwatch_log_sha256": "4734c980aaf30a9c9f2405ed729386f2db6af5ebc11c8be731d744083e185415",
+    "execution_evidence_sha256": "e2e0177fedc70d264c8b9403414e6e5e7d03945390ec470e5ddaed0c244b8b34",
+    "execution_id": "wotm-way-down-r2-b2d62968155f",
+    "execution_ops_git_sha": "39ab30b232f19dbd7d6aa939f1ea3ebe8c00be3e",
+    "image_digest": "sha256:106578a7bb1e7b7c126ee098b751ac870b95fc52d1a40e02711c2305596c8b31",
+    "job_definition_arn": "arn:aws:batch:us-east-2:249215389153:job-definition/moscaquant-rasputin-way-down:2",
+    "ops_result_freeze_commit": "ae1d77d98635d409f8bb800efa7f6ed26e867c88"
+  },
+  "experiment": "mq5-er5r-way-down-in-the-hole-v1",
+  "historical_identity_comparison": {
+    "corrected_top_five": [
+      1952,
+      1963,
+      2641,
+      1944,
+      23640
+    ],
+    "historical_candidate_priority": false,
+    "historical_top_five": [
+      1952,
+      2641,
+      1963,
+      1944,
+      23640
+    ],
+    "rank_order_identical": false,
+    "same_top_five_set": true,
+    "same_top_ranked_identity": true
+  },
+  "next_science": {
+    "pinch_automatically_activated": false,
+    "pine_barrens_activated": false,
+    "required_next_step": "Explicit causal-preregistration suitability review for historical MQ-5.ER.6 THE PINCH."
+  },
+  "result": {
+    "causal_claims_authorized": false,
+    "eligible_candidate_count": 17330,
+    "financial_semantics": "NOT ASSIGNED",
+    "s3_uri": "s3://moscaquant-rasputin-artifacts-249215389153/raid/way-down-in-the-hole/wotm-way-down-r2-b2d62968155f/result-v2.json",
+    "sha256": "3c56719c4bd87f45206c16326779386e22c55955a189d45ae6ca6f5dddb0ffbc",
+    "top_candidate_nodes": [
+      1952,
+      1963,
+      2641,
+      1944,
+      23640
+    ],
+    "top_k": 5
+  },
+  "schema_version": "moscaquant.mq5-er5r-way-down-in-the-hole-result-seal.v1",
+  "scientific_execution_sha": "b2d62968155f9d386761e857beb689859c061d51",
+  "specificity": {
+    "affected_set_specificity_established": false,
+    "all_top_five_affected_coverage": "5/5",
+    "all_top_five_retained_coverage": "4/4"
+  },
+  "status": "SEALED_AUTHORITATIVE_CORRECTED_DISCOVERY_RESULT"
+}
