@@ -1,0 +1,75 @@
+experiment_id = "mq5-er5r-way-down-in-the-hole-v1"
+codename = "WAY DOWN IN THE HOLE"
+kind = "corrected_discovery"
+financial_semantics = "NOT ASSIGNED"
+
+frames = 192
+result_execution_enabled = false
+
+scientific_parent_experiment = "mq5-er4-the-stevedores-v1"
+scientific_parent_result_sha256 = "4de3cd6f52782908fc7afad853a5db0e0a1595923de1965c0b47606b5329f5dc"
+
+historical_experiment = "mq5-er5-the-greek-v1"
+historical_result_sha256 = "1ed37ae6d4e19cd39409a2bb714ed7394236d2a273316005c6ae596e5d837790"
+historical_result_seal_sha256 = "63fb631e661ff054e28869f0c784eddea088ab8c3307a0c82bc5d55a40b94ee9"
+
+orientation_audit_sha256 = "5e441e0027dd40363705ebcf914d5f3d53245efbde2bc91129cd8cbfac82b11f"
+
+arm_c_stimulus_sha256 = "e8af8077d7d4c13431f7ad3fa05d81e2009263d9a5cb0e7dd800e889ea61ec8a"
+
+affected_targets = [55, 92, 656, 126002, 137122]
+retained_dependency_comparisons = [51, 129, 317, 1273]
+all_targets = [51, 55, 92, 129, 317, 656, 1273, 126002, 137122]
+
+max_backward_hops = 3
+top_k = 5
+focused_min_affected_coverage = 4
+
+[c13_onsets]
+"51" = 150
+"55" = 145
+"92" = 141
+"129" = 149
+"317" = 156
+"656" = 141
+"1273" = 149
+"126002" = 151
+"137122" = 151
+
+[orientation]
+matrix_semantics = "graph[post, pre] = pre -> post"
+reverse_ancestry_storage = "csr_rows"
+csc_column_reverse_ancestry_allowed = false
+require_executable_tiny_graph_contract = true
+
+[historical_candidate_neutrality]
+nodes = [1952, 2641, 1963, 1944, 23640]
+seeded = false
+prioritized = false
+required = false
+excluded_because_historical = false
+
+[classification]
+focused_label = "GREEK_FOCUSED_COORDINATOR_CANDIDATE"
+distributed_label = "GREEK_DISTRIBUTED_COORDINATOR_PATTERN"
+none_label = "NO_CLEAR_GREEK_COORDINATOR"
+
+[stopping_rule]
+focused_requires_new_preregistered_causal_test = true
+distributed_requires_new_preregistered_causal_test = true
+none_closes_branch = true
+allow_threshold_lowering_after_result = false
+allow_hop_expansion_after_result = false
+allow_top_k_expansion_after_result = false
+allow_candidate_reroll = false
+allow_alternate_traversal = false
+
+[integrity]
+require_exact_c13_onsets = true
+require_orientation_audit_hash = true
+require_tiny_graph_orientation_contract = true
+require_clean_worktree = true
+require_tracked_files = true
+require_result_artifact_absent = true
+require_separate_authorization_commit = true
+require_rasputin_authoritative_execution = true
