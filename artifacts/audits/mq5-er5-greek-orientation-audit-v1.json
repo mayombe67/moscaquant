@@ -1,0 +1,272 @@
+{
+  "all_sealed_signatures_reproduced": true,
+  "audit": "mq5-er5-the-greek-orientation-audit-v1",
+  "audit_git_head": "5f9e282e59afb3ceb69aac782bbac542c69e1f14",
+  "candidate_nodes": [
+    1952,
+    2641,
+    1963,
+    1944,
+    23640
+  ],
+  "candidate_reranking": false,
+  "claim_boundary": {
+    "corrected_winner_determined": false,
+    "pinch_authorized": false,
+    "pine_barrens_authorized": false,
+    "sealed_greek_bytes_modified": false
+  },
+  "classification": "GREEK_ORIENTATION_DEFECT_CONFIRMED_ALL_TOP5",
+  "connectome_convention": "graph[post, pre] = pre -> post",
+  "greek_result_seal_sha256": "63fb631e661ff054e28869f0c784eddea088ab8c3307a0c82bc5d55a40b94ee9",
+  "greek_result_sha256": "1ed37ae6d4e19cd39409a2bb714ed7394236d2a273316005c6ae596e5d837790",
+  "greek_runner_sha256": "dedc89fcf695689136ab9b45ee6028a0e6acc96fe85cc1b8b3d1444c95c80de1",
+  "kind": "STRUCTURAL SEMANTICS AUDIT",
+  "max_hops": 3,
+  "mismatching_top5_count": 5,
+  "neural_execution": false,
+  "new_candidate_search": false,
+  "rows": [
+    {
+      "correct_reverse_signature": [
+        2,
+        3,
+        2,
+        3,
+        3,
+        2,
+        2,
+        3,
+        2
+      ],
+      "difference_count": 2,
+      "differences": [
+        {
+          "correct_reverse_hops": 3,
+          "sealed_greek_hops": 2,
+          "target": 129
+        },
+        {
+          "correct_reverse_hops": 3,
+          "sealed_greek_hops": 2,
+          "target": 126002
+        }
+      ],
+      "identical": false,
+      "node": 1952,
+      "sealed_signature": [
+        2,
+        3,
+        2,
+        2,
+        3,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "correct_reverse_signature": [
+        2,
+        2,
+        2,
+        3,
+        3,
+        2,
+        2,
+        3,
+        2
+      ],
+      "difference_count": 2,
+      "differences": [
+        {
+          "correct_reverse_hops": 3,
+          "sealed_greek_hops": 2,
+          "target": 129
+        },
+        {
+          "correct_reverse_hops": 3,
+          "sealed_greek_hops": 2,
+          "target": 126002
+        }
+      ],
+      "identical": false,
+      "node": 2641,
+      "sealed_signature": [
+        2,
+        2,
+        2,
+        2,
+        3,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "correct_reverse_signature": [
+        2,
+        2,
+        2,
+        3,
+        3,
+        2,
+        2,
+        3,
+        2
+      ],
+      "difference_count": 4,
+      "differences": [
+        {
+          "correct_reverse_hops": 3,
+          "sealed_greek_hops": 2,
+          "target": 129
+        },
+        {
+          "correct_reverse_hops": 3,
+          "sealed_greek_hops": 2,
+          "target": 317
+        },
+        {
+          "correct_reverse_hops": 2,
+          "sealed_greek_hops": 1,
+          "target": 656
+        },
+        {
+          "correct_reverse_hops": 3,
+          "sealed_greek_hops": 2,
+          "target": 126002
+        }
+      ],
+      "identical": false,
+      "node": 1963,
+      "sealed_signature": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "correct_reverse_signature": [
+        2,
+        2,
+        2,
+        2,
+        3,
+        2,
+        2,
+        3,
+        2
+      ],
+      "difference_count": 4,
+      "differences": [
+        {
+          "correct_reverse_hops": 2,
+          "sealed_greek_hops": 3,
+          "target": 92
+        },
+        {
+          "correct_reverse_hops": 3,
+          "sealed_greek_hops": 2,
+          "target": 317
+        },
+        {
+          "correct_reverse_hops": 2,
+          "sealed_greek_hops": 1,
+          "target": 656
+        },
+        {
+          "correct_reverse_hops": 3,
+          "sealed_greek_hops": 2,
+          "target": 126002
+        }
+      ],
+      "identical": false,
+      "node": 1944,
+      "sealed_signature": [
+        2,
+        2,
+        3,
+        2,
+        2,
+        1,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "correct_reverse_signature": [
+        2,
+        3,
+        2,
+        3,
+        3,
+        2,
+        2,
+        3,
+        3
+      ],
+      "difference_count": 5,
+      "differences": [
+        {
+          "correct_reverse_hops": 2,
+          "sealed_greek_hops": 3,
+          "target": 92
+        },
+        {
+          "correct_reverse_hops": 3,
+          "sealed_greek_hops": 2,
+          "target": 317
+        },
+        {
+          "correct_reverse_hops": 2,
+          "sealed_greek_hops": 1,
+          "target": 1273
+        },
+        {
+          "correct_reverse_hops": 3,
+          "sealed_greek_hops": 2,
+          "target": 126002
+        },
+        {
+          "correct_reverse_hops": 3,
+          "sealed_greek_hops": 2,
+          "target": 137122
+        }
+      ],
+      "identical": false,
+      "node": 23640,
+      "sealed_signature": [
+        2,
+        3,
+        3,
+        3,
+        2,
+        2,
+        1,
+        2,
+        2
+      ]
+    }
+  ],
+  "targets": [
+    51,
+    55,
+    92,
+    129,
+    317,
+    656,
+    1273,
+    126002,
+    137122
+  ]
+}
