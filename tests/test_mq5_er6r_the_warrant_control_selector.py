@@ -245,12 +245,14 @@ def test_reverse_hop_array_obeys_declared_orientation():
     assert int(observed[3]) == -1
 
 
-def test_real_control_selection_remains_disabled():
-    with pytest.raises(
-        warrant.ControlSelectionError,
-        match="authorization missing",
-    ):
-        warrant.require_control_selection_authorization()
+def test_real_control_selection_authorization_excludes_neural_execution():
+    authorization = warrant.require_control_selection_authorization()
+
+    assert authorization["control_selection_authorized"] is True
+    assert authorization["neural_execution_authorized"] is False
+    assert authorization["result_execution_authorized"] is False
+    assert authorization["alternate_control_fishing_authorized"] is False
+    assert authorization["selector_relaxation_authorized"] is False
 
 
 def test_rank_contract_prefers_exact_hop_match():
