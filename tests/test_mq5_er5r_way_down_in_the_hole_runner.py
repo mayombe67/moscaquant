@@ -238,20 +238,32 @@ def test_classification_none():
     )
 
 
-def test_execution_gate_refuses_before_authorization():
+def test_execution_gate_contract_after_authorization():
     protocol = wd.load_protocol()
 
+    #
+    # Canonical config is now explicitly authorized.
+    #
     assert (
         protocol[
             "result_execution_enabled"
         ]
-        is False
+        is True
     )
+
+    #
+    # The gate itself must still fail closed if handed
+    # an otherwise identical disabled protocol.
+    #
+    disabled = dict(protocol)
+    disabled[
+        "result_execution_enabled"
+    ] = False
 
     with pytest.raises(
         wd.WayDownError,
         match="result_execution_enabled",
     ):
         wd.execution_gate(
-            protocol
+            disabled
         )
