@@ -744,3 +744,57 @@ Independent-verification SHA-256:
 
 Financial semantics remain `NOT ASSIGNED`.
 
+
+
+### MQ-5.ER.5 post-seal audit — THE GREEK orientation defect
+
+Authoritative audit status: **SEALED**
+
+Classification:
+
+`GREEK_ORIENTATION_DEFECT_CONFIRMED_ALL_TOP5`
+
+A fail-closed integrity check during preparation of MQ-5.ER.6 — THE PINCH
+identified a structural-hop mismatch for node `1952`.
+
+A separately frozen structural audit subsequently reproduced all five sealed
+GREEK hop signatures exactly and then compared them against reverse ancestry
+under the project's declared connectome convention:
+
+`graph[post, pre] = pre -> post`
+
+All five sealed top-ranked candidates disagreed with the correct orientation
+semantics.
+
+Mismatch counts were:
+
+- `1952`: `2`
+- `2641`: `2`
+- `1963`: `4`
+- `1944`: `4`
+- `23640`: `5`
+
+The original THE GREEK result and seal remain immutable historical artifacts.
+
+However, `GREEK_FOCUSED_COORDINATOR_CANDIDATE` no longer supports the intended
+upstream-coordinator interpretation because the historical candidate search
+traversed the connectome in the wrong direction.
+
+THE PINCH and PINE BARRENS remain blocked and produced no neural result.
+
+Audit artifact SHA-256:
+
+`5e441e0027dd40363705ebcf914d5f3d53245efbde2bc91129cd8cbfac82b11f`
+
+The corrected discovery experiment is reserved as:
+
+**MQ-5.ER.5R — WAY DOWN IN THE HOLE**
+
+### APOTHEOSIS #29 — Direction Is Part of the Model
+
+Any graph-derived scientific claim must bind traversal direction to the model's
+declared edge orientation and prove that relationship with an executable
+minimal-graph contract.
+
+Exact reproduction of a misoriented implementation does not validate the
+intended scientific semantics.

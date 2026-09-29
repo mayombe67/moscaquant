@@ -1232,3 +1232,52 @@ Hahn updates the performance review:
 Science first.
 
 Lulz a very close second.
+
+
+## THE GREEK — We Had the Map Backwards
+
+**Reference:** MQ-5.ER.5 post-seal orientation-semantics audit.
+
+**Importance:** CORRECTION / APOTHEOSIS #29
+
+**Science:** Preparation of THE PINCH failed closed when node `1952` did not
+reproduce its sealed GREEK hop signature under the declared connectome
+orientation. A dedicated structural audit reproduced the historical GREEK
+outputs exactly, then demonstrated that all five emitted top candidates had
+been traversed using the opposite graph direction from the intended upstream
+reverse-ancestry search.
+
+The original result bytes remain sealed historical evidence of what that
+implementation computed. They no longer support the intended upstream
+coordinator interpretation.
+
+No PINCH outcome existed to discard. No matched control had been selected.
+PINE BARRENS had not executed.
+
+**APOTHEOSIS #29 — DIRECTION IS PART OF THE MODEL**
+
+A traversal can be deterministic, reproducible, hash-sealed, independently
+replayed, and still answer the wrong scientific question if its edge direction
+does not match the model semantics.
+
+**Lore:** Lester studies the corkboard for a long time.
+
+McNulty points at `1952`.
+
+"So that's not The Greek?"
+
+Lester turns the board around.
+
+"We weren't following his calls."
+
+A pause.
+
+"We were following everybody he called."
+
+Daniels takes the marker away from McNulty.
+
+Nobody gets promoted.
+
+Somewhere underneath Baltimore, a bass line starts.
+
+**WAY DOWN IN THE HOLE**
