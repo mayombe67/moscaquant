@@ -36,7 +36,7 @@ SELECTOR = (
 OUTPUT = (
     ROOT
     / "artifacts/qualification/"
-    "mq5-er6r-the-warrant-selector-qualification-v1.json"
+    "mq5-er6r-the-warrant-selector-qualification-v2.json"
 )
 
 EXPECTED_CONFIG_SHA256 = (
@@ -50,12 +50,12 @@ EXPECTED_PROTOCOL_SHA256 = (
 )
 
 EXPECTED_SELECTOR_SHA256 = (
-    "2fb9d1b4e275599b67dea818fc7eba09"
-    "7eaaf76807daa1482c4aeda33084a31b"
+    "c0c1df6d31ec32e641d2fa95d9fb76"
+    "e418beaf0342d7ee2dfbb8ccf663496c22"
 )
 
 SELECTOR_FREEZE_GIT_SHA = (
-    "ed5a7a0ff9955b1c156551e22eebd97730f765b7"
+    "83bd7e77912a4b7c63bd949369444df0d471e60d"
 )
 
 
@@ -413,11 +413,23 @@ def qualify() -> dict:
             "no structurally eligible control universe"
         )
 
+    if eligible_control_count != 149893:
+        raise QualificationError(
+            "eligible-control universe drift: "
+            f"{eligible_control_count} != 149893"
+        )
+
+    if exact_hop_signature_match_count != 1885:
+        raise QualificationError(
+            "exact-hop-match universe drift: "
+            f"{exact_hop_signature_match_count} != 1885"
+        )
+
     return {
         "schema_version":
             "moscaquant."
             "mq5-er6r-the-warrant-"
-            "selector-qualification/v1",
+            "selector-qualification/v2",
 
         "experiment":
             "mq5-er6r-the-warrant-v1",

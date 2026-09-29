@@ -15,13 +15,13 @@ def test_qualification_binds_frozen_selector():
     assert (
         q.EXPECTED_SELECTOR_SHA256
         ==
-        "2fb9d1b4e275599b67dea818fc7eba097eaaf76807daa1482c4aeda33084a31b"
+        "c0c1df6d31ec32e641d2fa95d9fb76e418beaf0342d7ee2dfbb8ccf663496c22"
     )
 
     assert (
         q.SELECTOR_FREEZE_GIT_SHA
         ==
-        "ed5a7a0ff9955b1c156551e22eebd97730f765b7"
+        "83bd7e77912a4b7c63bd949369444df0d471e60d"
     )
 
 
@@ -104,3 +104,37 @@ def test_expected_corrected_signature():
         3,
         2,
     )
+
+
+
+def test_v2_qualification_destination():
+    assert (
+        q.OUTPUT.name
+        ==
+        "mq5-er6r-the-warrant-selector-qualification-v2.json"
+    )
+
+
+def test_v2_schema_is_frozen():
+    source = (
+        ROOT
+        / "brain/"
+        "mq5_er6r_the_warrant_selector_qualification.py"
+    ).read_text(
+        encoding="utf-8"
+    )
+
+    assert "selector-qualification/v2" in source
+
+
+def test_requalification_binds_prior_aggregate_universe():
+    source = (
+        ROOT
+        / "brain/"
+        "mq5_er6r_the_warrant_selector_qualification.py"
+    ).read_text(
+        encoding="utf-8"
+    )
+
+    assert "eligible_control_count != 149893" in source
+    assert "exact_hop_signature_match_count != 1885" in source
