@@ -35,8 +35,7 @@ SELECTOR = (
 
 OUTPUT = (
     ROOT
-    / "artifacts/qualification/"
-    "mq5-er6r-the-warrant-selector-qualification-v2.json"
+    / "artifacts/qualification/mq5-er6r-the-warrant-selector-qualification-v3.json"
 )
 
 EXPECTED_CONFIG_SHA256 = (
@@ -50,12 +49,11 @@ EXPECTED_PROTOCOL_SHA256 = (
 )
 
 EXPECTED_SELECTOR_SHA256 = (
-    "c0c1df6d31ec32e641d2fa95d9fb76"
-    "e418beaf0342d7ee2dfbb8ccf663496c22"
+    "010422a952297c5151743a8dc294dd9cb5a008cead5db4841e481ae3a901db1d"
 )
 
 SELECTOR_FREEZE_GIT_SHA = (
-    "83bd7e77912a4b7c63bd949369444df0d471e60d"
+    "8edcbd01e1aafa57ff3270c1cebf5d34de6f5ab1"
 )
 
 
@@ -427,9 +425,7 @@ def qualify() -> dict:
 
     return {
         "schema_version":
-            "moscaquant."
-            "mq5-er6r-the-warrant-"
-            "selector-qualification/v2",
+            "moscaquant.mq5-er6r-the-warrant-selector-qualification/v3",
 
         "experiment":
             "mq5-er6r-the-warrant-v1",
