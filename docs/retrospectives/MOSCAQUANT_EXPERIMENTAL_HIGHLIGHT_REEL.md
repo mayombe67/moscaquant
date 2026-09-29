@@ -1333,3 +1333,51 @@ Lester:
 Science first.
 
 Lulz a very close second.
+
+## THE WARRANT — Same Suspect, New Warrant
+
+**Reference:** [MQ-5.ER.6R matched-control selection closeout](../experiments/mq5-er6r-the-warrant-control-selection-closeout.md).
+
+**Importance:** PRE-OUTCOME CONTROL FREEZE / APOTHEOSIS #32
+
+**Science:** Corrected WAY DOWN placed node `1952` first without borrowing
+authority from historical THE GREEK. THE WARRANT prospectively searched
+`149893` eligible controls. Of these, `1885` matched `1952`'s exact corrected
+nine-target hop signature. The frozen deterministic structural rule selected
+node `3056`, with no neural outcomes used and no alternate control exposed.
+
+The control artifact is sealed at SHA-256
+`b9246b27aafbdd71a52c64864c583d6fb1a6831d19aae0c3e054e0c80154ef19`.
+The authorization allowed selection, not neural execution. No three-arm
+causal result exists. Node `3056` cannot be replaced because of an eventual
+inconvenient result. THE CORNER is the proposed next causal stage, subject to
+its own frozen implementation, qualification, and execution authorization.
+
+**APOTHEOSIS #32 — SEMANTICS ARE NOT SOURCE TEXT**
+
+During preparation, raw-string checks failed to recognize semantically
+equivalent split Python literals, and a migration check missed a path that
+Python had concatenated from adjacent literals. Fail-closed gates preserved
+the scientific state. Automation must parse or import consequential values
+and compare their meanings; formatting is a contract only when explicitly
+declared. This joins lessons #27–#31 in the
+[experiment ledger](../EXPERIMENT_LEDGER.md).
+
+**Lore:** Lester puts two photographs on Daniels's desk.
+
+`1952` and `3056`.
+
+"Same corner?" Daniels asks.
+
+"Same routes to the nine places we care about," Lester says. "Close enough
+on the books to test the story. But we haven't touched either one."
+
+McNulty reaches for a third photograph.
+
+Daniels closes the folder. "Those two. The warrant says those two."
+
+The next folder reads **THE CORNER**.
+
+Science first.
+
+Lulz a very close second.

@@ -907,3 +907,41 @@ every required authoritative output side effect.
 
 A replay-only runtime acceptance is insufficient when authoritative execution
 requires writable result creation or durable result handoff.
+
+### APOTHEOSIS #32 — Semantics Are Not Source Text
+
+Scientific and control-plane automation must validate parsed semantic values,
+not incidental source representation. Python adjacent literals, TOML or JSON
+formatting, whitespace, comments, and line wrapping are not scientific
+contracts unless expressly declared so. Import or parse SHA bindings,
+experiment identities, authorization states, and schema versions before
+comparison. Inspect source text only when the text or code structure itself is
+the object of the test.
+
+During THE WARRANT preparation, contiguous raw-string searches missed
+equivalent split Python literals, and a qualification migration initially
+missed a path because adjacent literals formed a larger semantic constant.
+Fail-closed gates prevented scientific state changes in both cases. A
+regression test now covers THE WARRANT's semantic bindings.
+
+### MQ-5.ER.6R — THE WARRANT — matched-control selection closeout
+
+Status: **CONTROL `3056` FROZEN — NO NEURAL EXECUTION**.
+
+Corrected WAY DOWN independently nominated node `1952`. THE WARRANT's
+prospective structural selection considered `149893` eligible controls;
+`1885` shared the exact corrected nine-target hop signature
+`(2, 3, 2, 3, 3, 2, 2, 3, 2)`. The frozen deterministic ranking selected
+node `3056` without neural outcomes or alternate-identity exposure.
+
+The matched-control artifact SHA-256 is
+`b9246b27aafbdd71a52c64864c583d6fb1a6831d19aae0c3e054e0c80154ef19`,
+sealed at commit `b3a3d7deaa9c9575cab3cad1022d9ca6d67d11bf`.
+Selection authorization did not authorize neural or result execution.
+No reranking, reselection, replacement, or alternate-control fishing is
+permitted in response to an eventual outcome.
+
+The [control-selection closeout](experiments/mq5-er6r-the-warrant-control-selection-closeout.md)
+records the frozen comparison, provenance, authorization chain, and scientific
+limits. The proposed next experiment, **THE CORNER**, requires a separately
+frozen and authorized three-arm causal execution. No causal result exists yet.

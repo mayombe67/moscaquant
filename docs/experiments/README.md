@@ -28,6 +28,11 @@ remain controlling for scientific claims.
 - **SQ06 — SILENT CARTOGRAPHER** — [protocol](sq06-silent-cartographer-prereg.md) · [results](sq06-silent-cartographer-result.md)
 - **SQ07 — THE MAW** — [protocol](sq07-the-maw-prereg.md) · [cloud execution amendment](sq07-the-maw-cloud-execution-amendment.md) · [results](sq07-the-maw-result.md)
 
+## MQ-5 experimental records
+
+- **MQ-5.ER.5R — WAY DOWN IN THE HOLE** — [protocol](mq5-er5r-way-down-in-the-hole-protocol.md) · [corrected discovery result](mq5-er5r-way-down-in-the-hole-result.md)
+- **MQ-5.ER.6R — THE WARRANT** — [protocol](mq5-er6r-the-warrant-protocol.md) · [matched-control selection closeout](mq5-er6r-the-warrant-control-selection-closeout.md) (no neural result)
+
 ## Result artifacts
 
 Authoritative JSON artifacts for SQ-03 are stored under
