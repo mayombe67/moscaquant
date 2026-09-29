@@ -381,7 +381,7 @@ def test_selector_uses_separate_authorization_artifact():
         )
         ==
         "artifacts/qualification/"
-        "mq5-er6r-the-warrant-selector-qualification-v2.json"
+        "mq5-er6r-the-warrant-selector-qualification-v3.json"
     )
 
 

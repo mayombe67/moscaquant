@@ -32,7 +32,7 @@ CONTROL_SELECTION_AUTHORIZATION = Path(
 
 SELECTOR_QUALIFICATION = Path(
     "artifacts/qualification/"
-    "mq5-er6r-the-warrant-selector-qualification-v2.json"
+    "mq5-er6r-the-warrant-selector-qualification-v3.json"
 )
 
 
