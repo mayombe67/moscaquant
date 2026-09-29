@@ -1,0 +1,59 @@
+stage_id = "mq5-er6r-the-corner-v1"
+codename = "THE CORNER"
+parent_experiment = "mq5-er6r-the-warrant-v1"
+kind = "frozen_three_arm_neural_execution_stage"
+financial_semantics = "NOT ASSIGNED"
+frames = 192
+neural_execution_enabled = false
+result_execution_enabled = false
+
+warrant_protocol_sha256 = "20eefc0a830a81a4123a675666db303fe57bce00e0d7691f874f9378d87b6c1b"
+warrant_config_sha256 = "d19905969cb4fb06c776c59ba0c7621bd174dff351bf52b31c23bf136288a135"
+matched_control_artifact_sha256 = "b9246b27aafbdd71a52c64864c583d6fb1a6831d19aae0c3e054e0c80154ef19"
+matched_control_seal_commit = "b3a3d7deaa9c9575cab3cad1022d9ca6d67d11bf"
+way_down_result_sha256 = "3c56719c4bd87f45206c16326779386e22c55955a189d45ae6ca6f5dddb0ffbc"
+arm_c_stimulus_sha256 = "e8af8077d7d4c13431f7ad3fa05d81e2009263d9a5cb0e7dd800e889ea61ec8a"
+
+candidate_node = 1952
+matched_control_node = 3056
+affected_targets = [55, 92, 656, 126002, 137122]
+retained_targets = [51, 129, 317, 1273]
+all_targets = [51, 55, 92, 129, 317, 656, 1273, 126002, 137122]
+
+[arms]
+baseline = "P0"
+candidate = "P1952"
+matched_control = "PCONTROL"
+
+[intervention]
+operator = "native_effective_activity_then_zero_one_index_before_connectome_matmul"
+silenced_value = 0.0
+start_frame = 0
+end_frame = 191
+identical_candidate_control_operator = true
+baseline_unmodified = true
+preserve_membrane_and_internal_state = true
+preserve_connectome_and_stimulus = true
+
+[primary_endpoint]
+kind = "first_positive_onset_delay_or_absence"
+baseline_presence_required = true
+earlier_onset_counts_as_dependency = false
+affected_k_complete = 5
+affected_k_partial_min = 1
+affected_k_partial_max = 4
+affected_k_null = 0
+retained_are_specificity_diagnostics_only = true
+secondary_can_override_primary = false
+
+[integrity]
+require_clean_committed_tree = true
+require_exact_parent_hashes = true
+require_frozen_control_identity = true
+require_identical_operator_for_both_interventions = true
+require_p0_runtime_equivalence = true
+require_runtime_input_and_write_path_checks = true
+require_implementation_qualification = true
+require_separate_neural_execution_authorization = true
+allow_control_reselection = false
+allow_candidate_replacement = false

@@ -32,6 +32,7 @@ remain controlling for scientific claims.
 
 - **MQ-5.ER.5R — WAY DOWN IN THE HOLE** — [protocol](mq5-er5r-way-down-in-the-hole-protocol.md) · [corrected discovery result](mq5-er5r-way-down-in-the-hole-result.md)
 - **MQ-5.ER.6R — THE WARRANT** — [protocol](mq5-er6r-the-warrant-protocol.md) · [matched-control selection closeout](mq5-er6r-the-warrant-control-selection-closeout.md) (no neural result)
+- **MQ-5.ER.6R — THE CORNER** — [disabled execution-stage protocol](mq5-er6r-the-corner-execution-protocol.md) (no neural result)
 
 ## Result artifacts
 
