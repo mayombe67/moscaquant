@@ -1729,3 +1729,49 @@ Result SHA-256:
 `1ed37ae6d4e19cd39409a2bb714ed7394236d2a273316005c6ae596e5d837790`
 
 Financial semantics remain `NOT ASSIGNED`.
+
+
+## MQ-5.ER.5R — WAY DOWN IN THE HOLE: COMPLETE
+
+WAY DOWN IN THE HOLE repeated the intended GREEK discovery question using the
+project's declared connectome orientation and a frozen executable orientation
+contract.
+
+Authoritative classification:
+
+`GREEK_FOCUSED_COORDINATOR_CANDIDATE`
+
+Corrected top five:
+
+`1952, 1963, 2641, 1944, 23640`
+
+All five candidates reached `5/5` affected and `4/4` retained comparison
+responders before their frozen onsets.
+
+Node `1952` independently remained rank #1.
+
+Result SHA-256:
+
+`3c56719c4bd87f45206c16326779386e22c55955a189d45ae6ca6f5dddb0ffbc`
+
+Result-seal SHA-256:
+
+`51b46dcce4ffd2c6aeaf3a48190a8b6dfcd04e40b5d66aa10c41742650ada425`
+
+The result is discovery-only and does not establish affected-set specificity,
+unique control, causal necessity, causal sufficiency, biological identity,
+cognition, market understanding, predictive value, or financial usefulness.
+
+### Next causal boundary
+
+Historical MQ-5.ER.6 — THE PINCH remains frozen and blocked.
+
+Although corrected discovery independently recovered its frozen node `1952`,
+the historical matched-control preparation was bound to structural evidence
+invalidated by the GREEK orientation audit.
+
+The historical preregistration will not be rewritten after result exposure.
+
+**A fresh causal preregistration is required.**
+
+PINE BARRENS remains blocked pending that causal stage.

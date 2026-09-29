@@ -1281,3 +1281,55 @@ Nobody gets promoted.
 Somewhere underneath Baltimore, a bass line starts.
 
 **WAY DOWN IN THE HOLE**
+
+
+## WAY DOWN IN THE HOLE — Same Names, Right Direction
+
+**Reference:** MQ-5.ER.5R corrected authoritative discovery.
+
+**Science:** The corrected upstream search ran under the declared
+`graph[post, pre] = pre -> post` semantics, with historical candidate identities
+receiving no seed, priority, or requirement.
+
+The result returned:
+
+`GREEK_FOCUSED_COORDINATOR_CANDIDATE`
+
+Top five:
+
+`1952, 1963, 2641, 1944, 23640`
+
+Every candidate covered `5/5` affected and `4/4` retained responders.
+
+The striking part is not that the old GREEK result became valid. It did not.
+The striking part is that after throwing away its directional interpretation,
+turning the board around, freezing the corrected search, and starting over,
+the same five identities walked back into the room.
+
+And `1952` was still sitting at the head of the table.
+
+**APOTHEOSIS #30 — THE SHELL IS NOT THE PROTOCOL**
+
+**APOTHEOSIS #31 — WRITE PATHS ARE PART OF THE RUNTIME CONTRACT**
+
+**Lore:** Lester studies the new board.
+
+McNulty points at `1952`.
+
+"You're kidding me."
+
+Lester does not look up.
+
+"No."
+
+Daniels:
+
+"Same guy?"
+
+Lester:
+
+"Different case."
+
+Science first.
+
+Lulz a very close second.

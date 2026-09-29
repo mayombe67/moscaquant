@@ -798,3 +798,112 @@ minimal-graph contract.
 
 Exact reproduction of a misoriented implementation does not validate the
 intended scientific semantics.
+
+
+### MQ-5.ER.5R — WAY DOWN IN THE HOLE — corrected discovery closeout
+
+Authoritative status:
+
+**COMPLETED — AUTHORITATIVE CORRECTED DISCOVERY RESULT SEALED**
+
+Classification:
+
+`GREEK_FOCUSED_COORDINATOR_CANDIDATE`
+
+The corrected three-hop reverse-ancestry search used the declared connectome
+semantics:
+
+`graph[post, pre] = pre -> post`
+
+and passed the executable orientation contract before discovery.
+
+The deterministic top five were:
+
+1. `1952`
+2. `1963`
+3. `2641`
+4. `1944`
+5. `23640`
+
+Every emitted candidate covered all `5/5` affected responders and all `4/4`
+retained comparison responders.
+
+Node `1952` independently reappeared as the top-ranked candidate despite
+historical-candidate neutrality.
+
+The same five identities therefore reappeared as the historical GREEK top five,
+but corrected traversal changed structural quantities and changed the ordering
+of nodes `1963` and `2641`.
+
+This result does not rehabilitate the historical GREEK execution. The historical
+implementation remains directionally invalid for its intended upstream claim.
+
+Corrected result SHA-256:
+
+`3c56719c4bd87f45206c16326779386e22c55955a189d45ae6ca6f5dddb0ffbc`
+
+Corrected result-seal SHA-256:
+
+`51b46dcce4ffd2c6aeaf3a48190a8b6dfcd04e40b5d66aa10c41742650ada425`
+
+Frozen scientific execution SHA:
+
+`b2d62968155f9d386761e857beb689859c061d51`
+
+Financial semantics remain `NOT ASSIGNED`.
+
+No causal necessity or sufficiency claim is authorized.
+
+### MQ-5.ER.6 — THE PINCH suitability decision
+
+Historical THE PINCH remains immutable and blocked.
+
+Corrected WAY DOWN IN THE HOLE independently recovered node `1952`, so candidate
+identity is no longer the blocking issue.
+
+However, historical PINCH preparation depended on the historical GREEK
+structural signature. Its matched-control selector correctly failed closed when
+the declared connectome orientation produced a different signature.
+
+For node `1952`, target order:
+
+`51, 55, 92, 129, 317, 656, 1273, 126002, 137122`
+
+Historical sealed GREEK signature:
+
+`(2, 3, 2, 2, 3, 2, 2, 2, 2)`
+
+Corrected reverse-ancestry signature:
+
+`(2, 3, 2, 3, 3, 2, 2, 3, 2)`
+
+The historical matched-control contract therefore cannot be modified and then
+presented as the original preregistered experiment.
+
+Decision:
+
+**FRESH CAUSAL PREREGISTRATION REQUIRED**
+
+The historical PINCH remains preserved as fail-closed provenance. A new causal
+experiment may retain node `1952` and may reuse scientifically valid
+intervention concepts only after those concepts and corrected matched-control
+rules are frozen under a new experiment identity.
+
+PINE BARRENS remains blocked.
+
+### APOTHEOSIS #30 — The Shell Is Not the Protocol
+
+Authoritative scientific control flow must not depend on interactive-shell
+state, remembered environment variables, manual command ordering, or whether a
+previous shell command happened to fail.
+
+The safe path must be encoded in versioned, testable automation with explicit
+preconditions and machine-readable receipts.
+
+### APOTHEOSIS #31 — Write Paths Are Part of the Runtime Contract
+
+Runtime acceptance must validate both immutable scientific-input access and
+every required authoritative output side effect.
+
+A replay-only runtime acceptance is insufficient when authoritative execution
+requires writable result creation or durable result handoff.
