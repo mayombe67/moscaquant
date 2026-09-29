@@ -1,0 +1,58 @@
+{
+  "candidate_identity_suitability": "PASS",
+  "claim_boundary": {
+    "causal_necessity_established": false,
+    "causal_sufficiency_established": false,
+    "financial_semantics": "NOT ASSIGNED",
+    "unique_control_established": false
+  },
+  "corrected_discovery": {
+    "classification": "GREEK_FOCUSED_COORDINATOR_CANDIDATE",
+    "experiment": "mq5-er5r-way-down-in-the-hole-v1",
+    "result_seal_sha256": "51b46dcce4ffd2c6aeaf3a48190a8b6dfcd04e40b5d66aa10c41742650ada425",
+    "result_sha256": "3c56719c4bd87f45206c16326779386e22c55955a189d45ae6ca6f5dddb0ffbc",
+    "top_ranked_node": 1952
+  },
+  "corrected_signature_1952": [
+    2,
+    3,
+    2,
+    3,
+    3,
+    2,
+    2,
+    3,
+    2
+  ],
+  "decision": "CREATE_NEW_CAUSAL_PREREGISTRATION",
+  "historical_experiment": "MQ-5.ER.6 THE PINCH",
+  "historical_experiment_modified": false,
+  "historical_experiment_reactivated": false,
+  "historical_greek_signature_1952": [
+    2,
+    3,
+    2,
+    2,
+    3,
+    2,
+    2,
+    2,
+    2
+  ],
+  "pinch_neural_execution_authorized": false,
+  "pine_barrens_authorized": false,
+  "schema_version": "moscaquant.mq5-er6-pinch-suitability-review.v1",
+  "status": "FRESH_CAUSAL_PREREGISTRATION_REQUIRED",
+  "structural_control_compatibility": "FAIL_CANNOT_REPAIR_HISTORICAL_PREREG_IN_PLACE",
+  "target_order": [
+    51,
+    55,
+    92,
+    129,
+    317,
+    656,
+    1273,
+    126002,
+    137122
+  ]
+}

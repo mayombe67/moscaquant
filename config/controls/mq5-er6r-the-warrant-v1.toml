@@ -1,0 +1,116 @@
+experiment_id = "mq5-er6r-the-warrant-v1"
+codename = "THE WARRANT"
+kind = "causal_necessity_in_context"
+financial_semantics = "NOT ASSIGNED"
+
+frames = 192
+result_execution_enabled = false
+matched_control_selection_enabled = false
+
+scientific_parent_experiment = "mq5-er5r-way-down-in-the-hole-v1"
+scientific_parent_result_sha256 = "3c56719c4bd87f45206c16326779386e22c55955a189d45ae6ca6f5dddb0ffbc"
+scientific_parent_result_seal_sha256 = "51b46dcce4ffd2c6aeaf3a48190a8b6dfcd04e40b5d66aa10c41742650ada425"
+scientific_parent_closeout_git_sha = "ef0f27f70a7b906fbfbc17c092534fe9da9ff6e5"
+
+pinch_suitability_review_sha256 = "0b9c4394a2902f31eb4cfbdaccaf59dfd8410812452fd7917d4b323cbb138041"
+
+historical_pinch_prereg_git_sha = "034d20d3f641e577b0b92c85f36bcf6d6b5c3f12"
+historical_pinch_implementation_git_sha = "ac311fd8cff074a2a568a7fbbf0ee7f306e25f6a"
+
+candidate_node = 1952
+
+arm_c_stimulus_sha256 = "e8af8077d7d4c13431f7ad3fa05d81e2009263d9a5cb0e7dd800e889ea61ec8a"
+
+affected_targets = [55, 92, 656, 126002, 137122]
+retained_dependency_comparisons = [51, 129, 317, 1273]
+all_targets = [51, 55, 92, 129, 317, 656, 1273, 126002, 137122]
+
+max_backward_hops = 3
+
+[c13_onsets]
+"51" = 150
+"55" = 145
+"92" = 141
+"129" = 149
+"317" = 156
+"656" = 141
+"1273" = 149
+"126002" = 151
+"137122" = 151
+
+[orientation]
+matrix_semantics = "graph[post, pre] = pre -> post"
+reverse_ancestry_storage = "csr_rows"
+csc_column_reverse_ancestry_allowed = false
+require_executable_tiny_graph_contract = true
+
+[corrected_candidate_signature]
+target_order = [51, 55, 92, 129, 317, 656, 1273, 126002, 137122]
+hop_signature = [2, 3, 2, 3, 3, 2, 2, 3, 2]
+
+[intervention]
+kind = "effective_activity_output_silence"
+target_node = 1952
+silenced_value = 0.0
+preserve_membrane_voltage = true
+preserve_incoming_edges = true
+preserve_node_identity = true
+modify_only_target_activity_index = true
+
+[arms]
+baseline = "P0"
+candidate = "P1952"
+matched_control = "PCONTROL"
+
+[matched_control]
+selection_enabled = false
+pre_intervention_information_only = true
+max_hops = 3
+require_all_affected_reachable = true
+require_all_retained_reachable = true
+require_exact_runtime_class = true
+exclude_corrected_top5_hypotheses = true
+exclude_prior_er_hypothesis_nodes = true
+publish_alternate_control_identities = false
+allow_post_selection_relaxation = false
+
+[matched_control.ranking]
+criterion_1 = "hop_signature_mismatch_count"
+criterion_2 = "hop_distance_l1"
+criterion_3 = "max_structural_log_mismatch"
+criterion_4 = "sum_structural_log_mismatch"
+criterion_5 = "component_structural_log_mismatches"
+criterion_6 = "node_id"
+
+[primary_endpoint]
+kind = "first_positive_onset_delay_or_absence"
+earlier_onset_counts_as_dependency = false
+baseline_presence_required = true
+
+[classification]
+complete_label = "WARRANT_NECESSITY_COMPLETE"
+complete_k = 5
+partial_label = "WARRANT_NECESSITY_PARTIAL"
+partial_k_min = 1
+partial_k_max = 4
+null_label = "WARRANT_NECESSITY_NOT_OBSERVED"
+null_k = 0
+
+[stopping_rule]
+null_closes_candidate_necessity_question = true
+allow_candidate_replacement = false
+allow_control_fishing = false
+allow_selector_relaxation = false
+pine_barrens_automatically_activated = false
+
+[integrity]
+require_exact_c13_onsets = true
+require_parent_result_hash = true
+require_parent_result_seal_hash = true
+require_suitability_review_hash = true
+require_orientation_contract = true
+require_exact_corrected_candidate_signature = true
+require_matched_control_frozen_before_neural_execution = true
+require_separate_control_selection_authorization = true
+require_separate_result_execution_authorization = true
+require_rasputin_authoritative_execution = true
