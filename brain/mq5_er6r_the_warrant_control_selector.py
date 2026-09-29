@@ -25,6 +25,17 @@ OUTPUT = Path(
     "mq5-er6r-the-warrant-matched-control-v1.json"
 )
 
+CONTROL_SELECTION_AUTHORIZATION = Path(
+    "config/controls/"
+    "mq5-er6r-the-warrant-control-selection-authorization-v1.json"
+)
+
+SELECTOR_QUALIFICATION = Path(
+    "artifacts/qualification/"
+    "mq5-er6r-the-warrant-selector-qualification-v2.json"
+)
+
+
 CANDIDATE = 1952
 
 AFFECTED_TARGETS = (
@@ -868,13 +879,14 @@ def build_payload() -> dict:
 
 
 
-def require_control_selection_authorization() -> None:
+def require_control_selection_authorization() -> dict:
     """
-    THE WARRANT selector implementation may be frozen and tested
-    while real matched-control identity exposure remains disabled.
+    Authorize matched-control selection without mutating the
+    frozen THE WARRANT preregistration.
 
-    Selection requires a later, separately committed authorization
-    that flips both frozen enable flags.
+    The preregistration must remain disabled. Authority comes
+    only from a separately frozen authorization artifact that
+    binds the requalified selector.
     """
 
     root = Path(__file__).resolve().parents[1]
@@ -885,30 +897,172 @@ def require_control_selection_authorization() -> None:
         "mq5-er6r-the-warrant-v1.toml"
     )
 
-    if not config_path.is_file():
-        raise ControlSelectionError(
-            "THE WARRANT config missing"
-        )
+    auth_path = (
+        root
+        / CONTROL_SELECTION_AUTHORIZATION
+    )
+
+    qualification_path = (
+        root
+        / SELECTOR_QUALIFICATION
+    )
 
     with config_path.open("rb") as handle:
         config = tomllib.load(handle)
 
-    top_level = config.get(
-        "matched_control_selection_enabled"
-    )
-
-    section = config.get(
-        "matched_control",
-        {},
-    ).get(
-        "selection_enabled"
-    )
-
-    if top_level is not True or section is not True:
-        raise ControlSelectionError(
-            "THE WARRANT matched-control selection "
-            "remains disabled"
+    #
+    # The preregistration itself remains immutable and disabled.
+    #
+    if (
+        config.get(
+            "matched_control_selection_enabled"
         )
+        is not False
+    ):
+        raise ControlSelectionError(
+            "THE WARRANT preregistration "
+            "selection flag drift"
+        )
+
+    if (
+        config.get(
+            "matched_control",
+            {},
+        ).get(
+            "selection_enabled"
+        )
+        is not False
+    ):
+        raise ControlSelectionError(
+            "THE WARRANT preregistration "
+            "matched-control flag drift"
+        )
+
+    if (
+        config.get(
+            "result_execution_enabled"
+        )
+        is not False
+    ):
+        raise ControlSelectionError(
+            "THE WARRANT result execution "
+            "must remain disabled during "
+            "control selection"
+        )
+
+    if not auth_path.is_file():
+        raise ControlSelectionError(
+            "THE WARRANT control-selection "
+            "authorization missing"
+        )
+
+    if not qualification_path.is_file():
+        raise ControlSelectionError(
+            "THE WARRANT selector "
+            "qualification v2 missing"
+        )
+
+    selector_sha = hashlib.sha256(
+        Path(__file__).read_bytes()
+    ).hexdigest()
+
+    qualification_sha = hashlib.sha256(
+        qualification_path.read_bytes()
+    ).hexdigest()
+
+    qualification = json.loads(
+        qualification_path.read_text(
+            encoding="utf-8"
+        )
+    )
+
+    if (
+        qualification.get("status")
+        != "SELECTOR_QUALIFIED_NO_IDENTITY_EXPOSURE"
+    ):
+        raise ControlSelectionError(
+            "selector qualification status drift"
+        )
+
+    if (
+        qualification.get("selector_sha256")
+        != selector_sha
+    ):
+        raise ControlSelectionError(
+            "selector qualification SHA drift"
+        )
+
+    for key in (
+        "ranking_performed",
+        "control_selected",
+        "control_identity_exposed",
+        "alternate_control_identities_exposed",
+        "neural_execution",
+        "result_execution",
+    ):
+        if qualification.get(key) is not False:
+            raise ControlSelectionError(
+                "selector qualification "
+                f"unexpectedly sets {key}"
+            )
+
+    authorization = json.loads(
+        auth_path.read_text(
+            encoding="utf-8"
+        )
+    )
+
+    required = {
+        "schema_version":
+            "moscaquant."
+            "mq5-er6r-the-warrant-"
+            "control-selection-authorization/v1",
+
+        "experiment":
+            "mq5-er6r-the-warrant-v1",
+
+        "codename":
+            "THE WARRANT",
+
+        "status":
+            "AUTHORIZED_FOR_MATCHED_CONTROL_SELECTION",
+
+        "selector_sha256":
+            selector_sha,
+
+        "qualification_sha256":
+            qualification_sha,
+
+        "candidate_node":
+            1952,
+
+        "control_selection_authorized":
+            True,
+
+        "neural_execution_authorized":
+            False,
+
+        "result_execution_authorized":
+            False,
+
+        "alternate_control_fishing_authorized":
+            False,
+
+        "selector_relaxation_authorized":
+            False,
+    }
+
+    for key, expected in required.items():
+        if authorization.get(key) != expected:
+            raise ControlSelectionError(
+                "control-selection authorization "
+                f"drift for {key}: "
+                f"{authorization.get(key)!r} "
+                f"!= {expected!r}"
+            )
+
+    return authorization
+
 
 
 def main() -> None:

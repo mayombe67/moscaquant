@@ -248,7 +248,7 @@ def test_reverse_hop_array_obeys_declared_orientation():
 def test_real_control_selection_remains_disabled():
     with pytest.raises(
         warrant.ControlSelectionError,
-        match="remains disabled",
+        match="authorization missing",
     ):
         warrant.require_control_selection_authorization()
 
@@ -333,3 +333,53 @@ def test_rank_contract_prefers_exact_hop_match():
     )
 
     assert exact_key < mismatch_key
+
+
+def test_preregistration_remains_disabled_for_selection():
+    import tomllib
+
+    config_path = (
+        warrant.Path(__file__).resolve().parents[1]
+        / "config/controls/"
+        "mq5-er6r-the-warrant-v1.toml"
+    )
+
+    with config_path.open("rb") as handle:
+        config = tomllib.load(handle)
+
+    assert (
+        config["matched_control_selection_enabled"]
+        is False
+    )
+
+    assert (
+        config["matched_control"][
+            "selection_enabled"
+        ]
+        is False
+    )
+
+    assert (
+        config["result_execution_enabled"]
+        is False
+    )
+
+
+def test_selector_uses_separate_authorization_artifact():
+    assert (
+        str(
+            warrant.CONTROL_SELECTION_AUTHORIZATION
+        )
+        ==
+        "config/controls/"
+        "mq5-er6r-the-warrant-control-selection-authorization-v1.json"
+    )
+
+    assert (
+        str(
+            warrant.SELECTOR_QUALIFICATION
+        )
+        ==
+        "artifacts/qualification/"
+        "mq5-er6r-the-warrant-selector-qualification-v2.json"
+    )
