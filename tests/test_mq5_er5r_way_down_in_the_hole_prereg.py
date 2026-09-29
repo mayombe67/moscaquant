@@ -28,7 +28,7 @@ def test_identity_and_execution_gate():
 
     assert (
         cfg["result_execution_enabled"]
-        is False
+        is True
     )
 
 
