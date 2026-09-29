@@ -328,3 +328,24 @@ Same streets.
 This time the arrows point the right direction.
 
 **WAY DOWN IN THE HOLE**
+
+
+## Pre-execution dynamic-readout clarification
+
+The historical THE GREEK implementation operationalized candidate activity as
+positive membrane voltage:
+
+`max(runtime.voltage, 0)`
+
+WAY DOWN IN THE HOLE preserves that operational definition.
+
+Therefore, for candidate eligibility and dynamic ranking:
+
+- candidate first-positive frame means first frame with membrane voltage `> 0`;
+- integrated positive activity means the sum of positive membrane voltage;
+- this experiment does not substitute `effective_activity` or spike output for
+  that historical dynamic readout.
+
+This clarification is frozen before corrected candidate discovery and ensures
+that traversal orientation is the only intended methodological correction from
+the historical GREEK search.

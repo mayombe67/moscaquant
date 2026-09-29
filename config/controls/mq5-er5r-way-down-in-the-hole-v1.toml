@@ -73,3 +73,8 @@ require_tracked_files = true
 require_result_artifact_absent = true
 require_separate_authorization_commit = true
 require_rasputin_authoritative_execution = true
+
+[dynamic_readout]
+candidate_signal = "positive_membrane_voltage"
+positive_threshold = 0.0
+preserve_historical_greek_semantics = true
