@@ -1,0 +1,52 @@
+{
+  "affected_structural_coverage": 5,
+  "alternate_control_identities_exposed": false,
+  "candidate_node": 1952,
+  "candidate_runtime_class": {
+    "graded": false,
+    "relay": false,
+    "retina": false
+  },
+  "codename": "THE WARRANT",
+  "config_sha256": "d19905969cb4fb06c776c59ba0c7621bd174dff351bf52b31c23bf136288a135",
+  "control_identity_exposed": false,
+  "control_selected": false,
+  "corrected_candidate_signature": [
+    2,
+    3,
+    2,
+    3,
+    3,
+    2,
+    2,
+    3,
+    2
+  ],
+  "eligible_control_count": 149893,
+  "exact_hop_signature_match_count": 1885,
+  "experiment": "mq5-er6r-the-warrant-v1",
+  "financial_semantics": "NOT ASSIGNED",
+  "graph_node_count": 166700,
+  "matched_control_selection_enabled": false,
+  "neural_execution": false,
+  "protocol_sha256": "20eefc0a830a81a4123a675666db303fe57bce00e0d7691f874f9378d87b6c1b",
+  "qualification_git_sha": "9c7880bc7c3abc8f26f8c56335285837e1fccb85",
+  "ranking_performed": false,
+  "result_execution": false,
+  "retained_structural_coverage": 4,
+  "schema_version": "moscaquant.mq5-er6r-the-warrant-selector-qualification/v2",
+  "selector_freeze_git_sha": "83bd7e77912a4b7c63bd949369444df0d471e60d",
+  "selector_sha256": "c0c1df6d31ec32e641d2fa95d9fb76e418beaf0342d7ee2dfbb8ccf663496c22",
+  "status": "SELECTOR_QUALIFIED_NO_IDENTITY_EXPOSURE",
+  "target_order": [
+    51,
+    55,
+    92,
+    129,
+    317,
+    656,
+    1273,
+    126002,
+    137122
+  ]
+}
