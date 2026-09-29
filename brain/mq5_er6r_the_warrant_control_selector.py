@@ -68,7 +68,7 @@ ALL_TARGETS = (
 MAX_HOPS = 3
 
 #
-# Already-nominated GREEK candidates are hypotheses, not controls.
+# Already-nominated WAY DOWN candidates are hypotheses, not controls.
 #
 WAY_DOWN_TOP5 = (
     1952,
@@ -96,8 +96,8 @@ PRIOR_HYPOTHESIS_NODES = {
 }
 
 #
-# Structural signature recorded in the already-sealed GREEK result.
-# This is used as an integrity check, not as a post-PINCH target-selection
+# Structural signature recorded in the sealed corrected WAY DOWN result.
+# This is used as an integrity check, not as a post-WARRANT target-selection
 # mechanism.
 #
 EXPECTED_1952_HOPS = {
@@ -665,7 +665,7 @@ def build_payload() -> dict:
         "schema_version":
             (
                 "moscaquant."
-                "mq5-er6-pinch-"
+                "mq5-er6r-the-warrant-"
                 "matched-control/v1"
             ),
         "experiment":
@@ -682,7 +682,7 @@ def build_payload() -> dict:
             False,
         "selector_version":
             (
-                "mq5-er6-pinch-"
+                "mq5-er6r-the-warrant-"
                 "node-control-v1"
             ),
         "candidate": {

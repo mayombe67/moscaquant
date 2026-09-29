@@ -383,3 +383,42 @@ def test_selector_uses_separate_authorization_artifact():
         "artifacts/qualification/"
         "mq5-er6r-the-warrant-selector-qualification-v2.json"
     )
+
+
+
+def test_emitted_artifact_identity_is_the_warrant():
+    import ast
+
+    source = (
+        warrant.Path(
+            warrant.__file__
+        ).read_text(
+            encoding="utf-8"
+        )
+    )
+
+    tree = ast.parse(source)
+
+    string_constants = {
+        node.value
+        for node in ast.walk(tree)
+        if (
+            isinstance(node, ast.Constant)
+            and isinstance(node.value, str)
+        )
+    }
+
+    assert (
+        "moscaquant."
+        "mq5-er6r-the-warrant-"
+        "matched-control/v1"
+        in string_constants
+    )
+
+    assert (
+        "mq5-er6r-the-warrant-"
+        "node-control-v1"
+        in string_constants
+    )
+
+    assert "mq5-er6-pinch-" not in source
