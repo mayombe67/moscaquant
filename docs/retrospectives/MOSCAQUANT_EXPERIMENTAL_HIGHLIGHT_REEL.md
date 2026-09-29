@@ -1381,3 +1381,24 @@ The next folder reads **THE CORNER**.
 Science first.
 
 Lulz a very close second.
+
+## THE CORNER — proving the hook before clearing the run
+
+**Importance:** PRE-EXECUTION REVIEW / APOTHEOSIS #33
+
+Recovered runner tests proved the arms were wired to the right operator using
+a fake runtime. New synthetic fixtures exercise the actual physiology runtime:
+P0 agrees across 192 frames, and both interventions silence only their selected
+output entry while preserving internal state at the hook. This is software
+evidence, not a C13 result. The focused suite passes 60 tests.
+
+**APOTHEOSIS #33 — QUALIFICATION CANNOT OUTRUN EVIDENCE**
+
+A mock-runtime pass cannot qualify native behavior; synthetic native behavior
+cannot qualify frozen data; local output publication cannot qualify remote
+handoff. The readiness inventory reports missing inputs and pending acceptance
+without manufacturing a qualification receipt.
+
+**Lore:** Checking the prop gun does not clear the whole crime scene.
+
+[Source review and remaining execution gates](../experiments/mq5-er6r-the-corner-source-review.md).

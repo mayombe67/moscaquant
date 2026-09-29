@@ -945,3 +945,20 @@ The [control-selection closeout](experiments/mq5-er6r-the-warrant-control-select
 records the frozen comparison, provenance, authorization chain, and scientific
 limits. The proposed next experiment, **THE CORNER**, requires a separately
 frozen and authorized three-arm causal execution. No causal result exists yet.
+
+### THE CORNER — source review; execution qualification pending
+
+The recovered three-arm runner and additional native-runtime synthetic
+contracts pass the focused 60-test suite. Candidate `1952`, control `3056`,
+and all frozen scientific definitions remain unchanged. Six real inputs and
+RASPUTIN acceptance are unavailable in this workspace; no execution
+qualification or neural authorization was issued.
+See [source review and remaining gates](experiments/mq5-er6r-the-corner-source-review.md).
+
+### APOTHEOSIS #33 — Qualification Cannot Outrun Evidence
+
+A test supports only the behavior and environment it actually exercised.
+Mock wiring, native synthetic runtime behavior, frozen-data acceptance, and
+authoritative durable handoff are distinct evidence boundaries. Passing one
+cannot qualify the others. THE CORNER adds native-runtime contract tests and
+a readiness inventory that never grants qualification or execution authority.
