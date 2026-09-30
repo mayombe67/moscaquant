@@ -984,3 +984,34 @@ Three real-Git regressions prove clean startup, existing-cache exclusion, and
 continued visibility of actual source/contract edits; 14 existing controller
 tests also pass. The refused invocation reached no AWS publication. This is
 operational evidence only; no neural result or scientific endpoint changed.
+
+### THE CORNER — typed executor authority review
+
+An operator-reported non-neural cloud preflight and controller-mediated S3
+round trip completed for the earlier pinned acceptance image. They remain
+transport/runtime-preflight evidence only. Executor qualification is pending.
+
+The subsequent source-gate audit reproduced eight failing adversarial subcases:
+JSON numeric permission values and floating-point node identities passed Python
+value equality, and malformed 40-character commit identities passed the shape
+check. Exact type-and-value checks and hexadecimal commit validation correct
+the defect. All 73 focused CORNER, WARRANT, and WAY DOWN tests pass locally.
+No real scientific input was simulated and no neural authority was issued.
+The corrected source requires fresh acceptance; earlier image receipts are not
+transferred to the new runner hash.
+
+### APOTHEOSIS #35 — Authority Has a Type
+
+Authorization values are typed protocol assertions. In Python, numeric `1`
+compares equal to boolean `True`; accepting that equality at an authority
+boundary can turn a malformed JSON number into execution permission. Preserve
+semantic comparison for equivalent data representations, but require the
+schema's exact type for permission flags and fixed identities. Validate identity
+syntax before forwarding it to provenance tools. Regression tests must include
+values that the implementation language equates but the authorization schema
+forbids. A valid flag still supplies no authority without the complete bound,
+sealed artifact and its independent prerequisites.
+
+This extends #32's semantic comparison rule with an explicit authorization
+boundary. The executable evidence is THE CORNER's typed authority gate and its
+adversarial numeric/boolean/identity tests. It grants no scientific execution.

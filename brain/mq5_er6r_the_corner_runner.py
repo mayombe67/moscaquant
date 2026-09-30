@@ -6,6 +6,7 @@ import argparse
 import hashlib
 import json
 import os
+import re
 import subprocess
 import tempfile
 import tomllib
@@ -103,7 +104,8 @@ def execution_gate() -> dict:
         "runner_sha256": _sha256(Path(__file__)),
         "qualification_sha256": _sha256(QUALIFICATION),
     }
-    if any(authority.get(k) != v for k, v in expected.items()):
+    if any(type(authority.get(k)) is not type(v) or authority.get(k) != v
+           for k, v in expected.items()):
         raise corner.CornerRefusal("neural authorization binding drift")
     if (qualification.get("status") != "CORNER_RUNNER_QUALIFIED_NO_NEURAL_EXECUTION"
             or qualification.get("runner_sha256") != expected["runner_sha256"]
@@ -119,7 +121,7 @@ def execution_gate() -> dict:
         raise corner.CornerRefusal("working tree must be clean")
     _git("ls-files", "--error-unmatch", *REQUIRED_TRACKED)
     frozen_commit = authority.get("implementation_git_sha")
-    if not isinstance(frozen_commit, str) or len(frozen_commit) != 40:
+    if not isinstance(frozen_commit, str) or not re.fullmatch(r"[0-9a-f]{40}", frozen_commit):
         raise corner.CornerRefusal("implementation commit missing")
     if _git("merge-base", frozen_commit, "HEAD") != frozen_commit:
         raise corner.CornerRefusal("implementation commit not ancestral")

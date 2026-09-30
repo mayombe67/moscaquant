@@ -1425,3 +1425,28 @@ The failure occurred before AWS publication; no scientific outcome was produced.
 **Lore:** The inspector cannot plant footprints and call them evidence.
 
 See [the canonical ledger entry](../EXPERIMENT_LEDGER.md).
+
+## THE CORNER — a number wore the badge
+
+**Importance:** EXECUTOR GATE CORRECTION / APOTHEOSIS #35
+
+Gate review found that Python would accept JSON `1` where a sealed permission
+required `true`, `0` where it required `false`, and floating-point versions of
+fixed integer node IDs. Malformed 40-character strings also passed the commit
+shape check before ancestry validation. Eight adversarial subcases reproduced
+the defects without reading real neural inputs or granting real authority.
+
+**APOTHEOSIS #35 — AUTHORITY HAS A TYPE**
+
+A permission flag is a typed assertion. Equality in an implementation language
+must not widen the authorization schema. Compare both type and value, validate
+provenance identity syntax, and test forbidden values that the language considers
+equal. The repaired gate and native synthetic contracts pass the 73-test focused
+suite locally. Acceptance under RASPUTIN dependencies is the next bounded check;
+full qualification and neural execution remain gated. Earlier image acceptance
+cannot migrate automatically to the corrected runner hash.
+
+**Lore:** A number cannot put on a badge and authorize the raid.
+
+See [the canonical ledger entry](../EXPERIMENT_LEDGER.md) and
+[source review](../experiments/mq5-er6r-the-corner-source-review.md).

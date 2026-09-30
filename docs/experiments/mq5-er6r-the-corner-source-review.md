@@ -85,3 +85,39 @@ This lesson extends #31's write-path requirement without asserting that a
 scientific result has been obtained.
 
 Lore: checking the prop gun does not clear the whole crime scene.
+
+## Typed authority gate correction
+
+A later gate audit reproduced eight failing adversarial subcases: the four
+permission booleans accepted JSON numbers through Python's `1 == True` and
+`0 == False`, both fixed node identities accepted floating-point equivalents,
+and two malformed 40-character implementation identities reached the mocked
+Git ancestry check. The source correction requires both exact JSON/Python type
+and exact value for each frozen authority binding, and requires a full lowercase
+hexadecimal commit identity before invoking Git ancestry validation.
+
+The additional standard-library
+[`gate contract suite`](../../tests/test_mq5_er6r_the_corner_gate_contract.py)
+checks the nominal gate with temporary synthetic input bytes, every frozen
+binding, missing authority, qualification drift, missing/extra/changed source
+and input manifests, dirty/untracked/non-ancestral Git responses, existing output,
+missing output directory, and failed write access. It also exercises actual
+native P0 equality for all 192 **synthetic** frames and both native intervention
+hooks. Temporary fixture authority files are untracked, removed by the test
+harness, and cannot authorize a real scientific input run. Git responses in
+gate tests are simulated; container source provenance must be checked separately.
+
+The focused CORNER, WARRANT, and WAY DOWN suite now passes **73 tests** locally,
+including 13 new gate/native synthetic tests. Local dependencies were NumPy
+2.3.5 and SciPy 1.17.0; this is not acceptance under the RASPUTIN dependency
+versions. The new runner hash supersedes the source used by the earlier
+non-neural preflight image. Earlier cloud and controller-mediated S3 handoff
+acceptance remains historical evidence for that older image and source only.
+
+The next Numancia check tests the corrected pinned source in the older accepted
+image's dependency environment using a read-only source mount, no real data
+mount, and no container network. That checks software contracts under those
+dependencies. It neither builds nor accepts an execution image and must report
+`GATE_CONTRACTS_ACCEPTED_NOT_QUALIFIED`. Full executor qualification, real-data
+P0 validation under its applicable authority, and separate neural authorization
+remain pending. No final qualification or authorization artifact is created.
