@@ -1,0 +1,134 @@
+{
+  "schema_version": "moscaquant.mq5-er6r-the-corner-public-results-summary/v1",
+  "record_kind": "PUBLIC_SUMMARY_NOT_RAW_RESULT_OR_EXECUTION_AUTHORITY",
+  "reported_on": "2026-10-01",
+  "experiment": "mq5-er6r-the-warrant-v1",
+  "stage": "mq5-er6r-the-corner-v1",
+  "implementation_git_sha": "7b3c74261ba04b09a779d48f30071adc793b7bd3",
+  "frames_per_arm": 192,
+  "intervention": "Native effective_activity followed by zeroing only the selected index before connectome multiplication, frames 0..191 inclusive.",
+  "affected_targets": [
+    55,
+    92,
+    656,
+    126002,
+    137122
+  ],
+  "retained_diagnostic_targets": [
+    51,
+    129,
+    317,
+    1273
+  ],
+  "baseline_onsets": {
+    "51": 150,
+    "55": 145,
+    "92": 141,
+    "129": 149,
+    "317": 156,
+    "656": 141,
+    "1273": 149,
+    "126002": 151,
+    "137122": 151
+  },
+  "comparisons": {
+    "P1952": {
+      "target_node": 1952,
+      "classification": "WARRANT_NECESSITY_NOT_OBSERVED",
+      "affected_dependency_count": 0,
+      "retained_dependency_count": 0,
+      "dependency": {
+        "51": false,
+        "55": false,
+        "92": false,
+        "129": false,
+        "317": false,
+        "656": false,
+        "1273": false,
+        "126002": false,
+        "137122": false
+      },
+      "native_target_output_nonzero_frames": 0,
+      "native_target_output_trace_frames": 192,
+      "onsets_identical_to_P0": true,
+      "responder_voltage_identical_to_P0": true,
+      "responder_spikes_identical_to_P0": true,
+      "positive_fingerprint_identical_to_P0": true,
+      "secondary_fingerprint": {
+        "normalized_l2": 0,
+        "raw_cosine": 1.0000000000000002,
+        "validation_view_cosine": 1
+      }
+    },
+    "PCONTROL": {
+      "target_node": 3056,
+      "classification": "WARRANT_NECESSITY_NOT_OBSERVED",
+      "affected_dependency_count": 0,
+      "retained_dependency_count": 0,
+      "dependency": {
+        "51": false,
+        "55": false,
+        "92": false,
+        "129": false,
+        "317": false,
+        "656": false,
+        "1273": false,
+        "126002": false,
+        "137122": false
+      },
+      "native_target_output_nonzero_frames": 0,
+      "native_target_output_trace_frames": 192,
+      "onsets_identical_to_P0": true,
+      "responder_voltage_identical_to_P0": true,
+      "responder_spikes_identical_to_P0": true,
+      "positive_fingerprint_identical_to_P0": true,
+      "secondary_fingerprint": {
+        "normalized_l2": 0,
+        "raw_cosine": 1.0000000000000002,
+        "validation_view_cosine": 1
+      }
+    }
+  },
+  "interpretation": "NECESSITY_NOT_OBSERVED_UNDER_INACTIVE_TARGET_CONDITION",
+  "claim_boundary": "COMPUTATIONAL NECESSITY IN FROZEN MODEL ONLY",
+  "limitation": "Both targets produced zero native effective_activity at the modifier insertion point during this episode. The interventions changed no native output. This does not establish dispensability when active, biological necessity, or that another condition recruits either target.",
+  "evidence": {
+    "raw_result": {
+      "filename": "result-v2.json",
+      "sha256": "535a187b45acc01ec4b4d63f41d2835c21cfefdd8e3211fb0043b9022caa62b4",
+      "size_bytes": 299878
+    },
+    "result_seal_sha256": "cde1c5964cc3325ddb04e0a5b5f1e1802727775c046f27e5d1db453e506d620b",
+    "manifest_sha256": "bdd327615d59e30015689fb2688fb904a0872d8273818b3ba172e77bc8fe054d",
+    "handoff_receipt_sha256": "e01091dda4aeab292eb97c4f1eb6ffb3cb60253267d82f36043f40246d2526a0",
+    "qualification_sha256": "122bad0ccc94e8abf8c15faf720f1aea9da052ec63b880e0e647d75544306c99",
+    "execution_authorization_sha256": "1eb4443487f4e25b37280478772719a7461ee5d6d30b45ae03513684b1fa7e1c",
+    "image_digest": "sha256:d4f8bd8ceb7524f41942542658931ce22f51d5d3e267840e7bf1a955fe6c3de9",
+    "execution_job_id": "32afe27b-7cb5-4e73-b511-c1283d27fc01",
+    "execution_attempt_count": 1,
+    "worker_exit_code": 0,
+    "publication_controller_git_sha": "c3637967760803147964bcc3a36a1dea68124fc0",
+    "provenance_note": "Transcribed from operator-provided validation and publication completion receipts; no new neural execution or independent S3 download was performed while preparing this public summary.",
+    "availability": "Full raw traces and versioned transport objects remain access-controlled in S3. This public summary does not include them or claim anonymous access."
+  },
+  "numeric_exception": {
+    "raw_schema_valid": false,
+    "raw_result_modified": false,
+    "exact_artifact_exception_accepted_by": "Wil",
+    "accepted_on": "2026-10-01",
+    "decision_sha256": "9426f408e010650d8c560bb78e55d34c60461e5ab2d92f8df6f322ad48ff6138",
+    "validation_view_sha256": "8221a1b67a5ba4748b90e1819bd00e464eca5022e4328edb7f3a5e3f4a39e61e",
+    "paths": [
+      "/comparisons/P1952/secondary_fingerprint/cosine",
+      "/comparisons/PCONTROL/secondary_fingerprint/cosine"
+    ],
+    "absolute_difference": 2.220446049250313e-16,
+    "general_schema_relaxation": false
+  },
+  "authorization_state": {
+    "new_neural_execution_authorized": false,
+    "new_intervention_execution_authorized": false,
+    "candidate_reselection_authorized": false,
+    "control_reselection_authorized": false
+  }
+}
