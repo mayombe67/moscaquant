@@ -5,6 +5,15 @@
 **Current Phase:** MQ-9 — OPEN THE PANOPTICON
 **Next Phase:** MQ-10 — INTRODUCE THE MONEY
 
+## Reading this roadmap
+
+MQ-9 remains the recorded current phase; this navigation cleanup changes no phase decisions or acceptance gates. Use the [experiment index](docs/experiments/README.md) for authoritative result records and the [documentation guide](docs/README.md) for interfaces.
+
+Completed-phase detail below is retained history. Dated deployment snapshots, “next” statements and test counts describe their original checkpoints, not a current operational inventory. Provider-specific execution status belongs in Ops; presentation implementation status belongs in Panopticon.
+
+<details>
+<summary>Completed MQ-0 through MQ-8: phase history and acceptance detail</summary>
+
 ## MQ-0 — ACQUIRE SUBJECT
 Load and validate MaleCNS. Build sparse connectivity, identify initial populations, inject controlled stimulus, observe propagation, and record telemetry.
 
@@ -762,6 +771,8 @@ Mobile must not lose functionality.
 
 <!-- END CANON: MQ-8 UI NAVIGATION INFRASTRUCTURE -->
 
+</details>
+
 ## MQ-9 — OPEN THE PANOPTICON
 Deploy the public spectator interface and embodied Containment Chamber.
 
@@ -896,6 +907,9 @@ Detailed requirements and go/no-go gates are defined in `CHARTER.md`.
 **THE MARKET PROVIDES FEEDBACK. WE PROVIDE CONSEQUENCES.**
 
 ---
+
+<details>
+<summary>Cross-phase tracks, infrastructure plans and recorded milestones</summary>
 
 ## Methodological Hardening Track
 
@@ -1775,3 +1789,5 @@ The historical preregistration will not be rewritten after result exposure.
 **A fresh causal preregistration is required.**
 
 PINE BARRENS remains blocked pending that causal stage.
+
+</details>
