@@ -2,387 +2,42 @@
 
 **A contained connectome-derived neural experiment built around the adult male _Drosophila_ CNS connectome.**
 
-MoscaQuant asks a deliberately strange question:
+Can a structurally frozen connectome-derived model acquire measurable, persistent, experimentally traceable adaptive state under non-native market sensory input?
 
-> Can a structurally frozen connectome-derived model acquire measurable,
-> persistent, experimentally traceable adaptive state while operating under
-> non-native market sensory input?
+MoscaQuant combines connectome simulation, synthetic market encoding, controlled perturbation, deterministic replay and causal tracing. The structural connectome stays frozen; interventions and plasticity are explicit modeled overlays.
 
-The project combines connectome simulation, synthetic market encoding,
-controlled perturbation, deterministic replay, causal tracing, and strict
-containment.
+## Start here
 
-It is also intentionally ridiculous.
+| Read | Purpose |
+| --- | --- |
+| [Charter](CHARTER.md) | Scientific question, authority and claim boundaries |
+| [Roadmap](ROADMAP.md) | Canonical phase status and planned gates |
+| [Documentation guide](docs/README.md) | Find protocols, interfaces and supporting material |
+| [Experiment index](docs/experiments/README.md) | Frozen protocols, results and provenance |
+| [Known confounds](docs/KNOWN_CONFOUNDS.md) | Limits that matter when interpreting results |
 
----
+## Project status
 
-## Presentation lexicons
+The recorded roadmap phase is **MQ-9 — OPEN THE PANOPTICON**, following completed MQ-0 through MQ-8. MQ-10 — INTRODUCE THE MONEY remains next. Scientific sidequests and infrastructure milestones do not independently advance those phases.
 
-MoscaQuant keeps scientific terminology authoritative while allowing recurring
-presentation vocabularies in Panopticon.
+The public repository contains scientific records and reference interfaces. Panopticon owns the presentation experience; Rasputin and Numancia own private operational implementation. See the [public/private boundary](docs/OPEN_CORE_BOUNDARY_V1.md).
 
-One of those vocabularies is **THE FAMILY MODEL**: an organized-crime
-organizational metaphor for network hierarchy and institutional behavior.
-Terms such as CREW, CAPO, EARNER, SIT-DOWN, and RECEIPTS may summarize an
-evidence-backed result, but never replace the underlying scientific quantity or
-claim boundary.
+A replay, a reference visualization, an accepted computation and an independently observed live feed are different claims. Deployment or storage checks alone do not establish scientific acceptance or a live subject connection.
 
-The metaphor is original MoscaQuant presentation language and does not place
-the project inside any external fictional canon.
+## Read the evidence
 
-## Current Status
+The [experiment index](docs/experiments/README.md) links the published protocols and result records. Those records define the tested model, controls and permitted interpretation.
 
-**Current roadmap phase:** MQ-9 — OPEN THE PANOPTICON
+For the corrected discovery/control-selection line, start with [WAY DOWN IN THE HOLE](docs/experiments/mq5-er5r-way-down-in-the-hole-result.md) and [THE WARRANT closeout](docs/experiments/mq5-er6r-the-warrant-control-selection-closeout.md). The latter records a frozen matched control, not a neural intervention result.
 
-Completed phases:
+For an accessible retrospective, see the [experimental highlight reel](docs/retrospectives/MOSCAQUANT_EXPERIMENTAL_HIGHLIGHT_REEL.md).
 
-- MQ-0 — ACQUIRE SUBJECT
-- MQ-1 — IT'S ALIVE
-- MQ-2 — BLOOMBERG TERMINAL FOR INSECTS
-- MQ-2.1 — VISUAL TRANSDUCTION
-- MQ-3 — EMPLOYEE HAS OPINIONS
-- MQ-4 — NEUROSCOPE
-- MQ-5 — INTERVENTION AND PERTURBATION EXPERIMENTS
-- MQ-6 — DEPLOY THE WARDEN
-- MQ-7 — AWAKEN THE ORACLE
-- MQ-8 — CORPORATE CULTURE
+## Claim and containment boundaries
 
-Current:
+The evidence concerns the documented computational model and tested conditions. It does not establish biological equivalence, consciousness, subjective pain or reward, general intelligence, financial usefulness or profitability.
 
-- MQ-9 — OPEN THE PANOPTICON
+Financial semantics and live capital remain **NOT ASSIGNED** in the recorded project state. Broker, exchange and wallet are **NONE**; external execution is **DISABLED**. MQ-001 and ORACLE-01 cannot override WARDEN-01.
 
-Next:
-
-- MQ-10 — INTRODUCE THE MONEY
-- MQ-11 — THE CASINO OPENS
-- MQ-12 — CONSEQUENCES
-- MQ-13 — MOSCA VS THE WORLD
-
-See [`ROADMAP.md`](ROADMAP.md) for canonical phase status.
-
----
-
-### MQ-9 focus
-
-MQ-9 opens the Panopticon as the public spectator interface and embodied
-Containment Chamber.
-
-The public experience may visualize and dramatize sanitized scientific,
-behavioral, containment, achievement, personnel, HR, Broadcast, and public-safe
-market state, but presentation remains downstream of canonical evidence.
-
-MQ-9 does not grant Panopticon scientific, ORACLE, WARDEN, broker, or trading
-authority.
-
-Current focus:
-
-- public spectator experience;
-- embodied MQ-001 / MORTY containment presentation;
-- SITE-19B containment-room presentation;
-- integration of accepted Panopticon systems into the public experience;
-- preservation of scientific claim boundaries and authority separation.
-
-Presentation may interpret evidence. It may never manufacture it.
-
----
-
-## The Cast
-
-### MQ-001 — MORTY
-
-The experimental neural system.
-
-MQ-001 receives sensory input, propagates neural state, and produces anonymous
-behavioral output.
-
-MQ-001 has no financial authority.
-
-### MQ-002 — LILITH
-
-Provisional comparative biological control.
-
-LILITH is based on an independent female *Drosophila* brain connectome source
-cross-matched against MaleCNS through the published MaleCNS/FlyWire comparison
-products. She is not derived from MORTY and does not replace SHUFFLED MOSCA.
-
-Current status: data qualification and matched-subgraph construction only.
-No result-bearing male/female neural comparison has been authorized yet.
-
-MQ-002 has no financial, broker, WARDEN, or ORACLE authority.
-
-### ORACLE-01 — GLaDOS
-
-Behavioral interpretation and experimental intervention layer.
-
-ORACLE-01 may apply protocol-defined neural interventions, but cannot override
-financial containment or WARDEN policy.
-
-### WARDEN-01 — Senator Armstrong
-
-Independent financial containment authority.
-
-> The Mosca makes the decision. The Warden controls the money.
-
-### SCIENCE-01 — Placeholder McDoctorate
-
-Non-authoritative scientific reviewer.
-
-Its job is to distinguish:
-
-- observation;
-- inference;
-- narrative;
-- unsupported claims.
-
-It is frequently disappointed.
-
-### HR-01 — HAHN
-
-Head of Human Resources / Personnel Operations.
-
-HAHN owns the personnel and corporate-HR presentation layer and may issue or
-present evidence-backed COMMENDATION, PROMOTION, DEMOTION, PIP, DISCIPLINE,
-and REVIEW records.
-
-HAHN has no scientific, ORACLE, WARDEN, broker, or trading authority.
-
-> Hahn would like a quick conversation with HR.
-
----
-
-## D6 Behavioral Correction Protocol
-
-ORACLE-01 currently supports six frozen intervention classes:
-
-| ID | Name | Experimental role |
-|---|---|---|
-| SC-01 | THE SHOCK | Acute activity-layer perturbation |
-| SC-02 | DARKNESS | Temporary sensory attenuation |
-| SC-03 | BAD SYNAPSE | Persistent experimental synaptic plasticity |
-| SC-04 | TIME OUT | Temporary readout inhibition |
-| SC-05 | SCAR TISSUE | Cross-session persistent aversive state |
-| SC-06 | MERCY | Bounded positive neuromodulatory event |
-
-These labels are operational and narrative terminology.
-
-They do not imply subjective pain, fear, reward, trauma, or consciousness.
-
----
-
-## What Has Been Demonstrated
-
-MoscaQuant has produced reproducible evidence for:
-
-- market-conditioned propagation through the connectome-derived model;
-- deterministic anonymous neural readout;
-- controlled node and pathway perturbation;
-- persistent reversible SC-03 plasticity overlays;
-- fail-closed causal credit assignment;
-- perturbation-dependent expression of latent adaptive state;
-- dynamic differential propagation tracing;
-- partial downstream mediation;
-- distributed causal mediation across an empirically identified first-wave
-  subnetwork;
-- structural-connectome integrity throughout experimental overlays.
-
-One recent causal series found that ten dynamically identified first-wave
-branches accounted for approximately **96.5%** of a measured DN-C1 adaptive
-effect under a frozen replay.
-
-Adding the independently validated `68045 -> 1273` route reduced the remaining
-measured effect to approximately **2.8e-7 of the intact magnitude**.
-
-These results are model-specific and replay-specific.
-
-Later sealed work added three further milestones:
-
-- **PROJECT RASPUTIN** demonstrated an authoritative elastic scientific
-  execution path by completing MQ-5.ER.5 — THE GREEK from its frozen scientific
-  contract while recording immutable code, image, input, execution, result, and
-  seal provenance. Infrastructure changed compute capacity, not experimental
-  meaning.
-- **SQ-05 — TWO BETRAYALS** prospectively reused the inherited 13-edge
-  causal-route lesion under a frozen visual sequence and matched controls. The
-  lesion exceeded its sham in both retinal layouts, while the 20-seed strict
-  matched-topology null reproduced the intact response in `0 / 20` seeds. SQ-05
-  defines no single overall winner and no population-level significance claim.
-- **SQ-06 — SILENT CARTOGRAPHER** prospectively tested an orientation grouping
-  derived from the sealed SQ-05 post-result audit. All six preregistered primary
-  conditions passed: each subgroup exactly recapitulated the full lesion in its
-  corresponding layout and was exactly null in the opposite layout, with all
-  subgroup shams reproducing intact. The run completed `28 / 28` episodes with
-  `14 / 14` exact duplicate pairs and zero stored DN spikes. This is prospective
-  validation of an SQ-05-derived grouping, not independent discovery or a
-  biological orientation-circuit claim.
-
-These results are experimental groundwork for roadmap MQ-12 and do **not**
-constitute completion of MQ-12.
-
----
-
-## Important Scientific Boundaries
-
-MoscaQuant does **not** claim:
-
-- a complete biological simulation of a fly brain;
-- biological learning in a living fly;
-- consciousness or subjective experience;
-- pain, fear, trauma, or reward;
-- demonstrated financial utility;
-- profitability;
-- general intelligence;
-- biological equivalence between modeled dynamics and a living nervous system.
-
-The structural connectome remains frozen.
-
-Plasticity and interventions are explicit modeled overlays.
-
----
-
-## Containment
-
-Current financial status:
-
-- Broker: **NONE**
-- Exchange: **NONE**
-- Wallet: **NONE**
-- External execution: **DISABLED**
-- Live capital policy: **NOT ASSIGNED**
-- Financial semantics: **NOT ASSIGNED**
-
-WARDEN-01 is deployed as an independent private authority boundary.
-
-MQ-001 and ORACLE-01 cannot override it.
-
----
-
-## Neuroscope
-
-Neuroscope is the visualization and replay layer for connectome structure,
-neural activity, perturbations, and experimental telemetry.
-
-Public deployment:
-
-`https://moscaquant.com/neuroscope/`
-
-The Panopticon baseline is deployed. MQ-9 expands it into the public spectator interface and embodied Containment Chamber.
-
----
-
-## Experimental Record
-
-The project is protocol-first.
-
-Important sources:
-
-- [`CHARTER.md`](CHARTER.md) — project Bible and claim boundaries
-- [`ROADMAP.md`](ROADMAP.md) — canonical phase status
-- [`docs/experiments/`](docs/experiments/) — frozen protocols and results
-- [`docs/retrospectives/MOSCAQUANT_EXPERIMENTAL_HIGHLIGHT_REEL.md`](docs/retrospectives/MOSCAQUANT_EXPERIMENTAL_HIGHLIGHT_REEL.md) — canonical retrospective and approved science/lore framing
-
-Git history is the authoritative project record.
-
----
-
-## Highlight Reel
-
-A few approved project moments:
-
-- **THE CAKE IS A LIE** — MERCY produced a valid null.
-- **TEN BUTTONS** — ten different SHOCK targets exposed latent plasticity.
-- **LOOKING BUSY** — a neuron showed huge divergence and zero causal mediation.
-- **THE WIRE WAS HAUNTED** — removing the plasticized edge eliminated the latent
-  effect.
-- **ROUTING TABLES** — dynamic tracing and cumulative lesions reconstructed
-  nearly the entire measured downstream effect.
-- **DETOUR FOUND THE SAME GUY** — the full three-hop search turned a diffuse pilot into a focused recurring edge candidate, while 1273 kept causality honest.
-
-This was supposed to be funny.
-
----
-
-## License / Research Use
-
-MoscaQuant is an experimental software project.
-
-Do not interpret project outputs as investment advice, biological claims beyond
-the documented evidence, or evidence of autonomous financial competence.
-
----
+Presentation and lore remain downstream of evidence. They do not grant scientific, operational or financial authority.
 
 **THE MARKET PROVIDES FEEDBACK. WE PROVIDE CONSEQUENCES.**
-
-## Current comparative-science status
-
-- **SQ-03A — THE OTHER FLY:** complete and recorded. The accepted result is a
-  model-level matched-central-brain comparison only.
-- **SQ-03B — FIND THE DIFFERENCE:** complete mechanistic-localization follow-up.
-  It tested frozen single-edge counterfactual equalizations against the
-  preregistered SQ-03A differences.
-- **OVERWATCH:** canonical telemetry/observability subsystem. It observes,
-  records, reports, and produces trend summaries without altering frozen
-  experiments.
-- **FLYSWATTER PROTOCOL:** reserved future MQ-002/LILITH positive-reinforcement
-  containment/plasticity protocol. It is not active in SQ-03A or SQ-03B.
-
-Main roadmap remains **MQ-9 — OPEN THE PANOPTICON**, followed by
-**MQ-10 — INTRODUCE THE MONEY**.
-
-## Latest SQ-03 result — THE COMMISSION
-
-SQ-03F.6 found **greater-than-null downstream target concentration** under the
-frozen participation-mass HHI test (`effect ratio = 1.272829496901932`,
-empirical upper-tail `p = 9.999000099990002e-05`, 10,000 matched
-randomizations).
-
-The result is model-scoped and does not establish organism-level biological,
-financial, or trading claims.
-
-See `docs/experiments/sq03f6-the-commission-results.md` for the recorded result
-and provenance boundary.
-
-
-<!-- MOSCAQUANT:SITE19B:README:BEGIN -->
-## Current phase — SITE-19B / OPEN THE PANOPTICON
-
-MoscaQuant has entered **SITE-19B**: the experimental system is now being instrumented for
-real-time public observation through **Panopticon**.
-
-**Current program:** `MQ-9 — OPEN THE PANOPTICON`  
-**Prospective public launch / MQ-001 birthday:** **October 30, 2026**  
-**Public rollout:** Panopticon beta precedes launch with an `EMPLOYEE ACTIVATION WINDOW`
-countdown.  
-**Validation status at this transition:** **554 tests passing**.
-
-### Completed Panopticon foundations
-
-- OVERWATCH telemetry envelope and sanitized public projection
-- runtime collectors and event emitters
-- local and object-storage contracts
-- immutable segmented telemetry storage
-- RECEIPTS integrity verification
-- behavioral/internal-state telemetry
-- 2D portrait reaction contract
-- model-derived motor telemetry
-- `CELL-67.BIRTHDAY.v1`
-- beta / launch countdown contract
-- Anomalous Observances / **BLACKSITE HOLIDAYS**
-- Containment Modifier / **PANOPTICON REFERENDUM** unlock system
-
-### Building now
-
-The current implementation focus is the live containment surface:
-
-- `CELL-67` constraint, contact and physics telemetry
-- motor intent versus achieved physical pose
-- neural → motor → pose integration
-- real-time 3D CELL-67 rendering
-- public-safe live telemetry transport and HUD
-- deterministic replay / historical state reconstruction
-
-The live page remains **signal-first**. Detailed lore, modifier collections, referendum history,
-achievements, lineage, sponsor history, meme history and RECEIPTS belong on deeper Panopticon
-surfaces rather than competing with the primary containment view.
-
-> Comedy is downstream of evidence.
-<!-- MOSCAQUANT:SITE19B:README:END -->
